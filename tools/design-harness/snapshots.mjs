@@ -16,7 +16,8 @@ export function webInputs(base) {
   const files = filesUnder(base, '06-figma/web');
   const html = files.filter(path => path.endsWith('.html'));
   if (!html.length) throw new Error('No HTML screens in 06-figma/web/');
-  return { html, inputs: hashes(base, [...designInputs, 'control/project.json', ...files]) };
+  // 승인 캡처가 바뀌면 시각 비교 결과도 다시 만들어야 하므로 입력에 포함한다.
+  return { html, inputs: hashes(base, [...designInputs, 'control/project.json', ...files, ...filesUnder(base, '05-design-system/captures')]) };
 }
 export function handoffInputs(base) {
   return { ...snapshot(base, 'validation'), ...hashes(base, ['08-handoff/implementation-notes.md', '08-handoff/open-items.md', ...filesUnder(base, '08-handoff/assets')]) };

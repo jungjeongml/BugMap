@@ -41,7 +41,7 @@ export function fillPipeline(base) {
   put('06-figma/web/index.html', '<style>body{margin:0;color:#111827;background:#fff;font-size:14px}</style><p>기록 저장</p>');
   const capture = `07-validation/captures/${digest('06-figma/web/index.html').slice(0, 12)}-390x844.png`;
   put(capture, png());
-  put('07-validation/web-lint.json', proof('lint:web', ['05-design-system/tokens.json', '05-design-system/components.json', '05-design-system/copy.json', 'control/project.json', '06-figma/web/index.html'], [capture],
+  put('07-validation/web-lint.json', proof('lint:web', ['05-design-system/tokens.json', '05-design-system/components.json', '05-design-system/copy.json', 'control/project.json', '06-figma/web/index.html', '05-design-system/captures/map.png'], [capture],
     { minTarget: 44, runs: [{ html: '06-figma/web/index.html', viewport: { width: 390, height: 844 }, capture, issues: [] }] }));
   put('control/figma.json', { fileKey: 'DemoFile', pageId: '0:1' });
   put('06-figma/node-map.json', { nodes: [{ screen: 'map', state: 'default', nodeId: '1:1' }] });

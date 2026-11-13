@@ -147,3 +147,15 @@ test('screen ID captures is checked from JSON outputs rather than rejected by a 
   const report = JSON.parse(f.run('check', '--json').stdout);
   assert.equal(report.stages[3].status, 'awaiting_approval');
 });
+
+test('줄바꿈(CRLF↔LF)만 바뀐 체크아웃은 승인을 유지하고 실제 내용 변경은 무효화한다', async t => {
+  const { fillPipeline } = await import('./fixtures.mjs');
+  const f = setup(t); fillPipeline(f.base);
+  f.put('01-prd/PRD.md', '# PRD\r\n대상 사용자\r\n');
+  assert.equal(f.run('approve', '1', '--by', '수진').status, 0);
+  // Git이 커밋 시 LF로 정규화한 저장소를 새로 받은 상황
+  f.put('01-prd/PRD.md', '# PRD\n대상 사용자\n');
+  assert.equal(JSON.parse(f.run('check', '--json').stdout).stages[0].status, 'passed');
+  f.put('01-prd/PRD.md', '# PRD\n다른 사용자\n');
+  assert.equal(JSON.parse(f.run('check', '--json').stdout).stages[0].status, 'needs_revision');
+});

@@ -47,6 +47,21 @@ export function filesUnder(base, path) {
   visit(path);
   return files;
 }
+// Git 체크아웃 설정(core.autocrlf 등)에 따라 텍스트 파일의 줄바꿈이 CRLF↔LF로 바뀌어도
+// 승인·리뷰가 무효가 되지 않도록, 줄바꿈만 다른 UTF-8 텍스트는 같은 내용으로 본다.
+function lineEndingHashes(bytes) {
+  if (bytes.includes(0)) return [];
+  const text = bytes.toString('utf8');
+  if (!Buffer.from(text, 'utf8').equals(bytes)) return [];
+  const lf = text.replace(/\r\n/g, '\n');
+  return [lf, lf.replace(/\n/g, '\r\n')].map(value => sha256(Buffer.from(value, 'utf8')));
+}
+export function sameRecordedHashes(base, recorded, current) {
+  const expected = artifactHashes(recorded), actual = artifactHashes(current);
+  const keys = Object.keys(expected).sort();
+  if (JSON.stringify(keys) !== JSON.stringify(Object.keys(actual).sort())) return false;
+  return keys.every(path => expected[path] === actual[path] || lineEndingHashes(read(base, path)).includes(expected[path]));
+}
 export function hashes(base, paths) {
   return Object.fromEntries([...new Set(paths)].sort().map(path => [path, sha256(read(base, path))]));
 }

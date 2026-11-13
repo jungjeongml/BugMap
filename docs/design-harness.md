@@ -73,7 +73,7 @@ AI가 **PRD → 리서치 → 화면 구조 → 와이어프레임 → 디자인
 - 사용자 후속 요청으로 `refs:capture`, `wireframe`, `design-md`, `lint:web`, `review`, `handoff`를 구현했다. JSON 계약·옵션·경로·종료 코드·실행 예는 [CLI 사용법](../tools/design-harness/README.md)을 따른다. 과거 CLI 뼈대의 구조 검사만으로 모든 단계를 통과시키는 방식은 새 필수 산출물·검사로 대체했다.
 - `refs:capture`는 HTTP(S) 레퍼런스의 실제 PNG와 URL·viewport·시각·입출력 해시를 기록한다. `wireframe`은 화면/상태별 블록 JSON을 검증해 편집 가능한 SVG와 실제 PNG를 만든다. 두 명령의 현재 산출물·커버리지를 검사한다.
 - `design-md`는 tokens.json·components.json·copy.json에서 단계 폴더의 DESIGN.md를 생성한다. 토큰 참조·금지 문구·생성 내용 일치와 입출력 해시를 검사한다. 곤충맵의 공통 `docs/DESIGN.md`는 덮어쓰지 않는다.
-- `lint:web`는 `06-figma/web/`의 전체 HTML을 프로젝트 viewport마다 브라우저로 열어 계산된 토큰 밖 색/글자 크기·44px 미만 버튼·금지 문구를 검사한다. 로컬 CSS/JS/자산 변경으로 결과가 오래되면 통과하지 않는다. 클릭 후 상태·iframe/닫힌 shadow DOM·이미지 픽셀·네이티브·실제 Figma 검증은 별도다.
+- `lint:web`는 `06-figma/web/`의 전체 HTML을 프로젝트 viewport마다 브라우저로 열어 계산된 토큰 밖 색/글자 크기·44px 미만 버튼·금지 문구를 검사한다. 2026-11-13 보완으로 글자 잘림·겹침·화면 밖 이탈·WCAG 대비와, 승인된 `05-design-system/captures/`와의 픽셀 비교(숨김·순서 변경·자산 교체 감지)를 추가했다. 로컬 CSS/JS/자산·승인 캡처 변경으로 결과가 오래되면 통과하지 않는다. 클릭 후 상태·iframe/닫힌 shadow DOM·네이티브·실제 Figma 검증은 별도다.
 - `review`는 단계별 reviews.json에 검토자 기입 이름·점수·메모·파일 해시를 추가한다. validation에서는 최신 리뷰의 입력 일치와 최소 점수를 요구한다. 최소 점수 기본 4/5는 구현 기본값이며 project.json.reviewMinScore로 조정한다. 리뷰와 단계 승인은 별개다.
 - `handoff`는 1~7단계 검사 및 필수 승인 후 실제 구현 메모·미해결 사항·파일 링크·승인 ID를 HANDOFF.md와 manifest.json으로 만든다. 마지막 단계의 사람 승인은 자동 생성하지 않는다.
 - npm 런타임 의존성은 없다. 실제 캡처/웹 검사는 설치된 Chromium과 별도 임시 headless 프로필을 사용한다. 사용자 요청에 따른 [Playwright 캡처 비교](../tools/design-harness/qa/README.md)는 검증용 별도 도구로 제공한다.
