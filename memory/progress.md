@@ -144,3 +144,10 @@
 - 남은 일: Talk가 VECTOR·boundVariables·imageRef·layoutMode를 생략하고 실제 execute_code를 제공하지 않아 전체raw nodes.json 미완료. LoaderCircle secondary바인딩도 보존 가능한 도구가 필요하다. 최신check는1~5passed,6in_progress(nodes.json누락),7~8blocked다. 기존partial raw는 과거증거로 보존하고 수정4루트 rawExported=false로 구분했다. 전체lint·7단계·사람승인대행은 진행하지 않았다. 연결 보완 후 재개사항은 [flow](../work/bugmap-login/control/flow.md)에 기록했다.
 - 독립 비평: [원문](../work/bugmap-login/06-figma/critique-talk-repair.md), 오류4·기본2·로딩1 직접 이미지 확인,20PNG해시일치. 수리범위ready/전체6blocked. fileKey직접확인·비필터raw부족은미검증으로유지.
 - 최종 메타데이터 별도 새맥락 [비평](../work/bugmap-login/06-figma/critique-talk-metadata.md)은 지정문서범위ready.20매핑·20PNG해시·과거raw구분일치. 전체6blocked유지.
+
+## 2026-11-13 — 디자인 하네스가 놓친 시각 결함 검사 보완
+
+- 완료: `lint:web`에 레이아웃 규칙(`text-clipped`·`overlap`·`offscreen`·`contrast`)과 승인된 `05-design-system/captures/`와의 픽셀 비교(`visual-diff`, 기준 누락 시 `visual-baseline-missing`)를 추가했다. 승인·리뷰 해시 비교에서 줄바꿈(CRLF/LF)만 다른 텍스트를 같은 내용으로 보게 했다.
+- 산출물: [lint 규칙](../tools/design-harness/web-rules.mjs), [lint 실행](../tools/design-harness/browser-commands.mjs), [해시 비교](../tools/design-harness/io.mjs), [CLI 안내](../tools/design-harness/README.md), [하네스 명세](../docs/design-harness.md), 회귀 테스트 2개.
+- 검증: `npm test` 43/43 통과. 새 테스트 2개는 수정 전 코드에서 실패함을 확인했다. 임시 복사본의 bugmap-login 42개 실행(20 HTML+screen.html × 2 viewport)에서 새 규칙 오탐 0건, 승인 캡처 차이 0%. 같은 복사본에 결함 9종을 넣었을 때 수정 전 3종 → 수정 후 9종 검출. 새로 받은 저장소에서 `check` 1~5단계 passed(수정 전 4단계 needs_revision).
+- 남은 일: 실제 앱 `src/` 화면은 여전히 하네스 검사 대상이 아니다. 다른 OS·글꼴 환경의 허용치, 클릭 후 상태·키보드 흐름, 실제 Figma 노드 시각 비교는 별도다. bugmap-login의 07-validation은 6단계 완료 후 생성해야 한다.

@@ -1,7 +1,7 @@
 import { openSync, closeSync, unlinkSync } from 'node:fs';
 import { randomUUID } from 'node:crypto';
 import { findStage, snapshot } from './snapshots.mjs';
-import { json, object, same, artifactHashes, safeStat, within, writeBundle, stringify } from './io.mjs';
+import { json, object, sameRecordedHashes, safeStat, within, writeBundle, stringify } from './io.mjs';
 import { text, reviewThreshold } from './contracts.mjs';
 function load(base, path, stage) {
   if (!safeStat(within(base, path))) return { version: 1, reviews: [] };
@@ -37,7 +37,7 @@ export function verifyReview(base, name, threshold = reviewThreshold(base)) {
   const stage = findStage(name), path = `${stage.dir}/reviews.json`;
   const record = load(base, path, stage.id).reviews.at(-1);
   if (!record) throw new Error(`Missing human review: ${path}`);
-  if (!same(artifactHashes(record.files), artifactHashes(snapshot(base, stage.id, [path])))) throw new Error(`Stale human review: ${path}`);
+  if (!sameRecordedHashes(base, record.files, snapshot(base, stage.id, [path]))) throw new Error(`Stale human review: ${path}`);
   if (record.score < threshold) throw new Error(`Review score ${record.score} below ${threshold}: ${path}`);
   return record;
 }

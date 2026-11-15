@@ -48,6 +48,12 @@ test('real browser captures refs and SVG, lints cascade/viewport/copy, then hand
   put('control/project.json', { id: 'demo', viewports: [{ width: 390, height: 844 }, { width: 1024, height: 768 }] });
   put('06-figma/web/style.css', goodCSS);
   put('06-figma/web/index.html', '<!doctype html><html lang="ko"><meta charset="utf-8"><link rel="stylesheet" href="style.css"><h1>발견 지도</h1><p>곤충 관찰</p><button id="save">기록 저장</button></html>');
+  // 승인 캡처가 없으면 시각 비교를 건너뛰지 않고 실패한다. 디자인 시스템 캡처로 기준을 만든 뒤 다시 검사한다.
+  const missing = await run('lint:web', '--force', '--json');
+  assert.equal(missing.status, 1);
+  const first = JSON.parse(missing.stdout);
+  assert.ok(first.runs.every(r => r.issues.length === 1 && r.issues[0].code === 'visual-baseline-missing'), missing.stdout);
+  for (const r of first.runs) copyFileSync(join(base, r.capture), join(base, r.visual.reference));
   const clean = JSON.parse((await success('lint:web', '--force', '--json')).stdout);
   assert.equal(clean.runs.length, 2);
   assert.ok(clean.runs.every(run => run.issues.length === 0));
@@ -92,4 +98,42 @@ test('real browser captures refs and SVG, lints cascade/viewport/copy, then hand
   const stale = JSON.parse((await run('check', '--json')).stdout);
   assert.equal(stale.stages[6].status, 'needs_revision');
   assert.ok(stale.stages[6].issues.some(issue => issue.includes('Stale')));
+});
+
+test('토큰 검사는 통과하지만 화면이 망가진 결함을 레이아웃 규칙과 승인 캡처 비교로 잡는다', { skip: !browser && 'Install Chromium to run browser integration', timeout: 120000 }, async t => {
+  const root = mkdtempSync(join(realpathSync(tmpdir()), 'harness-layout-'));
+  const base = join(root, 'work/demo');
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  fillPipeline(base);
+  const put = (path, value) => { mkdirSync(join(base, path, '..'), { recursive: true }); writeFileSync(join(base, path), value); };
+  const lint = async () => await new Promise((resolve, reject) => {
+    const child = spawn(process.execPath, [cli, 'lint:web', '--force', '--json', '--browser', browser, '--root', root, '--project', 'demo']);
+    let stdout = '';
+    child.stdout.on('data', b => { stdout += b; });
+    child.on('error', reject); child.on('exit', status => resolve({ status, report: JSON.parse(stdout || '{"runs":[]}') }));
+  });
+  const codes = report => new Set(report.runs.flatMap(r => r.issues.map(i => i.code)));
+  const css = `${goodCSS}main{background:#fff}.actions{display:flex;gap:12px}`;
+  const html = '<!doctype html><html lang="ko"><meta charset="utf-8"><link rel="stylesheet" href="style.css"><main><h1>발견 지도</h1><p>곤충 관찰</p><div class="actions"><button id="save">기록 저장</button><button id="skip">나중에</button></div></main></html>';
+  put('06-figma/web/style.css', css); put('06-figma/web/index.html', html);
+  const first = await lint();
+  for (const r of first.report.runs) copyFileSync(join(base, r.capture), join(base, r.visual.reference));
+  const clean = await lint();
+  assert.equal(clean.status, 0, JSON.stringify(clean.report.runs.map(r => r.issues)));
+  // 모두 토큰 색·토큰 글자 크기·44px 버튼을 유지한 채 화면만 망가뜨린다.
+  const cases = [
+    ['버튼 숨김', `${css}#skip{display:none}`, 'visual-diff'],
+    ['버튼 순서 뒤집기', `${css}.actions{flex-direction:row-reverse}`, 'visual-diff'],
+    ['제목과 본문 겹침', `${css}p{margin-top:-40px}`, 'overlap'],
+    ['제목 잘림', `${css}h1{width:40px;white-space:nowrap;overflow:hidden}`, 'text-clipped'],
+    ['흰 배경에 흰 글자(토큰색)', `${css}p{color:#ffffff}`, 'contrast'],
+  ];
+  for (const [name, mutated, expected] of cases) {
+    put('06-figma/web/style.css', mutated);
+    const result = await lint();
+    assert.equal(result.status, 1, name);
+    const found = codes(result.report);
+    assert.ok(found.has(expected), `${name}: ${[...found]}`);
+    for (const tokenCode of ['color', 'font-size', 'touch-target']) assert.equal(found.has(tokenCode), false, `${name}는 기존 토큰 규칙으로는 드러나지 않아야 한다`);
+  }
 });

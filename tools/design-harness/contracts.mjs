@@ -77,6 +77,20 @@ export function reviewThreshold(base) {
   if (typeof threshold !== 'number' || !Number.isFinite(threshold) || threshold < 0 || threshold > 5) throw new Error('reviewMinScore must be in 0..5');
   return threshold;
 }
+// 승인된 디자인 시스템 캡처가 시각 비교의 기준이다: <screen>--<state>.html → <가로>x<세로>-<state>.png, 상태가 없으면 default.
+export function visualBaselinePath(htmlPath, size) {
+  const name = htmlPath.split('/').pop().replace(/\.html$/, '');
+  const state = name.includes('--') ? name.split('--').pop() : 'default';
+  if (!id(state)) throw new Error(`Invalid state in HTML name: ${htmlPath}`);
+  return `05-design-system/captures/${size.width}x${size.height}-${state}.png`;
+}
+export function visualTolerance(base) {
+  const project = json(base, 'control/project.json');
+  const ratio = project?.visualMaxDiffRatio ?? 0.0005, delta = project?.visualChannelDelta ?? 16;
+  if (typeof ratio !== 'number' || !Number.isFinite(ratio) || ratio < 0 || ratio > 1) throw new Error('visualMaxDiffRatio must be in 0..1');
+  if (!Number.isInteger(delta) || delta < 0 || delta > 255) throw new Error('visualChannelDelta must be an integer in 0..255');
+  return { ratio, delta };
+}
 export function viewports(base) {
   const project = json(base, 'control/project.json');
   const values = project?.viewports ?? [{ width: 390, height: 844 }];
