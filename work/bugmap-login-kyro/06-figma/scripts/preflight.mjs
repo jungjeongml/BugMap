@@ -1,0 +1,7 @@
+import fs from 'node:fs/promises';
+import {Client} from '/Users/mac/Documents/cursor-talk-to-figma-mcp/node_modules/@modelcontextprotocol/sdk/dist/esm/client/index.js';
+import {StdioClientTransport} from '/Users/mac/Documents/cursor-talk-to-figma-mcp/node_modules/@modelcontextprotocol/sdk/dist/esm/client/stdio.js';
+const base=new URL('../',import.meta.url);const save=async(n,v)=>fs.writeFile(new URL(n,base),JSON.stringify(v,null,2)+'\n');
+const client=new Client({name:'bugmap-kyro-build',version:'1'});const transport=new StdioClientTransport({command:'/Users/mac/.bun/bin/bun',args:['/Users/mac/Documents/cursor-talk-to-figma-mcp/src/talk_to_figma_mcp/server.ts'],stderr:'pipe'});
+async function call(name,args){let r=await client.callTool({name,arguments:args},undefined,{timeout:20000});if(r.isError||r.content?.some(c=>c.type==='text'&&/^Error/.test(c.text)))throw Error(JSON.stringify(r));return r;}
+try{await client.connect(transport);const t=await client.listTools();await save('tools.json',t);console.log(t.tools.map(t=>t.name).join(','));await call('join_channel',{channel:'b6q2ot0a'});for(const [name,args,file]of [['get_document_info',{},'document-before.json'],['get_node_info',{nodeId:'126:706'},'logo-before.json'],['get_node_info',{nodeId:'134:1239'},'existing-map-screen.json'],['get_node_info',{nodeId:'70:94'},'provider-components.json']])await save(file,await call(name,args));console.log('saved preflight');}finally{await client.close();}

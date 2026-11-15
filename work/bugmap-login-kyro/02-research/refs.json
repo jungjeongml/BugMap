@@ -1,0 +1,7 @@
+{
+  "references": [
+    {"id":"kakao-official","url":"https://developers.kakao.com/docs/ko/kakaologin/design-guide#카카오-로그인-버튼","viewport":{"width":1280,"height":1800},"reason":"공식 버튼 구성·색·심볼·확장 규정을 직접 확인"},
+    {"id":"naver-official","url":"https://developers.naver.com/docs/login/bi/bi.md","viewport":{"width":1280,"height":1800},"reason":"공식 최신 지정색과 완성형 버튼·로고 규정 확인"},
+    {"id":"apple-official","url":"https://appleid.apple.com/signinwithapple/button","viewport":{"width":1280,"height":4096},"reason":"HIG 본문 렌더 미완료를 보존하고 공식 HIG가 연결한 라이브 버튼 샘플로 시각 근거 확인. 버튼 섹션까지 보이도록 높은 viewport 사용"}
+  ]
+}

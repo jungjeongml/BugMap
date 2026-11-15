@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-15T22:59:03.123Z",
+  "sourceGuide": "asset-sources.md",
+  "files": [
+    {
+      "path": "assets/naver-login.png",
+      "bytes": 6688,
+      "sha256": "d7330414dfc270da16458daf35395bbbea59246dae769f46420302a2a82f202c",
+      "dimensions": {
+        "width": 1472,
+        "height": 192
+      }
+    },
+    {
+      "path": "assets/apple-login.png",
+      "bytes": 6363,
+      "sha256": "fa13268354c9d261f4bb5cfb7d7e73c7030b8c1f849a114fa7b6b0c382079e89",
+      "dimensions": {
+        "width": 716,
+        "height": 96
+      }
+    }
+  ]
+}

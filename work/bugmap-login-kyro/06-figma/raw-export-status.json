@@ -1,0 +1,15 @@
+{
+  "status": "blocked",
+  "capturedAt": "2026-11-15T23:18:59.214Z",
+  "tool": "Cursor Talk To Figma MCP source server, unchanged existing implementation",
+  "evidence": "root-summary.json",
+  "missing": [
+    "VECTOR nodes are filtered out by get_node_info",
+    "FRAME layoutMode is omitted from get_node_info",
+    "IMAGE imageHash/imageRef is removed by get_node_info",
+    "No SVG/path creation command",
+    "No font-family/line-height/letter-spacing setter"
+  ],
+  "nodesJsonCreated": false,
+  "reason": "No fabricated raw fields or partial summary promoted to complete nodes export."
+}

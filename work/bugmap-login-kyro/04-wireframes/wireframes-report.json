@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "wireframe",
+  "at": "2026-11-15T22:45:58.444Z",
+  "inputs": {
+    "04-wireframes/wireframes.json": "8547e3bd97c1987eae0a5656eaa9240696d6abedcb5b22977a5f0ec3d71afdf4"
+  },
+  "outputs": {
+    "04-wireframes/login/default.svg": "20213f31d53eda3e67bf1d08b6001df7f35b86ee8f5c994319eafef3970bb45a",
+    "04-wireframes/captures/login/default.png": "b87cbeca65f37ffa2a165157340352baf6346d222fe7887d856dc8796f4649b0"
+  }
+}

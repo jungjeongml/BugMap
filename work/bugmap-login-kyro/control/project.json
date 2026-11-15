@@ -1,0 +1,33 @@
+{
+  "id": "bugmap-login-kyro",
+  "purpose": "Single default login design based on Kyro reference",
+  "platform": "mobile",
+  "language": "ko",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "reviewMinScore": 4,
+  "sourceDocuments": {
+    "AGENTS.md": "c4374f749618d10136c24e720011df1c3f31a5880525989d99a0fad9c04d715b",
+    "docs/PRD.md": "44b85763b8874bbeaad4222749ceda3f94108b958412f724e064394839c6ab9e",
+    "docs/DESIGN.md": "0e7bdc283732450b6447ce4909dc0d8e4bd3b5ef1c4aa5f67f887438e103abb1",
+    "docs/TDD.md": "d2bdf83bdd7b5cf31ecb0c463bad4366abf6829cd2095ce8b5a969ef8dfe6137",
+    "docs/screens/login.md": "c12a953aa29542e601ff64b041f9e8e0990a5bccbc77a5133146b4da0d112af9",
+    "docs/design-harness.md": "8fc9bd2d5ff0a56ecf9e681188615e084f4f519973f6cb51e2dafbf698a9767f",
+    "example/kyroFirstPage.png": "b7c841e4e2547113276a9fa890dfac619c8854012422d1323bcc8c870a6c44bb"
+  },
+  "preferredFigmaTool": {
+    "transport": "CLI via Cursor Talk To Figma MCP",
+    "channel": "b6q2ot0a"
+  },
+  "scope": {
+    "screen": "login",
+    "states": [
+      "default"
+    ],
+    "figmaRootCount": 1
+  }
+}

@@ -151,3 +151,45 @@
 - 산출물: [lint 규칙](../tools/design-harness/web-rules.mjs), [lint 실행](../tools/design-harness/browser-commands.mjs), [해시 비교](../tools/design-harness/io.mjs), [CLI 안내](../tools/design-harness/README.md), [하네스 명세](../docs/design-harness.md), 회귀 테스트 2개.
 - 검증: `npm test` 43/43 통과. 새 테스트 2개는 수정 전 코드에서 실패함을 확인했다. 임시 복사본의 bugmap-login 42개 실행(20 HTML+screen.html × 2 viewport)에서 새 규칙 오탐 0건, 승인 캡처 차이 0%. 같은 복사본에 결함 9종을 넣었을 때 수정 전 3종 → 수정 후 9종 검출. 새로 받은 저장소에서 `check` 1~5단계 passed(수정 전 4단계 needs_revision).
 - 남은 일: 실제 앱 `src/` 화면은 여전히 하네스 검사 대상이 아니다. 다른 OS·글꼴 환경의 허용치, 클릭 후 상태·키보드 흐름, 실제 Figma 노드 시각 비교는 별도다. bugmap-login의 07-validation은 6단계 완료 후 생성해야 한다.
+
+## 2026-11-16 — Figma 기본 도구 선택 지침 확인
+
+- 완료: design-figma 스킬·담당 역할·배포 스킬·Figma 훅을 조회해 TalkToFigmaMCP Plugin을 기본으로 지정하는 규칙이 없음을 확인했다. 현재 지침은 실제 연결된 Figma 도구를 확인하고 대응 스킬을 적용하도록 한다.
+- 근거: `.agents/skills/design-figma/SKILL.md`, `.codex/agents/design_figma_builder.toml`, `tools/design-harness/hooks/policy.mjs`. diff로 배포 스킬에는 설치 경로·Figma 계약 안내만 추가됨을 확인했다. 과거 Talk 사용 기록은 기본 도구 설정과 구분했다.
+- 검증 범위: 저장소 지침과 현재 노출 도구 목록을 확인했다. Talk의 현재 서버·채널 연결은 검증하지 않았다. 도구 선택 정책 변경은 수행하지 않았다.
+
+## 2026-11-16 — Kyro 참고 로그인 단일 화면 PRD 준비
+
+- 완료: work/bugmap-login-kyro/에 기본 화면1개용 PRD·요구사항·결정·Figma 대상·재개 메모 작성. 기존 bugmap-login 산출물 및 Figma 노드는 보존.
+- 실제 확인: example/kyroFirstPage.png 직접 열람. CLI로 Cursor Talk To Figma MCP 채널 b6q2ot0a 연결, Page 1(0:1)과 BugMap-logo-vector(126:706, 1000x310) 조회 및 PNG 직접 확인. 증거는 control/cursor-document.json·cursor-logo.json·logo.png·cursor-preflight.mjs.
+- 검증: 새 맥락 design_critic PRD ready, 경미 출처 구분 지적 수정. 01-prd/critique.md에 원문 보존. 최종 check는 PRD awaiting_approval/canApprove true, 후속 blocked.
+- 남은 일: 사람 PRD 승인 후 리서치부터 진행. 실제 로그인 디자인 생성은 미수행. 실제 fileKey 및 벡터 상세/내보내기 한계는 후속 확인. 사람 승인·리뷰 대행 없음.
+
+## 2026-11-16 — Kyro 로그인 리서치·구조·와이어프레임 준비
+
+- 완료: PRD 직접 승인 유효 확인 후 work/bugmap-login-kyro/02-research/와03-structure/ 및04-wireframes/ 작성. 기본 login/default390x844 한장만 생성.
+- 산출물: 02-research/sources.md·findings.md·recommendations.md·reuse-verification.json 및 공식PNG3개, 03-structure/screens.csv·states.csv·flows.mmd, 04-wireframes/wireframes.json·login/default.svg·captures/login/default.png·review.md·critique.md.
+- 검증: 공식 과거캡처 날짜·해시·치수 일치 및 이미지 직접 확인. wireframe CLI 기본 Chromium 실패 뒤 동일명령 escalation승인 실행 exit0. 조정자 실제PNG확인, 기본1개/버튼358x60/간격8px/로고슬롯100:31 확인. 리서치·구조와이어프레임 새맥락 독립비평 모두 ready. 최종check PRD/research/structure passed, wireframes awaiting_approval/canApprove true.
+- 한계: 새 원격 리서치캡처 실패/재요청 중단으로2026-11-12 공식캡처를 정직하게 재사용. 현재공식지침·최종색/대비·공식버튼/로고벡터·Figma동일성·실제인증은 미검증.
+- 남은 일: 사람이 wireframes 승인 명령 실행 후 디자인 시스템부터 재개. Figma제작은 미시작. 사람승인/리뷰 대행 없음. 재개명령은 control/flow.md.
+
+## 2026-11-16 — Kyro 로그인 디자인 시스템 시안 준비
+
+- 완료: 와이어프레임 승인10b63571-f547-466f-aa49-aa7cf37fbf09 유효확인 후 work/bugmap-login-kyro/05-design-system/에 기본390x844시안1개·토큰·컴포넌트·문구·생성DESIGN.md·아이콘/자산출처·manifest·재현스크립트 작성.
+- 산출물: 05-design-system/captures/390x844-default.png, preview.svg, screen.html/styles.css, render-report.json, review.md, critique.md.
+- 검증: render localhost EPERM 후 동일명령 escalation승인 실제Chromium캡처. 담당자·조정자·새맥락비평가가 PNG직접확인. 버튼358x60/간격8/overflow없음/이미지비율보존. 제목대비17.74:1, 본문약관7.56:1. 본문토큰14/28정합화 및 로고주요색#107B34측정. 실제폰트Apple SD Gothic Neo/SF. 독립비평ready/필수수정없음. 최종check 1~4passed, design-system awaiting_approval/canApprove true.
+- 남은 일: 사람이 design-system 승인 후 Cursor MCP CLI채널b6q2ot0a로 Figma제작. 지정원본벡터126:706복제는 후속이며 로컬PNG로고는 미리보기전용. 실제Figma동일성/바인딩/원격캡처/인증 및 최신브랜드규정은 미검증. 사람approve/review대행과Figma쓰기없음. 재개는 control/flow.md.
+
+## 2026-11-16 — Cursor MCP 로그인 Figma 부분 제작·도구 제한
+
+- 실제 제작: Cursor MCP CLI채널b6q2ot0a만으로 기존Page1에 새루트156:1282(390x844)1개 추가. 지정원본벡터로고126:706을복제156:1285로스케일,소개·공식3버튼·약관배치. 실제캡처06-figma/captures/figma-default.png 직접확인. 링크https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=156-1282 .
+- 산출물: work/bugmap-login-kyro/06-figma/node-map.json·change-log.md·build-log.json·root-summary.json·capture-manifest.json·raw-export-status.json·critique.md·web/ 및실행스크립트. 다중실행선택용루트.design-harness.json설정.
+- 검증: 기존36루트ID/이름/타입목록보존,원본로고전후조회동일해시. 캡처SHAf07a0b2f896dbdcc9dd67c3add3f154ab09bcc3001ae5b75256a396edebc2f9a. 새맥락비평needs_revision:지도누락중요/조판차이경미/raw전체조회불가차단. 최종check1~5passed/6in_progress(nodes.json누락).
+- 미완료: 현Cursor플러그인에SVG/벡터경로·회전·폰트/조판설정·전체raw조회지원이없어승인지도와글꼴미구현,하단모서리차이남음. nodes.json추정작성/전체lint완료/사람승인대행/7단계이후진행없음.
+- 사용자최신제약:공식Figma도구사용금지. 실제공식쓰기/읽기호출없음. 플러그인수정/설치도수행하지않음. 지원기능확보후기존루트만수리해야하며전체완료로기록하지않는다. 재개조건control/flow.md.
+
+## 2026-11-16 — 로그인 디자인 산출물 커밋 대상 검증
+
+- 커밋 범위: .design-harness.json, example/kyroFirstPage.png, work/bugmap-login-kyro/ 전체 산출물과 이 진행 기록. 사람의 기존 승인 기록은 변경 없이 포함한다.
+- 검증: JSON33개 파싱 및 JavaScript스크립트6개 node --check 통과, git diff --check 통과. 새 하네스검사1~5passed/6in_progress(nodes.json누락),7~8blocked 확인.
+- 남은 일: 지도·글꼴·전체원격구조검증 등6단계미완료사항 유지. 이번 커밋은 부분결과 보존이며 디자인완료나후속단계승인이 아니다.

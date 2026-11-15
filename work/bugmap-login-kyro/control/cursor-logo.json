@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"id\":\"126:706\",\"name\":\"BugMap-logo-vector\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"visible\":false,\"type\":\"SOLID\",\"color\":\"#ffffff\"}],\"absoluteBoundingBox\":{\"x\":6980,\"y\":0,\"width\":1000,\"height\":310},\"children\":[{\"id\":\"126:713\",\"name\":\"beetle-on-B\",\"type\":\"GROUP\",\"absoluteBoundingBox\":{\"x\":6985,\"y\":5.382965087890625,\"width\":132,\"height\":229.61703491210938},\"children\":[]},{\"id\":\"126:719\",\"name\":\"beetle-in-pin\",\"type\":\"GROUP\",\"absoluteBoundingBox\":{\"x\":7554,\"y\":32,\"width\":32,\"height\":33},\"children\":[]}]}"
+    }
+  ]
+}

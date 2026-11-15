@@ -1,0 +1,204 @@
+{
+  "name": "Page 1",
+  "id": "0:1",
+  "type": "PAGE",
+  "children": [
+    {
+      "id": "134:1239",
+      "name": "05 · 첫 로그인 / 지도 배경",
+      "type": "FRAME"
+    },
+    {
+      "id": "1:2",
+      "name": "01 · 로그인 / iOS",
+      "type": "FRAME"
+    },
+    {
+      "id": "2:2",
+      "name": "Html → Body → Main",
+      "type": "FRAME"
+    },
+    {
+      "id": "4:150",
+      "name": "02 · 메인 / 발견 지도",
+      "type": "FRAME"
+    },
+    {
+      "id": "12:235",
+      "name": "03 · 발견·채집 기록 / 전체 펼침",
+      "type": "FRAME"
+    },
+    {
+      "id": "13:433",
+      "name": "03 · 발견·채집 기록 / 모바일",
+      "type": "FRAME"
+    },
+    {
+      "id": "70:2",
+      "name": "BugMap Login / Lucide Bug",
+      "type": "COMPONENT"
+    },
+    {
+      "id": "70:16",
+      "name": "BugMap Login / Lucide Camera",
+      "type": "COMPONENT"
+    },
+    {
+      "id": "70:21",
+      "name": "BugMap Login / Lucide MapPin",
+      "type": "COMPONENT"
+    },
+    {
+      "id": "70:26",
+      "name": "BugMap Login / Lucide LoaderCircle",
+      "type": "COMPONENT"
+    },
+    {
+      "id": "70:30",
+      "name": "BugMap Login / brand",
+      "type": "COMPONENT"
+    },
+    {
+      "id": "70:73",
+      "name": "BugMap Login / valueCard",
+      "type": "COMPONENT_SET"
+    },
+    {
+      "id": "70:94",
+      "name": "BugMap Login / providerButton",
+      "type": "COMPONENT_SET"
+    },
+    {
+      "id": "70:99",
+      "name": "BugMap Login / recovery",
+      "type": "COMPONENT_SET"
+    },
+    {
+      "id": "72:26",
+      "name": "04 · 로그인 / 390 / default",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:84",
+      "name": "04 · 로그인 / 390 / loading_kakao",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:145",
+      "name": "04 · 로그인 / 390 / loading_naver",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:206",
+      "name": "04 · 로그인 / 390 / loading_apple",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:267",
+      "name": "04 · 로그인 / 390 / cancelled",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:325",
+      "name": "04 · 로그인 / 390 / network_error",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:390",
+      "name": "04 · 로그인 / 390 / unsupported",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:450",
+      "name": "04 · 로그인 / 390 / service_outage",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:515",
+      "name": "04 · 로그인 / 390 / success",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:573",
+      "name": "04 · 로그인 / 390 / policy_pending",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:631",
+      "name": "04 · 로그인 / 360 / default",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:689",
+      "name": "04 · 로그인 / 360 / loading_kakao",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:750",
+      "name": "04 · 로그인 / 360 / loading_naver",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:811",
+      "name": "04 · 로그인 / 360 / loading_apple",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:872",
+      "name": "04 · 로그인 / 360 / cancelled",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:930",
+      "name": "04 · 로그인 / 360 / network_error",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:995",
+      "name": "04 · 로그인 / 360 / unsupported",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:1055",
+      "name": "04 · 로그인 / 360 / service_outage",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:1120",
+      "name": "04 · 로그인 / 360 / success",
+      "type": "FRAME"
+    },
+    {
+      "id": "72:1178",
+      "name": "04 · 로그인 / 360 / policy_pending",
+      "type": "FRAME"
+    },
+    {
+      "id": "119:706",
+      "name": "BugMap · 로고",
+      "type": "FRAME"
+    },
+    {
+      "id": "126:706",
+      "name": "BugMap-logo-vector",
+      "type": "FRAME"
+    },
+    {
+      "id": "156:1282",
+      "name": "06 · 첫 로그인 / Kyro / default · 지도 미완료",
+      "type": "FRAME"
+    }
+  ],
+  "currentPage": {
+    "id": "0:1",
+    "name": "Page 1",
+    "childCount": 37
+  },
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Page 1",
+      "childCount": 37
+    }
+  ]
+}

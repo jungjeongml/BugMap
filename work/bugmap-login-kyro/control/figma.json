@@ -1,0 +1,10 @@
+{
+  "fileKey": "LynbxdW8Qf7TavCrPLd2nY",
+  "pageId": "0:1",
+  "pageName": "Page 1",
+  "bridge": "Cursor Talk To Figma MCP via CLI",
+  "channel": "b6q2ot0a",
+  "sourceLogoNodeId": "126:706",
+  "editPolicy": "Preserve all existing nodes. Add one new login/default root. Duplicate logo without changing source.",
+  "identityLimitation": "Talk provides no fileKey. Current page and preserved nodes match; recheck identity before writes."
+}

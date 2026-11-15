@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-15T23:21:05.980Z",
+  "currentStage": "figma",
+  "figma": {
+    "status": "in_progress",
+    "issues": [
+      "Missing file: 06-figma/nodes.json",
+      "figma: Missing file: 06-figma/nodes.json"
+    ]
+  },
+  "upstream": [
+    {
+      "stage": "prd",
+      "status": "passed"
+    },
+    {
+      "stage": "research",
+      "status": "passed"
+    },
+    {
+      "stage": "structure",
+      "status": "passed"
+    },
+    {
+      "stage": "wireframes",
+      "status": "passed"
+    },
+    {
+      "stage": "design-system",
+      "status": "passed"
+    }
+  ]
+}

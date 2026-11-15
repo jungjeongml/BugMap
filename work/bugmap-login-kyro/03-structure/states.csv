@@ -1,0 +1,9 @@
+screen_id,state_id,in_scope,entry,visible_content,action_or_exit,recovery_or_na_reason,wireframe_key
+login,default,yes,앱 첫 진입,지정 로고 | 곤충기록 지도공유 소개 | 개념 지도 | 제공자3개 | 약관 안내,제공자 선택은 인증 경계로 전달하는 의미만 명세; 정적 시안에서 실행 안 함,진입 첫 화면이므로 화면 내 뒤로 없음; OS 뒤로/종료는 앱 바깥 동작,login/default
+login,loading,no,인증 요청 시작 이후,N/A,N/A,사용자가 기본화면1개만 요청해 이번 납품 제외; 실제 앱 상태 요구는 유지,N/A
+login,empty,no,데이터가 없는 경우,N/A,N/A,이 화면은 개인 기록 목록을 조회하지 않고 개념 지도를 장식으로 사용,N/A
+login,error,no,인증 또는 통신 실패 이후,N/A,N/A,추가 오류화면은 사용자 지정 범위 밖; 실제 앱의 복구 요구를 삭제하지 않음,N/A
+login,permission,no,위치 또는 사진 권한 요청,N/A,N/A,로그인 기본화면에서 위치/사진 권한을 요청하지 않음,N/A
+login,success,no,인증 성공 이후,N/A,N/A,이번 정적 디자인은 제공자 선택까지이며 성공 목적지 추가 제작은 범위 밖,N/A
+login,cancelled,no,외부 인증 취소 이후,N/A,N/A,실제 앱에서는 기본 로그인 복귀 의미; 취소 상태 별도 납품은 범위 밖,N/A
+login,policy_destination,no,약관 또는 개인정보 안내 선택 이후,N/A,N/A,약관 URL 연결과 문서 페이지는 범위 밖; 안내 텍스트 영역만 기본화면에 배치,N/A

@@ -1,0 +1,312 @@
+{
+  "generatedAt": "2026-11-15T22:57:47.706Z",
+  "scope": "Stage5 local static default screen; not Figma or authentication verification",
+  "capture": "captures/390x844-default.png",
+  "sha256": "3260eda61114bc7d0c10bb74fb7b4c79e018f64b28cf78c4c3347aa35cb632ff",
+  "checks": {
+    "oneViewport": true,
+    "noDocumentOverflow": true,
+    "threeButtons": true,
+    "buttonBounds": true,
+    "noTitleOverflow": true,
+    "imagesLoaded": true,
+    "imageAspectPreserved": true
+  },
+  "contrast": [
+    {
+      "name": "title",
+      "fg": "#111827",
+      "bg": "#FFFFFF",
+      "ratio": 17.73971700407407,
+      "minimum": 3,
+      "passed": true
+    },
+    {
+      "name": "body",
+      "fg": "#4B5563",
+      "bg": "#FFFFFF",
+      "ratio": 7.557378129674007,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "policy",
+      "fg": "#4B5563",
+      "bg": "#FFFFFF",
+      "ratio": 7.557378129674007,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Kakao original label",
+      "fg": "#191919",
+      "bg": "#FEE500",
+      "ratio": 13.748790985673493,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Naver original label",
+      "fg": "#000000",
+      "bg": "#FFFFFF",
+      "ratio": 21,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "Apple original label",
+      "fg": "#FFFFFF",
+      "bg": "#000000",
+      "ratio": 21,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "name": "logo recognition",
+      "fg": "#107B34",
+      "bg": "#FFFFFF",
+      "ratio": 5.377993506667648,
+      "minimum": 3,
+      "passed": true
+    }
+  ],
+  "geometry": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scroll": {
+      "width": 390,
+      "height": 844
+    },
+    "buttons": [
+      {
+        "name": "카카오 로그인",
+        "x": 16,
+        "y": 548,
+        "width": 358,
+        "height": 60,
+        "right": 374,
+        "bottom": 608
+      },
+      {
+        "name": "네이버 로그인",
+        "x": 16,
+        "y": 616,
+        "width": 358,
+        "height": 60,
+        "right": 374,
+        "bottom": 676
+      },
+      {
+        "name": "Apple로 로그인",
+        "x": 16,
+        "y": 684,
+        "width": 358,
+        "height": 60,
+        "right": 374,
+        "bottom": 744
+      }
+    ],
+    "images": [
+      {
+        "src": "assets/concept-map.svg",
+        "naturalWidth": 390,
+        "naturalHeight": 844,
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "right": 390,
+        "bottom": 844
+      },
+      {
+        "src": "assets/bugmap-logo-preview.png",
+        "naturalWidth": 1000,
+        "naturalHeight": 310,
+        "x": 87,
+        "y": 80,
+        "width": 216,
+        "height": 66.953125,
+        "right": 303,
+        "bottom": 146.953125
+      },
+      {
+        "src": "assets/kakao-login.svg",
+        "naturalWidth": 224,
+        "naturalHeight": 46,
+        "x": 48.90625,
+        "y": 548,
+        "width": 292.171875,
+        "height": 60,
+        "right": 341.078125,
+        "bottom": 608
+      },
+      {
+        "src": "assets/naver-login.png",
+        "naturalWidth": 1472,
+        "naturalHeight": 192,
+        "x": 16,
+        "y": 622.65625,
+        "width": 358,
+        "height": 46.6875,
+        "right": 374,
+        "bottom": 669.34375
+      },
+      {
+        "src": "assets/apple-login.png",
+        "naturalWidth": 716,
+        "naturalHeight": 96,
+        "x": 16,
+        "y": 690,
+        "width": 358,
+        "height": 48,
+        "right": 374,
+        "bottom": 738
+      }
+    ],
+    "text": [
+      {
+        "text": "작은 발견이 모여,살아 있는 지도가 돼요",
+        "fontSize": "26px",
+        "fontWeight": "700",
+        "x": 24,
+        "y": 220,
+        "width": 210.515625,
+        "height": 72,
+        "right": 234.515625,
+        "bottom": 292
+      },
+      {
+        "text": "발견한 곤충을 기록하고지도에서 함께 나눠요.",
+        "fontSize": "14px",
+        "fontWeight": "300",
+        "x": 24,
+        "y": 310,
+        "width": 128.40625,
+        "height": 56,
+        "right": 152.40625,
+        "bottom": 366
+      },
+      {
+        "text": "계속하면 이용약관 및 개인정보처리방침에동의하게 됩니다.",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "x": 24,
+        "y": 764,
+        "width": 342,
+        "height": 42,
+        "right": 366,
+        "bottom": 806
+      }
+    ],
+    "titleOverflow": false
+  },
+  "actualFonts": {
+    "h1": {
+      "fonts": [
+        {
+          "familyName": "Apple SD Gothic Neo",
+          "postScriptName": "AppleSDGothicNeo-Bold",
+          "isCustomFont": false,
+          "glyphCount": 16
+        },
+        {
+          "familyName": ".SF NS",
+          "postScriptName": ".SFNS-Bold",
+          "isCustomFont": false,
+          "glyphCount": 6
+        }
+      ]
+    },
+    ".description": {
+      "fonts": [
+        {
+          "familyName": "Apple SD Gothic Neo",
+          "postScriptName": "AppleSDGothicNeo-Light",
+          "isCustomFont": false,
+          "glyphCount": 19
+        },
+        {
+          "familyName": ".SF NS",
+          "postScriptName": ".SFNS-Regular",
+          "isCustomFont": false,
+          "glyphCount": 5
+        }
+      ]
+    },
+    ".policy": {
+      "fonts": [
+        {
+          "familyName": "Apple SD Gothic Neo",
+          "postScriptName": "AppleSDGothicNeo-Medium",
+          "isCustomFont": false,
+          "glyphCount": 25
+        },
+        {
+          "familyName": ".SF NS",
+          "postScriptName": ".SFNS-Regular",
+          "isCustomFont": false,
+          "glyphCount": 5
+        }
+      ]
+    }
+  },
+  "svgPreviewBounds": {
+    "width": 390,
+    "height": 844
+  },
+  "assetPixelColors": {
+    "assets/bugmap-logo-preview.png": [
+      [
+        "#107b34",
+        110055
+      ]
+    ],
+    "assets/naver-login.png": [
+      [
+        "#ffffff",
+        257385
+      ],
+      [
+        "#d9d9d9",
+        12848
+      ],
+      [
+        "#000000",
+        5971
+      ],
+      [
+        "#03a94d",
+        3198
+      ],
+      [
+        "#202020",
+        324
+      ]
+    ],
+    "assets/apple-login.png": [
+      [
+        "#000000",
+        64571
+      ],
+      [
+        "#ffffff",
+        2425
+      ],
+      [
+        "#545454",
+        89
+      ],
+      [
+        "#a4a4a4",
+        79
+      ],
+      [
+        "#0c0c0c",
+        67
+      ]
+    ]
+  },
+  "note": "Logo token/contrast corrected from measured dominant original PNG pixel #107B34; screenshot pixels unchanged."
+}

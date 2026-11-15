@@ -1,0 +1,49 @@
+{
+  "reviewedAt": "2026-11-16",
+  "originalCaptureAt": "2026-11-12T19:38:15.761Z",
+  "sourceProject": "bugmap-login",
+  "freshRemoteFetch": false,
+  "refsHash": "da920c230fe7e6e5a95df5d95076e2d9a8b587f2e015790a3727a67d4e16982e",
+  "inputs": {
+    "work/bugmap-login-kyro/01-prd/PRD.md": "4f5a5c7caad8f93938c2cd9490435063e37e8cd43b346769761ca07a554328b4",
+    "work/bugmap-login-kyro/01-prd/requirements.csv": "d114548d4e31c14064f69064eba262691da40f0e0d40ae59d60b3ced0815a756",
+    "work/bugmap-login-kyro/control/project.json": "5bfcd5f38c5cff507cd97f3b06c2ac715b31e023d3b8797ac8bf34b40b4b91b8",
+    "work/bugmap-login-kyro/control/decisions.md": "5a462e9ed891c6ec625066fda994c9d5f1c7db8209c791c278e5df23b104c989",
+    "work/bugmap-login-kyro/control/figma.json": "ac6d0ba00fb8563d8b0a1a478a26fd00d152b5eb4ee74fa7d38a066f3ad10a75",
+    "example/kyroFirstPage.png": "b7c841e4e2547113276a9fa890dfac619c8854012422d1323bcc8c870a6c44bb",
+    "work/bugmap-login-kyro/control/logo.png": "a6155822cb8783f8106c810cda462fb190730eb8e39bc7f94a4c09d0b58de3f1"
+  },
+  "copiedFiles": {
+    "refs.json": "da920c230fe7e6e5a95df5d95076e2d9a8b587f2e015790a3727a67d4e16982e",
+    "captures.json": "3dee5c2aebaeb9b01dc4f8e85aa5a3512f98166d91bf877f42869c6e30dc03b2",
+    "captures/kakao-official.png": "32d51b7af3ae5d05a1fc4e48542db5e036f2c3cacfd8eeef75868424d1924e60",
+    "captures/naver-official.png": "7058420b292812f1a443f7fa5bb8b5ec6b011c7c663cca1d785d65086e43bf0f",
+    "captures/apple-official.png": "2ae30281f5a7856d12b6ab849f4d5f87e18139ce5d042970a771549e58e07b11"
+  },
+  "verifiedPNGDimensions": [
+    {
+      "id": "kakao-official",
+      "width": 1280,
+      "height": 1800,
+      "sha256": "32d51b7af3ae5d05a1fc4e48542db5e036f2c3cacfd8eeef75868424d1924e60"
+    },
+    {
+      "id": "naver-official",
+      "width": 1280,
+      "height": 1800,
+      "sha256": "7058420b292812f1a443f7fa5bb8b5ec6b011c7c663cca1d785d65086e43bf0f"
+    },
+    {
+      "id": "apple-official",
+      "width": 1280,
+      "height": 4096,
+      "sha256": "2ae30281f5a7856d12b6ab849f4d5f87e18139ce5d042970a771549e58e07b11"
+    }
+  ],
+  "failedFreshAttempt": {
+    "command": "node tools/design-harness/bin/design-harness refs:capture --project bugmap-login-kyro --json",
+    "exitCode": 2,
+    "error": "Chromium exited",
+    "escalatedRetry": "Tool call interrupted by user; no new capture files found in 02-research on follow-up directory inspection."
+  }
+}

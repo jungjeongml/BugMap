@@ -1,0 +1,21 @@
+{
+  "capture": {
+    "path": "captures/figma-default.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "f07a0b2f896dbdcc9dd67c3add3f154ab09bcc3001ae5b75256a396edebc2f9a"
+  },
+  "nodeId": "156:1282",
+  "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=156-1282",
+  "source": "Actual Cursor MCP export_node_as_image PNG scale1",
+  "scope": "Partial native frame with missing map, not approved design equivalence",
+  "sourceLogoClone": "156:1285",
+  "preservedRootCount": 36,
+  "afterRootCount": 37,
+  "sourceInputs": {
+    "05-design-system/tokens.json": "a4dc59dd408b00eebc9dd3ee66a721e93b0061ff01280a4bda6bad48e87685f0",
+    "05-design-system/components.json": "f899d8ce9e674b007a005216f1f1ace2bbb567961c72de67e07aca723214d903",
+    "05-design-system/copy.json": "fed158f5a54626b0009907e107695374d2ee7962ff9415d9b93b3b1c7ce293da",
+    "05-design-system/captures/390x844-default.png": "3260eda61114bc7d0c10bb74fb7b4c79e018f64b28cf78c4c3347aa35cb632ff"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "screens": [
+    {
+      "id": "login",
+      "state": "default",
+      "title": "BugMap 첫 로그인 · 기본 화면",
+      "width": 390,
+      "height": 844,
+      "notes": "저충실도 기본1개. 전체 지도는 개념 시각 배경. 이미지·로고는 자리표시자이며 실제 벡터·제공자 자산은 승인된 후속 단계에서 사용한다.",
+      "blocks": [
+        {"type":"image","x":0,"y":0,"width":390,"height":844,"text":""},
+        {"type":"text","x":16,"y":8,"width":358,"height":24,"text":"시스템 상태 표시 안전 영역"},
+        {"type":"box","x":71,"y":64,"width":248,"height":99,"text":""},
+        {"type":"image","x":87,"y":80,"width":216,"height":66.96,"text":"BugMap-logo-vector"},
+        {"type":"box","x":16,"y":212,"width":358,"height":164,"text":""},
+        {"type":"text","x":24,"y":224,"width":342,"height":32,"text":"작은 발견이 모여,"},
+        {"type":"text","x":24,"y":260,"width":342,"height":32,"text":"살아 있는 지도가 돼요"},
+        {"type":"text","x":24,"y":312,"width":342,"height":24,"text":"발견한 곤충을 기록하고"},
+        {"type":"text","x":24,"y":340,"width":342,"height":24,"text":"지도에서 함께 나눠요."},
+        {"type":"box","x":24,"y":400,"width":342,"height":104,"text":"개념 지도 · 기록 핀(장식)"},
+        {"type":"button","x":16,"y":548,"width":358,"height":60,"text":"카카오 로그인"},
+        {"type":"button","x":16,"y":616,"width":358,"height":60,"text":"네이버 로그인"},
+        {"type":"button","x":16,"y":684,"width":358,"height":60,"text":"Apple로 로그인"},
+        {"type":"text","x":24,"y":764,"width":342,"height":20,"text":"계속하면 이용약관 및 개인정보처리방침에"},
+        {"type":"text","x":24,"y":786,"width":342,"height":20,"text":"동의하게 됩니다."},
+        {"type":"text","x":16,"y":814,"width":358,"height":20,"text":"홈 표시 안전 영역"}
+      ]
+    }
+  ]
+}

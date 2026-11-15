@@ -1,0 +1,1837 @@
+{
+  "startedAt": "2026-11-15T23:17:05.579Z",
+  "channel": "b6q2ot0a",
+  "calls": [
+    {
+      "name": "join_channel",
+      "args": {
+        "channel": "b6q2ot0a"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Successfully joined channel: b6q2ot0a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_document_info",
+      "args": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"name\":\"Page 1\",\"id\":\"0:1\",\"type\":\"PAGE\",\"children\":[{\"id\":\"134:1239\",\"name\":\"05 · 첫 로그인 / 지도 배경\",\"type\":\"FRAME\"},{\"id\":\"1:2\",\"name\":\"01 · 로그인 / iOS\",\"type\":\"FRAME\"},{\"id\":\"2:2\",\"name\":\"Html → Body → Main\",\"type\":\"FRAME\"},{\"id\":\"4:150\",\"name\":\"02 · 메인 / 발견 지도\",\"type\":\"FRAME\"},{\"id\":\"12:235\",\"name\":\"03 · 발견·채집 기록 / 전체 펼침\",\"type\":\"FRAME\"},{\"id\":\"13:433\",\"name\":\"03 · 발견·채집 기록 / 모바일\",\"type\":\"FRAME\"},{\"id\":\"70:2\",\"name\":\"BugMap Login / Lucide Bug\",\"type\":\"COMPONENT\"},{\"id\":\"70:16\",\"name\":\"BugMap Login / Lucide Camera\",\"type\":\"COMPONENT\"},{\"id\":\"70:21\",\"name\":\"BugMap Login / Lucide MapPin\",\"type\":\"COMPONENT\"},{\"id\":\"70:26\",\"name\":\"BugMap Login / Lucide LoaderCircle\",\"type\":\"COMPONENT\"},{\"id\":\"70:30\",\"name\":\"BugMap Login / brand\",\"type\":\"COMPONENT\"},{\"id\":\"70:73\",\"name\":\"BugMap Login / valueCard\",\"type\":\"COMPONENT_SET\"},{\"id\":\"70:94\",\"name\":\"BugMap Login / providerButton\",\"type\":\"COMPONENT_SET\"},{\"id\":\"70:99\",\"name\":\"BugMap Login / recovery\",\"type\":\"COMPONENT_SET\"},{\"id\":\"72:26\",\"name\":\"04 · 로그인 / 390 / default\",\"type\":\"FRAME\"},{\"id\":\"72:84\",\"name\":\"04 · 로그인 / 390 / loading_kakao\",\"type\":\"FRAME\"},{\"id\":\"72:145\",\"name\":\"04 · 로그인 / 390 / loading_naver\",\"type\":\"FRAME\"},{\"id\":\"72:206\",\"name\":\"04 · 로그인 / 390 / loading_apple\",\"type\":\"FRAME\"},{\"id\":\"72:267\",\"name\":\"04 · 로그인 / 390 / cancelled\",\"type\":\"FRAME\"},{\"id\":\"72:325\",\"name\":\"04 · 로그인 / 390 / network_error\",\"type\":\"FRAME\"},{\"id\":\"72:390\",\"name\":\"04 · 로그인 / 390 / unsupported\",\"type\":\"FRAME\"},{\"id\":\"72:450\",\"name\":\"04 · 로그인 / 390 / service_outage\",\"type\":\"FRAME\"},{\"id\":\"72:515\",\"name\":\"04 · 로그인 / 390 / success\",\"type\":\"FRAME\"},{\"id\":\"72:573\",\"name\":\"04 · 로그인 / 390 / policy_pending\",\"type\":\"FRAME\"},{\"id\":\"72:631\",\"name\":\"04 · 로그인 / 360 / default\",\"type\":\"FRAME\"},{\"id\":\"72:689\",\"name\":\"04 · 로그인 / 360 / loading_kakao\",\"type\":\"FRAME\"},{\"id\":\"72:750\",\"name\":\"04 · 로그인 / 360 / loading_naver\",\"type\":\"FRAME\"},{\"id\":\"72:811\",\"name\":\"04 · 로그인 / 360 / loading_apple\",\"type\":\"FRAME\"},{\"id\":\"72:872\",\"name\":\"04 · 로그인 / 360 / cancelled\",\"type\":\"FRAME\"},{\"id\":\"72:930\",\"name\":\"04 · 로그인 / 360 / network_error\",\"type\":\"FRAME\"},{\"id\":\"72:995\",\"name\":\"04 · 로그인 / 360 / unsupported\",\"type\":\"FRAME\"},{\"id\":\"72:1055\",\"name\":\"04 · 로그인 / 360 / service_outage\",\"type\":\"FRAME\"},{\"id\":\"72:1120\",\"name\":\"04 · 로그인 / 360 / success\",\"type\":\"FRAME\"},{\"id\":\"72:1178\",\"name\":\"04 · 로그인 / 360 / policy_pending\",\"type\":\"FRAME\"},{\"id\":\"119:706\",\"name\":\"BugMap · 로고\",\"type\":\"FRAME\"},{\"id\":\"126:706\",\"name\":\"BugMap-logo-vector\",\"type\":\"FRAME\"}],\"currentPage\":{\"id\":\"0:1\",\"name\":\"Page 1\",\"childCount\":36},\"pages\":[{\"id\":\"0:1\",\"name\":\"Page 1\",\"childCount\":36}]}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "06 · 첫 로그인 / Kyro / default · 지도 미완료",
+        "x": 8700,
+        "y": 100,
+        "width": 390,
+        "height": 844,
+        "fillColor": {
+          "r": 0.9058823529411765,
+          "g": 0.9294117647058824,
+          "b": 0.9098039215686274
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"06 · 첫 로그인 / Kyro / default · 지도 미완료\" with ID: 156:1282. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "join_channel",
+      "args": {
+        "channel": "b6q2ot0a"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Successfully joined channel: b6q2ot0a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_document_info",
+      "args": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"name\":\"Page 1\",\"id\":\"0:1\",\"type\":\"PAGE\",\"children\":[{\"id\":\"134:1239\",\"name\":\"05 · 첫 로그인 / 지도 배경\",\"type\":\"FRAME\"},{\"id\":\"1:2\",\"name\":\"01 · 로그인 / iOS\",\"type\":\"FRAME\"},{\"id\":\"2:2\",\"name\":\"Html → Body → Main\",\"type\":\"FRAME\"},{\"id\":\"4:150\",\"name\":\"02 · 메인 / 발견 지도\",\"type\":\"FRAME\"},{\"id\":\"12:235\",\"name\":\"03 · 발견·채집 기록 / 전체 펼침\",\"type\":\"FRAME\"},{\"id\":\"13:433\",\"name\":\"03 · 발견·채집 기록 / 모바일\",\"type\":\"FRAME\"},{\"id\":\"70:2\",\"name\":\"BugMap Login / Lucide Bug\",\"type\":\"COMPONENT\"},{\"id\":\"70:16\",\"name\":\"BugMap Login / Lucide Camera\",\"type\":\"COMPONENT\"},{\"id\":\"70:21\",\"name\":\"BugMap Login / Lucide MapPin\",\"type\":\"COMPONENT\"},{\"id\":\"70:26\",\"name\":\"BugMap Login / Lucide LoaderCircle\",\"type\":\"COMPONENT\"},{\"id\":\"70:30\",\"name\":\"BugMap Login / brand\",\"type\":\"COMPONENT\"},{\"id\":\"70:73\",\"name\":\"BugMap Login / valueCard\",\"type\":\"COMPONENT_SET\"},{\"id\":\"70:94\",\"name\":\"BugMap Login / providerButton\",\"type\":\"COMPONENT_SET\"},{\"id\":\"70:99\",\"name\":\"BugMap Login / recovery\",\"type\":\"COMPONENT_SET\"},{\"id\":\"72:26\",\"name\":\"04 · 로그인 / 390 / default\",\"type\":\"FRAME\"},{\"id\":\"72:84\",\"name\":\"04 · 로그인 / 390 / loading_kakao\",\"type\":\"FRAME\"},{\"id\":\"72:145\",\"name\":\"04 · 로그인 / 390 / loading_naver\",\"type\":\"FRAME\"},{\"id\":\"72:206\",\"name\":\"04 · 로그인 / 390 / loading_apple\",\"type\":\"FRAME\"},{\"id\":\"72:267\",\"name\":\"04 · 로그인 / 390 / cancelled\",\"type\":\"FRAME\"},{\"id\":\"72:325\",\"name\":\"04 · 로그인 / 390 / network_error\",\"type\":\"FRAME\"},{\"id\":\"72:390\",\"name\":\"04 · 로그인 / 390 / unsupported\",\"type\":\"FRAME\"},{\"id\":\"72:450\",\"name\":\"04 · 로그인 / 390 / service_outage\",\"type\":\"FRAME\"},{\"id\":\"72:515\",\"name\":\"04 · 로그인 / 390 / success\",\"type\":\"FRAME\"},{\"id\":\"72:573\",\"name\":\"04 · 로그인 / 390 / policy_pending\",\"type\":\"FRAME\"},{\"id\":\"72:631\",\"name\":\"04 · 로그인 / 360 / default\",\"type\":\"FRAME\"},{\"id\":\"72:689\",\"name\":\"04 · 로그인 / 360 / loading_kakao\",\"type\":\"FRAME\"},{\"id\":\"72:750\",\"name\":\"04 · 로그인 / 360 / loading_naver\",\"type\":\"FRAME\"},{\"id\":\"72:811\",\"name\":\"04 · 로그인 / 360 / loading_apple\",\"type\":\"FRAME\"},{\"id\":\"72:872\",\"name\":\"04 · 로그인 / 360 / cancelled\",\"type\":\"FRAME\"},{\"id\":\"72:930\",\"name\":\"04 · 로그인 / 360 / network_error\",\"type\":\"FRAME\"},{\"id\":\"72:995\",\"name\":\"04 · 로그인 / 360 / unsupported\",\"type\":\"FRAME\"},{\"id\":\"72:1055\",\"name\":\"04 · 로그인 / 360 / service_outage\",\"type\":\"FRAME\"},{\"id\":\"72:1120\",\"name\":\"04 · 로그인 / 360 / success\",\"type\":\"FRAME\"},{\"id\":\"72:1178\",\"name\":\"04 · 로그인 / 360 / policy_pending\",\"type\":\"FRAME\"},{\"id\":\"119:706\",\"name\":\"BugMap · 로고\",\"type\":\"FRAME\"},{\"id\":\"126:706\",\"name\":\"BugMap-logo-vector\",\"type\":\"FRAME\"},{\"id\":\"156:1282\",\"name\":\"06 · 첫 로그인 / Kyro / default · 지도 미완료\",\"type\":\"FRAME\"}],\"currentPage\":{\"id\":\"0:1\",\"name\":\"Page 1\",\"childCount\":37},\"pages\":[{\"id\":\"0:1\",\"name\":\"Page 1\",\"childCount\":37}]}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "logo / white reading plate",
+        "x": 71,
+        "y": 64,
+        "width": 248,
+        "height": 99,
+        "parentId": "156:1282",
+        "fillColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"logo / white reading plate\" with ID: 156:1283. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_corner_radius",
+      "args": {
+        "nodeId": "156:1283",
+        "radius": 32
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set corner radius of node \"logo / white reading plate\" to 32px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "scan_nodes_by_types",
+      "args": {
+        "nodeId": "126:706",
+        "types": [
+          "FRAME",
+          "GROUP",
+          "VECTOR",
+          "BOOLEAN_OPERATION",
+          "RECTANGLE",
+          "ELLIPSE",
+          "TEXT"
+        ]
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Starting node type scanning for types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT..."
+          },
+          {
+            "type": "text",
+            "text": "Scan completed: Found 16 nodes matching types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT"
+          },
+          {
+            "type": "text",
+            "text": "[\n  {\n    \"id\": \"126:706\",\n    \"name\": \"BugMap-logo-vector\",\n    \"type\": \"FRAME\",\n    \"bbox\": {\n      \"x\": 6980,\n      \"y\": 0,\n      \"width\": 1000,\n      \"height\": 310\n    }\n  },\n  {\n    \"id\": \"126:707\",\n    \"name\": \"letter-B\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 37,\n      \"y\": 55,\n      \"width\": 145,\n      \"height\": 189\n    }\n  },\n  {\n    \"id\": \"126:708\",\n    \"name\": \"letter-u\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 192,\n      \"y\": 103,\n      \"width\": 129,\n      \"height\": 143\n    }\n  },\n  {\n    \"id\": \"126:709\",\n    \"name\": \"letter-g\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 331,\n      \"y\": 102,\n      \"width\": 144,\n      \"height\": 203\n    }\n  },\n  {\n    \"id\": \"126:710\",\n    \"name\": \"letter-M\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 489,\n      \"y\": 55,\n      \"width\": 203,\n      \"height\": 190\n    }\n  },\n  {\n    \"id\": \"126:711\",\n    \"name\": \"letter-a\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 703,\n      \"y\": 100,\n      \"width\": 132,\n      \"height\": 147\n    }\n  },\n  {\n    \"id\": \"126:712\",\n    \"name\": \"letter-p\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 849,\n      \"y\": 102,\n      \"width\": 147,\n      \"height\": 203\n    }\n  },\n  {\n    \"id\": \"126:713\",\n    \"name\": \"beetle-on-B\",\n    \"type\": \"GROUP\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 5.382965087890625,\n      \"width\": 132,\n      \"height\": 229.61703491210938\n    }\n  },\n  {\n    \"id\": \"126:714\",\n    \"name\": \"antenna-and-head\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 68,\n      \"y\": 5.382965087890625,\n      \"width\": 69,\n      \"height\": 60.61704635620117\n    }\n  },\n  {\n    \"id\": \"126:715\",\n    \"name\": \"upper-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 19,\n      \"y\": 61,\n      \"width\": 51,\n      \"height\": 60\n    }\n  },\n  {\n    \"id\": \"126:716\",\n    \"name\": \"middle-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 101,\n      \"width\": 66,\n      \"height\": 64.63861083984375\n    }\n  },\n  {\n    \"id\": \"126:717\",\n    \"name\": \"lower-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 159,\n      \"width\": 61,\n      \"height\": 76\n    }\n  },\n  {\n    \"id\": \"126:718\",\n    \"name\": \"map-pin\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 551,\n      \"y\": 7,\n      \"width\": 78,\n      \"height\": 118\n    }\n  },\n  {\n    \"id\": \"126:719\",\n    \"name\": \"beetle-in-pin\",\n    \"type\": \"GROUP\",\n    \"bbox\": {\n      \"x\": 574,\n      \"y\": 32,\n      \"width\": 32,\n      \"height\": 33\n    }\n  },\n  {\n    \"id\": \"126:720\",\n    \"name\": \"beetle-legs-and-antennae\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 574,\n      \"y\": 32,\n      \"width\": 32,\n      \"height\": 33\n    }\n  },\n  {\n    \"id\": \"126:721\",\n    \"name\": \"beetle-body\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 581,\n      \"y\": 36,\n      \"width\": 18,\n      \"height\": 28\n    }\n  }\n]"
+          }
+        ]
+      }
+    },
+    {
+      "name": "join_channel",
+      "args": {
+        "channel": "b6q2ot0a"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Successfully joined channel: b6q2ot0a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_document_info",
+      "args": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"name\":\"Page 1\",\"id\":\"0:1\",\"type\":\"PAGE\",\"children\":[{\"id\":\"134:1239\",\"name\":\"05 · 첫 로그인 / 지도 배경\",\"type\":\"FRAME\"},{\"id\":\"1:2\",\"name\":\"01 · 로그인 / iOS\",\"type\":\"FRAME\"},{\"id\":\"2:2\",\"name\":\"Html → Body → Main\",\"type\":\"FRAME\"},{\"id\":\"4:150\",\"name\":\"02 · 메인 / 발견 지도\",\"type\":\"FRAME\"},{\"id\":\"12:235\",\"name\":\"03 · 발견·채집 기록 / 전체 펼침\",\"type\":\"FRAME\"},{\"id\":\"13:433\",\"name\":\"03 · 발견·채집 기록 / 모바일\",\"type\":\"FRAME\"},{\"id\":\"70:2\",\"name\":\"BugMap Login / Lucide Bug\",\"type\":\"COMPONENT\"},{\"id\":\"70:16\",\"name\":\"BugMap Login / Lucide Camera\",\"type\":\"COMPONENT\"},{\"id\":\"70:21\",\"name\":\"BugMap Login / Lucide MapPin\",\"type\":\"COMPONENT\"},{\"id\":\"70:26\",\"name\":\"BugMap Login / Lucide LoaderCircle\",\"type\":\"COMPONENT\"},{\"id\":\"70:30\",\"name\":\"BugMap Login / brand\",\"type\":\"COMPONENT\"},{\"id\":\"70:73\",\"name\":\"BugMap Login / valueCard\",\"type\":\"COMPONENT_SET\"},{\"id\":\"70:94\",\"name\":\"BugMap Login / providerButton\",\"type\":\"COMPONENT_SET\"},{\"id\":\"70:99\",\"name\":\"BugMap Login / recovery\",\"type\":\"COMPONENT_SET\"},{\"id\":\"72:26\",\"name\":\"04 · 로그인 / 390 / default\",\"type\":\"FRAME\"},{\"id\":\"72:84\",\"name\":\"04 · 로그인 / 390 / loading_kakao\",\"type\":\"FRAME\"},{\"id\":\"72:145\",\"name\":\"04 · 로그인 / 390 / loading_naver\",\"type\":\"FRAME\"},{\"id\":\"72:206\",\"name\":\"04 · 로그인 / 390 / loading_apple\",\"type\":\"FRAME\"},{\"id\":\"72:267\",\"name\":\"04 · 로그인 / 390 / cancelled\",\"type\":\"FRAME\"},{\"id\":\"72:325\",\"name\":\"04 · 로그인 / 390 / network_error\",\"type\":\"FRAME\"},{\"id\":\"72:390\",\"name\":\"04 · 로그인 / 390 / unsupported\",\"type\":\"FRAME\"},{\"id\":\"72:450\",\"name\":\"04 · 로그인 / 390 / service_outage\",\"type\":\"FRAME\"},{\"id\":\"72:515\",\"name\":\"04 · 로그인 / 390 / success\",\"type\":\"FRAME\"},{\"id\":\"72:573\",\"name\":\"04 · 로그인 / 390 / policy_pending\",\"type\":\"FRAME\"},{\"id\":\"72:631\",\"name\":\"04 · 로그인 / 360 / default\",\"type\":\"FRAME\"},{\"id\":\"72:689\",\"name\":\"04 · 로그인 / 360 / loading_kakao\",\"type\":\"FRAME\"},{\"id\":\"72:750\",\"name\":\"04 · 로그인 / 360 / loading_naver\",\"type\":\"FRAME\"},{\"id\":\"72:811\",\"name\":\"04 · 로그인 / 360 / loading_apple\",\"type\":\"FRAME\"},{\"id\":\"72:872\",\"name\":\"04 · 로그인 / 360 / cancelled\",\"type\":\"FRAME\"},{\"id\":\"72:930\",\"name\":\"04 · 로그인 / 360 / network_error\",\"type\":\"FRAME\"},{\"id\":\"72:995\",\"name\":\"04 · 로그인 / 360 / unsupported\",\"type\":\"FRAME\"},{\"id\":\"72:1055\",\"name\":\"04 · 로그인 / 360 / service_outage\",\"type\":\"FRAME\"},{\"id\":\"72:1120\",\"name\":\"04 · 로그인 / 360 / success\",\"type\":\"FRAME\"},{\"id\":\"72:1178\",\"name\":\"04 · 로그인 / 360 / policy_pending\",\"type\":\"FRAME\"},{\"id\":\"119:706\",\"name\":\"BugMap · 로고\",\"type\":\"FRAME\"},{\"id\":\"126:706\",\"name\":\"BugMap-logo-vector\",\"type\":\"FRAME\"},{\"id\":\"156:1282\",\"name\":\"06 · 첫 로그인 / Kyro / default · 지도 미완료\",\"type\":\"FRAME\"}],\"currentPage\":{\"id\":\"0:1\",\"name\":\"Page 1\",\"childCount\":37},\"pages\":[{\"id\":\"0:1\",\"name\":\"Page 1\",\"childCount\":37}]}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "156:1282"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"156:1282\",\"name\":\"06 · 첫 로그인 / Kyro / default · 지도 미완료\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#e7ede8\"}],\"absoluteBoundingBox\":{\"x\":8700,\"y\":100,\"width\":390,\"height\":844},\"children\":[{\"id\":\"156:1283\",\"name\":\"logo / white reading plate\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#ffffff\"}],\"cornerRadius\":32,\"absoluteBoundingBox\":{\"x\":8771,\"y\":164,\"width\":248,\"height\":99},\"children\":[]}]}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "delete_node",
+      "args": {
+        "nodeId": "156:1283"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Deleted node with ID: 156:1283"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "logo / white reading plate",
+        "x": 71,
+        "y": 64,
+        "width": 248,
+        "height": 99,
+        "parentId": "156:1282",
+        "fillColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"logo / white reading plate\" with ID: 156:1284. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_corner_radius",
+      "args": {
+        "nodeId": "156:1284",
+        "radius": 32
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set corner radius of node \"logo / white reading plate\" to 32px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "scan_nodes_by_types",
+      "args": {
+        "nodeId": "126:706",
+        "types": [
+          "FRAME",
+          "GROUP",
+          "VECTOR",
+          "BOOLEAN_OPERATION",
+          "RECTANGLE",
+          "ELLIPSE",
+          "TEXT"
+        ]
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Starting node type scanning for types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT..."
+          },
+          {
+            "type": "text",
+            "text": "Scan completed: Found 16 nodes matching types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT"
+          },
+          {
+            "type": "text",
+            "text": "[\n  {\n    \"id\": \"126:706\",\n    \"name\": \"BugMap-logo-vector\",\n    \"type\": \"FRAME\",\n    \"bbox\": {\n      \"x\": 6980,\n      \"y\": 0,\n      \"width\": 1000,\n      \"height\": 310\n    }\n  },\n  {\n    \"id\": \"126:707\",\n    \"name\": \"letter-B\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 37,\n      \"y\": 55,\n      \"width\": 145,\n      \"height\": 189\n    }\n  },\n  {\n    \"id\": \"126:708\",\n    \"name\": \"letter-u\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 192,\n      \"y\": 103,\n      \"width\": 129,\n      \"height\": 143\n    }\n  },\n  {\n    \"id\": \"126:709\",\n    \"name\": \"letter-g\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 331,\n      \"y\": 102,\n      \"width\": 144,\n      \"height\": 203\n    }\n  },\n  {\n    \"id\": \"126:710\",\n    \"name\": \"letter-M\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 489,\n      \"y\": 55,\n      \"width\": 203,\n      \"height\": 190\n    }\n  },\n  {\n    \"id\": \"126:711\",\n    \"name\": \"letter-a\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 703,\n      \"y\": 100,\n      \"width\": 132,\n      \"height\": 147\n    }\n  },\n  {\n    \"id\": \"126:712\",\n    \"name\": \"letter-p\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 849,\n      \"y\": 102,\n      \"width\": 147,\n      \"height\": 203\n    }\n  },\n  {\n    \"id\": \"126:713\",\n    \"name\": \"beetle-on-B\",\n    \"type\": \"GROUP\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 5.382965087890625,\n      \"width\": 132,\n      \"height\": 229.61703491210938\n    }\n  },\n  {\n    \"id\": \"126:714\",\n    \"name\": \"antenna-and-head\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 68,\n      \"y\": 5.382965087890625,\n      \"width\": 69,\n      \"height\": 60.61704635620117\n    }\n  },\n  {\n    \"id\": \"126:715\",\n    \"name\": \"upper-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 19,\n      \"y\": 61,\n      \"width\": 51,\n      \"height\": 60\n    }\n  },\n  {\n    \"id\": \"126:716\",\n    \"name\": \"middle-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 101,\n      \"width\": 66,\n      \"height\": 64.63861083984375\n    }\n  },\n  {\n    \"id\": \"126:717\",\n    \"name\": \"lower-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 159,\n      \"width\": 61,\n      \"height\": 76\n    }\n  },\n  {\n    \"id\": \"126:718\",\n    \"name\": \"map-pin\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 551,\n      \"y\": 7,\n      \"width\": 78,\n      \"height\": 118\n    }\n  },\n  {\n    \"id\": \"126:719\",\n    \"name\": \"beetle-in-pin\",\n    \"type\": \"GROUP\",\n    \"bbox\": {\n      \"x\": 574,\n      \"y\": 32,\n      \"width\": 32,\n      \"height\": 33\n    }\n  },\n  {\n    \"id\": \"126:720\",\n    \"name\": \"beetle-legs-and-antennae\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 574,\n      \"y\": 32,\n      \"width\": 32,\n      \"height\": 33\n    }\n  },\n  {\n    \"id\": \"126:721\",\n    \"name\": \"beetle-body\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 581,\n      \"y\": 36,\n      \"width\": 18,\n      \"height\": 28\n    }\n  }\n]"
+          }
+        ]
+      }
+    },
+    {
+      "name": "clone_node",
+      "args": {
+        "nodeId": "126:706"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Cloned node \"BugMap-logo-vector\" with new ID: 156:1285"
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_parent",
+      "args": {
+        "nodeId": "156:1285",
+        "parentId": "156:1282",
+        "x": 87,
+        "y": 80
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"BugMap-logo-vector\" into \"06 · 첫 로그인 / Kyro / default · 지도 미완료\" at (87, 80)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rename_node",
+      "args": {
+        "nodeId": "156:1285",
+        "name": "logo / BugMap source vectors"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Renamed node from \"BugMap-logo-vector\" to \"logo / BugMap source vectors\""
+          }
+        ]
+      }
+    },
+    {
+      "name": "scan_nodes_by_types",
+      "args": {
+        "nodeId": "156:1285",
+        "types": [
+          "FRAME",
+          "GROUP",
+          "VECTOR",
+          "BOOLEAN_OPERATION",
+          "RECTANGLE",
+          "ELLIPSE",
+          "TEXT"
+        ]
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Starting node type scanning for types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT..."
+          },
+          {
+            "type": "text",
+            "text": "Scan completed: Found 16 nodes matching types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT"
+          },
+          {
+            "type": "text",
+            "text": "[\n  {\n    \"id\": \"156:1285\",\n    \"name\": \"logo / BugMap source vectors\",\n    \"type\": \"FRAME\",\n    \"bbox\": {\n      \"x\": 87,\n      \"y\": 80,\n      \"width\": 1000,\n      \"height\": 310\n    }\n  },\n  {\n    \"id\": \"156:1286\",\n    \"name\": \"letter-B\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 37,\n      \"y\": 55,\n      \"width\": 145,\n      \"height\": 189\n    }\n  },\n  {\n    \"id\": \"156:1287\",\n    \"name\": \"letter-u\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 192,\n      \"y\": 103,\n      \"width\": 129,\n      \"height\": 143\n    }\n  },\n  {\n    \"id\": \"156:1288\",\n    \"name\": \"letter-g\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 331,\n      \"y\": 102,\n      \"width\": 144,\n      \"height\": 203\n    }\n  },\n  {\n    \"id\": \"156:1289\",\n    \"name\": \"letter-M\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 489,\n      \"y\": 55,\n      \"width\": 203,\n      \"height\": 190\n    }\n  },\n  {\n    \"id\": \"156:1290\",\n    \"name\": \"letter-a\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 703,\n      \"y\": 100,\n      \"width\": 132,\n      \"height\": 147\n    }\n  },\n  {\n    \"id\": \"156:1291\",\n    \"name\": \"letter-p\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 849,\n      \"y\": 102,\n      \"width\": 147,\n      \"height\": 203\n    }\n  },\n  {\n    \"id\": \"156:1292\",\n    \"name\": \"beetle-on-B\",\n    \"type\": \"GROUP\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 5.382965087890625,\n      \"width\": 132,\n      \"height\": 229.61703491210938\n    }\n  },\n  {\n    \"id\": \"156:1293\",\n    \"name\": \"antenna-and-head\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 68,\n      \"y\": 5.382965087890625,\n      \"width\": 69,\n      \"height\": 60.61704635620117\n    }\n  },\n  {\n    \"id\": \"156:1294\",\n    \"name\": \"upper-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 19,\n      \"y\": 61,\n      \"width\": 51,\n      \"height\": 60\n    }\n  },\n  {\n    \"id\": \"156:1295\",\n    \"name\": \"middle-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 101,\n      \"width\": 66,\n      \"height\": 64.63861083984375\n    }\n  },\n  {\n    \"id\": \"156:1296\",\n    \"name\": \"lower-shell\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 5,\n      \"y\": 159,\n      \"width\": 61,\n      \"height\": 76\n    }\n  },\n  {\n    \"id\": \"156:1297\",\n    \"name\": \"map-pin\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 551,\n      \"y\": 7,\n      \"width\": 78,\n      \"height\": 118\n    }\n  },\n  {\n    \"id\": \"156:1298\",\n    \"name\": \"beetle-in-pin\",\n    \"type\": \"GROUP\",\n    \"bbox\": {\n      \"x\": 574,\n      \"y\": 32,\n      \"width\": 32,\n      \"height\": 33\n    }\n  },\n  {\n    \"id\": \"156:1299\",\n    \"name\": \"beetle-legs-and-antennae\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 574,\n      \"y\": 32,\n      \"width\": 32,\n      \"height\": 33\n    }\n  },\n  {\n    \"id\": \"156:1300\",\n    \"name\": \"beetle-body\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 581,\n      \"y\": 36,\n      \"width\": 18,\n      \"height\": 28\n    }\n  }\n]"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1285",
+        "width": 216,
+        "height": 66.96
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"logo / BugMap source vectors\" to width 216 and height 66.96"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1286",
+        "width": 31.32,
+        "height": 40.824
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"letter-B\" to width 31.32 and height 40.824"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1286",
+        "x": 7.992,
+        "y": 11.879999999999999
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"letter-B\" to position (7.992, 11.879999999999999)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1287",
+        "width": 27.864,
+        "height": 30.887999999999998
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"letter-u\" to width 27.864 and height 30.887999999999998"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1287",
+        "x": 41.472,
+        "y": 22.248
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"letter-u\" to position (41.472, 22.248)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1288",
+        "width": 31.104,
+        "height": 43.848
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"letter-g\" to width 31.104 and height 43.848"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1288",
+        "x": 71.496,
+        "y": 22.032
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"letter-g\" to position (71.496, 22.032)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1289",
+        "width": 43.848,
+        "height": 41.04
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"letter-M\" to width 43.848 and height 41.04"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1289",
+        "x": 105.624,
+        "y": 11.879999999999999
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"letter-M\" to position (105.624, 11.879999999999999)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1290",
+        "width": 28.512,
+        "height": 31.752
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"letter-a\" to width 28.512 and height 31.752"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1290",
+        "x": 151.84799999999998,
+        "y": 21.6
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"letter-a\" to position (151.84799999999998, 21.6)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1291",
+        "width": 31.752,
+        "height": 43.848
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"letter-p\" to width 31.752 and height 43.848"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1291",
+        "x": 183.384,
+        "y": 22.032
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"letter-p\" to position (183.384, 22.032)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1292",
+        "width": 28.512,
+        "height": 49.597279541015624
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"beetle-on-B\" to width 28.512 and height 49.597279541015624"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1292",
+        "x": 1.08,
+        "y": 1.162720458984375
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"beetle-on-B\" to position (1.08, 1.162720458984375)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1293",
+        "width": 14.904,
+        "height": 13.093282012939452
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"antenna-and-head\" to width 14.904 and height 13.093282012939452"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1293",
+        "x": 14.688,
+        "y": 1.162720458984375
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"antenna-and-head\" to position (14.688, 1.162720458984375)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1294",
+        "width": 11.016,
+        "height": 12.959999999999999
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"upper-shell\" to width 11.016 and height 12.959999999999999"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1294",
+        "x": 4.104,
+        "y": 13.176
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"upper-shell\" to position (4.104, 13.176)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1295",
+        "width": 14.256,
+        "height": 13.96193994140625
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"middle-shell\" to width 14.256 and height 13.96193994140625"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1295",
+        "x": 1.08,
+        "y": 21.816
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"middle-shell\" to position (1.08, 21.816)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1296",
+        "width": 13.176,
+        "height": 16.416
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"lower-shell\" to width 13.176 and height 16.416"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1296",
+        "x": 1.08,
+        "y": 34.344
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"lower-shell\" to position (1.08, 34.344)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1297",
+        "width": 16.848,
+        "height": 25.488
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"map-pin\" to width 16.848 and height 25.488"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1297",
+        "x": 119.016,
+        "y": 1.512
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"map-pin\" to position (119.016, 1.512)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1298",
+        "width": 6.912,
+        "height": 7.128
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"beetle-in-pin\" to width 6.912 and height 7.128"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1298",
+        "x": 123.984,
+        "y": 6.912
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"beetle-in-pin\" to position (123.984, 6.912)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1299",
+        "width": 6.912,
+        "height": 7.128
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"beetle-legs-and-antennae\" to width 6.912 and height 7.128"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1299",
+        "x": 123.984,
+        "y": 6.912
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"beetle-legs-and-antennae\" to position (123.984, 6.912)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "156:1300",
+        "width": 3.888,
+        "height": 6.048
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"beetle-body\" to width 3.888 and height 6.048"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1300",
+        "x": 125.496,
+        "y": 7.776
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"beetle-body\" to position (125.496, 7.776)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "156:1285",
+        "x": 87,
+        "y": 80
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"logo / BugMap source vectors\" to position (87, 80)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "intro / white reading plate",
+        "x": 16,
+        "y": 212,
+        "width": 358,
+        "height": 164,
+        "parentId": "156:1282",
+        "fillColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"intro / white reading plate\" with ID: 157:1301. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_corner_radius",
+      "args": {
+        "nodeId": "157:1301",
+        "radius": 32
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set corner radius of node \"intro / white reading plate\" to 32px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_text",
+      "args": {
+        "name": "intro / title line 1",
+        "text": "작은 발견이 모여,",
+        "x": 24,
+        "y": 220,
+        "fontSize": 26,
+        "fontWeight": 700,
+        "fontColor": {
+          "r": 0.06666666666666667,
+          "g": 0.09411764705882353,
+          "b": 0.15294117647058825
+        },
+        "parentId": "156:1282"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created text \"intro / title line 1\" with ID: 157:1302"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "157:1302"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"157:1302\",\"name\":\"intro / title line 1\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#111827\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":320,\"width\":188,\"height\":31},\"characters\":\"작은 발견이 모여,\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Bold\",\"fontWeight\":700,\"fontSize\":26,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":31.46590805053711}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_text",
+      "args": {
+        "name": "intro / title line 2",
+        "text": "살아 있는 지도가 돼요",
+        "x": 24,
+        "y": 256,
+        "fontSize": 26,
+        "fontWeight": 700,
+        "fontColor": {
+          "r": 0.06666666666666667,
+          "g": 0.09411764705882353,
+          "b": 0.15294117647058825
+        },
+        "parentId": "156:1282"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created text \"intro / title line 2\" with ID: 157:1303"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "157:1303"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"157:1303\",\"name\":\"intro / title line 2\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#111827\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":356,\"width\":234,\"height\":31},\"characters\":\"살아 있는 지도가 돼요\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Bold\",\"fontWeight\":700,\"fontSize\":26,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":31.46590805053711}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_text",
+      "args": {
+        "name": "intro / description line 1",
+        "text": "발견한 곤충을 기록하고",
+        "x": 24,
+        "y": 310,
+        "fontSize": 14,
+        "fontWeight": 300,
+        "fontColor": {
+          "r": 0.29411764705882354,
+          "g": 0.3333333333333333,
+          "b": 0.38823529411764707
+        },
+        "parentId": "156:1282"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created text \"intro / description line 1\" with ID: 157:1304"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "157:1304"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"157:1304\",\"name\":\"intro / description line 1\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#4b5563\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":410,\"width\":137,\"height\":17},\"characters\":\"발견한 곤충을 기록하고\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Light\",\"fontWeight\":300,\"fontSize\":14,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":16.94318199157715}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_text",
+      "args": {
+        "name": "intro / description line 2",
+        "text": "지도에서 함께 나눠요.",
+        "x": 24,
+        "y": 338,
+        "fontSize": 14,
+        "fontWeight": 300,
+        "fontColor": {
+          "r": 0.29411764705882354,
+          "g": 0.3333333333333333,
+          "b": 0.38823529411764707
+        },
+        "parentId": "156:1282"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created text \"intro / description line 2\" with ID: 157:1305"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "157:1305"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"157:1305\",\"name\":\"intro / description line 2\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#4b5563\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":438,\"width\":128,\"height\":17},\"characters\":\"지도에서 함께 나눠요.\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Light\",\"fontWeight\":300,\"fontSize\":14,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":16.94318199157715}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "providers / white reading plate",
+        "x": 0,
+        "y": 528,
+        "width": 390,
+        "height": 316,
+        "parentId": "156:1282",
+        "fillColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"providers / white reading plate\" with ID: 157:1306. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_corner_radius",
+      "args": {
+        "nodeId": "157:1306",
+        "radius": 32
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set corner radius of node \"providers / white reading plate\" to 32px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "providerButton / kakao",
+        "x": 16,
+        "y": 548,
+        "width": 358,
+        "height": 60,
+        "parentId": "156:1282",
+        "fillColor": {
+          "r": 0.996078431372549,
+          "g": 0.8980392156862745,
+          "b": 0
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"providerButton / kakao\" with ID: 157:1307. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_corner_radius",
+      "args": {
+        "nodeId": "157:1307",
+        "radius": 10.434783
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set corner radius of node \"providerButton / kakao\" to 10.434783px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "scan_nodes_by_types",
+      "args": {
+        "nodeId": "70:79",
+        "types": [
+          "FRAME",
+          "GROUP",
+          "VECTOR",
+          "BOOLEAN_OPERATION",
+          "RECTANGLE",
+          "ELLIPSE",
+          "TEXT"
+        ]
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Starting node type scanning for types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT..."
+          },
+          {
+            "type": "text",
+            "text": "Scan completed: Found 4 nodes matching types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT"
+          },
+          {
+            "type": "text",
+            "text": "[\n  {\n    \"id\": \"70:79\",\n    \"name\": \"Official Kakao SVG\",\n    \"type\": \"GROUP\",\n    \"bbox\": {\n      \"x\": 62.13043212890625,\n      \"y\": 0,\n      \"width\": 233.7391357421875,\n      \"height\": 48\n    }\n  },\n  {\n    \"id\": \"70:76\",\n    \"name\": \"Vector\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 62.13043212890625,\n      \"y\": 0,\n      \"width\": 233.7391357421875,\n      \"height\": 48\n    }\n  },\n  {\n    \"id\": \"70:77\",\n    \"name\": \"Vector\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 126.32781982421875,\n      \"y\": 17.240869522094727,\n      \"width\": 13.518780708312988,\n      \"height\": 13.518784523010254\n    }\n  },\n  {\n    \"id\": \"70:78\",\n    \"name\": \"Vector\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 148.04417419433594,\n      \"y\": 17.34271240234375,\n      \"width\": 83.15164947509766,\n      \"height\": 13.68041706085205\n    }\n  }\n]"
+          }
+        ]
+      }
+    },
+    {
+      "name": "clone_node",
+      "args": {
+        "nodeId": "70:79"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Cloned node \"Official Kakao SVG\" with new ID: 157:1308"
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_parent",
+      "args": {
+        "nodeId": "157:1308",
+        "parentId": "157:1307",
+        "x": 32.913043499999986,
+        "y": 0
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"Official Kakao SVG\" into \"providerButton / kakao\" at (32.91304397583008, 0)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rename_node",
+      "args": {
+        "nodeId": "157:1308",
+        "name": "Official Kakao SVG / reused library artwork"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Renamed node from \"Official Kakao SVG\" to \"Official Kakao SVG / reused library artwork\""
+          }
+        ]
+      }
+    },
+    {
+      "name": "scan_nodes_by_types",
+      "args": {
+        "nodeId": "157:1308",
+        "types": [
+          "FRAME",
+          "GROUP",
+          "VECTOR",
+          "BOOLEAN_OPERATION",
+          "RECTANGLE",
+          "ELLIPSE",
+          "TEXT"
+        ]
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Starting node type scanning for types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT..."
+          },
+          {
+            "type": "text",
+            "text": "Scan completed: Found 4 nodes matching types: FRAME, GROUP, VECTOR, BOOLEAN_OPERATION, RECTANGLE, ELLIPSE, TEXT"
+          },
+          {
+            "type": "text",
+            "text": "[\n  {\n    \"id\": \"157:1308\",\n    \"name\": \"Official Kakao SVG / reused library artwork\",\n    \"type\": \"GROUP\",\n    \"bbox\": {\n      \"x\": 32.91304397583008,\n      \"y\": 0,\n      \"width\": 233.7391357421875,\n      \"height\": 48\n    }\n  },\n  {\n    \"id\": \"157:1309\",\n    \"name\": \"Vector\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 32.91304397583008,\n      \"y\": 0,\n      \"width\": 233.7391357421875,\n      \"height\": 48\n    }\n  },\n  {\n    \"id\": \"157:1310\",\n    \"name\": \"Vector\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 97.11043167114258,\n      \"y\": 17.240869522094727,\n      \"width\": 13.518780708312988,\n      \"height\": 13.518784523010254\n    }\n  },\n  {\n    \"id\": \"157:1311\",\n    \"name\": \"Vector\",\n    \"type\": \"VECTOR\",\n    \"bbox\": {\n      \"x\": 118.82678604125977,\n      \"y\": 17.34271240234375,\n      \"width\": 83.15164947509766,\n      \"height\": 13.68041706085205\n    }\n  }\n]"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "157:1308",
+        "width": 292.1739196777344,
+        "height": 60
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"Official Kakao SVG / reused library artwork\" to width 292.1739196777344 and height 60"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "157:1309",
+        "width": 292.1739196777344,
+        "height": 60
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"Vector\" to width 292.1739196777344 and height 60"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "157:1309",
+        "x": 77.66304016113281,
+        "y": 0
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"Vector\" to position (77.66304016113281, 0)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "157:1310",
+        "width": 16.898475885391235,
+        "height": 16.898480653762817
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"Vector\" to width 16.898475885391235 and height 16.898480653762817"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "157:1310",
+        "x": 157.90977478027344,
+        "y": 21.551086902618408
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"Vector\" to position (157.90977478027344, 21.551086902618408)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize_node",
+      "args": {
+        "nodeId": "157:1311",
+        "width": 103.93956184387207,
+        "height": 17.100521326065063
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Resized node \"Vector\" to width 103.93956184387207 and height 17.100521326065063"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "157:1311",
+        "x": 185.05521774291992,
+        "y": 21.678390502929688
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"Vector\" to position (185.05521774291992, 21.678390502929688)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "157:1308",
+        "x": 32.913043499999986,
+        "y": 0
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"Official Kakao SVG / reused library artwork\" to position (32.913043499999986, 0)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "providerButton / naver",
+        "x": 16,
+        "y": 616,
+        "width": 358,
+        "height": 60,
+        "parentId": "156:1282",
+        "fillColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"providerButton / naver\" with ID: 157:1312. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_corner_radius",
+      "args": {
+        "nodeId": "157:1312",
+        "radius": 8
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set corner radius of node \"providerButton / naver\" to 8px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "providerButton / apple",
+        "x": 16,
+        "y": 684,
+        "width": 358,
+        "height": 60,
+        "parentId": "156:1282",
+        "fillColor": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"providerButton / apple\" with ID: 157:1313. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_corner_radius",
+      "args": {
+        "nodeId": "157:1313",
+        "radius": 8
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set corner radius of node \"providerButton / apple\" to 8px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "Official naver-login.png",
+        "x": 0,
+        "y": 6.652173999999999,
+        "width": 358,
+        "height": 46.695652,
+        "parentId": "157:1312",
+        "fillColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"Official naver-login.png\" with ID: 157:1314. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_image_fill",
+      "args": {
+        "nodeId": "157:1314",
+        "imageBase64": "[original PNG base64 omitted]",
+        "scaleMode": "FIT"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set image fill of node \"Official naver-login.png\" (1472x192) with scale mode FIT, imageHash: 0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "Official apple-login.png",
+        "x": 0,
+        "y": 6,
+        "width": 358,
+        "height": 48,
+        "parentId": "157:1313",
+        "fillColor": {
+          "r": 1,
+          "g": 1,
+          "b": 1
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"Official apple-login.png\" with ID: 157:1315. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_image_fill",
+      "args": {
+        "nodeId": "157:1315",
+        "imageBase64": "[original PNG base64 omitted]",
+        "scaleMode": "FIT"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set image fill of node \"Official apple-login.png\" (716x96) with scale mode FIT, imageHash: 7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_text",
+      "args": {
+        "name": "policy / line 1",
+        "text": "계속하면 이용약관 및 개인정보처리방침에",
+        "x": 24,
+        "y": 764,
+        "fontSize": 12,
+        "fontWeight": 500,
+        "fontColor": {
+          "r": 0.29411764705882354,
+          "g": 0.3333333333333333,
+          "b": 0.38823529411764707
+        },
+        "parentId": "156:1282"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created text \"policy / line 1\" with ID: 157:1316"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "157:1316"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"157:1316\",\"name\":\"policy / line 1\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#4b5563\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":864,\"width\":209,\"height\":15},\"characters\":\"계속하면 이용약관 및 개인정보처리방침에\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Medium\",\"fontWeight\":500,\"fontSize\":12,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":14.522727012634277}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_text",
+      "args": {
+        "name": "policy / line 2",
+        "text": "동의하게 됩니다.",
+        "x": 24,
+        "y": 786,
+        "fontSize": 12,
+        "fontWeight": 500,
+        "fontColor": {
+          "r": 0.29411764705882354,
+          "g": 0.3333333333333333,
+          "b": 0.38823529411764707
+        },
+        "parentId": "156:1282"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created text \"policy / line 2\" with ID: 157:1317"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "157:1317"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"157:1317\",\"name\":\"policy / line 2\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#4b5563\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":886,\"width\":84,\"height\":15},\"characters\":\"동의하게 됩니다.\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Medium\",\"fontWeight\":500,\"fontSize\":12,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":14.522727012634277}}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "157:1316",
+        "x": 90.5,
+        "y": 764
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"policy / line 1\" to position (90.5, 764)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "move_node",
+      "args": {
+        "nodeId": "157:1317",
+        "x": 153,
+        "y": 786
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Moved node \"policy / line 2\" to position (153, 786)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "create_frame",
+      "args": {
+        "name": "system / home indicator",
+        "x": 128,
+        "y": 827,
+        "width": 134,
+        "height": 5,
+        "parentId": "156:1282",
+        "fillColor": {
+          "r": 0.06666666666666667,
+          "g": 0.09411764705882353,
+          "b": 0.15294117647058825
+        },
+        "layoutMode": "NONE"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Created frame \"system / home indicator\" with ID: 157:1318. Use the ID as the parentId to appendChild inside this frame."
+          }
+        ]
+      }
+    },
+    {
+      "name": "set_corner_radius",
+      "args": {
+        "nodeId": "157:1318",
+        "radius": 3
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Set corner radius of node \"system / home indicator\" to 3px"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_document_info",
+      "args": {},
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"name\":\"Page 1\",\"id\":\"0:1\",\"type\":\"PAGE\",\"children\":[{\"id\":\"134:1239\",\"name\":\"05 · 첫 로그인 / 지도 배경\",\"type\":\"FRAME\"},{\"id\":\"1:2\",\"name\":\"01 · 로그인 / iOS\",\"type\":\"FRAME\"},{\"id\":\"2:2\",\"name\":\"Html → Body → Main\",\"type\":\"FRAME\"},{\"id\":\"4:150\",\"name\":\"02 · 메인 / 발견 지도\",\"type\":\"FRAME\"},{\"id\":\"12:235\",\"name\":\"03 · 발견·채집 기록 / 전체 펼침\",\"type\":\"FRAME\"},{\"id\":\"13:433\",\"name\":\"03 · 발견·채집 기록 / 모바일\",\"type\":\"FRAME\"},{\"id\":\"70:2\",\"name\":\"BugMap Login / Lucide Bug\",\"type\":\"COMPONENT\"},{\"id\":\"70:16\",\"name\":\"BugMap Login / Lucide Camera\",\"type\":\"COMPONENT\"},{\"id\":\"70:21\",\"name\":\"BugMap Login / Lucide MapPin\",\"type\":\"COMPONENT\"},{\"id\":\"70:26\",\"name\":\"BugMap Login / Lucide LoaderCircle\",\"type\":\"COMPONENT\"},{\"id\":\"70:30\",\"name\":\"BugMap Login / brand\",\"type\":\"COMPONENT\"},{\"id\":\"70:73\",\"name\":\"BugMap Login / valueCard\",\"type\":\"COMPONENT_SET\"},{\"id\":\"70:94\",\"name\":\"BugMap Login / providerButton\",\"type\":\"COMPONENT_SET\"},{\"id\":\"70:99\",\"name\":\"BugMap Login / recovery\",\"type\":\"COMPONENT_SET\"},{\"id\":\"72:26\",\"name\":\"04 · 로그인 / 390 / default\",\"type\":\"FRAME\"},{\"id\":\"72:84\",\"name\":\"04 · 로그인 / 390 / loading_kakao\",\"type\":\"FRAME\"},{\"id\":\"72:145\",\"name\":\"04 · 로그인 / 390 / loading_naver\",\"type\":\"FRAME\"},{\"id\":\"72:206\",\"name\":\"04 · 로그인 / 390 / loading_apple\",\"type\":\"FRAME\"},{\"id\":\"72:267\",\"name\":\"04 · 로그인 / 390 / cancelled\",\"type\":\"FRAME\"},{\"id\":\"72:325\",\"name\":\"04 · 로그인 / 390 / network_error\",\"type\":\"FRAME\"},{\"id\":\"72:390\",\"name\":\"04 · 로그인 / 390 / unsupported\",\"type\":\"FRAME\"},{\"id\":\"72:450\",\"name\":\"04 · 로그인 / 390 / service_outage\",\"type\":\"FRAME\"},{\"id\":\"72:515\",\"name\":\"04 · 로그인 / 390 / success\",\"type\":\"FRAME\"},{\"id\":\"72:573\",\"name\":\"04 · 로그인 / 390 / policy_pending\",\"type\":\"FRAME\"},{\"id\":\"72:631\",\"name\":\"04 · 로그인 / 360 / default\",\"type\":\"FRAME\"},{\"id\":\"72:689\",\"name\":\"04 · 로그인 / 360 / loading_kakao\",\"type\":\"FRAME\"},{\"id\":\"72:750\",\"name\":\"04 · 로그인 / 360 / loading_naver\",\"type\":\"FRAME\"},{\"id\":\"72:811\",\"name\":\"04 · 로그인 / 360 / loading_apple\",\"type\":\"FRAME\"},{\"id\":\"72:872\",\"name\":\"04 · 로그인 / 360 / cancelled\",\"type\":\"FRAME\"},{\"id\":\"72:930\",\"name\":\"04 · 로그인 / 360 / network_error\",\"type\":\"FRAME\"},{\"id\":\"72:995\",\"name\":\"04 · 로그인 / 360 / unsupported\",\"type\":\"FRAME\"},{\"id\":\"72:1055\",\"name\":\"04 · 로그인 / 360 / service_outage\",\"type\":\"FRAME\"},{\"id\":\"72:1120\",\"name\":\"04 · 로그인 / 360 / success\",\"type\":\"FRAME\"},{\"id\":\"72:1178\",\"name\":\"04 · 로그인 / 360 / policy_pending\",\"type\":\"FRAME\"},{\"id\":\"119:706\",\"name\":\"BugMap · 로고\",\"type\":\"FRAME\"},{\"id\":\"126:706\",\"name\":\"BugMap-logo-vector\",\"type\":\"FRAME\"},{\"id\":\"156:1282\",\"name\":\"06 · 첫 로그인 / Kyro / default · 지도 미완료\",\"type\":\"FRAME\"}],\"currentPage\":{\"id\":\"0:1\",\"name\":\"Page 1\",\"childCount\":37},\"pages\":[{\"id\":\"0:1\",\"name\":\"Page 1\",\"childCount\":37}]}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "156:1282"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"156:1282\",\"name\":\"06 · 첫 로그인 / Kyro / default · 지도 미완료\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#e7ede8\"}],\"absoluteBoundingBox\":{\"x\":8700,\"y\":100,\"width\":390,\"height\":844},\"children\":[{\"id\":\"156:1284\",\"name\":\"logo / white reading plate\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#ffffff\"}],\"cornerRadius\":32,\"absoluteBoundingBox\":{\"x\":8771,\"y\":164,\"width\":248,\"height\":99},\"children\":[]},{\"id\":\"156:1285\",\"name\":\"logo / BugMap source vectors\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"visible\":false,\"type\":\"SOLID\",\"color\":\"#ffffff\"}],\"absoluteBoundingBox\":{\"x\":8787,\"y\":180,\"width\":216,\"height\":66.95999908447266},\"children\":[{\"id\":\"156:1292\",\"name\":\"beetle-on-B\",\"type\":\"GROUP\",\"absoluteBoundingBox\":{\"x\":8788.080078125,\"y\":181.1627197265625,\"width\":28.51239776611328,\"height\":49.59727478027344},\"children\":[]},{\"id\":\"156:1298\",\"name\":\"beetle-in-pin\",\"type\":\"GROUP\",\"absoluteBoundingBox\":{\"x\":8910.984375,\"y\":186.91200256347656,\"width\":6.9120001792907715,\"height\":7.127999782562256},\"children\":[]}]},{\"id\":\"157:1301\",\"name\":\"intro / white reading plate\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#ffffff\"}],\"cornerRadius\":32,\"absoluteBoundingBox\":{\"x\":8716,\"y\":312,\"width\":358,\"height\":164},\"children\":[]},{\"id\":\"157:1302\",\"name\":\"intro / title line 1\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#111827\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":320,\"width\":188,\"height\":31},\"characters\":\"작은 발견이 모여,\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Bold\",\"fontWeight\":700,\"fontSize\":26,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":31.46590805053711}},{\"id\":\"157:1303\",\"name\":\"intro / title line 2\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#111827\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":356,\"width\":234,\"height\":31},\"characters\":\"살아 있는 지도가 돼요\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Bold\",\"fontWeight\":700,\"fontSize\":26,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":31.46590805053711}},{\"id\":\"157:1304\",\"name\":\"intro / description line 1\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#4b5563\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":410,\"width\":137,\"height\":17},\"characters\":\"발견한 곤충을 기록하고\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Light\",\"fontWeight\":300,\"fontSize\":14,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":16.94318199157715}},{\"id\":\"157:1305\",\"name\":\"intro / description line 2\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#4b5563\"}],\"absoluteBoundingBox\":{\"x\":8724,\"y\":438,\"width\":128,\"height\":17},\"characters\":\"지도에서 함께 나눠요.\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Light\",\"fontWeight\":300,\"fontSize\":14,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":16.94318199157715}},{\"id\":\"157:1306\",\"name\":\"providers / white reading plate\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#ffffff\"}],\"cornerRadius\":32,\"absoluteBoundingBox\":{\"x\":8700,\"y\":628,\"width\":390,\"height\":316},\"children\":[]},{\"id\":\"157:1307\",\"name\":\"providerButton / kakao\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#fee500\"}],\"cornerRadius\":10.434782981872559,\"absoluteBoundingBox\":{\"x\":8716,\"y\":648,\"width\":358,\"height\":60},\"children\":[{\"id\":\"157:1308\",\"name\":\"Official Kakao SVG / reused library artwork\",\"type\":\"GROUP\",\"absoluteBoundingBox\":{\"x\":8748.9130859375,\"y\":648,\"width\":292.1739196777344,\"height\":60},\"children\":[]}]},{\"id\":\"157:1312\",\"name\":\"providerButton / naver\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#ffffff\"}],\"cornerRadius\":8,\"absoluteBoundingBox\":{\"x\":8716,\"y\":716,\"width\":358,\"height\":60},\"children\":[{\"id\":\"157:1314\",\"name\":\"Official naver-login.png\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"IMAGE\",\"scaleMode\":\"FIT\"}],\"absoluteBoundingBox\":{\"x\":8716,\"y\":722.6521606445312,\"width\":358,\"height\":46.69565200805664},\"children\":[]}]},{\"id\":\"157:1313\",\"name\":\"providerButton / apple\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#000000\"}],\"cornerRadius\":8,\"absoluteBoundingBox\":{\"x\":8716,\"y\":784,\"width\":358,\"height\":60},\"children\":[{\"id\":\"157:1315\",\"name\":\"Official apple-login.png\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"IMAGE\",\"scaleMode\":\"FIT\"}],\"absoluteBoundingBox\":{\"x\":8716,\"y\":790,\"width\":358,\"height\":48},\"children\":[]}]},{\"id\":\"157:1316\",\"name\":\"policy / line 1\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#4b5563\"}],\"absoluteBoundingBox\":{\"x\":8790.5,\"y\":864,\"width\":209,\"height\":15},\"characters\":\"계속하면 이용약관 및 개인정보처리방침에\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Medium\",\"fontWeight\":500,\"fontSize\":12,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":14.522727012634277}},{\"id\":\"157:1317\",\"name\":\"policy / line 2\",\"type\":\"TEXT\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#4b5563\"}],\"absoluteBoundingBox\":{\"x\":8853,\"y\":886,\"width\":84,\"height\":15},\"characters\":\"동의하게 됩니다.\",\"style\":{\"fontFamily\":\"Inter\",\"fontStyle\":\"Medium\",\"fontWeight\":500,\"fontSize\":12,\"textAlignHorizontal\":\"LEFT\",\"letterSpacing\":0,\"lineHeightPx\":14.522727012634277}},{\"id\":\"157:1318\",\"name\":\"system / home indicator\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"type\":\"SOLID\",\"color\":\"#111827\"}],\"cornerRadius\":3,\"absoluteBoundingBox\":{\"x\":8828,\"y\":927,\"width\":134,\"height\":5},\"children\":[]}]}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "get_node_info",
+      "args": {
+        "nodeId": "126:706"
+      },
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"id\":\"126:706\",\"name\":\"BugMap-logo-vector\",\"type\":\"FRAME\",\"fills\":[{\"blendMode\":\"NORMAL\",\"visible\":false,\"type\":\"SOLID\",\"color\":\"#ffffff\"}],\"absoluteBoundingBox\":{\"x\":6980,\"y\":0,\"width\":1000,\"height\":310},\"children\":[{\"id\":\"126:713\",\"name\":\"beetle-on-B\",\"type\":\"GROUP\",\"absoluteBoundingBox\":{\"x\":6985,\"y\":5.382965087890625,\"width\":132,\"height\":229.61703491210938},\"children\":[]},{\"id\":\"126:719\",\"name\":\"beetle-in-pin\",\"type\":\"GROUP\",\"absoluteBoundingBox\":{\"x\":7554,\"y\":32,\"width\":32,\"height\":33},\"children\":[]}]}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "export_node_as_image",
+      "args": {
+        "nodeId": "156:1282",
+        "format": "PNG",
+        "scale": 1
+      },
+      "result": {
+        "content": [
+          {
+            "type": "image",
+            "data": "[saved separately]",
+            "mimeType": "image/png"
+          }
+        ]
+      }
+    }
+  ],
+  "createdIds": [
+    "156:1282",
+    "156:1283",
+    "156:1284",
+    "156:1285",
+    "157:1301",
+    "157:1302",
+    "157:1303",
+    "157:1304",
+    "157:1305",
+    "157:1306",
+    "157:1307",
+    "157:1308",
+    "157:1312",
+    "157:1313",
+    "157:1314",
+    "157:1315",
+    "157:1316",
+    "157:1317",
+    "157:1318"
+  ],
+  "rootId": "156:1282",
+  "limitations": [
+    "No SVG/path import or rotation command; approved conceptual map cannot be constructed by current plugin. Background only, not approved visual match.",
+    "No font-family or line-height setter; generated texts use plugin Inter plus platform fallback.",
+    "get_node_info omits VECTOR and several raw fields; no full lint nodes export fabricated."
+  ],
+  "preservedRootIds": [
+    "134:1239",
+    "1:2",
+    "2:2",
+    "4:150",
+    "12:235",
+    "13:433",
+    "70:2",
+    "70:16",
+    "70:21",
+    "70:26",
+    "70:30",
+    "70:73",
+    "70:94",
+    "70:99",
+    "72:26",
+    "72:84",
+    "72:145",
+    "72:206",
+    "72:267",
+    "72:325",
+    "72:390",
+    "72:450",
+    "72:515",
+    "72:573",
+    "72:631",
+    "72:689",
+    "72:750",
+    "72:811",
+    "72:872",
+    "72:930",
+    "72:995",
+    "72:1055",
+    "72:1120",
+    "72:1178",
+    "119:706",
+    "126:706"
+  ],
+  "logoId": "156:1285",
+  "kakaoId": "157:1308",
+  "imageBindings": [
+    {
+      "nodeId": "157:1314",
+      "fillIndex": 0,
+      "asset": "assets/naver-login.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "157:1315",
+      "fillIndex": 0,
+      "asset": "assets/apple-login.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    }
+  ],
+  "capture": {
+    "path": "captures/figma-default.png",
+    "width": 390,
+    "height": 844,
+    "sha256": "f07a0b2f896dbdcc9dd67c3add3f154ab09bcc3001ae5b75256a396edebc2f9a"
+  },
+  "endedAt": "2026-11-15T23:18:59.214Z",
+  "status": "partial-native-frame-created; approved-map-unimplemented"
+}

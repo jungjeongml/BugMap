@@ -1,0 +1,2 @@
+screen_id,title,purpose,primary_actions,requirements,viewport,state_count
+login,BugMap 첫 로그인,지도 기반 곤충 기록 공유 가치 인지와 로그인 제공자 선택,카카오 로그인 | 네이버 로그인 | Apple 로그인,FIRST-01 | FIRST-02 | FIRST-03 | FIRST-04 | FIRST-05 | FIRST-06 | FIRST-07 | FIRST-08,390x844,1

@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "screen": "login",
+      "state": "default",
+      "nodeId": "156:1282",
+      "width": 390,
+      "height": 844,
+      "url": "https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=156-1282",
+      "capture": "captures/figma-default.png",
+      "status": "partial",
+      "rawExported": false
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "157:1314",
+      "fillIndex": 0,
+      "asset": "assets/naver-login.png",
+      "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+    },
+    {
+      "nodeId": "157:1315",
+      "fillIndex": 0,
+      "asset": "assets/apple-login.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    }
+  ],
+  "sourceLogo": {
+    "nodeId": "126:706",
+    "cloneNodeId": "156:1285",
+    "width": 216,
+    "height": 66.96
+  },
+  "validationScope": "Actual partial native frame. Approved conceptual map missing; font-family/line-height differs. Not stage6 complete."
+}

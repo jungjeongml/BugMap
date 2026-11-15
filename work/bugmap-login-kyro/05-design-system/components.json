@@ -1,0 +1,111 @@
+{
+  "logo": {
+    "description": "User-designated BugMap-logo-vector 126:706. Raster preview only here; Figma must duplicate original vectors preserving 100:31 ratio and source green.",
+    "tokens": [
+      "colors.surface",
+      "colors.logo"
+    ],
+    "states": [
+      "default"
+    ],
+    "geometry": {
+      "x": 87,
+      "y": 80,
+      "width": 216,
+      "height": 66.96
+    }
+  },
+  "mapBackdrop": {
+    "description": "Self-authored conceptual map, no actual location/record count. Quiet green/neutral roads, parks and decorative Lucide MapPin markers. Full screen.",
+    "tokens": [
+      "colors.mapLand",
+      "colors.mapPark",
+      "colors.mapWater",
+      "colors.mapRoad",
+      "colors.mapRoadEdge",
+      "colors.primary"
+    ],
+    "states": [
+      "default"
+    ]
+  },
+  "intro": {
+    "description": "Solid white 32px-radius reading surface at approved bounds; title 26/36 Bold and description14/28 Light.",
+    "tokens": [
+      "colors.surface",
+      "colors.text",
+      "colors.secondary",
+      "fontSizes.title",
+      "fontSizes.body"
+    ],
+    "states": [
+      "default"
+    ]
+  },
+  "providerButton": {
+    "description": "Three 358x60 buttons at y548/616/684, gap8. Official complete artwork centered with equal aspect ratios, no new marks. Standard brand corner exception. Entire60px button is focusable; static preview does not authenticate.",
+    "tokens": [
+      "colors.kakao",
+      "colors.kakaoInk",
+      "colors.naver",
+      "colors.naverBorder",
+      "colors.black",
+      "colors.surface",
+      "colors.primary",
+      "fontSizes.label"
+    ],
+    "states": [
+      "default"
+    ],
+    "interaction": {
+      "focus": "2px primary outline plus 3px offset; not a separate screen",
+      "pressed": "no invented authentication outcome"
+    },
+    "assetRendering": {
+      "kakao": {
+        "asset": "assets/kakao-login.svg",
+        "intrinsic": [
+          224,
+          46
+        ],
+        "display": [
+          292.173913,
+          60
+        ]
+      },
+      "naver": {
+        "asset": "assets/naver-login.png",
+        "intrinsic": [
+          1472,
+          192
+        ],
+        "display": [
+          358,
+          46.695652
+        ]
+      },
+      "apple": {
+        "asset": "assets/apple-login.png",
+        "intrinsic": [
+          716,
+          96
+        ],
+        "display": [
+          358,
+          48
+        ]
+      }
+    }
+  },
+  "policy": {
+    "description": "Two noninteractive consent-information lines at approved y764/786. Real policy URLs are outside scope; no mock link or false active destination.",
+    "tokens": [
+      "colors.secondary",
+      "colors.surface",
+      "fontSizes.caption"
+    ],
+    "states": [
+      "default"
+    ]
+  }
+}
