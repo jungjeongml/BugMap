@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors, layout } from '../../theme/tokens';
 import { AppIcon, type IconName } from './AppIcon';
 import { FeatureCarousel } from './FeatureCarousel';
+import { PolicyLinks } from './PolicyLinks';
 
 const providers = [
   { id: 'kakao', label: '카카오로 3초 만에 시작하기', background: colors.kakao, foreground: colors.kakaoText, iconColor: colors.kakaoText, size: 20 },
@@ -74,10 +75,7 @@ export function LoginScreen() {
               ))}
             </View>
 
-            <Text style={styles.terms}>
-              시작 시 <Text style={styles.termsLink}>이용약관</Text> 및 <Text style={styles.termsLink}>개인정보 처리방침</Text>,{ '\n' }
-              야생생물 보호 및 생태 채집 윤리강령에 동의하게 됩니다.
-            </Text>
+            <PolicyLinks />
           </View>
         </View>
       </ScrollView>
@@ -108,6 +106,4 @@ const styles = StyleSheet.create({
   assurance: { flexDirection: 'row', gap: 6, alignItems: 'center' },
   assuranceText: { fontSize: 11, lineHeight: 21, fontWeight: '500', color: colors.body },
   assuranceDivider: { width: 1, height: 12, backgroundColor: colors.border },
-  terms: { marginTop: 18, textAlign: 'center', fontSize: 11, lineHeight: 18, color: colors.quiet },
-  termsLink: { textDecorationLine: 'underline', color: colors.body },
 });
