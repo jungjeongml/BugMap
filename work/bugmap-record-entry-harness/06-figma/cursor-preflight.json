@@ -1,0 +1,391 @@
+{
+  "fileKey": null,
+  "documentName": "BugMapHarness",
+  "pageId": "0:1",
+  "pageName": "Page 1",
+  "planDigest": "793127a7d62cd17955de1e34ac68de9c3fa63ff18a9f2ed67f7a9349fdd147cb",
+  "roots": [
+    {
+      "id": "7:2",
+      "name": "02 · 메인 / 발견 지도",
+      "type": "FRAME",
+      "x": -598,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "19:2",
+      "name": "05 · 첫 로그인 / 지도 배경",
+      "type": "FRAME",
+      "x": -112,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "41:81",
+      "name": "07 · 메인 / 발견 지도",
+      "type": "FRAME",
+      "x": 374,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "50:1003",
+      "name": "RecordCard · 넓적사슴벌레",
+      "type": "COMPONENT",
+      "x": 1832,
+      "y": -256,
+      "width": 358,
+      "height": 116
+    },
+    {
+      "id": "50:1015",
+      "name": "RecordCard · 왕잠자리",
+      "type": "COMPONENT",
+      "x": 1832,
+      "y": -116,
+      "width": 358,
+      "height": 116
+    },
+    {
+      "id": "50:1024",
+      "name": "RecordCard · 칠성무당벌레",
+      "type": "COMPONENT",
+      "x": 1832,
+      "y": 24,
+      "width": 358,
+      "height": 116
+    },
+    {
+      "id": "50:1033",
+      "name": "MapTab · 메인 내비게이션",
+      "type": "COMPONENT",
+      "x": 1832,
+      "y": 176,
+      "width": 390,
+      "height": 52
+    },
+    {
+      "id": "50:1064",
+      "name": "Search · 곤충·지역",
+      "type": "COMPONENT",
+      "x": 1832,
+      "y": 256,
+      "width": 358,
+      "height": 48
+    },
+    {
+      "id": "50:1072",
+      "name": "MapReturn · 지도 보기",
+      "type": "COMPONENT",
+      "x": 1832,
+      "y": 328,
+      "width": 148,
+      "height": 48
+    },
+    {
+      "id": "50:1081",
+      "name": "08 · 내 주변 발견 / 전체",
+      "type": "FRAME",
+      "x": 860,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "50:1190",
+      "name": "08 · 내 주변 발견 / 3 km 이내",
+      "type": "FRAME",
+      "x": 1346,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "61:1294",
+      "name": "09 · 발견·채집 기록 / 컴포넌트",
+      "type": "SECTION",
+      "x": 3290,
+      "y": -256,
+      "width": 790,
+      "height": 1536
+    },
+    {
+      "id": "61:1295",
+      "name": "09 · 발견·채집 기록 / 첫 진입 · 0/3장",
+      "type": "FRAME",
+      "x": 2318,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "61:1552",
+      "name": "09 · 발견·채집 기록 / 입력 완료 · 3/3장",
+      "type": "FRAME",
+      "x": 2804,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "map": {
+    "id": "41:81",
+    "name": "07 · 메인 / 발견 지도",
+    "type": "FRAME",
+    "x": 374,
+    "y": -256,
+    "width": 390,
+    "height": 844
+  },
+  "cta": {
+    "id": "41:443",
+    "name": "발견/채집 기록하기",
+    "type": "FRAME",
+    "x": 190,
+    "y": 600,
+    "width": 184,
+    "height": 48,
+    "reactions": [
+      {
+        "action": {
+          "type": "NODE",
+          "destinationId": "61:1295",
+          "navigation": "NAVIGATE",
+          "transition": null,
+          "resetVideoPosition": false
+        },
+        "actions": [
+          {
+            "type": "NODE",
+            "destinationId": "61:1295",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          }
+        ],
+        "trigger": {
+          "type": "ON_CLICK"
+        }
+      }
+    ]
+  },
+  "flowStartingPoints": [
+    {
+      "nodeId": "50:1081",
+      "name": "Flow 1"
+    }
+  ],
+  "authored": [
+    {
+      "id": "61:1294",
+      "name": "09 · 발견·채집 기록 / 컴포넌트",
+      "type": "SECTION",
+      "x": 3290,
+      "y": -256,
+      "width": 790,
+      "height": 1536
+    },
+    {
+      "id": "61:1295",
+      "name": "09 · 발견·채집 기록 / 첫 진입 · 0/3장",
+      "type": "FRAME",
+      "x": 2318,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "61:1552",
+      "name": "09 · 발견·채집 기록 / 입력 완료 · 3/3장",
+      "type": "FRAME",
+      "x": 2804,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "availableFonts": [
+    {
+      "family": "Apple SD Gothic Neo",
+      "style": "Bold"
+    },
+    {
+      "family": "Apple SD Gothic Neo",
+      "style": "Medium"
+    },
+    {
+      "family": "Noto Sans KR",
+      "style": "Bold"
+    },
+    {
+      "family": "Noto Sans KR",
+      "style": "Medium"
+    }
+  ],
+  "existingColors": [
+    {
+      "id": "VariableID:41:83",
+      "name": "background",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:377",
+      "name": "mapLabel",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:378",
+      "name": "mapLabelOutline",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:381",
+      "name": "mapWaterLabel",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:384",
+      "name": "observationMarkerSurface",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:385",
+      "name": "observationMarkerBorder",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:387",
+      "name": "primary",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:389",
+      "name": "text",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:404",
+      "name": "locationHalo",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:406",
+      "name": "location",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:429",
+      "name": "mapPanelBorder",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:448",
+      "name": "onPrimary",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:450",
+      "name": "mapPanel",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:453",
+      "name": "sheetHandle",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:455",
+      "name": "searchSurface",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:456",
+      "name": "searchBorder",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:461",
+      "name": "textPlaceholder",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:464",
+      "name": "activeTabBorder",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:465",
+      "name": "activeTabSurface",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:477",
+      "name": "textSecondary",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:488",
+      "name": "systemHome",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:41:490",
+      "name": "systemInk",
+      "variableCollectionId": "VariableCollectionId:41:82"
+    },
+    {
+      "id": "VariableID:50:1006",
+      "name": "recordSurface",
+      "variableCollectionId": "VariableCollectionId:50:1005"
+    },
+    {
+      "id": "VariableID:50:1007",
+      "name": "recordBorder",
+      "variableCollectionId": "VariableCollectionId:50:1005"
+    },
+    {
+      "id": "VariableID:50:1152",
+      "name": "footerSurface",
+      "variableCollectionId": "VariableCollectionId:50:1005"
+    },
+    {
+      "id": "VariableID:61:1335",
+      "name": "photoTile",
+      "variableCollectionId": "VariableCollectionId:61:1334"
+    },
+    {
+      "id": "VariableID:61:1336",
+      "name": "controlOutline",
+      "variableCollectionId": "VariableCollectionId:61:1334"
+    },
+    {
+      "id": "VariableID:61:1374",
+      "name": "formField",
+      "variableCollectionId": "VariableCollectionId:61:1334"
+    },
+    {
+      "id": "VariableID:61:1540",
+      "name": "formFooter",
+      "variableCollectionId": "VariableCollectionId:61:1334"
+    },
+    {
+      "id": "VariableID:61:1543",
+      "name": "formFieldBorder",
+      "variableCollectionId": "VariableCollectionId:61:1334"
+    },
+    {
+      "id": "VariableID:61:1547",
+      "name": "disabledText",
+      "variableCollectionId": "VariableCollectionId:61:1334"
+    },
+    {
+      "id": "VariableID:61:1620",
+      "name": "photoTileBorder",
+      "variableCollectionId": "VariableCollectionId:61:1334"
+    }
+  ]
+}

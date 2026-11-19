@@ -1,0 +1,69 @@
+{
+  "method": "Chrome Figma player. Pointer clicks and wheel input, destination URL readback, and visibly rendered artboard before capture.",
+  "browserViewport": {
+    "width": 1908,
+    "height": 935
+  },
+  "artboard": {
+    "width": 390,
+    "height": 844
+  },
+  "displayScale": "scale-down",
+  "startUrl": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81&scaling=scale-down",
+  "steps": [
+    {
+      "action": "메인 지도에서 시작",
+      "observed": "41:81",
+      "expected": "41:81",
+      "capture": "prototype/01-map-before-entry.jpg",
+      "sha256": "46e2d5826765c564582f54916d4e521886d58e0830661e5dc254974af81b6e4d"
+    },
+    {
+      "action": "기존 기록하기 버튼으로 첫 진입",
+      "observed": "61:1295",
+      "expected": "61:1295",
+      "capture": "prototype/02-entry-default.jpg",
+      "sha256": "3502fbf4133c8a13d593e75c5adbee183f3aa16b77fd62e9e498185bb78691e9"
+    },
+    {
+      "action": "첫 진입에서 메모까지 스크롤",
+      "observed": "61:1295",
+      "expected": "61:1295",
+      "capture": "prototype/03-entry-default-scrolled.jpg",
+      "sha256": "b558eec83838d5e6bce12911c2dd48c1d54ff452f88f01c8ef4e6f4833908129"
+    },
+    {
+      "action": "뒤로 가기로 기존 지도 복귀",
+      "observed": "41:81",
+      "expected": "41:81",
+      "capture": "prototype/04-map-after-entry.jpg",
+      "sha256": "d919d1c9281fa2d8fb028f7dc348820c4c83f2d17ef036b1f76a9ed32a1501dd"
+    },
+    {
+      "action": "완료 대표 상태 열기",
+      "observed": "61:1552",
+      "expected": "61:1552",
+      "capture": "prototype/05-entry-ready.jpg",
+      "sha256": "0d78181d28adb476ebec5e7fd8e19ef1ab2f8b5ea3d48c9e10b19ddbab872c81"
+    },
+    {
+      "action": "완료 상태에서 메모까지 스크롤",
+      "observed": "61:1552",
+      "expected": "61:1552",
+      "capture": "prototype/06-entry-ready-scrolled.jpg",
+      "sha256": "e89de6fbf16422f60205278303b02e430d3ac43fbe136252a78d3f4dce55fd6a"
+    },
+    {
+      "action": "완료 상태의 뒤로 가기로 기존 지도 복귀",
+      "observed": "41:81",
+      "expected": "41:81",
+      "capture": "prototype/07-map-after-ready.jpg",
+      "sha256": "4b1700054f2f6dc13d3d438bea684e53777912a9e74c55ae740c785448cffd64"
+    }
+  ],
+  "renderChecks": [
+    "Map and record button visibly rendered before entry",
+    "All three photo thumbnails visibly rendered before ready-state scroll",
+    "Memo and fixed submit visible after wheel input"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "bugmap-record-entry-harness",
+  "purpose": "BugMapHarness의 메인 지도에서 여는 발견·채집 기록 작성 화면 디자인",
+  "platform": "mobile",
+  "language": "ko",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "reviewMinScore": 4,
+  "scope": {
+    "screen": "record-entry",
+    "states": [
+      "default",
+      "ready"
+    ],
+    "figmaRootCount": 2,
+    "prototypeSourceNodeId": "41:81",
+    "photoLimit": {
+      "min": 1,
+      "max": 3
+    }
+  },
+  "sourceDocuments": {
+    "AGENTS.md": "c4374f749618d10136c24e720011df1c3f31a5880525989d99a0fad9c04d715b",
+    "docs/PRD.md": "4236c642d1bc28cd982dd42284681c43c8ea256fa22e485a3a84ce3a93e12e17",
+    "docs/DESIGN.md": "11c83cb492e9d02a7c6e06eb1ed21aff612d5502c1d5ac256260a3b79cf457f6",
+    "docs/TDD.md": "9a1038d3e3234895591a75ca332e1c1098df5ac68ea0def12d36612a43db7100",
+    "docs/screens/main-map.md": "564f66d25ad73d674c33cb55842366dbe02f0417c31e314c8bb72005220786c6",
+    "docs/screens/record-entry.md": "720a4913301281c4a6903d3a18d69da8be0b28cb446910f39bfe45e633c7b271",
+    "docs/design-harness.md": "8fc9bd2d5ff0a56ecf9e681188615e084f4f519973f6cb51e2dafbf698a9767f",
+    "design/record-entry/12:235.png": "d62d12c70c2f54e1841ae20f0256225dc70d0049c0cdb95534c3182787cf02d2",
+    "design/record-entry/13:433.png": "ddedab5ab45de07e1a92ea05cc1c7945188ae89332adb0bb2c9612c283d7e262",
+    "work/bugmap-main-map-harness/08-handoff/HANDOFF.md": "1e342df902c4fd30cc3377eb2e8844610850cac56402f63fa165fdedef1b0a58",
+    "work/bugmap-main-map-harness/06-figma/captures/main-map-default.png": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c",
+    "work/bugmap-nearby-discoveries-harness/08-handoff/HANDOFF.md": "42a1d3bc2f0235e4fe12ee43546f36deae8ce509291f4055df96b5e263e59d70"
+  }
+}

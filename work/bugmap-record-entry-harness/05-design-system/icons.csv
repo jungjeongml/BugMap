@@ -1,0 +1,14 @@
+name,purpose,catalog_url
+arrow-left,이전 화면으로 돌아가기,https://lucide.dev/icons/arrow-left
+camera,사진 촬영,https://lucide.dev/icons/camera
+images,사진 첨부,https://lucide.dev/icons/images
+x,첨부 사진 개별 삭제,https://lucide.dev/icons/x
+square,이름 모름 선택 상태,https://lucide.dev/icons/square
+circle,기록 유형 미선택,https://lucide.dev/icons/circle
+circle-dot,선택한 기록 유형,https://lucide.dev/icons/circle-dot
+map-pin,발견 위치 선택,https://lucide.dev/icons/map-pin
+locate-fixed,현재 위치 사용,https://lucide.dev/icons/locate-fixed
+chevron-right,위치 선택 화면 진입,https://lucide.dev/icons/chevron-right
+chevron-down,값 선택,https://lucide.dev/icons/chevron-down
+calendar-days,발견 날짜 선택,https://lucide.dev/icons/calendar-days
+clock,발견 시간 선택,https://lucide.dev/icons/clock

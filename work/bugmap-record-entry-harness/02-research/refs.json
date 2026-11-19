@@ -1,0 +1,16 @@
+{
+  "references": [
+    {
+      "id": "inaturalist-evidence",
+      "url": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151100266970/original/GTIlaw7hO9EWmh83Kxy1OoqAj5l4m7SnEw.jpeg?1725892852=",
+      "viewport": { "width": 390, "height": 844 },
+      "reason": "iNaturalist 공식 편집 도움말의 Evidence 예시. 사진·발견 위치·일시를 어떻게 노출하는지 관찰한다."
+    },
+    {
+      "id": "inaturalist-other-data",
+      "url": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151100267679/original/qnTLR3dPV-7MJVk0Tq_5eauiJnXjGToDPw.jpeg?1725892961=",
+      "viewport": { "width": 390, "height": 844 },
+      "reason": "같은 공식 도움말의 Other Data 예시. 위치 공개와 선택형 메모 진입점을 대조한다."
+    }
+  ]
+}

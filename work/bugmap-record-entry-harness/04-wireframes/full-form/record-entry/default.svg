@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="920" viewBox="0 0 390 920" role="img" aria-labelledby="screen-title">
+<title id="screen-title">발견·채집 기록 · 0/3장 · 전체 폼</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g id="block-0" data-type="text"><text x="24" y="34" font-family="sans-serif" font-size="14" fill="#222222">9:41</text></g>
+<g id="block-1" data-type="button"><rect x="16" y="54" width="56" height="48" rx="12" fill="#dddddd" stroke="#888888"/><text x="24" y="76" font-family="sans-serif" font-size="14" fill="#222222">뒤로</text></g>
+<g id="block-2" data-type="text"><text x="124" y="88" font-family="sans-serif" font-size="14" fill="#222222">발견·채집 기록</text></g>
+<g id="block-3" data-type="text"><text x="24" y="128" font-family="sans-serif" font-size="14" fill="#222222">사진 · 필수</text></g>
+<g id="block-4" data-type="text"><text x="324" y="128" font-family="sans-serif" font-size="14" fill="#222222">0/3장</text></g>
+<g id="block-5" data-type="button"><rect x="16" y="140" width="172" height="48" rx="12" fill="#dddddd" stroke="#888888"/><text x="24" y="162" font-family="sans-serif" font-size="14" fill="#222222">촬영하기</text></g>
+<g id="block-6" data-type="button"><rect x="202" y="140" width="172" height="48" rx="12" fill="#dddddd" stroke="#888888"/><text x="210" y="162" font-family="sans-serif" font-size="14" fill="#222222">사진 첨부</text></g>
+<g id="block-7" data-type="text"><text x="24" y="216" font-family="sans-serif" font-size="14" fill="#222222">사진을 1장 이상 추가해 주세요</text></g>
+<g id="block-8" data-type="text"><text x="24" y="256" font-family="sans-serif" font-size="14" fill="#222222">곤충 이름</text></g>
+<g id="block-9" data-type="input"><rect x="16" y="264" width="232" height="48" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="24" y="286" font-family="sans-serif" font-size="14" fill="#222222">곤충 이름 입력</text></g>
+<g id="block-10" data-type="button"><rect x="264" y="264" width="110" height="48" rx="12" fill="#dddddd" stroke="#888888"/><text x="272" y="286" font-family="sans-serif" font-size="14" fill="#222222">이름 모름</text></g>
+<g id="block-11" data-type="text"><text x="24" y="344" font-family="sans-serif" font-size="14" fill="#222222">기록 유형</text></g>
+<g id="block-12" data-type="button"><rect x="16" y="352" width="172" height="44" rx="12" fill="#dddddd" stroke="#888888"/><text x="24" y="374" font-family="sans-serif" font-size="14" fill="#222222">관찰</text></g>
+<g id="block-13" data-type="button"><rect x="202" y="352" width="172" height="44" rx="12" fill="#dddddd" stroke="#888888"/><text x="210" y="374" font-family="sans-serif" font-size="14" fill="#222222">채집</text></g>
+<g id="block-14" data-type="text"><text x="24" y="436" font-family="sans-serif" font-size="14" fill="#222222">발견 위치 · 필수</text></g>
+<g id="block-15" data-type="button"><rect x="16" y="444" width="358" height="48" rx="12" fill="#dddddd" stroke="#888888"/><text x="24" y="466" font-family="sans-serif" font-size="14" fill="#222222">지도에서 발견 위치 선택</text></g>
+<g id="block-16" data-type="button"><rect x="16" y="496" width="172" height="44" rx="12" fill="#dddddd" stroke="#888888"/><text x="24" y="518" font-family="sans-serif" font-size="14" fill="#222222">현재 위치 사용</text></g>
+<g id="block-17" data-type="text"><text x="24" y="572" font-family="sans-serif" font-size="14" fill="#222222">발견 날짜·시간</text></g>
+<g id="block-18" data-type="button"><rect x="16" y="580" width="172" height="48" rx="12" fill="#dddddd" stroke="#888888"/><text x="24" y="602" font-family="sans-serif" font-size="14" fill="#222222">날짜 선택</text></g>
+<g id="block-19" data-type="button"><rect x="202" y="580" width="172" height="48" rx="12" fill="#dddddd" stroke="#888888"/><text x="210" y="602" font-family="sans-serif" font-size="14" fill="#222222">시간 선택</text></g>
+<g id="block-20" data-type="text"><text x="24" y="668" font-family="sans-serif" font-size="14" fill="#222222">메모 · 선택</text></g>
+<g id="block-21" data-type="input"><rect x="16" y="676" width="358" height="112" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="24" y="698" font-family="sans-serif" font-size="14" fill="#222222">주변 환경이나 곤충 행동을 적어 주세요</text></g>
+<g id="block-22" data-type="box"><rect x="0" y="810" width="390" height="110" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-23" data-type="text"><text x="24" y="830" font-family="sans-serif" font-size="14" fill="#222222">필수 항목을 입력하면 작성할 수 있어요</text></g>
+<g id="block-24" data-type="box"><rect x="16" y="834" width="358" height="48" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="24" y="856" font-family="sans-serif" font-size="14" fill="#222222">작성완료</text></g>
+</svg>

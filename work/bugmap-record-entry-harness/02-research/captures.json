@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "refs:capture",
+  "at": "2026-11-19T18:02:45.396Z",
+  "inputs": {
+    "02-research/refs.json": "185193d2742fbdd732ae5f373bc3a3e3a98c55103dad09f413b01cc0d9c510da"
+  },
+  "outputs": {
+    "02-research/captures/inaturalist-evidence.png": "626b9cb29f9d00c255c27319d6bf3c5ce4193f40a3886491e03988bc697d8a81",
+    "02-research/captures/inaturalist-other-data.png": "8130a99566925fb7e0670e0938d2bec2d3be5c6476c31a1d99b3ad80c233eb6d"
+  },
+  "references": [
+    {
+      "id": "inaturalist-evidence",
+      "url": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151100266970/original/GTIlaw7hO9EWmh83Kxy1OoqAj5l4m7SnEw.jpeg?1725892852=",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "finalUrl": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151100266970/original/GTIlaw7hO9EWmh83Kxy1OoqAj5l4m7SnEw.jpeg?1725892852=",
+      "title": "GTIlaw7hO9EWmh83Kxy1OoqAj5l4m7SnEw.jpeg (1170×598)",
+      "capture": "02-research/captures/inaturalist-evidence.png"
+    },
+    {
+      "id": "inaturalist-other-data",
+      "url": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151100267679/original/qnTLR3dPV-7MJVk0Tq_5eauiJnXjGToDPw.jpeg?1725892961=",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "finalUrl": "https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/151100267679/original/qnTLR3dPV-7MJVk0Tq_5eauiJnXjGToDPw.jpeg?1725892961=",
+      "title": "qnTLR3dPV-7MJVk0Tq_5eauiJnXjGToDPw.jpeg (1170×461)",
+      "capture": "02-research/captures/inaturalist-other-data.png"
+    }
+  ]
+}

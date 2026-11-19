@@ -1,0 +1,62 @@
+flowchart TD
+    MAP["기존 지도 41:81"] -->|"발견/채집 기록하기 41:443"| START["작성 첫 진입 0/3장 · 작성완료 비활성"]
+    START -->|"입력 없이 뒤로"| MAP
+    START -->|"입력 시작"| FORM["작성 폼 · 사진 0~3장"]
+    START -->|"촬영하기 · 사진 첨부"| PHOTO["카메라 또는 사진 선택기"]
+    FORM -->|"촬영하기 · 사진 첨부"| PHOTO
+    PHOTO -->|"권한 거부·제한"| PHOTO_ACCESS["권한 안내 · 다른 사진 경로 또는 초안으로 복귀"]
+    PHOTO_ACCESS -->|"다른 사진 경로 또는 허용된 권한 재요청"| PHOTO
+    PHOTO_ACCESS -->|"작성 폼으로 복귀"| RETURN{"미저장 입력이 있나요?"}
+    PHOTO -->|"취소"| RETURN
+    RETURN -->|"아직 입력 없음"| START
+    RETURN -->|"미저장 입력 있음 · 초안 보존"| FORM
+    PHOTO -->|"남은 자리 안에서 확정"| FORM
+    PHOTO -->|"사진 읽기 또는 형식 오류"| PHOTO_INVALID["문제 사진 재선택·삭제 · 기존 입력 보존"]
+    PHOTO_INVALID --> FORM
+    PHOTO -->|"남은 자리보다 많이 선택"| LIMIT["남은 장수 안내 · 기존 사진 보존"]
+    LIMIT --> PHOTO
+    FORM -->|"3장 도달"| FULL["3/3장 · 추가 비활성 · 개별 삭제 가능"]
+    FULL -->|"사진 한 장 삭제 또는 다른 필드 편집"| FORM
+    FORM -->|"이름 또는 이름 모름 · 관찰 또는 채집"| FORM
+    START -->|"지도에서 발견 위치 선택"| LOCATION["지도에서 발견 위치 확인·수정"]
+    FORM -->|"지도에서 위치 선택 또는 변경"| LOCATION
+    START -->|"현재 위치 사용"| LOCATE["현재 위치를 찾는 중"]
+    FORM -->|"현재 위치 사용"| LOCATE
+    LOCATE -->|"좌표 확인"| LOCATION
+    LOCATE -->|"권한 거부·제한"| PERMISSION["권한 안내와 지도에서 직접 선택"]
+    LOCATE -->|"정확도 부족 · 시간 초과 · GPS 실패"| GPS_ERROR["위치를 찾지 못한 안내와 지도에서 직접 선택"]
+    PERMISSION -->|"권한 요청이 가능하면 다시 시도"| LOCATE
+    GPS_ERROR -->|"현재 위치 다시 시도"| LOCATE
+    PERMISSION -->|"지도에서 직접 선택"| LOCATION
+    GPS_ERROR -->|"지도에서 직접 선택"| LOCATION
+    LOCATE -->|"취소 · 이전 위치 보존"| RETURN
+    PERMISSION -->|"닫기 · 이전 위치 보존"| RETURN
+    GPS_ERROR -->|"닫기 · 이전 위치 보존"| RETURN
+    LOCATION -->|"유효한 발견 위치 확정"| FORM
+    LOCATION -->|"취소 · 이전 위치 보존"| RETURN
+    START -->|"발견 날짜 또는 시간 선택"| OBSERVED["날짜·시간 각각 편집 · 이전 날짜 허용"]
+    FORM -->|"발견 날짜 또는 시간 선택"| OBSERVED
+    OBSERVED -->|"확정한 필드만 반영"| FORM
+    OBSERVED -->|"취소 · 이전 날짜·시간 보존"| RETURN
+    FORM -->|"선택 메모를 여러 줄로 입력·수정"| FORM
+    FORM --> REQUIREMENTS{"사진 1~3장 · 이름 또는 이름 모름 · 유형 · 발견 위치 · 발견 날짜와 시간 모두 유효"}
+    FULL --> REQUIREMENTS
+    REQUIREMENTS -->|"필수 값 미완성 · 작성완료 비활성"| FORM
+    REQUIREMENTS -->|"필수 값 유효 · 메모 선택"| ENABLED["작성완료 활성"]
+    ENABLED -->|"필수 값 편집"| FORM
+    ENABLED -->|"작성완료"| SAVING["업로드·저장 진행 · 중복 제출 잠금"]
+    SAVING -->|"업로드·저장 실패"| FAILURE["사진과 초안 유지 · 재시도"]
+    FAILURE -->|"같은 입력으로 재시도"| SAVING
+    FAILURE -->|"수정"| FORM
+    SAVING -->|"저장 성공 · 발견 위치로 대략 공개 좌표 자동 생성안"| STORED["새 기록 · 발견 일시와 게시 시각 별도 저장 · 선택 메모 보존"]
+    STORED -->|"작성자 복귀"| MAP_NEW["같은 지도 41:81 · 새 기록 반영"]
+    STORED -->|"새 기록의 공개 처리"| PUBLIC["게시 전 사진 EXIF 위치 정보 제거"]
+    PUBLIC --> PUBLIC_MAP["타인용 지도와 조회에 공개 좌표만 제공 · 해상도는 제품 결정"]
+    PUBLIC_MAP -->|"기록 상세 열기"| DETAIL["기록 상세 · 발견 일시와 게시 시각 구분 · 입력한 여러 줄 메모 보존"]
+    MAP_NEW -->|"기록 상세 열기"| DETAIL
+    DETAIL -->|"뒤로"| MAP
+    FORM -->|"미저장 상태로 뒤로"| EXIT["이탈 확인"]
+    ENABLED -->|"미저장 상태로 뒤로"| EXIT
+    FULL -->|"미저장 상태로 뒤로"| EXIT
+    EXIT -->|"계속 작성"| FORM
+    EXIT -->|"작성 나가기"| MAP

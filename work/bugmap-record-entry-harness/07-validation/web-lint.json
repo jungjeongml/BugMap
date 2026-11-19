@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "lint:web",
+  "at": "2026-11-19T19:22:22.861Z",
+  "inputs": {
+    "05-design-system/captures/390x844-default.png": "bdc5f9798bb43af6cc3c4dc51bd57e78a6221f9323e0862fa5c16109aee28ebb",
+    "05-design-system/captures/390x844-ready.png": "ce2c02f1557543dc5abf2a679e49f833248f351e478bdb930216ba1b2d8d866d",
+    "05-design-system/captures/full-form/390x1018-ready.png": "f8a1b6b380ac41608bec90328c257dc46b9275b441e8d262d6231b76c6346cb5",
+    "05-design-system/captures/full-form/390x1020-default.png": "7c9ae6ffd32f25da57f8dc3b15c9e67ccb4b91cc5c387c38c7339bdeafe8e9ea",
+    "05-design-system/captures/full-form/390x1128-ready.png": "2e78562418a7ad2f9e5ad0b7ba007f88005f4f755184260afc28c0aab79dde85",
+    "05-design-system/captures/full-form/390x920-default.png": "51907135f2991e752e5ecdc23bb7d9678ba136e64a566394ccbe300686478383",
+    "05-design-system/components.json": "f4c08e586e5501fdbc28d49295192df67da8e336134dc6b3d604dd8c05f6d3bf",
+    "05-design-system/copy.json": "8da81c72f9c1c02a0e6ffb18b13cba50f3c7c0e8a561d32dd47d549aee90d568",
+    "05-design-system/tokens.json": "d783ae586e55ab61a470c982df8f48cd39ea89e1a4f160272173b0d76699dc78",
+    "06-figma/web/README.md": "8e1ea383ed9afc6327378d45bab8ef4325737901df3a00748efa7b786df9446b",
+    "06-figma/web/assets/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "06-figma/web/assets/Pretendard-Medium.woff2": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+    "06-figma/web/assets/lucide-ISC.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "06-figma/web/assets/photos/specimen-1.png": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+    "06-figma/web/assets/photos/specimen-2.png": "c9d362b3c36af5982340fb8e39269ab78bb32ffd94d17b2e10553a847b93d2cb",
+    "06-figma/web/assets/photos/specimen-3.png": "59a64b9b5eaef701070a775131c637c2325ff36d61083c5e9fc622c704b714d5",
+    "06-figma/web/assets/pretendard-OFL.txt": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+    "06-figma/web/record-entry--default.html": "ad06930fe319434e088f794ac46118bed8241fd59a4f7c7356f31147b0343894",
+    "06-figma/web/record-entry--ready.html": "34bd91c16f1ed8c4d7d301d077c493c62ff846b27a8c2961f8c6b25add3bd6b5",
+    "06-figma/web/record-entry.css": "cf9d2b9af265a88edafa0d662f676d027d87c0af747891709725f34448f96719",
+    "06-figma/web/record-entry.js": "67a8f77e51ca5200b2e2c495c2e1f6d56e9a9934742b480c7a35107a8fa6aff6",
+    "control/project.json": "3412db813eb156742458ff43a33f2ddeacfd694c6dd922d7008c7ac4da763e20"
+  },
+  "outputs": {
+    "07-validation/captures/1b0e94cd6fb8-390x844.png": "501b468f6b8c53f2e19a8a7a24c99c46793fc191c32ce490a63e8f2c04564f0b",
+    "07-validation/captures/d44cd022bf13-390x844.png": "a3d3d8dc74aa988176f8851581aead0dffdeaa3e0f81e9ad822154ee8ca12477"
+  },
+  "minTarget": 44,
+  "runs": [
+    {
+      "html": "06-figma/web/record-entry--default.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/1b0e94cd6fb8-390x844.png",
+      "issues": [],
+      "title": "발견·채집 기록 · 0/3장",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-default.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    },
+    {
+      "html": "06-figma/web/record-entry--ready.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/d44cd022bf13-390x844.png",
+      "issues": [],
+      "title": "발견·채집 기록 · 3/3장",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-ready.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    }
+  ]
+}

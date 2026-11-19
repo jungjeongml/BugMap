@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "wireframe",
+  "at": "2026-11-19T18:48:08.610Z",
+  "inputs": {
+    "04-wireframes/wireframes.json": "edff5382335e7c883df8dd8f6eae2a749df06495e7b9583a5c469fd067d5ca29"
+  },
+  "outputs": {
+    "04-wireframes/record-entry/default.svg": "35badcb0023dbfea3f9686ffbe6c3d3ad8359f18a5e17acf427adc6017a78a0f",
+    "04-wireframes/record-entry/ready.svg": "6db694c026f6768a9292e71d09787fb6249f9e4aa9f7fffa60bd66fdd632bc25",
+    "04-wireframes/captures/record-entry/default.png": "d6963325582f691602fc277347ae4cff944dcf08071865c568cb95b53efd12e1",
+    "04-wireframes/captures/record-entry/ready.png": "aff7d7a745d557213579a390b566a161bba790ebce1350ec70b4b6d1850ade09"
+  }
+}

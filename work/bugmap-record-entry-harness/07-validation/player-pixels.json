@@ -1,0 +1,47 @@
+{
+  "method": "RGB comparison after decoding the actual Chrome Figma player JPEG screenshots with macOS sips into PNG",
+  "viewport": {
+    "width": 1908,
+    "height": 935
+  },
+  "bodyBox": {
+    "x": 778,
+    "y": 165,
+    "width": 350,
+    "height": 590,
+    "channelDeltaThreshold": 15
+  },
+  "actionBox": {
+    "x": 790,
+    "y": 797,
+    "width": 325,
+    "height": 36,
+    "channelDeltaThreshold": 0
+  },
+  "pairs": [
+    {
+      "before": "prototype/02-entry-default.jpg",
+      "after": "prototype/03-entry-default-scrolled.jpg",
+      "body": {
+        "changedPixels": 54416,
+        "comparedPixels": 206500
+      },
+      "action": {
+        "changedPixels": 0,
+        "comparedPixels": 11700
+      }
+    },
+    {
+      "before": "prototype/05-entry-ready.jpg",
+      "after": "prototype/06-entry-ready-scrolled.jpg",
+      "body": {
+        "changedPixels": 78116,
+        "comparedPixels": 206500
+      },
+      "action": {
+        "changedPixels": 0,
+        "comparedPixels": 11700
+      }
+    }
+  ]
+}

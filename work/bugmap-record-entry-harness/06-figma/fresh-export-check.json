@@ -1,0 +1,23 @@
+{
+  "method": "Independent read-only native export from the open Figma file",
+  "checkedAt": "2026-11-19T19:11:46.671Z",
+  "sameTree": true,
+  "sameComponents": true,
+  "sameActions": true,
+  "sameCaptures": true,
+  "sameImageBindings": true,
+  "screens": [
+    {
+      "nodeId": "61:1295",
+      "state": "default",
+      "captureSha256": "6792a2f81035925a4f987b3f0b82f17d3045ae4672ddbf1450635c72c48813c6",
+      "bodyViewportCaptureSha256": "87b48a3ac472fc2c23a3f3156d2fed4cf5f194efcfc221b596a82a29de2e25be"
+    },
+    {
+      "nodeId": "61:1552",
+      "state": "ready",
+      "captureSha256": "1a6f5f70d8c80fb21508592d83c55903796658e607c63218067af2759c3fee86",
+      "bodyViewportCaptureSha256": "cc55498fbb87f1d02110105f03fd61a41541ca0c88e0357f6eb701f39e690617"
+    }
+  ]
+}

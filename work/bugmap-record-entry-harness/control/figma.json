@@ -1,0 +1,19 @@
+{
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "documentName": "BugMapHarness",
+  "pageId": "0:1",
+  "pageName": "Page 1",
+  "fileUrl": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=0-1",
+  "prototypeSource": {
+    "nodeId": "41:81",
+    "name": "07 · 메인 / 발견 지도",
+    "recordButtonId": "41:443",
+    "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81"
+  },
+  "source": {
+    "fileKey": "LynbxdW8Qf7TavCrPLd2nY",
+    "nodeId": "164:1431",
+    "role": "다크 기록 작성 참고 시안"
+  },
+  "editPolicy": "기존 지도와 로그인 및 내 주변 발견을 보존한다. 작성 시안 두 상태를 추가하고 기존 지도 41:443의 작성 진입 및 작성 화면의 지도 복귀를 연결한다."
+}

@@ -1,0 +1,18 @@
+{
+  "method": "Native master fill removal and stable subtree and PNG comparisons",
+  "at": "2026-11-19T19:11:43.079Z",
+  "masterIds": [
+    "61:1355",
+    "61:1603"
+  ],
+  "instanceIds": [
+    "I61:1360;61:1355",
+    "I61:1608;61:1603"
+  ],
+  "sameExistingRoots": true,
+  "samePrototype": true,
+  "samePngBytes": true,
+  "sameLayout": true,
+  "removedPaint": "#000000ff",
+  "windingRule": "NONE"
+}

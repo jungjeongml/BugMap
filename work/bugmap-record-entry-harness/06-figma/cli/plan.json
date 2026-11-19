@@ -1,0 +1,2274 @@
+{
+  "target": {
+    "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+    "documentName": "BugMapHarness",
+    "pageId": "0:1",
+    "pageName": "Page 1",
+    "fileUrl": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=0-1",
+    "prototypeSource": {
+      "nodeId": "41:81",
+      "name": "07 · 메인 / 발견 지도",
+      "recordButtonId": "41:443",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81"
+    },
+    "source": {
+      "fileKey": "LynbxdW8Qf7TavCrPLd2nY",
+      "nodeId": "164:1431",
+      "role": "다크 기록 작성 참고 시안"
+    },
+    "editPolicy": "기존 지도와 로그인 및 내 주변 발견을 보존한다. 작성 시안 두 상태를 추가하고 기존 지도 41:443의 작성 진입 및 작성 화면의 지도 복귀를 연결한다."
+  },
+  "approvals": {
+    "wireframes": "f5f36d37-f589-4e50-bc22-536c626a5594",
+    "design-system": "177a8516-82fe-4689-a7c0-961bf42cd782"
+  },
+  "tokens": {
+    "colors": {
+      "background": "#101C16",
+      "text": "#F3F7EE",
+      "textSecondary": "#BDCDC2",
+      "textPlaceholder": "#A7BBAD",
+      "primary": "#C5EE79",
+      "onPrimary": "#202E13",
+      "formField": "#1C2C23",
+      "formFieldBorder": "#3D5044",
+      "photoTile": "#26382C",
+      "photoTileBorder": "#526954",
+      "formFooter": "#152219",
+      "activeTabSurface": "#2F4433",
+      "mapPanel": "#131E18",
+      "mapPanelBorder": "#3B4D42",
+      "location": "#82D0F0",
+      "disabledText": "#8FA496",
+      "controlOutline": "#6D8677"
+    },
+    "typography": {
+      "systemTime": {
+        "fontFamily": "Pretendard",
+        "fontSize": 15,
+        "fontWeight": 700,
+        "lineHeight": 20
+      },
+      "screenTitle": {
+        "fontFamily": "Pretendard",
+        "fontSize": 20,
+        "fontWeight": 700,
+        "lineHeight": 26
+      },
+      "section": {
+        "fontFamily": "Pretendard",
+        "fontSize": 16,
+        "fontWeight": 700,
+        "lineHeight": 22
+      },
+      "count": {
+        "fontFamily": "Pretendard",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "lineHeight": 20
+      },
+      "meta": {
+        "fontFamily": "Pretendard",
+        "fontSize": 12,
+        "fontWeight": 500,
+        "lineHeight": 17
+      },
+      "value": {
+        "fontFamily": "Pretendard",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "lineHeight": 20
+      },
+      "action": {
+        "fontFamily": "Pretendard",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "lineHeight": 20
+      },
+      "compactAction": {
+        "fontFamily": "Pretendard",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "lineHeight": 18
+      },
+      "submit": {
+        "fontFamily": "Pretendard",
+        "fontSize": 15,
+        "fontWeight": 700,
+        "lineHeight": 22
+      }
+    },
+    "layout": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "safeArea": {
+        "top": 54,
+        "bottom": 34
+      },
+      "gutter": 16,
+      "minimumTouchTarget": 44,
+      "header": {
+        "height": 108,
+        "iconSize": 24
+      },
+      "body": {
+        "y": 108,
+        "height": 620
+      },
+      "footer": {
+        "y": 734,
+        "height": 110
+      },
+      "submit": {
+        "x": 16,
+        "y": 758,
+        "width": 358,
+        "height": 48,
+        "radius": 24
+      },
+      "home": {
+        "x": 128,
+        "bottom": 14,
+        "width": 134,
+        "height": 4
+      },
+      "controls": {
+        "radius": 16,
+        "iconSize": 18,
+        "padding": 12
+      },
+      "photo": {
+        "radius": 12,
+        "width": 114,
+        "height": 90,
+        "deleteCircle": 28,
+        "deleteIcon": 16
+      }
+    }
+  },
+  "states": [
+    {
+      "state": "default",
+      "name": "09 · 발견·채집 기록 / 첫 진입 · 0/3장",
+      "width": 390,
+      "height": 844,
+      "scroll": {
+        "x": 0,
+        "y": 108,
+        "width": 390,
+        "height": 620,
+        "contentHeight": 696
+      },
+      "sections": [
+        {
+          "key": "photo",
+          "name": "사진",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "photo-title",
+              "x": 16,
+              "y": 108,
+              "width": 200,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "photo-title-label",
+                  "key": "photos",
+                  "text": "사진",
+                  "x": 16,
+                  "y": 120,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                },
+                {
+                  "kind": "label",
+                  "id": "photo-title-field-status",
+                  "key": "required",
+                  "text": "· 필수",
+                  "x": 56,
+                  "y": 120,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "labels",
+              "id": "photo-count",
+              "x": 316,
+              "y": 108,
+              "width": 58,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "photo-count-label",
+                  "key": "photoCountEmpty",
+                  "text": "0/3장",
+                  "x": 374,
+                  "y": 120,
+                  "anchor": "end",
+                  "color": "textSecondary",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "camera",
+              "x": 16,
+              "y": 140,
+              "width": 172,
+              "height": 48,
+              "component": "PhotoAddAction",
+              "action": "camera",
+              "label": "촬영하기",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "camera-detail-0",
+                  "x": 16,
+                  "y": 140,
+                  "width": 172,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "photoTile",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "camera-icon",
+                  "x": 58,
+                  "y": 154,
+                  "width": 20,
+                  "height": 20,
+                  "svg": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C5EE79\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z\"/><circle cx=\"12\" cy=\"13\" r=\"3\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "camera-label",
+                  "key": "camera",
+                  "text": "촬영하기",
+                  "x": 88,
+                  "y": 164,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "gallery",
+              "x": 202,
+              "y": 140,
+              "width": 172,
+              "height": 48,
+              "component": "PhotoAddAction",
+              "action": "gallery",
+              "label": "사진 첨부",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "gallery-detail-0",
+                  "x": 202,
+                  "y": 140,
+                  "width": 172,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "photoTile",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "gallery-icon",
+                  "x": 244,
+                  "y": 154,
+                  "width": 20,
+                  "height": 20,
+                  "svg": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C5EE79\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16\"/><path d=\"M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2\"/><circle cx=\"13\" cy=\"7\" r=\"1\" fill=\"currentColor\"/><rect x=\"8\" y=\"2\" width=\"14\" height=\"14\" rx=\"2\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "gallery-label",
+                  "key": "gallery",
+                  "text": "사진 첨부",
+                  "x": 274,
+                  "y": 164,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "labels",
+              "id": "photo-guidance",
+              "x": 16,
+              "y": 196,
+              "width": 358,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "photo-guidance-label",
+                  "key": "photoGuidanceEmpty",
+                  "text": "사진을 1장 이상 추가해 주세요",
+                  "x": 16,
+                  "y": 208,
+                  "anchor": "start",
+                  "color": "textSecondary",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "species",
+          "name": "곤충 이름과 기록 유형",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "species-title",
+              "x": 16,
+              "y": 236,
+              "width": 200,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "species-title-label",
+                  "key": "speciesTitle",
+                  "text": "곤충 이름",
+                  "x": 16,
+                  "y": 248,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "species-name",
+              "x": 16,
+              "y": 264,
+              "width": 232,
+              "height": 48,
+              "component": "EntryField",
+              "action": "name",
+              "label": "곤충 이름",
+              "role": "textbox",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "species-name-detail-0",
+                  "x": 16,
+                  "y": 264,
+                  "width": 232,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "label",
+                  "id": "species-name-label",
+                  "key": "speciesPlaceholder",
+                  "text": "곤충 이름 입력",
+                  "x": 30,
+                  "y": 288,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "species-unknown",
+              "x": 264,
+              "y": 264,
+              "width": 110,
+              "height": 48,
+              "component": "EntryChoice",
+              "action": "unknown-name",
+              "label": "이름 모름",
+              "role": "button",
+              "enabled": true,
+              "selected": "false",
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "species-unknown-detail-0",
+                  "x": 264,
+                  "y": 264,
+                  "width": 110,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "species-unknown-icon",
+                  "x": 276,
+                  "y": 280,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "species-unknown-label",
+                  "key": "speciesUnknown",
+                  "text": "이름 모름",
+                  "x": 300,
+                  "y": 288,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 13,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "labels",
+              "id": "type-title",
+              "x": 16,
+              "y": 324,
+              "width": 200,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "type-title-label",
+                  "key": "typeTitle",
+                  "text": "기록 유형",
+                  "x": 16,
+                  "y": 336,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "type-observed",
+              "x": 16,
+              "y": 352,
+              "width": 172,
+              "height": 44,
+              "component": "EntryChoice",
+              "action": "record-type",
+              "label": "관찰",
+              "role": "radio",
+              "enabled": true,
+              "selected": "false",
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "type-observed-detail-0",
+                  "x": 16,
+                  "y": 352,
+                  "width": 172,
+                  "height": 44,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "type-observed-icon",
+                  "x": 28,
+                  "y": 366,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "type-observed-label",
+                  "key": "observed",
+                  "text": "관찰",
+                  "x": 52,
+                  "y": 374,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "type-collected",
+              "x": 202,
+              "y": 352,
+              "width": 172,
+              "height": 44,
+              "component": "EntryChoice",
+              "action": "record-type",
+              "label": "채집",
+              "role": "radio",
+              "enabled": true,
+              "selected": "false",
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "type-collected-detail-0",
+                  "x": 202,
+                  "y": 352,
+                  "width": 172,
+                  "height": 44,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "type-collected-icon",
+                  "x": 214,
+                  "y": 366,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "type-collected-label",
+                  "key": "collected",
+                  "text": "채집",
+                  "x": 238,
+                  "y": 374,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "location",
+          "name": "발견 위치",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "location-title",
+              "x": 16,
+              "y": 416,
+              "width": 240,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "location-title-label",
+                  "key": "locationTitle",
+                  "text": "발견 위치",
+                  "x": 16,
+                  "y": 428,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                },
+                {
+                  "kind": "label",
+                  "id": "location-title-field-status",
+                  "key": "required",
+                  "text": "· 필수",
+                  "x": 82,
+                  "y": 428,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "location-picker",
+              "x": 16,
+              "y": 444,
+              "width": 358,
+              "height": 48,
+              "component": "LocationControl",
+              "action": "pick-location",
+              "label": "지도에서 발견 위치 선택",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "location-picker-detail-0",
+                  "x": 16,
+                  "y": 444,
+                  "width": 358,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "location-picker-icon",
+                  "x": 28,
+                  "y": 459,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "location-picker-label",
+                  "key": "locationEmpty",
+                  "text": "지도에서 발견 위치 선택",
+                  "x": 54,
+                  "y": 468,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                },
+                {
+                  "kind": "vector",
+                  "id": "location-picker-trailing",
+                  "x": 344,
+                  "y": 459,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m9 18 6-6-6-6\"/></svg>"
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "use-current-location",
+              "x": 16,
+              "y": 496,
+              "width": 172,
+              "height": 44,
+              "component": "LocationControl",
+              "action": "use-current",
+              "label": "현재 위치 사용",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "use-current-location-detail-0",
+                  "x": 16,
+                  "y": 496,
+                  "width": 172,
+                  "height": 44,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "use-current-location-icon",
+                  "x": 28,
+                  "y": 509,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#82D0F0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"2\" x2=\"5\" y1=\"12\" y2=\"12\"/><line x1=\"19\" x2=\"22\" y1=\"12\" y2=\"12\"/><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"5\"/><line x1=\"12\" x2=\"12\" y1=\"19\" y2=\"22\"/><circle cx=\"12\" cy=\"12\" r=\"7\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "use-current-location-label",
+                  "key": "useCurrentLocation",
+                  "text": "현재 위치 사용",
+                  "x": 54,
+                  "y": 518,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "observedAt",
+          "name": "발견 날짜·시간",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "observed-at-title",
+              "x": 16,
+              "y": 552,
+              "width": 200,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "observed-at-title-label",
+                  "key": "observedAt",
+                  "text": "발견 날짜·시간",
+                  "x": 16,
+                  "y": 564,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "observed-date",
+              "x": 16,
+              "y": 580,
+              "width": 172,
+              "height": 48,
+              "component": "EntryField",
+              "action": "pick-date",
+              "label": "발견 날짜 선택",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "observed-date-detail-0",
+                  "x": 16,
+                  "y": 580,
+                  "width": 172,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "observed-date-icon",
+                  "x": 28,
+                  "y": 595,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 2v3\"/><path d=\"M16 2v3\"/><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18\"/><path d=\"M8 13h.01\"/><path d=\"M12 13h.01\"/><path d=\"M16 13h.01\"/><path d=\"M8 17h.01\"/><path d=\"M12 17h.01\"/><path d=\"M16 17h.01\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "observed-date-label",
+                  "key": "dateEmpty",
+                  "text": "날짜 선택",
+                  "x": 54,
+                  "y": 604,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                },
+                {
+                  "kind": "vector",
+                  "id": "observed-date-trailing",
+                  "x": 158,
+                  "y": 595,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m6 9 6 6 6-6\"/></svg>"
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "observed-time",
+              "x": 202,
+              "y": 580,
+              "width": 172,
+              "height": 48,
+              "component": "EntryField",
+              "action": "pick-time",
+              "label": "발견 시간 선택",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "observed-time-detail-0",
+                  "x": 202,
+                  "y": 580,
+                  "width": 172,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "observed-time-icon",
+                  "x": 214,
+                  "y": 595,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "observed-time-label",
+                  "key": "timeEmpty",
+                  "text": "시간 선택",
+                  "x": 240,
+                  "y": 604,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                },
+                {
+                  "kind": "vector",
+                  "id": "observed-time-trailing",
+                  "x": 344,
+                  "y": 595,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m6 9 6 6 6-6\"/></svg>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "memo",
+          "name": "메모",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "memo-title",
+              "x": 16,
+              "y": 648,
+              "width": 240,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "memo-title-label",
+                  "key": "memoTitle",
+                  "text": "메모",
+                  "x": 16,
+                  "y": 660,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                },
+                {
+                  "kind": "label",
+                  "id": "memo-title-field-status",
+                  "key": "optional",
+                  "text": "· 선택",
+                  "x": 60,
+                  "y": 660,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "memo-input",
+              "x": 16,
+              "y": 676,
+              "width": 358,
+              "height": 112,
+              "component": "EntryField",
+              "action": "write-memo",
+              "label": "메모",
+              "role": "textbox",
+              "enabled": true,
+              "selected": null,
+              "multiline": true,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "memo-input-detail-0",
+                  "x": 16,
+                  "y": 676,
+                  "width": 358,
+                  "height": 112,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "label",
+                  "id": "memo-input-label",
+                  "key": "memoHint",
+                  "text": "주변 환경이나 곤충 행동을 적어 주세요",
+                  "x": 30,
+                  "y": 699,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "header": [
+        {
+          "kind": "label",
+          "id": "time-label",
+          "key": "systemTime",
+          "text": "9:41",
+          "x": 24,
+          "y": 26,
+          "anchor": "start",
+          "color": "text",
+          "fontSize": 15,
+          "fontWeight": 700
+        },
+        {
+          "kind": "vector",
+          "id": "system-status",
+          "x": 304,
+          "y": 20,
+          "width": 68,
+          "height": 14,
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"68\" height=\"14\" viewBox=\"0 0 68 14\"><g transform=\"translate(-304 -20)\"><g fill=\"#F3F7EE\" transform=\"translate(304 20)\" xmlns=\"http://www.w3.org/2000/svg\"><rect y=\"8\" width=\"3\" height=\"4\" rx=\"1\"/><rect x=\"4.5\" y=\"6\" width=\"3\" height=\"6\" rx=\"1\"/><rect x=\"9\" y=\"3\" width=\"3\" height=\"9\" rx=\"1\"/><rect x=\"13.5\" width=\"3\" height=\"12\" rx=\"1\"/></g><g transform=\"translate(327 21)\" stroke=\"#F3F7EE\" fill=\"none\" stroke-width=\"1.8\" stroke-linecap=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 3Q7.5-3 15 3M2.8 6Q7.5 2.1 12.2 6M5.5 8.8Q7.5 7.2 9.5 8.8\"/><circle cx=\"7.5\" cy=\"11.1\" r=\".5\" fill=\"#F3F7EE\"/></g><g transform=\"translate(348 20)\" stroke=\"#F3F7EE\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"21\" height=\"11\" rx=\"3\" fill=\"none\" opacity=\".62\"/><rect x=\"2.4\" y=\"2.4\" width=\"17.2\" height=\"7.2\" rx=\"1.4\" fill=\"#F3F7EE\" stroke=\"none\"/><path fill=\"none\" d=\"M23 4.5v3\" stroke-linecap=\"round\" opacity=\".62\"/></g></g></svg>"
+        },
+        {
+          "kind": "control",
+          "id": "back",
+          "x": 16,
+          "y": 54,
+          "width": 56,
+          "height": 48,
+          "component": "EntryHeader",
+          "action": "back",
+          "label": "뒤로",
+          "role": "button",
+          "enabled": true,
+          "selected": null,
+          "multiline": false,
+          "children": [
+            {
+              "kind": "vector",
+              "id": "back-icon",
+              "x": 22,
+              "y": 66,
+              "width": 24,
+              "height": 24,
+              "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F3F7EE\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m12 19-7-7 7-7\"/><path d=\"M19 12H5\"/></svg>"
+            }
+          ]
+        },
+        {
+          "kind": "label",
+          "id": "screen-title-label",
+          "key": "screenTitle",
+          "text": "발견·채집 기록",
+          "x": 195,
+          "y": 79,
+          "anchor": "middle",
+          "color": "text",
+          "fontSize": 20,
+          "fontWeight": 700
+        }
+      ],
+      "footer": [
+        {
+          "kind": "label",
+          "id": "submit-guidance-label",
+          "key": "submitGuidance",
+          "text": "필수 항목을 입력하면 작성할 수 있어요",
+          "x": 195,
+          "y": 746,
+          "anchor": "middle",
+          "color": "textSecondary",
+          "fontSize": 12,
+          "fontWeight": 500
+        },
+        {
+          "kind": "rect",
+          "id": "footer-divider",
+          "x": 0,
+          "y": 734,
+          "width": 390,
+          "height": 1,
+          "radius": 0,
+          "color": "formFieldBorder"
+        },
+        {
+          "kind": "control",
+          "id": "submit",
+          "x": 16,
+          "y": 758,
+          "width": 358,
+          "height": 48,
+          "component": "EntrySubmit",
+          "action": "submit",
+          "label": "작성완료",
+          "role": "button",
+          "enabled": false,
+          "selected": null,
+          "multiline": false,
+          "children": [
+            {
+              "kind": "rect",
+              "id": "submit-detail-0",
+              "x": 16,
+              "y": 758,
+              "width": 358,
+              "height": 48,
+              "radius": 24,
+              "color": "formField",
+              "stroke": "formFieldBorder"
+            },
+            {
+              "kind": "label",
+              "id": "submit-label",
+              "key": "submit",
+              "text": "작성완료",
+              "x": 195,
+              "y": 782,
+              "anchor": "middle",
+              "color": "disabledText",
+              "fontSize": 15,
+              "fontWeight": 700
+            }
+          ]
+        },
+        {
+          "kind": "rect",
+          "id": "home-indicator",
+          "x": 128,
+          "y": 830,
+          "width": 134,
+          "height": 4,
+          "radius": 2,
+          "color": "textSecondary",
+          "stroke": null
+        }
+      ],
+      "indicator": {
+        "kind": "rect",
+        "id": "scroll-indicator",
+        "x": 382,
+        "y": 108,
+        "width": 3,
+        "height": 552,
+        "radius": 1.5,
+        "color": "controlOutline",
+        "stroke": null
+      }
+    },
+    {
+      "state": "ready",
+      "name": "09 · 발견·채집 기록 / 입력 완료 · 3/3장",
+      "width": 390,
+      "height": 844,
+      "scroll": {
+        "x": 0,
+        "y": 108,
+        "width": 390,
+        "height": 620,
+        "contentHeight": 794
+      },
+      "sections": [
+        {
+          "key": "photo",
+          "name": "사진",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "photo-title",
+              "x": 16,
+              "y": 108,
+              "width": 200,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "photo-title-label",
+                  "key": "photos",
+                  "text": "사진",
+                  "x": 16,
+                  "y": 120,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                },
+                {
+                  "kind": "label",
+                  "id": "photo-title-field-status",
+                  "key": "required",
+                  "text": "· 필수",
+                  "x": 56,
+                  "y": 120,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "labels",
+              "id": "photo-count",
+              "x": 316,
+              "y": 108,
+              "width": 58,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "photo-count-label",
+                  "key": "photoCountFull",
+                  "text": "3/3장",
+                  "x": 374,
+                  "y": 120,
+                  "anchor": "end",
+                  "color": "primary",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "camera",
+              "x": 16,
+              "y": 140,
+              "width": 172,
+              "height": 48,
+              "component": "PhotoAddAction",
+              "action": "camera",
+              "label": "촬영하기",
+              "role": "button",
+              "enabled": false,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "camera-detail-0",
+                  "x": 16,
+                  "y": 140,
+                  "width": 172,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "formFieldBorder"
+                },
+                {
+                  "kind": "vector",
+                  "id": "camera-icon",
+                  "x": 58,
+                  "y": 154,
+                  "width": 20,
+                  "height": 20,
+                  "svg": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#8FA496\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z\"/><circle cx=\"12\" cy=\"13\" r=\"3\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "camera-label",
+                  "key": "camera",
+                  "text": "촬영하기",
+                  "x": 88,
+                  "y": 164,
+                  "anchor": "start",
+                  "color": "disabledText",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "gallery",
+              "x": 202,
+              "y": 140,
+              "width": 172,
+              "height": 48,
+              "component": "PhotoAddAction",
+              "action": "gallery",
+              "label": "사진 첨부",
+              "role": "button",
+              "enabled": false,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "gallery-detail-0",
+                  "x": 202,
+                  "y": 140,
+                  "width": 172,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "formFieldBorder"
+                },
+                {
+                  "kind": "vector",
+                  "id": "gallery-icon",
+                  "x": 244,
+                  "y": 154,
+                  "width": 20,
+                  "height": 20,
+                  "svg": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#8FA496\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16\"/><path d=\"M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2\"/><circle cx=\"13\" cy=\"7\" r=\"1\" fill=\"currentColor\"/><rect x=\"8\" y=\"2\" width=\"14\" height=\"14\" rx=\"2\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "gallery-label",
+                  "key": "gallery",
+                  "text": "사진 첨부",
+                  "x": 274,
+                  "y": 164,
+                  "anchor": "start",
+                  "color": "disabledText",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "labels",
+              "id": "photo-guidance",
+              "x": 16,
+              "y": 196,
+              "width": 358,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "photo-guidance-label",
+                  "key": "photoGuidanceFull",
+                  "text": "사진을 삭제하면 다시 추가할 수 있어요",
+                  "x": 16,
+                  "y": 208,
+                  "anchor": "start",
+                  "color": "textSecondary",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "photo",
+              "id": "photo-1",
+              "x": 16,
+              "y": 228,
+              "width": 114,
+              "height": 90,
+              "asset": "specimen-1",
+              "radius": 12,
+              "stroke": "photoTileBorder"
+            },
+            {
+              "kind": "control",
+              "id": "delete-photo-1",
+              "x": 86,
+              "y": 228,
+              "width": 44,
+              "height": 44,
+              "component": "PhotoThumb",
+              "action": "delete-photo",
+              "label": "사진 1 삭제",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "circle",
+                  "id": "delete-photo-1-detail-0",
+                  "x": 94,
+                  "y": 236,
+                  "width": 28,
+                  "height": 28,
+                  "color": "background"
+                },
+                {
+                  "kind": "vector",
+                  "id": "delete-photo-1-icon",
+                  "x": 100,
+                  "y": 242,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F3F7EE\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg>"
+                }
+              ]
+            },
+            {
+              "kind": "photo",
+              "id": "photo-2",
+              "x": 138,
+              "y": 228,
+              "width": 114,
+              "height": 90,
+              "asset": "specimen-2",
+              "radius": 12,
+              "stroke": "photoTileBorder"
+            },
+            {
+              "kind": "control",
+              "id": "delete-photo-2",
+              "x": 208,
+              "y": 228,
+              "width": 44,
+              "height": 44,
+              "component": "PhotoThumb",
+              "action": "delete-photo",
+              "label": "사진 2 삭제",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "circle",
+                  "id": "delete-photo-2-detail-0",
+                  "x": 216,
+                  "y": 236,
+                  "width": 28,
+                  "height": 28,
+                  "color": "background"
+                },
+                {
+                  "kind": "vector",
+                  "id": "delete-photo-2-icon",
+                  "x": 222,
+                  "y": 242,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F3F7EE\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg>"
+                }
+              ]
+            },
+            {
+              "kind": "photo",
+              "id": "photo-3",
+              "x": 260,
+              "y": 228,
+              "width": 114,
+              "height": 90,
+              "asset": "specimen-3",
+              "radius": 12,
+              "stroke": "photoTileBorder"
+            },
+            {
+              "kind": "control",
+              "id": "delete-photo-3",
+              "x": 330,
+              "y": 228,
+              "width": 44,
+              "height": 44,
+              "component": "PhotoThumb",
+              "action": "delete-photo",
+              "label": "사진 3 삭제",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "circle",
+                  "id": "delete-photo-3-detail-0",
+                  "x": 338,
+                  "y": 236,
+                  "width": 28,
+                  "height": 28,
+                  "color": "background"
+                },
+                {
+                  "kind": "vector",
+                  "id": "delete-photo-3-icon",
+                  "x": 344,
+                  "y": 242,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F3F7EE\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "species",
+          "name": "곤충 이름과 기록 유형",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "species-title",
+              "x": 16,
+              "y": 334,
+              "width": 200,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "species-title-label",
+                  "key": "speciesTitle",
+                  "text": "곤충 이름",
+                  "x": 16,
+                  "y": 346,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "species-name",
+              "x": 16,
+              "y": 362,
+              "width": 232,
+              "height": 48,
+              "component": "EntryField",
+              "action": "name",
+              "label": "곤충 이름",
+              "role": "textbox",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "species-name-detail-0",
+                  "x": 16,
+                  "y": 362,
+                  "width": 232,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "label",
+                  "id": "species-name-label",
+                  "key": "speciesExample",
+                  "text": "왕사슴벌레",
+                  "x": 30,
+                  "y": 386,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "species-unknown",
+              "x": 264,
+              "y": 362,
+              "width": 110,
+              "height": 48,
+              "component": "EntryChoice",
+              "action": "unknown-name",
+              "label": "이름 모름",
+              "role": "button",
+              "enabled": true,
+              "selected": "false",
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "species-unknown-detail-0",
+                  "x": 264,
+                  "y": 362,
+                  "width": 110,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "species-unknown-icon",
+                  "x": 276,
+                  "y": 378,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "species-unknown-label",
+                  "key": "speciesUnknown",
+                  "text": "이름 모름",
+                  "x": 300,
+                  "y": 386,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 13,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "labels",
+              "id": "type-title",
+              "x": 16,
+              "y": 422,
+              "width": 200,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "type-title-label",
+                  "key": "typeTitle",
+                  "text": "기록 유형",
+                  "x": 16,
+                  "y": 434,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "type-observed",
+              "x": 16,
+              "y": 450,
+              "width": 172,
+              "height": 44,
+              "component": "EntryChoice",
+              "action": "record-type",
+              "label": "관찰",
+              "role": "radio",
+              "enabled": true,
+              "selected": "true",
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "type-observed-detail-0",
+                  "x": 16,
+                  "y": 450,
+                  "width": 172,
+                  "height": 44,
+                  "radius": 16,
+                  "color": "activeTabSurface",
+                  "stroke": "primary"
+                },
+                {
+                  "kind": "vector",
+                  "id": "type-observed-icon",
+                  "x": 28,
+                  "y": 464,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C5EE79\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"1\"/><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "type-observed-label",
+                  "key": "observed",
+                  "text": "관찰",
+                  "x": 52,
+                  "y": 472,
+                  "anchor": "start",
+                  "color": "primary",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "type-collected",
+              "x": 202,
+              "y": 450,
+              "width": 172,
+              "height": 44,
+              "component": "EntryChoice",
+              "action": "record-type",
+              "label": "채집",
+              "role": "radio",
+              "enabled": true,
+              "selected": "false",
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "type-collected-detail-0",
+                  "x": 202,
+                  "y": 450,
+                  "width": 172,
+                  "height": 44,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "type-collected-icon",
+                  "x": 214,
+                  "y": 464,
+                  "width": 16,
+                  "height": 16,
+                  "svg": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "type-collected-label",
+                  "key": "collected",
+                  "text": "채집",
+                  "x": 238,
+                  "y": 472,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 700
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "location",
+          "name": "발견 위치",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "location-title",
+              "x": 16,
+              "y": 514,
+              "width": 240,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "location-title-label",
+                  "key": "locationTitle",
+                  "text": "발견 위치",
+                  "x": 16,
+                  "y": 526,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                },
+                {
+                  "kind": "label",
+                  "id": "location-title-field-status",
+                  "key": "required",
+                  "text": "· 필수",
+                  "x": 82,
+                  "y": 526,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "location-picker",
+              "x": 16,
+              "y": 542,
+              "width": 358,
+              "height": 48,
+              "component": "LocationControl",
+              "action": "pick-location",
+              "label": "발견 위치 서울숲, 지도에서 변경",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "location-picker-detail-0",
+                  "x": 16,
+                  "y": 542,
+                  "width": 358,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "location-picker-icon",
+                  "x": 28,
+                  "y": 557,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "location-picker-label",
+                  "key": "locationExample",
+                  "text": "서울숲",
+                  "x": 54,
+                  "y": 566,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                },
+                {
+                  "kind": "label",
+                  "id": "location-picker-detail",
+                  "key": "locationChange",
+                  "text": "· 지도에서 변경",
+                  "x": 338,
+                  "y": 566,
+                  "anchor": "end",
+                  "color": "textSecondary",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                },
+                {
+                  "kind": "vector",
+                  "id": "location-picker-trailing",
+                  "x": 344,
+                  "y": 557,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m9 18 6-6-6-6\"/></svg>"
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "use-current-location",
+              "x": 16,
+              "y": 594,
+              "width": 172,
+              "height": 44,
+              "component": "LocationControl",
+              "action": "use-current",
+              "label": "현재 위치 사용",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "use-current-location-detail-0",
+                  "x": 16,
+                  "y": 594,
+                  "width": 172,
+                  "height": 44,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "use-current-location-icon",
+                  "x": 28,
+                  "y": 607,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#82D0F0\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"2\" x2=\"5\" y1=\"12\" y2=\"12\"/><line x1=\"19\" x2=\"22\" y1=\"12\" y2=\"12\"/><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"5\"/><line x1=\"12\" x2=\"12\" y1=\"19\" y2=\"22\"/><circle cx=\"12\" cy=\"12\" r=\"7\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "use-current-location-label",
+                  "key": "useCurrentLocation",
+                  "text": "현재 위치 사용",
+                  "x": 54,
+                  "y": 616,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "observedAt",
+          "name": "발견 날짜·시간",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "observed-at-title",
+              "x": 16,
+              "y": 650,
+              "width": 200,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "observed-at-title-label",
+                  "key": "observedAt",
+                  "text": "발견 날짜·시간",
+                  "x": 16,
+                  "y": 662,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "observed-date",
+              "x": 16,
+              "y": 678,
+              "width": 172,
+              "height": 48,
+              "component": "EntryField",
+              "action": "pick-date",
+              "label": "발견 날짜 2026. 11. 20., 변경",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "observed-date-detail-0",
+                  "x": 16,
+                  "y": 678,
+                  "width": 172,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "observed-date-icon",
+                  "x": 28,
+                  "y": 693,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 2v3\"/><path d=\"M16 2v3\"/><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\"/><path d=\"M3 9h18\"/><path d=\"M8 13h.01\"/><path d=\"M12 13h.01\"/><path d=\"M16 13h.01\"/><path d=\"M8 17h.01\"/><path d=\"M12 17h.01\"/><path d=\"M16 17h.01\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "observed-date-label",
+                  "key": "dateExample",
+                  "text": "2026. 11. 20.",
+                  "x": 54,
+                  "y": 702,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                },
+                {
+                  "kind": "vector",
+                  "id": "observed-date-trailing",
+                  "x": 158,
+                  "y": 693,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m6 9 6 6 6-6\"/></svg>"
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "observed-time",
+              "x": 202,
+              "y": 678,
+              "width": 172,
+              "height": 48,
+              "component": "EntryField",
+              "action": "pick-time",
+              "label": "발견 시간 오전 09:30, 변경",
+              "role": "button",
+              "enabled": true,
+              "selected": null,
+              "multiline": false,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "observed-time-detail-0",
+                  "x": 202,
+                  "y": 678,
+                  "width": 172,
+                  "height": 48,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "vector",
+                  "id": "observed-time-icon",
+                  "x": 214,
+                  "y": 693,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></svg>"
+                },
+                {
+                  "kind": "label",
+                  "id": "observed-time-label",
+                  "key": "timeExample",
+                  "text": "오전 09:30",
+                  "x": 240,
+                  "y": 702,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                },
+                {
+                  "kind": "vector",
+                  "id": "observed-time-trailing",
+                  "x": 344,
+                  "y": 693,
+                  "width": 18,
+                  "height": 18,
+                  "svg": "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m6 9 6 6 6-6\"/></svg>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "memo",
+          "name": "메모",
+          "children": [
+            {
+              "kind": "labels",
+              "id": "memo-title",
+              "x": 16,
+              "y": 746,
+              "width": 240,
+              "height": 24,
+              "children": [
+                {
+                  "kind": "label",
+                  "id": "memo-title-label",
+                  "key": "memoTitle",
+                  "text": "메모",
+                  "x": 16,
+                  "y": 758,
+                  "anchor": "start",
+                  "color": "text",
+                  "fontSize": 16,
+                  "fontWeight": 700
+                },
+                {
+                  "kind": "label",
+                  "id": "memo-title-field-status",
+                  "key": "optional",
+                  "text": "· 선택",
+                  "x": 60,
+                  "y": 758,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 12,
+                  "fontWeight": 500
+                }
+              ]
+            },
+            {
+              "kind": "control",
+              "id": "memo-input",
+              "x": 16,
+              "y": 774,
+              "width": 358,
+              "height": 112,
+              "component": "EntryField",
+              "action": "write-memo",
+              "label": "메모",
+              "role": "textbox",
+              "enabled": true,
+              "selected": null,
+              "multiline": true,
+              "children": [
+                {
+                  "kind": "rect",
+                  "id": "memo-input-detail-0",
+                  "x": 16,
+                  "y": 774,
+                  "width": 358,
+                  "height": 112,
+                  "radius": 16,
+                  "color": "formField",
+                  "stroke": "controlOutline"
+                },
+                {
+                  "kind": "label",
+                  "id": "memo-input-label",
+                  "key": "memoHint",
+                  "text": "주변 환경이나 곤충 행동을 적어 주세요",
+                  "x": 30,
+                  "y": 797,
+                  "anchor": "start",
+                  "color": "textPlaceholder",
+                  "fontSize": 14,
+                  "fontWeight": 500
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "header": [
+        {
+          "kind": "label",
+          "id": "time-label",
+          "key": "systemTime",
+          "text": "9:41",
+          "x": 24,
+          "y": 26,
+          "anchor": "start",
+          "color": "text",
+          "fontSize": 15,
+          "fontWeight": 700
+        },
+        {
+          "kind": "vector",
+          "id": "system-status",
+          "x": 304,
+          "y": 20,
+          "width": 68,
+          "height": 14,
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"68\" height=\"14\" viewBox=\"0 0 68 14\"><g transform=\"translate(-304 -20)\"><g fill=\"#F3F7EE\" transform=\"translate(304 20)\" xmlns=\"http://www.w3.org/2000/svg\"><rect y=\"8\" width=\"3\" height=\"4\" rx=\"1\"/><rect x=\"4.5\" y=\"6\" width=\"3\" height=\"6\" rx=\"1\"/><rect x=\"9\" y=\"3\" width=\"3\" height=\"9\" rx=\"1\"/><rect x=\"13.5\" width=\"3\" height=\"12\" rx=\"1\"/></g><g transform=\"translate(327 21)\" stroke=\"#F3F7EE\" fill=\"none\" stroke-width=\"1.8\" stroke-linecap=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M0 3Q7.5-3 15 3M2.8 6Q7.5 2.1 12.2 6M5.5 8.8Q7.5 7.2 9.5 8.8\"/><circle cx=\"7.5\" cy=\"11.1\" r=\".5\" fill=\"#F3F7EE\"/></g><g transform=\"translate(348 20)\" stroke=\"#F3F7EE\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\".5\" y=\".5\" width=\"21\" height=\"11\" rx=\"3\" fill=\"none\" opacity=\".62\"/><rect x=\"2.4\" y=\"2.4\" width=\"17.2\" height=\"7.2\" rx=\"1.4\" fill=\"#F3F7EE\" stroke=\"none\"/><path fill=\"none\" d=\"M23 4.5v3\" stroke-linecap=\"round\" opacity=\".62\"/></g></g></svg>"
+        },
+        {
+          "kind": "control",
+          "id": "back",
+          "x": 16,
+          "y": 54,
+          "width": 56,
+          "height": 48,
+          "component": "EntryHeader",
+          "action": "back",
+          "label": "뒤로",
+          "role": "button",
+          "enabled": true,
+          "selected": null,
+          "multiline": false,
+          "children": [
+            {
+              "kind": "vector",
+              "id": "back-icon",
+              "x": 22,
+              "y": 66,
+              "width": 24,
+              "height": 24,
+              "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F3F7EE\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m12 19-7-7 7-7\"/><path d=\"M19 12H5\"/></svg>"
+            }
+          ]
+        },
+        {
+          "kind": "label",
+          "id": "screen-title-label",
+          "key": "screenTitle",
+          "text": "발견·채집 기록",
+          "x": 195,
+          "y": 79,
+          "anchor": "middle",
+          "color": "text",
+          "fontSize": 20,
+          "fontWeight": 700
+        }
+      ],
+      "footer": [
+        {
+          "kind": "rect",
+          "id": "footer-divider",
+          "x": 0,
+          "y": 734,
+          "width": 390,
+          "height": 1,
+          "radius": 0,
+          "color": "formFieldBorder"
+        },
+        {
+          "kind": "control",
+          "id": "submit",
+          "x": 16,
+          "y": 758,
+          "width": 358,
+          "height": 48,
+          "component": "EntrySubmit",
+          "action": "submit",
+          "label": "작성완료",
+          "role": "button",
+          "enabled": true,
+          "selected": null,
+          "multiline": false,
+          "children": [
+            {
+              "kind": "rect",
+              "id": "submit-detail-0",
+              "x": 16,
+              "y": 758,
+              "width": 358,
+              "height": 48,
+              "radius": 24,
+              "color": "primary",
+              "stroke": null
+            },
+            {
+              "kind": "label",
+              "id": "submit-label",
+              "key": "submit",
+              "text": "작성완료",
+              "x": 195,
+              "y": 782,
+              "anchor": "middle",
+              "color": "onPrimary",
+              "fontSize": 15,
+              "fontWeight": 700
+            }
+          ]
+        },
+        {
+          "kind": "rect",
+          "id": "home-indicator",
+          "x": 128,
+          "y": 830,
+          "width": 134,
+          "height": 4,
+          "radius": 2,
+          "color": "textSecondary",
+          "stroke": null
+        }
+      ],
+      "indicator": {
+        "kind": "rect",
+        "id": "scroll-indicator",
+        "x": 382,
+        "y": 108,
+        "width": 3,
+        "height": 484,
+        "radius": 1.5,
+        "color": "controlOutline",
+        "stroke": null
+      }
+    }
+  ],
+  "assets": {
+    "specimen-1": {
+      "path": "assets/photos/specimen-1.png",
+      "sha256": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+      "author": "keusju",
+      "url": "https://commons.wikimedia.org/wiki/File:Dorcushopeibinodulosus.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "treatment": {
+        "crop": {
+          "x": 116,
+          "y": 36,
+          "width": 2584,
+          "height": 2040
+        },
+        "output": "342 × 270 px PNG",
+        "metadata": "EXIF 및 텍스트 청크 제거"
+      }
+    },
+    "specimen-2": {
+      "path": "assets/photos/specimen-2.png",
+      "sha256": "c9d362b3c36af5982340fb8e39269ab78bb32ffd94d17b2e10553a847b93d2cb",
+      "author": "keusju",
+      "url": "https://commons.wikimedia.org/wiki/File:Dhb.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "treatment": {
+        "crop": {
+          "x": 25,
+          "y": 75,
+          "width": 1710,
+          "height": 1350
+        },
+        "output": "342 × 270 px PNG",
+        "metadata": "EXIF 및 텍스트 청크 제거"
+      }
+    },
+    "specimen-3": {
+      "path": "assets/photos/specimen-3.png",
+      "sha256": "59a64b9b5eaef701070a775131c637c2325ff36d61083c5e9fc622c704b714d5",
+      "author": "岐部博 (Ｋａｔｕｕｙａ)",
+      "url": "https://commons.wikimedia.org/wiki/File:%E3%82%AA%E3%82%AA%E3%82%AF%E3%83%AF..JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "treatment": {
+        "crop": {
+          "x": 310,
+          "y": 535,
+          "width": 475,
+          "height": 375
+        },
+        "output": "342 × 270 px PNG",
+        "metadata": "EXIF 및 텍스트 청크 제거"
+      }
+    }
+  },
+  "sourceDigests": {
+    "04-wireframes/full-form/wireframes.json": "23fa0b1abac5256e0bf91be6d132af70568eb1caaf0311e5df69eb5dcaea4a76",
+    "04-wireframes/wireframes.json": "edff5382335e7c883df8dd8f6eae2a749df06495e7b9583a5c469fd067d5ca29",
+    "05-design-system/assets-manifest.json": "db77e09220ccbf199cdb1d2b64eeef6e2bc157b86b5977f546991a9b1f566d79",
+    "05-design-system/assets/photos/specimen-1.png": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+    "05-design-system/assets/photos/specimen-2.png": "c9d362b3c36af5982340fb8e39269ab78bb32ffd94d17b2e10553a847b93d2cb",
+    "05-design-system/assets/photos/specimen-3.png": "59a64b9b5eaef701070a775131c637c2325ff36d61083c5e9fc622c704b714d5",
+    "05-design-system/captures/390x844-default.png": "bdc5f9798bb43af6cc3c4dc51bd57e78a6221f9323e0862fa5c16109aee28ebb",
+    "05-design-system/captures/390x844-ready.png": "ce2c02f1557543dc5abf2a679e49f833248f351e478bdb930216ba1b2d8d866d",
+    "05-design-system/captures/full-form/390x1018-ready.png": "f8a1b6b380ac41608bec90328c257dc46b9275b441e8d262d6231b76c6346cb5",
+    "05-design-system/captures/full-form/390x920-default.png": "51907135f2991e752e5ecdc23bb7d9678ba136e64a566394ccbe300686478383",
+    "05-design-system/components.json": "f4c08e586e5501fdbc28d49295192df67da8e336134dc6b3d604dd8c05f6d3bf",
+    "05-design-system/copy.json": "8da81c72f9c1c02a0e6ffb18b13cba50f3c7c0e8a561d32dd47d549aee90d568",
+    "05-design-system/photo-sources.json": "99cf995454e4d6143734d7ebe8d94282e2671d5f60be53a116edcce8d582e21e",
+    "05-design-system/preview-full-default.svg": "5530a6e14ce0285eee1f367986794dacef70b07b654f54d2f79497dfec8db266",
+    "05-design-system/preview-full-ready.svg": "4c1f497b7d7ad73d8cb1f17cfdc5a7b2095f434d4fcf4d5a9183e8b45a4fb275",
+    "05-design-system/preview-ready.svg": "2a71b81a41c949ed2d4106f5253d7be5ac423ebc24bd0fafb9ab097431be39ef",
+    "05-design-system/preview.svg": "a3201b544110022c957bec0a61e7add4496624d4c5f7d84784ff176724d77bc7",
+    "05-design-system/render-report.json": "726c54827664734e34946aaeaa0226841b7aa004edcf6e2fc1693dc3cf0b323d",
+    "05-design-system/tokens.json": "d783ae586e55ab61a470c982df8f48cd39ea89e1a4f160272173b0d76699dc78",
+    "control/figma.json": "02b3bc41c5e8edfdb3db0391011a2e7f8517774e31a10550721e63f02912c90f"
+  },
+  "digest": "793127a7d62cd17955de1e34ac68de9c3fa63ff18a9f2ed67f7a9349fdd147cb"
+}

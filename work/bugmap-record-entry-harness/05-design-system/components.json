@@ -1,0 +1,134 @@
+{
+  "RecordEntryScreen": {
+    "description": "발견·채집 기록 화면이다. 390×844 대표 화면에서 내비게이션과 완료 영역을 고정하고 중간 폼을 스크롤한다. 54px 상단과 34px 하단은 예시 기기의 안전 영역이다. 폼은 사진, 이름·유형, 발견 위치, 발견 날짜·시간, 선택형 메모 순이다. 본문 오른쪽의 스크롤 표시로 문서가 이어짐을 알린다.",
+    "tokens": [
+      "colors.background",
+      "colors.text",
+      "colors.controlOutline",
+      "typography.screenTitle.fontSize",
+      "typography.section.fontSize"
+    ],
+    "states": [
+      "default",
+      "ready",
+      "saving",
+      "save-error"
+    ]
+  },
+  "EntryHeader": {
+    "description": "화면 제목을 중앙에 놓고 56×48px 뒤로 가기 영역을 제공한다. 미저장 입력을 편집한 경우 나가기 확인을 거친다.",
+    "tokens": [
+      "colors.background",
+      "colors.text",
+      "typography.screenTitle.fontSize",
+      "typography.systemTime.fontSize"
+    ],
+    "states": [
+      "default",
+      "pending-exit"
+    ]
+  },
+  "PhotoAddAction": {
+    "description": "촬영하기와 사진 첨부를 각각 172×48px 조작 영역으로 배치한다. 두 경로를 합산해 1~3장을 허용한다. 3장에 도달하면 두 버튼을 비활성화하고 삭제하면 다시 추가할 수 있다고 안내한다. 권한 거부 후 다른 사진 경로와 나가기를 제공한다.",
+    "tokens": [
+      "colors.photoTile",
+      "colors.photoTileBorder",
+      "colors.controlOutline",
+      "colors.primary",
+      "colors.disabledText",
+      "typography.action.fontSize",
+      "typography.meta.fontSize",
+      "typography.count.fontSize"
+    ],
+    "states": [
+      "available",
+      "limit-reached",
+      "permission-denied",
+      "selection-error"
+    ]
+  },
+  "PhotoThumb": {
+    "description": "114×90px 썸네일에 개별 삭제 영역을 겹쳐 배치한다. 삭제의 조작 영역은 44×44px다. 화면 읽기는 각 사진의 순번과 삭제 동작을 함께 전달한다.",
+    "tokens": [
+      "colors.photoTile",
+      "colors.photoTileBorder",
+      "colors.background",
+      "colors.text"
+    ],
+    "states": [
+      "present",
+      "uploading",
+      "failed"
+    ]
+  },
+  "EntryField": {
+    "description": "명시적 레이블과 입력값 또는 힌트를 표시한다. 날짜·시간은 각각 172×48px의 실제 발견 일시 선택 동작으로 두 대표 화면에 표시한다. 메모는 별도 레이블을 가진 112px 높이의 선택형 여러 줄 입력이다. 첫 진입 뷰포트에는 메모 입력의 상단 52px이 보이며 전체 입력은 스크롤로 확인한다. 필수 필드는 필드와 오류를 연관해 읽을 수 있게 한다.",
+    "tokens": [
+      "colors.formField",
+      "colors.formFieldBorder",
+      "colors.controlOutline",
+      "colors.text",
+      "colors.textPlaceholder",
+      "typography.value.fontSize",
+      "typography.section.fontSize"
+    ],
+    "states": [
+      "empty",
+      "selected",
+      "focused",
+      "invalid"
+    ]
+  },
+  "EntryChoice": {
+    "description": "이름 모름은 토글이며 관찰·채집은 단일 선택이다. 단일 선택 결과를 채워진 원과 강조 윤곽으로 표시하고 화면 읽기에도 선택 상태를 제공한다. 이름 모름을 선택하면 이름을 입력하지 않고 작성할 수 있다.",
+    "tokens": [
+      "colors.formField",
+      "colors.controlOutline",
+      "colors.activeTabSurface",
+      "colors.primary",
+      "colors.textSecondary",
+      "typography.compactAction.fontSize",
+      "typography.action.fontSize"
+    ],
+    "states": [
+      "unchecked",
+      "checked",
+      "unselected",
+      "selected"
+    ]
+  },
+  "LocationControl": {
+    "description": "필수 발견 위치 한 항목에서 358×48px 지도 선택·변경과 172×44px 현재 위치 사용을 제공한다. GPS를 사용할 수 없는 경우에도 지도에서 위치를 직접 정할 수 있다.",
+    "tokens": [
+      "colors.formField",
+      "colors.controlOutline",
+      "colors.location",
+      "colors.text",
+      "colors.textPlaceholder",
+      "typography.value.fontSize"
+    ],
+    "states": [
+      "empty",
+      "selected",
+      "location-unavailable"
+    ]
+  },
+  "EntrySubmit": {
+    "description": "작성완료는 예시 화면 하단의 358×48px 위치를 유지한다. 사진 1~3장과 곤충 이름 또는 이름 모름, 기록 유형, 발견 위치, 발견 일시가 유효하면 강조색으로 활성화한다. 저장 중 중복 제출을 막고 실패하면 폼을 보존하며 재시도할 수 있다.",
+    "tokens": [
+      "colors.formFooter",
+      "colors.primary",
+      "colors.onPrimary",
+      "colors.formField",
+      "colors.disabledText",
+      "typography.submit.fontSize",
+      "typography.meta.fontSize"
+    ],
+    "states": [
+      "disabled",
+      "enabled",
+      "saving",
+      "save-error"
+    ]
+  }
+}

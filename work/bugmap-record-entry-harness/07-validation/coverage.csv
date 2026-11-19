@@ -1,0 +1,8 @@
+requirement_id,status,verified,evidence,product_verification
+ENTRY-01,pass,플레이어에서 지도 41:81의 41:443을 눌러 61:1295로 진입하고 뒤로 41:81 복귀. 완료 상태도 뒤로 같은 지도로 복귀.,prototype-runtime.json | ../06-figma/prototype-readback.json,미저장 이탈 확인은 제품 상태표
+ENTRY-02,pass,네이티브 시안에서 0/3장 촬영·첨부 활성과 3/3장 비활성 및 삭제 영역 세 개를 확인. 승인 사진 세 장의 실제 채우기 검증.,../06-figma/node-map.json | ../06-figma/captures/record-entry-ready.png | figma-lint.json,1~3장 유효성·상한·삭제 후 재추가·권한은 상태표 및 제품 구현
+ENTRY-03,pass,두 시안에서 이름 입력과 이름 모름 및 관찰·채집을 확인. 입력 완료에서 관찰 한 개가 선택됨.,../06-figma/captures/record-entry-default.png | ../06-figma/captures/record-entry-ready.png | ../03-structure/states.csv,이름 모름과 유형 선택의 상태 전이는 제품 구현
+ENTRY-04,pass,필수 발견 위치 한 항목과 지도 확인·변경 및 현재 위치 조작의 시안·노드를 확인. 공개 범위 선택 없음.,../06-figma/node-map.json | ../06-figma/captures/record-entry-ready.png | ../03-structure/flows.mmd,GPS 실패 시 직접 선택 및 공개 좌표·EXIF 처리는 상태표와 TDD로 대조
+ENTRY-05,pass,날짜·시간 별도 필드를 확인. 양쪽 플레이어에서 선택형 112px 메모가 끝까지 보이고 대응 HTML에서 두 줄 입력을 다시 열어 확인.,prototype/03-entry-default-scrolled.jpg | prototype/06-entry-ready-scrolled.jpg | ../06-figma/capture-crosscheck.json,실제 발견 시각과 게시 시각 분리 및 상세 메모 보존은 제품 흐름
+ENTRY-06,pass,두 상태에서 스크롤로 본문이 이동하고 같은 위치의 작성완료 영역 픽셀이 유지됨. 비활성·활성 시안을 대조.,prototype-runtime.json | player-pixels.json | ../06-figma/prototype-readback.json,위치 유효성·중복 제출·재시도·지도 반영은 제품 흐름
+ENTRY-07,pass,390×844 네이티브 화면 두 개와 편집 가능 레이어를 검증. 전체 폼 조작 13개·16개가 44×44px 이상. 기존 페이지 루트 11개와 Mapbox를 담은 지도 PNG 보존.,figma-lint.json | ../06-figma/preservation.json | ../06-figma/node-map.json | web-lint.json,Figma는 기존 지도와 같은 Noto Sans KR 사용. 실기기 접근성은 제품 검증

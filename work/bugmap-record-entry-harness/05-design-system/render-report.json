@@ -1,0 +1,5025 @@
+{
+  "design": "record-entry",
+  "renderer": "Chromium CDP 1× from local SVG",
+  "approvedWireframeSha256": "edff5382335e7c883df8dd8f6eae2a749df06495e7b9583a5c469fd067d5ca29",
+  "expandedWireframeSha256": "23fa0b1abac5256e0bf91be6d132af70568eb1caaf0311e5df69eb5dcaea4a76",
+  "result": true,
+  "footerMatches": true,
+  "views": [
+    {
+      "state": "default",
+      "expanded": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "files": {
+        "preview.svg": "a3201b544110022c957bec0a61e7add4496624d4c5f7d84784ff176724d77bc7",
+        "captures/390x844-default.png": "bdc5f9798bb43af6cc3c4dc51bd57e78a6221f9323e0862fa5c16109aee28ebb"
+      },
+      "geometry": {
+        "viewport": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "footer": {
+          "x": 0,
+          "y": 734,
+          "width": 390,
+          "height": 110
+        },
+        "memoPreview": {
+          "x": 16,
+          "y": 676,
+          "width": 358,
+          "height": 52
+        },
+        "scrollIndicator": {
+          "x": 382,
+          "y": 108,
+          "width": 3,
+          "height": 552
+        },
+        "targets": [
+          {
+            "id": "back",
+            "role": "button",
+            "label": "뒤로",
+            "action": "back",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 16,
+              "y": 54,
+              "width": 56,
+              "height": 48
+            }
+          },
+          {
+            "id": "camera",
+            "role": "button",
+            "label": "촬영하기",
+            "action": "camera",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 140,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "gallery",
+            "role": "button",
+            "label": "사진 첨부",
+            "action": "gallery",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 140,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "species-name",
+            "role": "textbox",
+            "label": "곤충 이름",
+            "action": "name",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 264,
+              "width": 232,
+              "height": 48
+            }
+          },
+          {
+            "id": "species-unknown",
+            "role": "button",
+            "label": "이름 모름",
+            "action": "unknown-name",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 264,
+              "y": 264,
+              "width": 110,
+              "height": 48
+            }
+          },
+          {
+            "id": "type-observed",
+            "role": "radio",
+            "label": "관찰",
+            "action": "record-type",
+            "disabled": false,
+            "checked": "false",
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 352,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "type-collected",
+            "role": "radio",
+            "label": "채집",
+            "action": "record-type",
+            "disabled": false,
+            "checked": "false",
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 352,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "location-picker",
+            "role": "button",
+            "label": "지도에서 발견 위치 선택",
+            "action": "pick-location",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 444,
+              "width": 358,
+              "height": 48
+            }
+          },
+          {
+            "id": "use-current-location",
+            "role": "button",
+            "label": "현재 위치 사용",
+            "action": "use-current",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 496,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "observed-date",
+            "role": "button",
+            "label": "발견 날짜 선택",
+            "action": "pick-date",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 580,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "observed-time",
+            "role": "button",
+            "label": "발견 시간 선택",
+            "action": "pick-time",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 580,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "submit",
+            "role": "button",
+            "label": "작성완료",
+            "action": "submit",
+            "disabled": true,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(61, 80, 68)",
+            "box": {
+              "x": 16,
+              "y": 758,
+              "width": 358,
+              "height": 48
+            }
+          }
+        ],
+        "texts": [
+          {
+            "id": "time-label",
+            "key": "systemTime",
+            "text": "9:41",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 24,
+              "y": 17,
+              "width": 30.625,
+              "height": 18
+            }
+          },
+          {
+            "id": "screen-title-label",
+            "key": "screenTitle",
+            "text": "발견·채집 기록",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 20,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 138.015625,
+              "y": 67,
+              "width": 113.96875,
+              "height": 24
+            }
+          },
+          {
+            "id": "photo-title-label",
+            "key": "photos",
+            "text": "사진",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 110.5,
+              "width": 27.65625,
+              "height": 19
+            }
+          },
+          {
+            "id": "photo-title-field-status",
+            "key": "required",
+            "text": "· 필수",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 56,
+              "y": 113,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "photo-count-label",
+            "key": "photoCountEmpty",
+            "text": "0/3장",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "background",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 338.515625,
+              "y": 112,
+              "width": 35.484375,
+              "height": 16
+            }
+          },
+          {
+            "id": "camera-label",
+            "key": "camera",
+            "text": "촬영하기",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "photoTile",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "camera",
+            "box": {
+              "x": 88,
+              "y": 156,
+              "width": 48.40625,
+              "height": 16
+            }
+          },
+          {
+            "id": "gallery-label",
+            "key": "gallery",
+            "text": "사진 첨부",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "photoTile",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "gallery",
+            "box": {
+              "x": 274,
+              "y": 156,
+              "width": 51.625,
+              "height": 16
+            }
+          },
+          {
+            "id": "photo-guidance-label",
+            "key": "photoGuidanceEmpty",
+            "text": "사진을 1장 이상 추가해 주세요",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 201,
+              "width": 141.5625,
+              "height": 14
+            }
+          },
+          {
+            "id": "species-title-label",
+            "key": "speciesTitle",
+            "text": "곤충 이름",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 238.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "species-name-label",
+            "key": "speciesPlaceholder",
+            "text": "곤충 이름 입력",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "species-name",
+            "box": {
+              "x": 30,
+              "y": 280,
+              "width": 79.4375,
+              "height": 16
+            }
+          },
+          {
+            "id": "species-unknown-label",
+            "key": "speciesUnknown",
+            "text": "이름 모름",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "species-unknown",
+            "box": {
+              "x": 300,
+              "y": 280.5,
+              "width": 47.9375,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-title-label",
+            "key": "typeTitle",
+            "text": "기록 유형",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 326.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "type-observed-label",
+            "key": "observed",
+            "text": "관찰",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "type-observed",
+            "box": {
+              "x": 52,
+              "y": 366,
+              "width": 24.203125,
+              "height": 16
+            }
+          },
+          {
+            "id": "type-collected-label",
+            "key": "collected",
+            "text": "채집",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "type-collected",
+            "box": {
+              "x": 238,
+              "y": 366,
+              "width": 24.203125,
+              "height": 16
+            }
+          },
+          {
+            "id": "location-title-label",
+            "key": "locationTitle",
+            "text": "발견 위치",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 418.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "location-title-field-status",
+            "key": "required",
+            "text": "· 필수",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 82,
+              "y": 421,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "location-picker-label",
+            "key": "locationEmpty",
+            "text": "지도에서 발견 위치 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "location-picker",
+            "box": {
+              "x": 54,
+              "y": 460,
+              "width": 131.25,
+              "height": 16
+            }
+          },
+          {
+            "id": "use-current-location-label",
+            "key": "useCurrentLocation",
+            "text": "현재 위치 사용",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "use-current-location",
+            "box": {
+              "x": 54,
+              "y": 510,
+              "width": 79.4375,
+              "height": 16
+            }
+          },
+          {
+            "id": "observed-at-title-label",
+            "key": "observedAt",
+            "text": "발견 날짜·시간",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 554.5,
+              "width": 91.171875,
+              "height": 19
+            }
+          },
+          {
+            "id": "observed-date-label",
+            "key": "dateEmpty",
+            "text": "날짜 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "observed-date",
+            "box": {
+              "x": 54,
+              "y": 596,
+              "width": 51.828125,
+              "height": 16
+            }
+          },
+          {
+            "id": "observed-time-label",
+            "key": "timeEmpty",
+            "text": "시간 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "observed-time",
+            "box": {
+              "x": 240,
+              "y": 596,
+              "width": 51.828125,
+              "height": 16
+            }
+          },
+          {
+            "id": "memo-title-label",
+            "key": "memoTitle",
+            "text": "메모",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 650.5,
+              "width": 27.65625,
+              "height": 19
+            }
+          },
+          {
+            "id": "memo-title-field-status",
+            "key": "optional",
+            "text": "· 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 60,
+              "y": 653,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "memo-preview-label",
+            "key": "memoHint",
+            "text": "주변 환경이나 곤충 행동을 적어 주세요",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 30,
+              "y": 691,
+              "width": 210.6875,
+              "height": 16
+            }
+          },
+          {
+            "id": "submit-guidance-label",
+            "key": "submitGuidance",
+            "text": "필수 항목을 입력하면 작성할 수 있어요",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "formFooter",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 104.703125,
+              "y": 739,
+              "width": 180.59375,
+              "height": 14
+            }
+          },
+          {
+            "id": "submit-label",
+            "key": "submit",
+            "text": "작성완료",
+            "ink": "rgb(143, 164, 150)",
+            "backdrop": "formField",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": "submit",
+            "box": {
+              "x": 169.0703125,
+              "y": 773,
+              "width": 51.859375,
+              "height": 18
+            }
+          }
+        ],
+        "photos": [],
+        "icons": [
+          {
+            "id": "back-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "camera-icon",
+            "ink": "primary",
+            "backdrop": "photoTile"
+          },
+          {
+            "id": "gallery-icon",
+            "ink": "primary",
+            "backdrop": "photoTile"
+          },
+          {
+            "id": "species-unknown-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "type-observed-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "type-collected-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "location-picker-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "location-picker-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "use-current-location-icon",
+            "ink": "location",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-date-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-date-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-time-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-time-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          }
+        ]
+      },
+      "fonts": {
+        "time-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "screen-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "photo-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "photo-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "photo-count-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "camera-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "gallery-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "photo-guidance-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 17
+          }
+        ],
+        "species-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "species-name-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "species-unknown-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "type-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "type-observed-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "type-collected-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "location-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "location-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "location-picker-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 13
+          }
+        ],
+        "use-current-location-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "observed-at-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "observed-date-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "observed-time-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "memo-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "memo-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "memo-preview-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 21
+          }
+        ],
+        "submit-guidance-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 21
+          }
+        ],
+        "submit-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ]
+      },
+      "checks": {
+        "exactViewport": true,
+        "targetGeometryMatches": true,
+        "minimumTouchSafeArea": true,
+        "separateTargets": true,
+        "visibleTextAndFit": true,
+        "actualPretendard": true,
+        "photoCapacity": true,
+        "realThumbnailPixels": true,
+        "typeSelection": true,
+        "locationAndDate": true,
+        "footerAndAccessibility": true,
+        "memoReachable": true,
+        "memoPreview": true,
+        "scrollIndicator": true
+      },
+      "textContrasts": [
+        {
+          "id": "time-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "screen-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-count-label",
+          "ratio": 10.57,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "camera-label",
+          "ratio": 11.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "gallery-label",
+          "ratio": 11.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-guidance-label",
+          "ratio": 10.57,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-name-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-unknown-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-observed-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-collected-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-picker-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "use-current-location-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-at-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-date-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-time-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-preview-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "submit-guidance-label",
+          "ratio": 9.94,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "submit-label",
+          "ratio": 5.52,
+          "threshold": 4.5,
+          "passed": true
+        }
+      ],
+      "iconContrasts": [
+        {
+          "id": "back-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "camera-icon",
+          "ratio": 9.43,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "gallery-icon",
+          "ratio": 9.43,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "species-unknown-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "type-observed-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "type-collected-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "location-picker-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "location-picker-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "use-current-location-icon",
+          "ratio": 8.53,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-date-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-date-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-time-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-time-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "boundaryContrasts": [
+        {
+          "id": "field-edge-to-fill",
+          "ratio": 3.71,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "field-edge-to-screen",
+          "ratio": 4.44,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "photo-action-edge-to-fill",
+          "ratio": 3.16,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "selected-type-edge-to-fill",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "enabled-submit-edge-to-footer",
+          "ratio": 12.46,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "scroll-indicator-to-screen",
+          "ratio": 4.44,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "photoPixels": {}
+    },
+    {
+      "state": "ready",
+      "expanded": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "files": {
+        "preview-ready.svg": "2a71b81a41c949ed2d4106f5253d7be5ac423ebc24bd0fafb9ab097431be39ef",
+        "captures/390x844-ready.png": "ce2c02f1557543dc5abf2a679e49f833248f351e478bdb930216ba1b2d8d866d"
+      },
+      "geometry": {
+        "viewport": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "footer": {
+          "x": 0,
+          "y": 734,
+          "width": 390,
+          "height": 110
+        },
+        "memoPreview": null,
+        "scrollIndicator": {
+          "x": 382,
+          "y": 108,
+          "width": 3,
+          "height": 484
+        },
+        "targets": [
+          {
+            "id": "back",
+            "role": "button",
+            "label": "뒤로",
+            "action": "back",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 16,
+              "y": 54,
+              "width": 56,
+              "height": 48
+            }
+          },
+          {
+            "id": "camera",
+            "role": "button",
+            "label": "촬영하기",
+            "action": "camera",
+            "disabled": true,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(61, 80, 68)",
+            "box": {
+              "x": 16,
+              "y": 140,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "gallery",
+            "role": "button",
+            "label": "사진 첨부",
+            "action": "gallery",
+            "disabled": true,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(61, 80, 68)",
+            "box": {
+              "x": 202,
+              "y": 140,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "delete-photo-1",
+            "role": "button",
+            "label": "사진 1 삭제",
+            "action": "delete-photo",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 86,
+              "y": 228,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "id": "delete-photo-2",
+            "role": "button",
+            "label": "사진 2 삭제",
+            "action": "delete-photo",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 208,
+              "y": 228,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "id": "delete-photo-3",
+            "role": "button",
+            "label": "사진 3 삭제",
+            "action": "delete-photo",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 330,
+              "y": 228,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "id": "species-name",
+            "role": "textbox",
+            "label": "곤충 이름",
+            "action": "name",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 362,
+              "width": 232,
+              "height": 48
+            }
+          },
+          {
+            "id": "species-unknown",
+            "role": "button",
+            "label": "이름 모름",
+            "action": "unknown-name",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 264,
+              "y": 362,
+              "width": 110,
+              "height": 48
+            }
+          },
+          {
+            "id": "type-observed",
+            "role": "radio",
+            "label": "관찰",
+            "action": "record-type",
+            "disabled": false,
+            "checked": "true",
+            "multiline": null,
+            "stroke": "rgb(197, 238, 121)",
+            "box": {
+              "x": 16,
+              "y": 450,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "type-collected",
+            "role": "radio",
+            "label": "채집",
+            "action": "record-type",
+            "disabled": false,
+            "checked": "false",
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 450,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "location-picker",
+            "role": "button",
+            "label": "발견 위치 서울숲, 지도에서 변경",
+            "action": "pick-location",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 542,
+              "width": 358,
+              "height": 48
+            }
+          },
+          {
+            "id": "use-current-location",
+            "role": "button",
+            "label": "현재 위치 사용",
+            "action": "use-current",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 594,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "observed-date",
+            "role": "button",
+            "label": "발견 날짜 2026. 11. 20., 변경",
+            "action": "pick-date",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 678,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "observed-time",
+            "role": "button",
+            "label": "발견 시간 오전 09:30, 변경",
+            "action": "pick-time",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 678,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "submit",
+            "role": "button",
+            "label": "작성완료",
+            "action": "submit",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "none",
+            "box": {
+              "x": 16,
+              "y": 758,
+              "width": 358,
+              "height": 48
+            }
+          }
+        ],
+        "texts": [
+          {
+            "id": "time-label",
+            "key": "systemTime",
+            "text": "9:41",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 24,
+              "y": 17,
+              "width": 30.625,
+              "height": 18
+            }
+          },
+          {
+            "id": "screen-title-label",
+            "key": "screenTitle",
+            "text": "발견·채집 기록",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 20,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 138.015625,
+              "y": 67,
+              "width": 113.96875,
+              "height": 24
+            }
+          },
+          {
+            "id": "photo-title-label",
+            "key": "photos",
+            "text": "사진",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 110.5,
+              "width": 27.65625,
+              "height": 19
+            }
+          },
+          {
+            "id": "photo-title-field-status",
+            "key": "required",
+            "text": "· 필수",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 56,
+              "y": 113,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "photo-count-label",
+            "key": "photoCountFull",
+            "text": "3/3장",
+            "ink": "rgb(197, 238, 121)",
+            "backdrop": "background",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 338.8125,
+              "y": 112,
+              "width": 35.1875,
+              "height": 16
+            }
+          },
+          {
+            "id": "camera-label",
+            "key": "camera",
+            "text": "촬영하기",
+            "ink": "rgb(143, 164, 150)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "camera",
+            "box": {
+              "x": 88,
+              "y": 156,
+              "width": 48.40625,
+              "height": 16
+            }
+          },
+          {
+            "id": "gallery-label",
+            "key": "gallery",
+            "text": "사진 첨부",
+            "ink": "rgb(143, 164, 150)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "gallery",
+            "box": {
+              "x": 274,
+              "y": 156,
+              "width": 51.625,
+              "height": 16
+            }
+          },
+          {
+            "id": "photo-guidance-label",
+            "key": "photoGuidanceFull",
+            "text": "사진을 삭제하면 다시 추가할 수 있어요",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 201,
+              "width": 180.59375,
+              "height": 14
+            }
+          },
+          {
+            "id": "species-title-label",
+            "key": "speciesTitle",
+            "text": "곤충 이름",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 336.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "species-name-label",
+            "key": "speciesExample",
+            "text": "왕사슴벌레",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "species-name",
+            "box": {
+              "x": 30,
+              "y": 378,
+              "width": 60.5,
+              "height": 16
+            }
+          },
+          {
+            "id": "species-unknown-label",
+            "key": "speciesUnknown",
+            "text": "이름 모름",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "species-unknown",
+            "box": {
+              "x": 300,
+              "y": 378.5,
+              "width": 47.9375,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-title-label",
+            "key": "typeTitle",
+            "text": "기록 유형",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 424.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "type-observed-label",
+            "key": "observed",
+            "text": "관찰",
+            "ink": "rgb(197, 238, 121)",
+            "backdrop": "activeTabSurface",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "type-observed",
+            "box": {
+              "x": 52,
+              "y": 464,
+              "width": 24.203125,
+              "height": 16
+            }
+          },
+          {
+            "id": "type-collected-label",
+            "key": "collected",
+            "text": "채집",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "type-collected",
+            "box": {
+              "x": 238,
+              "y": 464,
+              "width": 24.203125,
+              "height": 16
+            }
+          },
+          {
+            "id": "location-title-label",
+            "key": "locationTitle",
+            "text": "발견 위치",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 516.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "location-title-field-status",
+            "key": "required",
+            "text": "· 필수",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 82,
+              "y": 519,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "location-picker-label",
+            "key": "locationExample",
+            "text": "서울숲",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "location-picker",
+            "box": {
+              "x": 54,
+              "y": 558,
+              "width": 36.3125,
+              "height": 16
+            }
+          },
+          {
+            "id": "location-picker-detail",
+            "key": "locationChange",
+            "text": "· 지도에서 변경",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "formField",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": "location-picker",
+            "box": {
+              "x": 266.75,
+              "y": 559,
+              "width": 71.25,
+              "height": 14
+            }
+          },
+          {
+            "id": "use-current-location-label",
+            "key": "useCurrentLocation",
+            "text": "현재 위치 사용",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "use-current-location",
+            "box": {
+              "x": 54,
+              "y": 608,
+              "width": 79.4375,
+              "height": 16
+            }
+          },
+          {
+            "id": "observed-at-title-label",
+            "key": "observedAt",
+            "text": "발견 날짜·시간",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 652.5,
+              "width": 91.171875,
+              "height": 19
+            }
+          },
+          {
+            "id": "observed-date-label",
+            "key": "dateExample",
+            "text": "2026. 11. 20.",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "observed-date",
+            "box": {
+              "x": 54,
+              "y": 694,
+              "width": 79.765625,
+              "height": 16
+            }
+          },
+          {
+            "id": "observed-time-label",
+            "key": "timeExample",
+            "text": "오전 09:30",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "observed-time",
+            "box": {
+              "x": 240,
+              "y": 694,
+              "width": 66.0625,
+              "height": 16
+            }
+          },
+          {
+            "id": "submit-label",
+            "key": "submit",
+            "text": "작성완료",
+            "ink": "rgb(32, 46, 19)",
+            "backdrop": "primary",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": "submit",
+            "box": {
+              "x": 169.0703125,
+              "y": 773,
+              "width": 51.859375,
+              "height": 18
+            }
+          }
+        ],
+        "photos": [
+          {
+            "id": "photo-1",
+            "box": {
+              "x": 16,
+              "y": 228,
+              "width": 114,
+              "height": 90
+            }
+          },
+          {
+            "id": "photo-2",
+            "box": {
+              "x": 138,
+              "y": 228,
+              "width": 114,
+              "height": 90
+            }
+          },
+          {
+            "id": "photo-3",
+            "box": {
+              "x": 260,
+              "y": 228,
+              "width": 114,
+              "height": 90
+            }
+          }
+        ],
+        "icons": [
+          {
+            "id": "back-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "camera-icon",
+            "ink": "disabledText",
+            "backdrop": "formField"
+          },
+          {
+            "id": "gallery-icon",
+            "ink": "disabledText",
+            "backdrop": "formField"
+          },
+          {
+            "id": "delete-photo-1-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "delete-photo-2-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "delete-photo-3-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "species-unknown-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "type-observed-icon",
+            "ink": "primary",
+            "backdrop": "activeTabSurface"
+          },
+          {
+            "id": "type-collected-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "location-picker-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "location-picker-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "use-current-location-icon",
+            "ink": "location",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-date-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-date-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-time-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-time-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          }
+        ]
+      },
+      "fonts": {
+        "time-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "screen-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "photo-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "photo-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "photo-count-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "camera-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "gallery-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "photo-guidance-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 21
+          }
+        ],
+        "species-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "species-name-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "species-unknown-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "type-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "type-observed-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "type-collected-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "location-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "location-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "location-picker-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 3
+          }
+        ],
+        "location-picker-detail": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 9
+          }
+        ],
+        "use-current-location-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "observed-at-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "observed-date-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 13
+          }
+        ],
+        "observed-time-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "submit-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ]
+      },
+      "checks": {
+        "exactViewport": true,
+        "targetGeometryMatches": true,
+        "minimumTouchSafeArea": true,
+        "separateTargets": true,
+        "visibleTextAndFit": true,
+        "actualPretendard": true,
+        "photoCapacity": true,
+        "realThumbnailPixels": true,
+        "typeSelection": true,
+        "locationAndDate": true,
+        "footerAndAccessibility": true,
+        "memoReachable": true,
+        "memoPreview": true,
+        "scrollIndicator": true
+      },
+      "textContrasts": [
+        {
+          "id": "time-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "screen-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-count-label",
+          "ratio": 13.24,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "camera-label",
+          "ratio": 5.52,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "gallery-label",
+          "ratio": 5.52,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-guidance-label",
+          "ratio": 10.57,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-name-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-unknown-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-observed-label",
+          "ratio": 7.96,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-collected-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-picker-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-picker-detail",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "use-current-location-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-at-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-date-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-time-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "submit-label",
+          "ratio": 10.86,
+          "threshold": 4.5,
+          "passed": true
+        }
+      ],
+      "iconContrasts": [
+        {
+          "id": "back-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "camera-icon",
+          "ratio": 5.52,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "gallery-icon",
+          "ratio": 5.52,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "delete-photo-1-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "delete-photo-2-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "delete-photo-3-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "species-unknown-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "type-observed-icon",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "type-collected-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "location-picker-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "location-picker-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "use-current-location-icon",
+          "ratio": 8.53,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-date-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-date-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-time-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-time-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "boundaryContrasts": [
+        {
+          "id": "field-edge-to-fill",
+          "ratio": 3.71,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "field-edge-to-screen",
+          "ratio": 4.44,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "photo-action-edge-to-fill",
+          "ratio": 3.16,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "selected-type-edge-to-fill",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "enabled-submit-edge-to-footer",
+          "ratio": 12.46,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "scroll-indicator-to-screen",
+          "ratio": 4.44,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "photoPixels": {
+        "photo-1": 9097,
+        "photo-2": 8433,
+        "photo-3": 7480
+      }
+    },
+    {
+      "state": "default",
+      "expanded": true,
+      "viewport": {
+        "width": 390,
+        "height": 920
+      },
+      "files": {
+        "preview-full-default.svg": "5530a6e14ce0285eee1f367986794dacef70b07b654f54d2f79497dfec8db266",
+        "captures/full-form/390x920-default.png": "51907135f2991e752e5ecdc23bb7d9678ba136e64a566394ccbe300686478383"
+      },
+      "geometry": {
+        "viewport": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 920
+        },
+        "footer": {
+          "x": 0,
+          "y": 810,
+          "width": 390,
+          "height": 110
+        },
+        "memoPreview": null,
+        "scrollIndicator": null,
+        "targets": [
+          {
+            "id": "back",
+            "role": "button",
+            "label": "뒤로",
+            "action": "back",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 16,
+              "y": 54,
+              "width": 56,
+              "height": 48
+            }
+          },
+          {
+            "id": "camera",
+            "role": "button",
+            "label": "촬영하기",
+            "action": "camera",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 140,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "gallery",
+            "role": "button",
+            "label": "사진 첨부",
+            "action": "gallery",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 140,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "species-name",
+            "role": "textbox",
+            "label": "곤충 이름",
+            "action": "name",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 264,
+              "width": 232,
+              "height": 48
+            }
+          },
+          {
+            "id": "species-unknown",
+            "role": "button",
+            "label": "이름 모름",
+            "action": "unknown-name",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 264,
+              "y": 264,
+              "width": 110,
+              "height": 48
+            }
+          },
+          {
+            "id": "type-observed",
+            "role": "radio",
+            "label": "관찰",
+            "action": "record-type",
+            "disabled": false,
+            "checked": "false",
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 352,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "type-collected",
+            "role": "radio",
+            "label": "채집",
+            "action": "record-type",
+            "disabled": false,
+            "checked": "false",
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 352,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "location-picker",
+            "role": "button",
+            "label": "지도에서 발견 위치 선택",
+            "action": "pick-location",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 444,
+              "width": 358,
+              "height": 48
+            }
+          },
+          {
+            "id": "use-current-location",
+            "role": "button",
+            "label": "현재 위치 사용",
+            "action": "use-current",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 496,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "observed-date",
+            "role": "button",
+            "label": "발견 날짜 선택",
+            "action": "pick-date",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 580,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "observed-time",
+            "role": "button",
+            "label": "발견 시간 선택",
+            "action": "pick-time",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 580,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "memo-input",
+            "role": "textbox",
+            "label": "메모",
+            "action": "write-memo",
+            "disabled": false,
+            "checked": null,
+            "multiline": "true",
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 676,
+              "width": 358,
+              "height": 112
+            }
+          },
+          {
+            "id": "submit",
+            "role": "button",
+            "label": "작성완료",
+            "action": "submit",
+            "disabled": true,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(61, 80, 68)",
+            "box": {
+              "x": 16,
+              "y": 834,
+              "width": 358,
+              "height": 48
+            }
+          }
+        ],
+        "texts": [
+          {
+            "id": "time-label",
+            "key": "systemTime",
+            "text": "9:41",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 24,
+              "y": 17,
+              "width": 30.625,
+              "height": 18
+            }
+          },
+          {
+            "id": "screen-title-label",
+            "key": "screenTitle",
+            "text": "발견·채집 기록",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 20,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 138.015625,
+              "y": 67,
+              "width": 113.96875,
+              "height": 24
+            }
+          },
+          {
+            "id": "photo-title-label",
+            "key": "photos",
+            "text": "사진",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 110.5,
+              "width": 27.65625,
+              "height": 19
+            }
+          },
+          {
+            "id": "photo-title-field-status",
+            "key": "required",
+            "text": "· 필수",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 56,
+              "y": 113,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "photo-count-label",
+            "key": "photoCountEmpty",
+            "text": "0/3장",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "background",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 338.515625,
+              "y": 112,
+              "width": 35.484375,
+              "height": 16
+            }
+          },
+          {
+            "id": "camera-label",
+            "key": "camera",
+            "text": "촬영하기",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "photoTile",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "camera",
+            "box": {
+              "x": 88,
+              "y": 156,
+              "width": 48.40625,
+              "height": 16
+            }
+          },
+          {
+            "id": "gallery-label",
+            "key": "gallery",
+            "text": "사진 첨부",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "photoTile",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "gallery",
+            "box": {
+              "x": 274,
+              "y": 156,
+              "width": 51.625,
+              "height": 16
+            }
+          },
+          {
+            "id": "photo-guidance-label",
+            "key": "photoGuidanceEmpty",
+            "text": "사진을 1장 이상 추가해 주세요",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 201,
+              "width": 141.5625,
+              "height": 14
+            }
+          },
+          {
+            "id": "species-title-label",
+            "key": "speciesTitle",
+            "text": "곤충 이름",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 238.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "species-name-label",
+            "key": "speciesPlaceholder",
+            "text": "곤충 이름 입력",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "species-name",
+            "box": {
+              "x": 30,
+              "y": 280,
+              "width": 79.4375,
+              "height": 16
+            }
+          },
+          {
+            "id": "species-unknown-label",
+            "key": "speciesUnknown",
+            "text": "이름 모름",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "species-unknown",
+            "box": {
+              "x": 300,
+              "y": 280.5,
+              "width": 47.9375,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-title-label",
+            "key": "typeTitle",
+            "text": "기록 유형",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 326.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "type-observed-label",
+            "key": "observed",
+            "text": "관찰",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "type-observed",
+            "box": {
+              "x": 52,
+              "y": 366,
+              "width": 24.203125,
+              "height": 16
+            }
+          },
+          {
+            "id": "type-collected-label",
+            "key": "collected",
+            "text": "채집",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "type-collected",
+            "box": {
+              "x": 238,
+              "y": 366,
+              "width": 24.203125,
+              "height": 16
+            }
+          },
+          {
+            "id": "location-title-label",
+            "key": "locationTitle",
+            "text": "발견 위치",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 418.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "location-title-field-status",
+            "key": "required",
+            "text": "· 필수",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 82,
+              "y": 421,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "location-picker-label",
+            "key": "locationEmpty",
+            "text": "지도에서 발견 위치 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "location-picker",
+            "box": {
+              "x": 54,
+              "y": 460,
+              "width": 131.25,
+              "height": 16
+            }
+          },
+          {
+            "id": "use-current-location-label",
+            "key": "useCurrentLocation",
+            "text": "현재 위치 사용",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "use-current-location",
+            "box": {
+              "x": 54,
+              "y": 510,
+              "width": 79.4375,
+              "height": 16
+            }
+          },
+          {
+            "id": "observed-at-title-label",
+            "key": "observedAt",
+            "text": "발견 날짜·시간",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 554.5,
+              "width": 91.171875,
+              "height": 19
+            }
+          },
+          {
+            "id": "observed-date-label",
+            "key": "dateEmpty",
+            "text": "날짜 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "observed-date",
+            "box": {
+              "x": 54,
+              "y": 596,
+              "width": 51.828125,
+              "height": 16
+            }
+          },
+          {
+            "id": "observed-time-label",
+            "key": "timeEmpty",
+            "text": "시간 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "observed-time",
+            "box": {
+              "x": 240,
+              "y": 596,
+              "width": 51.828125,
+              "height": 16
+            }
+          },
+          {
+            "id": "memo-title-label",
+            "key": "memoTitle",
+            "text": "메모",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 650.5,
+              "width": 27.65625,
+              "height": 19
+            }
+          },
+          {
+            "id": "memo-title-field-status",
+            "key": "optional",
+            "text": "· 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 60,
+              "y": 653,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "memo-input-label",
+            "key": "memoHint",
+            "text": "주변 환경이나 곤충 행동을 적어 주세요",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "memo-input",
+            "box": {
+              "x": 30,
+              "y": 691,
+              "width": 210.6875,
+              "height": 16
+            }
+          },
+          {
+            "id": "submit-guidance-label",
+            "key": "submitGuidance",
+            "text": "필수 항목을 입력하면 작성할 수 있어요",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "formFooter",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 104.703125,
+              "y": 815,
+              "width": 180.59375,
+              "height": 14
+            }
+          },
+          {
+            "id": "submit-label",
+            "key": "submit",
+            "text": "작성완료",
+            "ink": "rgb(143, 164, 150)",
+            "backdrop": "formField",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": "submit",
+            "box": {
+              "x": 169.0703125,
+              "y": 849,
+              "width": 51.859375,
+              "height": 18
+            }
+          }
+        ],
+        "photos": [],
+        "icons": [
+          {
+            "id": "back-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "camera-icon",
+            "ink": "primary",
+            "backdrop": "photoTile"
+          },
+          {
+            "id": "gallery-icon",
+            "ink": "primary",
+            "backdrop": "photoTile"
+          },
+          {
+            "id": "species-unknown-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "type-observed-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "type-collected-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "location-picker-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "location-picker-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "use-current-location-icon",
+            "ink": "location",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-date-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-date-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-time-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-time-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          }
+        ]
+      },
+      "fonts": {
+        "time-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "screen-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "photo-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "photo-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "photo-count-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "camera-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "gallery-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "photo-guidance-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 17
+          }
+        ],
+        "species-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "species-name-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "species-unknown-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "type-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "type-observed-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "type-collected-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "location-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "location-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "location-picker-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 13
+          }
+        ],
+        "use-current-location-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "observed-at-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "observed-date-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "observed-time-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "memo-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "memo-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "memo-input-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 21
+          }
+        ],
+        "submit-guidance-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 21
+          }
+        ],
+        "submit-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ]
+      },
+      "checks": {
+        "exactViewport": true,
+        "targetGeometryMatches": true,
+        "minimumTouchSafeArea": true,
+        "separateTargets": true,
+        "visibleTextAndFit": true,
+        "actualPretendard": true,
+        "photoCapacity": true,
+        "realThumbnailPixels": true,
+        "typeSelection": true,
+        "locationAndDate": true,
+        "footerAndAccessibility": true,
+        "memoReachable": true,
+        "memoPreview": true,
+        "scrollIndicator": true
+      },
+      "textContrasts": [
+        {
+          "id": "time-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "screen-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-count-label",
+          "ratio": 10.57,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "camera-label",
+          "ratio": 11.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "gallery-label",
+          "ratio": 11.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-guidance-label",
+          "ratio": 10.57,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-name-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-unknown-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-observed-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-collected-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-picker-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "use-current-location-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-at-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-date-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-time-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-input-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "submit-guidance-label",
+          "ratio": 9.94,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "submit-label",
+          "ratio": 5.52,
+          "threshold": 4.5,
+          "passed": true
+        }
+      ],
+      "iconContrasts": [
+        {
+          "id": "back-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "camera-icon",
+          "ratio": 9.43,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "gallery-icon",
+          "ratio": 9.43,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "species-unknown-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "type-observed-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "type-collected-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "location-picker-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "location-picker-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "use-current-location-icon",
+          "ratio": 8.53,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-date-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-date-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-time-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-time-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "boundaryContrasts": [
+        {
+          "id": "field-edge-to-fill",
+          "ratio": 3.71,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "field-edge-to-screen",
+          "ratio": 4.44,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "photo-action-edge-to-fill",
+          "ratio": 3.16,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "selected-type-edge-to-fill",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "enabled-submit-edge-to-footer",
+          "ratio": 12.46,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "photoPixels": {}
+    },
+    {
+      "state": "ready",
+      "expanded": true,
+      "viewport": {
+        "width": 390,
+        "height": 1018
+      },
+      "files": {
+        "preview-full-ready.svg": "4c1f497b7d7ad73d8cb1f17cfdc5a7b2095f434d4fcf4d5a9183e8b45a4fb275",
+        "captures/full-form/390x1018-ready.png": "f8a1b6b380ac41608bec90328c257dc46b9275b441e8d262d6231b76c6346cb5"
+      },
+      "geometry": {
+        "viewport": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 1018
+        },
+        "footer": {
+          "x": 0,
+          "y": 908,
+          "width": 390,
+          "height": 110
+        },
+        "memoPreview": null,
+        "scrollIndicator": null,
+        "targets": [
+          {
+            "id": "back",
+            "role": "button",
+            "label": "뒤로",
+            "action": "back",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 16,
+              "y": 54,
+              "width": 56,
+              "height": 48
+            }
+          },
+          {
+            "id": "camera",
+            "role": "button",
+            "label": "촬영하기",
+            "action": "camera",
+            "disabled": true,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(61, 80, 68)",
+            "box": {
+              "x": 16,
+              "y": 140,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "gallery",
+            "role": "button",
+            "label": "사진 첨부",
+            "action": "gallery",
+            "disabled": true,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(61, 80, 68)",
+            "box": {
+              "x": 202,
+              "y": 140,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "delete-photo-1",
+            "role": "button",
+            "label": "사진 1 삭제",
+            "action": "delete-photo",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 86,
+              "y": 228,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "id": "delete-photo-2",
+            "role": "button",
+            "label": "사진 2 삭제",
+            "action": "delete-photo",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 208,
+              "y": 228,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "id": "delete-photo-3",
+            "role": "button",
+            "label": "사진 3 삭제",
+            "action": "delete-photo",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": null,
+            "box": {
+              "x": 330,
+              "y": 228,
+              "width": 44,
+              "height": 44
+            }
+          },
+          {
+            "id": "species-name",
+            "role": "textbox",
+            "label": "곤충 이름",
+            "action": "name",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 362,
+              "width": 232,
+              "height": 48
+            }
+          },
+          {
+            "id": "species-unknown",
+            "role": "button",
+            "label": "이름 모름",
+            "action": "unknown-name",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 264,
+              "y": 362,
+              "width": 110,
+              "height": 48
+            }
+          },
+          {
+            "id": "type-observed",
+            "role": "radio",
+            "label": "관찰",
+            "action": "record-type",
+            "disabled": false,
+            "checked": "true",
+            "multiline": null,
+            "stroke": "rgb(197, 238, 121)",
+            "box": {
+              "x": 16,
+              "y": 450,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "type-collected",
+            "role": "radio",
+            "label": "채집",
+            "action": "record-type",
+            "disabled": false,
+            "checked": "false",
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 450,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "location-picker",
+            "role": "button",
+            "label": "발견 위치 서울숲, 지도에서 변경",
+            "action": "pick-location",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 542,
+              "width": 358,
+              "height": 48
+            }
+          },
+          {
+            "id": "use-current-location",
+            "role": "button",
+            "label": "현재 위치 사용",
+            "action": "use-current",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 594,
+              "width": 172,
+              "height": 44
+            }
+          },
+          {
+            "id": "observed-date",
+            "role": "button",
+            "label": "발견 날짜 2026. 11. 20., 변경",
+            "action": "pick-date",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 678,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "observed-time",
+            "role": "button",
+            "label": "발견 시간 오전 09:30, 변경",
+            "action": "pick-time",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 202,
+              "y": 678,
+              "width": 172,
+              "height": 48
+            }
+          },
+          {
+            "id": "memo-input",
+            "role": "textbox",
+            "label": "메모",
+            "action": "write-memo",
+            "disabled": false,
+            "checked": null,
+            "multiline": "true",
+            "stroke": "rgb(109, 134, 119)",
+            "box": {
+              "x": 16,
+              "y": 774,
+              "width": 358,
+              "height": 112
+            }
+          },
+          {
+            "id": "submit",
+            "role": "button",
+            "label": "작성완료",
+            "action": "submit",
+            "disabled": false,
+            "checked": null,
+            "multiline": null,
+            "stroke": "none",
+            "box": {
+              "x": 16,
+              "y": 932,
+              "width": 358,
+              "height": 48
+            }
+          }
+        ],
+        "texts": [
+          {
+            "id": "time-label",
+            "key": "systemTime",
+            "text": "9:41",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 24,
+              "y": 17,
+              "width": 30.625,
+              "height": 18
+            }
+          },
+          {
+            "id": "screen-title-label",
+            "key": "screenTitle",
+            "text": "발견·채집 기록",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 20,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 138.015625,
+              "y": 67,
+              "width": 113.96875,
+              "height": 24
+            }
+          },
+          {
+            "id": "photo-title-label",
+            "key": "photos",
+            "text": "사진",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 110.5,
+              "width": 27.65625,
+              "height": 19
+            }
+          },
+          {
+            "id": "photo-title-field-status",
+            "key": "required",
+            "text": "· 필수",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 56,
+              "y": 113,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "photo-count-label",
+            "key": "photoCountFull",
+            "text": "3/3장",
+            "ink": "rgb(197, 238, 121)",
+            "backdrop": "background",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 338.8125,
+              "y": 112,
+              "width": 35.1875,
+              "height": 16
+            }
+          },
+          {
+            "id": "camera-label",
+            "key": "camera",
+            "text": "촬영하기",
+            "ink": "rgb(143, 164, 150)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "camera",
+            "box": {
+              "x": 88,
+              "y": 156,
+              "width": 48.40625,
+              "height": 16
+            }
+          },
+          {
+            "id": "gallery-label",
+            "key": "gallery",
+            "text": "사진 첨부",
+            "ink": "rgb(143, 164, 150)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "gallery",
+            "box": {
+              "x": 274,
+              "y": 156,
+              "width": 51.625,
+              "height": 16
+            }
+          },
+          {
+            "id": "photo-guidance-label",
+            "key": "photoGuidanceFull",
+            "text": "사진을 삭제하면 다시 추가할 수 있어요",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 201,
+              "width": 180.59375,
+              "height": 14
+            }
+          },
+          {
+            "id": "species-title-label",
+            "key": "speciesTitle",
+            "text": "곤충 이름",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 336.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "species-name-label",
+            "key": "speciesExample",
+            "text": "왕사슴벌레",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "species-name",
+            "box": {
+              "x": 30,
+              "y": 378,
+              "width": 60.5,
+              "height": 16
+            }
+          },
+          {
+            "id": "species-unknown-label",
+            "key": "speciesUnknown",
+            "text": "이름 모름",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "species-unknown",
+            "box": {
+              "x": 300,
+              "y": 378.5,
+              "width": 47.9375,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-title-label",
+            "key": "typeTitle",
+            "text": "기록 유형",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 424.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "type-observed-label",
+            "key": "observed",
+            "text": "관찰",
+            "ink": "rgb(197, 238, 121)",
+            "backdrop": "activeTabSurface",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "type-observed",
+            "box": {
+              "x": 52,
+              "y": 464,
+              "width": 24.203125,
+              "height": 16
+            }
+          },
+          {
+            "id": "type-collected-label",
+            "key": "collected",
+            "text": "채집",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "type-collected",
+            "box": {
+              "x": 238,
+              "y": 464,
+              "width": 24.203125,
+              "height": 16
+            }
+          },
+          {
+            "id": "location-title-label",
+            "key": "locationTitle",
+            "text": "발견 위치",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 516.5,
+              "width": 59,
+              "height": 19
+            }
+          },
+          {
+            "id": "location-title-field-status",
+            "key": "required",
+            "text": "· 필수",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 82,
+              "y": 519,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "location-picker-label",
+            "key": "locationExample",
+            "text": "서울숲",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "location-picker",
+            "box": {
+              "x": 54,
+              "y": 558,
+              "width": 36.3125,
+              "height": 16
+            }
+          },
+          {
+            "id": "location-picker-detail",
+            "key": "locationChange",
+            "text": "· 지도에서 변경",
+            "ink": "rgb(189, 205, 194)",
+            "backdrop": "formField",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": "location-picker",
+            "box": {
+              "x": 266.75,
+              "y": 559,
+              "width": 71.25,
+              "height": 14
+            }
+          },
+          {
+            "id": "use-current-location-label",
+            "key": "useCurrentLocation",
+            "text": "현재 위치 사용",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "use-current-location",
+            "box": {
+              "x": 54,
+              "y": 608,
+              "width": 79.4375,
+              "height": 16
+            }
+          },
+          {
+            "id": "observed-at-title-label",
+            "key": "observedAt",
+            "text": "발견 날짜·시간",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 652.5,
+              "width": 91.171875,
+              "height": 19
+            }
+          },
+          {
+            "id": "observed-date-label",
+            "key": "dateExample",
+            "text": "2026. 11. 20.",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "observed-date",
+            "box": {
+              "x": 54,
+              "y": 694,
+              "width": 79.765625,
+              "height": 16
+            }
+          },
+          {
+            "id": "observed-time-label",
+            "key": "timeExample",
+            "text": "오전 09:30",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "observed-time",
+            "box": {
+              "x": 240,
+              "y": 694,
+              "width": 66.0625,
+              "height": 16
+            }
+          },
+          {
+            "id": "memo-title-label",
+            "key": "memoTitle",
+            "text": "메모",
+            "ink": "rgb(243, 247, 238)",
+            "backdrop": "background",
+            "fontSize": 16,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 748.5,
+              "width": 27.65625,
+              "height": 19
+            }
+          },
+          {
+            "id": "memo-title-field-status",
+            "key": "optional",
+            "text": "· 선택",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "background",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 60,
+              "y": 751,
+              "width": 26.84375,
+              "height": 14
+            }
+          },
+          {
+            "id": "memo-input-label",
+            "key": "memoHint",
+            "text": "주변 환경이나 곤충 행동을 적어 주세요",
+            "ink": "rgb(167, 187, 173)",
+            "backdrop": "formField",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "memo-input",
+            "box": {
+              "x": 30,
+              "y": 789,
+              "width": 210.6875,
+              "height": 16
+            }
+          },
+          {
+            "id": "submit-label",
+            "key": "submit",
+            "text": "작성완료",
+            "ink": "rgb(32, 46, 19)",
+            "backdrop": "primary",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": "submit",
+            "box": {
+              "x": 169.0703125,
+              "y": 947,
+              "width": 51.859375,
+              "height": 18
+            }
+          }
+        ],
+        "photos": [
+          {
+            "id": "photo-1",
+            "box": {
+              "x": 16,
+              "y": 228,
+              "width": 114,
+              "height": 90
+            }
+          },
+          {
+            "id": "photo-2",
+            "box": {
+              "x": 138,
+              "y": 228,
+              "width": 114,
+              "height": 90
+            }
+          },
+          {
+            "id": "photo-3",
+            "box": {
+              "x": 260,
+              "y": 228,
+              "width": 114,
+              "height": 90
+            }
+          }
+        ],
+        "icons": [
+          {
+            "id": "back-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "camera-icon",
+            "ink": "disabledText",
+            "backdrop": "formField"
+          },
+          {
+            "id": "gallery-icon",
+            "ink": "disabledText",
+            "backdrop": "formField"
+          },
+          {
+            "id": "delete-photo-1-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "delete-photo-2-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "delete-photo-3-icon",
+            "ink": "text",
+            "backdrop": "background"
+          },
+          {
+            "id": "species-unknown-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "type-observed-icon",
+            "ink": "primary",
+            "backdrop": "activeTabSurface"
+          },
+          {
+            "id": "type-collected-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "location-picker-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "location-picker-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "use-current-location-icon",
+            "ink": "location",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-date-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-date-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-time-icon",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          },
+          {
+            "id": "observed-time-trailing",
+            "ink": "textSecondary",
+            "backdrop": "formField"
+          }
+        ]
+      },
+      "fonts": {
+        "time-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "screen-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "photo-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "photo-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "photo-count-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "camera-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "gallery-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "photo-guidance-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 21
+          }
+        ],
+        "species-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "species-name-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "species-unknown-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "type-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "type-observed-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "type-collected-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "location-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "location-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "location-picker-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 3
+          }
+        ],
+        "location-picker-detail": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 9
+          }
+        ],
+        "use-current-location-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "observed-at-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "observed-date-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 13
+          }
+        ],
+        "observed-time-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 8
+          }
+        ],
+        "memo-title-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "memo-title-field-status": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "memo-input-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 21
+          }
+        ],
+        "submit-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ]
+      },
+      "checks": {
+        "exactViewport": true,
+        "targetGeometryMatches": true,
+        "minimumTouchSafeArea": true,
+        "separateTargets": true,
+        "visibleTextAndFit": true,
+        "actualPretendard": true,
+        "photoCapacity": true,
+        "realThumbnailPixels": true,
+        "typeSelection": true,
+        "locationAndDate": true,
+        "footerAndAccessibility": true,
+        "memoReachable": true,
+        "memoPreview": true,
+        "scrollIndicator": true
+      },
+      "textContrasts": [
+        {
+          "id": "time-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "screen-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-count-label",
+          "ratio": 13.24,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "camera-label",
+          "ratio": 5.52,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "gallery-label",
+          "ratio": 5.52,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "photo-guidance-label",
+          "ratio": 10.57,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-name-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "species-unknown-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-observed-label",
+          "ratio": 7.96,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-collected-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-picker-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "location-picker-detail",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "use-current-location-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-at-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-date-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "observed-time-label",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-title-label",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-title-field-status",
+          "ratio": 8.63,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "memo-input-label",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "submit-label",
+          "ratio": 10.86,
+          "threshold": 4.5,
+          "passed": true
+        }
+      ],
+      "iconContrasts": [
+        {
+          "id": "back-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "camera-icon",
+          "ratio": 5.52,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "gallery-icon",
+          "ratio": 5.52,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "delete-photo-1-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "delete-photo-2-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "delete-photo-3-icon",
+          "ratio": 16.13,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "species-unknown-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "type-observed-icon",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "type-collected-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "location-picker-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "location-picker-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "use-current-location-icon",
+          "ratio": 8.53,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-date-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-date-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-time-icon",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "observed-time-trailing",
+          "ratio": 8.84,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "boundaryContrasts": [
+        {
+          "id": "field-edge-to-fill",
+          "ratio": 3.71,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "field-edge-to-screen",
+          "ratio": 4.44,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "photo-action-edge-to-fill",
+          "ratio": 3.16,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "selected-type-edge-to-fill",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "enabled-submit-edge-to-footer",
+          "ratio": 12.46,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "photoPixels": {
+        "photo-1": 9097,
+        "photo-2": 8433,
+        "photo-3": 7480
+      }
+    }
+  ]
+}

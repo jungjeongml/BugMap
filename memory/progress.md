@@ -327,3 +327,60 @@
 
 - 개발 인계 수락 `a904e16e-f6e5-4839-947a-5b49ad600bd1`의 유효성을 확인했다. 하네스에서 8단계 모두 `passed`, `complete: true`였다.
 - [최종 개발 인계서](../work/bugmap-nearby-discoveries-harness/08-handoff/HANDOFF.md), [기존 지도에서 시작하는 Figma 프로토타입](https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81&scaling=scale-down), [검수 보고서](../work/bugmap-nearby-discoveries-harness/07-validation/report.md)를 연결했다. 실제 제품 동작의 [실기기 확인 항목](../work/bugmap-nearby-discoveries-harness/08-handoff/open-items.md)을 인계서에 남겼다.
+
+## 2026-11-20 — BugMapHarness 발견·채집 기록 작성 PRD 준비
+
+- 기존 지도 `41:81`의 기록하기 버튼 `41:443`에서 여는 [작성 화면 PRD](../work/bugmap-record-entry-harness/01-prd/PRD.md)를 작성했다. 촬영·첨부는 합산해 1장 필수와 최대 4장을 제안했다. 발견 위치·공개 범위, 날짜·시간, 선택형 메모, 하단 고정 ‘작성완료’를 정의했다.
+- [수용 기준 7개](../work/bugmap-record-entry-harness/01-prd/requirements.csv), 원본 12개 해시, 기존 Figma 버튼 노드를 대조했다. [독립 비평](../work/bugmap-record-entry-harness/01-prd/critique.md)과 하네스 검사 결과를 확인했다.
+- 사람의 PRD 승인 이후 리서치와 와이어프레임을 진행한다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)
+
+## 2026-11-20 — 발견·채집 기록 사진 상한 3장 반영
+
+- 사용자가 촬영과 첨부를 합산해 최대 3장으로 결정했다. [작성 PRD](../work/bugmap-record-entry-harness/01-prd/PRD.md)와 수용 기준을 `0/3장`·`3/3장` 상태로 수정했다. [제품 PRD](../docs/PRD.md)와 [작성 화면 명세](../docs/screens/record-entry.md), [사진 저장 TDD](../docs/TDD.md#62-사진-등록과-재시도)에 1~3장 범위를 반영했다.
+- 이전 승인 `59d754f6-e306-4db3-ad62-21b73a801342`는 최대 4장 제안 버전을 기록한다. 변경된 PRD의 사람 승인을 기다린다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 발견·채집 기록 작성 와이어프레임 준비
+
+- 최대 3장 기준의 PRD 승인 `4137d5d0-e65b-4f96-9394-0c84656901ac`을 확인했다. [리서치](../work/bugmap-record-entry-harness/02-research/findings.md)와 [작성 흐름](../work/bugmap-record-entry-harness/03-structure/flows.mmd)에 촬영·첨부 합산, 상한·삭제 후 재추가, 위치 공개와 입력 복구를 정리했다.
+- 390×844 [첫 진입 0/3장](../work/bugmap-record-entry-harness/04-wireframes/captures/record-entry/default.png) 및 [입력 완료 3/3장](../work/bugmap-record-entry-harness/04-wireframes/captures/record-entry/ready.png)을 렌더링했다. [전체 폼](../work/bugmap-record-entry-harness/04-wireframes/full-form/captures/record-entry/ready.png)으로 발견 날짜·시간 및 여러 줄 메모까지 확인했다. [검수 기록](../work/bugmap-record-entry-harness/04-wireframes/review.md) · [독립 비평](../work/bugmap-record-entry-harness/04-wireframes/critique.md)
+- 사람의 와이어프레임 승인 이후 다크 디자인 시스템을 적용한다. 실제 Figma 프로토타입 동작은 제작 단계에서 검수한다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 발견·채집 기록 작성 다크 시안 준비
+
+- 와이어프레임 승인 `2ba7077f-ee7d-417c-a356-3e3b65c202eb`을 확인했다. 기존 다크 팔레트로 [첫 진입 0/3장](../work/bugmap-record-entry-harness/05-design-system/captures/390x844-default.png)과 [입력 완료 3/3장](../work/bugmap-record-entry-harness/05-design-system/captures/390x844-ready.png)을 제작했다. 사진 3장과 촬영·첨부 비활성, 개별 삭제, 같은 자리에 놓인 ‘작성완료’의 상태가 보인다.
+- 두 390×844 Chromium 캡처와 [전체 폼](../work/bugmap-record-entry-harness/05-design-system/captures/full-form/390x1128-ready.png)에서 조작 영역·대비와 날짜·시간·메모를 확인했다. [검수](../work/bugmap-record-entry-harness/05-design-system/review.md) · [독립 비평](../work/bugmap-record-entry-harness/05-design-system/critique.md) · [사진 출처 및 라이선스](../work/bugmap-record-entry-harness/05-design-system/asset-sources.md)
+- 사람의 디자인 시스템 승인 이후 편집 가능한 Figma 프레임과 기존 지도 연결을 제작한다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)
+
+## 2026-11-20 — 발견·채집 기록의 위치 공개 범위 선택 제거
+
+- 사용자가 위치 공개 범위 선택을 제거하기로 했다. [작성 PRD](../work/bugmap-record-entry-harness/01-prd/PRD.md)와 수용 기준을 수정했다. 발견 위치는 필수이고, 새 기록에는 대략적인 공개 위치를 자동 표시하는 안을 문서화했다. 공개 위치 해상도는 후속 제품 결정이다.
+- [제품 PRD](../docs/PRD.md), [TDD](../docs/TDD.md), [작성 화면 명세](../docs/screens/record-entry.md)를 같은 기준으로 수정했다. 이전 시안은 해당 버전의 검토 기록이다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)에 PRD 재승인 및 후속 화면 수정 순서를 남겼다.
+
+## 2026-11-20 — 위치 공개 범위 선택을 제거한 작성 와이어프레임
+
+- 수정 PRD 승인 `94ec942b-5954-47c6-aede-c7b069cae9a9`를 확인했다. [리서치](../work/bugmap-record-entry-harness/02-research/recommendations.md)와 [작성 흐름](../work/bugmap-record-entry-harness/03-structure/flows.mmd)에 필수 발견 위치의 GPS·지도 직접 선택과 새 기록의 공개 위치 자동 생성 안을 반영했다.
+- 390×844 [첫 진입 0/3장](../work/bugmap-record-entry-harness/04-wireframes/captures/record-entry/default.png)과 [입력 완료 3/3장](../work/bugmap-record-entry-harness/04-wireframes/captures/record-entry/ready.png)을 새로 렌더링했다. [전체 폼](../work/bugmap-record-entry-harness/04-wireframes/full-form/captures/record-entry/ready.png)에서 발견 위치 다음에 날짜·시간과 여러 줄 메모가 이어지는지 확인했다. 두 대표 화면에 날짜·시간과 스크롤 표시가 보이고 작성완료는 같은 위치다. [검수](../work/bugmap-record-entry-harness/04-wireframes/review.md) · [독립 비평](../work/bugmap-record-entry-harness/04-wireframes/critique.md)
+- 하네스에서 리서치·구조 통과와 수정 와이어프레임의 재승인 필요 상태를 확인했다. 와이어프레임 승인 후 BugMap 다크 시안에 반영한다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)
+
+## 2026-11-20 — 위치 공개 범위 선택을 제거한 작성 다크 시안
+
+- 와이어프레임 승인 `f5f36d37-f589-4e50-bc22-536c626a5594`를 확인했다. 기존 BugMap 다크 스타일의 [첫 진입 0/3장](../work/bugmap-record-entry-harness/05-design-system/captures/390x844-default.png)과 [입력 완료 3/3장](../work/bugmap-record-entry-harness/05-design-system/captures/390x844-ready.png)에 필수 발견 위치 한 항목, 날짜·시간, 선택형 메모와 고정 작성완료를 반영했다.
+- Chromium 대표 캡처 두 장과 [전체 폼](../work/bugmap-record-entry-harness/05-design-system/captures/full-form/390x1018-ready.png) 두 장에서 승인 좌표, 조작 영역, 대비, 본문 순서와 스크롤 표시를 검수했다. [디자인 시스템](../work/bugmap-record-entry-harness/05-design-system/DESIGN.md) · [검수](../work/bugmap-record-entry-harness/05-design-system/review.md) · [독립 비평](../work/bugmap-record-entry-harness/05-design-system/critique.md)
+- 디자인 시스템 승인 후 BugMapHarness에 편집 가능한 작성 화면을 제작하고 메인 지도 진입·복귀와 실제 스크롤을 검증한다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 발견·채집 기록 작성 Figma 제작과 검수
+
+- 디자인 시스템 승인 `177a8516-82fe-4689-a7c0-961bf42cd782`를 확인했다. 기존 BugMapHarness Page 1에 [첫 진입 61:1295](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=61-1295)와 [입력 완료 61:1552](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=61-1552)를 추가했다. 기존 지도 기록 버튼과 뒤로 가기를 연결했다. [제작 기록](../work/bugmap-record-entry-harness/06-figma/change-log.md)
+- 실제 Figma 플레이어에서 지도에서 진입하고, 두 상태를 각각 스크롤해 메모 전체와 고정 작성완료를 확인한 뒤 같은 지도로 돌아갔다. 네이티브 303노드 검사 및 390×844 웹 검사에서 이슈 0개였다. [검수 보고서](../work/bugmap-record-entry-harness/07-validation/report.md) · [독립 비평](../work/bugmap-record-entry-harness/07-validation/critique.md)
+- 사람의 최종 검수 평가와 승인 후 개발 인계를 진행한다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 발견·채집 기록 작성 개발 인계 준비
+
+- 최종 검수 평가와 승인 `13c15c32-e285-4190-932f-81fbc2ee09e0`가 유효함을 확인했다. [개발 인계서](../work/bugmap-record-entry-harness/08-handoff/HANDOFF.md)에 Figma 두 상태와 지도 연결, ENTRY-01~07 구현 기준, 사진 1~3장과 발견 위치·일시·메모의 저장 흐름을 묶었다.
+- 승인 썸네일 3개에 대한 바이트·크기·라이선스 정보와 [실기기 확인 항목](../work/bugmap-record-entry-harness/08-handoff/open-items.md)을 남겼다. [검수 보고서](../work/bugmap-record-entry-harness/07-validation/report.md) · [매니페스트](../work/bugmap-record-entry-harness/08-handoff/manifest.json) · [독립 비평](../work/bugmap-record-entry-harness/08-handoff/critique.md)
+- 하네스에서 1~7단계를 통과했다. 사람의 인계 수락이 남았다. [재개 지점](../work/bugmap-record-entry-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 발견·채집 기록 작성 개발 인계 완료
+
+- 개발 인계 수락 `1d0bf29f-0f84-4434-a9ce-790f28e3670f`가 현재 산출물과 일치함을 확인했다. 하네스 1~8단계가 모두 `passed`이며 `complete: true`였다.
+- [최종 개발 인계서](../work/bugmap-record-entry-harness/08-handoff/HANDOFF.md)와 [검수 보고서](../work/bugmap-record-entry-harness/07-validation/report.md)를 연결했다. 실제 촬영·GPS·저장 검증과 공개 위치 정밀도 결정은 [제품 확인 항목](../work/bugmap-record-entry-harness/08-handoff/open-items.md)에 있다.

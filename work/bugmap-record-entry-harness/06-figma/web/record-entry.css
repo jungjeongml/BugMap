@@ -1,0 +1,70 @@
+@font-face {
+  font-family: Pretendard;
+  src: url("assets/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: block;
+}
+@font-face {
+  font-family: Pretendard;
+  src: url("assets/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: block;
+}
+:root {
+  --background: #101C16;
+  --text: #F3F7EE;
+  --textSecondary: #BDCDC2;
+  --textPlaceholder: #A7BBAD;
+  --primary: #C5EE79;
+  --onPrimary: #202E13;
+  --formField: #1C2C23;
+  --formFieldBorder: #3D5044;
+  --photoTile: #26382C;
+  --photoTileBorder: #526954;
+  --formFooter: #152219;
+  --activeTabSurface: #2F4433;
+  --mapPanel: #131E18;
+  --mapPanelBorder: #3B4D42;
+  --location: #82D0F0;
+  --disabledText: #8FA496;
+  --controlOutline: #6D8677;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  color: var(--text);
+  background: var(--background);
+  font-family: Pretendard, system-ui, sans-serif;
+  font-size: 14px;
+}
+.screen { width: 390px; margin-inline: auto; }
+.screen > svg { display: block; }
+.form-scroll {
+  width: 390px;
+  height: 620px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  position: relative;
+}
+.form-scroll::-webkit-scrollbar { display: none; }
+.form-scroll > svg { display: block; }
+[data-target]:focus { outline: none; }
+[data-target]:focus-visible > .hit { stroke: var(--primary); stroke-width: 2px; }
+[data-target][aria-disabled="true"] { cursor: default; }
+#scroll-indicator { pointer-events: none; }
+#memo-viewport-outline { visibility: hidden; }
+.screen:has(.form-scroll[data-scroll-at-start="true"]) #memo-viewport-outline { visibility: visible; }
+.form-scroll[data-preview-memo="true"][data-scroll-at-start="true"] #memo-input > rect:not(.hit) { visibility: hidden; }
+.editor {
+  position: absolute;
+  background: var(--formField);
+  color: var(--text);
+  border: 1px solid var(--primary);
+  border-radius: 16px;
+  font: 500 14px/20px Pretendard, system-ui, sans-serif;
+  padding: 12px 13px;
+  resize: none;
+}
+.editor::placeholder { color: var(--textPlaceholder); }

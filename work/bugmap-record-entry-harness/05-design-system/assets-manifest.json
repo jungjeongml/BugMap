@@ -1,0 +1,92 @@
+{
+  "approvedWireframe": {
+    "file": "work/bugmap-record-entry-harness/04-wireframes/wireframes.json",
+    "sha256": "edff5382335e7c883df8dd8f6eae2a749df06495e7b9583a5c469fd067d5ca29"
+  },
+  "expandedWireframe": {
+    "file": "work/bugmap-record-entry-harness/04-wireframes/full-form/wireframes.json",
+    "sha256": "23fa0b1abac5256e0bf91be6d132af70568eb1caaf0311e5df69eb5dcaea4a76"
+  },
+  "sharedDesignTokens": {
+    "file": "src/theme/tokens.ts",
+    "sha256": "3f7459d28939a0df3300dec2c12ab68e2e0ce509f664d2306e9bbe448e9d7d7b"
+  },
+  "lucide": {
+    "package": "lucide-react-native",
+    "version": "1.70.0",
+    "icons": [
+      "arrow-left",
+      "camera",
+      "images",
+      "x",
+      "square",
+      "circle",
+      "circle-dot",
+      "map-pin",
+      "locate-fixed",
+      "chevron-right",
+      "chevron-down",
+      "calendar-days",
+      "clock"
+    ]
+  },
+  "files": [
+    {
+      "file": "assets/Pretendard-Medium.woff2",
+      "sha256": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+      "bytes": 778432
+    },
+    {
+      "file": "assets/Pretendard-Bold.woff2",
+      "sha256": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+      "bytes": 791156
+    },
+    {
+      "file": "assets/pretendard-OFL.txt",
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+      "bytes": 4418
+    },
+    {
+      "file": "assets/lucide-ISC.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    },
+    {
+      "file": "assets/photos/specimen-1.png",
+      "sha256": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+      "bytes": 195180,
+      "dimensions": {
+        "width": 342,
+        "height": 270
+      }
+    },
+    {
+      "file": "assets/photos/specimen-2.png",
+      "sha256": "c9d362b3c36af5982340fb8e39269ab78bb32ffd94d17b2e10553a847b93d2cb",
+      "bytes": 180741,
+      "dimensions": {
+        "width": 342,
+        "height": 270
+      }
+    },
+    {
+      "file": "assets/photos/specimen-3.png",
+      "sha256": "59a64b9b5eaef701070a775131c637c2325ff36d61083c5e9fc622c704b714d5",
+      "bytes": 190494,
+      "dimensions": {
+        "width": 342,
+        "height": 270
+      }
+    },
+    {
+      "file": "photo-sources.json",
+      "sha256": "99cf995454e4d6143734d7ebe8d94282e2671d5f60be53a116edcce8d582e21e",
+      "bytes": 3908
+    },
+    {
+      "file": "asset-sources.md",
+      "sha256": "d12564b12d7e27cda9e296129d812a7f560a774b02896dafd8f7f2624e5676c0",
+      "bytes": 1719
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "nodes": [
+    {
+      "screen": "record-entry",
+      "state": "default",
+      "nodeId": "61:1295",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=61-1295",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/record-entry-default.png",
+      "captureSha256": "6792a2f81035925a4f987b3f0b82f17d3045ae4672ddbf1450635c72c48813c6",
+      "bodyViewportCapture": "captures/record-entry-default-body-viewport.png",
+      "bodyViewportCaptureSha256": "87b48a3ac472fc2c23a3f3156d2fed4cf5f194efcfc221b596a82a29de2e25be"
+    },
+    {
+      "screen": "record-entry",
+      "state": "ready",
+      "nodeId": "61:1552",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=61-1552",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/record-entry-ready.png",
+      "captureSha256": "1a6f5f70d8c80fb21508592d83c55903796658e607c63218067af2759c3fee86",
+      "bodyViewportCapture": "captures/record-entry-ready-body-viewport.png",
+      "bodyViewportCaptureSha256": "cc55498fbb87f1d02110105f03fd61a41541ca0c88e0357f6eb701f39e690617"
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "I61:1621;61:1619",
+      "fillIndex": 0,
+      "asset": "assets/photos/specimen-1.png",
+      "imageHash": "70a2d1557f4f5b9e73ba475cc62d70279266451f"
+    },
+    {
+      "nodeId": "I61:1636;61:1619",
+      "fillIndex": 0,
+      "asset": "assets/photos/specimen-2.png",
+      "imageHash": "1bc2ae69abed89deea0558c5231cffa76a2f1509"
+    },
+    {
+      "nodeId": "I61:1644;61:1619",
+      "fillIndex": 0,
+      "asset": "assets/photos/specimen-3.png",
+      "imageHash": "db18021cc4767df5bf0220228df77571be8c5fc7"
+    }
+  ]
+}

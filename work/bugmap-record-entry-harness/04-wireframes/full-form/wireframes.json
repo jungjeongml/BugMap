@@ -1,0 +1,576 @@
+{
+  "screens": [
+    {
+      "id": "record-entry",
+      "state": "default",
+      "title": "발견·채집 기록 · 0/3장 · 전체 폼",
+      "width": 390,
+      "height": 920,
+      "blocks": [
+        {
+          "id": "status-time",
+          "type": "text",
+          "x": 16,
+          "y": 12,
+          "width": 70,
+          "height": 28,
+          "text": "9:41"
+        },
+        {
+          "id": "back",
+          "type": "button",
+          "x": 16,
+          "y": 54,
+          "width": 56,
+          "height": 48,
+          "text": "뒤로",
+          "action": "back"
+        },
+        {
+          "id": "screen-title",
+          "type": "text",
+          "x": 116,
+          "y": 66,
+          "width": 180,
+          "height": 26,
+          "text": "발견·채집 기록"
+        },
+        {
+          "id": "photo-title",
+          "type": "text",
+          "x": 16,
+          "y": 108,
+          "width": 200,
+          "height": 24,
+          "text": "사진 · 필수"
+        },
+        {
+          "id": "photo-count",
+          "type": "text",
+          "x": 316,
+          "y": 108,
+          "width": 58,
+          "height": 24,
+          "text": "0/3장"
+        },
+        {
+          "id": "camera",
+          "type": "button",
+          "x": 16,
+          "y": 140,
+          "width": 172,
+          "height": 48,
+          "text": "촬영하기",
+          "action": "camera",
+          "enabled": true
+        },
+        {
+          "id": "gallery",
+          "type": "button",
+          "x": 202,
+          "y": 140,
+          "width": 172,
+          "height": 48,
+          "text": "사진 첨부",
+          "action": "gallery",
+          "enabled": true
+        },
+        {
+          "id": "photo-guidance",
+          "type": "text",
+          "x": 16,
+          "y": 196,
+          "width": 358,
+          "height": 24,
+          "text": "사진을 1장 이상 추가해 주세요"
+        },
+        {
+          "id": "species-title",
+          "type": "text",
+          "x": 16,
+          "y": 236,
+          "width": 200,
+          "height": 24,
+          "text": "곤충 이름"
+        },
+        {
+          "id": "species-name",
+          "type": "input",
+          "x": 16,
+          "y": 264,
+          "width": 232,
+          "height": 48,
+          "text": "곤충 이름 입력",
+          "action": "name"
+        },
+        {
+          "id": "species-unknown",
+          "type": "button",
+          "x": 264,
+          "y": 264,
+          "width": 110,
+          "height": 48,
+          "text": "이름 모름",
+          "action": "unknown-name",
+          "selected": false
+        },
+        {
+          "id": "type-title",
+          "type": "text",
+          "x": 16,
+          "y": 324,
+          "width": 200,
+          "height": 24,
+          "text": "기록 유형"
+        },
+        {
+          "id": "type-observed",
+          "type": "button",
+          "x": 16,
+          "y": 352,
+          "width": 172,
+          "height": 44,
+          "text": "관찰",
+          "action": "record-type",
+          "value": "observed",
+          "selected": false
+        },
+        {
+          "id": "type-collected",
+          "type": "button",
+          "x": 202,
+          "y": 352,
+          "width": 172,
+          "height": 44,
+          "text": "채집",
+          "action": "record-type",
+          "value": "collected",
+          "selected": false
+        },
+        {
+          "id": "location-title",
+          "type": "text",
+          "x": 16,
+          "y": 416,
+          "width": 240,
+          "height": 24,
+          "text": "발견 위치 · 필수"
+        },
+        {
+          "id": "location-picker",
+          "type": "button",
+          "x": 16,
+          "y": 444,
+          "width": 358,
+          "height": 48,
+          "text": "지도에서 발견 위치 선택",
+          "action": "pick-location"
+        },
+        {
+          "id": "use-current-location",
+          "type": "button",
+          "x": 16,
+          "y": 496,
+          "width": 172,
+          "height": 44,
+          "text": "현재 위치 사용",
+          "action": "use-current"
+        },
+        {
+          "id": "observed-at-title",
+          "type": "text",
+          "x": 16,
+          "y": 552,
+          "width": 200,
+          "height": 24,
+          "text": "발견 날짜·시간"
+        },
+        {
+          "id": "observed-date",
+          "type": "button",
+          "x": 16,
+          "y": 580,
+          "width": 172,
+          "height": 48,
+          "text": "날짜 선택",
+          "action": "pick-date",
+          "label": "발견 날짜 선택"
+        },
+        {
+          "id": "observed-time",
+          "type": "button",
+          "x": 202,
+          "y": 580,
+          "width": 172,
+          "height": 48,
+          "text": "시간 선택",
+          "action": "pick-time",
+          "label": "발견 시간 선택"
+        },
+        {
+          "id": "memo-title",
+          "type": "text",
+          "x": 16,
+          "y": 648,
+          "width": 240,
+          "height": 24,
+          "text": "메모 · 선택"
+        },
+        {
+          "id": "memo-input",
+          "type": "input",
+          "x": 16,
+          "y": 676,
+          "width": 358,
+          "height": 112,
+          "text": "주변 환경이나 곤충 행동을 적어 주세요",
+          "action": "write-memo",
+          "multiline": true,
+          "required": false
+        },
+        {
+          "id": "footer-background",
+          "type": "box",
+          "x": 0,
+          "y": 810,
+          "width": 390,
+          "height": 110
+        },
+        {
+          "id": "submit-guidance",
+          "type": "text",
+          "x": 16,
+          "y": 810,
+          "width": 358,
+          "height": 24,
+          "text": "필수 항목을 입력하면 작성할 수 있어요"
+        },
+        {
+          "id": "submit",
+          "type": "box",
+          "x": 16,
+          "y": 834,
+          "width": 358,
+          "height": 48,
+          "text": "작성완료",
+          "action": "submit",
+          "enabled": false,
+          "fixed": true
+        }
+      ]
+    },
+    {
+      "id": "record-entry",
+      "state": "ready",
+      "title": "발견·채집 기록 · 3/3장 · 전체 폼",
+      "width": 390,
+      "height": 1018,
+      "blocks": [
+        {
+          "id": "status-time",
+          "type": "text",
+          "x": 16,
+          "y": 12,
+          "width": 70,
+          "height": 28,
+          "text": "9:41"
+        },
+        {
+          "id": "back",
+          "type": "button",
+          "x": 16,
+          "y": 54,
+          "width": 56,
+          "height": 48,
+          "text": "뒤로",
+          "action": "back"
+        },
+        {
+          "id": "screen-title",
+          "type": "text",
+          "x": 116,
+          "y": 66,
+          "width": 180,
+          "height": 26,
+          "text": "발견·채집 기록"
+        },
+        {
+          "id": "photo-title",
+          "type": "text",
+          "x": 16,
+          "y": 108,
+          "width": 200,
+          "height": 24,
+          "text": "사진 · 필수"
+        },
+        {
+          "id": "photo-count",
+          "type": "text",
+          "x": 316,
+          "y": 108,
+          "width": 58,
+          "height": 24,
+          "text": "3/3장"
+        },
+        {
+          "id": "camera",
+          "type": "box",
+          "x": 16,
+          "y": 140,
+          "width": 172,
+          "height": 48,
+          "text": "촬영하기",
+          "action": "camera",
+          "enabled": false
+        },
+        {
+          "id": "gallery",
+          "type": "box",
+          "x": 202,
+          "y": 140,
+          "width": 172,
+          "height": 48,
+          "text": "사진 첨부",
+          "action": "gallery",
+          "enabled": false
+        },
+        {
+          "id": "photo-guidance",
+          "type": "text",
+          "x": 16,
+          "y": 196,
+          "width": 358,
+          "height": 24,
+          "text": "사진을 삭제하면 다시 추가할 수 있어요"
+        },
+        {
+          "id": "photo-1",
+          "type": "image",
+          "x": 16,
+          "y": 228,
+          "width": 114,
+          "height": 90,
+          "text": "사진 1"
+        },
+        {
+          "id": "delete-photo-1",
+          "type": "button",
+          "x": 86,
+          "y": 228,
+          "width": 44,
+          "height": 44,
+          "text": "삭제",
+          "action": "delete-photo",
+          "photo": 1,
+          "label": "사진 1 삭제"
+        },
+        {
+          "id": "photo-2",
+          "type": "image",
+          "x": 138,
+          "y": 228,
+          "width": 114,
+          "height": 90,
+          "text": "사진 2"
+        },
+        {
+          "id": "delete-photo-2",
+          "type": "button",
+          "x": 208,
+          "y": 228,
+          "width": 44,
+          "height": 44,
+          "text": "삭제",
+          "action": "delete-photo",
+          "photo": 2,
+          "label": "사진 2 삭제"
+        },
+        {
+          "id": "photo-3",
+          "type": "image",
+          "x": 260,
+          "y": 228,
+          "width": 114,
+          "height": 90,
+          "text": "사진 3"
+        },
+        {
+          "id": "delete-photo-3",
+          "type": "button",
+          "x": 330,
+          "y": 228,
+          "width": 44,
+          "height": 44,
+          "text": "삭제",
+          "action": "delete-photo",
+          "photo": 3,
+          "label": "사진 3 삭제"
+        },
+        {
+          "id": "species-title",
+          "type": "text",
+          "x": 16,
+          "y": 334,
+          "width": 200,
+          "height": 24,
+          "text": "곤충 이름"
+        },
+        {
+          "id": "species-name",
+          "type": "input",
+          "x": 16,
+          "y": 362,
+          "width": 232,
+          "height": 48,
+          "text": "왕사슴벌레",
+          "action": "name"
+        },
+        {
+          "id": "species-unknown",
+          "type": "button",
+          "x": 264,
+          "y": 362,
+          "width": 110,
+          "height": 48,
+          "text": "이름 모름",
+          "action": "unknown-name",
+          "selected": false
+        },
+        {
+          "id": "type-title",
+          "type": "text",
+          "x": 16,
+          "y": 422,
+          "width": 200,
+          "height": 24,
+          "text": "기록 유형"
+        },
+        {
+          "id": "type-observed",
+          "type": "button",
+          "x": 16,
+          "y": 450,
+          "width": 172,
+          "height": 44,
+          "text": "● 관찰",
+          "action": "record-type",
+          "value": "observed",
+          "selected": true
+        },
+        {
+          "id": "type-collected",
+          "type": "button",
+          "x": 202,
+          "y": 450,
+          "width": 172,
+          "height": 44,
+          "text": "○ 채집",
+          "action": "record-type",
+          "value": "collected",
+          "selected": false
+        },
+        {
+          "id": "location-title",
+          "type": "text",
+          "x": 16,
+          "y": 514,
+          "width": 240,
+          "height": 24,
+          "text": "발견 위치 · 필수"
+        },
+        {
+          "id": "location-picker",
+          "type": "button",
+          "x": 16,
+          "y": 542,
+          "width": 358,
+          "height": 48,
+          "text": "서울숲 · 지도에서 변경",
+          "action": "pick-location"
+        },
+        {
+          "id": "use-current-location",
+          "type": "button",
+          "x": 16,
+          "y": 594,
+          "width": 172,
+          "height": 44,
+          "text": "현재 위치 사용",
+          "action": "use-current"
+        },
+        {
+          "id": "observed-at-title",
+          "type": "text",
+          "x": 16,
+          "y": 650,
+          "width": 200,
+          "height": 24,
+          "text": "발견 날짜·시간"
+        },
+        {
+          "id": "observed-date",
+          "type": "button",
+          "x": 16,
+          "y": 678,
+          "width": 172,
+          "height": 48,
+          "text": "2026. 11. 20.",
+          "action": "pick-date",
+          "label": "발견 날짜 선택"
+        },
+        {
+          "id": "observed-time",
+          "type": "button",
+          "x": 202,
+          "y": 678,
+          "width": 172,
+          "height": 48,
+          "text": "오전 09:30",
+          "action": "pick-time",
+          "label": "발견 시간 선택"
+        },
+        {
+          "id": "memo-title",
+          "type": "text",
+          "x": 16,
+          "y": 746,
+          "width": 240,
+          "height": 24,
+          "text": "메모 · 선택"
+        },
+        {
+          "id": "memo-input",
+          "type": "input",
+          "x": 16,
+          "y": 774,
+          "width": 358,
+          "height": 112,
+          "text": "주변 환경이나 곤충 행동을 적어 주세요",
+          "action": "write-memo",
+          "multiline": true,
+          "required": false
+        },
+        {
+          "id": "footer-background",
+          "type": "box",
+          "x": 0,
+          "y": 908,
+          "width": 390,
+          "height": 110
+        },
+        {
+          "id": "submit",
+          "type": "button",
+          "x": 16,
+          "y": 932,
+          "width": 358,
+          "height": 48,
+          "text": "작성완료",
+          "action": "submit",
+          "enabled": true,
+          "fixed": true
+        }
+      ]
+    }
+  ]
+}

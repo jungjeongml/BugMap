@@ -1,0 +1,124 @@
+{
+  "photos": [
+    {
+      "id": "specimen-1",
+      "title": "Dorcushopeibinodulosus.JPG",
+      "author": "keusju",
+      "description": "전체 모습",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dorcushopeibinodulosus.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "checkedOn": "2026-11-20",
+      "sampleSpecies": "왕사슴벌레 (Dorcus hopei)",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Dorcushopeibinodulosus.JPG",
+        "dimensions": {
+          "width": 2816,
+          "height": 2112
+        },
+        "bytes": 2982777,
+        "sha256": "458f2b7b9d9012fe73ce8222d025235652d52c2afeffdab701534fca51edd2c2"
+      },
+      "treatment": {
+        "crop": {
+          "x": 116,
+          "y": 36,
+          "width": 2584,
+          "height": 2040
+        },
+        "output": "342 × 270 px PNG",
+        "metadata": "EXIF 및 텍스트 청크 제거"
+      },
+      "preview": {
+        "path": "assets/photos/specimen-1.png",
+        "dimensions": {
+          "width": 342,
+          "height": 270
+        },
+        "bytes": 195180,
+        "sha256": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "specimen-2",
+      "title": "Dhb.JPG",
+      "author": "keusju",
+      "description": "다른 각도",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dhb.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "checkedOn": "2026-11-20",
+      "sampleSpecies": "왕사슴벌레 (Dorcus hopei)",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Dhb.JPG",
+        "dimensions": {
+          "width": 1760,
+          "height": 1512
+        },
+        "bytes": 355545,
+        "sha256": "4a76aaa00578f728fadc1497c384905cbe0fb52df5fc0bc1e5fc8702ba7ab66c"
+      },
+      "treatment": {
+        "crop": {
+          "x": 25,
+          "y": 75,
+          "width": 1710,
+          "height": 1350
+        },
+        "output": "342 × 270 px PNG",
+        "metadata": "EXIF 및 텍스트 청크 제거"
+      },
+      "preview": {
+        "path": "assets/photos/specimen-2.png",
+        "dimensions": {
+          "width": 342,
+          "height": 270
+        },
+        "bytes": 180741,
+        "sha256": "c9d362b3c36af5982340fb8e39269ab78bb32ffd94d17b2e10553a847b93d2cb",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "specimen-3",
+      "title": "オオクワ..JPG",
+      "author": "岐部博 (Ｋａｔｕｕｙａ)",
+      "description": "수컷의 턱 확대",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%AA%E3%82%AA%E3%82%AF%E3%83%AF..JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "checkedOn": "2026-11-20",
+      "sampleSpecies": "왕사슴벌레 (Dorcus hopei)",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/%E3%82%AA%E3%82%AA%E3%82%AF%E3%83%AF..JPG",
+        "dimensions": {
+          "width": 1280,
+          "height": 960
+        },
+        "bytes": 502311,
+        "sha256": "3d5ad05d3f6a7f1a0a39e93e02e2f747b908a0b3d7b8390f4bfb0700054d5002"
+      },
+      "treatment": {
+        "crop": {
+          "x": 310,
+          "y": 535,
+          "width": 475,
+          "height": 375
+        },
+        "output": "342 × 270 px PNG",
+        "metadata": "EXIF 및 텍스트 청크 제거"
+      },
+      "preview": {
+        "path": "assets/photos/specimen-3.png",
+        "dimensions": {
+          "width": 342,
+          "height": 270
+        },
+        "bytes": 190494,
+        "sha256": "59a64b9b5eaef701070a775131c637c2325ff36d61083c5e9fc622c704b714d5",
+        "license": "CC BY-SA 3.0"
+      }
+    }
+  ]
+}

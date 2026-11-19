@@ -1,0 +1,8 @@
+screen_id,name,scope,purpose,primary_actions,requirements
+main-map,메인 지도,기존 지도 유지,작성 진입과 같은 지도 복귀 및 새 기록 확인,발견/채집 기록하기 41:443 | 기존 지도 동작,ENTRY-01 | ENTRY-04 | ENTRY-06 | ENTRY-07
+record-entry,발견·채집 기록,대표 와이어프레임 두 상태,곤충 발견·채집 정보를 작성,사진 촬영·첨부와 삭제 | 곤충 이름·유형 | 필수 발견 위치 | 발견 날짜·시간 | 선택 메모 | 작성완료 | 뒤로,ENTRY-01 | ENTRY-02 | ENTRY-03 | ENTRY-04 | ENTRY-05 | ENTRY-06 | ENTRY-07
+photo-picker,카메라·사진 선택기,제품 흐름만 정의,사진을 촬영하거나 보관 사진을 고름,촬영·선택 | 취소 | 권한 복구,ENTRY-02
+location-picker,발견 위치 지도,제품 흐름만 정의,발견 위치를 지도에서 확인·수정,지도에서 직접 선택 | 현재 위치 후보 확인·수정 | 확인 | 취소,ENTRY-04
+date-time-picker,발견 날짜·시간 선택,제품 흐름만 정의,실제 발견 날짜와 시간을 각각 설정,날짜·시간 편집 | 확인 | 취소,ENTRY-05
+exit-confirmation,미저장 기록 이탈 확인,제품 흐름만 정의,미저장 입력의 의도치 않은 유실을 방지,계속 작성 | 작성 나가기,ENTRY-01
+record-detail,기록 상세,기존 제품 흐름만 정의,저장한 발견 일시와 메모 확인,메인 지도에서 기록 상세 열기 | 지도로 복귀,ENTRY-04 | ENTRY-05

@@ -1,0 +1,298 @@
+{
+  "method": "Native Figma node.reactions read-back",
+  "runtimeGestureTested": false,
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "pageId": "0:1",
+  "entry": "41:81",
+  "actions": [
+    {
+      "from": "41:81",
+      "interactiveNode": "41:443",
+      "trigger": "ON_CLICK",
+      "to": "61:1295",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "61:1295",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "61:1295",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "61:1295",
+      "interactiveNode": "61:1320",
+      "trigger": "ON_CLICK",
+      "to": "41:81",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "41:81",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "41:81",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "61:1552",
+      "interactiveNode": "61:1571",
+      "trigger": "ON_CLICK",
+      "to": "41:81",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "41:81",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "41:81",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    }
+  ],
+  "geometry": [
+    {
+      "state": "default",
+      "headerId": "61:1296",
+      "footerId": "61:1539",
+      "scrollId": "61:1326",
+      "contentId": "61:1327",
+      "memoId": "61:1535",
+      "scrollViewportHeight": 620,
+      "contentHeight": 696,
+      "scrollRange": 76,
+      "actualTargets": [
+        {
+          "id": "back",
+          "width": 56,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "camera",
+          "width": 172,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "gallery",
+          "width": 172,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "species-name",
+          "width": 232,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "species-unknown",
+          "width": 110,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "type-observed",
+          "width": 172,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "type-collected",
+          "width": 172,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "location-picker",
+          "width": 358,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "use-current-location",
+          "width": 172,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "observed-date",
+          "width": 172,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "observed-time",
+          "width": 172,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "memo-input",
+          "width": 358,
+          "height": 112,
+          "enabled": true
+        },
+        {
+          "id": "submit",
+          "width": 358,
+          "height": 48,
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "state": "ready",
+      "headerId": "61:1553",
+      "footerId": "61:1795",
+      "scrollId": "61:1577",
+      "contentId": "61:1578",
+      "memoId": "61:1791",
+      "scrollViewportHeight": 620,
+      "contentHeight": 794,
+      "scrollRange": 174,
+      "actualTargets": [
+        {
+          "id": "back",
+          "width": 56,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "camera",
+          "width": 172,
+          "height": 48,
+          "enabled": false
+        },
+        {
+          "id": "gallery",
+          "width": 172,
+          "height": 48,
+          "enabled": false
+        },
+        {
+          "id": "delete-photo-1",
+          "width": 44,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "delete-photo-2",
+          "width": 44,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "delete-photo-3",
+          "width": 44,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "species-name",
+          "width": 232,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "species-unknown",
+          "width": 110,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "type-observed",
+          "width": 172,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "type-collected",
+          "width": 172,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "location-picker",
+          "width": 358,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "use-current-location",
+          "width": 172,
+          "height": 44,
+          "enabled": true
+        },
+        {
+          "id": "observed-date",
+          "width": 172,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "observed-time",
+          "width": 172,
+          "height": 48,
+          "enabled": true
+        },
+        {
+          "id": "memo-input",
+          "width": 358,
+          "height": 112,
+          "enabled": true
+        },
+        {
+          "id": "submit",
+          "width": 358,
+          "height": 48,
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

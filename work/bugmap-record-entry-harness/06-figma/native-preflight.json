@@ -1,0 +1,20 @@
+{
+  "method": "Read-only inspectFigma on final native export",
+  "version": 1,
+  "command": "lint:figma",
+  "inputs": {
+    "04-wireframes/wireframes.json": "edff5382335e7c883df8dd8f6eae2a749df06495e7b9583a5c469fd067d5ca29",
+    "05-design-system/assets-manifest.json": "db77e09220ccbf199cdb1d2b64eeef6e2bc157b86b5977f546991a9b1f566d79",
+    "05-design-system/assets/photos/specimen-1.png": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+    "05-design-system/assets/photos/specimen-2.png": "c9d362b3c36af5982340fb8e39269ab78bb32ffd94d17b2e10553a847b93d2cb",
+    "05-design-system/assets/photos/specimen-3.png": "59a64b9b5eaef701070a775131c637c2325ff36d61083c5e9fc622c704b714d5",
+    "05-design-system/components.json": "f4c08e586e5501fdbc28d49295192df67da8e336134dc6b3d604dd8c05f6d3bf",
+    "05-design-system/copy.json": "8da81c72f9c1c02a0e6ffb18b13cba50f3c7c0e8a561d32dd47d549aee90d568",
+    "05-design-system/tokens.json": "d783ae586e55ab61a470c982df8f48cd39ea89e1a4f160272173b0d76699dc78",
+    "06-figma/node-map.json": "d357d3840a56b4d17d2a2c2c5816d4cbf87ac03f4bcd31d45452d8fd22ae68a9",
+    "06-figma/nodes.json": "b020c6aeedd241fb0c72d8e6acbc31fb1520d43b01b02ade7e851833784d8409",
+    "control/figma.json": "02b3bc41c5e8edfdb3db0391011a2e7f8517774e31a10550721e63f02912c90f"
+  },
+  "issues": [],
+  "nodeCount": 303
+}

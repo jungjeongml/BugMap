@@ -1,0 +1,82 @@
+{
+  "reference": "05-design-system/captures/390x844-<state>.png",
+  "channelDelta": 16,
+  "nativeFigma": {
+    "method": "Compare native Figma export with approved Chromium preview at 1×",
+    "measurements": [
+      {
+        "state": "default",
+        "width": 390,
+        "height": 844,
+        "header": {
+          "changed": 2007,
+          "totalPixels": 42120
+        },
+        "body": {
+          "changed": 13891,
+          "totalPixels": 241800
+        },
+        "footer": {
+          "changed": 1949,
+          "totalPixels": 42900
+        },
+        "viewport": {
+          "changed": 17847,
+          "totalPixels": 329160
+        }
+      },
+      {
+        "state": "ready",
+        "width": 390,
+        "height": 844,
+        "header": {
+          "changed": 2003,
+          "totalPixels": 42120
+        },
+        "body": {
+          "changed": 11065,
+          "totalPixels": 241800
+        },
+        "footer": {
+          "changed": 513,
+          "totalPixels": 42900
+        },
+        "viewport": {
+          "changed": 13581,
+          "totalPixels": 329160
+        }
+      }
+    ]
+  },
+  "html": {
+    "method": "Compare browser screenshot with approved Chromium preview at 1×",
+    "measurements": [
+      {
+        "state": "default",
+        "issues": [],
+        "changed": 0,
+        "totalPixels": 329160,
+        "scrollRange": 76,
+        "viewportHeight": 620,
+        "contentHeight": 696,
+        "memoHeight": 112,
+        "fixedHeader": true,
+        "fixedFooter": true,
+        "multilineExamplePreserved": true
+      },
+      {
+        "state": "ready",
+        "issues": [],
+        "changed": 0,
+        "totalPixels": 329160,
+        "scrollRange": 174,
+        "viewportHeight": 620,
+        "contentHeight": 794,
+        "memoHeight": 112,
+        "fixedHeader": true,
+        "fixedFooter": true,
+        "multilineExamplePreserved": true
+      }
+    ]
+  }
+}

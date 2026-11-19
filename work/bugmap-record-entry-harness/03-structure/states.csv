@@ -1,0 +1,26 @@
+screen_id,state_id,entry_condition,observable,action_exit_or_recovery,verification,evidence
+main-map,existing,로그인 상태의 기존 지도,CTA 41:443 및 기존 지도 UI,CTA로 작성 첫 진입 | 진입 전 지도 탐색 맥락 유지,후속 Figma 조작과 기존 지도 비교,41:81 / 41:443 | ENTRY-01 | ENTRY-07
+record-entry,default,기존 지도에서 첫 진입,0/3장과 촬영·첨부 및 빈 폼 | 작성완료 비활성,사진·필수 항목 편집 | 현재 위치 사용 또는 지도에서 위치 선택 | 입력 없이 뒤로 가면 같은 지도 복귀,대표 와이어프레임 및 후속 Figma 하단 스크롤,record-entry/default | ENTRY-02 | ENTRY-06 | ENTRY-07
+record-entry,editing,일부 필수 항목을 입력,사진 1/3장 또는 2/3장 예시와 남은 자리 | 미완성일 때 작성완료 비활성,사진 추가·삭제 및 각 항목 편집 | 모든 필수 항목이 유효하면 저장 가능,제품 상태 흐름,ENTRY-02 | ENTRY-03 | ENTRY-04 | ENTRY-05 | ENTRY-06
+record-entry,ready,사진 3장과 모든 필수 입력이 유효함,3/3장 썸네일 3개 | 사진 추가 비활성 | 사진별 삭제 | 작성완료 활성,사진 삭제 후 다시 추가 가능 | 다른 필드를 편집하는 동안 3장 유지 | 1~2장으로 줄어도 나머지 조건이 유효하면 저장 가능 | 뒤로 가면 이탈 확인,대표 와이어프레임 및 후속 Figma 하단 스크롤,record-entry/ready | ENTRY-02 | ENTRY-06 | ENTRY-07
+record-entry,photo-limit,3장에 도달하거나 남은 자리보다 많은 사진을 선택,3장 도달 또는 남은 자리 안내,3장이면 사진 삭제 후 선택 | 여러 장 초과 요청은 남은 장수 안에서 다시 선택 | 기존 사진 보존,제품 상태 흐름,ENTRY-02
+record-entry,photo-invalid,지원하지 않는 사진·읽기 오류,처리할 수 없는 사진과 오류 안내,문제 사진을 다시 고르거나 삭제하고 나머지 사진과 입력 유지,제품 상태 흐름,ENTRY-02 | ENTRY-06
+record-entry,species-unknown,이름을 모를 때,이름 모름 선택 상태,이름 값과 배타적으로 적용 | 이름을 나중에 입력할 때 이름 모름 해제,제품 상태 흐름,ENTRY-03
+record-entry,type-chosen,관찰 또는 채집을 고름,선택한 유형 한 개 표시,다른 유형을 고르면 단일 선택 변경,제품 상태 흐름,ENTRY-03
+record-entry,location-locating,현재 위치 사용,현재 위치를 찾는 중,좌표를 찾으면 지도에서 확인·수정 | 권한 거부 또는 확인 실패 시 복구 | 취소 시 기존 값 유지,제품 상태 흐름,ENTRY-04
+record-entry,location-permission-denied,위치 권한 거부 또는 제한,권한 안내와 지도에서 직접 선택,권한 요청이 가능하면 다시 현재 위치 사용 | 지도에서 직접 선택 | 닫으면 초안과 이전 유효 위치 유지,제품 상태 흐름,ENTRY-04
+record-entry,location-unavailable,정확도 부족·시간 초과·GPS 실패,현재 위치를 찾지 못한 안내와 지도에서 직접 선택,다시 시도하거나 지도에서 직접 선택 | 닫으면 초안과 이전 유효 위치 유지,제품 상태 흐름,ENTRY-04
+record-entry,location-confirmed,유효한 발견 위치를 지도에서 확정,작성 폼에 발견 위치 요약 표시,지도에서 다시 확인·변경 | 다른 필수 입력도 유효하면 저장 가능,대표 완료 와이어프레임 및 제품 상태 흐름,record-entry/ready | ENTRY-04 | ENTRY-06
+record-entry,observed-at-chosen,발견 날짜와 시간을 각각 확정,편집 가능한 발견 날짜와 시간,이전 날짜도 선택 가능 | 저장 시 게시 시각과 별개로 보존,제품 상태 흐름,ENTRY-05
+record-entry,memo-entered,선택 메모 입력,여러 줄 메모 표시,수정하거나 비울 수 있음 | 입력 내용과 줄바꿈을 저장하고 기록 상세에서 보존,제품 상태 흐름,ENTRY-05
+record-entry,valid-to-submit,사진 1~3장과 이름 또는 이름 모름·유형·발견 위치·발견 날짜와 시간이 유효함,메모 입력 여부와 관계없이 작성완료 활성,작성완료로 저장 시작 | 필수 입력이 무효가 되면 다시 비활성 | 뒤로 가면 이탈 확인,대표 완료 와이어프레임 및 제품 상태 흐름,record-entry/ready | ENTRY-02 | ENTRY-03 | ENTRY-04 | ENTRY-05 | ENTRY-06
+record-entry,saving,유효한 필수 값으로 작성완료 실행,업로드·저장 진행과 작성완료 재입력 잠금,게시용 사진의 EXIF 위치 정보 제거 | 새 기록의 발견 위치로 대략 공개 좌표를 자동 생성하는 안 | 발견 일시·게시 시각 및 선택 메모를 저장 | 결과까지 중복 제출 방지,제품 상태 흐름 및 TDD §6.3,ENTRY-02 | ENTRY-04 | ENTRY-05 | ENTRY-06
+record-entry,save-error,사진 업로드 또는 기록 저장 실패,실패 안내 및 재시도 진입점,사진과 초안 보존 | 같은 입력으로 재시도하거나 폼으로 돌아가 수정,제품 상태 흐름,ENTRY-02 | ENTRY-06
+main-map,save-success,기록 저장 성공,기존 지도에 새 기록 반영,같은 메인 지도 41:81에서 탐색 재개 | 새 기록 상세 열기,제품 상태 흐름,ENTRY-06 | ENTRY-05
+main-map,public-record-visible,다른 사용자가 새 기록을 지도에서 조회,자동 생성한 공개 좌표 기반의 지도 표시,기록 선택 또는 같은 지도 탐색 유지 | 공개 위치 해상도는 제품 결정,제품 상태 흐름 및 TDD §6.3,ENTRY-04
+photo-picker,camera-or-gallery,촬영하기 또는 사진 첨부 선택,해당 선택 인터페이스와 남은 자리 안내,확정 시 작성 폼으로 사진 전달 | 취소 시 기존 입력 유지 | 수정이 없으면 첫 화면의 일반 뒤로 가기 사용,제품 상태 흐름,ENTRY-02
+photo-picker,permission-denied,카메라 또는 사진 접근 거부·제한,선택한 경로의 권한 안내,다른 사진 경로 선택 또는 기존 폼으로 복귀 | 가능할 때 권한 다시 요청,제품 상태 흐름,ENTRY-02
+location-picker,manual-or-current,지도에서 직접 선택하거나 찾은 현재 위치를 확인,지도 핀으로 유효한 발견 위치를 확인·조정,확정한 좌표를 작성 폼에 반영 | 유효한 좌표를 아직 고르지 않았으면 계속 선택 | 취소 시 초안과 이전 유효 위치 유지,제품 상태 흐름,ENTRY-04
+date-time-picker,editing,날짜 또는 시간 선택,선택한 날짜·시간의 편집기,확정 시 해당 필드만 바꿈 | 취소 시 기존 값 유지,제품 상태 흐름,ENTRY-05
+exit-confirmation,unsaved,입력 수정 후 뒤로 가기,계속 작성 및 작성 나가기,계속 작성하면 초안 유지 | 나가기 확정 시 같은 지도 복귀,제품 상태 흐름,ENTRY-01
+record-detail,saved-record,메인 지도에서 저장된 기록 상세를 엶,실제 발견 일시와 게시 시각을 구분해 표시 | 입력한 여러 줄 메모 보존 | 타인 조회에는 공개 좌표만 제공,같은 지도 복귀,제품 상태 흐름 및 TDD §6.3,ENTRY-04 | ENTRY-05
