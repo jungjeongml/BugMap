@@ -1,0 +1,42 @@
+{
+  "method": "Read-only CLI: get_document_info, get_node_info, scan_nodes_by_types, export_node_as_image",
+  "rawTreeUnavailable": "Unknown command: get_node_tree",
+  "channel": "q1ph8ega",
+  "checkedAt": "2026-11-19T12:09:36.949Z",
+  "nodeId": "134:1239",
+  "pageId": "0:1",
+  "structure": {
+    "before": "88451e84128795506c1196db0ffec6c1b04bf8bf52426a0e8dc9d1455becd660",
+    "after": "88451e84128795506c1196db0ffec6c1b04bf8bf52426a0e8dc9d1455becd660",
+    "same": true,
+    "beforeNodes": 47,
+    "afterNodes": 47
+  },
+  "inventory": {
+    "before": {
+      "FRAME": 15,
+      "RECTANGLE": 3,
+      "VECTOR": 55,
+      "GROUP": 10,
+      "TEXT": 16,
+      "INSTANCE": 3
+    },
+    "after": {
+      "FRAME": 15,
+      "RECTANGLE": 3,
+      "VECTOR": 55,
+      "GROUP": 10,
+      "TEXT": 16,
+      "INSTANCE": 3
+    },
+    "missingOrChanged": [],
+    "extra": []
+  },
+  "capture": {
+    "before": "71cd76a4641eb61fb17f45bf6e8b386e97764ab6b3d81cf1b97d3d4a7f22319f",
+    "after": "71cd76a4641eb61fb17f45bf6e8b386e97764ab6b3d81cf1b97d3d4a7f22319f",
+    "identical": true,
+    "width": 390,
+    "height": 844
+  }
+}

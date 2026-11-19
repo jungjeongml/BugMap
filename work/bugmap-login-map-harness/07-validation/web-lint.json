@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "lint:web",
+  "at": "2026-11-19T10:25:32.732Z",
+  "inputs": {
+    "05-design-system/captures/390x844-default.png": "068cd0e3fe8f9553b371048233008a2b2474945fbb940cef3b5b60691966767a",
+    "05-design-system/components.json": "cb02ee6c61347881808afa274ecd2d6dcc2d53310df2c6f425eb524efc076fd2",
+    "05-design-system/copy.json": "0434e9cfd73824599d669104c76c4fd0b447bec6441df0a9f5d8d830e6f0a308",
+    "05-design-system/tokens.json": "f06e7037888fcc9bb59ae03e7d80c2077d446d0dcb48142952463ea221c37db2",
+    "06-figma/web/assets/apple-login.png": "fa13268354c9d261f4bb5cfb7d7e73c7030b8c1f849a114fa7b6b0c382079e89",
+    "06-figma/web/assets/lucide-license.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "06-figma/web/assets/map-background.png": "bca6b166822104e1f2a8dd60e4d5b78aeda825dff520ca3ae554a4b1df521d5d",
+    "06-figma/web/assets/naver-content.png": "a0332ea201a3d9f6e92603ff875a40d1f3a51c05076a14a7b00e7493af32f500",
+    "06-figma/web/login.css": "603bbddc35a0c0c1d3b855f5c6455353a9fb2e3c1c10914649c76814f278b530",
+    "06-figma/web/login.html": "36708317852c40f81790b23cd1aca80336bc42c1275341b96a31b65df95bca56",
+    "control/project.json": "706ed7a3bfb277d34ad9b8c01af650c1e1b1e32b78262b71af31415edab775c3"
+  },
+  "outputs": {
+    "07-validation/captures/924b1769cb10-390x844.png": "068cd0e3fe8f9553b371048233008a2b2474945fbb940cef3b5b60691966767a"
+  },
+  "minTarget": 44,
+  "runs": [
+    {
+      "html": "06-figma/web/login.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/924b1769cb10-390x844.png",
+      "issues": [],
+      "title": "05 · 첫 로그인 / 지도 배경",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-default.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    }
+  ]
+}

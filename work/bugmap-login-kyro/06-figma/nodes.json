@@ -1,0 +1,903 @@
+{
+  "version": 1,
+  "fileKey": "LynbxdW8Qf7TavCrPLd2nY",
+  "pageId": "0:1",
+  "exportedAt": "2026-11-16T06:24:01.168Z",
+  "nodes": [
+    {
+      "id": "156:1282",
+      "type": "FRAME",
+      "name": "06 · 첫 로그인 / Kyro / default · 지도 미완료",
+      "width": 390,
+      "height": 844,
+      "opacity": 1,
+      "rotation": 0,
+      "visible": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.9058823585510254,
+            "g": 0.929411768913269,
+            "b": 0.9098039269447327
+          },
+          "boundVariables": {}
+        }
+      ],
+      "layoutMode": "NONE",
+      "children": [
+        {
+          "id": "156:1284",
+          "type": "FRAME",
+          "name": "logo / white reading plate",
+          "width": 248,
+          "height": 99,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "NONE",
+          "children": []
+        },
+        {
+          "id": "156:1285",
+          "type": "FRAME",
+          "name": "logo / BugMap source vectors",
+          "width": 216,
+          "height": 66.95999908447266,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": false,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "NONE",
+          "children": [
+            {
+              "id": "156:1286",
+              "type": "VECTOR",
+              "name": "letter-B",
+              "width": 31.31999969482422,
+              "height": 40.82400131225586,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.062745101749897,
+                    "g": 0.48235294222831726,
+                    "b": 0.20392157137393951
+                  },
+                  "boundVariables": {}
+                }
+              ]
+            },
+            {
+              "id": "156:1287",
+              "type": "VECTOR",
+              "name": "letter-u",
+              "width": 27.86400032043457,
+              "height": 30.88800048828125,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.062745101749897,
+                    "g": 0.48235294222831726,
+                    "b": 0.20392157137393951
+                  },
+                  "boundVariables": {}
+                }
+              ]
+            },
+            {
+              "id": "156:1288",
+              "type": "VECTOR",
+              "name": "letter-g",
+              "width": 31.104000091552734,
+              "height": 43.847999572753906,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.062745101749897,
+                    "g": 0.48235294222831726,
+                    "b": 0.20392157137393951
+                  },
+                  "boundVariables": {}
+                }
+              ]
+            },
+            {
+              "id": "156:1289",
+              "type": "VECTOR",
+              "name": "letter-M",
+              "width": 43.847999572753906,
+              "height": 41.040000915527344,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.062745101749897,
+                    "g": 0.48235294222831726,
+                    "b": 0.20392157137393951
+                  },
+                  "boundVariables": {}
+                }
+              ]
+            },
+            {
+              "id": "156:1290",
+              "type": "VECTOR",
+              "name": "letter-a",
+              "width": 28.511999130249023,
+              "height": 31.751998901367188,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.062745101749897,
+                    "g": 0.48235294222831726,
+                    "b": 0.20392157137393951
+                  },
+                  "boundVariables": {}
+                }
+              ]
+            },
+            {
+              "id": "156:1291",
+              "type": "VECTOR",
+              "name": "letter-p",
+              "width": 31.75200080871582,
+              "height": 43.847999572753906,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.062745101749897,
+                    "g": 0.48235294222831726,
+                    "b": 0.20392157137393951
+                  },
+                  "boundVariables": {}
+                }
+              ]
+            },
+            {
+              "id": "156:1292",
+              "type": "GROUP",
+              "name": "beetle-on-B",
+              "width": 28.51239776611328,
+              "height": 49.59727478027344,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "children": [
+                {
+                  "id": "156:1293",
+                  "type": "VECTOR",
+                  "name": "antenna-and-head",
+                  "width": 14.904000282287598,
+                  "height": 13.093281745910645,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.062745101749897,
+                        "g": 0.48235294222831726,
+                        "b": 0.20392157137393951
+                      },
+                      "boundVariables": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "156:1294",
+                  "type": "VECTOR",
+                  "name": "upper-shell",
+                  "width": 11.015999794006348,
+                  "height": 12.960000038146973,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.062745101749897,
+                        "g": 0.48235294222831726,
+                        "b": 0.20392157137393951
+                      },
+                      "boundVariables": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "156:1295",
+                  "type": "VECTOR",
+                  "name": "middle-shell",
+                  "width": 14.255999565124512,
+                  "height": 13.961939811706543,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.062745101749897,
+                        "g": 0.48235294222831726,
+                        "b": 0.20392157137393951
+                      },
+                      "boundVariables": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "156:1296",
+                  "type": "VECTOR",
+                  "name": "lower-shell",
+                  "width": 13.175999641418457,
+                  "height": 16.416000366210938,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.062745101749897,
+                        "g": 0.48235294222831726,
+                        "b": 0.20392157137393951
+                      },
+                      "boundVariables": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "156:1297",
+              "type": "VECTOR",
+              "name": "map-pin",
+              "width": 16.847999572753906,
+              "height": 25.487998962402344,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.062745101749897,
+                    "g": 0.48235294222831726,
+                    "b": 0.20392157137393951
+                  },
+                  "boundVariables": {}
+                }
+              ]
+            },
+            {
+              "id": "156:1298",
+              "type": "GROUP",
+              "name": "beetle-in-pin",
+              "width": 6.9120001792907715,
+              "height": 7.127999782562256,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "children": [
+                {
+                  "id": "156:1299",
+                  "type": "VECTOR",
+                  "name": "beetle-legs-and-antennae",
+                  "width": 6.9120001792907715,
+                  "height": 7.127999782562256,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": []
+                },
+                {
+                  "id": "156:1300",
+                  "type": "VECTOR",
+                  "name": "beetle-body",
+                  "width": 3.888000011444092,
+                  "height": 6.047999858856201,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.062745101749897,
+                        "g": 0.48235294222831726,
+                        "b": 0.20392157137393951
+                      },
+                      "boundVariables": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "157:1301",
+          "type": "FRAME",
+          "name": "intro / white reading plate",
+          "width": 358,
+          "height": 164,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "NONE",
+          "children": []
+        },
+        {
+          "id": "157:1302",
+          "type": "TEXT",
+          "name": "intro / title line 1",
+          "width": 188,
+          "height": 31,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.06666667014360428,
+                "g": 0.0941176488995552,
+                "b": 0.15294118225574493
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "작은 발견이 모여,",
+          "fontSize": 26
+        },
+        {
+          "id": "157:1303",
+          "type": "TEXT",
+          "name": "intro / title line 2",
+          "width": 234,
+          "height": 31,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.06666667014360428,
+                "g": 0.0941176488995552,
+                "b": 0.15294118225574493
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "살아 있는 지도가 돼요",
+          "fontSize": 26
+        },
+        {
+          "id": "157:1304",
+          "type": "TEXT",
+          "name": "intro / description line 1",
+          "width": 137,
+          "height": 17,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.29411765933036804,
+                "g": 0.3333333432674408,
+                "b": 0.38823530077934265
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "발견한 곤충을 기록하고",
+          "fontSize": 14
+        },
+        {
+          "id": "157:1305",
+          "type": "TEXT",
+          "name": "intro / description line 2",
+          "width": 128,
+          "height": 17,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.29411765933036804,
+                "g": 0.3333333432674408,
+                "b": 0.38823530077934265
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "지도에서 함께 나눠요.",
+          "fontSize": 14
+        },
+        {
+          "id": "157:1306",
+          "type": "FRAME",
+          "name": "providers / white reading plate",
+          "width": 390,
+          "height": 316,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "NONE",
+          "children": []
+        },
+        {
+          "id": "157:1307",
+          "type": "FRAME",
+          "name": "providerButton / kakao",
+          "width": 358,
+          "height": 60,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.9960784316062927,
+                "g": 0.8980392217636108,
+                "b": 0
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "NONE",
+          "children": [
+            {
+              "id": "157:1308",
+              "type": "GROUP",
+              "name": "Official Kakao SVG / reused library artwork",
+              "width": 292.1739196777344,
+              "height": 60,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "children": [
+                {
+                  "id": "157:1309",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 292.1739196777344,
+                  "height": 60,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.9960784316062927,
+                        "g": 0.8980392217636108,
+                        "b": 0
+                      },
+                      "boundVariables": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "157:1310",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 16.898475646972656,
+                  "height": 16.898481369018555,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.09803921729326248,
+                        "g": 0.09803921729326248,
+                        "b": 0.09803921729326248
+                      },
+                      "boundVariables": {}
+                    }
+                  ]
+                },
+                {
+                  "id": "157:1311",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 103.93955993652344,
+                  "height": 17.100521087646484,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.09803921729326248,
+                        "g": 0.09803921729326248,
+                        "b": 0.09803921729326248
+                      },
+                      "boundVariables": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "157:1312",
+          "type": "FRAME",
+          "name": "providerButton / naver",
+          "width": 358,
+          "height": 60,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "NONE",
+          "children": [
+            {
+              "id": "157:1314",
+              "type": "FRAME",
+              "name": "Official naver-login.png",
+              "width": 358,
+              "height": 46.69565200805664,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "IMAGE",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "scaleMode": "FIT",
+                  "scalingFactor": 1,
+                  "rotation": 0,
+                  "filters": {
+                    "exposure": 0,
+                    "contrast": 0,
+                    "saturation": 0,
+                    "temperature": 0,
+                    "tint": 0,
+                    "highlights": 0,
+                    "shadows": 0
+                  },
+                  "imageTransform": [
+                    [
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0
+                    ]
+                  ],
+                  "imageHash": "0228cb73d8f09c52f14f94f4a855e7d13d448d2a"
+                }
+              ],
+              "layoutMode": "NONE",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "157:1313",
+          "type": "FRAME",
+          "name": "providerButton / apple",
+          "width": 358,
+          "height": 60,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "NONE",
+          "children": [
+            {
+              "id": "157:1315",
+              "type": "FRAME",
+              "name": "Official apple-login.png",
+              "width": 358,
+              "height": 48,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "IMAGE",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "scaleMode": "FIT",
+                  "scalingFactor": 1,
+                  "rotation": 0,
+                  "filters": {
+                    "exposure": 0,
+                    "contrast": 0,
+                    "saturation": 0,
+                    "temperature": 0,
+                    "tint": 0,
+                    "highlights": 0,
+                    "shadows": 0
+                  },
+                  "imageTransform": [
+                    [
+                      1,
+                      0,
+                      0
+                    ],
+                    [
+                      0,
+                      1,
+                      0
+                    ]
+                  ],
+                  "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+                }
+              ],
+              "layoutMode": "NONE",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "157:1316",
+          "type": "TEXT",
+          "name": "policy / line 1",
+          "width": 209,
+          "height": 15,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.29411765933036804,
+                "g": 0.3333333432674408,
+                "b": 0.38823530077934265
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "계속하면 이용약관 및 개인정보처리방침에",
+          "fontSize": 12
+        },
+        {
+          "id": "157:1317",
+          "type": "TEXT",
+          "name": "policy / line 2",
+          "width": 84,
+          "height": 15,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.29411765933036804,
+                "g": 0.3333333432674408,
+                "b": 0.38823530077934265
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "동의하게 됩니다.",
+          "fontSize": 12
+        },
+        {
+          "id": "157:1318",
+          "type": "FRAME",
+          "name": "system / home indicator",
+          "width": 134,
+          "height": 5,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.06666667014360428,
+                "g": 0.0941176488995552,
+                "b": 0.15294118225574493
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "NONE",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "sourceNodes": [
+    "142:712",
+    "138:743"
+  ],
+  "sourceComposite": "root #0B130F, base-map.png, then fade.png per-pixel alpha",
+  "output": "map-background.png",
+  "width": 390,
+  "height": 844,
+  "sha256": "bca6b166822104e1f2a8dd60e4d5b78aeda825dff520ca3ae554a4b1df521d5d",
+  "comparisons": [
+    {
+      "x": 4,
+      "y": 54,
+      "composite": [
+        21,
+        34,
+        28
+      ],
+      "reference": [
+        21,
+        33,
+        27
+      ],
+      "fadeAlpha": 249
+    },
+    {
+      "x": 125,
+      "y": 140,
+      "composite": [
+        26,
+        37,
+        31
+      ],
+      "reference": [
+        26,
+        38,
+        31
+      ],
+      "fadeAlpha": 243
+    },
+    {
+      "x": 340,
+      "y": 280,
+      "composite": [
+        45,
+        60,
+        53
+      ],
+      "reference": [
+        46,
+        60,
+        52
+      ],
+      "fadeAlpha": 218
+    },
+    {
+      "x": 381,
+      "y": 399,
+      "composite": [
+        77,
+        94,
+        84
+      ],
+      "reference": [
+        77,
+        94,
+        83
+      ],
+      "fadeAlpha": 170
+    },
+    {
+      "x": 350,
+      "y": 520,
+      "composite": [
+        57,
+        69,
+        63
+      ],
+      "reference": [
+        57,
+        69,
+        61
+      ],
+      "fadeAlpha": 205
+    },
+    {
+      "x": 110,
+      "y": 794,
+      "composite": [
+        18,
+        30,
+        24
+      ],
+      "reference": [
+        18,
+        30,
+        24
+      ],
+      "fadeAlpha": 252
+    }
+  ]
+}

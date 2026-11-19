@@ -1,0 +1,9 @@
+screen_id,state_id,in_scope,entry,visible_content,action_or_exit,recovery_or_na_reason,wireframe_key
+login,default,yes,로그인 진입,시스템 영역 | 배경 없는 BugMap 로고 | 제목 두 줄과 부제 | 지도 관찰 예시 | 로그인 버튼 세 개 | 약관 한 줄,카카오·네이버·Apple 선택의 위치와 레이블 표시,화면 안에 이전 화면이 없으며 OS 뒤로 또는 종료는 앱 외부 경계,login/default
+login,loading,no,실제 인증 요청 후,해당 없음,제공자 인증 경계,기본 정적 시안 이후의 동작,N/A
+login,empty,no,조회 결과가 비어 있음,해당 없음,기본 화면 유지,지도 관찰 사례는 고정 삽화로 표시하며 사용자 기록을 조회하지 않음,N/A
+login,error,no,실제 인증 또는 통신 실패 후,해당 없음,실제 제품에서 제공자 선택으로 복귀 가능,오류 처리 및 재시도 화면의 제작은 승인 범위 밖,N/A
+login,permission,no,위치 또는 사진 권한 요청 시,해당 없음,기본 화면 유지,정적 화면은 위치나 사진 권한을 요청하지 않음,N/A
+login,success,no,실제 인증 완료 후,해당 없음,로그인 이후 여정으로 이동,인증 성공 목적지는 승인 범위 밖,N/A
+login,cancelled,no,실제 제공자 인증을 취소할 때,해당 없음,제품 동작의 복귀점은 login/default,복귀 의미만 흐름에 기록하고 별도 시안은 범위 밖,N/A
+login,policy_destination,no,이용약관 또는 개인정보 처리방침을 열 때,해당 없음,기본 화면 하단에 안내 문구 표시,정책 URL 및 문서 페이지 연결은 승인 범위 밖,N/A

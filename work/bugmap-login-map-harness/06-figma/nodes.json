@@ -1,0 +1,1930 @@
+{
+  "version": 1,
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "remoteFileKey": null,
+  "documentName": "BugMapHaness",
+  "pageId": "0:1",
+  "exportedAt": "2026-11-19T10:23:37.131Z",
+  "nodes": [
+    {
+      "id": "19:2",
+      "type": "FRAME",
+      "name": "05 · 첫 로그인 / 지도 배경",
+      "width": 390,
+      "height": 844,
+      "opacity": 1,
+      "rotation": 0,
+      "visible": true,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.07450980693101883,
+            "b": 0.05882352963089943
+          },
+          "boundVariables": {}
+        }
+      ],
+      "layoutMode": "VERTICAL",
+      "children": [
+        {
+          "id": "19:3",
+          "type": "RECTANGLE",
+          "name": "지도 배경 / 지도와 상하 페이드",
+          "width": 390,
+          "height": 844,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FIT",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageHash": "9abbcf6b6214e1d081ec9a10fe3f84a3bbf3b0c4"
+            }
+          ],
+          "x": 0,
+          "y": 0,
+          "cornerRadius": 0
+        },
+        {
+          "id": "19:4",
+          "type": "FRAME",
+          "name": "iOS · 통신 및 배터리",
+          "width": 68,
+          "height": 14,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": false,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "VERTICAL",
+          "children": [
+            {
+              "id": "19:5",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 3,
+              "height": 4,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.9529411792755127,
+                    "g": 0.9686274528503418,
+                    "b": 0.9333333373069763
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 0,
+              "y": 9,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:6",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 3,
+              "height": 6,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.9529411792755127,
+                    "g": 0.9686274528503418,
+                    "b": 0.9333333373069763
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 5,
+              "y": 7,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:7",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 3,
+              "height": 9,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.9529411792755127,
+                    "g": 0.9686274528503418,
+                    "b": 0.9333333373069763
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 10,
+              "y": 4,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:8",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 3,
+              "height": 12,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.9529411792755127,
+                    "g": 0.9686274528503418,
+                    "b": 0.9333333373069763
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 14,
+              "y": 1,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:9",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 14,
+              "height": 7.908447265625,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "x": 21.5,
+              "y": 2.291553497314453,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:10",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 22,
+              "height": 11,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "x": 42.5,
+              "y": 1.5,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:11",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 19,
+              "height": 8,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.9529411792755127,
+                    "g": 0.9686274528503418,
+                    "b": 0.9333333373069763
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 44,
+              "y": 3,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:12",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 1.600006103515625,
+              "height": 4,
+              "opacity": 0.6000000238418579,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.9529411792755127,
+                    "g": 0.9686274528503418,
+                    "b": 0.9333333373069763
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 66,
+              "y": 5,
+              "cornerRadius": 0,
+              "pathCount": 1
+            }
+          ],
+          "x": 298,
+          "y": 20,
+          "cornerRadius": 0
+        },
+        {
+          "id": "19:13",
+          "type": "FRAME",
+          "name": "BugMap-logo-vector",
+          "width": 128,
+          "height": 39.68000030517578,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": false,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "VERTICAL",
+          "children": [
+            {
+              "id": "19:14",
+              "type": "VECTOR",
+              "name": "letter-B",
+              "width": 18.560001373291016,
+              "height": 24.192001342773438,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 4.735997200012207,
+              "y": 7.039999485015869,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:15",
+              "type": "VECTOR",
+              "name": "letter-u",
+              "width": 16.512001037597656,
+              "height": 18.304000854492188,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 24.575998306274414,
+              "y": 13.184000015258789,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:16",
+              "type": "VECTOR",
+              "name": "letter-g",
+              "width": 18.4320011138916,
+              "height": 25.98400115966797,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 42.36800003051758,
+              "y": 13.055999755859375,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:17",
+              "type": "VECTOR",
+              "name": "letter-M",
+              "width": 25.98400115966797,
+              "height": 24.32000160217285,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 62.59199905395508,
+              "y": 7.039999485015869,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:18",
+              "type": "VECTOR",
+              "name": "letter-a",
+              "width": 16.895999908447266,
+              "height": 18.81599998474121,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 89.98400115966797,
+              "y": 12.799999237060547,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:19",
+              "type": "VECTOR",
+              "name": "letter-p",
+              "width": 18.81599998474121,
+              "height": 25.98400115966797,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 108.67200469970703,
+              "y": 13.055999755859375,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:20",
+              "type": "GROUP",
+              "name": "beetle-on-B",
+              "width": 16.895999908447266,
+              "height": 29.390979766845703,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "children": [
+                {
+                  "id": "19:21",
+                  "type": "VECTOR",
+                  "name": "antenna-and-head",
+                  "width": 8.832000732421875,
+                  "height": 7.758982181549072,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.772549033164978,
+                        "g": 0.9333333373069763,
+                        "b": 0.4745098054409027
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "x": 8.703996658325195,
+                  "y": 0.6890182495117188,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:22",
+                  "type": "VECTOR",
+                  "name": "upper-shell",
+                  "width": 6.528000354766846,
+                  "height": 7.680000305175781,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.772549033164978,
+                        "g": 0.9333333373069763,
+                        "b": 0.4745098054409027
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "x": 2.431997299194336,
+                  "y": 7.8079986572265625,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:23",
+                  "type": "VECTOR",
+                  "name": "middle-shell",
+                  "width": 8.447999954223633,
+                  "height": 8.27374267578125,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.772549033164978,
+                        "g": 0.9333333373069763,
+                        "b": 0.4745098054409027
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "x": 0.6399974822998047,
+                  "y": 12.928001403808594,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:24",
+                  "type": "VECTOR",
+                  "name": "lower-shell",
+                  "width": 7.808000564575195,
+                  "height": 9.727999687194824,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.772549033164978,
+                        "g": 0.9333333373069763,
+                        "b": 0.4745098054409027
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "x": 0.6399974822998047,
+                  "y": 20.35199737548828,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                }
+              ],
+              "x": 0.6399974822998047,
+              "y": 0.6890182495117188
+            },
+            {
+              "id": "19:25",
+              "type": "VECTOR",
+              "name": "map-pin",
+              "width": 9.984000205993652,
+              "height": 15.10400104522705,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 70.52799987792969,
+              "y": 0.8959990739822388,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:26",
+              "type": "GROUP",
+              "name": "beetle-in-pin",
+              "width": 4.0960001945495605,
+              "height": 4.223999977111816,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "children": [
+                {
+                  "id": "19:27",
+                  "type": "VECTOR",
+                  "name": "beetle-legs-and-antennae",
+                  "width": 4.0960001945495605,
+                  "height": 4.223999977111816,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 73.47200012207031,
+                  "y": 4.096000671386719,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:28",
+                  "type": "VECTOR",
+                  "name": "beetle-body",
+                  "width": 2.30400013923645,
+                  "height": 3.5840001106262207,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.772549033164978,
+                        "g": 0.9333333373069763,
+                        "b": 0.4745098054409027
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "x": 74.36800384521484,
+                  "y": 4.608001708984375,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                }
+              ],
+              "x": 73.47200012207031,
+              "y": 4.096000671386719
+            }
+          ],
+          "x": 132,
+          "y": 72,
+          "cornerRadius": 0
+        },
+        {
+          "id": "19:29",
+          "type": "FRAME",
+          "name": "서울숲 관찰 일러스트",
+          "width": 273,
+          "height": 175,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": false,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "VERTICAL",
+          "children": [
+            {
+              "id": "19:30",
+              "type": "VECTOR",
+              "name": "observation-boundary",
+              "width": 171.8773651123047,
+              "height": 170.71536254882812,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 0.14901961386203766,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.5764706134796143,
+                    "g": 0.843137264251709,
+                    "b": 0.32549020648002625
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 2.8000030517578125,
+              "y": 1.9676513671875,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:31",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 18,
+              "height": 18,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 0.18039216101169586,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 45,
+              "y": 74,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:32",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 6,
+              "height": 6,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 51,
+              "y": 80,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:33",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 18,
+              "height": 18,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 0.18039216101169586,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 131,
+              "y": 123,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:34",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 6,
+              "height": 6,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 137,
+              "y": 129,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:35",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 18,
+              "height": 18,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 0.18039216101169586,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 197,
+              "y": 141,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:36",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 6,
+              "height": 6,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 203,
+              "y": 147,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:37",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 62,
+              "height": 62,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 0.12941177189350128,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 78,
+              "y": 61,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:38",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 40,
+              "height": 40,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.772549033164978,
+                    "g": 0.9333333373069763,
+                    "b": 0.4745098054409027
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 89,
+              "y": 72,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:39",
+              "type": "GROUP",
+              "name": "Group",
+              "width": 20,
+              "height": 19,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "children": [
+                {
+                  "id": "19:40",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 0,
+                  "height": 9,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 109,
+                  "y": 91,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:41",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 12,
+                  "height": 13,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 103,
+                  "y": 87,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:42",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 1.880000114440918,
+                  "height": 1.8800002336502075,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 111.12000274658203,
+                  "y": 82,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:43",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 3.810002088546753,
+                  "height": 4,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 114.19000244140625,
+                  "y": 97,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:44",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 3.549999237060547,
+                  "height": 3.9700002670288086,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 114.44999694824219,
+                  "y": 85,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:45",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 4,
+                  "height": 0,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 115,
+                  "y": 93,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:46",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 3.810002565383911,
+                  "height": 4,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 100,
+                  "y": 97,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:47",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 3.5500001907348633,
+                  "height": 3.9700002670288086,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 100,
+                  "y": 85,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:48",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 4,
+                  "height": 0,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 99,
+                  "y": 93,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:49",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 1.880000114440918,
+                  "height": 1.8800002336502075,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 105,
+                  "y": 82,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                },
+                {
+                  "id": "19:50",
+                  "type": "VECTOR",
+                  "name": "Vector",
+                  "width": 6,
+                  "height": 4.130000114440918,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [],
+                  "x": 106,
+                  "y": 83,
+                  "cornerRadius": 0,
+                  "pathCount": 1
+                }
+              ],
+              "x": 99,
+              "y": 82
+            },
+            {
+              "id": "19:51",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 12,
+              "height": 0,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 129,
+              "y": 92,
+              "cornerRadius": 0,
+              "pathCount": 1
+            },
+            {
+              "id": "19:52",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 130,
+              "height": 47,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.0941176488995552,
+                    "g": 0.16470588743686676,
+                    "b": 0.11764705926179886
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 141.5,
+              "y": 67.5,
+              "cornerRadius": 0,
+              "pathCount": 1
+            }
+          ],
+          "x": 70,
+          "y": 302,
+          "cornerRadius": 0
+        },
+        {
+          "id": "19:53",
+          "type": "FRAME",
+          "name": "iOS · 홈 인디케이터",
+          "width": 134,
+          "height": 4,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": false,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "VERTICAL",
+          "children": [
+            {
+              "id": "19:54",
+              "type": "VECTOR",
+              "name": "Vector",
+              "width": 134,
+              "height": 4,
+              "opacity": 0.8399999737739563,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.9529411792755127,
+                    "g": 0.9686274528503418,
+                    "b": 0.9333333373069763
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "x": 0,
+              "y": 0,
+              "cornerRadius": 0,
+              "pathCount": 1
+            }
+          ],
+          "x": 128,
+          "y": 827,
+          "cornerRadius": 0
+        },
+        {
+          "id": "19:55",
+          "type": "TEXT",
+          "name": "time",
+          "width": 27,
+          "height": 19,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.9529411792755127,
+                "g": 0.9686274528503418,
+                "b": 0.9333333373069763
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "9:41",
+          "fontSize": 15,
+          "x": 26,
+          "y": 19,
+          "fontName": {
+            "family": "Apple SD Gothic Neo",
+            "style": "Medium"
+          }
+        },
+        {
+          "id": "19:59",
+          "type": "TEXT",
+          "name": "observationTitle",
+          "width": 63,
+          "height": 15,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.9529411792755127,
+                "g": 0.9686274528503418,
+                "b": 0.9333333373069763
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "넓적사슴벌레",
+          "fontSize": 12,
+          "x": 224,
+          "y": 375,
+          "fontName": {
+            "family": "Apple SD Gothic Neo",
+            "style": "Bold"
+          }
+        },
+        {
+          "id": "19:60",
+          "type": "TEXT",
+          "name": "observationMeta",
+          "width": 66,
+          "height": 13,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.7411764860153198,
+                "g": 0.8196078538894653,
+                "b": 0.7098039388656616
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "서울숲 관찰 기록",
+          "fontSize": 10,
+          "x": 224,
+          "y": 394,
+          "fontName": {
+            "family": "Apple SD Gothic Neo",
+            "style": "Regular"
+          }
+        },
+        {
+          "id": "19:61",
+          "type": "TEXT",
+          "name": "park",
+          "width": 29,
+          "height": 14,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.843137264251709,
+                "g": 0.9098039269447327,
+                "b": 0.8039215803146362
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "서울숲",
+          "fontSize": 11,
+          "x": 84,
+          "y": 337,
+          "fontName": {
+            "family": "Apple SD Gothic Neo",
+            "style": "Medium"
+          }
+        },
+        {
+          "id": "19:62",
+          "type": "TEXT",
+          "name": "district",
+          "width": 29,
+          "height": 14,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.7647058963775635,
+                "g": 0.8274509906768799,
+                "b": 0.7921568751335144
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "성수동",
+          "fontSize": 11,
+          "x": 284,
+          "y": 328,
+          "fontName": {
+            "family": "Apple SD Gothic Neo",
+            "style": "Medium"
+          }
+        },
+        {
+          "id": "19:63",
+          "type": "TEXT",
+          "name": "river",
+          "width": 20,
+          "height": 14,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.7647058963775635,
+                "g": 0.8274509906768799,
+                "b": 0.7921568751335144
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "한강",
+          "fontSize": 11,
+          "x": 64,
+          "y": 470,
+          "fontName": {
+            "family": "Apple SD Gothic Neo",
+            "style": "Medium"
+          }
+        },
+        {
+          "id": "19:64",
+          "type": "TEXT",
+          "name": "policy",
+          "width": 236,
+          "height": 14,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.729411780834198,
+                "g": 0.7921568751335144,
+                "b": 0.7490196228027344
+              },
+              "boundVariables": {}
+            }
+          ],
+          "characters": "계속하면 이용약관 및 개인정보 처리방침에 동의합니다.",
+          "fontSize": 11,
+          "x": 77,
+          "y": 752,
+          "fontName": {
+            "family": "Apple SD Gothic Neo",
+            "style": "Regular"
+          }
+        },
+        {
+          "id": "19:65",
+          "type": "FRAME",
+          "name": "소셜 로그인",
+          "width": 358,
+          "height": 168,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [],
+          "layoutMode": "VERTICAL",
+          "children": [
+            {
+              "id": "19:66",
+              "type": "FRAME",
+              "name": "providerButton / 카카오 로그인",
+              "width": 358,
+              "height": 48,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.9960784316062927,
+                    "g": 0.8980392217636108,
+                    "b": 0
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "layoutMode": "VERTICAL",
+              "children": [
+                {
+                  "id": "19:67",
+                  "type": "FRAME",
+                  "name": "카카오 공식 심볼과 문구",
+                  "width": 233.7391357421875,
+                  "height": 48,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": false,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "layoutMode": "VERTICAL",
+                  "children": [
+                    {
+                      "id": "19:68",
+                      "type": "VECTOR",
+                      "name": "Vector",
+                      "width": 13.518779754638672,
+                      "height": 13.518784523010254,
+                      "opacity": 1,
+                      "rotation": 0,
+                      "visible": true,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 0.09803921729326248,
+                            "g": 0.09803921729326248,
+                            "b": 0.09803921729326248
+                          },
+                          "boundVariables": {}
+                        }
+                      ],
+                      "x": 64.1973876953125,
+                      "y": 17.240869522094727,
+                      "cornerRadius": 0,
+                      "pathCount": 1
+                    },
+                    {
+                      "id": "19:69",
+                      "type": "VECTOR",
+                      "name": "Vector",
+                      "width": 83.15164947509766,
+                      "height": 13.680416107177734,
+                      "opacity": 1,
+                      "rotation": 0,
+                      "visible": true,
+                      "fills": [
+                        {
+                          "type": "SOLID",
+                          "visible": true,
+                          "opacity": 1,
+                          "blendMode": "NORMAL",
+                          "color": {
+                            "r": 0.09803921729326248,
+                            "g": 0.09803921729326248,
+                            "b": 0.09803921729326248
+                          },
+                          "boundVariables": {}
+                        }
+                      ],
+                      "x": 85.91374206542969,
+                      "y": 17.34271240234375,
+                      "cornerRadius": 0,
+                      "pathCount": 1
+                    }
+                  ],
+                  "x": 62.130435943603516,
+                  "y": 0,
+                  "cornerRadius": 0
+                }
+              ],
+              "x": 0,
+              "y": 0,
+              "cornerRadius": 32
+            },
+            {
+              "id": "19:70",
+              "type": "FRAME",
+              "name": "providerButton / 네이버 로그인",
+              "width": 358,
+              "height": 48,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "layoutMode": "VERTICAL",
+              "children": [
+                {
+                  "id": "19:71",
+                  "type": "RECTANGLE",
+                  "name": "네이버 공식 심볼과 문구",
+                  "width": 140,
+                  "height": 28,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "IMAGE",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "scaleMode": "FIT",
+                      "scalingFactor": 1,
+                      "rotation": 0,
+                      "filters": {
+                        "exposure": 0,
+                        "contrast": 0,
+                        "saturation": 0,
+                        "temperature": 0,
+                        "tint": 0,
+                        "highlights": 0,
+                        "shadows": 0
+                      },
+                      "imageHash": "69944817b94087f86381e7ff55c63957da9f7a41"
+                    }
+                  ],
+                  "x": 109,
+                  "y": 10,
+                  "cornerRadius": 0
+                }
+              ],
+              "x": 0,
+              "y": 60,
+              "cornerRadius": 32
+            },
+            {
+              "id": "19:72",
+              "type": "FRAME",
+              "name": "providerButton / Apple로 로그인",
+              "width": 358,
+              "height": 48,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "layoutMode": "VERTICAL",
+              "children": [
+                {
+                  "id": "19:73",
+                  "type": "RECTANGLE",
+                  "name": "Apple 공식 심볼과 문구",
+                  "width": 358,
+                  "height": 48,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "IMAGE",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "scaleMode": "FIT",
+                      "scalingFactor": 1,
+                      "rotation": 0,
+                      "filters": {
+                        "exposure": 0,
+                        "contrast": 0,
+                        "saturation": 0,
+                        "temperature": 0,
+                        "tint": 0,
+                        "highlights": 0,
+                        "shadows": 0
+                      },
+                      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+                    }
+                  ],
+                  "x": 0,
+                  "y": 0,
+                  "cornerRadius": 0
+                }
+              ],
+              "x": 0,
+              "y": 120,
+              "cornerRadius": 32
+            }
+          ],
+          "x": 16,
+          "y": 554,
+          "cornerRadius": 0
+        },
+        {
+          "id": "20:74",
+          "type": "FRAME",
+          "name": "intro / 소개",
+          "width": 358,
+          "height": 119,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": false,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "layoutMode": "VERTICAL",
+          "children": [
+            {
+              "id": "20:76",
+              "type": "FRAME",
+              "name": "intro / 제목",
+              "width": 358,
+              "height": 85,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": false,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "layoutMode": "VERTICAL",
+              "children": [
+                {
+                  "id": "20:78",
+                  "type": "TEXT",
+                  "name": "title",
+                  "width": 224,
+                  "height": 42,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.9529411792755127,
+                        "g": 0.9686274528503418,
+                        "b": 0.9333333373069763
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "characters": "오늘 만난 곤충을",
+                  "fontSize": 34,
+                  "x": 67,
+                  "y": 0,
+                  "fontName": {
+                    "family": "Apple SD Gothic Neo",
+                    "style": "Bold"
+                  }
+                },
+                {
+                  "id": "20:79",
+                  "type": "TEXT",
+                  "name": "titleAccent",
+                  "width": 186,
+                  "height": 42,
+                  "opacity": 1,
+                  "rotation": 0,
+                  "visible": true,
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 0.772549033164978,
+                        "g": 0.9333333373069763,
+                        "b": 0.4745098054409027
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "characters": "지도에 남겨요",
+                  "fontSize": 34,
+                  "x": 86,
+                  "y": 43,
+                  "fontName": {
+                    "family": "Apple SD Gothic Neo",
+                    "style": "Bold"
+                  }
+                }
+              ],
+              "x": 0,
+              "y": 0,
+              "cornerRadius": 0
+            },
+            {
+              "id": "20:80",
+              "type": "TEXT",
+              "name": "description",
+              "width": 240,
+              "height": 17,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.8235294222831726,
+                    "g": 0.8627451062202454,
+                    "b": 0.8549019694328308
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "characters": "사진으로 기록하고, 주변의 발견을 살펴봐요.",
+              "fontSize": 14,
+              "x": 59,
+              "y": 102,
+              "fontName": {
+                "family": "Apple SD Gothic Neo",
+                "style": "Regular"
+              }
+            }
+          ],
+          "x": 16,
+          "y": 156,
+          "cornerRadius": 0
+        }
+      ],
+      "x": -112,
+      "y": -256,
+      "cornerRadius": 0
+    }
+  ]
+}

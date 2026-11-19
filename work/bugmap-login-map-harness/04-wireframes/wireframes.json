@@ -1,0 +1,48 @@
+{
+  "screens": [
+    {
+      "id": "login",
+      "state": "default",
+      "title": "05 · 첫 로그인 / 지도 배경",
+      "width": 390,
+      "height": 844,
+      "notes": "정보 순서는 로고, 두 줄 제목과 부제, 지도 관찰 예시, 카카오·네이버·Apple, 약관이다. 지도는 전체 화면을 잇고 관찰 영역 가운데에 시선이 남도록 상단과 하단에 페이드가 이어진다. 로고 이미지 블록은 무배경 벡터의 위치를 나타낸다. 버튼 레이블은 제공자 표식과 함께 중앙에 놓일 위치를 나타낸다. 시안의 목표 모서리 설정은 32px이며 렌더러는 일괄 12px로 그린다.",
+      "blocks": [
+        {"type":"image","x":0,"y":0,"width":390,"height":844,"text":""},
+        {"type":"text","x":18,"y":14,"width":48,"height":26,"text":"9:41"},
+        {"type":"box","x":298,"y":21,"width":16,"height":12,"text":""},
+        {"type":"box","x":319,"y":21,"width":14,"height":10,"text":""},
+        {"type":"box","x":340,"y":22,"width":24,"height":11,"text":""},
+        {"type":"image","x":131,"y":72,"width":128,"height":39.68,"text":""},
+        {"type":"text","x":160,"y":80,"width":70,"height":26,"text":"BugMap"},
+        {"type":"text","x":141,"y":156,"width":122,"height":41,"text":"오늘 만난 곤충을"},
+        {"type":"text","x":149,"y":198,"width":108,"height":41,"text":"지도에 남겨요"},
+        {"type":"text","x":68,"y":250,"width":270,"height":32,"text":"사진으로 기록하고, 주변의 발견을 살펴봐요."},
+        {"type":"box","x":72,"y":304,"width":172.45,"height":170.27,"text":""},
+        {"type":"text","x":77,"y":328,"width":57,"height":26,"text":"서울숲"},
+        {"type":"text","x":276,"y":319,"width":57,"height":26,"text":"성수동"},
+        {"type":"text","x":56,"y":469,"width":44,"height":26,"text":"한강"},
+        {"type":"box","x":115,"y":376,"width":18,"height":18,"text":""},
+        {"type":"box","x":201,"y":425,"width":18,"height":18,"text":""},
+        {"type":"box","x":267,"y":443,"width":18,"height":18,"text":""},
+        {"type":"box","x":148,"y":363,"width":62,"height":62,"text":""},
+        {"type":"box","x":159,"y":374,"width":40,"height":40,"text":""},
+        {"type":"text","x":157,"y":380,"width":44,"height":26,"text":"곤충"},
+        {"type":"box","x":211,"y":369,"width":130,"height":47,"text":""},
+        {"type":"text","x":216,"y":371,"width":120,"height":20,"text":"넓적사슴벌레"},
+        {"type":"text","x":216,"y":391,"width":120,"height":20,"text":"서울숲 관찰 기록"},
+        {"type":"button","x":16,"y":554,"width":358,"height":48,"text":""},
+        {"type":"box","x":147,"y":571,"width":13,"height":14,"text":""},
+        {"type":"text","x":158,"y":563,"width":108,"height":26,"text":"카카오 로그인"},
+        {"type":"button","x":16,"y":614,"width":358,"height":48,"text":""},
+        {"type":"box","x":145,"y":630,"width":16,"height":16,"text":""},
+        {"type":"text","x":161,"y":623,"width":108,"height":26,"text":"네이버 로그인"},
+        {"type":"button","x":16,"y":674,"width":358,"height":48,"text":""},
+        {"type":"box","x":141,"y":690,"width":12,"height":16,"text":""},
+        {"type":"text","x":155,"y":683,"width":130,"height":26,"text":"Apple로 로그인"},
+        {"type":"text","x":37,"y":742,"width":338,"height":32,"text":"계속하면 이용약관 및 개인정보 처리방침에 동의합니다."},
+        {"type":"box","x":128,"y":827,"width":134,"height":4,"text":""}
+      ]
+    }
+  ]
+}

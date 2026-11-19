@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "command": "lint:figma",
+  "inputs": {
+    "04-wireframes/wireframes.json": "8547e3bd97c1987eae0a5656eaa9240696d6abedcb5b22977a5f0ec3d71afdf4",
+    "05-design-system/assets-manifest.json": "99061a43aac9513af8ff5878448152ca2dadd1930692a705de9595e3c792a865",
+    "05-design-system/assets/apple-login.png": "fa13268354c9d261f4bb5cfb7d7e73c7030b8c1f849a114fa7b6b0c382079e89",
+    "05-design-system/assets/naver-login.png": "d7330414dfc270da16458daf35395bbbea59246dae769f46420302a2a82f202c",
+    "05-design-system/components.json": "f899d8ce9e674b007a005216f1f1ace2bbb567961c72de67e07aca723214d903",
+    "05-design-system/copy.json": "fed158f5a54626b0009907e107695374d2ee7962ff9415d9b93b3b1c7ce293da",
+    "05-design-system/tokens.json": "a4dc59dd408b00eebc9dd3ee66a721e93b0061ff01280a4bda6bad48e87685f0",
+    "06-figma/node-map.json": "61bfa52070c09826c90e4aba9b87a964b95f67b4d6b7dcd82b2ce1a0177f381f",
+    "06-figma/nodes.json": "6c2f8f19b5e2ee7cde36a1578dd96cbf2c77e0e015b934acb418cfb67132ae3f",
+    "control/figma.json": "ac6d0ba00fb8563d8b0a1a478a26fd00d152b5eb4ee74fa7d38a066f3ad10a75"
+  },
+  "issues": [
+    {
+      "nodeId": "156:1282",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "156:1284",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "156:1285",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "157:1301",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "157:1306",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "157:1307",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "157:1312",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "157:1314",
+      "rule": "image-provenance",
+      "detail": "Image paint changes the original artwork"
+    },
+    {
+      "nodeId": "157:1314",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "157:1313",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "157:1315",
+      "rule": "image-provenance",
+      "detail": "Image paint changes the original artwork"
+    },
+    {
+      "nodeId": "157:1315",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    },
+    {
+      "nodeId": "157:1318",
+      "rule": "auto-layout",
+      "detail": "FRAME needs HORIZONTAL or VERTICAL"
+    }
+  ],
+  "nodeCount": 36
+}

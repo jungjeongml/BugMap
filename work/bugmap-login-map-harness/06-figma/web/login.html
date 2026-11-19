@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>05 · 첫 로그인 / 지도 배경</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main class="screen">
+    <svg width="390" height="844" viewBox="0 0 390 844" xmlns="http://www.w3.org/2000/svg" class="artwork" xml:lang="ko">
+      <title>05 · 첫 로그인 / 지도 배경</title>
+      <rect width="390" height="844" fill="#0B130F"/>
+      <g id="map-background" aria-hidden="true"><image x="0" y="0" width="390" height="844" href="assets/map-background.png"/></g>
+      <g id="system-time" aria-hidden="true">
+        <text id="time" x="26" y="34" text-anchor="start" font-size="15" font-weight="500" fill="#F3F7EE" textLength="31" lengthAdjust="spacing">9:41</text>
+      </g>
+      <g id="system-connection" aria-hidden="true" fill="#F3F7EE">
+        <rect x="298" y="29" width="3" height="4" rx="1"/>
+        <rect x="303" y="27" width="3" height="6" rx="1"/>
+        <rect x="308" y="24" width="3" height="9" rx="1"/>
+        <rect x="312" y="21" width="3" height="12" rx="1"/>
+        <path d="M319.5 25a10.4 10.4 0 0 1 14 0 M322.1 27.7a6.6 6.6 0 0 1 8.8 0 M324.6 30.2a2.8 2.8 0 0 1 3.8 0" fill="none" stroke="#F3F7EE" stroke-width="1.4" stroke-linecap="round"/>
+        <rect x="340.5" y="21.5" width="22" height="11" rx="2.5" fill="none" stroke="#F3F7EE" stroke-opacity=".6"/>
+        <rect x="342" y="23" width="19" height="8" rx="1.2"/>
+        <rect x="364" y="25" width="1.6" height="4" rx=".8" opacity=".6"/>
+      </g>
+      <svg id="brand-logo" x="132" y="72" width="128" height="39.68" viewBox="127 478 1000 310" fill="#C5EE79" role="img" aria-label="BugMap">
+        <path id="letter-B" fill-rule="evenodd" d="M178 537 C190 534 204 533 220 533 H232 C271 533 298 553 298 581 C298 597 292 612 279 621 C298 629 309 647 309 667 C309 700 284 722 248 722 H178 C173 722 168 721 164 718 C177 706 184 695 189 684 H241 C257 684 265 676 265 663 C265 649 255 640 240 640 H204 C206 629 207 618 205 607 H231 C247 607 256 599 256 587 C256 574 246 567 230 567 H196 C191 555 185 546 178 537 Z"/>
+      <path id="letter-u" d="M319 601 C319 590 327 581 339 581 C350 581 358 589 358 600 V647 C358 669 367 683 384 683 C401 683 409 669 409 647 V600 C409 589 417 581 429 581 C440 581 448 589 448 600 V647 C448 694 424 724 384 724 C344 724 319 695 319 647 Z"/>
+      <path id="letter-g" fill-rule="evenodd" d="M561 594 C564 586 571 580 581 580 C593 580 602 589 602 601 V687 C602 748 570 783 522 783 C500 783 484 777 471 766 C462 759 460 748 466 738 C472 728 485 726 495 733 C503 740 511 744 522 744 C542 744 557 729 561 705 C550 713 537 718 522 718 C486 718 458 690 458 650 C458 611 486 581 522 581 C537 581 551 586 561 594 Z M561 649 C561 630 548 615 530 615 C512 615 498 630 498 649 C498 668 512 682 530 682 C548 682 561 668 561 649 Z"/>
+      <path id="letter-M" d="M616 558 C616 544 627 533 642 533 C653 533 661 539 667 549 L711 616 C714 621 721 621 725 616 L769 549 C776 539 783 533 794 533 C808 533 819 544 819 558 V701 C819 713 810 723 797 723 C785 723 776 714 776 701 V609 L735 672 C727 684 707 684 699 672 L659 609 V701 C659 714 650 723 638 723 C625 723 616 714 616 701 Z"/>
+      <path id="letter-a" fill-rule="evenodd" d="M920 640 C920 623 909 613 892 613 C883 613 875 616 868 620 C858 626 847 624 842 616 C836 607 840 596 850 590 C863 583 878 578 896 578 C939 578 962 604 962 644 V701 C962 713 954 722 942 722 C931 722 925 716 922 707 C911 719 897 725 881 725 C852 725 830 709 830 684 C830 656 853 631 888 631 C901 631 912 634 920 640 Z M919 667 C912 661 904 658 894 658 C879 658 869 666 869 677 C869 687 878 692 891 692 C905 692 917 682 919 667 Z"/>
+      <path id="letter-p" fill-rule="evenodd" d="M976 601 C976 589 985 581 997 581 C1007 581 1014 586 1018 594 C1028 585 1041 580 1057 580 C1094 580 1123 610 1123 651 C1123 691 1096 722 1057 722 C1041 722 1028 717 1018 708 V761 C1018 773 1009 783 997 783 C985 783 976 773 976 761 Z M1049 615 C1030 615 1017 630 1017 649 C1017 669 1030 684 1049 684 C1067 684 1082 669 1082 649 C1082 630 1067 615 1049 615 Z"/>
+      <g id="beetle-on-B">
+        <path id="antenna-and-head" d="M195 539 C196 524 206 512 222 512 C224 512 226 512 228 513 C233 498 241 487 253 484 C259 482 264 485 264 491 C264 495 261 498 257 498 C246 499 239 507 236 516 C243 521 246 527 246 537 L246 544 H195 Z"/>
+        <path id="upper-shell" d="M146 571 C151 558 160 547 171 539 C183 550 192 575 197 599 C178 596 159 586 146 571 Z"/>
+        <path id="middle-shell" d="M141 579 C155 593 176 604 198 607 C198 621 196 632 194 643 C173 646 147 638 132 628 C133 609 135 593 141 579 Z"/>
+        <path id="lower-shell" d="M132 637 C150 648 173 654 193 651 C187 677 176 697 158 713 C143 698 134 671 132 637 Z"/>
+      </g>
+      <path id="map-pin" fill-rule="evenodd" d="M717 485 C739 485 756 502 756 524 C756 547 736 574 718 603 C699 575 678 547 678 524 C678 502 695 485 717 485 Z M717 499 C703 499 691 511 691 525 C691 540 703 552 717 552 C732 552 744 540 744 525 C744 511 732 499 717 499 Z"/>
+      <g id="beetle-in-pin">
+        <path id="beetle-legs-and-antennae" d="M714 517 L710 510 M720 517 L724 510 M710 525 L706 523 L704 518 M709 530 L704 531 L701 528 M711 535 L707 538 L706 543 M724 525 L728 523 L730 518 M725 530 L730 531 L733 528 M723 535 L727 538 L728 543" fill="none" stroke="#C5EE79" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="beetle-body" d="M712 519 C712 516 714 514 717 514 C720 514 722 516 722 519 C725 522 726 526 726 530 C726 536 723 541 718 542 V524 H716 V542 C711 541 708 536 708 530 C708 526 709 522 712 519 Z"/>
+      </g>
+      </svg>
+      <g id="intro" role="heading" aria-level="1">
+        <text id="title" x="195" y="188" text-anchor="middle" font-size="34" font-weight="700" fill="#F3F7EE" textLength="235" lengthAdjust="spacing">오늘 만난 곤충을</text>
+        <text id="titleAccent" x="195" y="231" text-anchor="middle" font-size="34" font-weight="700" fill="#C5EE79" textLength="196" lengthAdjust="spacing">지도에 남겨요</text>
+        <text id="description" x="195" y="272" text-anchor="middle" font-size="14" font-weight="400" fill="#D2DCDA" textLength="256" lengthAdjust="spacing">사진으로 기록하고, 주변의 발견을 살펴봐요.</text>
+      </g>
+      <g id="observations">
+        <path id="observation-boundary" transform="translate(72 304)" d="M .8 45 C 4 36 16 33 26 30 L 44 7 C 51 -3 64 0 71 2 C 82 4 87 9 91 17 C 100 22 105 27 118 31 C 129 37 127 43 138 53 L 149 66 C 156 76 163 91 170 105 C 178 120 166 134 161 145 C 154 157 151 157 138 160 L 116 166 C 108 169 103 173 94 169 C 82 164 72 159 63 151 L 55 139 C 41 129 33 120 33 106 L 14 84 C 4 74 10 64 4 54 Z" fill="#93D75326" stroke="#B5E974" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="124" cy="385" r="9" fill="#C5EE792E" stroke="#C5EE7959"/>
+        <circle cx="124" cy="385" r="3" fill="#C5EE79"/>
+        <circle cx="210" cy="434" r="9" fill="#C5EE792E" stroke="#C5EE7959"/>
+        <circle cx="210" cy="434" r="3" fill="#C5EE79"/>
+        <circle cx="276" cy="452" r="9" fill="#C5EE792E" stroke="#C5EE7959"/>
+        <circle cx="276" cy="452" r="3" fill="#C5EE79"/>
+        <circle cx="179" cy="394" r="31" fill="#C5EE7921" stroke="#C5EE7959"/>
+        <circle cx="179" cy="394" r="20" fill="#C5EE79"/>
+        <svg x="167" y="382" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#202E13" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20v-9"/>
+          <path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/>
+          <path d="M14.12 3.88 16 2"/>
+          <path d="M21 21a4 4 0 0 0-3.81-4"/>
+          <path d="M21 5a4 4 0 0 1-3.55 3.97"/>
+          <path d="M22 13h-4"/>
+          <path d="M3 21a4 4 0 0 1 3.81-4"/>
+          <path d="M3 5a4 4 0 0 0 3.55 3.97"/>
+          <path d="M6 13H2"/>
+          <path d="m8 2 1.88 1.88"/>
+          <path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/>
+        </svg>
+        <path d="M199 394h12" stroke="#B5E974" stroke-opacity=".38"/>
+        <rect x="211.5" y="369.5" width="130" height="47" rx="11" fill="#182A1E" stroke="#485B45"/>
+        <text id="observationTitle" x="224" y="387" text-anchor="start" font-size="12" font-weight="700" fill="#F3F7EE" textLength="67" lengthAdjust="spacing">넓적사슴벌레</text>
+        <text id="observationMeta" x="224" y="404" text-anchor="start" font-size="10" font-weight="400" fill="#BDD1B5" textLength="71" lengthAdjust="spacing">서울숲 관찰 기록</text>
+        <text id="park" x="84" y="348" text-anchor="start" font-size="11" font-weight="500" fill="#D7E8CD" textLength="31" lengthAdjust="spacing">서울숲</text>
+        <text id="district" x="284" y="339" text-anchor="start" font-size="11" font-weight="500" fill="#C3D3CA" textLength="31" lengthAdjust="spacing">성수동</text>
+        <text id="river" x="64" y="481" text-anchor="start" font-size="11" font-weight="500" fill="#C3D3CA" textLength="21" lengthAdjust="spacing">한강</text>
+      </g>
+      <g id="sign-in-options" aria-hidden="true">
+        <g id="provider-kakao" class="provider" transform="translate(16 554)">
+        <rect class="provider-surface" x="0" y="0" width="358" height="48" rx="24" data-corner-radius="32" fill="#FEE500"/>
+        <g transform="translate(62.1304347826087 0) scale(1.0434782608695652)"><path d="M68.001 16.5225C64.4222 16.5225 61.5225 19.0037 61.5225 22.0641C61.5225 24.0312 62.7219 25.7596 64.5292 26.7423L63.9181 29.2113C63.8954 29.285 63.9132 29.364 63.9619 29.4184C63.9975 29.457 64.0461 29.478 64.0931 29.478C64.1337 29.478 64.1742 29.464 64.2082 29.4341L66.834 27.5144C67.2117 27.5723 67.6007 27.6039 67.9994 27.6039C71.5767 27.6039 74.478 25.1226 74.478 22.0623C74.478 19.002 71.5783 16.5225 68.001 16.5225Z" fill="#191919"/><path d="M89.0869 17.9531C89.0723 21.8203 87.8857 25.2627 83.0957 27.6211L82.334 26.5811C84.707 25.4165 86.1206 24.0029 86.9043 22.333L82.6123 22.7432L82.4072 21.542L87.3291 21.2051C87.5269 20.5386 87.644 19.8281 87.6953 19.0811H83.0957V17.9531H89.0869ZM92.4854 16.6201V21.8643H94.5215V23.0068H92.4854V29.7305H91.0938V16.6201H92.4854ZM102.051 17.9531C102.036 21.8203 100.85 25.2627 96.0596 27.6211L95.2979 26.5811C97.6709 25.4165 99.0845 24.0029 99.8682 22.333L95.5762 22.7432L95.3711 21.542L100.293 21.2051C100.491 20.5386 100.608 19.8281 100.659 19.0811H96.0596V17.9531H102.051ZM105.449 16.6201V21.8643H107.485V23.0068H105.449V29.7305H104.058V16.6201H105.449ZM114.165 17.4111C116.978 17.4258 119.014 18.8027 119.014 20.8975C119.014 22.8677 117.307 24.1641 114.854 24.3691V26.9473H120.2V28.1045H108.188V26.9473H113.477V24.3691C111.038 24.1641 109.331 22.8677 109.331 20.8975C109.331 18.8027 111.367 17.4258 114.165 17.4111ZM114.165 18.5537C112.144 18.5391 110.679 19.4766 110.679 20.8975C110.679 22.377 112.144 23.2852 114.165 23.2998C116.201 23.2852 117.666 22.377 117.666 20.8975C117.666 19.4766 116.201 18.5391 114.165 18.5537ZM136.826 27.0059V28.1777H124.814V27.0059H130.103V24.7061H126.279V20.5312H133.984V18.6855H126.25V17.543H135.361V21.6445H127.656V23.5635H135.669V24.7061H131.479V27.0059H136.826ZM148.179 17.9531V19.3594C148.179 21.0586 148.179 22.9043 147.695 25.7021L146.274 25.5703C146.802 22.9482 146.802 21.0146 146.802 19.3594V19.0957H139.067V17.9531H148.179ZM149.746 26.7275V27.8848H137.778V26.7275H149.746ZM161.626 16.6348V26.1709H160.234V16.6348H161.626ZM162.021 28.3389V29.4668H153.042V25.2041H154.448V28.3389H162.021ZM154.507 17.5137C156.484 17.5137 157.993 18.8613 157.993 20.7656C157.993 22.6992 156.484 24.0322 154.507 24.0322C152.529 24.0322 151.006 22.6992 151.006 20.7656C151.006 18.8613 152.529 17.5137 154.507 17.5137ZM154.507 18.7295C153.276 18.7295 152.368 19.5645 152.368 20.7656C152.368 21.9961 153.276 22.8164 154.507 22.8164C155.708 22.8164 156.631 21.9961 156.631 20.7656C156.631 19.5645 155.708 18.7295 154.507 18.7295Z" fill="#191919"/></g>
+        
+      </g>
+        <g id="provider-naver" class="provider" transform="translate(16 614)">
+        <rect class="provider-surface" x="0" y="0" width="358" height="48" rx="24" data-corner-radius="32" fill="#FFFFFF"/>
+        <clipPath id="provider-naver-clip"><rect width="358" height="48" rx="24"/></clipPath>
+        <g clip-path="url(#provider-naver-clip)"><image x="109" y="10" width="140" height="28" href="assets/naver-content.png"/></g>
+        <rect x=".5" y=".5" width="357" height="47" rx="23.5" fill="none" stroke="#D9D9D9"/>
+      </g>
+        <g id="provider-apple" class="provider" transform="translate(16 674)">
+        <rect class="provider-surface" x="0" y="0" width="358" height="48" rx="24" data-corner-radius="32" fill="#000000"/>
+        <clipPath id="provider-apple-clip"><rect width="358" height="48" rx="24"/></clipPath>
+        <g clip-path="url(#provider-apple-clip)"><image x="0" y="0" width="358" height="48" href="assets/apple-login.png"/></g>
+        <rect x=".5" y=".5" width="357" height="47" rx="23.5" fill="none" stroke="#68786E"/>
+      </g>
+      </g>
+      <text id="policy" x="195" y="763" text-anchor="middle" font-size="11" font-weight="400" fill="#BACABF" textLength="252" lengthAdjust="spacing">계속하면 이용약관 및 개인정보 처리방침에 동의합니다.</text>
+      <rect id="home-indicator" aria-hidden="true" x="128" y="827" width="134" height="4" rx="2" fill="#F3F7EE" opacity=".84"/>
+    </svg>
+    <div class="provider-controls" role="group" aria-label="소셜 로그인">
+      <button type="button" aria-label="카카오 로그인" disabled></button>
+      <button type="button" aria-label="네이버 로그인" disabled></button>
+      <button type="button" aria-label="Apple로 로그인" disabled></button>
+    </div>
+  </main>
+</body>
+</html>

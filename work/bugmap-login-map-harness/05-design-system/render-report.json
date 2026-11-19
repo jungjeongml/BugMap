@@ -1,0 +1,365 @@
+{
+  "renderedAt": "2026-11-19T08:13:17.654Z",
+  "renderer": "Local Chromium CDP at 1×",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "login/default",
+  "input": {
+    "path": "preview.svg",
+    "sha256": "ef9c235236d28ceda8c7c6d649eb2d9058d39e313c8455ef22e6bfeee1396fb7"
+  },
+  "reference": {
+    "path": "../01-prd/evidence/bugmap-05-source.png",
+    "sha256": "71cd76a4641eb61fb17f45bf6e8b386e97764ab6b3d81cf1b97d3d4a7f22319f"
+  },
+  "capture": {
+    "path": "captures/390x844-default.png",
+    "sha256": "068cd0e3fe8f9553b371048233008a2b2474945fbb940cef3b5b60691966767a"
+  },
+  "checks": {
+    "oneReferenceViewport": true,
+    "edgeToEdgeMap": true,
+    "transparentVectorLogoBounds": true,
+    "threeProvidersAndLayout": true,
+    "allLabelsAndCopy": true,
+    "textInViewport": true,
+    "contentInSafeArea": true,
+    "systemIndicatorsWithinRespectiveAreas": true,
+    "appleBorderContrastAtTopCenter": true
+  },
+  "contrast": [
+    {
+      "name": "time",
+      "ratio": 15.33,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "title",
+      "ratio": 12.81,
+      "required": 3,
+      "passed": true
+    },
+    {
+      "name": "titleAccent",
+      "ratio": 9.51,
+      "required": 3,
+      "passed": true
+    },
+    {
+      "name": "description",
+      "ratio": 8.11,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "observationTitle",
+      "ratio": 13.93,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "observationMeta",
+      "ratio": 9.33,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "park",
+      "ratio": 4.73,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "district",
+      "ratio": 5.01,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "river",
+      "ratio": 4.62,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "policy",
+      "ratio": 9.72,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "kakao label",
+      "ratio": 13.75,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "naver label",
+      "ratio": 21,
+      "required": 4.5,
+      "passed": true
+    },
+    {
+      "name": "apple label",
+      "ratio": 21,
+      "required": 4.5,
+      "passed": true
+    }
+  ],
+  "fidelityObservations": [
+    {
+      "name": "apple border against adjacent map at top center",
+      "sample": [
+        195,
+        673
+      ],
+      "adjacentMap": [
+        24,
+        36,
+        29
+      ],
+      "ratio": 3.44,
+      "referenceForBoundaryOnly": 3,
+      "sourceTreatment": "BugMap 05 outline width kept, color lightened to #68786E for contrast"
+    }
+  ],
+  "geometry": {
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "texts": [
+      {
+        "id": "time",
+        "value": "9:41",
+        "fill": "rgb(243, 247, 238)",
+        "size": 15,
+        "weight": 500,
+        "x": 26,
+        "y": 20,
+        "width": 31,
+        "height": 19
+      },
+      {
+        "id": "title",
+        "value": "오늘 만난 곤충을",
+        "fill": "rgb(243, 247, 238)",
+        "size": 34,
+        "weight": 700,
+        "x": 77.5,
+        "y": 157,
+        "width": 235,
+        "height": 41
+      },
+      {
+        "id": "titleAccent",
+        "value": "지도에 남겨요",
+        "fill": "rgb(197, 238, 121)",
+        "size": 34,
+        "weight": 700,
+        "x": 97,
+        "y": 200,
+        "width": 196,
+        "height": 41
+      },
+      {
+        "id": "description",
+        "value": "사진으로 기록하고, 주변의 발견을 살펴봐요.",
+        "fill": "rgb(210, 220, 218)",
+        "size": 14,
+        "weight": 400,
+        "x": 67,
+        "y": 259,
+        "width": 256,
+        "height": 17
+      },
+      {
+        "id": "observationTitle",
+        "value": "넓적사슴벌레",
+        "fill": "rgb(243, 247, 238)",
+        "size": 12,
+        "weight": 700,
+        "x": 224,
+        "y": 376,
+        "width": 67,
+        "height": 15
+      },
+      {
+        "id": "observationMeta",
+        "value": "서울숲 관찰 기록",
+        "fill": "rgb(189, 209, 181)",
+        "size": 10,
+        "weight": 400,
+        "x": 224,
+        "y": 395,
+        "width": 71,
+        "height": 12
+      },
+      {
+        "id": "park",
+        "value": "서울숲",
+        "fill": "rgb(215, 232, 205)",
+        "size": 11,
+        "weight": 500,
+        "x": 84,
+        "y": 338,
+        "width": 31,
+        "height": 13
+      },
+      {
+        "id": "district",
+        "value": "성수동",
+        "fill": "rgb(195, 211, 202)",
+        "size": 11,
+        "weight": 500,
+        "x": 284,
+        "y": 329,
+        "width": 31,
+        "height": 13
+      },
+      {
+        "id": "river",
+        "value": "한강",
+        "fill": "rgb(195, 211, 202)",
+        "size": 11,
+        "weight": 500,
+        "x": 64,
+        "y": 471,
+        "width": 21,
+        "height": 13
+      },
+      {
+        "id": "policy",
+        "value": "계속하면 이용약관 및 개인정보 처리방침에 동의합니다.",
+        "fill": "rgb(186, 202, 191)",
+        "size": 11,
+        "weight": 400,
+        "x": 69,
+        "y": 753,
+        "width": 252,
+        "height": 13
+      }
+    ],
+    "buttons": [
+      {
+        "label": "카카오 로그인",
+        "cornerRadiusSetting": 32,
+        "x": 16,
+        "y": 554,
+        "width": 358,
+        "height": 48
+      },
+      {
+        "label": "네이버 로그인",
+        "cornerRadiusSetting": 32,
+        "x": 16,
+        "y": 614,
+        "width": 358,
+        "height": 48
+      },
+      {
+        "label": "Apple로 로그인",
+        "cornerRadiusSetting": 32,
+        "x": 16,
+        "y": 674,
+        "width": 358,
+        "height": 48
+      }
+    ],
+    "logoViewport": {
+      "x": 132,
+      "y": 72,
+      "width": 128,
+      "height": 39.68
+    },
+    "logoInk": {
+      "x": 132.63999938964844,
+      "y": 72.68901824951172,
+      "width": 126.84800720214844,
+      "height": 38.350982666015625
+    },
+    "logoHasNoBackground": true,
+    "home": {
+      "x": 128,
+      "y": 827,
+      "width": 134,
+      "height": 4
+    },
+    "connection": {
+      "x": 298,
+      "y": 21,
+      "width": 67.60000610351562,
+      "height": 12
+    },
+    "background": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "sameViewport": true
+  },
+  "actualFonts": {
+    "title": [
+      {
+        "familyName": "Apple SD Gothic Neo",
+        "postScriptName": "AppleSDGothicNeo-Bold",
+        "isCustomFont": false,
+        "glyphCount": 9
+      }
+    ],
+    "titleAccent": [
+      {
+        "familyName": "Apple SD Gothic Neo",
+        "postScriptName": "AppleSDGothicNeo-Bold",
+        "isCustomFont": false,
+        "glyphCount": 7
+      }
+    ],
+    "description": [
+      {
+        "familyName": "Apple SD Gothic Neo",
+        "postScriptName": "AppleSDGothicNeo-Regular",
+        "isCustomFont": false,
+        "glyphCount": 24
+      }
+    ],
+    "policy": [
+      {
+        "familyName": "Apple SD Gothic Neo",
+        "postScriptName": "AppleSDGothicNeo-Regular",
+        "isCustomFont": false,
+        "glyphCount": 29
+      }
+    ],
+    "park": [
+      {
+        "familyName": "Apple SD Gothic Neo",
+        "postScriptName": "AppleSDGothicNeo-Medium",
+        "isCustomFont": false,
+        "glyphCount": 3
+      }
+    ],
+    "observationTitle": [
+      {
+        "familyName": "Apple SD Gothic Neo",
+        "postScriptName": "AppleSDGothicNeo-Bold",
+        "isCustomFont": false,
+        "glyphCount": 6
+      }
+    ],
+    "time": [
+      {
+        "familyName": "Apple SD Gothic Neo",
+        "postScriptName": "AppleSDGothicNeo-Medium",
+        "isCustomFont": false,
+        "glyphCount": 4
+      }
+    ]
+  }
+}

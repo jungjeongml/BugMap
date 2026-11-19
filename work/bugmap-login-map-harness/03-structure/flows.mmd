@@ -1,0 +1,18 @@
+flowchart TD
+  Entry(["로그인 진입"]) --> Default["login/default · 05 기본 화면"]
+  Default --> Kakao["카카오 로그인"]
+  Default --> Naver["네이버 로그인"]
+  Default --> Apple["Apple로 로그인"]
+  Kakao -.-> Provider["실제 제공자 인증 경계"]
+  Naver -.-> Provider
+  Apple -.-> Provider
+  Provider -. 취소 시 복귀 .-> Default
+  Provider -. 오류 뒤 재시도 선택으로 복귀 .-> Default
+  Provider -. 인증 성공 .-> SignedIn(["로그인 이후 여정 경계"])
+  Default -. OS 뒤로 또는 종료 .-> Exit(["앱 외부"])
+  Default -. 약관 안내 .-> Policy["정책 링크 및 문서 경계"]
+
+  %% 실선은 기본 화면 진입 및 시안에 표시할 선택지다.
+  %% 점선은 승인 범위 밖의 동작과 복귀점을 기록한다.
+  %% 지도 삽화와 관찰 카드는 정적 소개 요소다.
+  %% 입력 및 저장 기능이 없어 저장 후 복귀 흐름은 해당하지 않는다.

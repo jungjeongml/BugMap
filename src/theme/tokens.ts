@@ -20,6 +20,36 @@ export const colors = {
   apple: '#000000',
 } as const;
 
+// Figma 05 로그인, 07 발견 지도, 08 발견/채집 기록 작성.
+export const mapFlowColors = {
+  background: '#101C16',
+  loginBackground: '#0B130F',
+  text: '#F3F7EE',
+  textSecondary: '#BDCDC2',
+  textPlaceholder: '#A7BBAD',
+  primary: '#C5EE79',
+  onPrimary: '#202E13',
+  mapOverlay: 'rgba(11, 24, 18, 0.77)',
+  locationPreviewOverlay: 'rgba(16, 32, 25, 0.67)',
+  observationFill: 'rgba(147, 215, 83, 0.15)',
+  observationOutline: '#B5E974',
+  observationMarkerSurface: '#18271F',
+  observationDetailSurface: '#192B20',
+  location: '#82D0F0',
+  locationHalo: 'rgba(130, 208, 240, 0.17)',
+  mapPanel: '#131E18',
+  mapPanelBorder: '#3B4D42',
+  searchSurface: '#26342D',
+  searchBorder: '#3D5145',
+  activeTabSurface: '#2F4433',
+  activeTabBorder: '#52694A',
+  formField: '#1C2C23',
+  formFieldBorder: '#3D5044',
+  photoTile: '#26382C',
+  photoTileBorder: '#526954',
+  formFooter: '#152219',
+} as const;
+
 export const layout = {
   gutter: 16,
   cardGap: 12,

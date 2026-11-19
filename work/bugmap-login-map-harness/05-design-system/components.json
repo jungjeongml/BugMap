@@ -1,0 +1,63 @@
+{
+  "mapBackground": {
+    "description": "390×844 전체를 채우는 지도와 상하 페이드 합성. 원본 지도와 페이드 노드의 PNG를 알파 합성해 교체할 수 있는 이미지로 등록한다.",
+    "tokens": ["colors.canvas", "colors.mapFade"],
+    "states": ["default"],
+    "asset": "assets/map-background.png",
+    "layout": "tokens.layout.viewport",
+    "figma": "합성 PNG는 390×844 전면 레이어에 100% 불투명도, 원본 비율, 추가 필터 없이 사용."
+  },
+  "brandLogo": {
+    "description": "무배경 BugMap 벡터 워드마크. 지도 핀과 곤충을 포함한 원본 경로와 100:31 비율을 유지한다.",
+    "tokens": ["colors.primary"],
+    "states": ["default"],
+    "asset": "assets/bugmap-logo-vector-lime.svg",
+    "layout": "tokens.layout.logo",
+    "figma": "128×39.68 비율의 편집 가능한 경로. 원본 140:712와 투명 여백, 경로 수, 색을 확인."
+  },
+  "intro": {
+    "description": "34px 굵은 제목을 두 줄, 14px 부제를 한 줄로 중앙 배치한다. 두 번째 제목에 로고와 같은 연두색을 쓴다.",
+    "tokens": ["colors.text", "colors.primary", "colors.description", "typography.title.fontSize", "typography.description.fontSize"],
+    "states": ["default"],
+    "copy": ["title", "titleAccent", "description"],
+    "layout": "tokens.layout.header",
+    "figma": "텍스트 편집 가능. 두 제목과 부제를 세로 오토레이아웃으로 묶고 중앙 정렬."
+  },
+  "observationIllustration": {
+    "description": "지도 위 서울숲 관찰 경계, 세 지점, 중앙 Lucide Bug 표식, 넓적사슴벌레 기록 카드를 표시한다. 주변 지명과 카드 문구를 읽을 수 있게 유지한다.",
+    "tokens": ["colors.primary", "colors.onPrimary", "colors.observationArea", "colors.observationOutline", "colors.observationPointHalo", "colors.observationMarkerHalo", "colors.observationHaloEdge", "colors.observationCard", "colors.observationCardEdge", "colors.parkLabel", "colors.districtLabel", "colors.riverLabel", "colors.text", "colors.observationMeta", "typography.mapLabel.fontSize", "typography.observationTitle.fontSize", "typography.observationMeta.fontSize"],
+    "states": ["default"],
+    "copy": ["park", "district", "river", "observationTitle", "observationMeta"],
+    "icon": "Bug",
+    "layout": "tokens.layout.mapIllustration",
+    "figma": "관찰 경계, 마커, 카드 면과 텍스트는 배경 PNG 위의 독립된 레이어. 고정 지도 사례이며 조작 대상이 아니다."
+  },
+  "providerButton": {
+    "description": "카카오·네이버·Apple을 순서대로 12px 간격으로 쌓는다. 편집 가능한 외곽은 358×48px, 모서리 설정 32px이며 공식 표식과 레이블은 가운데 묶어 원본 비율로 표시한다.",
+    "tokens": ["colors.kakaoSurface", "colors.kakaoInk", "colors.naverSurface", "colors.naverLogo", "colors.naverInk", "colors.naverBorder", "colors.appleSurface", "colors.appleInk", "colors.appleBorder"],
+    "states": ["default"],
+    "copy": ["kakao", "naver", "apple"],
+    "layout": ["tokens.layout.providerStack", "tokens.layout.providerButton"],
+    "variants": {
+      "kakao": { "asset": "assets/kakao-login.svg", "presentation": "공식 심볼과 레이블 경로, 224×46 원본의 균등 배율 48/46, 노란 외곽 358×48" },
+      "naver": { "asset": "assets/naver-content.png", "presentation": "공식 4× PNG 중앙 레이블 영역을 보존한 560×112 파생 PNG, 표시 140×28, 흰 외곽과 1px 안쪽 경계" },
+      "apple": { "asset": "assets/apple-login.png", "presentation": "공식 2× PNG 716×96을 표시 358×48, 둥근 검정 프레임의 가장자리 밖 빈 영역을 마스킹, 1px 안쪽 경계" }
+    },
+    "figma": "358px 가로 채우기와 48px 높이의 버튼 콘텐츠를 중앙 정렬하고 세로 오토레이아웃으로 묶는다. 외곽은 32px 설정, 조작 영역은 최소 44×44px."
+  },
+  "policy": {
+    "description": "버튼 영역 아래 정적 약관 및 개인정보 처리방침 안내 한 줄.",
+    "tokens": ["colors.policy", "typography.policy.fontSize"],
+    "states": ["default"],
+    "copy": ["policy"],
+    "layout": "tokens.layout.policy",
+    "figma": "문구는 편집 가능한 텍스트."
+  },
+  "systemAreas": {
+    "description": "상단 시스템 영역에 시간과 연결·배터리 표시를, 하단 시스템 영역에 홈 인디케이터를 배치한다.",
+    "tokens": ["colors.text", "typography.status.fontSize"],
+    "states": ["default"],
+    "copy": ["time"],
+    "layout": "tokens.layout.safeArea"
+  }
+}

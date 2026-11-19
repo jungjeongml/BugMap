@@ -1,0 +1,7 @@
+requirement,screen,state,figma_node,result,evidence
+LOGIN-05-01,login,default,19:2,pass,390×844 대상 프레임과 원격 PNG 및 노드 매핑
+LOGIN-05-02,login,default,19:3,pass,등록 지도 PNG와 세로 전면 페이드 시각 확인
+LOGIN-05-03,login,default,19:13,pass,무배경 #C5EE79 벡터 13개와 128×39.68 비율
+LOGIN-05-04,login,default,19:65,pass,카카오·네이버·Apple 358×48 및 간격 12와 반경 32 및 글리프 캡처
+LOGIN-05-05,login,default,19:2,pass,본문 10 TEXT 및 소개·버튼 오토레이아웃과 등록 자산·대비 검수
+LOGIN-05-06,login,default,7:2 | 134:1239,pass,대상 기존 지도 전후 일치 및 원본 노드 정보와 102개 레이어 ID·유형 및 PNG 일치

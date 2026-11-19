@@ -1,0 +1,2 @@
+screen_id,title,purpose,primary_actions,requirements,viewport,state_count
+login,05 · 첫 로그인 / 지도 배경,사진으로 곤충을 기록하고 지도에서 주변의 발견을 살피는 앱임을 전달,카카오 로그인 | 네이버 로그인 | Apple로 로그인,LOGIN-05-01 | LOGIN-05-02 | LOGIN-05-03 | LOGIN-05-04 | LOGIN-05-05 | LOGIN-05-06,390x844,1

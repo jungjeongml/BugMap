@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "screen": "login",
+      "state": "default",
+      "nodeId": "19:2",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHaness?node-id=19-2",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/login-default.png"
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "19:3",
+      "fillIndex": 0,
+      "asset": "assets/map-background.png",
+      "imageHash": "9abbcf6b6214e1d081ec9a10fe3f84a3bbf3b0c4"
+    },
+    {
+      "nodeId": "19:71",
+      "fillIndex": 0,
+      "asset": "assets/naver-content.png",
+      "imageHash": "69944817b94087f86381e7ff55c63957da9f7a41"
+    },
+    {
+      "nodeId": "19:73",
+      "fillIndex": 0,
+      "asset": "assets/apple-login.png",
+      "imageHash": "7ddbd9ff52a137ffbdf4b63c57f9d958d783b616"
+    }
+  ]
+}

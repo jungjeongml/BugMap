@@ -1,0 +1,24 @@
+{
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "documentName": "BugMapHaness",
+  "pageId": "0:1",
+  "pageName": "Page 1",
+  "bridge": "TalkToFigma MCP / Figma desktop",
+  "channel": "y5fz18ft",
+  "existingTargetRoot": {
+    "id": "7:2",
+    "name": "02 · 메인 / 발견 지도"
+  },
+  "source": {
+    "fileKey": "LynbxdW8Qf7TavCrPLd2nY",
+    "pageId": "0:1",
+    "nodeId": "134:1239",
+    "channel": "6jgzxrx1",
+    "exportedAt": "2026-11-19T07:38:19.246Z",
+    "capture": "01-prd/evidence/bugmap-05-source.png",
+    "captureSha256": "71cd76a4641eb61fb17f45bf6e8b386e97764ab6b3d81cf1b97d3d4a7f22319f"
+  },
+  "editPolicy": "원본과 대상의 기존 프레임을 보존하고 대상에 05 단일 프레임을 추가한다.",
+  "identityStatus": "사용자 제공 파일 링크의 이름·페이지 ID를 대상 채널 조회와 대조했다. 브리지는 파일 키를 반환하지 않는다.",
+  "fileUrl": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHaness?node-id=0-1"
+}

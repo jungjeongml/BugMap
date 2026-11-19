@@ -1,0 +1,1124 @@
+[
+  {
+    "id": "134:1239",
+    "name": "05 · 첫 로그인 / 지도 배경",
+    "type": "FRAME",
+    "bbox": {
+      "x": 8100,
+      "y": 100,
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "id": "142:712",
+    "name": "지도 배경 / 지형·도로 모식도",
+    "type": "RECTANGLE",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 1013
+    }
+  },
+  {
+    "id": "138:742",
+    "name": "Frame",
+    "type": "FRAME",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "id": "138:743",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "id": "138:744",
+    "name": "Observations",
+    "type": "GROUP",
+    "bbox": {
+      "x": 72,
+      "y": 304,
+      "width": 269.5,
+      "height": 170.27272033691406
+    }
+  },
+  {
+    "id": "138:745",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 72,
+      "y": 304,
+      "width": 172.4545440673828,
+      "height": 170.27272033691406
+    }
+  },
+  {
+    "id": "138:746",
+    "name": "Group",
+    "type": "GROUP",
+    "bbox": {
+      "x": 115,
+      "y": 363,
+      "width": 170,
+      "height": 98
+    }
+  },
+  {
+    "id": "138:747",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 115,
+      "y": 376,
+      "width": 18,
+      "height": 18
+    }
+  },
+  {
+    "id": "138:748",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 121,
+      "y": 382,
+      "width": 6,
+      "height": 6
+    }
+  },
+  {
+    "id": "138:749",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 201,
+      "y": 425,
+      "width": 18,
+      "height": 18
+    }
+  },
+  {
+    "id": "138:750",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 207,
+      "y": 431,
+      "width": 6,
+      "height": 6
+    }
+  },
+  {
+    "id": "138:751",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 267,
+      "y": 443,
+      "width": 18,
+      "height": 18
+    }
+  },
+  {
+    "id": "138:752",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 273,
+      "y": 449,
+      "width": 6,
+      "height": 6
+    }
+  },
+  {
+    "id": "138:753",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 148,
+      "y": 363,
+      "width": 62,
+      "height": 62
+    }
+  },
+  {
+    "id": "138:754",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 159,
+      "y": 374,
+      "width": 40,
+      "height": 40
+    }
+  },
+  {
+    "id": "138:755",
+    "name": "Group",
+    "type": "GROUP",
+    "bbox": {
+      "x": 170,
+      "y": 383,
+      "width": 18,
+      "height": 21
+    }
+  },
+  {
+    "id": "138:756",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 173,
+      "y": 388,
+      "width": 12,
+      "height": 15
+    }
+  },
+  {
+    "id": "138:757",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 170,
+      "y": 383,
+      "width": 18,
+      "height": 21
+    }
+  },
+  {
+    "id": "138:758",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 199,
+      "y": 394,
+      "width": 12,
+      "height": 0
+    }
+  },
+  {
+    "id": "138:759",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 211.5,
+      "y": 369.5,
+      "width": 130,
+      "height": 47
+    }
+  },
+  {
+    "id": "138:760",
+    "name": "Status",
+    "type": "GROUP",
+    "bbox": {
+      "x": 128,
+      "y": 21,
+      "width": 237.60000610351562,
+      "height": 810
+    }
+  },
+  {
+    "id": "138:761",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 298,
+      "y": 29,
+      "width": 3,
+      "height": 4
+    }
+  },
+  {
+    "id": "138:762",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 302.5,
+      "y": 27,
+      "width": 3,
+      "height": 6
+    }
+  },
+  {
+    "id": "138:763",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 307,
+      "y": 24,
+      "width": 3,
+      "height": 9
+    }
+  },
+  {
+    "id": "138:764",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 311.5,
+      "y": 21,
+      "width": 3,
+      "height": 12
+    }
+  },
+  {
+    "id": "138:765",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 320,
+      "y": 22.099342346191406,
+      "width": 13,
+      "height": 8.400657653808594
+    }
+  },
+  {
+    "id": "138:766",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 340.5,
+      "y": 21.5,
+      "width": 22,
+      "height": 11
+    }
+  },
+  {
+    "id": "138:767",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 342,
+      "y": 23,
+      "width": 19,
+      "height": 8
+    }
+  },
+  {
+    "id": "138:768",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 364,
+      "y": 25,
+      "width": 1.600006103515625,
+      "height": 4
+    }
+  },
+  {
+    "id": "138:769",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 128,
+      "y": 827,
+      "width": 134,
+      "height": 4
+    }
+  },
+  {
+    "id": "156:1282",
+    "name": "06 · 첫 로그인 / Kyro / default · 지도 미완료",
+    "type": "FRAME",
+    "bbox": {
+      "x": -1560,
+      "y": 1868,
+      "width": 390,
+      "height": 844
+    }
+  },
+  {
+    "id": "156:1284",
+    "name": "logo / white reading plate",
+    "type": "FRAME",
+    "bbox": {
+      "x": 71,
+      "y": 64,
+      "width": 248,
+      "height": 99
+    }
+  },
+  {
+    "id": "156:1285",
+    "name": "logo / BugMap source vectors",
+    "type": "FRAME",
+    "bbox": {
+      "x": 87,
+      "y": 80,
+      "width": 216,
+      "height": 66.95999908447266
+    }
+  },
+  {
+    "id": "156:1286",
+    "name": "letter-B",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 7.992000102996826,
+      "y": 11.880000114440918,
+      "width": 31.31999969482422,
+      "height": 40.82400131225586
+    }
+  },
+  {
+    "id": "156:1287",
+    "name": "letter-u",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 41.47200012207031,
+      "y": 22.24799919128418,
+      "width": 27.86400032043457,
+      "height": 30.88800048828125
+    }
+  },
+  {
+    "id": "156:1288",
+    "name": "letter-g",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 71.49600219726562,
+      "y": 22.031999588012695,
+      "width": 31.104000091552734,
+      "height": 43.847999572753906
+    }
+  },
+  {
+    "id": "156:1289",
+    "name": "letter-M",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 105.6240005493164,
+      "y": 11.880000114440918,
+      "width": 43.847999572753906,
+      "height": 41.040000915527344
+    }
+  },
+  {
+    "id": "156:1290",
+    "name": "letter-a",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 151.84800720214844,
+      "y": 21.600000381469727,
+      "width": 28.511999130249023,
+      "height": 31.751998901367188
+    }
+  },
+  {
+    "id": "156:1291",
+    "name": "letter-p",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 183.38400268554688,
+      "y": 22.031999588012695,
+      "width": 31.75200080871582,
+      "height": 43.847999572753906
+    }
+  },
+  {
+    "id": "156:1292",
+    "name": "beetle-on-B",
+    "type": "GROUP",
+    "bbox": {
+      "x": 1.0800000429153442,
+      "y": 1.1627204418182373,
+      "width": 28.51239776611328,
+      "height": 49.59727478027344
+    }
+  },
+  {
+    "id": "156:1293",
+    "name": "antenna-and-head",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 14.687999844551086,
+      "y": 1.1627204418182373,
+      "width": 14.904000282287598,
+      "height": 13.093281745910645
+    }
+  },
+  {
+    "id": "156:1294",
+    "name": "upper-shell",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 4.104000210762024,
+      "y": 13.175999402999878,
+      "width": 11.015999794006348,
+      "height": 12.960000038146973
+    }
+  },
+  {
+    "id": "156:1295",
+    "name": "middle-shell",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 1.0800000429153442,
+      "y": 21.81600069999695,
+      "width": 14.255999565124512,
+      "height": 13.961939811706543
+    }
+  },
+  {
+    "id": "156:1296",
+    "name": "lower-shell",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 1.0800000429153442,
+      "y": 34.34400248527527,
+      "width": 13.175999641418457,
+      "height": 16.416000366210938
+    }
+  },
+  {
+    "id": "156:1297",
+    "name": "map-pin",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 119.01599884033203,
+      "y": 1.5119999647140503,
+      "width": 16.847999572753906,
+      "height": 25.487998962402344
+    }
+  },
+  {
+    "id": "156:1298",
+    "name": "beetle-in-pin",
+    "type": "GROUP",
+    "bbox": {
+      "x": 123.98400115966797,
+      "y": 6.9120001792907715,
+      "width": 6.9120001792907715,
+      "height": 7.127999782562256
+    }
+  },
+  {
+    "id": "156:1299",
+    "name": "beetle-legs-and-antennae",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 123.98400115966797,
+      "y": 6.9120001792907715,
+      "width": 6.9120001792907715,
+      "height": 7.127999782562256
+    }
+  },
+  {
+    "id": "156:1300",
+    "name": "beetle-body",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 125.49600219726562,
+      "y": 7.776000022888184,
+      "width": 3.888000011444092,
+      "height": 6.047999858856201
+    }
+  },
+  {
+    "id": "157:1301",
+    "name": "intro / white reading plate",
+    "type": "FRAME",
+    "bbox": {
+      "x": 16,
+      "y": 212,
+      "width": 358,
+      "height": 164
+    }
+  },
+  {
+    "id": "157:1302",
+    "name": "intro / title line 1",
+    "type": "TEXT",
+    "bbox": {
+      "x": 24,
+      "y": 220,
+      "width": 188,
+      "height": 31
+    }
+  },
+  {
+    "id": "157:1303",
+    "name": "intro / title line 2",
+    "type": "TEXT",
+    "bbox": {
+      "x": 24,
+      "y": 256,
+      "width": 234,
+      "height": 31
+    }
+  },
+  {
+    "id": "157:1304",
+    "name": "intro / description line 1",
+    "type": "TEXT",
+    "bbox": {
+      "x": 24,
+      "y": 310,
+      "width": 137,
+      "height": 17
+    }
+  },
+  {
+    "id": "157:1305",
+    "name": "intro / description line 2",
+    "type": "TEXT",
+    "bbox": {
+      "x": 24,
+      "y": 338,
+      "width": 128,
+      "height": 17
+    }
+  },
+  {
+    "id": "157:1306",
+    "name": "providers / white reading plate",
+    "type": "FRAME",
+    "bbox": {
+      "x": 0,
+      "y": 528,
+      "width": 390,
+      "height": 316
+    }
+  },
+  {
+    "id": "157:1307",
+    "name": "providerButton / kakao",
+    "type": "FRAME",
+    "bbox": {
+      "x": 16,
+      "y": 548,
+      "width": 358,
+      "height": 60
+    }
+  },
+  {
+    "id": "157:1308",
+    "name": "Official Kakao SVG / reused library artwork",
+    "type": "GROUP",
+    "bbox": {
+      "x": 32.91304397583008,
+      "y": 0,
+      "width": 292.1739196777344,
+      "height": 60
+    }
+  },
+  {
+    "id": "157:1309",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 32.91304397583008,
+      "y": 0,
+      "width": 292.1739196777344,
+      "height": 60
+    }
+  },
+  {
+    "id": "157:1310",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 113.1597785949707,
+      "y": 21.55108642578125,
+      "width": 16.898475646972656,
+      "height": 16.898481369018555
+    }
+  },
+  {
+    "id": "157:1311",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 140.30522537231445,
+      "y": 21.678390502929688,
+      "width": 103.93955993652344,
+      "height": 17.100521087646484
+    }
+  },
+  {
+    "id": "157:1312",
+    "name": "providerButton / naver",
+    "type": "FRAME",
+    "bbox": {
+      "x": 16,
+      "y": 616,
+      "width": 358,
+      "height": 60
+    }
+  },
+  {
+    "id": "157:1314",
+    "name": "Official naver-login.png",
+    "type": "FRAME",
+    "bbox": {
+      "x": 0,
+      "y": 6.65217399597168,
+      "width": 358,
+      "height": 46.69565200805664
+    }
+  },
+  {
+    "id": "157:1313",
+    "name": "providerButton / apple",
+    "type": "FRAME",
+    "bbox": {
+      "x": 16,
+      "y": 684,
+      "width": 358,
+      "height": 60
+    }
+  },
+  {
+    "id": "157:1315",
+    "name": "Official apple-login.png",
+    "type": "FRAME",
+    "bbox": {
+      "x": 0,
+      "y": 6,
+      "width": 358,
+      "height": 48
+    }
+  },
+  {
+    "id": "157:1316",
+    "name": "policy / line 1",
+    "type": "TEXT",
+    "bbox": {
+      "x": 90.5,
+      "y": 764,
+      "width": 209,
+      "height": 15
+    }
+  },
+  {
+    "id": "157:1317",
+    "name": "policy / line 2",
+    "type": "TEXT",
+    "bbox": {
+      "x": 153,
+      "y": 786,
+      "width": 84,
+      "height": 15
+    }
+  },
+  {
+    "id": "157:1318",
+    "name": "system / home indicator",
+    "type": "FRAME",
+    "bbox": {
+      "x": 128,
+      "y": 827,
+      "width": 134,
+      "height": 5
+    }
+  },
+  {
+    "id": "134:1240",
+    "name": "소셜 로그인",
+    "type": "FRAME",
+    "bbox": {
+      "x": 16,
+      "y": 554,
+      "width": 358,
+      "height": 168
+    }
+  },
+  {
+    "id": "134:1241",
+    "name": "BugMap Login / providerButton",
+    "type": "INSTANCE",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 358,
+      "height": 48
+    }
+  },
+  {
+    "id": "I134:1241;70:79",
+    "name": "Official Kakao SVG",
+    "type": "GROUP",
+    "bbox": {
+      "x": 62.13043212890625,
+      "y": 0,
+      "width": 233.7391357421875,
+      "height": 48
+    }
+  },
+  {
+    "id": "I134:1241;70:76",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 62.13043212890625,
+      "y": 0,
+      "width": 233.7391357421875,
+      "height": 48
+    }
+  },
+  {
+    "id": "I134:1241;70:77",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 126.32781982421875,
+      "y": 17.240869522094727,
+      "width": 13.518780708312988,
+      "height": 13.518784523010254
+    }
+  },
+  {
+    "id": "I134:1241;70:78",
+    "name": "Vector",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 148.04417419433594,
+      "y": 17.34271240234375,
+      "width": 83.15164947509766,
+      "height": 13.68041706085205
+    }
+  },
+  {
+    "id": "134:1246",
+    "name": "BugMap Login / providerButton",
+    "type": "INSTANCE",
+    "bbox": {
+      "x": 0,
+      "y": 60,
+      "width": 358,
+      "height": 48
+    }
+  },
+  {
+    "id": "I134:1246;70:81",
+    "name": "Official naver PNG",
+    "type": "RECTANGLE",
+    "bbox": {
+      "x": -5,
+      "y": 0,
+      "width": 368,
+      "height": 48
+    }
+  },
+  {
+    "id": "134:1248",
+    "name": "BugMap Login / providerButton",
+    "type": "INSTANCE",
+    "bbox": {
+      "x": 0,
+      "y": 120,
+      "width": 358,
+      "height": 48
+    }
+  },
+  {
+    "id": "I134:1248;70:83",
+    "name": "Official apple PNG",
+    "type": "RECTANGLE",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 358,
+      "height": 48
+    }
+  },
+  {
+    "id": "134:1251",
+    "name": "소개 제목 / 첫 줄",
+    "type": "TEXT",
+    "bbox": {
+      "x": 77.5,
+      "y": 155,
+      "width": 235,
+      "height": 41
+    }
+  },
+  {
+    "id": "134:1252",
+    "name": "약관 안내",
+    "type": "TEXT",
+    "bbox": {
+      "x": 69,
+      "y": 752,
+      "width": 252,
+      "height": 13
+    }
+  },
+  {
+    "id": "134:1253",
+    "name": "앱 소개",
+    "type": "TEXT",
+    "bbox": {
+      "x": 67,
+      "y": 258,
+      "width": 256,
+      "height": 17
+    }
+  },
+  {
+    "id": "134:1254",
+    "name": "iOS / 시간",
+    "type": "TEXT",
+    "bbox": {
+      "x": 26,
+      "y": 20,
+      "width": 31,
+      "height": 18
+    }
+  },
+  {
+    "id": "134:1255",
+    "name": "소개 제목 / 강조",
+    "type": "TEXT",
+    "bbox": {
+      "x": 97,
+      "y": 198,
+      "width": 196,
+      "height": 41
+    }
+  },
+  {
+    "id": "137:1272",
+    "name": "관찰 기록 / 곤충 이름",
+    "type": "TEXT",
+    "bbox": {
+      "x": 224,
+      "y": 375,
+      "width": 67,
+      "height": 15
+    }
+  },
+  {
+    "id": "137:1273",
+    "name": "지도 라벨 / 한강",
+    "type": "TEXT",
+    "bbox": {
+      "x": 64,
+      "y": 470,
+      "width": 21,
+      "height": 13
+    }
+  },
+  {
+    "id": "137:1274",
+    "name": "관찰 기록 / 설명",
+    "type": "TEXT",
+    "bbox": {
+      "x": 224,
+      "y": 394,
+      "width": 71,
+      "height": 12
+    }
+  },
+  {
+    "id": "137:1275",
+    "name": "지도 라벨 / 성수동",
+    "type": "TEXT",
+    "bbox": {
+      "x": 284,
+      "y": 328,
+      "width": 31,
+      "height": 13
+    }
+  },
+  {
+    "id": "137:1276",
+    "name": "지도 라벨 / 서울숲",
+    "type": "TEXT",
+    "bbox": {
+      "x": 84,
+      "y": 337,
+      "width": 31,
+      "height": 13
+    }
+  },
+  {
+    "id": "140:712",
+    "name": "BugMap-logo-vector",
+    "type": "FRAME",
+    "bbox": {
+      "x": 132.09341430664062,
+      "y": 72,
+      "width": 128,
+      "height": 39.68000030517578
+    }
+  },
+  {
+    "id": "140:713",
+    "name": "letter-B",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 4.736000061035156,
+      "y": 7.039996147155762,
+      "width": 18.559999465942383,
+      "height": 24.191999435424805
+    }
+  },
+  {
+    "id": "140:714",
+    "name": "letter-u",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 24.576000213623047,
+      "y": 13.183996200561523,
+      "width": 16.511999130249023,
+      "height": 18.304000854492188
+    }
+  },
+  {
+    "id": "140:715",
+    "name": "letter-g",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 42.36800003051758,
+      "y": 13.05599594116211,
+      "width": 18.43199920654297,
+      "height": 25.983999252319336
+    }
+  },
+  {
+    "id": "140:716",
+    "name": "letter-M",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 62.59199905395508,
+      "y": 7.039996147155762,
+      "width": 25.983999252319336,
+      "height": 24.31999969482422
+    }
+  },
+  {
+    "id": "140:717",
+    "name": "letter-a",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 89.98400115966797,
+      "y": 12.799996376037598,
+      "width": 16.895999908447266,
+      "height": 18.81599998474121
+    }
+  },
+  {
+    "id": "140:718",
+    "name": "letter-p",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 108.6719970703125,
+      "y": 13.05599594116211,
+      "width": 18.81599998474121,
+      "height": 25.983999252319336
+    }
+  },
+  {
+    "id": "140:719",
+    "name": "beetle-on-B",
+    "type": "GROUP",
+    "bbox": {
+      "x": 0.6399999856948853,
+      "y": 0.6890158653259277,
+      "width": 16.896453857421875,
+      "height": 29.39096450805664
+    }
+  },
+  {
+    "id": "140:720",
+    "name": "antenna-and-head",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 8.704352021217346,
+      "y": 0.6890058555600262,
+      "width": 8.831999778747559,
+      "height": 7.758981704711914
+    }
+  },
+  {
+    "id": "140:721",
+    "name": "upper-shell",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 2.432351589202881,
+      "y": 7.807986259460449,
+      "width": 6.5279998779296875,
+      "height": 7.679999828338623
+    }
+  },
+  {
+    "id": "140:722",
+    "name": "middle-shell",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 0.6403515482088551,
+      "y": 12.92798662185669,
+      "width": 8.447999954223633,
+      "height": 8.273741722106934
+    }
+  },
+  {
+    "id": "140:723",
+    "name": "lower-shell",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 0.6403515482088551,
+      "y": 20.351985454559326,
+      "width": 7.808000087738037,
+      "height": 9.727999687194824
+    }
+  },
+  {
+    "id": "140:724",
+    "name": "map-pin",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 70.52799987792969,
+      "y": 0.8959963321685791,
+      "width": 9.984000205993652,
+      "height": 15.104000091552734
+    }
+  },
+  {
+    "id": "140:725",
+    "name": "beetle-in-pin",
+    "type": "GROUP",
+    "bbox": {
+      "x": 73.47200012207031,
+      "y": 4.095996379852295,
+      "width": 4.0960001945495605,
+      "height": 4.223999977111816
+    }
+  },
+  {
+    "id": "140:726",
+    "name": "beetle-legs-and-antennae",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 73.47232043457916,
+      "y": 4.095984416961983,
+      "width": 4.0960001945495605,
+      "height": 4.223999977111816
+    }
+  },
+  {
+    "id": "140:727",
+    "name": "beetle-body",
+    "type": "VECTOR",
+    "bbox": {
+      "x": 74.36832040548325,
+      "y": 4.60798442363739,
+      "width": 2.303999900817871,
+      "height": 3.5840001106262207
+    }
+  }
+]

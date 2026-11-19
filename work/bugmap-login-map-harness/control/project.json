@@ -1,0 +1,27 @@
+{
+  "id": "bugmap-login-map-harness",
+  "purpose": "BugMap 05 로그인 기본 화면을 BugMapHaness에 디자인 하네스로 재구성",
+  "platform": "mobile",
+  "language": "ko",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "scope": {
+    "screen": "login",
+    "states": [
+      "default"
+    ],
+    "figmaRootCount": 1
+  },
+  "sourceDocuments": {
+    "AGENTS.md": "c4374f749618d10136c24e720011df1c3f31a5880525989d99a0fad9c04d715b",
+    "docs/PRD.md": "7f92a4d4c78feab03716d6716f8ba808fa2f4f784e0a84cef4eb736dce1a5ea9",
+    "docs/DESIGN.md": "11c83cb492e9d02a7c6e06eb1ed21aff612d5502c1d5ac256260a3b79cf457f6",
+    "docs/TDD.md": "dcc3e1650924cb5e5eb401ebec0f52e58cf866fc8b1848209900348b3a4b77fb",
+    "docs/screens/login.md": "c12a953aa29542e601ff64b041f9e8e0990a5bccbc77a5133146b4da0d112af9",
+    "docs/design-harness.md": "8fc9bd2d5ff0a56ecf9e681188615e084f4f519973f6cb51e2dafbf698a9767f"
+  }
+}

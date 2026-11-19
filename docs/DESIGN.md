@@ -176,6 +176,42 @@ The color architecture relies strictly on a singular chromatic anchor—Forest G
 - **Borders & Dividers (`#E5E7EB` / `#D1D5DB`):** Hairline borders delivering crisp definition without shadow reliance.
 - **Text Layers:** Deep Slate (`#111827`) for titles, Medium Neutral (`#4B5563`) for body and metadata, and Soft Gray (`#6B7280`) for captions and secondary coordinates.
 
+### 지도 중심 다크 팔레트
+
+2026-11-16에 제작한 [첫 로그인](https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=134-1239), [메인 발견 지도](https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=163-1319), [발견/채집 기록 작성](https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=164-1431)에 적용한다. 이 흐름을 확장할 때는 [`mapFlowColors`](../src/theme/tokens.ts)를 사용한다. 상단 YAML과 기존 `colors`는 라이트 시안 및 현재 로그인 구현의 기준이다.
+
+| 용도 | 색 | 적용 |
+|---|---|---|
+| 화면 바탕 | `#101C16` | 작성 화면 바탕과 로그인 지도의 상·하단 페이드. 로그인 프레임의 바탕은 `#0B130F`. |
+| 기본 텍스트 | `#F3F7EE` | 다크 배경의 제목·본문·주요 레이블. |
+| 보조 텍스트 | `#BDCDC2` / `#A7BBAD` | 비활성 탭·보조 아이콘 / 입력 힌트. |
+| 강조색 / 강조 버튼 글자 | `#C5EE79` / `#202E13` | 벡터 로고, 선택된 지도 탭, 관찰 마커, 발견/채집 기록하기와 작성완료 버튼. |
+| 지도 음영 | `rgba(11, 24, 18, 0.77)` / `rgba(16, 32, 25, 0.67)` | 메인 지도 / 작성 화면의 위치 미리보기. 로그인은 지도를 화면 끝까지 깔아 상·하단의 페이드가 자연스럽게 이어지게 한다. |
+| 내 주변 반경 | `rgba(147, 215, 83, 0.15)` / `#B5E974` | 반경 필터 적용 시 원형 영역의 채움과 윤곽. |
+| 기록 묶음·선택 카드 | `#18271F` / `#192B20` | 집계 마커 바탕 / 선택 기록 카드 바탕. |
+| 현재 위치 | `#82D0F0` / `rgba(130, 208, 240, 0.17)` | GPS 중심점 및 현재 위치 아이콘 / 위치 표시의 바깥 원. |
+| 하단 지도 패널 | `#131E18` / `#3B4D42` | 검색·탭을 묶는 패널 바탕과 테두리. |
+| 지도 검색창 | `#26342D` / `#3D5145` | 검색 입력 바탕과 테두리. |
+| 활성 지도 탭 | `#2F4433` / `#52694A` | 선택된 탭 바탕과 테두리. 아이콘·레이블은 강조색을 사용한다. |
+| 기록 작성 입력 | `#1C2C23` / `#3D5044` | 위치, 날짜·시간, 상황 메모 필드의 바탕과 테두리. |
+| 사진 추가 칸 | `#26382C` / `#526954` | 사진 추가 칸의 바탕과 테두리. 카메라 아이콘은 강조색을 사용한다. |
+| 작성 하단 영역 | `#152219` | 작성완료 버튼이 놓이는 하단 바탕. |
+
+새 화면의 버튼·필드·패널에는 위 역할에 해당하는 토큰을 우선 적용한다. GPS는 위치 기능에 사용하고 소셜 로그인은 제공자별 공식 버튼 색을 사용한다.
+
+### 메인 발견 지도
+
+Figma `07 · 메인 / 발견 지도`의 다크 지도와 하단 패널을 바탕으로 적용한다. [화면 명세](./screens/main-map.md), [PRD](./PRD.md#5-기능-요구사항), [TDD](./TDD.md#지도-표시와-내-주변-반경)
+
+| 상태 | 시각·인터랙션 기준 |
+|---|---|
+| 지도 기본 | Mapbox 지도 위에 공식 로고와 SDK의 출처 정보 버튼(`ⓘ`)을 둔다. 지도가 보이는 동안 두 요소가 읽히고 정보 버튼을 누를 수 있도록 하단 패널·상세 카드·안전 영역을 감안해 배치한다. 로고는 공식 형태와 색을 유지한다. [Mapbox 출처 표시 지침](https://docs.mapbox.com/help/dive-deeper/attribution/) |
+| 내 주변 반경 적용 | 현재 위치 중심의 원을 `mapFlowColors.observationFill`과 `mapFlowColors.observationOutline`으로 그린다. 지형 위에 얇고 옅게 표시하고 위치점·마커는 그 위에 둔다. 예를 들어 `내 위치 기준 · 5 km 이내`로 거리 기준을 표시한다. 기본·`전체` 상태와 위치 미확인 상태에서는 연두색 경계를 숨긴다. 하늘색 현재 위치 점과 위치 표시용 바깥 원은 별도의 시각 요소다. |
+| 축소·확대 | 축소 시 가까운 기록을 수량 배지가 있는 묶음으로 표시한다. 확대하면 개별 마커를 보여준다. 묶음을 탭하면 해당 위치를 확대하고, 같은 공개 좌표에서 계속 겹치는 기록은 목록으로 선택할 수 있게 한다. |
+| 개별 기록 선택 | 선택한 마커를 강조하고 지도 위 하단 패널 위쪽에 카드 한 장을 띄운다. 카드에 사진 썸네일·곤충명·관찰/채집 유형·실제 발견 일시와 상세 열기 동작을 배치한다. 카드 변경·닫기에 맞춰 선택 강조를 갱신한다. |
+
+후속 디자인 검수에서는 기본과 반경 적용, 축소와 확대, 개별 기록 선택 상태를 확인한다. 카드·패널이 열린 상태에서 지도에 남은 공간으로 출처 버튼을 누를 수 있는지 확인한다.
+
 ## Typography
 Typography is strictly anchored to Pretendard (with fallback to neutral system sans-serif like Inter). The scale is rigorously structured around three explicit weight roles: **Light (300)** for long-form narrative body and scientific descriptions, **Medium (500)** for interactive labels, taxonomy chips, and subheaders, and **Bold (700)** for primary headlines and data values.
 

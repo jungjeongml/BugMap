@@ -1,0 +1,3 @@
+id,requirement,severity,status,detail
+V-01,LOGIN-05-06,required,resolved,원본 전후 노드 정보·승인 원시 트리 기준 레이어 102개의 ID와 유형·PNG 일치. 원시 트리 속성 전체는 새 브리지에서 미지원
+V-02,LOGIN-05-05,minor,documented,원격 Figma의 텍스트 폭이 SVG 검증본보다 조금 좁음. 편집 가능한 텍스트 및 가독성 유지

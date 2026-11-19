@@ -1,0 +1,41 @@
+html,
+body {
+  margin: 0;
+  background-color: #0B130F;
+  color: #F3F7EE;
+}
+
+.screen {
+  position: relative;
+  max-width: 390px;
+  margin-inline: auto;
+}
+
+.artwork {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.artwork text {
+  font-family: Pretendard, Inter, 'Apple SD Gothic Neo', sans-serif;
+}
+
+.provider-controls {
+  position: absolute;
+  top: 65.63981043%;
+  left: 4.10256410%;
+  width: 91.79487179%;
+  height: 19.90521327%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 7.14285714%;
+}
+
+.provider-controls button {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  border-radius: 32px;
+  background: transparent;
+}

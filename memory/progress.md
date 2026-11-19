@@ -193,3 +193,68 @@
 - 커밋 범위: .design-harness.json, example/kyroFirstPage.png, work/bugmap-login-kyro/ 전체 산출물과 이 진행 기록. 사람의 기존 승인 기록은 변경 없이 포함한다.
 - 검증: JSON33개 파싱 및 JavaScript스크립트6개 node --check 통과, git diff --check 통과. 새 하네스검사1~5passed/6in_progress(nodes.json누락),7~8blocked 확인.
 - 남은 일: 지도·글꼴·전체원격구조검증 등6단계미완료사항 유지. 이번 커밋은 부분결과 보존이며 디자인완료나후속단계승인이 아니다.
+
+## 2026-11-16 — 지도 중심 화면 색상 기준 정리
+
+- Figma의 첫 로그인(134:1239), 메인 발견 지도(163:1319), 발견/채집 기록 작성(164:1431)에 사용한 공통 색을 `src/theme/tokens.ts`의 `mapFlowColors`와 `docs/DESIGN.md`에 추가했다. 화면별 Figma 링크와 색상 역할은 공통 디자인 문서에서 확인할 수 있다.
+- 검증: 제작 시 사용한 색상 값과 기존 렌더링을 기준으로 정리했고 토큰 26개의 문서 일치, `npm run typecheck`, `git diff --check`를 확인했다. Figma 재조회는 시간 초과됐다. 앱 화면에 다크 토큰을 연결하는 작업은 후속 범위다.
+
+## 2026-11-16 — Cursor MCP 로그인 전체 노드 내보내기
+
+- Cursor MCP 서버와 로컬 Figma 플러그인에 읽기 전용 `get_node_tree`를 추가했다. 기존 로그인 프레임 156:1282의 노드 36개(벡터 16개)를 스캔 결과와 대조했고, 이미지 해시 2개를 확인했다. 파일 키는 기존 노드 매핑의 Figma URL과 대조했다.
+- 산출물은 [nodes.json](../work/bugmap-login-kyro/06-figma/nodes.json)과 [Figma 검사 보고서](../work/bugmap-login-kyro/07-validation/figma-lint.json)다. 검사는 오토레이아웃 미적용 11건과 기본 항등 변환을 이미지 변경으로 보고한 2건을 기록했다. `check`는 1~5단계 통과, Figma 단계 진행 중이다.
+- 기존 Figma 프레임은 조회만 했다. 오토레이아웃과 이미지 검사 규칙 확인은 후속 작업이다.
+
+## 2026-11-19 — 메인 발견 지도 제품·디자인 기준 갱신
+
+- [PRD](../docs/PRD.md)와 [DESIGN](../docs/DESIGN.md)에 Mapbox 로고·출처, 내 주변 반경, 확대 수준별 기록 표시, 개별 기록 상세 카드의 요구사항과 검수 기준을 추가했다. [TDD](../docs/TDD.md)에 지도 레이어 기반 구현을 남기고 [화면 명세](../docs/screens/main-map.md)에 07 시안의 적용 기준을 연결했다.
+- 문서 내 요구사항과 공식 Mapbox 출처 지침을 대조했다. 네이티브 지도 연동과 Figma 시안 반영은 후속 작업이다.
+
+## 2026-11-19 — BugMapHaness 05 로그인 하네스 준비
+
+- [실행 PRD](../work/bugmap-login-map-harness/01-prd/PRD.md), 수용 기준 6개와 [재개 메모](../work/bugmap-login-map-harness/control/flow.md)를 준비했다. BugMap의 05 원본 390×844 PNG와 노드 조회를 보관했고, 대상 채널에 연결해 Page 1과 기존 지도 7:2를 확인했다.
+- 원본 캡처를 열고 해시·치수 및 수용 기준을 대조했다. 독립 비평의 자산·레이어·버튼 검수 제안을 반영했다. 사용자가 공유한 링크의 파일 키와 페이지를 대상 설정에 고정했다. 하네스가 요구하는 PRD 사람 승인과 대상 전체 노드 검증 경로 확인이 남았다. Figma 제작은 시작하지 않았다.
+
+## 2026-11-19 — BugMapHaness 05 로그인 리서치·구조·와이어프레임
+
+- PRD 승인 `bc172c53-cf59-4d91-9d5e-66658726b19b`을 확인했다. [리서치](../work/bugmap-login-map-harness/02-research/findings.md)는 원본 PNG와 2026-11-12 제공자 공식 캡처 3장을 직접 대조하고, 2026-11-19 공식 본문과 승인 시안의 차이를 기록했다.
+- [화면 구조](../work/bugmap-login-map-harness/03-structure/screens.csv)와 [기본형 390×844 와이어프레임](../work/bugmap-login-map-harness/04-wireframes/captures/login/default.png)을 작성했다. 로컬 Chromium 실행 권한으로 SVG·PNG를 생성했다. 경계선과 겹친 ‘한강’을 수정하고 재캡처했다. 버튼 크기 358×48px, 간격 12px, 한 화면·수용 조건 6개 연결 및 해시를 검증했다. 리서치와 구조·와이어프레임 독립 비평은 준비 완료로 판정했다.
+- 다음 단계는 사용자 와이어프레임 승인 뒤 디자인 시스템이다. 원본과 대상의 Figma 편집 및 실제 제공자 로그인 연동은 진행하지 않았다. 재개 명령은 [진행 메모](../work/bugmap-login-map-harness/control/flow.md)에 있다.
+
+## 2026-11-19 — BugMapHaness 05 로그인 디자인 시스템 시안
+
+- 와이어프레임 승인 `c375b92c-4613-406e-89d7-9dbc42903756`을 확인했다. [디자인 명세](../work/bugmap-login-map-harness/05-design-system/DESIGN.md), [390×844 기본 시안](../work/bugmap-login-map-harness/05-design-system/captures/390x844-default.png), [자산·대조 결과](../work/bugmap-login-map-harness/05-design-system/review.md)를 준비했다. 원본 지도·페이드 합성 PNG, 무배경 #C5EE79 SVG, 358×48px·간격 12px·모서리 설정 32px 소셜 버튼을 적용했다.
+- 로컬 Chromium 캡처를 직접 확인했다. Apple 버튼 이미지의 외곽 마스킹을 수정하고 경계와 한강 라벨을 밝게 보정했다. 최종 기하 9건·대비 13건, 등록 PNG 3개 해시 검증, 독립 비평을 마쳤다.
+- 디자인 시스템 사람 승인 뒤 BugMapHaness에서 편집한다. 대상 파일에 실제 프레임은 아직 추가하지 않았으며 전체 노드 내보내기와 원격 레이어·시각 비교가 남았다.
+
+## 2026-11-19 — BugMapHaness 05 데스크톱 CLI 제작 준비
+
+- 디자인 시스템 승인 `ae7e9258-e0ef-465b-a759-45c6bef54c98`를 확인했다. CLI로 채널 y5fz18ft의 BugMapHaness Page 1과 기존 02 노드 7:2를 조회했다. 실행 중인 플러그인의 SVG 가져오기 및 전체 트리 미지원을 확인했다.
+- 기존 로컬 개발용 Cursor MCP Plugin에 대상·승인 시안 전용 제작 명령을 추가했다. [CLI 경로](../work/bugmap-login-map-harness/06-figma/cli/README.md), [읽기 확인](../work/bugmap-login-map-harness/06-figma/cli-preflight.json), [검증용 HTML](../work/bugmap-login-map-harness/06-figma/web/login.html)을 저장했다. 플러그인 원본 백업 및 구문 검사, 모의 대상 보호·실패 복구·중복 방지 검사를 수행했다.
+- 대상 플러그인 재실행과 새 채널 연결을 기다린다. 이 시점에는 Figma 프레임 제작이나 원격 캡처, Figma 검사, HTML 실렌더를 수행하지 않았다. 브라우저로 화면을 그리지 않았다.
+
+## 2026-11-19 — 전용 데스크톱 CLI 연결 준비
+
+- 재실행 채널 `8wmnqe92`에서 BugMapHaness Page 1과 기존 지도 `7:2`를 다시 확인했다. 새 제작 확인 명령과 전체 트리 명령이 둘 다 Unknown으로 응답해 이전 플러그인 명령이 로드됐음을 확인했다.
+- 로컬 전용 개발 플러그인 [매니페스트](/Users/mac/Documents/ChatGPT/BugMap/bugmap05-figma-cli/manifest.json)를 준비했다. 새 이름은 BugMap 05 CLI이며 포트 3055의 `k7v4m3p9`만 사용한다. 모의 UI 요청·응답, 코드 구문을 검증했다. Figma 원격 제작과 캡처는 전용 플러그인의 실행을 기다린다.
+
+## 2026-11-19 — BugMapHaness 05 로그인 CLI 제작 및 검수
+
+- 사용자가 새로 제공한 채널 `o5pf3rim`의 기존 개발용 Cursor MCP Plugin에서 제작 명령이 동작했다. Figma 데스크톱에 390×844 [로그인 19:2](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHaness?node-id=19-2) 한 장을 CLI로 제작했다. 별도 개발 플러그인은 쓰지 않았다.
+- 최종 [원격 PNG](../work/bugmap-login-map-harness/06-figma/captures/login-default.png)에서 지도·페이드와 소셜 자산, 벡터 로고를 직접 검수했다. SVG 치수와 소개 오토레이아웃을 보정했다. Figma 검사 74개 노드 및 HTML 검수 이슈 0건이며 HTML과 승인 PNG 비교 변경 픽셀 0건이다.
+- 대상 기존 `7:2`는 PRD·제작 직전·최종 해시가 같다. 원본 파일에 쓰지 않았고 원본 제작 후 재조회는 타임아웃으로 남았다. [원격 보존 기록](../work/bugmap-login-map-harness/06-figma/preservation.json) · [검증 결과](../work/bugmap-login-map-harness/07-validation/report.md)
+
+## 2026-11-19 — BugMap 원본 05 보존 대조 완료
+
+- 새 채널 `q1ph8ega`의 원본 BugMap 05를 CLI로 읽었다. 제작 전후 `get_node_info` 해시, 레이어 102개의 ID·유형, 390×844 PNG 전체 바이트가 일치했다. 해당 채널의 `get_node_tree` 미지원은 [원본 비교 근거](../work/bugmap-login-map-harness/06-figma/preservation/source-compatible-report.json)에 남겼다.
+- [검증 보고서](../work/bugmap-login-map-harness/07-validation/report.md), 수용 조건 6개, 독립 비평을 갱신했다. 대상 지도 7:2 보존 근거와 Figma·HTML 자동 검사 결과를 유지했다. 최종 검수 점수와 승인은 사람이 기록해야 한다.
+
+## 2026-11-19 — BugMapHaness 첫 로그인 핸드오프 준비
+
+- 검증 승인 `835f3541-c6fd-429d-b509-5e72826e3a93`을 확인하고 [핸드오프](../work/bugmap-login-map-harness/08-handoff/HANDOFF.md), 개발 메모, 전달 자산 7개, 미결 항목과 매니페스트를 만들었다.
+- Figma 캡처를 직접 확인했다. 요구사항 6개, 자산의 원본 바이트, 매니페스트 해시와 상대 링크를 대조했다. 독립 비평의 제안에 따라 약관 노드 및 컴포넌트 이름을 추가했다. 핸드오프 수락은 사람이 기록한다.
+
+## 2026-11-19 — BugMapHaness 첫 로그인 디자인 하네스 완료
+
+- 최종 핸드오프 승인 `949fe250-4b1a-40fe-a4f3-e6bed0268854`를 확인했다. 하네스의 실제 검사에서 8단계 모두 `passed`, `complete: true`였다.
+- [Figma 19:2](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHaness?node-id=19-2), [핸드오프](../work/bugmap-login-map-harness/08-handoff/HANDOFF.md), [검증 보고서](../work/bugmap-login-map-harness/07-validation/report.md)를 연결했다. 제품 인증과 실기기 검증은 [미결 항목](../work/bugmap-login-map-harness/08-handoff/open-items.md)을 따른다.

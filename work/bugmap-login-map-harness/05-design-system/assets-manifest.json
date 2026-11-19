@@ -1,0 +1,32 @@
+{
+  "sourceGuide": "asset-sources.md",
+  "files": [
+    {
+      "path": "assets/map-background.png",
+      "bytes": 301960,
+      "sha256": "bca6b166822104e1f2a8dd60e4d5b78aeda825dff520ca3ae554a4b1df521d5d",
+      "dimensions": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "path": "assets/naver-content.png",
+      "bytes": 4219,
+      "sha256": "a0332ea201a3d9f6e92603ff875a40d1f3a51c05076a14a7b00e7493af32f500",
+      "dimensions": {
+        "width": 560,
+        "height": 112
+      }
+    },
+    {
+      "path": "assets/apple-login.png",
+      "bytes": 6363,
+      "sha256": "fa13268354c9d261f4bb5cfb7d7e73c7030b8c1f849a114fa7b6b0c382079e89",
+      "dimensions": {
+        "width": 716,
+        "height": 96
+      }
+    }
+  ]
+}

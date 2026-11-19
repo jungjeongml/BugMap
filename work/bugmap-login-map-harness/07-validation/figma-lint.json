@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "command": "lint:figma",
+  "inputs": {
+    "04-wireframes/wireframes.json": "8b514a87bae4bfa260d5935444fa1d3cfd64248af2189b15c2da62820d3517fa",
+    "05-design-system/assets-manifest.json": "ff7d9f062230f60cdf08bd3d3fc06ead7bef5967e8c6c4b7c9c75477d5eb7618",
+    "05-design-system/assets/apple-login.png": "fa13268354c9d261f4bb5cfb7d7e73c7030b8c1f849a114fa7b6b0c382079e89",
+    "05-design-system/assets/map-background.png": "bca6b166822104e1f2a8dd60e4d5b78aeda825dff520ca3ae554a4b1df521d5d",
+    "05-design-system/assets/naver-content.png": "a0332ea201a3d9f6e92603ff875a40d1f3a51c05076a14a7b00e7493af32f500",
+    "05-design-system/components.json": "cb02ee6c61347881808afa274ecd2d6dcc2d53310df2c6f425eb524efc076fd2",
+    "05-design-system/copy.json": "0434e9cfd73824599d669104c76c4fd0b447bec6441df0a9f5d8d830e6f0a308",
+    "05-design-system/tokens.json": "f06e7037888fcc9bb59ae03e7d80c2077d446d0dcb48142952463ea221c37db2",
+    "06-figma/node-map.json": "bb27571a6e65901d03fd30cfbdacc6c032bbc08c709b9d7d8ae090d051de6ef1",
+    "06-figma/nodes.json": "7f6ad9dcdcc03cc9931a223306ce06999009a73f7b2263092eccb684dca94751",
+    "control/figma.json": "2d062a50a0e7c15ae856a491257bd2b7691637b7aaa13c8018005056bf3c1b53"
+  },
+  "issues": [],
+  "nodeCount": 74
+}

@@ -1,0 +1,25 @@
+{
+  "strings": {
+    "title": "오늘 만난 곤충을",
+    "titleAccent": "지도에 남겨요",
+    "description": "사진으로 기록하고, 주변의 발견을 살펴봐요.",
+    "park": "서울숲",
+    "district": "성수동",
+    "river": "한강",
+    "observationTitle": "넓적사슴벌레",
+    "observationMeta": "서울숲 관찰 기록",
+    "kakao": "카카오 로그인",
+    "naver": "네이버 로그인",
+    "apple": "Apple로 로그인",
+    "policy": "계속하면 이용약관 및 개인정보 처리방침에 동의합니다.",
+    "time": "9:41"
+  },
+  "forbidden": [
+    "AI 곤충 식별",
+    "정확도 98%",
+    "무조건 성공",
+    "3초 만에 가입",
+    "100만 사용자가",
+    "절대 안전"
+  ]
+}

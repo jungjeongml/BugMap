@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-19T10:24:19.556Z",
+  "target": {
+    "id": "7:2",
+    "preBuild": "37fbe9a943fcc9123c0f110e87f6e99ef9052edb139d61bc43ceb73eab0bae5d",
+    "approvedBaseline": "37fbe9a943fcc9123c0f110e87f6e99ef9052edb139d61bc43ceb73eab0bae5d",
+    "current": "37fbe9a943fcc9123c0f110e87f6e99ef9052edb139d61bc43ceb73eab0bae5d",
+    "unchanged": true
+  },
+  "source": {
+    "id": "134:1239",
+    "preBuild": "c4014ed4d99be6b04176ad04fbc854a7d454b915d3179887fc6a20e3e4c20200",
+    "previousAttempt": {
+      "checkedAt": "2026-11-19T10:24:19.556Z",
+      "error": "McpError: MCP error -32001: Request timed out"
+    },
+    "checkedAt": "2026-11-19T12:09:36.949Z",
+    "channel": "q1ph8ega",
+    "rawTreeAfter": "unavailable_on_current_bridge",
+    "structureAndCaptureMatch": true,
+    "evidence": "preservation/source-compatible-report.json"
+  }
+}
