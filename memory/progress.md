@@ -384,3 +384,10 @@
 
 - 개발 인계 수락 `1d0bf29f-0f84-4434-a9ce-790f28e3670f`가 현재 산출물과 일치함을 확인했다. 하네스 1~8단계가 모두 `passed`이며 `complete: true`였다.
 - [최종 개발 인계서](../work/bugmap-record-entry-harness/08-handoff/HANDOFF.md)와 [검수 보고서](../work/bugmap-record-entry-harness/07-validation/report.md)를 연결했다. 실제 촬영·GPS·저장 검증과 공개 위치 정밀도 결정은 [제품 확인 항목](../work/bugmap-record-entry-harness/08-handoff/open-items.md)에 있다.
+
+## 2026-11-20 — 첫 로그인 Mapbox 스냅샷과 소셜 인증
+
+- Cursor MCP로 [BugMapHarness 첫 로그인](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)에 지도 원본을 다시 렌더링한 390×844 Mapbox Standard 스냅샷과 공식 Google G 표시를 반영했다. 원격 노드와 캡처에서 출처 표시, 카카오·Google·Apple 버튼, 기존 약관 링크 두 개를 확인했다. [화면 명세](../docs/screens/login.md)
+- Sol로 네이티브 소셜 로그인과 NestJS·SQLite 개발 서버를 구현했다. Astra 검증에서 앱 인증·정책 테스트 24개, 서버 테스트 11개, 앱·서버 타입 검사가 통과했다. 앱과 로컬 서버 간 모의 제공자 로그인, 갱신, 보호 API와 로그아웃을 확인했다. [구현 계약과 검증](../docs/superpowers/plans/2026-11-20-social-login-and-mapbox.md)
+- Expo 웹·iOS·Android 번들 생성과 서버 런타임 의존성 검사에서 취약점 0건을 확인했다. 전체 앱 테스트에서 기존 디자인 하네스 Chromium 검사 두 건은 시간 초과와 기준 이미지 누락으로 실패했다.
+- 실제 계정 검증에 공개 HTTPS 개발 주소, 카카오·Google·Apple 개발자 등록과 네이티브 기기가 필요하다. 정책 게시 주소와 네이티브 발견 지도 화면이 남아 있다. [서버 설정](../server/README.md)

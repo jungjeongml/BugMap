@@ -8,7 +8,7 @@
   },
   "scripts": {
     "design-harness": "node tools/design-harness/bin/design-harness",
-    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tools/design-harness/test/*.test.mjs src/features/auth/policyDocuments.test.mjs",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tools/design-harness/test/*.test.mjs src/features/auth/*.test.mjs",
     "start": "expo start",
     "ios": "expo start --ios",
     "android": "expo start --android",
@@ -20,6 +20,9 @@
   },
   "dependencies": {
     "expo": "~58.0.0",
+    "expo-crypto": "~58.0.7",
+    "expo-secure-store": "~58.0.2",
+    "expo-web-browser": "~58.0.7",
     "lucide-react-native": "^1.70.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",

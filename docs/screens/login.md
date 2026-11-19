@@ -2,6 +2,13 @@
 
 공통 시각 기준은 [DESIGN.md](../DESIGN.md), 요구사항은 [PRD](../PRD.md), 기술 결정은 [TDD](../TDD.md)를 따른다. 아래는 해당 화면의 구성과 예외이며, 실제 작업·검증 이력은 [진행 기록](../../memory/progress.md)을 참고한다.
 
+## 첫 로그인 지도 배경 · 2026-11-20
+
+- [BugMapHarness 05](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)에는 [메인 지도 시안](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81)의 서울숲·성수동 구도를 Mapbox GL JS 3.35.0에서 재현한 390×844 스냅샷을 사용한다. Mapbox Standard의 야간·단색 스타일, 지구본 투영, 중심 경도 127.039·위도 37.5425, 줌 14, 방향과 기울기 0을 적용했다. 로고와 출처 표시는 하단에 둔다.
+- 로그인 제공자는 카카오·Google·iOS의 Apple이다. Google 버튼은 [Google 공식 자산](https://developers.google.com/identity/branding-guidelines)의 G 표시와 한국어 레이블을 사용한다.
+- 하단 `이용약관`과 `개인정보처리방침`은 각각 밑줄을 표시한다. 실제 문서는 게시 전이며, 앱은 문서별로 준비 중 상태를 알린다.
+- [변경 범위와 앱·서버 계약](../superpowers/plans/2026-11-20-social-login-and-mapbox.md)을 참고한다.
+
 ## 선택 프레임 기준 초기 코드
 
 - 2026-11-09 구현 기준은 기존 `01 · 로그인 / iOS`가 아니라, 사용자가 현재 선택한 `Container` **노드 `2:3`(390×804.75)** 이다. 배경은 부모 `2:2`의 `#FAF8FF`를 따른다. [배경 포함 참조 캡처](../../design/login/reference/2:2.png).

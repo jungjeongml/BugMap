@@ -1,12 +1,12 @@
 import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { LoginScreen } from './src/features/auth/LoginScreen';
+import { AuthFlow } from './src/features/auth/AuthFlow';
 
 export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle="dark-content" />
-      <LoginScreen />
+      <AuthFlow />
     </SafeAreaProvider>
   );
 }

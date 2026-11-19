@@ -2,6 +2,8 @@
   "expo": {
     "name": "곤충맵",
     "slug": "bugmap",
+    "scheme": "bugmap",
+    "plugins": ["expo-secure-store"],
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",

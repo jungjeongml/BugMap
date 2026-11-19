@@ -1,6 +1,6 @@
 # 곤충맵
 
-React Native + Expo + TypeScript 앱의 초기 화면 구현입니다. 현재는 Figma에서 선택한 로그인 프레임 `2:3`의 화면만 작성했습니다. 서버·인증·세션·AI·지도 서비스는 연결하지 않았습니다.
+BugMap은 React Native와 Expo로 만드는 곤충 발견 기록 앱입니다. 현재 앱의 시작 화면과 카카오·Google·iOS Apple 로그인, 개발용 인증 서버가 구현되어 있습니다.
 
 ## 실행
 
@@ -29,20 +29,19 @@ npm run export:web
 - `tools/design-harness/`: Node 20+ 독립 CLI. [사용법과 승인 계약](tools/design-harness/README.md).
 
 - `App.tsx`, `index.ts`: 앱 진입점, 상태바·안전 영역 설정.
-- `src/features/auth/LoginScreen.tsx`: 브랜드, 소셜 버튼, 보조 동작·안내.
-- `src/features/auth/FeatureCarousel.tsx`: 가로 소개 카드와 페이지 표시.
-- `src/features/auth/loginContent.ts`: 소개 카드 문구.
+- `src/features/auth/`: 시작 화면, 정책 링크, 소셜 인증과 기기 세션 복구.
+- `server/`: NestJS 개발용 인증 서버와 SQLite 저장소.
 - `src/features/auth/AppIcon.tsx`: Lucide 아이콘 이름과 화면 사용 위치 연결.
 - `src/theme/tokens.ts`: 선택 화면의 색상·치수.
 - `design/login/reference/2:2.png`: 배경을 포함한 **Figma 참조 캡처**. 앱 실행 결과가 아닙니다.
 
-## 현재 동작과 범위
+## 소셜 로그인 개발 환경
 
-- 소개 카드는 가로 스크롤과 페이지 표시를 구성했습니다. 런타임 검증은 설치 후 필요합니다.
-- 카카오·네이버·Apple 및 이메일·비회원 버튼은 디자인을 유지하면서 접근성 상태를 비활성으로 지정했습니다. 인증 호출·외부 이동·가짜 로그인 성공 처리는 없습니다.
-- 약관은 디자인 문구만 표시합니다. 실제 정책 페이지와 동의 처리는 후속 작업입니다.
-- 선택 프레임의 네이버·AI·경로 안내·정확도·사용자 수·보안 문구는 디자인 참고용입니다. PRD의 확정 기능·검증된 수치·실제 보안을 뜻하지 않습니다. 출시 전에 정합성을 조정해야 합니다.
-- 배경 `#FAF8FF`, 제공자 고유색은 현재 선택 시안을 우선했습니다. 기기 시스템 글꼴을 사용하며, Figma의 작은 고정 텍스트 프레임을 그대로 복제해 글자를 자르지 않도록 자연스러운 줄 높이를 사용했습니다.
+1. 개발용 인증 서버의 공개 HTTPS 주소와 사용할 제공자 설정을 준비한다. [서버 실행 및 제공자 등록](server/README.md)
+2. 루트 환경 파일의 `EXPO_PUBLIC_BUGMAP_AUTH_API_URL`에 서버의 HTTPS origin을 넣는다. [앱 환경 변수 예시](.env.example)
+3. `npx expo run:ios` 또는 `npx expo run:android`로 네이티브 앱을 빌드한다. 웹과 Expo Go에서는 로그인 화면과 정책 링크를 미리 볼 수 있다.
+
+이용약관과 개인정보처리방침은 각각 게시 전 안내를 표시한다. 주소 설정 후 두 링크가 각자 문서를 연다. 로그인 성공 후 앱에서 세션 상태와 로그아웃을 확인할 수 있다. 실제 발견 지도 화면은 별도 구현 범위다.
 
 Expo 버전 조합은 [SDK 호환 표](https://docs.expo.dev/versions/latest/)와 [SDK 58 TypeScript 템플릿](https://github.com/expo/expo/blob/sdk-58/templates/expo-template-blank-typescript/package.json), 안전 영역은 [공식 문서](https://docs.expo.dev/versions/latest/sdk/safe-area-context/)를 기준으로 작성했습니다. 실제 설치 호환성은 아직 확인하지 못했습니다.
 
