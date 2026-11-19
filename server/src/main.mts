@@ -10,7 +10,9 @@ const port = Number(process.env.PORT ?? 3000);
 if (!Number.isInteger(port) || port < 1 || port > 65_535) throw new Error('Invalid PORT');
 
 const providers = await createProviders(origin, process.env);
-if (!Object.keys(providers).length) throw new Error('Configure at least one login provider');
+if (!Object.keys(providers).length && process.env.AUTH_ALLOW_UNCONFIGURED !== 'true') {
+  throw new Error('Configure at least one login provider');
+}
 
 process.umask(0o077);
 const store = new AuthStore(process.env.AUTH_DB_PATH || './.bugmap-auth.sqlite3');

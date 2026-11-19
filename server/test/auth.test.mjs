@@ -28,6 +28,9 @@ async function launch(t, databasePath = ':memory:', providerIds = ['google', 'ka
   t.after(() => app.close());
   await app.listen(0, '127.0.0.1');
   const base = await app.getUrl();
+  function health() {
+    return fetch(base + '/healthz');
+  }
   function request(path, options = {}) {
     return fetch(base + '/v1/auth/' + path, { redirect: 'manual', ...options });
   }
@@ -76,8 +79,17 @@ async function launch(t, databasePath = ':memory:', providerIds = ['google', 'ka
     assert.equal(response.status, 200);
     return response.json();
   }
-  return { authorize, begin, callback, code, exchange, login, post, request };
+  return { authorize, begin, callback, code, exchange, health, login, post, request };
 }
+
+test('reports readiness and provider setup through a public health endpoint', async t => {
+  for (const [providerIds, authentication] of [[[], 'unconfigured'], [['google'], 'configured']]) {
+    const app = await launch(t, ':memory:', providerIds);
+    const result = await app.health();
+    assert.equal(result.status, 200);
+    assert.deepEqual(await result.json(), { status: 'ready', authentication });
+  }
+});
 
 test('requires an exact app redirect and an S256 challenge', async t => {
   const app = await launch(t);

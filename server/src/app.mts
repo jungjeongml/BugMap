@@ -58,6 +58,17 @@ class StoreShutdown implements OnApplicationShutdown {
   }
 }
 
+@Controller()
+class HealthController {
+  constructor(@Inject(providersToken) private readonly providers: Providers) {}
+
+  @Get('healthz')
+  health() {
+    const authentication = Object.keys(this.providers).length ? 'configured' : 'unconfigured';
+    return { status: 'ready', authentication };
+  }
+}
+
 @Controller('v1/auth')
 class AuthController {
   constructor(
@@ -178,7 +189,7 @@ class AuthController {
 
 export async function createAuthApp(store: AuthStore, providers: Providers): Promise<NestExpressApplication> {
   @Module({
-    controllers: [AuthController],
+    controllers: [AuthController, HealthController],
     providers: [
       { provide: AuthStore, useValue: store },
       { provide: providersToken, useValue: providers },

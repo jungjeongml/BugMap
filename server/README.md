@@ -11,13 +11,21 @@ npm start
 
 `.env`에서 `AUTH_PUBLIC_ORIGIN`에 기기가 접속할 수 있는 HTTPS 도메인을 넣고, 사용할 제공자의 설정을 채운다. 사용하지 않는 제공자는 해당 변수 그룹 전체를 비워 둔다. 서버는 기본적으로 `127.0.0.1:3000`에서 수신한다. HTTPS 리버스 프록시가 이 포트로 요청을 전달하도록 설정하고, 앱의 `EXPO_PUBLIC_BUGMAP_AUTH_API_URL`에는 같은 HTTPS origin을 넣는다. Apple 콜백에는 localhost나 IP 주소 대신 공개 도메인이 필요하다. 프록시 요청 로그에는 인증 URL의 쿼리, 요청 본문, 인증 헤더·쿠키를 남기지 않는다.
 
+## 인증 제공자 등록 전 HTTPS 확인
+
+개발 서버 주소를 먼저 등록해야 할 때는 `.env`의 `AUTH_ALLOW_UNCONFIGURED=true`를 사용한다. 제공자가 준비되기 전에도 `GET /healthz`가 HTTP 200과 `authentication: unconfigured`를 반환한다. 각각의 로그인 요청은 앱으로 돌아가 제공 준비 상태를 알린다. 등록을 마친 제공자의 값을 넣고 인증 서버만 다시 시작하면 같은 콜백 주소를 쓸 수 있다. 기본값은 제공자를 하나 이상 설정해야 서버가 시작된다.
+
+Cloudflare Quick Tunnel을 사용한 테스트 주소는 터널 프로세스가 살아 있는 동안 유지된다. 테스트 중에는 Mac과 터널을 켜 둔다. 새 주소가 나오는 경우 서버의 `AUTH_PUBLIC_ORIGIN`, 앱의 `EXPO_PUBLIC_BUGMAP_AUTH_API_URL`, 콘솔에 등록한 콜백을 함께 바꾼다. [Cloudflare Quick Tunnels](https://developers.cloudflare.com/tunnel/get-started/quick-tunnels/)
+
 ## 제공자 설정
 
 | 제공자 | 등록 | HTTPS 콜백 경로 |
 | --- | --- | --- |
 | Kakao | Kakao Login을 활성화하고 REST API 키와 Client Secret을 등록한다. REST API 키 설정에 콜백 URL을 추가한다. | `/v1/auth/callback/kakao` |
-| Google | Google Auth Platform에서 Web application OAuth 클라이언트를 만들고 Authorized redirect URIs에 콜백 URL을 추가한다. 테스트 상태라면 테스트 사용자를 추가한다. | `/v1/auth/callback/google` |
+| Google | Google Auth Platform에서 Web application OAuth 클라이언트를 만들고 Authorized redirect URIs에 콜백 URL을 추가한다. 개발 프로젝트는 Testing 상태로 유지할 수 있다. 현재 앱은 `openid`만 요청한다. | `/v1/auth/callback/google` |
 | Apple | Sign in with Apple을 활성화한 기본 App ID에 Services ID를 연결한다. Domains and Subdomains와 Return URLs를 등록하고 Sign in with Apple 키를 만든다. | `/v1/auth/callback/apple` |
+
+콘솔에서 발급한 비밀값은 로컬 `server/.env`에 저장한다. 이 파일은 Git에서 제외한다. Apple의 `.p8`는 발급 직후 다운로드해 보관한다.
 
 등록할 전체 URL은 `AUTH_PUBLIC_ORIGIN`과 표의 콜백 경로를 합친 값이다. Apple 키의 PKCS#8 PEM을 한 줄로 입력할 경우 `.env`의 `APPLE_PRIVATE_KEY`에 작은따옴표로 감싸서 넣고 각 줄바꿈을 리터럴 `\n`으로 표기한다. 제공자 비밀값은 서버 환경에만 저장한다.
 
