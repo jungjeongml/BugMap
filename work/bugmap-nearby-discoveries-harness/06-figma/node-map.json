@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "screen": "nearby-discoveries",
+      "state": "default",
+      "nodeId": "50:1081",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=50-1081",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/nearby-discoveries-default.png",
+      "captureSha256": "7f2e89e8ba0768514b079b5803b89889cfa13acabcbb50562dd4f0bde0bc7f4a"
+    },
+    {
+      "screen": "nearby-discoveries",
+      "state": "radius-3km",
+      "nodeId": "50:1190",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=50-1190",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/nearby-discoveries-radius-3km.png",
+      "captureSha256": "2a01bd75a320b53306b3b03b5b2b1f2ac0c75e11fe91ba1ab8a4bce2443ec166"
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "I50:1124;50:1008",
+      "fillIndex": 0,
+      "asset": "assets/photos/stag-beetle.png",
+      "imageHash": "b7e7ef8c9c1088cf74cc97ad40777441513ce3ec"
+    },
+    {
+      "nodeId": "I50:1133;50:1017",
+      "fillIndex": 0,
+      "asset": "assets/photos/dragonfly.png",
+      "imageHash": "584fcb6e2e3f342f7a19eb6816cc7ee548efc5db"
+    },
+    {
+      "nodeId": "I50:1142;50:1026",
+      "fillIndex": 0,
+      "asset": "assets/photos/ladybird.png",
+      "imageHash": "e870689269fe61525d01165dc58d439bde332c38"
+    },
+    {
+      "nodeId": "I50:1233;50:1008",
+      "fillIndex": 0,
+      "asset": "assets/photos/stag-beetle.png",
+      "imageHash": "b7e7ef8c9c1088cf74cc97ad40777441513ce3ec"
+    },
+    {
+      "nodeId": "I50:1242;50:1026",
+      "fillIndex": 0,
+      "asset": "assets/photos/ladybird.png",
+      "imageHash": "e870689269fe61525d01165dc58d439bde332c38"
+    }
+  ]
+}

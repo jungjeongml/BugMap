@@ -1,0 +1,80 @@
+{
+  "method": "Signed-in Figma prototype player, actual mouse gesture and clicks, stable destination URL and rendered capture",
+  "browserViewport": {
+    "width": 1156,
+    "height": 542
+  },
+  "artboard": {
+    "width": 390,
+    "height": 844
+  },
+  "displayScale": "scale-down",
+  "startUrl": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81&scaling=scale-down",
+  "consistentForMilliseconds": 450,
+  "steps": [
+    {
+      "action": "메인 지도에서 시작",
+      "from": null,
+      "observed": "41:81",
+      "expected": "41:81",
+      "capture": "prototype/01-map-before-drag.png",
+      "sha256": "46f1601248f5bd230bec4d3c7114499485d216ba4f90c59fec7418a2de78d2f6"
+    },
+    {
+      "action": "기존 손잡이를 위로 드래그",
+      "from": "41:81",
+      "observed": "50:1081",
+      "expected": "50:1081",
+      "capture": "prototype/02-nearby-after-drag.png",
+      "sha256": "35f8b227b19ec3384510f9e829922f199387967e546bbb8b6951c6cc248ecaee"
+    },
+    {
+      "action": "3 km 이내 선택",
+      "from": "50:1081",
+      "observed": "50:1190",
+      "expected": "50:1190",
+      "capture": "prototype/03-radius-from-all.png",
+      "sha256": "7484b3d4572bdb0ec48baa8e4b3d03c11a8c1d56b18b620152c2e832ede7e6f2"
+    },
+    {
+      "action": "전체 다시 선택",
+      "from": "50:1190",
+      "observed": "50:1081",
+      "expected": "50:1081",
+      "capture": "prototype/04-all-from-radius.png",
+      "sha256": "35f8b227b19ec3384510f9e829922f199387967e546bbb8b6951c6cc248ecaee"
+    },
+    {
+      "action": "전체에서 지도 보기",
+      "from": "50:1081",
+      "observed": "41:81",
+      "expected": "41:81",
+      "capture": "prototype/05-map-from-all.png",
+      "sha256": "6555e22b7a03de65382ecf9aa00310171d73d8e6958e4dab73f80dde47b77461"
+    },
+    {
+      "action": "기존 손잡이를 위로 드래그",
+      "from": "41:81",
+      "observed": "50:1081",
+      "expected": "50:1081",
+      "capture": "prototype/06-nearby-reopened.png",
+      "sha256": "35f8b227b19ec3384510f9e829922f199387967e546bbb8b6951c6cc248ecaee"
+    },
+    {
+      "action": "3 km 이내 다시 선택",
+      "from": "50:1081",
+      "observed": "50:1190",
+      "expected": "50:1190",
+      "capture": "prototype/07-radius-reselected.png",
+      "sha256": "7484b3d4572bdb0ec48baa8e4b3d03c11a8c1d56b18b620152c2e832ede7e6f2"
+    },
+    {
+      "action": "3 km 이내에서 지도 보기",
+      "from": "50:1190",
+      "observed": "41:81",
+      "expected": "41:81",
+      "capture": "prototype/08-map-from-radius.png",
+      "sha256": "6555e22b7a03de65382ecf9aa00310171d73d8e6958e4dab73f80dde47b77461"
+    }
+  ]
+}

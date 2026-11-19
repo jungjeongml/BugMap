@@ -1,0 +1,31 @@
+{
+  "original": "Existing user-authorized Cursor MCP Plugin source",
+  "versions": [
+    {
+      "version": "first-attempt",
+      "sha256": {
+        "code.js": {
+          "original": "2f454042289d25172a76599ccbdb582a8a6a197b2b554f255a6f12d4f2653c66",
+          "prepared": "a861d91e4997b796450af590b05f6b76fbde6a9a8a1d842416c30cba678a6228"
+        },
+        "ui.html": {
+          "original": "bf429c00fd778a79812262907a81385931bf6972dd24b0386da52726dfe74f1c",
+          "prepared": "80013f90d6bebfc917160b5a4a560b4e18d1580255349044417ccfe3c4efbe8d"
+        }
+      }
+    },
+    {
+      "version": "rev2",
+      "sha256": {
+        "code.js": {
+          "original": "2f454042289d25172a76599ccbdb582a8a6a197b2b554f255a6f12d4f2653c66",
+          "prepared": "74cb53d0575f462feb7b0b2ebb178eb7a736221cd1f331701cb0c6c4bd56e24d"
+        },
+        "ui.html": {
+          "original": "bf429c00fd778a79812262907a81385931bf6972dd24b0386da52726dfe74f1c",
+          "prepared": "80013f90d6bebfc917160b5a4a560b4e18d1580255349044417ccfe3c4efbe8d"
+        }
+      }
+    }
+  ]
+}

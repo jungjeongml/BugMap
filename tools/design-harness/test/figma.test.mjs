@@ -135,7 +135,20 @@ test('IMAGE fills require manifest-backed exact PNG provenance and preserved pro
   f.put('06-figma/node-map.json', map);
   let result = f.run('lint:figma', '--force', '--json'); assert.equal(result.status, 0, result.stderr + result.stdout);
   assert.ok(Object.hasOwn(JSON.parse(result.stdout).inputs, '05-design-system/assets/brand.png'));
-  for (const patch of [{ imageHash: 'b'.repeat(40) }, { scaleMode: 'CROP' }, { opacity: .5 }, { rotation: 20 }, { filters: { contrast: .2 } }, { imageTransform: [[1, 0, 0], [0, 1, 0]] }]) {
+  data.nodes[0].children[0].fills = [{
+    type: 'IMAGE', imageHash, scaleMode: 'FIT', opacity: 1, rotation: 0,
+    filters: { contrast: 0, saturation: 0 }, scalingFactor: 1,
+    imageTransform: [[1, 0, 0], [0, 1, 0]],
+  }];
+  f.put('06-figma/nodes.json', data);
+  result = f.run('lint:figma', '--force', '--json');
+  assert.equal(result.status, 0, 'native FIT export with identity transform: ' + result.stdout + result.stderr);
+  for (const patch of [
+    { imageHash: 'b'.repeat(40) }, { scaleMode: 'CROP', imageTransform: [[1, 0, 0], [0, 1, 0]] },
+    { opacity: .5 }, { rotation: 20 }, { filters: { contrast: .2 } },
+    { imageTransform: [[1, 0, .01], [0, 1, 0]] },
+    { imageTransform: [[.9, 0, 0], [0, 1, 0]] }, { imageTransform: null },
+  ]) {
     data.nodes[0].children[0].fills = [{ type: 'IMAGE', imageHash, scaleMode: 'FILL', ...patch }];
     f.put('06-figma/nodes.json', data); result = f.run('lint:figma', '--force', '--json'); assert.notEqual(result.status, 0, JSON.stringify(patch));
   }
@@ -198,4 +211,79 @@ test('native instance descendant IDs retain image provenance and duplicate check
   data.nodes[0].children[0].width = 1; f.put('06-figma/nodes.json', data); assert.equal(f.run('lint:figma', '--force').status, 0, 'valid FIT');
   data.nodes[0].opacity = .5; data.nodes[0].children[0].opacity = 2; f.put('06-figma/nodes.json', data);
   assert.notEqual(f.run('lint:figma', '--force').status, 0, 'compensating invalid opacity');
+});
+
+test('official Mapbox SVG needs pinned bytes and exact scoped fills, strokes and opacity', t => {
+  const f = fixture(t), asset = 'assets/mapbox-logo.svg', assetPath = '05-design-system/' + asset;
+  const svg = readFileSync(new URL('./assets/mapbox-logo.svg', import.meta.url), 'utf8');
+  const manifest = { files: [{ file: asset, bytes: Buffer.byteLength(svg), sha256: digest(svg) }] };
+  f.put(assetPath, svg);
+  f.put('05-design-system/assets-manifest.json', manifest);
+  const data = JSON.parse(readFileSync(join(f.base, '06-figma/nodes.json')));
+  const paint = (gray) => ({ type: 'SOLID', color: { r: gray, g: gray, b: gray } });
+  const logo = JSON.parse(readFileSync(new URL('./assets/mapbox-logo-node.json', import.meta.url), 'utf8'));
+  const [outline, foreground] = logo.children[0].children;
+  const withStroke = outline.children[0].children.find(node => node.strokes?.length);
+  data.nodes[0].children = [logo];
+  const map = { nodes: [{ screen: 'map', state: 'default', nodeId: '1:1' }], svgAssets: [{ nodeId: logo.id, asset }] };
+  f.put('06-figma/node-map.json', map);
+  const lint = () => {
+    f.put('06-figma/nodes.json', data);
+    return f.run('lint:figma', '--force', '--json');
+  };
+  const ok = lint();
+  assert.equal(ok.status, 0, ok.stderr + ok.stdout);
+  const report = JSON.parse(ok.stdout);
+  assert.equal(report.inputs[assetPath], manifest.files[0].sha256);
+  assert.equal(report.svgAssets[0].paintCount, 12);
+  assert.ok(report.inputs['05-design-system/assets-manifest.json']);
+
+  data.nodes[0].children.push({ id: '2:99', type: 'VECTOR', name: 'UI', width: 24, height: 24, fills: [paint(0)] });
+  assert.deepEqual(JSON.parse(lint().stdout).issues.map(({ rule }) => rule), ['color']);
+  data.nodes[0].children.pop();
+
+  const expectMismatch = (target, field, replacement) => {
+    const previous = target[field];
+    target[field] = replacement;
+    const result = lint();
+    assert.equal(result.status, 1, result.stderr + result.stdout);
+    assert.ok(JSON.parse(result.stdout).issues.some(({ rule }) => rule === 'svg-provenance'));
+    if (previous === undefined) delete target[field];
+    else target[field] = previous;
+  };
+  expectMismatch(foreground.children[0], 'fills', [paint(0)]);
+  expectMismatch(withStroke, 'strokes', [paint(1)]);
+  expectMismatch(foreground.children[0], 'strokes', undefined);
+  expectMismatch(foreground.children[0], 'vectorPaths', [{ windingRule: 'NONZERO', data: 'M 0 0 H 5 V 5 Z' }]);
+  expectMismatch(foreground.children[0], 'blendMode', 'MULTIPLY');
+  expectMismatch(outline, 'opacity', .3004);
+  expectMismatch(foreground.children[1], 'visible', false);
+  expectMismatch(logo, 'width', 100);
+  expectMismatch(logo, 'rotation', 15);
+  expectMismatch(logo, 'children', [...logo.children, { id: '2:98', type: 'TEXT', name: 'UI', width: 20, height: 20, characters: 'UI', fontSize: 14, fills: [] }]);
+
+  f.put(assetPath, svg + '\n');
+  assert.equal(lint().status, 2);
+  f.put('05-design-system/assets-manifest.json', { files: [{ file: asset, bytes: Buffer.byteLength(svg + '\n'), sha256: digest(svg + '\n') }] });
+  assert.match(lint().stderr, /Unsupported official SVG/);
+  f.put(assetPath, svg);
+  f.put('05-design-system/assets-manifest.json', manifest);
+  const pngAsset = 'assets/brand.png', pngBytes = png(96, 48), imageHash = 'a'.repeat(40);
+  writeFileSync(join(f.base, '05-design-system', pngAsset), pngBytes);
+  const mixedManifest = { files: [...manifest.files, { path: pngAsset, bytes: pngBytes.length, sha256: digest(pngBytes), dimensions: { width: 96, height: 48 } }] };
+  f.put('05-design-system/assets-manifest.json', mixedManifest);
+  data.nodes[0].children.push({ id: '2:97', type: 'RECTANGLE', name: 'PNG', width: 96, height: 48, fills: [{ type: 'IMAGE', imageHash, scaleMode: 'FIT' }] });
+  f.put('06-figma/node-map.json', { ...map, images: [{ nodeId: '2:97', fillIndex: 0, asset: pngAsset, imageHash }] });
+  assert.equal(lint().status, 0);
+  data.nodes[0].children.pop();
+  f.put('05-design-system/assets-manifest.json', manifest);
+  for (const svgAssets of [
+    [map.svgAssets[0], map.svgAssets[0]],
+    [{ nodeId: '99:99', asset }],
+    [{ nodeId: logo.id, asset: 'assets/../mapbox-logo.svg' }],
+    [map.svgAssets[0], { nodeId: foreground.id, asset }],
+  ]) {
+    f.put('06-figma/node-map.json', { ...map, svgAssets });
+    assert.equal(lint().status, 2);
+  }
 });

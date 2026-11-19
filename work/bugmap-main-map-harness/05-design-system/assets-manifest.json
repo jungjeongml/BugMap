@@ -1,0 +1,61 @@
+{
+  "sourceMap": {
+    "file": "design/main-map/map-background.svg",
+    "sha256": "849c0eb7cd208e2bc358eee8ee640ede0430f3aa1598dc2df4ed66522b932de8",
+    "size": [
+      390,
+      844
+    ],
+    "treatment": "정해진 다크 지도 팔레트로 17개 색 교체. 지형과 경로 도형, 크기 유지."
+  },
+  "approvedWireframe": {
+    "file": "04-wireframes/wireframes.json",
+    "sha256": "0b367ea6b3d249e7a8bdb2dfa581252e138eaba6bf13757dfdc2840dd3e75593"
+  },
+  "lucide": {
+    "package": "lucide-react-native",
+    "version": "1.70.0",
+    "icons": [
+      "map",
+      "users-round",
+      "message-circle",
+      "user-round",
+      "locate-fixed",
+      "search",
+      "plus",
+      "info"
+    ]
+  },
+  "files": [
+    {
+      "file": "assets/map-dark.svg",
+      "sha256": "8c7164ba25d1eb05f9ca5c7f6c2d30a2244ff9543351f295f6a7fab7e199b56e",
+      "bytes": 53679
+    },
+    {
+      "file": "assets/mapbox-logo.svg",
+      "sha256": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+      "bytes": 3169
+    },
+    {
+      "file": "assets/Pretendard-Medium.woff2",
+      "sha256": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+      "bytes": 778432
+    },
+    {
+      "file": "assets/Pretendard-Bold.woff2",
+      "sha256": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+      "bytes": 791156
+    },
+    {
+      "file": "assets/pretendard-OFL.txt",
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+      "bytes": 4418
+    },
+    {
+      "file": "assets/lucide-ISC.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "command": "lint:figma",
+  "inputs": {
+    "04-wireframes/wireframes.json": "0b367ea6b3d249e7a8bdb2dfa581252e138eaba6bf13757dfdc2840dd3e75593",
+    "05-design-system/assets-manifest.json": "953a879c22d1fb4bc1d60c85fa53e38e226c348c24d54f247c5214d3823b6774",
+    "05-design-system/assets/mapbox-logo.svg": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+    "05-design-system/components.json": "f59ded0aa57854cb5ce22f3736daaf457d6c549e5383a3fbc6bf1cb58de3a6ac",
+    "05-design-system/copy.json": "6512675aa829dc88345d88556811a6a3bc1991bb52cb1369bfe4d64d6804755c",
+    "05-design-system/tokens.json": "1dc4c4ef4a3d94ffe91a66af610a3e56c3712ed860f433cacdaeb776c805d76d",
+    "06-figma/node-map.json": "c013678baff0be3c3affe5b006e98586ce4c40ffd3b8c6c35bfadda0cb53fd4e",
+    "06-figma/nodes.json": "7c6297a6e2716a382b87160daa7f19c9881493ccde5b6fe7cb29a6929e445c86",
+    "control/figma.json": "53375d6f1ba57d5388c70c2a26063f0f8d388b0d73a364d09b369c23168a24d1"
+  },
+  "issues": [],
+  "nodeCount": 410,
+  "svgAssets": [
+    {
+      "nodeId": "41:819",
+      "asset": "assets/mapbox-logo.svg",
+      "sha256": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+      "profile": "Mapbox GL JS",
+      "geometrySha256": "89691d72fd8d76d9a057b3dd1eddf222db25c93441b49ffb80d57708d190789e",
+      "paintCount": 12
+    }
+  ]
+}

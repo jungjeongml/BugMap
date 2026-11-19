@@ -1,0 +1,25 @@
+{
+  "strings": {
+    "time":"9:41",
+    "north":"성수동",
+    "park":"서울숲",
+    "river":"한강",
+    "clusterSeven":"기록 7",
+    "clusterThree":"기록 3",
+    "clusterFive":"기록 5",
+    "clusterSevenAccessible":"기록 7개",
+    "clusterThreeAccessible":"기록 3개",
+    "clusterFiveAccessible":"기록 5개",
+    "location":"내 위치",
+    "attribution":"지도 출처 정보",
+    "gps":"내 위치로 이동",
+    "record":"발견/채집 기록하기",
+    "expand":"내 주변 발견 펼치기",
+    "search":"곤충 이름 또는 지역 검색",
+    "tabMap":"지도",
+    "tabCommunity":"커뮤니티",
+    "tabChat":"채팅",
+    "tabMy":"마이"
+  },
+  "forbidden": ["위치 정확도 100%", "실시간 발견 보장"]
+}

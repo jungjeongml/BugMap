@@ -1,0 +1,120 @@
+{
+  "photos": [
+    {
+      "id": "stag-beetle",
+      "name": "넓적사슴벌레",
+      "scientificName": "Dorcus titanus castanicolor",
+      "title": "Dorcus titanus castanicolor.JPG",
+      "author": "Bugman95",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dorcus_titanus_castanicolor.JPG",
+      "license": "Public domain dedication",
+      "checkedOn": "2026-11-20",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Dorcus_titanus_castanicolor.JPG",
+        "dimensions": {
+          "width": 576,
+          "height": 768
+        },
+        "bytes": 85801,
+        "sha256": "97a32ad600ed960e5b2b5c2369918e6ab8126fb130a6314e37dadb370282bc27"
+      },
+      "treatment": {
+        "crop": {
+          "x": 0,
+          "y": 106,
+          "width": 576,
+          "height": 576
+        },
+        "resizing": "264 × 264 px PNG, sips"
+      },
+      "preview": {
+        "path": "assets/photos/stag-beetle.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 132257,
+        "sha256": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+        "license": "Public domain dedication"
+      }
+    },
+    {
+      "id": "ladybird",
+      "name": "칠성무당벌레",
+      "scientificName": "Coccinella septempunctata",
+      "title": "Ladybird coccinella septempunctata.jpg",
+      "author": "Charles J. Sharp",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ladybird_coccinella_septempunctata.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "checkedOn": "2026-11-20",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Ladybird_coccinella_septempunctata.jpg",
+        "dimensions": {
+          "width": 1415,
+          "height": 943
+        },
+        "bytes": 304083,
+        "sha256": "575240d637500035323271c2ccb55375e652a1534d96a9820961deef14bca297"
+      },
+      "treatment": {
+        "crop": {
+          "x": 490,
+          "y": 25,
+          "width": 900,
+          "height": 900
+        },
+        "resizing": "264 × 264 px PNG, sips"
+      },
+      "preview": {
+        "path": "assets/photos/ladybird.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 124535,
+        "sha256": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "dragonfly",
+      "name": "왕잠자리",
+      "scientificName": "Anax parthenope julius",
+      "title": "Anax parthenope julius(Couple,Japan,17.08.23).jpg",
+      "author": "TekuraDF",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anax_parthenope_julius%28Couple%2CJapan%2C17.08.23%29.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "checkedOn": "2026-11-20",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Anax_parthenope_julius%28Couple%2CJapan%2C17.08.23%29.jpg",
+        "dimensions": {
+          "width": 2400,
+          "height": 1800
+        },
+        "bytes": 2026903,
+        "sha256": "1c8380dd598b4c968bd85c520c0bc5343212f33e0d315091e3ced5cf18427b49"
+      },
+      "treatment": {
+        "crop": {
+          "x": 300,
+          "y": 0,
+          "width": 1800,
+          "height": 1800
+        },
+        "resizing": "264 × 264 px PNG, sips"
+      },
+      "preview": {
+        "path": "assets/photos/dragonfly.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 152694,
+        "sha256": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+        "license": "CC0 1.0"
+      }
+    }
+  ]
+}

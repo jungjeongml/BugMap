@@ -1,0 +1,89 @@
+{
+  "method": "PNG comparison between approved Chromium capture and actual Figma native PNG; independent type rendering can differ",
+  "results": [
+    {
+      "state": "default",
+      "nodeId": "50:1081",
+      "capture": "captures/nearby-discoveries-default.png",
+      "regions": {
+        "top": {
+          "threshold": 18,
+          "changedPixels": 3149,
+          "pixelCount": 60450,
+          "changedFraction": 0.052092638544251446,
+          "meanMaxDelta": 3.027874276261373
+        },
+        "distance": {
+          "threshold": 18,
+          "changedPixels": 1599,
+          "pixelCount": 19890,
+          "changedFraction": 0.0803921568627451,
+          "meanMaxDelta": 5.557214680744092
+        },
+        "title": {
+          "threshold": 18,
+          "changedPixels": 1889,
+          "pixelCount": 18720,
+          "changedFraction": 0.10090811965811966,
+          "meanMaxDelta": 12.852991452991454
+        },
+        "records": {
+          "threshold": 18,
+          "changedPixels": 8888,
+          "pixelCount": 170040,
+          "changedFraction": 0.05227005410491649,
+          "meanMaxDelta": 5.567642907551164
+        },
+        "footer": {
+          "threshold": 18,
+          "changedPixels": 1326,
+          "pixelCount": 60060,
+          "changedFraction": 0.02207792207792208,
+          "meanMaxDelta": 1.6383116883116884
+        }
+      }
+    },
+    {
+      "state": "radius-3km",
+      "nodeId": "50:1190",
+      "capture": "captures/nearby-discoveries-radius-3km.png",
+      "regions": {
+        "top": {
+          "threshold": 18,
+          "changedPixels": 3149,
+          "pixelCount": 60450,
+          "changedFraction": 0.052092638544251446,
+          "meanMaxDelta": 3.027874276261373
+        },
+        "distance": {
+          "threshold": 18,
+          "changedPixels": 1592,
+          "pixelCount": 19890,
+          "changedFraction": 0.0800402212166918,
+          "meanMaxDelta": 5.78456510809452
+        },
+        "title": {
+          "threshold": 18,
+          "changedPixels": 1908,
+          "pixelCount": 18720,
+          "changedFraction": 0.10192307692307692,
+          "meanMaxDelta": 12.98573717948718
+        },
+        "records": {
+          "threshold": 18,
+          "changedPixels": 6600,
+          "pixelCount": 170040,
+          "changedFraction": 0.03881439661256175,
+          "meanMaxDelta": 3.9773112208892027
+        },
+        "footer": {
+          "threshold": 18,
+          "changedPixels": 1326,
+          "pixelCount": 60060,
+          "changedFraction": 0.02207792207792208,
+          "meanMaxDelta": 1.6383116883116884
+        }
+      }
+    }
+  ]
+}

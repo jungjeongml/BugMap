@@ -1,0 +1,9 @@
+name,purpose,catalog,source
+Map,지도 탭,https://lucide.dev/icons/map,lucide-react-native
+UsersRound,커뮤니티 탭,https://lucide.dev/icons/users-round,lucide-react-native
+MessageCircle,채팅 탭,https://lucide.dev/icons/message-circle,lucide-react-native
+UserRound,마이 탭,https://lucide.dev/icons/user-round,lucide-react-native
+LocateFixed,내 위치로 이동,https://lucide.dev/icons/locate-fixed,lucide-react-native
+Search,곤충 이름 또는 지역 검색,https://lucide.dev/icons/search,lucide-react-native
+Plus,발견/채집 기록 작성,https://lucide.dev/icons/plus,lucide-react-native
+Info,지도 출처 안내,https://lucide.dev/icons/info,lucide-react-native

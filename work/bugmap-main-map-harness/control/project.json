@@ -1,0 +1,29 @@
+{
+  "id": "bugmap-main-map-harness",
+  "purpose": "BugMapHaness에 로그인 후 보이는 메인 발견 지도 기본 화면 디자인",
+  "platform": "mobile",
+  "language": "ko",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "reviewMinScore": 4,
+  "scope": {
+    "screen": "main-map",
+    "states": [
+      "default"
+    ],
+    "figmaRootCount": 1
+  },
+  "sourceDocuments": {
+    "AGENTS.md": "c4374f749618d10136c24e720011df1c3f31a5880525989d99a0fad9c04d715b",
+    "docs/PRD.md": "7f92a4d4c78feab03716d6716f8ba808fa2f4f784e0a84cef4eb736dce1a5ea9",
+    "docs/DESIGN.md": "11c83cb492e9d02a7c6e06eb1ed21aff612d5502c1d5ac256260a3b79cf457f6",
+    "docs/TDD.md": "dcc3e1650924cb5e5eb401ebec0f52e58cf866fc8b1848209900348b3a4b77fb",
+    "docs/screens/main-map.md": "cca2ad251b2703717d2d15be7b86f49c909c8092a056348205147766edc173a8",
+    "docs/design-harness.md": "8fc9bd2d5ff0a56ecf9e681188615e084f4f519973f6cb51e2dafbf698a9767f",
+    "example/kyroMain.png": "210cd1c630241e788f3d2224fdf742bf19180b5b4fc99780a02f5d6a28c75411"
+  }
+}

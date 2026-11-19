@@ -1,0 +1,7 @@
+requirement,screen,state,figma_node,result,evidence
+NEAR-01,nearby-discoveries,default | radius-3km,41:81 | 41:451 | 50:1081 | 50:1190,pass,실제 Figma에서 드래그 진입 두 번과 양쪽 지도 보기 복귀를 확인. 푸터는 독립 노드이며 대표 데이터는 목록 높이 안에 들어감.
+NEAR-02,nearby-discoveries,default | radius-3km,50:1081 | 50:1190,pass,실제 390×844 캡처에서 검색과 거리 선택과 기록 목록 순서를 확인. 검색 적용·취소는 승인 흐름으로 대조.
+NEAR-03,nearby-discoveries,default | radius-3km,50:1081 | 50:1190,pass,Figma에서 전체와 3 km 이내 상호 전환 및 3.0 km 포함 확인. 현재 위치 중심·반경 공유와 위치 확인 복구는 구조로 대조.
+NEAR-04,nearby-discoveries,default | radius-3km,50:1081 | 50:1190,pass,사진과 곤충명·유형·공개 지역·발견 일시·거리 확인. 공개 좌표 기준과 기존 상세 진입·복귀는 구조로 대조.
+NEAR-05,nearby-discoveries,default | radius-3km,41:81 | 50:1081 | 50:1190,pass,기존 지도와 같은 다크 패널·검색·네 탭 및 지도 탭 단독 선택 확인.
+NEAR-06,nearby-discoveries,default | radius-3km,7:2 | 19:2 | 41:81 | 50:1081 | 50:1190,pass,두 편집 가능한 390×844 프레임과 조작 영역 최소 44×44 확인. 기존 프레임 PNG와 손잡이 추가 연결을 제외한 지도 트리를 대조.

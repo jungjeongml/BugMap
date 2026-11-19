@@ -258,3 +258,72 @@
 
 - 최종 핸드오프 승인 `949fe250-4b1a-40fe-a4f3-e6bed0268854`를 확인했다. 하네스의 실제 검사에서 8단계 모두 `passed`, `complete: true`였다.
 - [Figma 19:2](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHaness?node-id=19-2), [핸드오프](../work/bugmap-login-map-harness/08-handoff/HANDOFF.md), [검증 보고서](../work/bugmap-login-map-harness/07-validation/report.md)를 연결했다. 제품 인증과 실기기 검증은 [미결 항목](../work/bugmap-login-map-harness/08-handoff/open-items.md)을 따른다.
+
+## 2026-11-19 — BugMapHaness 로그인 후 메인 지도 와이어프레임 준비
+
+- PRD 승인을 확인하고 [리서치](../work/bugmap-main-map-harness/02-research/sources.md), [화면 흐름](../work/bugmap-main-map-harness/03-structure/flows.mmd), [접힌 기본 시안 390×844](../work/bugmap-main-map-harness/04-wireframes/captures/main-map/default.png)을 준비했다. 지도 위 GPS와 기록, 패널의 곤충·지역 검색과 네 탭, 드래그 손잡이, Mapbox 출처 위치를 잡았다.
+- Kyro, BugMap 02, Mapbox 문서의 실제 캡처와 생성된 와이어프레임을 직접 확인했다. 배치 검수, 최소 44×44px 터치 영역과 안전 영역, 요구사항 8개 대조 및 하네스 검사를 기록했다. [검수 기록](../work/bugmap-main-map-harness/04-wireframes/review.md)
+- 다음 단계는 사람의 와이어프레임 승인이다. [재개 지점](../work/bugmap-main-map-harness/control/flow.md)에서 승인 명령을 확인할 수 있다. 이후 디자인 시스템과 Figma 제작을 진행하며 확장 화면은 후속 범위다.
+
+## 2026-11-19 — 메인 지도 묶음 마커를 총 건수로 표시
+
+- 사용자 피드백을 반영해 가까운 관찰·채집 기록을 `기록 N` 한 배지로 표시했다. 와이어프레임 예시는 `기록 7`, `기록 3`, `기록 5`다. 너비를 84px에서 64px로 줄이고 높이 44px를 유지했다. 개별 기록 상세에 유형을 표시하도록 [화면 명세](../docs/screens/main-map.md)와 [지도 흐름](../work/bugmap-main-map-harness/03-structure/flows.mmd)을 갱신했다.
+- [수정 PNG](../work/bugmap-main-map-harness/04-wireframes/captures/main-map/default.png)를 직접 열어 세 배지의 문구와 배치를 확인했다. 하네스가 만든 SVG·PNG 해시와 좌표를 대조했다. 다음 단계는 업데이트된 와이어프레임 승인이다. 실제 지도 확대와 기록 상세 동작은 구현 검증 범위다.
+
+## 2026-11-19 — BugMapHaness 메인 지도 다크 시안 준비
+
+- 와이어프레임 승인 `100b8aa6-78a7-4719-abd7-ca0e844900ee`를 확인했다. [390×844 대표 시안](../work/bugmap-main-map-harness/05-design-system/captures/390x844-default.png)에 BugMap 다크 팔레트와 Pretendard, 시연용 지도, 공식 Mapbox 로고를 적용했다. ‘기록 N’ 배지와 GPS·발견/채집 기록 버튼, 검색창 및 네 탭의 배치를 검수했다.
+- 대표 화면을 실제 Chromium으로 렌더링하고 직접 열었다. 13개 배치·문구 검사와 21개 대비 검사 통과, 텍스트 최저 5.01:1, 손잡이 6.46:1, 12개 터치 영역 최소 44×44px를 확인했다. [디자인 시스템](../work/bugmap-main-map-harness/05-design-system/DESIGN.md) · [검수 기록](../work/bugmap-main-map-harness/05-design-system/review.md)
+- 다음 단계는 사람의 디자인 시스템 승인이다. Figma 편집 가능 레이어와 기존 노드 보존, 실제 기기의 지도·검색·드래그·GPS 동작은 후속 검증 대상이다. [재개 지점](../work/bugmap-main-map-harness/control/flow.md)
+
+## 2026-11-19 — BugMapHarness 메인 지도 Figma 제작
+
+- 디자인 시스템 승인 `b95f6ebe-352d-4004-9602-93da1a83250f`로 Cursor MCP에서 [메인 · 발견 지도 41:81](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81)을 제작했다. 기록 묶음 컴포넌트 인스턴스 3개, 하단 패널 및 탭, 검색, GPS·기록, 지도 벡터를 구성했다. Figma에서 가용한 한국어 글꼴 Noto Sans KR을 적용했다.
+- 지도·아이콘 SVG 기하를 보정해 [390×844 실제 Figma 캡처](../work/bugmap-main-map-harness/06-figma/captures/main-map-default.png)를 직접 확인했다. 기존 `7:2`·`19:2`는 원격 트리와 PNG 해시로 보존을 확인했다. 임시 제작 명령을 사용한 뒤 기존 Cursor MCP Plugin 소스를 복원했다. [변경·검수 기록](../work/bugmap-main-map-harness/06-figma/change-log.md)
+- Figma 자동 검사는 공식 Mapbox 벡터의 검정·흰색에만 10개 이슈를 기록했다. 검증용 HTML의 Chromium 실행은 이슈 0개였다. 하네스 Figma 단계는 공식 자산 색상 처리에 대한 결정을 기다린다. [재개 지점](../work/bugmap-main-map-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 메인 지도 자동 검수 완료
+
+- 승인된 공식 Mapbox SVG와 기존 Figma 프레임을 유지하면서 하네스에 자산 해시, 원격 벡터 경로·구조, 불투명도와 흑백 페인트 검사를 추가했다. 검사 범위는 등록된 로고 하위 레이어다. 기존 UI 토큰 규칙과 PNG 자산 검사를 회귀 테스트로 확인했다.
+- [Figma 검사](../work/bugmap-main-map-harness/07-validation/figma-lint.json)는 410개 노드와 공식 로고 페인트 12개를 검사해 이슈 0건이었다. [웹 검사](../work/bugmap-main-map-harness/07-validation/web-lint.json)는 승인 시안과 390×844 Chromium 캡처의 임계값 초과 변경 픽셀 0개, 이슈 0건이었다. 전체 하네스 테스트 44개 통과.
+- 저장한 실제 Figma 캡처와 노드에서 요구사항 8개를 대조했다. 새 원격 내보내기는 연결 문제로 수행하지 못했다. 사람의 최종 검수 기록과 승인이 남아 있다. [최종 검수 보고서](../work/bugmap-main-map-harness/07-validation/report.md) · [재개 지점](../work/bugmap-main-map-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 메인 지도 개발 인계 준비
+
+- 최종 검수 승인 `822647ec-23c4-4aa6-855c-6fb6a37f8406`을 확인했다. [개발 인계서](../work/bugmap-main-map-harness/08-handoff/HANDOFF.md)에 Figma 41:81, HOME-01~08, 구현 메모, 공개 위치와 기록 묶음 흐름, 후속 검증 항목을 연결했다.
+- [무결성 매니페스트](../work/bugmap-main-map-harness/08-handoff/manifest.json)의 입력 87개와 출력 1개의 해시, 승인 자산 6개의 원본 바이트, 문서 상대 링크를 대조했다. 공식 Mapbox 로고는 원본 해시와 일치한다.
+- 하네스 검사에서 1~7단계 통과를 확인했다. 사람의 최종 인계 수락을 기다린다. [재개 지점](../work/bugmap-main-map-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 메인 지도 디자인 하네스 완료
+
+- 최종 인계 승인 `c3ec40ce-51cd-4157-9011-71f967a0c77c`의 유효성을 확인했다. 실제 하네스 검사에서 8단계 모두 `passed`, `complete: true`였다.
+- [Figma 메인 지도 41:81](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81), [최종 개발 인계서](../work/bugmap-main-map-harness/08-handoff/HANDOFF.md), [검수 보고서](../work/bugmap-main-map-harness/07-validation/report.md)를 최종 산출물로 연결했다. [확장 패널과 실제 앱 동작의 후속 범위](../work/bugmap-main-map-harness/08-handoff/open-items.md)를 확인할 수 있다.
+
+## 2026-11-20 — BugMapHarness 내 주변 발견 와이어프레임 준비
+
+- PRD 승인 `9e02aa07-23ee-4e87-8530-39e1f406f67b`을 확인했다. [리서치](../work/bugmap-nearby-discoveries-harness/02-research/sources.md)와 [구조 및 상태 전환](../work/bugmap-nearby-discoveries-harness/03-structure/flows.mmd)을 작성했다. 메인 지도 손잡이에서 확장 패널로 진입하고 ‘지도 보기’로 복귀하는 흐름을 명시했다.
+- [전체](../work/bugmap-nearby-discoveries-harness/04-wireframes/captures/nearby-discoveries/default.png)와 [3 km 이내](../work/bugmap-nearby-discoveries-harness/04-wireframes/captures/nearby-discoveries/radius-3km.png) 두 상태를 390×844로 렌더해 확인했다. 검색, 거리 선택, 사진 자리표시자가 있는 공개 기록과 고정 지도 복귀 및 네 탭을 배치했다. [와이어프레임 검수](../work/bugmap-nearby-discoveries-harness/04-wireframes/review.md)
+- 사람의 와이어프레임 승인을 기다린다. 사진 자산과 다크 시안은 디자인 시스템 단계, 실제 Figma 연결은 제작 단계에서 진행한다. [재개 지점](../work/bugmap-nearby-discoveries-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 내 주변 발견 다크 시안 준비
+
+- 와이어프레임 승인 `c5706296-4038-4a31-ab68-b0b922a9f66f`를 확인했다. 기존 지도와 같은 검색·선택된 지도 탭을 이어받아 [전체 시안](../work/bugmap-nearby-discoveries-harness/05-design-system/captures/390x844-default.png)과 [3 km 이내 시안](../work/bugmap-nearby-discoveries-harness/05-design-system/captures/390x844-radius-3km.png)을 만들었다. 예시 기록에 정사각형으로 잘라낸 곤충 사진을 사용했다. [사진 출처와 라이선스](../work/bugmap-nearby-discoveries-harness/05-design-system/asset-sources.md)
+- 두 390×844 Chromium 캡처에서 검색, 거리 선택, 사진이 포함된 기록 목록 및 고정 지도 복귀를 확인했다. 3.0 km 기록을 포함하고 4.6 km 기록을 제외해 3개에서 2개로 좁혀지는 것을 확인했다. [검수 기록](../work/bugmap-nearby-discoveries-harness/05-design-system/review.md) · [독립 비평](../work/bugmap-nearby-discoveries-harness/05-design-system/critique.md)
+- 사람의 디자인 시스템 승인이 남았다. 이후 Figma 상태와 메인 지도 연결을 제작한다. [재개 지점](../work/bugmap-nearby-discoveries-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 내 주변 발견 Figma 제작과 검수
+
+- 디자인 시스템 승인 `0d9f3d9e-b894-4fb0-bec1-725024d4c9b0` 뒤 [전체 50:1081](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=50-1081)와 [3 km 이내 50:1190](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=50-1190)를 Cursor MCP에서 제작했다. Figma에서 기존 지도와 같은 Noto Sans KR을 사용했다. 두 실제 PNG와 연결을 재조회했다. [제작 기록](../work/bugmap-nearby-discoveries-harness/06-figma/change-log.md)
+- 실제 Figma 플레이어에서 기존 지도 손잡이 드래그 진입, 거리 선택과 돌아오기, 양쪽 지도 보기를 확인했다. 3.0 km 경계 기록이 포함된다. 기존 지도·Mapbox 로고·로그인 등의 프레임 PNG는 전후 일치했고, 메인 지도 트리는 드래그 연결만 달라졌다. 임시 Cursor 소스 두 파일은 원본으로 복원했다. [보존](../work/bugmap-nearby-discoveries-harness/06-figma/preservation.json) · [검수](../work/bugmap-nearby-discoveries-harness/07-validation/report.md)
+- PNG 검사에서 Figma FIT/FILL의 기본 항등행렬을 허용하고 실제 변형·크롭은 거부하도록 보완했다. Figma 205개 노드 이슈 0, Chromium 두 화면 각 승인 PNG 대비 변경 픽셀 0, 하네스 테스트 44개 통과. 사람의 최종 리뷰와 승인이 남았다. [재개 지점](../work/bugmap-nearby-discoveries-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 내 주변 발견 개발 인계 준비
+
+- 최종 검수 리뷰와 승인 `e8e6681f-5942-4dab-b63d-eda663c277d6`을 확인했다. [개발 인계서](../work/bugmap-nearby-discoveries-harness/08-handoff/HANDOFF.md)에 두 390×844 Figma 상태, NEAR-01~06, 반경·공개 위치·검색 상태 공유 기준, 사진 3종과 라이선스, 실기기 확인 항목을 연결했다.
+- [무결성 매니페스트](../work/bugmap-nearby-discoveries-harness/08-handoff/manifest.json)의 입력 107개와 출력 1개, 원본과 같은 사진 바이트, 네이티브 PNG 2개, 노드 및 상대 링크를 검증했다. [독립 비평](../work/bugmap-nearby-discoveries-harness/08-handoff/critique.md)
+- 하네스에서 1~7단계 통과를 확인했다. 사람의 인계 수락이 남았다. [재개 지점](../work/bugmap-nearby-discoveries-harness/control/flow.md)
+
+## 2026-11-20 — BugMapHarness 내 주변 발견 디자인 하네스 완료
+
+- 개발 인계 수락 `a904e16e-f6e5-4839-947a-5b49ad600bd1`의 유효성을 확인했다. 하네스에서 8단계 모두 `passed`, `complete: true`였다.
+- [최종 개발 인계서](../work/bugmap-nearby-discoveries-harness/08-handoff/HANDOFF.md), [기존 지도에서 시작하는 Figma 프로토타입](https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81&scaling=scale-down), [검수 보고서](../work/bugmap-nearby-discoveries-harness/07-validation/report.md)를 연결했다. 실제 제품 동작의 [실기기 확인 항목](../work/bugmap-nearby-discoveries-harness/08-handoff/open-items.md)을 인계서에 남겼다.

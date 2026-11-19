@@ -1,0 +1,4 @@
+id,requirement,severity,status,detail
+V-01,HOME-07,required,resolved,승인된 공식 Mapbox SVG의 원본 SHA-256과 Figma 로고 하위 12개 페인트를 대조해 색상 이슈 10건 해결
+V-02,HOME-08,minor,documented,Figma의 Noto Sans KR 대체 글꼴과 지도 레이블 외곽선 때문에 승인 HTML과 픽셀이 다르며 실제 캡처에서 잘림과 겹침이 보이지 않음. Figma 편집 담당자가 Pretendard를 사용할 수 있게 되면 새 캡처와 대조
+V-03,HOME-08,scope,documented,2026-11-20의 파일 재조회는 데스크톱 채널 응답 없음과 공식 도구 호출 한도로 불가해 제작 당시 원격 내보내기로 재검수

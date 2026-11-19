@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "wireframe",
+  "at": "2026-11-19T16:05:33.614Z",
+  "inputs": {
+    "04-wireframes/wireframes.json": "95d23946eaa1580454e134137442af4e90d847f07fae0671a0b13ec7b83e2013"
+  },
+  "outputs": {
+    "04-wireframes/nearby-discoveries/default.svg": "94a433447eb8b7972202665fac9df64a5764c207e66d48860a93ad4e3af0e9e6",
+    "04-wireframes/nearby-discoveries/radius-3km.svg": "66065c044a7aa7e2814f1c512a65a61497c9660ce60b3c3690e0b7184833703c",
+    "04-wireframes/captures/nearby-discoveries/default.png": "9001a5ffbf215d255848fe9564d3e30590c6b03d058b1b053f712a4d708fceb9",
+    "04-wireframes/captures/nearby-discoveries/radius-3km.png": "ab793db49f99863de5de2f7a348a0cb6b0c8485d56c470aaf97b9af0ea14cd5a"
+  }
+}

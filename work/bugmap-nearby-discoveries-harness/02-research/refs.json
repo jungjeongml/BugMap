@@ -1,0 +1,10 @@
+{
+  "references": [
+    {
+      "id": "apple-hig-sheets",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
+      "viewport": { "width": 1280, "height": 1060 },
+      "reason": "NEAR-01의 확장 패널과 스크롤 전환, 상단 손잡이 및 복귀 배치 판단을 위한 공식 플랫폼 자료"
+    }
+  ]
+}

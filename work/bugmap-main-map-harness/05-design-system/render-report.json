@@ -1,0 +1,655 @@
+{
+  "design": "main-map/default",
+  "renderer": "Chromium CDP 1× from local preview.svg",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": {
+    "fullViewportMatches": true,
+    "edgeToEdgeMap": true,
+    "allTextVisibleInViewport": true,
+    "labelInsideControl": true,
+    "allCopyMatches": true,
+    "allTextsUsePretendard": true,
+    "allTargetsSafeAndAtLeast44": true,
+    "allTargetsDisjoint": true,
+    "allTextBoundsDisjoint": true,
+    "threeTotalCountClusters": true,
+    "oneActiveOfFourTabs": true,
+    "logoVisibleAndSeparate": true,
+    "searchDragAndTabsDistinct": true
+  },
+  "contrasts": [
+    {
+      "id": "map-north",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 5.01,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "map-park",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 5.5,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "map-river",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 6.05,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "label-cluster-seven",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 14.35,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "label-cluster-three",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 14.35,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "label-cluster-five",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 14.35,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "location-label",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 7.97,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "record-label",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 10.86,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "search-placeholder",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 6.43,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "tab-label-map",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 7.96,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "tab-label-community",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 10.33,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "tab-label-chat",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 10.33,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "tab-label-my",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 10.33,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "time",
+      "measure": "foreground to actual backdrop at text ink samples",
+      "ratio": 5.66,
+      "threshold": 4.5,
+      "passed": true
+    },
+    {
+      "id": "sheet-handle",
+      "measure": "icon or handle on solid surface",
+      "ratio": 6.46,
+      "threshold": 3,
+      "passed": true
+    },
+    {
+      "id": "locate-icon",
+      "measure": "icon or handle on solid surface",
+      "ratio": 9.07,
+      "threshold": 3,
+      "passed": true
+    },
+    {
+      "id": "map-info-icon",
+      "measure": "icon or handle on solid surface",
+      "ratio": 9.4,
+      "threshold": 3,
+      "passed": true
+    },
+    {
+      "id": "search-icon",
+      "measure": "icon or handle on solid surface",
+      "ratio": 6.43,
+      "threshold": 3,
+      "passed": true
+    },
+    {
+      "id": "record-icon",
+      "measure": "icon or handle on solid surface",
+      "ratio": 10.86,
+      "threshold": 3,
+      "passed": true
+    },
+    {
+      "id": "selected-tab-icon",
+      "measure": "icon or handle on solid surface",
+      "ratio": 7.96,
+      "threshold": 3,
+      "passed": true
+    },
+    {
+      "id": "inactive-tab-icons",
+      "measure": "icon or handle on solid surface",
+      "ratio": 10.33,
+      "threshold": 3,
+      "passed": true
+    }
+  ],
+  "fonts": {
+    "map-north": [
+      {
+        "familyName": "Pretendard",
+        "postScriptName": "Pretendard-Bold",
+        "isCustomFont": true,
+        "glyphCount": 3
+      }
+    ],
+    "map-park": [
+      {
+        "familyName": "Pretendard",
+        "postScriptName": "Pretendard-Bold",
+        "isCustomFont": true,
+        "glyphCount": 3
+      }
+    ],
+    "map-river": [
+      {
+        "familyName": "Pretendard Medium",
+        "postScriptName": "Pretendard-Medium",
+        "isCustomFont": true,
+        "glyphCount": 2
+      }
+    ],
+    "label-cluster-seven": [
+      {
+        "familyName": "Pretendard",
+        "postScriptName": "Pretendard-Bold",
+        "isCustomFont": true,
+        "glyphCount": 4
+      }
+    ],
+    "label-cluster-three": [
+      {
+        "familyName": "Pretendard",
+        "postScriptName": "Pretendard-Bold",
+        "isCustomFont": true,
+        "glyphCount": 4
+      }
+    ],
+    "label-cluster-five": [
+      {
+        "familyName": "Pretendard",
+        "postScriptName": "Pretendard-Bold",
+        "isCustomFont": true,
+        "glyphCount": 4
+      }
+    ],
+    "location-label": [
+      {
+        "familyName": "Pretendard",
+        "postScriptName": "Pretendard-Bold",
+        "isCustomFont": true,
+        "glyphCount": 4
+      }
+    ],
+    "record-label": [
+      {
+        "familyName": "Pretendard",
+        "postScriptName": "Pretendard-Bold",
+        "isCustomFont": true,
+        "glyphCount": 10
+      }
+    ],
+    "search-placeholder": [
+      {
+        "familyName": "Pretendard Medium",
+        "postScriptName": "Pretendard-Medium",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ],
+    "tab-label-map": [
+      {
+        "familyName": "Pretendard Medium",
+        "postScriptName": "Pretendard-Medium",
+        "isCustomFont": true,
+        "glyphCount": 2
+      }
+    ],
+    "tab-label-community": [
+      {
+        "familyName": "Pretendard Medium",
+        "postScriptName": "Pretendard-Medium",
+        "isCustomFont": true,
+        "glyphCount": 4
+      }
+    ],
+    "tab-label-chat": [
+      {
+        "familyName": "Pretendard Medium",
+        "postScriptName": "Pretendard-Medium",
+        "isCustomFont": true,
+        "glyphCount": 2
+      }
+    ],
+    "tab-label-my": [
+      {
+        "familyName": "Pretendard Medium",
+        "postScriptName": "Pretendard-Medium",
+        "isCustomFont": true,
+        "glyphCount": 2
+      }
+    ],
+    "time": [
+      {
+        "familyName": "Pretendard",
+        "postScriptName": "Pretendard-Bold",
+        "isCustomFont": true,
+        "glyphCount": 4
+      }
+    ]
+  },
+  "geometry": {
+    "texts": [
+      {
+        "id": "map-north",
+        "text": "성수동",
+        "fill": "rgb(224, 235, 223)",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "box": {
+          "x": 260,
+          "y": 119,
+          "width": 31.125,
+          "height": 14
+        },
+        "group": null
+      },
+      {
+        "id": "map-park",
+        "text": "서울숲",
+        "fill": "rgb(224, 235, 223)",
+        "fontSize": 15,
+        "fontWeight": 700,
+        "box": {
+          "x": 123,
+          "y": 238,
+          "width": 38.90625,
+          "height": 18
+        },
+        "group": null
+      },
+      {
+        "id": "map-river",
+        "text": "한강",
+        "fill": "rgb(167, 187, 173)",
+        "fontSize": 13,
+        "fontWeight": 500,
+        "box": {
+          "x": 168,
+          "y": 492.5,
+          "width": 22.484375,
+          "height": 15
+        },
+        "group": null
+      },
+      {
+        "id": "label-cluster-seven",
+        "text": "기록 7",
+        "fill": "rgb(243, 247, 238)",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "box": {
+          "x": 77.5234375,
+          "y": 181.5,
+          "width": 32.953125,
+          "height": 15
+        },
+        "group": "cluster-seven"
+      },
+      {
+        "id": "label-cluster-three",
+        "text": "기록 3",
+        "fill": "rgb(243, 247, 238)",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "box": {
+          "x": 287.109375,
+          "y": 325.5,
+          "width": 33.78125,
+          "height": 15
+        },
+        "group": "cluster-three"
+      },
+      {
+        "id": "label-cluster-five",
+        "text": "기록 5",
+        "fill": "rgb(243, 247, 238)",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "box": {
+          "x": 77.1875,
+          "y": 425.5,
+          "width": 33.625,
+          "height": 15
+        },
+        "group": "cluster-five"
+      },
+      {
+        "id": "location-label",
+        "text": "내 위치",
+        "fill": "rgb(243, 247, 238)",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "box": {
+          "x": 201,
+          "y": 300,
+          "width": 33.890625,
+          "height": 14
+        },
+        "group": null
+      },
+      {
+        "id": "record-label",
+        "text": "발견/채집 기록하기",
+        "fill": "rgb(32, 46, 19)",
+        "fontSize": 14,
+        "fontWeight": 700,
+        "box": {
+          "x": 238,
+          "y": 616,
+          "width": 105.21875,
+          "height": 16
+        },
+        "group": "record"
+      },
+      {
+        "id": "search-placeholder",
+        "text": "곤충 이름 또는 지역 검색",
+        "fill": "rgb(167, 187, 173)",
+        "fontSize": 14,
+        "fontWeight": 500,
+        "box": {
+          "x": 64,
+          "y": 716,
+          "width": 134.671875,
+          "height": 16
+        },
+        "group": "search"
+      },
+      {
+        "id": "tab-label-map",
+        "text": "지도",
+        "fill": "rgb(197, 238, 121)",
+        "fontSize": 11,
+        "fontWeight": 500,
+        "box": {
+          "x": 49.4921875,
+          "y": 789.5,
+          "width": 19.015625,
+          "height": 13
+        },
+        "group": "tab-map"
+      },
+      {
+        "id": "tab-label-community",
+        "text": "커뮤니티",
+        "fill": "rgb(189, 205, 194)",
+        "fontSize": 11,
+        "fontWeight": 500,
+        "box": {
+          "x": 130.984375,
+          "y": 789.5,
+          "width": 38.03125,
+          "height": 13
+        },
+        "group": "tab-community"
+      },
+      {
+        "id": "tab-label-chat",
+        "text": "채팅",
+        "fill": "rgb(189, 205, 194)",
+        "fontSize": 11,
+        "fontWeight": 500,
+        "box": {
+          "x": 231.4921875,
+          "y": 789.5,
+          "width": 19.015625,
+          "height": 13
+        },
+        "group": "tab-chat"
+      },
+      {
+        "id": "tab-label-my",
+        "text": "마이",
+        "fill": "rgb(189, 205, 194)",
+        "fontSize": 11,
+        "fontWeight": 500,
+        "box": {
+          "x": 321.9921875,
+          "y": 789.5,
+          "width": 19.015625,
+          "height": 13
+        },
+        "group": "tab-my"
+      },
+      {
+        "id": "time",
+        "text": "9:41",
+        "fill": "rgb(243, 247, 238)",
+        "fontSize": 15,
+        "fontWeight": 700,
+        "box": {
+          "x": 24,
+          "y": 18,
+          "width": 30.625,
+          "height": 18
+        },
+        "group": null
+      }
+    ],
+    "targets": [
+      {
+        "id": "cluster-seven",
+        "role": "button",
+        "label": "기록 7개",
+        "selected": null,
+        "box": {
+          "x": 58,
+          "y": 167,
+          "width": 64,
+          "height": 44
+        }
+      },
+      {
+        "id": "cluster-three",
+        "role": "button",
+        "label": "기록 3개",
+        "selected": null,
+        "box": {
+          "x": 268,
+          "y": 311,
+          "width": 64,
+          "height": 44
+        }
+      },
+      {
+        "id": "cluster-five",
+        "role": "button",
+        "label": "기록 5개",
+        "selected": null,
+        "box": {
+          "x": 58,
+          "y": 411,
+          "width": 64,
+          "height": 44
+        }
+      },
+      {
+        "id": "attribution",
+        "role": "button",
+        "label": "지도 출처 정보",
+        "selected": null,
+        "box": {
+          "x": 330,
+          "y": 546,
+          "width": 44,
+          "height": 44
+        }
+      },
+      {
+        "id": "gps",
+        "role": "button",
+        "label": "내 위치로 이동",
+        "selected": null,
+        "box": {
+          "x": 16,
+          "y": 600,
+          "width": 48,
+          "height": 48
+        }
+      },
+      {
+        "id": "record",
+        "role": "button",
+        "label": "발견/채집 기록하기",
+        "selected": null,
+        "box": {
+          "x": 190,
+          "y": 600,
+          "width": 184,
+          "height": 48
+        }
+      },
+      {
+        "id": "sheet-handle",
+        "role": "button",
+        "label": "내 주변 발견 펼치기",
+        "selected": null,
+        "box": {
+          "x": 0,
+          "y": 656,
+          "width": 390,
+          "height": 44
+        }
+      },
+      {
+        "id": "search",
+        "role": "searchbox",
+        "label": "곤충 이름 또는 지역 검색",
+        "selected": null,
+        "box": {
+          "x": 16,
+          "y": 700,
+          "width": 358,
+          "height": 48
+        }
+      },
+      {
+        "id": "tab-map",
+        "role": "tab",
+        "label": "지도",
+        "selected": "true",
+        "box": {
+          "x": 16,
+          "y": 756,
+          "width": 86,
+          "height": 52
+        }
+      },
+      {
+        "id": "tab-community",
+        "role": "tab",
+        "label": "커뮤니티",
+        "selected": "false",
+        "box": {
+          "x": 107,
+          "y": 756,
+          "width": 86,
+          "height": 52
+        }
+      },
+      {
+        "id": "tab-chat",
+        "role": "tab",
+        "label": "채팅",
+        "selected": "false",
+        "box": {
+          "x": 198,
+          "y": 756,
+          "width": 86,
+          "height": 52
+        }
+      },
+      {
+        "id": "tab-my",
+        "role": "tab",
+        "label": "마이",
+        "selected": "false",
+        "box": {
+          "x": 289,
+          "y": 756,
+          "width": 85,
+          "height": 52
+        }
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "map": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844
+    },
+    "logo": {
+      "x": 14,
+      "y": 556,
+      "width": 88,
+      "height": 23
+    }
+  },
+  "files": {
+    "preview.svg": "4a93514df2340dc0e540fc08975addcd5a2a13031084b05fec30eeaf54c991eb",
+    "captures/390x844-default.png": "5f19fd1a0a34f989728dc05ef6fe4f8fd7dc7b9bcf954700808347eba0ce22c3"
+  },
+  "result": true
+}

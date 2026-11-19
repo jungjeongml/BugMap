@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "command": "lint:figma",
+  "inputs": {
+    "04-wireframes/wireframes.json": "95d23946eaa1580454e134137442af4e90d847f07fae0671a0b13ec7b83e2013",
+    "05-design-system/assets-manifest.json": "3691ca3ba046925e19a9298a2972c4c80aed47bb8373899f52fa05b35d93f693",
+    "05-design-system/assets/photos/dragonfly.png": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+    "05-design-system/assets/photos/ladybird.png": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+    "05-design-system/assets/photos/stag-beetle.png": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+    "05-design-system/components.json": "95017bcf37a5641351bc5ce806760a83a93551d2975357c8da4f6bdf619593c7",
+    "05-design-system/copy.json": "aa972b8bf6c223075269de34e1d2ca8f2c582d3e6424d4cbd14898a4e621645b",
+    "05-design-system/tokens.json": "ef648eaebae4bb23edf7dbd969442fc13600df14fdf6c99c91e39f48a252179c",
+    "06-figma/node-map.json": "52212d50464cc6f548aa47f86d81f85d7cb05ac55a324752510594877d8b26e4",
+    "06-figma/nodes.json": "106b290228823ef83669dada7a06efcfdeb85fdf98fa58ca48fbdc3a542cfc1c",
+    "control/figma.json": "68f69ef5d0addb97f9b8b4d6b9a5727fa4c4ca3ab0221f3ee9385f7bbb12d692"
+  },
+  "issues": [],
+  "nodeCount": 205
+}

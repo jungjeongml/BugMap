@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "lint:web",
+  "at": "2026-11-19T13:51:26.074Z",
+  "inputs": {
+    "05-design-system/captures/390x844-default.png": "5f19fd1a0a34f989728dc05ef6fe4f8fd7dc7b9bcf954700808347eba0ce22c3",
+    "05-design-system/components.json": "f59ded0aa57854cb5ce22f3736daaf457d6c549e5383a3fbc6bf1cb58de3a6ac",
+    "05-design-system/copy.json": "6512675aa829dc88345d88556811a6a3bc1991bb52cb1369bfe4d64d6804755c",
+    "05-design-system/tokens.json": "1dc4c4ef4a3d94ffe91a66af610a3e56c3712ed860f433cacdaeb776c805d76d",
+    "06-figma/web/README.md": "19c2b54034cb70bc69e7f7f8b3e70935574e609a9aa72923eb004a895959128e",
+    "06-figma/web/assets/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "06-figma/web/assets/Pretendard-Medium.woff2": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+    "06-figma/web/assets/lucide-ISC.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "06-figma/web/assets/map-dark.svg": "8c7164ba25d1eb05f9ca5c7f6c2d30a2244ff9543351f295f6a7fab7e199b56e",
+    "06-figma/web/assets/mapbox-logo.svg": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+    "06-figma/web/assets/pretendard-OFL.txt": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+    "06-figma/web/main-map--default.html": "05cf90321783c85fa553dea996faf2a4935731de807c06a48bd2664ffa868a87",
+    "06-figma/web/main-map.css": "d2636108300ae5ef6b1e17e5890af633ce6e575576bae1b6c3faf7284420b703",
+    "control/project.json": "e0f36a57615751afaab22aec94dcc450526ed8bdbb4ad81a7cdb8998f2b8b530"
+  },
+  "outputs": {
+    "07-validation/captures/a557daf8e0e4-390x844.png": "d092614e5806dbc8b0b11d8d505062b510e7e7a79190ca34d0652227877fd347"
+  },
+  "minTarget": 44,
+  "runs": [
+    {
+      "html": "06-figma/web/main-map--default.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/a557daf8e0e4-390x844.png",
+      "issues": [],
+      "title": "BugMap 메인 발견 지도",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-default.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    }
+  ]
+}

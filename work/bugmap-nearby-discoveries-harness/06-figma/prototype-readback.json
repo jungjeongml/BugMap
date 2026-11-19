@@ -1,0 +1,170 @@
+{
+  "method": "Actual Figma desktop node.reactions read-back",
+  "runtimeGestureTested": false,
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "pageId": "0:1",
+  "entry": "41:81",
+  "actions": [
+    {
+      "from": "41:81",
+      "interactiveNode": "41:451",
+      "trigger": "ON_DRAG",
+      "to": "50:1081",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "50:1081",
+            "navigation": "NAVIGATE",
+            "transition": {
+              "type": "MOVE_IN",
+              "direction": "TOP",
+              "matchLayers": false,
+              "easing": {
+                "type": "EASE_OUT"
+              },
+              "duration": 0.2800000011920929
+            },
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "50:1081",
+              "navigation": "NAVIGATE",
+              "transition": {
+                "type": "MOVE_IN",
+                "direction": "TOP",
+                "matchLayers": false,
+                "easing": {
+                  "type": "EASE_OUT"
+                },
+                "duration": 0.2800000011920929
+              },
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_DRAG"
+          }
+        }
+      ]
+    },
+    {
+      "from": "50:1081",
+      "interactiveNode": "50:1154",
+      "trigger": "ON_CLICK",
+      "to": "41:81",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "41:81",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "41:81",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "50:1081",
+      "interactiveNode": "50:1115",
+      "trigger": "ON_CLICK",
+      "to": "50:1190",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "50:1190",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "50:1190",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "50:1190",
+      "interactiveNode": "50:1253",
+      "trigger": "ON_CLICK",
+      "to": "41:81",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "41:81",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "41:81",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "50:1190",
+      "interactiveNode": "50:1218",
+      "trigger": "ON_CLICK",
+      "to": "50:1081",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "50:1081",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "50:1081",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    }
+  ]
+}

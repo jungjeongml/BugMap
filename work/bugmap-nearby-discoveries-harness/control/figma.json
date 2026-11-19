@@ -1,0 +1,14 @@
+{
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "documentName": "BugMapHarness",
+  "pageId": "0:1",
+  "pageName": "Page 1",
+  "fileUrl": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=0-1",
+  "prototypeSource": {
+    "nodeId": "41:81",
+    "name": "07 · 메인 / 발견 지도",
+    "dragHandleId": "41:451",
+    "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81"
+  },
+  "editPolicy": "내 주변 발견 시안 두 상태를 추가한다. 기존 메인 지도의 드래그 진입 연결만 추가하고 화면과 다른 연결을 보존한다. 로그인 등 나머지 기존 화면은 제작 대상 밖이다."
+}

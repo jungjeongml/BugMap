@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="screen-title">
+<title id="screen-title">내 주변 발견 · 전체</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g id="block-0" data-type="text"><text x="24" y="35" font-family="sans-serif" font-size="14" fill="#222222">9:41</text></g>
+<g id="block-1" data-type="box"><rect x="177" y="73" width="36" height="4" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-2" data-type="input"><rect x="16" y="98" width="358" height="48" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-3" data-type="text"><text x="32" y="123" font-family="sans-serif" font-size="14" fill="#222222">⌕</text></g>
+<g id="block-4" data-type="text"><text x="55" y="123" font-family="sans-serif" font-size="14" fill="#222222">곤충 이름 또는 지역 검색</text></g>
+<g id="block-5" data-type="button"><rect x="16" y="158" width="61" height="46" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-6" data-type="text"><text x="36" y="182" font-family="sans-serif" font-size="14" fill="#222222">전체</text></g>
+<g id="block-7" data-type="box"><rect x="33" y="194" width="26" height="3" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-8" data-type="button"><rect x="83" y="158" width="91" height="46" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-9" data-type="text"><text x="99" y="182" font-family="sans-serif" font-size="14" fill="#222222">1 km 이내</text></g>
+<g id="block-10" data-type="button"><rect x="180" y="158" width="94" height="46" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-11" data-type="text"><text x="196" y="182" font-family="sans-serif" font-size="14" fill="#222222">3 km 이내</text></g>
+<g id="block-12" data-type="button"><rect x="280" y="158" width="94" height="46" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-13" data-type="text"><text x="296" y="182" font-family="sans-serif" font-size="14" fill="#222222">5 km 이내</text></g>
+<g id="block-14" data-type="text"><text x="24" y="239" font-family="sans-serif" font-size="14" fill="#222222">내 주변 발견</text></g>
+<g id="block-15" data-type="text"><text x="319" y="239" font-family="sans-serif" font-size="14" fill="#222222">기록 3개</text></g>
+<g id="block-16" data-type="button"><rect x="16" y="254" width="358" height="116" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-17" data-type="image"><rect x="28" y="268" width="88" height="88" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="36" y="290" font-family="sans-serif" font-size="14" fill="#222222">곤충 사진</text></g>
+<g id="block-18" data-type="text"><text x="130" y="285" font-family="sans-serif" font-size="14" fill="#222222">넓적사슴벌레</text></g>
+<g id="block-19" data-type="text"><text x="304" y="285" font-family="sans-serif" font-size="14" fill="#222222">0.8 km</text></g>
+<g id="block-20" data-type="text"><text x="130" y="318" font-family="sans-serif" font-size="14" fill="#222222">관찰 · 서울숲</text></g>
+<g id="block-21" data-type="text"><text x="130" y="346" font-family="sans-serif" font-size="14" fill="#222222">11월 18일 15:20 발견</text></g>
+<g id="block-22" data-type="button"><rect x="16" y="382" width="358" height="116" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-23" data-type="image"><rect x="28" y="396" width="88" height="88" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="36" y="418" font-family="sans-serif" font-size="14" fill="#222222">곤충 사진</text></g>
+<g id="block-24" data-type="text"><text x="130" y="413" font-family="sans-serif" font-size="14" fill="#222222">왕잠자리</text></g>
+<g id="block-25" data-type="text"><text x="304" y="413" font-family="sans-serif" font-size="14" fill="#222222">4.6 km</text></g>
+<g id="block-26" data-type="text"><text x="130" y="446" font-family="sans-serif" font-size="14" fill="#222222">관찰 · 중랑천</text></g>
+<g id="block-27" data-type="text"><text x="130" y="474" font-family="sans-serif" font-size="14" fill="#222222">11월 17일 13:40 발견</text></g>
+<g id="block-28" data-type="button"><rect x="16" y="510" width="358" height="116" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-29" data-type="image"><rect x="28" y="524" width="88" height="88" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="36" y="546" font-family="sans-serif" font-size="14" fill="#222222">곤충 사진</text></g>
+<g id="block-30" data-type="text"><text x="130" y="541" font-family="sans-serif" font-size="14" fill="#222222">칠성무당벌레</text></g>
+<g id="block-31" data-type="text"><text x="304" y="541" font-family="sans-serif" font-size="14" fill="#222222">3.0 km</text></g>
+<g id="block-32" data-type="text"><text x="130" y="574" font-family="sans-serif" font-size="14" fill="#222222">채집 · 뚝섬한강공원</text></g>
+<g id="block-33" data-type="text"><text x="130" y="602" font-family="sans-serif" font-size="14" fill="#222222">11월 16일 10:10 발견</text></g>
+<g id="block-34" data-type="box"><rect x="0" y="690" width="390" height="154" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-35" data-type="button"><rect x="121" y="700" width="148" height="48" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-36" data-type="text"><text x="166" y="730" font-family="sans-serif" font-size="14" fill="#222222">지도 보기</text></g>
+<g id="block-37" data-type="button"><rect x="16" y="756" width="86" height="52" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-38" data-type="text"><text x="51" y="785" font-family="sans-serif" font-size="14" fill="#222222">지도</text></g>
+<g id="block-39" data-type="button"><rect x="107" y="756" width="86" height="52" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-40" data-type="text"><text x="128" y="785" font-family="sans-serif" font-size="14" fill="#222222">커뮤니티</text></g>
+<g id="block-41" data-type="button"><rect x="198" y="756" width="86" height="52" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-42" data-type="text"><text x="233" y="785" font-family="sans-serif" font-size="14" fill="#222222">채팅</text></g>
+<g id="block-43" data-type="button"><rect x="289" y="756" width="85" height="52" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-44" data-type="text"><text x="323" y="785" font-family="sans-serif" font-size="14" fill="#222222">마이</text></g>
+<g id="block-45" data-type="box"><rect x="45" y="796" width="28" height="3" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-46" data-type="box"><rect x="128" y="830" width="134" height="4" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+</svg>

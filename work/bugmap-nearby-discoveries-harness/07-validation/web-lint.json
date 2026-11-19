@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "lint:web",
+  "at": "2026-11-19T16:27:33.156Z",
+  "inputs": {
+    "05-design-system/captures/390x844-default.png": "21639d703563d5c7276c0994ee949d532f69166038808443ddfc4c81113481df",
+    "05-design-system/captures/390x844-radius-3km.png": "869ecc2bafeae40b838a6d7b6fb316a3622f8659d1257b6476a9653a31edae77",
+    "05-design-system/components.json": "95017bcf37a5641351bc5ce806760a83a93551d2975357c8da4f6bdf619593c7",
+    "05-design-system/copy.json": "aa972b8bf6c223075269de34e1d2ca8f2c582d3e6424d4cbd14898a4e621645b",
+    "05-design-system/tokens.json": "ef648eaebae4bb23edf7dbd969442fc13600df14fdf6c99c91e39f48a252179c",
+    "06-figma/web/README.md": "a52e8a204165ebebfe7aa884a5dc24b83bf996221a1ef47787d7df4ed483f9a6",
+    "06-figma/web/assets/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "06-figma/web/assets/Pretendard-Medium.woff2": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+    "06-figma/web/assets/lucide-ISC.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "06-figma/web/assets/photos/dragonfly.png": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+    "06-figma/web/assets/photos/ladybird.png": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+    "06-figma/web/assets/photos/stag-beetle.png": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+    "06-figma/web/assets/pretendard-OFL.txt": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+    "06-figma/web/nearby-discoveries--default.html": "dafc0e061fc14b8844b99180a7a8ad58dc7aa437c001f801e08fb7e5b8ef2aa0",
+    "06-figma/web/nearby-discoveries--radius-3km.html": "d74b80860e0c2dd34e4470e40a7babcd29715fa5f72bd211c479b4a809d91e5d",
+    "06-figma/web/nearby-discoveries.css": "0b8a7465e4bca7d0ee2577c991d37045e987355ec8dd797fb9e47a4d5a1bd3af",
+    "control/project.json": "006392128aabe4094b2a873482d83d7dad19691523cfd336e1e696e302bd0dae"
+  },
+  "outputs": {
+    "07-validation/captures/e5b950cb0888-390x844.png": "35f3b78abb62872446ae2dc4773b3030975f2fd29df6451a725d0444096a5edd",
+    "07-validation/captures/69abf0f63ade-390x844.png": "5411c954a185c2e70035cbf4e13b52525f1a8c94754c2202412a1dc5e299fd33"
+  },
+  "minTarget": 44,
+  "runs": [
+    {
+      "html": "06-figma/web/nearby-discoveries--default.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/e5b950cb0888-390x844.png",
+      "issues": [],
+      "title": "내 주변 발견 · 전체",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-default.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    },
+    {
+      "html": "06-figma/web/nearby-discoveries--radius-3km.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/69abf0f63ade-390x844.png",
+      "issues": [],
+      "title": "내 주변 발견 · 3 km 이내",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-radius-3km.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    }
+  ]
+}

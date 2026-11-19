@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "refs:capture",
+  "at": "2026-11-19T16:01:01.399Z",
+  "inputs": {
+    "02-research/refs.json": "fa8d0babeb8716201cc6f605d4ac0966f9d823a393567e05e0f8cbc48802d24a"
+  },
+  "outputs": {
+    "02-research/captures/apple-hig-sheets.png": "42984470aff14db6c4fe93bab337c0eec056bbbe429282bbbd4164086a85d313"
+  },
+  "references": [
+    {
+      "id": "apple-hig-sheets",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
+      "viewport": {
+        "width": 1280,
+        "height": 1060
+      },
+      "finalUrl": "https://developer.apple.com/design/human-interface-guidelines/sheets",
+      "title": "Sheets | Apple Developer Documentation",
+      "capture": "02-research/captures/apple-hig-sheets.png"
+    }
+  ]
+}

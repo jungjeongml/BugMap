@@ -1,0 +1,80 @@
+{
+  "approvedWireframe": {
+    "file": "work/bugmap-nearby-discoveries-harness/04-wireframes/wireframes.json",
+    "sha256": "95d23946eaa1580454e134137442af4e90d847f07fae0671a0b13ec7b83e2013"
+  },
+  "sharedDesignTokens": {
+    "file": "work/bugmap-main-map-harness/05-design-system/tokens.json",
+    "sha256": "1dc4c4ef4a3d94ffe91a66af610a3e56c3712ed860f433cacdaeb776c805d76d"
+  },
+  "lucide": {
+    "package": "lucide-react-native",
+    "version": "1.70.0",
+    "icons": [
+      "search",
+      "map",
+      "users-round",
+      "message-circle",
+      "user-round"
+    ]
+  },
+  "files": [
+    {
+      "file": "assets/Pretendard-Medium.woff2",
+      "sha256": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+      "bytes": 778432
+    },
+    {
+      "file": "assets/Pretendard-Bold.woff2",
+      "sha256": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+      "bytes": 791156
+    },
+    {
+      "file": "assets/pretendard-OFL.txt",
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+      "bytes": 4418
+    },
+    {
+      "file": "assets/lucide-ISC.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    },
+    {
+      "file": "assets/photos/stag-beetle.png",
+      "sha256": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+      "bytes": 132257,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      }
+    },
+    {
+      "file": "assets/photos/dragonfly.png",
+      "sha256": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+      "bytes": 152694,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      }
+    },
+    {
+      "file": "assets/photos/ladybird.png",
+      "sha256": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+      "bytes": 124535,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      }
+    },
+    {
+      "file": "photo-sources.json",
+      "sha256": "1656aef7d1d1fed3ec3184b999ce21cfb89815f23815da4a4bb087a01ce1d41a",
+      "bytes": 3826
+    },
+    {
+      "file": "asset-sources.md",
+      "sha256": "df833fdc8568f4c6be82a92d8c0e241ae22540af65d6f093e9d192a28882700a",
+      "bytes": 1898
+    }
+  ]
+}

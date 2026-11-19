@@ -1,0 +1,9 @@
+requirement,screen,state,figma_node,result,evidence
+HOME-01,main-map,default,41:81,pass,실제 원격 노드 매핑과 390×844 PNG 및 편집 가능한 지도·UI 레이어 확인
+HOME-02,main-map,default,41:451,pass,중앙 손잡이와 390×44px 조작 영역 및 내 주변 발견 진입 흐름 문서 확인
+HOME-03,main-map,default,41:454,pass,돋보기와 곤충 이름 또는 지역 검색 문구 및 358×48px 입력 영역 확인
+HOME-04,main-map,default,41:463 | 41:471 | 41:478 | 41:482,pass,지도·커뮤니티·채팅·마이 순서와 지도만 선택 및 탭 4개 최소 44×44px 확인
+HOME-05,main-map,default,41:434,pass,패널 위 왼쪽 48×48px GPS 진입점과 지도 이동 흐름 문서 확인
+HOME-06,main-map,default,41:443,pass,패널 위 오른쪽 184×48px 발견/채집 기록하기 버튼과 작성 진입 흐름 문서 확인
+HOME-07,main-map,default,41:819 | 41:427 | 41:390 | 41:394 | 41:398,pass,기록 총건수와 파란 현재 위치 구분 및 반경 경계 미표시 및 원본 로고와 출처 버튼의 배치 확인
+HOME-08,main-map,default,41:81 | 7:2 | 19:2,pass,실제 캡처의 순서·시각 대비·잘림·겹침·정적 안전 영역과 기존 프레임 전후 트리·PNG 해시 확인

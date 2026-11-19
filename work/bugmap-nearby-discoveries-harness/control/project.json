@@ -1,0 +1,39 @@
+{
+  "id": "bugmap-nearby-discoveries-harness",
+  "purpose": "BugMapHarness 메인 지도에 연결되는 내 주변 발견 확장 패널 디자인",
+  "platform": "mobile",
+  "language": "ko",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "reviewMinScore": 4,
+  "scope": {
+    "screen": "nearby-discoveries",
+    "states": [
+      "default",
+      "radius-3km"
+    ],
+    "figmaRootCount": 2,
+    "prototypeSourceNodeId": "41:81"
+  },
+  "sourceDocuments": {
+    "AGENTS.md": "c4374f749618d10136c24e720011df1c3f31a5880525989d99a0fad9c04d715b",
+    "docs/PRD.md": "7f92a4d4c78feab03716d6716f8ba808fa2f4f784e0a84cef4eb736dce1a5ea9",
+    "docs/DESIGN.md": "11c83cb492e9d02a7c6e06eb1ed21aff612d5502c1d5ac256260a3b79cf457f6",
+    "docs/TDD.md": "dcc3e1650924cb5e5eb401ebec0f52e58cf866fc8b1848209900348b3a4b77fb",
+    "docs/screens/main-map.md": "564f66d25ad73d674c33cb55842366dbe02f0417c31e314c8bb72005220786c6",
+    "docs/design-harness.md": "8fc9bd2d5ff0a56ecf9e681188615e084f4f519973f6cb51e2dafbf698a9767f",
+    "work/bugmap-main-map-harness/08-handoff/HANDOFF.md": "1e342df902c4fd30cc3377eb2e8844610850cac56402f63fa165fdedef1b0a58",
+    "work/bugmap-main-map-harness/06-figma/captures/main-map-default.png": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c"
+  },
+  "reference": {
+    "path": "01-prd/evidence/kyroScrollMenu.png",
+    "source": "사용자 첨부",
+    "width": 1125,
+    "height": 2436,
+    "sha256": "126cb82cd467621a948b3a6c58b97303bc37a869e991481612275bc6a82d2beb"
+  }
+}

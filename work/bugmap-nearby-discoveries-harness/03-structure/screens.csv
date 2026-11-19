@@ -1,0 +1,2 @@
+screen_id,title,purpose,primary_actions,requirements,viewport,state_count
+nearby-discoveries,내 주변 발견,메인 지도의 공개 곤충 기록을 사진과 기록 정보가 있는 목록으로 둘러보기,곤충·지역 검색 | 거리 선택 | 기록 상세 열기 | 지도 보기 | 탭 이동,NEAR-01 | NEAR-02 | NEAR-03 | NEAR-04 | NEAR-05 | NEAR-06,390x844,2

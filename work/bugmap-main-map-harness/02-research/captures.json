@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "refs:capture",
+  "at": "2026-11-19T13:20:42.257Z",
+  "inputs": {
+    "02-research/refs.json": "1e32278d050594652d1a5c8acb23093d33d59bdabd0c99f6fb0562f5bf7e6857"
+  },
+  "outputs": {
+    "02-research/captures/mapbox-attribution.png": "228cb9d6fe5c61a712e536f3c83486b9e92fee4167b0414a12a9d56feed63990"
+  },
+  "references": [
+    {
+      "id": "mapbox-attribution",
+      "url": "https://docs.mapbox.com/help/dive-deeper/attribution/",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "finalUrl": "https://docs.mapbox.com/help/dive-deeper/attribution/",
+      "title": "Attribution | Help | Mapbox",
+      "capture": "02-research/captures/mapbox-attribution.png"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "verifiedAt": "2026-11-19T14:05:19.330Z",
+  "method": "Actual desktop Figma node trees and PNG exports",
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "remoteFileKey": null,
+  "pageId": "0:1",
+  "before": [
+    {
+      "id": "7:2",
+      "treeSha256": "0bad464fcba800143cd79ea6006a2e5c4dd09dd40bb449da3df999305789be0a",
+      "pngSha256": "a92f705774c4924f179bd87970fce855329c9842a98ded0a327762c9ce9df3f8"
+    },
+    {
+      "id": "19:2",
+      "treeSha256": "c3a856ddf4d2934ffef59b099b6a05cccc18ab77035f144cc49d5bb08a4aff13",
+      "pngSha256": "a1639de92c41060e89832cf3fa6157e7fd7b5c6b5611e6f6f4ff0a82a04e150d"
+    }
+  ],
+  "after": [
+    {
+      "id": "7:2",
+      "treeSha256": "0bad464fcba800143cd79ea6006a2e5c4dd09dd40bb449da3df999305789be0a",
+      "pngSha256": "a92f705774c4924f179bd87970fce855329c9842a98ded0a327762c9ce9df3f8"
+    },
+    {
+      "id": "19:2",
+      "treeSha256": "c3a856ddf4d2934ffef59b099b6a05cccc18ab77035f144cc49d5bb08a4aff13",
+      "pngSha256": "a1639de92c41060e89832cf3fa6157e7fd7b5c6b5611e6f6f4ff0a82a04e150d"
+    }
+  ],
+  "beforeRoots": [
+    {
+      "id": "7:2",
+      "name": "02 · 메인 / 발견 지도",
+      "type": "FRAME",
+      "x": -598,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "19:2",
+      "name": "05 · 첫 로그인 / 지도 배경",
+      "type": "FRAME",
+      "x": -112,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "41:81",
+      "name": "07 · 메인 / 발견 지도",
+      "type": "FRAME",
+      "x": 374,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "afterRoots": [
+    {
+      "id": "7:2",
+      "name": "02 · 메인 / 발견 지도",
+      "type": "FRAME",
+      "x": -598,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "19:2",
+      "name": "05 · 첫 로그인 / 지도 배경",
+      "type": "FRAME",
+      "x": -112,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    },
+    {
+      "id": "41:81",
+      "name": "07 · 메인 / 발견 지도",
+      "type": "FRAME",
+      "x": 374,
+      "y": -256,
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "captureSha256": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c",
+  "planDigest": "088f5772f693dc3235b33959f084ac5a86cd1db38e9829564837bbef13b2c438"
+}

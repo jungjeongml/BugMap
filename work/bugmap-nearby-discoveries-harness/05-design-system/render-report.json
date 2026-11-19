@@ -1,0 +1,2150 @@
+{
+  "design": "nearby-discoveries",
+  "renderer": "Chromium CDP 1× from local SVG",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "approvedWireframeSha256": "95d23946eaa1580454e134137442af4e90d847f07fae0671a0b13ec7b83e2013",
+  "states": [
+    {
+      "state": "default",
+      "files": {
+        "preview.svg": "5118c3d92c825a1f25b4f3b12c1672ff52b69037a2319b181421ad306247eeda",
+        "captures/390x844-default.png": "21639d703563d5c7276c0994ee949d532f69166038808443ddfc4c81113481df"
+      },
+      "checks": {
+        "exactViewport": true,
+        "approvedTargetPositions": true,
+        "minimumTouchSafeArea": true,
+        "touchTargetsDisjoint": true,
+        "renderedPhrases": true,
+        "visibleTextUnclipped": true,
+        "actualPretendard": true,
+        "controlOrder": true,
+        "radiusSingleSelect": true,
+        "mapTabSingleSelect": true,
+        "recordsBoundedAndOrdered": true,
+        "footerSeparated": true,
+        "actualPhotoPixels": true
+      },
+      "geometry": {
+        "viewport": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "targets": [
+          {
+            "id": "sheet-handle",
+            "role": "button",
+            "label": "내 주변 발견 접기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 0,
+              "y": 54,
+              "width": 390,
+              "height": 44
+            }
+          },
+          {
+            "id": "search",
+            "role": "searchbox",
+            "label": "곤충 이름 또는 지역 검색",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 98,
+              "width": 358,
+              "height": 48
+            }
+          },
+          {
+            "id": "radius-all",
+            "role": "button",
+            "label": "전체",
+            "pressed": "true",
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 158,
+              "width": 61,
+              "height": 46
+            }
+          },
+          {
+            "id": "radius-1km",
+            "role": "button",
+            "label": "1 km 이내",
+            "pressed": "false",
+            "selected": null,
+            "box": {
+              "x": 83,
+              "y": 158,
+              "width": 91,
+              "height": 46
+            }
+          },
+          {
+            "id": "radius-3km",
+            "role": "button",
+            "label": "3 km 이내",
+            "pressed": "false",
+            "selected": null,
+            "box": {
+              "x": 180,
+              "y": 158,
+              "width": 94,
+              "height": 46
+            }
+          },
+          {
+            "id": "radius-5km",
+            "role": "button",
+            "label": "5 km 이내",
+            "pressed": "false",
+            "selected": null,
+            "box": {
+              "x": 280,
+              "y": 158,
+              "width": 94,
+              "height": 46
+            }
+          },
+          {
+            "id": "record-stag-beetle",
+            "role": "button",
+            "label": "넓적사슴벌레 기록 열기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 254,
+              "width": 358,
+              "height": 116
+            }
+          },
+          {
+            "id": "record-dragonfly",
+            "role": "button",
+            "label": "왕잠자리 기록 열기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 382,
+              "width": 358,
+              "height": 116
+            }
+          },
+          {
+            "id": "record-ladybird",
+            "role": "button",
+            "label": "칠성무당벌레 기록 열기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 510,
+              "width": 358,
+              "height": 116
+            }
+          },
+          {
+            "id": "map-return",
+            "role": "button",
+            "label": "지도 보기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 121,
+              "y": 700,
+              "width": 148,
+              "height": 48
+            }
+          },
+          {
+            "id": "tab-map",
+            "role": "tab",
+            "label": "지도",
+            "pressed": null,
+            "selected": "true",
+            "box": {
+              "x": 16,
+              "y": 756,
+              "width": 86,
+              "height": 52
+            }
+          },
+          {
+            "id": "tab-community",
+            "role": "tab",
+            "label": "커뮤니티",
+            "pressed": null,
+            "selected": "false",
+            "box": {
+              "x": 107,
+              "y": 756,
+              "width": 86,
+              "height": 52
+            }
+          },
+          {
+            "id": "tab-chat",
+            "role": "tab",
+            "label": "채팅",
+            "pressed": null,
+            "selected": "false",
+            "box": {
+              "x": 198,
+              "y": 756,
+              "width": 86,
+              "height": 52
+            }
+          },
+          {
+            "id": "tab-my",
+            "role": "tab",
+            "label": "마이",
+            "pressed": null,
+            "selected": "false",
+            "box": {
+              "x": 289,
+              "y": 756,
+              "width": 85,
+              "height": 52
+            }
+          }
+        ],
+        "texts": [
+          {
+            "id": "time",
+            "key": "time",
+            "text": "9:41",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 24,
+              "y": 18,
+              "width": 30.625,
+              "height": 18
+            }
+          },
+          {
+            "id": "search-label",
+            "key": "search",
+            "text": "곤충 이름 또는 지역 검색",
+            "ink": "rgb(167, 187, 173)",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "search",
+            "box": {
+              "x": 64,
+              "y": 114,
+              "width": 134.671875,
+              "height": 16
+            }
+          },
+          {
+            "id": "radius-label-all",
+            "key": "radiusAll",
+            "text": "전체",
+            "ink": "rgb(197, 238, 121)",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "radius-all",
+            "box": {
+              "x": 35.2578125,
+              "y": 173.5,
+              "width": 22.484375,
+              "height": 15
+            }
+          },
+          {
+            "id": "radius-label-1km",
+            "key": "radius1km",
+            "text": "1 km 이내",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "radius-1km",
+            "box": {
+              "x": 102.2109375,
+              "y": 173.5,
+              "width": 52.578125,
+              "height": 15
+            }
+          },
+          {
+            "id": "radius-label-3km",
+            "key": "radius3km",
+            "text": "3 km 이내",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "radius-3km",
+            "box": {
+              "x": 199.5703125,
+              "y": 173.5,
+              "width": 54.859375,
+              "height": 15
+            }
+          },
+          {
+            "id": "radius-label-5km",
+            "key": "radius5km",
+            "text": "5 km 이내",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "radius-5km",
+            "box": {
+              "x": 299.6796875,
+              "y": 173.5,
+              "width": 54.640625,
+              "height": 15
+            }
+          },
+          {
+            "id": "list-title",
+            "key": "panelTitle",
+            "text": "내 주변 발견",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 23,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 216,
+              "width": 110,
+              "height": 28
+            }
+          },
+          {
+            "id": "record-count",
+            "key": "countDefault",
+            "text": "기록 3개",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 329,
+              "y": 223.5,
+              "width": 45,
+              "height": 15
+            }
+          },
+          {
+            "id": "name-stag-beetle",
+            "key": "stagBeetleName",
+            "text": "넓적사슴벌레",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 18,
+            "fontWeight": 700,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 128,
+              "y": 274.5,
+              "width": 93.34375,
+              "height": 21
+            }
+          },
+          {
+            "id": "distance-stag-beetle",
+            "key": "stagBeetleDistance",
+            "text": "0.8 km",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 318.453125,
+              "y": 277.5,
+              "width": 41.546875,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-stag-beetle",
+            "key": "observed",
+            "text": "관찰",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 12,
+            "fontWeight": 700,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 136.125,
+              "y": 307,
+              "width": 20.75,
+              "height": 14
+            }
+          },
+          {
+            "id": "place-stag-beetle",
+            "key": "stagBeetlePlace",
+            "text": "서울숲",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 174,
+              "y": 306.5,
+              "width": 33.71875,
+              "height": 15
+            }
+          },
+          {
+            "id": "date-stag-beetle",
+            "key": "stagBeetleDate",
+            "text": "11월 18일 15:20 발견",
+            "ink": "rgb(167, 187, 173)",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 128,
+              "y": 332,
+              "width": 104.203125,
+              "height": 14
+            }
+          },
+          {
+            "id": "name-dragonfly",
+            "key": "dragonflyName",
+            "text": "왕잠자리",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 18,
+            "fontWeight": 700,
+            "target": "record-dragonfly",
+            "box": {
+              "x": 128,
+              "y": 402.5,
+              "width": 62.234375,
+              "height": 21
+            }
+          },
+          {
+            "id": "distance-dragonfly",
+            "key": "dragonflyDistance",
+            "text": "4.6 km",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "record-dragonfly",
+            "box": {
+              "x": 318.3125,
+              "y": 405.5,
+              "width": 41.6875,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-dragonfly",
+            "key": "observed",
+            "text": "관찰",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 12,
+            "fontWeight": 700,
+            "target": "record-dragonfly",
+            "box": {
+              "x": 136.125,
+              "y": 435,
+              "width": 20.75,
+              "height": 14
+            }
+          },
+          {
+            "id": "place-dragonfly",
+            "key": "dragonflyPlace",
+            "text": "중랑천",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "record-dragonfly",
+            "box": {
+              "x": 174,
+              "y": 434.5,
+              "width": 33.71875,
+              "height": 15
+            }
+          },
+          {
+            "id": "date-dragonfly",
+            "key": "dragonflyDate",
+            "text": "11월 17일 13:40 발견",
+            "ink": "rgb(167, 187, 173)",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": "record-dragonfly",
+            "box": {
+              "x": 128,
+              "y": 460,
+              "width": 104.1875,
+              "height": 14
+            }
+          },
+          {
+            "id": "name-ladybird",
+            "key": "ladybirdName",
+            "text": "칠성무당벌레",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 18,
+            "fontWeight": 700,
+            "target": "record-ladybird",
+            "box": {
+              "x": 128,
+              "y": 530.5,
+              "width": 93.34375,
+              "height": 21
+            }
+          },
+          {
+            "id": "distance-ladybird",
+            "key": "ladybirdDistance",
+            "text": "3.0 km",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "record-ladybird",
+            "box": {
+              "x": 318.40625,
+              "y": 533.5,
+              "width": 41.59375,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-ladybird",
+            "key": "collected",
+            "text": "채집",
+            "ink": "rgb(197, 238, 121)",
+            "fontSize": 12,
+            "fontWeight": 700,
+            "target": "record-ladybird",
+            "box": {
+              "x": 136.125,
+              "y": 563,
+              "width": 20.75,
+              "height": 14
+            }
+          },
+          {
+            "id": "place-ladybird",
+            "key": "ladybirdPlace",
+            "text": "뚝섬한강공원",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "record-ladybird",
+            "box": {
+              "x": 174,
+              "y": 562.5,
+              "width": 67.421875,
+              "height": 15
+            }
+          },
+          {
+            "id": "date-ladybird",
+            "key": "ladybirdDate",
+            "text": "11월 16일 10:10 발견",
+            "ink": "rgb(167, 187, 173)",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": "record-ladybird",
+            "box": {
+              "x": 128,
+              "y": 588,
+              "width": 102.625,
+              "height": 14
+            }
+          },
+          {
+            "id": "map-return-label",
+            "key": "mapReturn",
+            "text": "지도 보기",
+            "ink": "rgb(32, 46, 19)",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "map-return",
+            "box": {
+              "x": 181,
+              "y": 716,
+              "width": 51.625,
+              "height": 16
+            }
+          },
+          {
+            "id": "tab-label-map",
+            "key": "tabMap",
+            "text": "지도",
+            "ink": "rgb(197, 238, 121)",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "target": "tab-map",
+            "box": {
+              "x": 49.4921875,
+              "y": 789.5,
+              "width": 19.015625,
+              "height": 13
+            }
+          },
+          {
+            "id": "tab-label-community",
+            "key": "tabCommunity",
+            "text": "커뮤니티",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "target": "tab-community",
+            "box": {
+              "x": 130.984375,
+              "y": 789.5,
+              "width": 38.03125,
+              "height": 13
+            }
+          },
+          {
+            "id": "tab-label-chat",
+            "key": "tabChat",
+            "text": "채팅",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "target": "tab-chat",
+            "box": {
+              "x": 231.4921875,
+              "y": 789.5,
+              "width": 19.015625,
+              "height": 13
+            }
+          },
+          {
+            "id": "tab-label-my",
+            "key": "tabMy",
+            "text": "마이",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "target": "tab-my",
+            "box": {
+              "x": 321.9921875,
+              "y": 789.5,
+              "width": 19.015625,
+              "height": 13
+            }
+          }
+        ],
+        "photos": [
+          {
+            "id": "photo-stag-beetle",
+            "box": {
+              "x": 28,
+              "y": 268,
+              "width": 88,
+              "height": 88
+            }
+          },
+          {
+            "id": "photo-dragonfly",
+            "box": {
+              "x": 28,
+              "y": 396,
+              "width": 88,
+              "height": 88
+            }
+          },
+          {
+            "id": "photo-ladybird",
+            "box": {
+              "x": 28,
+              "y": 524,
+              "width": 88,
+              "height": 88
+            }
+          }
+        ],
+        "symbols": [
+          {
+            "id": "handle-mark",
+            "ink": "sheetHandle",
+            "backdrop": "mapPanel"
+          },
+          {
+            "id": "search-icon",
+            "ink": "textPlaceholder",
+            "backdrop": "searchSurface"
+          },
+          {
+            "id": "map-return-icon",
+            "ink": "onPrimary",
+            "backdrop": "primary"
+          },
+          {
+            "id": "tab-icon-map",
+            "ink": "primary",
+            "backdrop": "activeTabSurface"
+          },
+          {
+            "id": "tab-icon-community",
+            "ink": "textSecondary",
+            "backdrop": "footerSurface"
+          },
+          {
+            "id": "tab-icon-chat",
+            "ink": "textSecondary",
+            "backdrop": "footerSurface"
+          },
+          {
+            "id": "tab-icon-my",
+            "ink": "textSecondary",
+            "backdrop": "footerSurface"
+          }
+        ]
+      },
+      "fonts": {
+        "time": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "search-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 14
+          }
+        ],
+        "radius-label-all": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "radius-label-1km": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 7
+          }
+        ],
+        "radius-label-3km": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 7
+          }
+        ],
+        "radius-label-5km": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 7
+          }
+        ],
+        "list-title": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 7
+          }
+        ],
+        "record-count": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "name-stag-beetle": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "distance-stag-beetle": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "type-stag-beetle": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "place-stag-beetle": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 3
+          }
+        ],
+        "date-stag-beetle": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 16
+          }
+        ],
+        "name-dragonfly": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "distance-dragonfly": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "type-dragonfly": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "place-dragonfly": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 3
+          }
+        ],
+        "date-dragonfly": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 16
+          }
+        ],
+        "name-ladybird": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "distance-ladybird": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "type-ladybird": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "place-ladybird": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "date-ladybird": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 16
+          }
+        ],
+        "map-return-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "tab-label-map": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "tab-label-community": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "tab-label-chat": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "tab-label-my": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ]
+      },
+      "contrasts": [
+        {
+          "id": "time",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "search-label",
+          "ratio": 6.43,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "radius-label-all",
+          "ratio": 7.96,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "radius-label-1km",
+          "ratio": 9.4,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "radius-label-3km",
+          "ratio": 9.4,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "radius-label-5km",
+          "ratio": 9.4,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "list-title",
+          "ratio": 15.78,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "record-count",
+          "ratio": 10.33,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "name-stag-beetle",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "distance-stag-beetle",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-stag-beetle",
+          "ratio": 7.87,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "place-stag-beetle",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "date-stag-beetle",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "name-dragonfly",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "distance-dragonfly",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-dragonfly",
+          "ratio": 7.87,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "place-dragonfly",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "date-dragonfly",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "name-ladybird",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "distance-ladybird",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-ladybird",
+          "ratio": 7.96,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "place-ladybird",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "date-ladybird",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "map-return-label",
+          "ratio": 10.86,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "tab-label-map",
+          "ratio": 7.96,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "tab-label-community",
+          "ratio": 9.94,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "tab-label-chat",
+          "ratio": 9.94,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "tab-label-my",
+          "ratio": 9.94,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "handle-mark",
+          "ratio": 6.46,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "search-icon",
+          "ratio": 6.43,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "map-return-icon",
+          "ratio": 10.86,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "tab-icon-map",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "tab-icon-community",
+          "ratio": 9.94,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "tab-icon-chat",
+          "ratio": 9.94,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "tab-icon-my",
+          "ratio": 9.94,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "selected-chip-outline",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "photoPixelCounts": {
+        "photo-stag-beetle": 7612,
+        "photo-dragonfly": 7105,
+        "photo-ladybird": 6551
+      }
+    },
+    {
+      "state": "radius-3km",
+      "files": {
+        "preview-radius-3km.svg": "334ff95a4067a3990ebe066890767f527731f4ecb36d7863664279eac82bb323",
+        "captures/390x844-radius-3km.png": "869ecc2bafeae40b838a6d7b6fb316a3622f8659d1257b6476a9653a31edae77"
+      },
+      "checks": {
+        "exactViewport": true,
+        "approvedTargetPositions": true,
+        "minimumTouchSafeArea": true,
+        "touchTargetsDisjoint": true,
+        "renderedPhrases": true,
+        "visibleTextUnclipped": true,
+        "actualPretendard": true,
+        "controlOrder": true,
+        "radiusSingleSelect": true,
+        "mapTabSingleSelect": true,
+        "recordsBoundedAndOrdered": true,
+        "footerSeparated": true,
+        "actualPhotoPixels": true
+      },
+      "geometry": {
+        "viewport": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "targets": [
+          {
+            "id": "sheet-handle",
+            "role": "button",
+            "label": "내 주변 발견 접기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 0,
+              "y": 54,
+              "width": 390,
+              "height": 44
+            }
+          },
+          {
+            "id": "search",
+            "role": "searchbox",
+            "label": "곤충 이름 또는 지역 검색",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 98,
+              "width": 358,
+              "height": 48
+            }
+          },
+          {
+            "id": "radius-all",
+            "role": "button",
+            "label": "전체",
+            "pressed": "false",
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 158,
+              "width": 61,
+              "height": 46
+            }
+          },
+          {
+            "id": "radius-1km",
+            "role": "button",
+            "label": "1 km 이내",
+            "pressed": "false",
+            "selected": null,
+            "box": {
+              "x": 83,
+              "y": 158,
+              "width": 91,
+              "height": 46
+            }
+          },
+          {
+            "id": "radius-3km",
+            "role": "button",
+            "label": "3 km 이내",
+            "pressed": "true",
+            "selected": null,
+            "box": {
+              "x": 180,
+              "y": 158,
+              "width": 94,
+              "height": 46
+            }
+          },
+          {
+            "id": "radius-5km",
+            "role": "button",
+            "label": "5 km 이내",
+            "pressed": "false",
+            "selected": null,
+            "box": {
+              "x": 280,
+              "y": 158,
+              "width": 94,
+              "height": 46
+            }
+          },
+          {
+            "id": "record-stag-beetle",
+            "role": "button",
+            "label": "넓적사슴벌레 기록 열기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 254,
+              "width": 358,
+              "height": 116
+            }
+          },
+          {
+            "id": "record-ladybird",
+            "role": "button",
+            "label": "칠성무당벌레 기록 열기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 16,
+              "y": 382,
+              "width": 358,
+              "height": 116
+            }
+          },
+          {
+            "id": "map-return",
+            "role": "button",
+            "label": "지도 보기",
+            "pressed": null,
+            "selected": null,
+            "box": {
+              "x": 121,
+              "y": 700,
+              "width": 148,
+              "height": 48
+            }
+          },
+          {
+            "id": "tab-map",
+            "role": "tab",
+            "label": "지도",
+            "pressed": null,
+            "selected": "true",
+            "box": {
+              "x": 16,
+              "y": 756,
+              "width": 86,
+              "height": 52
+            }
+          },
+          {
+            "id": "tab-community",
+            "role": "tab",
+            "label": "커뮤니티",
+            "pressed": null,
+            "selected": "false",
+            "box": {
+              "x": 107,
+              "y": 756,
+              "width": 86,
+              "height": 52
+            }
+          },
+          {
+            "id": "tab-chat",
+            "role": "tab",
+            "label": "채팅",
+            "pressed": null,
+            "selected": "false",
+            "box": {
+              "x": 198,
+              "y": 756,
+              "width": 86,
+              "height": 52
+            }
+          },
+          {
+            "id": "tab-my",
+            "role": "tab",
+            "label": "마이",
+            "pressed": null,
+            "selected": "false",
+            "box": {
+              "x": 289,
+              "y": 756,
+              "width": 85,
+              "height": 52
+            }
+          }
+        ],
+        "texts": [
+          {
+            "id": "time",
+            "key": "time",
+            "text": "9:41",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 15,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 24,
+              "y": 18,
+              "width": 30.625,
+              "height": 18
+            }
+          },
+          {
+            "id": "search-label",
+            "key": "search",
+            "text": "곤충 이름 또는 지역 검색",
+            "ink": "rgb(167, 187, 173)",
+            "fontSize": 14,
+            "fontWeight": 500,
+            "target": "search",
+            "box": {
+              "x": 64,
+              "y": 114,
+              "width": 134.671875,
+              "height": 16
+            }
+          },
+          {
+            "id": "radius-label-all",
+            "key": "radiusAll",
+            "text": "전체",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "radius-all",
+            "box": {
+              "x": 35.2578125,
+              "y": 173.5,
+              "width": 22.484375,
+              "height": 15
+            }
+          },
+          {
+            "id": "radius-label-1km",
+            "key": "radius1km",
+            "text": "1 km 이내",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "radius-1km",
+            "box": {
+              "x": 102.2109375,
+              "y": 173.5,
+              "width": 52.578125,
+              "height": 15
+            }
+          },
+          {
+            "id": "radius-label-3km",
+            "key": "radius3km",
+            "text": "3 km 이내",
+            "ink": "rgb(197, 238, 121)",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "radius-3km",
+            "box": {
+              "x": 199.2734375,
+              "y": 173.5,
+              "width": 55.453125,
+              "height": 15
+            }
+          },
+          {
+            "id": "radius-label-5km",
+            "key": "radius5km",
+            "text": "5 km 이내",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "radius-5km",
+            "box": {
+              "x": 299.6796875,
+              "y": 173.5,
+              "width": 54.640625,
+              "height": 15
+            }
+          },
+          {
+            "id": "list-title",
+            "key": "panelTitle",
+            "text": "내 주변 발견",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 23,
+            "fontWeight": 700,
+            "target": null,
+            "box": {
+              "x": 16,
+              "y": 216,
+              "width": 110,
+              "height": 28
+            }
+          },
+          {
+            "id": "record-count",
+            "key": "countRadius3km",
+            "text": "기록 2개",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": null,
+            "box": {
+              "x": 329.375,
+              "y": 223.5,
+              "width": 44.625,
+              "height": 15
+            }
+          },
+          {
+            "id": "name-stag-beetle",
+            "key": "stagBeetleName",
+            "text": "넓적사슴벌레",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 18,
+            "fontWeight": 700,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 128,
+              "y": 274.5,
+              "width": 93.34375,
+              "height": 21
+            }
+          },
+          {
+            "id": "distance-stag-beetle",
+            "key": "stagBeetleDistance",
+            "text": "0.8 km",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 318.453125,
+              "y": 277.5,
+              "width": 41.546875,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-stag-beetle",
+            "key": "observed",
+            "text": "관찰",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 12,
+            "fontWeight": 700,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 136.125,
+              "y": 307,
+              "width": 20.75,
+              "height": 14
+            }
+          },
+          {
+            "id": "place-stag-beetle",
+            "key": "stagBeetlePlace",
+            "text": "서울숲",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 174,
+              "y": 306.5,
+              "width": 33.71875,
+              "height": 15
+            }
+          },
+          {
+            "id": "date-stag-beetle",
+            "key": "stagBeetleDate",
+            "text": "11월 18일 15:20 발견",
+            "ink": "rgb(167, 187, 173)",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": "record-stag-beetle",
+            "box": {
+              "x": 128,
+              "y": 332,
+              "width": 104.203125,
+              "height": 14
+            }
+          },
+          {
+            "id": "name-ladybird",
+            "key": "ladybirdName",
+            "text": "칠성무당벌레",
+            "ink": "rgb(243, 247, 238)",
+            "fontSize": 18,
+            "fontWeight": 700,
+            "target": "record-ladybird",
+            "box": {
+              "x": 128,
+              "y": 402.5,
+              "width": 93.34375,
+              "height": 21
+            }
+          },
+          {
+            "id": "distance-ladybird",
+            "key": "ladybirdDistance",
+            "text": "3.0 km",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 700,
+            "target": "record-ladybird",
+            "box": {
+              "x": 318.40625,
+              "y": 405.5,
+              "width": 41.59375,
+              "height": 15
+            }
+          },
+          {
+            "id": "type-ladybird",
+            "key": "collected",
+            "text": "채집",
+            "ink": "rgb(197, 238, 121)",
+            "fontSize": 12,
+            "fontWeight": 700,
+            "target": "record-ladybird",
+            "box": {
+              "x": 136.125,
+              "y": 435,
+              "width": 20.75,
+              "height": 14
+            }
+          },
+          {
+            "id": "place-ladybird",
+            "key": "ladybirdPlace",
+            "text": "뚝섬한강공원",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "target": "record-ladybird",
+            "box": {
+              "x": 174,
+              "y": 434.5,
+              "width": 67.421875,
+              "height": 15
+            }
+          },
+          {
+            "id": "date-ladybird",
+            "key": "ladybirdDate",
+            "text": "11월 16일 10:10 발견",
+            "ink": "rgb(167, 187, 173)",
+            "fontSize": 12,
+            "fontWeight": 500,
+            "target": "record-ladybird",
+            "box": {
+              "x": 128,
+              "y": 460,
+              "width": 102.625,
+              "height": 14
+            }
+          },
+          {
+            "id": "map-return-label",
+            "key": "mapReturn",
+            "text": "지도 보기",
+            "ink": "rgb(32, 46, 19)",
+            "fontSize": 14,
+            "fontWeight": 700,
+            "target": "map-return",
+            "box": {
+              "x": 181,
+              "y": 716,
+              "width": 51.625,
+              "height": 16
+            }
+          },
+          {
+            "id": "tab-label-map",
+            "key": "tabMap",
+            "text": "지도",
+            "ink": "rgb(197, 238, 121)",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "target": "tab-map",
+            "box": {
+              "x": 49.4921875,
+              "y": 789.5,
+              "width": 19.015625,
+              "height": 13
+            }
+          },
+          {
+            "id": "tab-label-community",
+            "key": "tabCommunity",
+            "text": "커뮤니티",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "target": "tab-community",
+            "box": {
+              "x": 130.984375,
+              "y": 789.5,
+              "width": 38.03125,
+              "height": 13
+            }
+          },
+          {
+            "id": "tab-label-chat",
+            "key": "tabChat",
+            "text": "채팅",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "target": "tab-chat",
+            "box": {
+              "x": 231.4921875,
+              "y": 789.5,
+              "width": 19.015625,
+              "height": 13
+            }
+          },
+          {
+            "id": "tab-label-my",
+            "key": "tabMy",
+            "text": "마이",
+            "ink": "rgb(189, 205, 194)",
+            "fontSize": 11,
+            "fontWeight": 500,
+            "target": "tab-my",
+            "box": {
+              "x": 321.9921875,
+              "y": 789.5,
+              "width": 19.015625,
+              "height": 13
+            }
+          }
+        ],
+        "photos": [
+          {
+            "id": "photo-stag-beetle",
+            "box": {
+              "x": 28,
+              "y": 268,
+              "width": 88,
+              "height": 88
+            }
+          },
+          {
+            "id": "photo-ladybird",
+            "box": {
+              "x": 28,
+              "y": 396,
+              "width": 88,
+              "height": 88
+            }
+          }
+        ],
+        "symbols": [
+          {
+            "id": "handle-mark",
+            "ink": "sheetHandle",
+            "backdrop": "mapPanel"
+          },
+          {
+            "id": "search-icon",
+            "ink": "textPlaceholder",
+            "backdrop": "searchSurface"
+          },
+          {
+            "id": "map-return-icon",
+            "ink": "onPrimary",
+            "backdrop": "primary"
+          },
+          {
+            "id": "tab-icon-map",
+            "ink": "primary",
+            "backdrop": "activeTabSurface"
+          },
+          {
+            "id": "tab-icon-community",
+            "ink": "textSecondary",
+            "backdrop": "footerSurface"
+          },
+          {
+            "id": "tab-icon-chat",
+            "ink": "textSecondary",
+            "backdrop": "footerSurface"
+          },
+          {
+            "id": "tab-icon-my",
+            "ink": "textSecondary",
+            "backdrop": "footerSurface"
+          }
+        ]
+      },
+      "fonts": {
+        "time": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "search-label": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 14
+          }
+        ],
+        "radius-label-all": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "radius-label-1km": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 7
+          }
+        ],
+        "radius-label-3km": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 7
+          }
+        ],
+        "radius-label-5km": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 7
+          }
+        ],
+        "list-title": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 7
+          }
+        ],
+        "record-count": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "name-stag-beetle": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "distance-stag-beetle": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "type-stag-beetle": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "place-stag-beetle": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 3
+          }
+        ],
+        "date-stag-beetle": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 16
+          }
+        ],
+        "name-ladybird": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "distance-ladybird": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "type-ladybird": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "place-ladybird": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 6
+          }
+        ],
+        "date-ladybird": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 16
+          }
+        ],
+        "map-return-label": [
+          {
+            "familyName": "Pretendard",
+            "postScriptName": "Pretendard-Bold",
+            "isCustomFont": true,
+            "glyphCount": 5
+          }
+        ],
+        "tab-label-map": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "tab-label-community": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 4
+          }
+        ],
+        "tab-label-chat": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ],
+        "tab-label-my": [
+          {
+            "familyName": "Pretendard Medium",
+            "postScriptName": "Pretendard-Medium",
+            "isCustomFont": true,
+            "glyphCount": 2
+          }
+        ]
+      },
+      "contrasts": [
+        {
+          "id": "time",
+          "ratio": 16.13,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "search-label",
+          "ratio": 6.43,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "radius-label-all",
+          "ratio": 9.4,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "radius-label-1km",
+          "ratio": 9.4,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "radius-label-3km",
+          "ratio": 7.96,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "radius-label-5km",
+          "ratio": 9.4,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "list-title",
+          "ratio": 15.78,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "record-count",
+          "ratio": 10.33,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "name-stag-beetle",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "distance-stag-beetle",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-stag-beetle",
+          "ratio": 7.87,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "place-stag-beetle",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "date-stag-beetle",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "name-ladybird",
+          "ratio": 13.49,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "distance-ladybird",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "type-ladybird",
+          "ratio": 7.96,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "place-ladybird",
+          "ratio": 8.84,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "date-ladybird",
+          "ratio": 7.22,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "map-return-label",
+          "ratio": 10.86,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "tab-label-map",
+          "ratio": 7.96,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "tab-label-community",
+          "ratio": 9.94,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "tab-label-chat",
+          "ratio": 9.94,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "tab-label-my",
+          "ratio": 9.94,
+          "threshold": 4.5,
+          "passed": true
+        },
+        {
+          "id": "handle-mark",
+          "ratio": 6.46,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "search-icon",
+          "ratio": 6.43,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "map-return-icon",
+          "ratio": 10.86,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "tab-icon-map",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "tab-icon-community",
+          "ratio": 9.94,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "tab-icon-chat",
+          "ratio": 9.94,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "tab-icon-my",
+          "ratio": 9.94,
+          "threshold": 3,
+          "passed": true
+        },
+        {
+          "id": "selected-chip-outline",
+          "ratio": 7.96,
+          "threshold": 3,
+          "passed": true
+        }
+      ],
+      "photoPixelCounts": {
+        "photo-stag-beetle": 7612,
+        "photo-ladybird": 6551
+      }
+    }
+  ],
+  "crossStateChecks": {
+    "boundaryRecordRetained": true,
+    "footerGeometryUnchanged": true
+  },
+  "result": true
+}

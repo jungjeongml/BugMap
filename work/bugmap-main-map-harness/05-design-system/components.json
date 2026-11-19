@@ -1,0 +1,13 @@
+{
+  "MapCanvas":{"description":"전면 지도 시연용 벡터 바탕. 지역 레이블과 위치·기록 표식은 전경에 배치한다.","tokens":["colors.background","colors.mapLand","colors.mapPark","colors.mapWater","colors.mapMajorRoad","colors.mapLabel","colors.mapWaterLabel","typography.mapLabel.fontSize","typography.parkLabel.fontSize","typography.riverLabel.fontSize"],"states":["default"]},
+  "RecordCluster":{"description":"64×44px 터치 영역과 가운데 64×32px 배지. 공개 기록의 총건수를 표시한다. 확대 이후 개별 상세에서 관찰과 채집 유형을 확인한다.","tokens":["colors.observationMarkerSurface","colors.observationMarkerBorder","colors.primary","colors.text","typography.cluster.fontSize"],"states":["default"]},
+  "CurrentLocation":{"description":"하늘색 점과 가까운 바깥 원으로 GPS 위치를 표시한다. 주변 반경 경계는 기본 상태에서 표시하지 않는다.","tokens":["colors.location","colors.locationHalo","colors.text","colors.mapLabelOutline","typography.location.fontSize"],"states":["locatedExample"]},
+  "Attribution":{"description":"지도에 공식 SDK 로고와 접근 가능한 44×44px 출처 정보 버튼을 표시한다. 실제 앱은 SDK 출처 안내를 연다.","tokens":["colors.observationMarkerSurface","colors.mapPanelBorder","colors.textSecondary"],"states":["default"]},
+  "LocateButton":{"description":"48×48px 원형 버튼으로 현재 위치로 이동한다. 위치 권한 처리와 이동은 제품에서 연결한다.","tokens":["colors.observationMarkerSurface","colors.mapPanelBorder","colors.location"],"states":["default"]},
+  "RecordButton":{"description":"184×48px 강조 버튼으로 기록 작성에 진입한다.","tokens":["colors.primary","colors.onPrimary","typography.action.fontSize"],"states":["default"]},
+  "MapSheet":{"description":"상단 모서리 32px. 접힌 상태에서 드래그 손잡이, 검색, 네 개 탭과 하단 안전 영역을 표시한다.","tokens":["colors.mapPanel","colors.mapPanelBorder","colors.sheetHandle"],"states":["collapsed"]},
+  "Search":{"description":"358×48px 곤충 이름 및 지역 검색 필드.","tokens":["colors.searchSurface","colors.searchBorder","colors.textPlaceholder","typography.search.fontSize"],"states":["empty"]},
+  "MapTab":{"description":"아이콘과 레이블을 중심 정렬한다. 선택 상태는 연두색과 선택 배경 및 윤곽으로 구분한다.","tokens":["colors.primary","colors.activeTabSurface","colors.activeTabBorder","colors.textSecondary","typography.tab.fontSize"],"states":["selected","unselected"]},
+  "SystemArea":{"description":"상단 상태 표시와 하단 홈 인디케이터로 안전 영역을 확인한다.","tokens":["colors.systemInk","colors.systemHome","typography.systemTime.fontSize"],"states":["preview"]},
+  "Icon":{"description":"Lucide React Native 24px 기본 도형을 기능별로 선택한다.","tokens":["colors.primary","colors.onPrimary","colors.textSecondary","colors.location"],"states":["default","selected"]}
+}

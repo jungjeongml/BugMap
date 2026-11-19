@@ -1,0 +1,862 @@
+{
+  "screens": [
+    {
+      "id": "nearby-discoveries",
+      "state": "default",
+      "title": "내 주변 발견 · 전체",
+      "width": 390,
+      "height": 844,
+      "layout": {
+        "scrollRegion": {
+          "x": 0,
+          "y": 248,
+          "width": 390,
+          "height": 442
+        },
+        "fixedFooter": {
+          "y": 690
+        },
+        "safeArea": {
+          "top": 54,
+          "bottom": 34
+        }
+      },
+      "blocks": [
+        {
+          "id": "status-time",
+          "type": "text",
+          "x": 16,
+          "y": 15,
+          "width": 75,
+          "height": 24,
+          "text": "9:41"
+        },
+        {
+          "id": "drag-handle",
+          "type": "box",
+          "x": 177,
+          "y": 73,
+          "width": 36,
+          "height": 4,
+          "dragArea": {
+            "x": 0,
+            "y": 54,
+            "width": 390,
+            "height": 44
+          }
+        },
+        {
+          "id": "search",
+          "type": "input",
+          "x": 16,
+          "y": 98,
+          "width": 358,
+          "height": 48,
+          "accessibleName": "곤충 이름 또는 지역 검색"
+        },
+        {
+          "id": "search-symbol",
+          "type": "text",
+          "x": 24,
+          "y": 105,
+          "width": 22,
+          "height": 22,
+          "text": "⌕"
+        },
+        {
+          "id": "search-label",
+          "type": "text",
+          "x": 47,
+          "y": 105,
+          "width": 294,
+          "height": 22,
+          "text": "곤충 이름 또는 지역 검색"
+        },
+        {
+          "id": "radius-all",
+          "type": "button",
+          "x": 16,
+          "y": 158,
+          "width": 61,
+          "height": 46,
+          "accessibleName": "전체",
+          "selected": true
+        },
+        {
+          "id": "radius-label-all",
+          "type": "text",
+          "x": 28,
+          "y": 164,
+          "width": 45,
+          "height": 22,
+          "text": "전체"
+        },
+        {
+          "id": "radius-active-indicator",
+          "type": "box",
+          "x": 33,
+          "y": 194,
+          "width": 26,
+          "height": 3
+        },
+        {
+          "id": "radius-1km",
+          "type": "button",
+          "x": 83,
+          "y": 158,
+          "width": 91,
+          "height": 46,
+          "accessibleName": "1 km 이내",
+          "selected": false
+        },
+        {
+          "id": "radius-label-1km",
+          "type": "text",
+          "x": 91,
+          "y": 164,
+          "width": 79,
+          "height": 22,
+          "text": "1 km 이내"
+        },
+        {
+          "id": "radius-3km",
+          "type": "button",
+          "x": 180,
+          "y": 158,
+          "width": 94,
+          "height": 46,
+          "accessibleName": "3 km 이내",
+          "selected": false
+        },
+        {
+          "id": "radius-label-3km",
+          "type": "text",
+          "x": 188,
+          "y": 164,
+          "width": 82,
+          "height": 22,
+          "text": "3 km 이내"
+        },
+        {
+          "id": "radius-5km",
+          "type": "button",
+          "x": 280,
+          "y": 158,
+          "width": 94,
+          "height": 46,
+          "accessibleName": "5 km 이내",
+          "selected": false
+        },
+        {
+          "id": "radius-label-5km",
+          "type": "text",
+          "x": 288,
+          "y": 164,
+          "width": 82,
+          "height": 22,
+          "text": "5 km 이내"
+        },
+        {
+          "id": "list-title",
+          "type": "text",
+          "x": 16,
+          "y": 217,
+          "width": 218,
+          "height": 26,
+          "text": "내 주변 발견"
+        },
+        {
+          "id": "record-count",
+          "type": "text",
+          "x": 311,
+          "y": 217,
+          "width": 63,
+          "height": 26,
+          "text": "기록 3개"
+        },
+        {
+          "id": "record-stag-beetle",
+          "type": "button",
+          "x": 16,
+          "y": 254,
+          "width": 358,
+          "height": 116,
+          "accessibleName": "넓적사슴벌레 기록 열기"
+        },
+        {
+          "id": "photo-stag-beetle",
+          "type": "image",
+          "x": 28,
+          "y": 268,
+          "width": 88,
+          "height": 88,
+          "text": "곤충 사진"
+        },
+        {
+          "id": "name-stag-beetle",
+          "type": "text",
+          "x": 122,
+          "y": 266,
+          "width": 156,
+          "height": 23,
+          "text": "넓적사슴벌레"
+        },
+        {
+          "id": "distance-stag-beetle",
+          "type": "text",
+          "x": 296,
+          "y": 266,
+          "width": 70,
+          "height": 23,
+          "text": "0.8 km"
+        },
+        {
+          "id": "meta-stag-beetle",
+          "type": "text",
+          "x": 122,
+          "y": 298,
+          "width": 244,
+          "height": 24,
+          "text": "관찰 · 서울숲"
+        },
+        {
+          "id": "date-stag-beetle",
+          "type": "text",
+          "x": 122,
+          "y": 326,
+          "width": 244,
+          "height": 24,
+          "text": "11월 18일 15:20 발견"
+        },
+        {
+          "id": "record-dragonfly",
+          "type": "button",
+          "x": 16,
+          "y": 382,
+          "width": 358,
+          "height": 116,
+          "accessibleName": "왕잠자리 기록 열기"
+        },
+        {
+          "id": "photo-dragonfly",
+          "type": "image",
+          "x": 28,
+          "y": 396,
+          "width": 88,
+          "height": 88,
+          "text": "곤충 사진"
+        },
+        {
+          "id": "name-dragonfly",
+          "type": "text",
+          "x": 122,
+          "y": 394,
+          "width": 156,
+          "height": 23,
+          "text": "왕잠자리"
+        },
+        {
+          "id": "distance-dragonfly",
+          "type": "text",
+          "x": 296,
+          "y": 394,
+          "width": 70,
+          "height": 23,
+          "text": "4.6 km"
+        },
+        {
+          "id": "meta-dragonfly",
+          "type": "text",
+          "x": 122,
+          "y": 426,
+          "width": 244,
+          "height": 24,
+          "text": "관찰 · 중랑천"
+        },
+        {
+          "id": "date-dragonfly",
+          "type": "text",
+          "x": 122,
+          "y": 454,
+          "width": 244,
+          "height": 24,
+          "text": "11월 17일 13:40 발견"
+        },
+        {
+          "id": "record-ladybird",
+          "type": "button",
+          "x": 16,
+          "y": 510,
+          "width": 358,
+          "height": 116,
+          "accessibleName": "칠성무당벌레 기록 열기"
+        },
+        {
+          "id": "photo-ladybird",
+          "type": "image",
+          "x": 28,
+          "y": 524,
+          "width": 88,
+          "height": 88,
+          "text": "곤충 사진"
+        },
+        {
+          "id": "name-ladybird",
+          "type": "text",
+          "x": 122,
+          "y": 522,
+          "width": 156,
+          "height": 23,
+          "text": "칠성무당벌레"
+        },
+        {
+          "id": "distance-ladybird",
+          "type": "text",
+          "x": 296,
+          "y": 522,
+          "width": 70,
+          "height": 23,
+          "text": "3.0 km"
+        },
+        {
+          "id": "meta-ladybird",
+          "type": "text",
+          "x": 122,
+          "y": 554,
+          "width": 244,
+          "height": 24,
+          "text": "채집 · 뚝섬한강공원"
+        },
+        {
+          "id": "date-ladybird",
+          "type": "text",
+          "x": 122,
+          "y": 582,
+          "width": 244,
+          "height": 24,
+          "text": "11월 16일 10:10 발견"
+        },
+        {
+          "id": "fixed-footer",
+          "type": "box",
+          "x": 0,
+          "y": 690,
+          "width": 390,
+          "height": 154
+        },
+        {
+          "id": "map-return",
+          "type": "button",
+          "x": 121,
+          "y": 700,
+          "width": 148,
+          "height": 48,
+          "accessibleName": "지도 보기"
+        },
+        {
+          "id": "map-return-label",
+          "type": "text",
+          "x": 158,
+          "y": 710,
+          "width": 78,
+          "height": 24,
+          "text": "지도 보기"
+        },
+        {
+          "id": "tab-map",
+          "type": "button",
+          "x": 16,
+          "y": 756,
+          "width": 86,
+          "height": 52,
+          "accessibleName": "지도",
+          "selected": true
+        },
+        {
+          "id": "tab-label-map",
+          "type": "text",
+          "x": 43,
+          "y": 763,
+          "width": 53,
+          "height": 26,
+          "text": "지도"
+        },
+        {
+          "id": "tab-community",
+          "type": "button",
+          "x": 107,
+          "y": 756,
+          "width": 86,
+          "height": 52,
+          "accessibleName": "커뮤니티",
+          "selected": false
+        },
+        {
+          "id": "tab-label-community",
+          "type": "text",
+          "x": 120,
+          "y": 763,
+          "width": 67,
+          "height": 26,
+          "text": "커뮤니티"
+        },
+        {
+          "id": "tab-chat",
+          "type": "button",
+          "x": 198,
+          "y": 756,
+          "width": 86,
+          "height": 52,
+          "accessibleName": "채팅",
+          "selected": false
+        },
+        {
+          "id": "tab-label-chat",
+          "type": "text",
+          "x": 225,
+          "y": 763,
+          "width": 53,
+          "height": 26,
+          "text": "채팅"
+        },
+        {
+          "id": "tab-my",
+          "type": "button",
+          "x": 289,
+          "y": 756,
+          "width": 85,
+          "height": 52,
+          "accessibleName": "마이",
+          "selected": false
+        },
+        {
+          "id": "tab-label-my",
+          "type": "text",
+          "x": 315,
+          "y": 763,
+          "width": 53,
+          "height": 26,
+          "text": "마이"
+        },
+        {
+          "id": "tab-active-indicator",
+          "type": "box",
+          "x": 45,
+          "y": 796,
+          "width": 28,
+          "height": 3
+        },
+        {
+          "id": "home-indicator",
+          "type": "box",
+          "x": 128,
+          "y": 830,
+          "width": 134,
+          "height": 4
+        }
+      ]
+    },
+    {
+      "id": "nearby-discoveries",
+      "state": "radius-3km",
+      "title": "내 주변 발견 · 3 km 이내",
+      "width": 390,
+      "height": 844,
+      "layout": {
+        "scrollRegion": {
+          "x": 0,
+          "y": 248,
+          "width": 390,
+          "height": 442
+        },
+        "fixedFooter": {
+          "y": 690
+        },
+        "safeArea": {
+          "top": 54,
+          "bottom": 34
+        }
+      },
+      "blocks": [
+        {
+          "id": "status-time",
+          "type": "text",
+          "x": 16,
+          "y": 15,
+          "width": 75,
+          "height": 24,
+          "text": "9:41"
+        },
+        {
+          "id": "drag-handle",
+          "type": "box",
+          "x": 177,
+          "y": 73,
+          "width": 36,
+          "height": 4,
+          "dragArea": {
+            "x": 0,
+            "y": 54,
+            "width": 390,
+            "height": 44
+          }
+        },
+        {
+          "id": "search",
+          "type": "input",
+          "x": 16,
+          "y": 98,
+          "width": 358,
+          "height": 48,
+          "accessibleName": "곤충 이름 또는 지역 검색"
+        },
+        {
+          "id": "search-symbol",
+          "type": "text",
+          "x": 24,
+          "y": 105,
+          "width": 22,
+          "height": 22,
+          "text": "⌕"
+        },
+        {
+          "id": "search-label",
+          "type": "text",
+          "x": 47,
+          "y": 105,
+          "width": 294,
+          "height": 22,
+          "text": "곤충 이름 또는 지역 검색"
+        },
+        {
+          "id": "radius-all",
+          "type": "button",
+          "x": 16,
+          "y": 158,
+          "width": 61,
+          "height": 46,
+          "accessibleName": "전체",
+          "selected": false
+        },
+        {
+          "id": "radius-label-all",
+          "type": "text",
+          "x": 28,
+          "y": 164,
+          "width": 45,
+          "height": 22,
+          "text": "전체"
+        },
+        {
+          "id": "radius-1km",
+          "type": "button",
+          "x": 83,
+          "y": 158,
+          "width": 91,
+          "height": 46,
+          "accessibleName": "1 km 이내",
+          "selected": false
+        },
+        {
+          "id": "radius-label-1km",
+          "type": "text",
+          "x": 91,
+          "y": 164,
+          "width": 79,
+          "height": 22,
+          "text": "1 km 이내"
+        },
+        {
+          "id": "radius-3km",
+          "type": "button",
+          "x": 180,
+          "y": 158,
+          "width": 94,
+          "height": 46,
+          "accessibleName": "3 km 이내",
+          "selected": true
+        },
+        {
+          "id": "radius-label-3km",
+          "type": "text",
+          "x": 188,
+          "y": 164,
+          "width": 82,
+          "height": 22,
+          "text": "3 km 이내"
+        },
+        {
+          "id": "radius-active-indicator",
+          "type": "box",
+          "x": 214,
+          "y": 194,
+          "width": 26,
+          "height": 3
+        },
+        {
+          "id": "radius-5km",
+          "type": "button",
+          "x": 280,
+          "y": 158,
+          "width": 94,
+          "height": 46,
+          "accessibleName": "5 km 이내",
+          "selected": false
+        },
+        {
+          "id": "radius-label-5km",
+          "type": "text",
+          "x": 288,
+          "y": 164,
+          "width": 82,
+          "height": 22,
+          "text": "5 km 이내"
+        },
+        {
+          "id": "list-title",
+          "type": "text",
+          "x": 16,
+          "y": 217,
+          "width": 218,
+          "height": 26,
+          "text": "내 주변 발견"
+        },
+        {
+          "id": "record-count",
+          "type": "text",
+          "x": 311,
+          "y": 217,
+          "width": 63,
+          "height": 26,
+          "text": "기록 2개"
+        },
+        {
+          "id": "record-stag-beetle",
+          "type": "button",
+          "x": 16,
+          "y": 254,
+          "width": 358,
+          "height": 116,
+          "accessibleName": "넓적사슴벌레 기록 열기"
+        },
+        {
+          "id": "photo-stag-beetle",
+          "type": "image",
+          "x": 28,
+          "y": 268,
+          "width": 88,
+          "height": 88,
+          "text": "곤충 사진"
+        },
+        {
+          "id": "name-stag-beetle",
+          "type": "text",
+          "x": 122,
+          "y": 266,
+          "width": 156,
+          "height": 23,
+          "text": "넓적사슴벌레"
+        },
+        {
+          "id": "distance-stag-beetle",
+          "type": "text",
+          "x": 296,
+          "y": 266,
+          "width": 70,
+          "height": 23,
+          "text": "0.8 km"
+        },
+        {
+          "id": "meta-stag-beetle",
+          "type": "text",
+          "x": 122,
+          "y": 298,
+          "width": 244,
+          "height": 24,
+          "text": "관찰 · 서울숲"
+        },
+        {
+          "id": "date-stag-beetle",
+          "type": "text",
+          "x": 122,
+          "y": 326,
+          "width": 244,
+          "height": 24,
+          "text": "11월 18일 15:20 발견"
+        },
+        {
+          "id": "record-ladybird",
+          "type": "button",
+          "x": 16,
+          "y": 382,
+          "width": 358,
+          "height": 116,
+          "accessibleName": "칠성무당벌레 기록 열기"
+        },
+        {
+          "id": "photo-ladybird",
+          "type": "image",
+          "x": 28,
+          "y": 396,
+          "width": 88,
+          "height": 88,
+          "text": "곤충 사진"
+        },
+        {
+          "id": "name-ladybird",
+          "type": "text",
+          "x": 122,
+          "y": 394,
+          "width": 156,
+          "height": 23,
+          "text": "칠성무당벌레"
+        },
+        {
+          "id": "distance-ladybird",
+          "type": "text",
+          "x": 296,
+          "y": 394,
+          "width": 70,
+          "height": 23,
+          "text": "3.0 km"
+        },
+        {
+          "id": "meta-ladybird",
+          "type": "text",
+          "x": 122,
+          "y": 426,
+          "width": 244,
+          "height": 24,
+          "text": "채집 · 뚝섬한강공원"
+        },
+        {
+          "id": "date-ladybird",
+          "type": "text",
+          "x": 122,
+          "y": 454,
+          "width": 244,
+          "height": 24,
+          "text": "11월 16일 10:10 발견"
+        },
+        {
+          "id": "fixed-footer",
+          "type": "box",
+          "x": 0,
+          "y": 690,
+          "width": 390,
+          "height": 154
+        },
+        {
+          "id": "map-return",
+          "type": "button",
+          "x": 121,
+          "y": 700,
+          "width": 148,
+          "height": 48,
+          "accessibleName": "지도 보기"
+        },
+        {
+          "id": "map-return-label",
+          "type": "text",
+          "x": 158,
+          "y": 710,
+          "width": 78,
+          "height": 24,
+          "text": "지도 보기"
+        },
+        {
+          "id": "tab-map",
+          "type": "button",
+          "x": 16,
+          "y": 756,
+          "width": 86,
+          "height": 52,
+          "accessibleName": "지도",
+          "selected": true
+        },
+        {
+          "id": "tab-label-map",
+          "type": "text",
+          "x": 43,
+          "y": 763,
+          "width": 53,
+          "height": 26,
+          "text": "지도"
+        },
+        {
+          "id": "tab-community",
+          "type": "button",
+          "x": 107,
+          "y": 756,
+          "width": 86,
+          "height": 52,
+          "accessibleName": "커뮤니티",
+          "selected": false
+        },
+        {
+          "id": "tab-label-community",
+          "type": "text",
+          "x": 120,
+          "y": 763,
+          "width": 67,
+          "height": 26,
+          "text": "커뮤니티"
+        },
+        {
+          "id": "tab-chat",
+          "type": "button",
+          "x": 198,
+          "y": 756,
+          "width": 86,
+          "height": 52,
+          "accessibleName": "채팅",
+          "selected": false
+        },
+        {
+          "id": "tab-label-chat",
+          "type": "text",
+          "x": 225,
+          "y": 763,
+          "width": 53,
+          "height": 26,
+          "text": "채팅"
+        },
+        {
+          "id": "tab-my",
+          "type": "button",
+          "x": 289,
+          "y": 756,
+          "width": 85,
+          "height": 52,
+          "accessibleName": "마이",
+          "selected": false
+        },
+        {
+          "id": "tab-label-my",
+          "type": "text",
+          "x": 315,
+          "y": 763,
+          "width": 53,
+          "height": 26,
+          "text": "마이"
+        },
+        {
+          "id": "tab-active-indicator",
+          "type": "box",
+          "x": 45,
+          "y": 796,
+          "width": 28,
+          "height": 3
+        },
+        {
+          "id": "home-indicator",
+          "type": "box",
+          "x": 128,
+          "y": 830,
+          "width": 134,
+          "height": 4
+        }
+      ]
+    }
+  ]
+}

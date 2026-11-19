@@ -1,4 +1,5 @@
 import { imageBindings } from './figma-images.mjs';
+import { svgBindings } from './figma-svg.mjs';
 import { isFigmaNodeId } from './figma-node-id.mjs';
 import { json, object, hashes, stringify, writeBundle } from './io.mjs';
 import { design, designInputs, normalize, wireframes, text } from './contracts.mjs';
@@ -15,10 +16,11 @@ export function inspectFigma(base) {
     || typeof exported.exportedAt !== 'string' || !Number.isFinite(Date.parse(exported.exportedAt)) || !Array.isArray(exported.nodes) || !exported.nodes.length) throw new Error('Invalid Figma export or wrong target file/page');
   const { tokens, sizes, copy, components } = design(base);
   const images = imageBindings(base, map?.images);
+  const svgs = svgBindings(base, map?.svgAssets);
   const issues = [], ids = new Set();
   const colorHex = value => { let s = value.slice(1).toLowerCase(); if (s.length <= 4) s = [...s].map(c => c + c).join(''); return s.length === 6 ? `${s}ff` : s; };
   const colors = new Set(Object.values(tokens.colors).map(colorHex));
-  function visit(node, parentOpacity = 1, parentRotated = false) {
+  function visit(node, parentOpacity = 1, parentRotated = false, parentVisible = true, svg) {
     if (!object(node) || !isFigmaNodeId(node.id) || ids.has(node.id) || !text(node.type) || !text(node.name)
       || !['width', 'height'].every(k => Number.isFinite(node[k]) && node[k] >= 0)) throw new Error('Invalid or duplicate Figma node');
     if (node.opacity !== undefined && (!Number.isFinite(node.opacity) || node.opacity < 0 || node.opacity > 1)) throw new Error('Invalid node opacity');
@@ -26,6 +28,8 @@ export function inspectFigma(base) {
     ids.add(node.id);
     const effectiveOpacity = parentOpacity * (node.opacity ?? 1);
     const issue = (rule, detail) => issues.push({ nodeId: node.id, rule, detail });
+    const visible = parentVisible && node.visible !== false;
+    const logo = svgs.enter(node, svg, rotated, visible, issue);
     if (node.type === 'TEXT') {
       if (typeof node.characters !== 'string' || !Number.isFinite(node.fontSize)) throw new Error(`Incomplete TEXT export: ${node.id}`);
       if (!Object.values(sizes).includes(node.fontSize)) issue('font-size', String(node.fontSize));
@@ -44,16 +48,18 @@ export function inspectFigma(base) {
       if (!object(fill.color) || !['r', 'g', 'b'].every(k => Number.isFinite(fill.color[k]) && fill.color[k] >= 0 && fill.color[k] <= 1)
         || (fill.opacity !== undefined && (!Number.isFinite(fill.opacity) || fill.opacity < 0 || fill.opacity > 1))) throw new Error('Invalid solid color');
       const hex = [...['r', 'g', 'b'].map(k => fill.color[k]), fill.opacity ?? 1].map(n => Math.round(n * 255).toString(16).padStart(2, '0')).join('');
-      if (!colors.has(hex)) issue('color', `#${hex}`);
+      if (!logo && !colors.has(hex)) issue('color', `#${hex}`);
     }
     if (node.type === 'FRAME' && !['HORIZONTAL', 'VERTICAL'].includes(node.layoutMode)) issue('auto-layout', 'FRAME needs HORIZONTAL or VERTICAL');
     if (node.componentName !== undefined && !Object.hasOwn(components, node.componentName)) issue('component', node.componentName);
     if ((node.interactive === true || /button/i.test(node.name)) && (node.width < 44 || node.height < 44)) issue('touch-target', `${node.width}x${node.height}`);
     if (node.children !== undefined && !Array.isArray(node.children)) throw new Error('Invalid children');
-    for (const child of node.children ?? []) visit(child, effectiveOpacity, rotated);
+    if (logo) svgs.paints(logo, node, effectiveOpacity, issue);
+    for (const child of node.children ?? []) visit(child, effectiveOpacity, rotated, visible, logo);
   }
   exported.nodes.forEach(node => visit(node));
   images.verifyUsed();
+  const svgAssets = svgs.finish(issues);
   const roots = new Set(exported.nodes.map(n => n.id)), screens = wireframes(base), seen = new Set(), mapped = new Set();
   if (!object(map) || !Array.isArray(map.nodes) || !map.nodes.length) throw new Error('node-map.json requires nodes');
   for (const entry of map.nodes) {
@@ -62,7 +68,8 @@ export function inspectFigma(base) {
     seen.add(key); mapped.add(entry.nodeId);
   }
   if (seen.size !== screens.length || mapped.size !== roots.size) throw new Error('Incomplete node-map coverage');
-  return { version: 1, command: 'lint:figma', inputs: hashes(base, [...figmaFiles, ...designInputs, ...images.inputs, '04-wireframes/wireframes.json']), issues, nodeCount: ids.size };
+  return { version: 1, command: 'lint:figma', inputs: hashes(base, [...figmaFiles, ...designInputs, ...images.inputs, ...svgs.inputs, '04-wireframes/wireframes.json']), issues, nodeCount: ids.size,
+    ...(svgAssets.length ? { svgAssets } : {}) };
 }
 export function lintFigma(base, options = {}) {
   const report = inspectFigma(base);

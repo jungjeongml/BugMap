@@ -1,0 +1,2 @@
+screen_id,title,purpose,primary_actions,requirements,viewport,state_count
+main-map,메인 / 발견 지도,로그인 후 지도에서 공개 발견 기록을 묶음 단위로 살피고 검색하거나 새 기록을 시작,지도 탐색 | 곤충·지역 검색 | 내 위치로 이동 | 발견/채집 기록하기 | 패널 확장 | 탭 이동,HOME-01 | HOME-02 | HOME-03 | HOME-04 | HOME-05 | HOME-06 | HOME-07 | HOME-08,390x844,1

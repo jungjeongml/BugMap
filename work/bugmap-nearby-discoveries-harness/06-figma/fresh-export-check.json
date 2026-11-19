@@ -1,0 +1,20 @@
+{
+  "method": "Second native Figma read-only export after construction",
+  "checkedAt": "2026-11-19T16:34:43.630Z",
+  "sameTree": true,
+  "sameCaptures": true,
+  "sameImageBindings": true,
+  "sameActions": true,
+  "screens": [
+    {
+      "nodeId": "50:1081",
+      "state": "default",
+      "captureSha256": "7f2e89e8ba0768514b079b5803b89889cfa13acabcbb50562dd4f0bde0bc7f4a"
+    },
+    {
+      "nodeId": "50:1190",
+      "state": "radius-3km",
+      "captureSha256": "2a01bd75a320b53306b3b03b5b2b1f2ac0c75e11fe91ba1ab8a4bce2443ec166"
+    }
+  ]
+}

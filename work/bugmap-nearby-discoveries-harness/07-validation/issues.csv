@@ -1,0 +1,6 @@
+id,requirement,severity,status,detail
+V-01,NEAR-04,required,resolved,하네스가 FIT 이미지의 Figma 기본 항등행렬을 인식하도록 보완했다. PNG 해시·종횡비는 계속 검사하며 크롭이나 비항등 변환은 거부한다.
+V-02,NEAR-05,minor,documented,Figma에서 기존 지도와 같은 Noto Sans KR Medium/Bold로 렌더했다. Pretendard 기준과 자폭 및 두께 차이가 있으며 두 캡처에서는 잘림과 겹침이 보이지 않았다.
+V-03,NEAR-01,scope,documented,두 대표 목록은 내용이 영역 안에 들어간다. 세로 스크롤 설정과 푸터 구조 및 실제 복귀는 확인했다. 데이터가 넘치는 경우의 스크롤 중 버튼 사용은 제품에서 확인한다.
+V-04,NEAR-02 | NEAR-03 | NEAR-04,scope,documented,실시간 위치·공개 좌표·검색 결과·실제 상세 연동 및 다른 화면 크기의 글자 배율과 스크린 리더는 구조와 적용 기준으로 확인했다.
+V-05,NEAR-04,minor,documented,88px 왕잠자리 사진에서 날개 일부가 수초와 겹쳐 보인다. 곤충명과 기록 정보는 두 시안에서 필요한 곳에 표시된다.

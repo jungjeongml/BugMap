@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {
+      "screen": "main-map",
+      "state": "default",
+      "nodeId": "41:81",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHaness?node-id=41-81",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/main-map-default.png"
+    }
+  ]
+}

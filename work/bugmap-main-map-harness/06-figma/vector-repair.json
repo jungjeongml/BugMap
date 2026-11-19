@@ -1,0 +1,89 @@
+{
+  "version": "1",
+  "geometry": [
+    {
+      "name": "지도 바탕 · 시연용 벡터",
+      "previousId": "41:84",
+      "replacementId": "41:798",
+      "previousChildCount": 291,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "공식 Mapbox 로고",
+      "previousId": "41:410",
+      "replacementId": "41:819",
+      "previousChildCount": 2,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "iOS · 통신과 배터리",
+      "previousId": "41:491",
+      "replacementId": "41:835",
+      "previousChildCount": 1,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "Lucide · gps",
+      "previousId": "41:436",
+      "replacementId": "41:844",
+      "previousChildCount": 6,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "Lucide · record",
+      "previousId": "41:444",
+      "replacementId": "41:849",
+      "previousChildCount": 2,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "Lucide · attribution",
+      "previousId": "41:430",
+      "replacementId": "41:855",
+      "previousChildCount": 3,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "Lucide · search",
+      "previousId": "41:457",
+      "replacementId": "41:860",
+      "previousChildCount": 2,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "Lucide · tab-map",
+      "previousId": "41:466",
+      "replacementId": "41:866",
+      "previousChildCount": 3,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "Lucide · tab-community",
+      "previousId": "41:472",
+      "replacementId": "41:872",
+      "previousChildCount": 3,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "Lucide · tab-chat",
+      "previousId": "41:479",
+      "replacementId": "41:876",
+      "previousChildCount": 1,
+      "replacementChildCount": 1
+    },
+    {
+      "name": "Lucide · tab-my",
+      "previousId": "41:483",
+      "replacementId": "41:881",
+      "previousChildCount": 2,
+      "replacementChildCount": 1
+    }
+  ],
+  "halo": {
+    "alphaBefore": 1,
+    "alphaAfter": 0.16862745098039217
+  },
+  "frame": "41:81",
+  "exportedAt": "2026-11-19T14:05:19.330Z",
+  "captureSha256": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c"
+}

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Pretendard;
+  src: url("assets/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: block;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url("assets/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: block;
+}
+
+body {
+  margin: 0;
+  background: #101c16;
+}
+
+main {
+  width: min(100%, 390px);
+  margin-inline: auto;
+}
+
+main > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}

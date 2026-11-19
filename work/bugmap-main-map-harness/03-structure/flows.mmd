@@ -1,0 +1,38 @@
+flowchart TD
+  Login(["로그인 성공"]) --> Map["main-map/default · 접힌 발견 지도"]
+  Map --> Search["곤충 이름 또는 지역 검색"]
+  Map --> GPS["내 위치 버튼"]
+  Map --> Record["발견/채집 기록하기"]
+  Map --> Drag["손잡이 위로 드래그"]
+  Map --> Tabs["커뮤니티 · 채팅 · 마이 탭"]
+  Map --> Marker["공개 기록 총건수 배지"]
+  Map --> Attribution["출처 정보 버튼"]
+
+  Search -. 검색 .-> Results["검색 입력과 결과"]
+  Results -. 결과 선택 후 지도에 적용 .-> Map
+  Results -. 취소 .-> Map
+  GPS -. 위치 확인 가능 .-> Located["현재 위치로 지도 이동"]
+  GPS -. 권한 필요 .-> Permission["운영체제 위치 권한"]
+  Permission -. 허용 .-> Located
+  Permission -. 거부 또는 취소 .-> Map
+  GPS -. 위치 확인 실패 후 기존 위치 유지 .-> Map
+  Located -. 탐색 계속 .-> Map
+  Record -. 진입 .-> Editor["기존 기록 작성"]
+  Editor -. 저장 성공 후 새 기록 반영 .-> Map
+  Editor -. 취소 시 기존 지도 복귀 .-> Map
+  Drag -. 확장 .-> Nearby["내 주변 발견"]
+  Nearby -. 지도 보기 .-> Map
+  Tabs -. 선택 .-> TabScreen["선택한 탭 화면"]
+  TabScreen -. 지도 탭 선택 .-> Map
+  Marker -. 탭 .-> Zoom["해당 위치로 확대"]
+  Zoom -. 개별 기록 선택 .-> Detail["개별 기록 상세 · 관찰 또는 채집 유형"]
+  Zoom -. 계속 겹치는 경우 .-> Overlap["겹친 기록 목록"]
+  Overlap -. 개별 기록 선택 .-> Detail
+  Detail -. 상세 닫기 .-> Zoom
+  Attribution -. 탭 .-> MapSources["지도 출처 안내"]
+  MapSources -. 닫기 .-> Map
+  Map -. OS 뒤로 또는 앱 종료 .-> Exit(["앱 외부"])
+
+  %% 실선은 기본 화면에 보이는 진입점이다.
+  %% 점선은 제품에서의 동작과 복귀 흐름이다. 이번 산출물은 main-map/default 한 장이다.
+  %% GPS 동작은 현재 위치로 이동한다. 기본 설정의 주변 반경 경계는 숨긴다.
