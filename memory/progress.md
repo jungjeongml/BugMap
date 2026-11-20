@@ -434,3 +434,14 @@
 
 - `integration/first-login`에 최신 첫 로그인 브랜치를 병합했다. PRD와 화면 명세에 승인된 지도 방향과 현재 앱 동작을 함께 기록했고, TDD와 진행 기록에 양쪽 변경을 반영했다.
 - 앱 테스트 72개, 인증 서버 테스트 12개, 앱 타입 검사, 웹 내보내기, Git 공백 검사를 통과했다. 필수 CI 확인과 사람 승인 후 `main`에 반영할 수 있다.
+
+## 2026-11-20 — 로그인 후 발견 지도 구현
+
+- Cursor MCP로 [BugMapHarness 07](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81)을 확인했다. Sol이 로그인·세션 복구 다음 화면에 서울숲 Mapbox 실지도와 하단 검색·네 탭·위치·기록 조작부를 구현했다. 검색과 버튼은 비활성 상태이며 기존 로그아웃을 유지했다. [화면 명세](../docs/screens/main-map.md) · [구현](../src/features/discovery-map/DiscoveryMapScreen.tsx)
+- 웹 390×844·360×800에서 실제 Mapbox 타일, 지도 이동·확대, 조작부 위 SDK 로고와 출처, 지도 스타일 요청 실패 안내를 확인했다. 배포용 웹에서 미리보기 쿼리는 로그인 화면을 열었다. Astra가 발견한 웹 타일 실패 처리와 네이티브 이동 중 오류 표시를 수정했다. [구현 및 검증](../docs/superpowers/plans/2026-11-20-discovery-map-app.md)
+- 타입 검사, 전체 테스트 76개, 최종 웹·iOS·Android Metro 번들과 Expo 플러그인 설정을 확인했다. Mapbox 공개 토큰은 현재 작업 폴더의 로컬 환경에 설정했다. iOS·Android 개발 빌드에서 실제 지도 표시·오류 복구와 실계정 로그인 후 전환을 확인해야 한다.
+
+## 2026-11-20 — 첫 로그인과 발견 지도 로컬 main 통합
+
+- 원래 작업 폴더의 `main`에 있던 첫 로그인 커밋과 발견 지도 브랜치 `20525e0`을 통합했다. 진행 기록 충돌은 두 항목을 모두 보존해 해결했다.
+- 원래 폴더에서 앱 타입 검사, 전체 테스트 76개, 웹 번들 생성을 통과했다. `npm run web`의 기본 주소에서 첫 로그인과 Mapbox 정적 배경을 확인했고, `?preview=discovery-map`에서 실제 지도와 출처 표시를 확인했다. Mapbox 공개 토큰은 Git에서 제외되는 로컬 설정에 저장했다. 네이티브 실계정 전환 검증은 남아 있다.

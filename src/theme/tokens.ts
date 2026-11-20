@@ -43,6 +43,7 @@ export const mapFlowColors = {
   searchBorder: '#3D5145',
   activeTabSurface: '#2F4433',
   activeTabBorder: '#52694A',
+  sheetHandle: '#8FA496',
   formField: '#1C2C23',
   formFieldBorder: '#3D5044',
   photoTile: '#26382C',

@@ -1,4 +1,4 @@
-const camera = { longitude: 127.039, latitude: 37.5425, zoom: 14 };
+import { getPublicMapboxToken, seoulForestCamera as camera } from '../../config/mapbox.mjs';
 
 export const loginMapAttribution = [
   { label: '© Mapbox', url: 'https://www.mapbox.com/about/maps' },
@@ -7,8 +7,8 @@ export const loginMapAttribution = [
 ] as const;
 
 export function getLoginMapUrl(token: string | undefined): string | null {
-  const publicToken = token?.trim();
-  if (!publicToken || !/^pk\.[\w-]+\.[\w-]+$/.test(publicToken)) return null;
+  const publicToken = getPublicMapboxToken(token);
+  if (!publicToken) return null;
 
   const position = `${camera.longitude},${camera.latitude},${camera.zoom},0,0`;
   return `https://api.mapbox.com/styles/v1/mapbox/dark-v11/static/${position}/390x844@2x?access_token=${publicToken}&attribution=false&logo=false`;
