@@ -2,6 +2,13 @@
 
 공통 시각 기준은 [DESIGN.md](../DESIGN.md), 요구사항은 [PRD](../PRD.md), 기술 결정은 [TDD](../TDD.md)를 따른다. 아래는 해당 화면의 구성과 예외이며, 실제 작업·검증 이력은 [진행 기록](../../memory/progress.md)을 참고한다.
 
+## 첫 로그인 재디자인 기준 · 2026-11-20
+
+- [BugMapHarness 첫 로그인 19:2](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)의 화면 구성에 [메인 발견 지도 41:81](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81)의 스타일과 카메라를 맞춘 정적 Mapbox 스냅샷을 적용하기로 했다.
+- 카카오·Google은 iOS·Android, Apple은 iOS에 표시한다. 화면 구성과 인증 상태의 검토안은 [첫 로그인 설계](../superpowers/specs/2026-11-20-first-login-mapbox-design.md)에 있다.
+
+- 하단의 `이용약관`과 `개인정보처리방침`은 각각 밑줄과 44px 이상의 선택 영역으로 표시한다. 게시 주소를 설정하면 선택한 문서를 열고, 게시 전에는 문서별 준비 상태를 알린다. [정책 링크 프레임](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=80-1815)
+
 ## 선택 프레임 기준 초기 코드
 
 - 2026-11-09 구현 기준은 기존 `01 · 로그인 / iOS`가 아니라, 사용자가 현재 선택한 `Container` **노드 `2:3`(390×804.75)** 이다. 배경은 부모 `2:2`의 `#FAF8FF`를 따른다. [배경 포함 참조 캡처](../../design/login/reference/2:2.png).

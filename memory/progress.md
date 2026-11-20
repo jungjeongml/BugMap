@@ -384,3 +384,19 @@
 
 - 개발 인계 수락 `1d0bf29f-0f84-4434-a9ce-790f28e3670f`가 현재 산출물과 일치함을 확인했다. 하네스 1~8단계가 모두 `passed`이며 `complete: true`였다.
 - [최종 개발 인계서](../work/bugmap-record-entry-harness/08-handoff/HANDOFF.md)와 [검수 보고서](../work/bugmap-record-entry-harness/07-validation/report.md)를 연결했다. 실제 촬영·GPS·저장 검증과 공개 위치 정밀도 결정은 [제품 확인 항목](../work/bugmap-record-entry-harness/08-handoff/open-items.md)에 있다.
+
+## 2026-11-20 — 개발·배포 워크플로와 Figma 연결 기본값
+
+- [저장소 작업 규칙](../AGENTS.md)에 개발·배포 절차와 Cursor Talk to Figma MCP 우선 사용을 명시했다. [개발·배포 워크플로](../docs/development-workflow.md)에 단계별 산출물, Sol 구현·Astra 독립 검증, 브랜치·커밋 인계, 자동 검사와 사람 승인을 정리했다.
+- 저장소의 Expo 앱 진입점, 로그인 버튼 상태, 사용 가능한 검사 명령과 CI 워크플로 파일 유무를 확인했다. 로그인 배경 방식과 실제 인증 제공자 결정, 화면·인증 구현 및 CI 설정 적용이 남아 있다.
+
+## 2026-11-20 — 첫 로그인 지도 배경과 제공자 결정
+
+- 사용자가 메인 발견 지도와 스타일·카메라를 맞춘 정적 Mapbox 스냅샷, iOS·Android 공통 카카오·Google, iOS의 Apple을 선택했다. [제품 PRD](../docs/PRD.md), [인증 TDD](../docs/TDD.md), [로그인 화면 명세](../docs/screens/login.md)에 반영했다.
+- [첫 로그인 설계안](../docs/superpowers/specs/2026-11-20-first-login-mapbox-design.md)에 Figma 대상, 정적 배경과 출처, 인증·세션, 수용 기준을 정리했다. 설계 검토와 승인 후 Figma 편집 및 앱·인증 구현을 이어간다.
+
+## 2026-11-20 — 첫 로그인 정책 링크 결정과 Figma 적용
+
+- 사용자가 별도 확인 화면 대신 로그인 하단에서 두 정책을 각각 열 수 있게 하기로 했다. 정책 문서의 게시 주소는 아직 없다. [첫 로그인 화면 명세](../docs/screens/login.md) · [정책 링크 구현 계획](../docs/superpowers/plans/2026-11-20-first-login-policy.md)
+- Cursor Talk to Figma MCP로 BugMapHarness 05의 기존 약관 문구를 두 밑줄 링크로 교체했다. 390×844 내보내기와 44px 높이의 두 조작 영역을 확인했다. [Figma 정책 링크](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=80-1815)
+- Sol이 앱의 두 정책 링크와 문서별 게시 준비 안내를 구현했다. Astra가 타입 검사와 정책 테스트 10개를 재검증했다. Expo 웹 내보내기와 Chromium에서 각각의 클릭·Enter, 준비 안내와 닫기, 테스트 URL 전달을 확인했다. 코드는 `feat/first-login-policy-code` 브랜치의 `b26c800`에 있다. 실제 정책 주소와 네이티브 기기 검증은 남아 있다. 기존 전체 하네스 검사는 Chromium 연결 시간 초과로 1건 실패했다.
