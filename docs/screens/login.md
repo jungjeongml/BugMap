@@ -2,12 +2,12 @@
 
 공통 시각 기준은 [DESIGN.md](../DESIGN.md), 요구사항은 [PRD](../PRD.md), 기술 결정은 [TDD](../TDD.md)를 따른다. 아래는 해당 화면의 구성과 예외이며, 실제 작업·검증 이력은 [진행 기록](../../memory/progress.md)을 참고한다.
 
-## 첫 로그인 지도 배경 · 2026-11-20
+## 첫 로그인 앱 화면 · 2026-11-20
 
-- [BugMapHarness 05](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)에는 [메인 지도 시안](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81)의 서울숲·성수동 구도를 Mapbox GL JS 3.35.0에서 재현한 390×844 스냅샷을 사용한다. Mapbox Standard의 야간·단색 스타일, 지구본 투영, 중심 경도 127.039·위도 37.5425, 줌 14, 방향과 기울기 0을 적용했다. 로고와 출처 표시는 하단에 둔다.
-- 로그인 제공자는 카카오·Google·iOS의 Apple이다. Google 버튼은 [Google 공식 자산](https://developers.google.com/identity/branding-guidelines)의 G 표시와 한국어 레이블을 사용한다.
-- 하단 `이용약관`과 `개인정보처리방침`은 각각 밑줄을 표시한다. 실제 문서는 게시 전이며, 앱은 문서별로 준비 중 상태를 알린다.
-- [변경 범위와 앱·서버 계약](../superpowers/plans/2026-11-20-social-login-and-mapbox.md)을 참고한다.
+- [BugMapHarness 05](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)의 원래 390×844 시안을 시각 기준으로 삼는다. BugMap 워드마크, 두 줄 제목과 설명, 서울숲 관찰 예시 및 하단 버튼 흐름을 구현한다. Figma 프레임은 이전 캡처와 바이트 단위로 일치하는 상태로 복구했다.
+- 앱은 카카오·Google과 iOS의 Apple 로그인, 밑줄이 있는 이용약관·개인정보처리방침 링크를 표시한다. 정책 문서를 게시할 때까지 각 링크가 해당 문서의 준비 상태를 표시한다.
+- 시안의 지도 일러스트를 기본에 쓴다. `EXPO_PUBLIC_BUGMAP_MAPBOX_TOKEN`을 설정하면 앱에서 Mapbox Static Images API의 `dark-v11`로 서울숲을 요청한다. 실제 이미지를 표시하는 동안 Mapbox 로고와 출처 링크를 지도 옆에 배치하고, 이미지 로드가 실패하면 일러스트로 돌아간다. [Mapbox 출처 표시](https://docs.mapbox.com/help/dive-deeper/attribution/) · [정적 지도 API](https://docs.mapbox.com/api/maps/static-images/)
+- [화면 검증 계획](../superpowers/plans/2026-11-20-login-screen-app.md) · [인증 서버 설정](../../server/README.md)
 
 ## 선택 프레임 기준 초기 코드
 

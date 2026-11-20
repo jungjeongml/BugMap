@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, AppState, Pressable, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, AppState, Pressable, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors, layout } from '../../theme/tokens';
 import { AuthError, shouldRevalidateSession, type AuthProvider, type AuthSession } from './authClient';
@@ -129,6 +129,7 @@ export function AuthFlow() {
   if (view.screen === 'restore') {
     return (
       <SafeAreaView style={styles.safeArea}>
+        <StatusBar barStyle="dark-content" />
         <View style={styles.panel}>
           {view.notice ? (
             <>
@@ -150,6 +151,7 @@ export function AuthFlow() {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <StatusBar barStyle="dark-content" />
       <View style={styles.panel}>
         <Text accessibilityRole="header" style={styles.title}>곤충맵</Text>
         <Text style={styles.message}>로그인했어요.</Text>

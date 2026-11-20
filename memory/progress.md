@@ -397,3 +397,19 @@
 - 제공자 등록 전에도 명시적으로 허용한 개발 환경이 시작되게 했다. Astra가 서버 타입 검사, 테스트 12개, 제공자 없는 기본 시작 거부와 명시 허용 시 상태 확인을 검증했다. [인증 서버 실행 안내](../server/README.md)
 - Mac 루프백의 인증 서버를 Cloudflare Quick Tunnel로 공개했다. 공개 HTTPS의 `/healthz` 200, 세 로그인 시작 경로의 앱 복귀 응답, state가 없는 콜백 거절을 확인했다. 활성 주소와 키 자리표시자는 Git에서 제외되는 `server/.env`에 있고 같은 주소를 앱의 `.env.local`에 설정했다.
 - 카카오·Google·Apple 개발자 콘솔 등록과 해당 계정의 실제 로그인 검증이 남아 있다. 터널의 연결을 유지하면 제공자 환경 값 추가 후 인증 서버만 다시 시작할 수 있다.
+
+## 2026-11-20 — 카카오·Google 개발 인증 설정 적용
+
+- 사용자 요청으로 Apple 설정과 실계정 검증을 보류했다. 카카오와 Google 설정이 들어간 인증 서버를 다시 시작했고, 기존 Cloudflare 터널과 콜백 주소를 유지했다. 공개 HTTPS 상태 확인은 HTTP 200과 `authentication: configured`를 반환했다.
+- 실제 제공자 인증 시작 요청에서 카카오는 `KOE004`, Google은 `redirect_uri_mismatch`를 반환했다. 카카오 로그인 사용 설정과 현재 Google 클라이언트의 승인된 리디렉션 URI를 수정한 뒤 실계정 검증을 재개한다. [제공자 설정](../server/README.md)
+
+## 2026-11-20 — 제공자 콘솔 저장 후 재검사
+
+- 같은 공개 HTTPS 서버에서 카카오 인증 시작 응답과 `accounts.kakao.com/login` HTTP 200을 확인했다. 이전 `KOE004`는 재현되지 않았다.
+- Google은 같은 서버에서 두 번 검사했으나 `redirect_uri_mismatch`를 반환했다. 서버가 설정된 클라이언트 ID와 예상 Google 콜백 주소를 정확히 보내는 것을 확인했다. 콘솔의 대상 클라이언트 및 승인 URI와 반영 상태 확인이 남았다. 실제 계정 동의 및 앱 세션 발급은 이번 검사 범위 이후다.
+
+## 2026-11-20 — 첫 로그인 앱 화면 구현과 Figma 복구
+
+- Figma는 앱 구현의 시각 기준으로 사용한다는 사용자 설명을 반영했다. Cursor MCP로 [BugMapHarness 05](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)의 지도·네이버·약관 표시를 복구했다. 다시 내보낸 390×844 PNG는 보관된 시안과 바이트 단위로 일치했다.
+- Sol이 실제 Expo 첫 화면에 다크 레이아웃과 지도 일러스트, 공식 제공자 버튼·정책 링크를 구현했다. Mapbox 설정 시 앱이 정적 이미지를 직접 받고, 로고·세 출처 링크를 스크롤 영역 밖에 표시한다. 이미지 로드 실패 시 일러스트로 복귀한다. [로그인 화면 명세](../docs/screens/login.md)
+- 전체 테스트 72개, 타입 검사, 웹·iOS·Android 번들 생성, Astra 독립 검사 28개가 통과했다. 웹 390×844·360×800에서 정책 링크와 지도 전환, 실제 이미지와 큰 글자 사용 중 출처 고정을 확인했다. 사용자 결정에 따라 Google 실계정 재검증을 보류했다. [구현 및 검증](../docs/superpowers/plans/2026-11-20-login-screen-app.md)

@@ -41,6 +41,8 @@ npm run export:web
 2. 루트 환경 파일의 `EXPO_PUBLIC_BUGMAP_AUTH_API_URL`에 서버의 HTTPS origin을 넣는다. [앱 환경 변수 예시](.env.example)
 3. `npx expo run:ios` 또는 `npx expo run:android`로 네이티브 앱을 빌드한다. 웹과 Expo Go에서는 로그인 화면과 정책 링크를 미리 볼 수 있다.
 
+첫 화면은 BugMapHarness 05를 기준으로 다크 지도와 소셜 로그인 버튼을 표시한다. 기본 지도는 시안의 일러스트다. `EXPO_PUBLIC_BUGMAP_MAPBOX_TOKEN`에 Mapbox 공개 토큰을 설정하면 서울숲의 정적 지도와 로고·출처 링크가 표시된다. [첫 로그인 화면 명세](docs/screens/login.md)
+
 이용약관과 개인정보처리방침은 각각 게시 전 안내를 표시한다. 주소 설정 후 두 링크가 각자 문서를 연다. 로그인 성공 후 앱에서 세션 상태와 로그아웃을 확인할 수 있다. 실제 발견 지도 화면은 별도 구현 범위다.
 
 Expo 버전 조합은 [SDK 호환 표](https://docs.expo.dev/versions/latest/)와 [SDK 58 TypeScript 템플릿](https://github.com/expo/expo/blob/sdk-58/templates/expo-template-blank-typescript/package.json), 안전 영역은 [공식 문서](https://docs.expo.dev/versions/latest/sdk/safe-area-context/)를 기준으로 작성했습니다. 실제 설치 호환성은 아직 확인하지 못했습니다.

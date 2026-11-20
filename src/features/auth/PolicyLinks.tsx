@@ -90,9 +90,9 @@ export function PolicyLinks() {
 }
 
 const styles = StyleSheet.create({
-  links: { marginTop: 10, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', columnGap: 16 },
+  links: { marginTop: 14, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', columnGap: 12 },
   linkTarget: { minWidth: 44, minHeight: 44, paddingHorizontal: 4, justifyContent: 'center', alignItems: 'center' },
-  link: { fontSize: 12, lineHeight: 18, color: colors.body, textDecorationLine: 'underline' },
+  link: { fontSize: 11, lineHeight: 16, color: '#BACABF', textDecorationLine: 'underline' },
   scrim: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(17, 24, 39, 0.50)', padding: 24 },
   dialog: { width: '100%', maxWidth: 360, borderRadius: 20, backgroundColor: colors.surface, padding: 20 },
   title: { color: colors.text, fontSize: 18, lineHeight: 26, fontWeight: '700' },
