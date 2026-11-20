@@ -316,7 +316,7 @@ LIMIT :page_size;
 
 ### 지도 표시와 내 주변 반경
 
-- React Native 연동은 `@rnmapbox/maps`를 우선 검토한다. Expo config plugin을 적용한 네이티브 개발 빌드에서 연동과 SDK 기본 로고·출처 정보 버튼을 확인한다. 이 패키지는 Expo Go에서 실행할 수 없다. [RNMapbox 설치 안내](https://rnmapbox.github.io/docs/install), [Mapbox 출처 표시 지침](https://docs.mapbox.com/help/dive-deeper/attribution/)
+- 발견 지도 렌더러는 iOS·Android에서 Expo config plugin을 적용한 `@rnmapbox/maps`, 웹에서 Mapbox GL JS를 사용한다. 카메라·스타일·공개 토큰 환경 변수를 공유하고, SDK의 로고·출처를 하단 조작부 위에 표시한다. 네이티브 연동에는 전용 개발 빌드가 필요하며 실기기 검증은 예정 상태다. [RNMapbox 설치 안내](https://rnmapbox.github.io/docs/install), [Mapbox GL JS 지도 API](https://docs.mapbox.com/mapbox-gl-js/api/map/), [Mapbox 출처 표시 지침](https://docs.mapbox.com/help/dive-deeper/attribution/)
 - 조회한 공개 기록을 GeoJSON Point로 만들고 필터 결과를 클러스터링 소스에 넣는다. 묶음 배지와 개별 마커는 `CircleLayer`·`SymbolLayer` 등 지도 레이어로 그린다. 기록별 React Native 뷰 생성은 피한다. 묶음을 누르면 클러스터 확장 확대값으로 이동하고, 같은 좌표에서 계속 겹치는 경우 해당 기록 목록을 열어 선택할 수 있게 한다. 확대 전환과 클러스터 반경은 밀집 데이터·실기기로 조정한다. [RNMapbox ShapeSource](https://rnmapbox.github.io/docs/components/ShapeSource), [RNMapbox SymbolLayer](https://rnmapbox.github.io/docs/components/SymbolLayer)
 - 내 주변 반경을 적용하면 현재 위치 중심의 GeoJSON 원형 폴리곤을 별도 소스의 채움·윤곽 레이어로 그린다. 반경은 미터 단위 지리 거리로 계산한다. 지도와 ‘내 주변 발견’ 목록에 같은 중심·반경과 공개 좌표를 사용하고, 중심에서 공개 좌표까지의 거리가 반경 이하인 기록을 포함한다. 지도 조회에는 현재 지도 영역 조건도 적용한다. `전체`로 바꾸거나 현재 위치를 확인할 수 없으면 반경 레이어를 숨긴다. [Mapbox GeoJSON 소스 명세](https://docs.mapbox.com/style-spec/reference/sources/#geojson)
 - 개별 마커 탭에서 기록 ID를 읽어 선택 상태를 갱신하고, 지도 위에 React Native 상세 카드 한 장을 표시한다. 전체 기록은 기존 상세 API로 가져온다. 선택한 기록이 필터에서 제외되면 선택 상태를 해제한다.

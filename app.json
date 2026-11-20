@@ -3,7 +3,7 @@
     "name": "곤충맵",
     "slug": "bugmap",
     "scheme": "bugmap",
-    "plugins": ["expo-secure-store"],
+    "plugins": ["expo-secure-store", "@rnmapbox/maps"],
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",

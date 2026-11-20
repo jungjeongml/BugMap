@@ -2,7 +2,15 @@
 
 공통 시각 기준은 [DESIGN.md](../DESIGN.md), 요구사항은 [PRD](../PRD.md), 기술 결정은 [TDD](../TDD.md)를 따른다. 아래는 해당 화면의 구성과 예외이며, 실제 작업·검증 이력은 [진행 기록](../../memory/progress.md)을 참고한다.
 
-## 현재 구현 기준 · 07 메인 발견 지도
+## 앱의 첫 발견 지도 범위 · 2026-11-20
+
+[BugMapHarness 07 · 메인 / 발견 지도](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81)를 배치 기준으로 한다. 로그인과 세션 복구의 목적지는 동일한 발견 지도다. Mapbox Standard의 야간 스타일로 서울숲을 표시하고, 지도 이동·확대가 가능하도록 한다. SDK 로고와 출처는 항상 조작부 위에 보인다.
+
+하단 검색, 네 탭, 위치, 기록 버튼과 패널 손잡이는 이 단계에서 시각 자리와 비활성 상태를 전달한다. 실제 위치나 사용자 기록은 관련 API가 준비되면 연결한다. 기존 세션 로그아웃 동작은 유지한다.
+
+웹에서는 개발 서버의 `?preview=discovery-map`에서 레이아웃과 실지도를 확인한다. 앱은 `EXPO_PUBLIC_BUGMAP_MAPBOX_TOKEN`을 읽는다. [구현 및 검증 계획](../superpowers/plans/2026-11-20-discovery-map-app.md)
+
+## Figma 화면 요구사항 · 07 메인 발견 지도
 
 [07 다크 시안](https://www.figma.com/design/LynbxdW8Qf7TavCrPLd2nY/BugMap?node-id=163-1319)을 화면 배치 참고로 사용한다. 실제 지도에는 Mapbox 로고와 출처 정보 버튼을 배치하고, 내 주변 반경을 설정한 상태에만 연두색 원형 경계를 표시한다. 지도를 축소하면 가까운 공개 관찰·채집 기록을 한 묶음 마커로 합쳐 `기록 3`처럼 총 건수를 표시한다. 묶음을 탭하면 해당 위치를 확대한다. 확대해 나타난 개별 마커를 탭하면 상세 카드에서 관찰·채집 유형을 확인할 수 있다. 기준과 검수 항목은 [DESIGN.md](../DESIGN.md#메인-발견-지도)를 따른다.
 

@@ -1,0 +1,18 @@
+.bugmap-discovery-map {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bugmap-discovery-map .mapboxgl-ctrl-bottom-left,
+.bugmap-discovery-map .mapboxgl-ctrl-bottom-right {
+  bottom: var(--bugmap-ornament-inset);
+}
+
+.bugmap-discovery-map .mapboxgl-ctrl-bottom-left {
+  left: 6px;
+}
+
+.bugmap-discovery-map .mapboxgl-ctrl-bottom-right {
+  right: 6px;
+}

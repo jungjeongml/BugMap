@@ -1,7 +1,9 @@
+import { LogOut } from 'lucide-react-native';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, AppState, Pressable, StatusBar, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { colors, layout } from '../../theme/tokens';
+import { colors, layout, mapFlowColors } from '../../theme/tokens';
+import { DiscoveryMapScreen } from '../discovery-map/DiscoveryMapScreen';
 import { AuthError, shouldRevalidateSession, type AuthProvider, type AuthSession } from './authClient';
 import { authRuntime } from './authRuntime';
 import { LoginScreen } from './LoginScreen';
@@ -150,31 +152,54 @@ export function AuthFlow() {
   }
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle="dark-content" />
-      <View style={styles.panel}>
-        <Text accessibilityRole="header" style={styles.title}>곤충맵</Text>
-        <Text style={styles.message}>로그인했어요.</Text>
-        <Pressable
-          accessibilityRole="button"
-          accessibilityState={{ disabled: view.pending, busy: view.pending }}
-          disabled={view.pending}
-          style={styles.button}
-          onPress={() => void signOut()}
-        >
-          <Text style={styles.label}>{view.pending ? '로그아웃 중…' : '로그아웃'}</Text>
-        </Pressable>
-        {view.notice && <Text accessibilityRole="alert" style={styles.message}>{view.notice}</Text>}
-      </View>
-    </SafeAreaView>
+    <DiscoveryMapScreen
+      sessionControls={
+        <>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityState={{ disabled: view.pending, busy: view.pending }}
+            disabled={view.pending}
+            style={styles.signOutButton}
+            onPress={() => void signOut()}
+          >
+            <LogOut color={mapFlowColors.textSecondary} size={16} />
+            <Text style={styles.signOutText}>{view.pending ? '로그아웃 중…' : '로그아웃'}</Text>
+          </Pressable>
+          {view.notice && (
+            <Text accessibilityRole="alert" style={styles.signOutNotice}>{view.notice}</Text>
+          )}
+        </>
+      }
+    />
   );
 }
 
 const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: colors.background, alignItems: 'center', justifyContent: 'center' },
   panel: { width: '100%', maxWidth: layout.maxWidth, padding: layout.gutter, alignItems: 'center', gap: 12 },
-  title: { fontSize: 30, fontWeight: '700', color: colors.text },
   message: { textAlign: 'center', fontSize: 15, lineHeight: 22, color: colors.body },
   button: { minHeight: layout.buttonHeight, paddingHorizontal: 24, paddingVertical: 10, backgroundColor: colors.primaryTint, borderRadius: layout.radius, alignItems: 'center', justifyContent: 'center' },
   label: { fontSize: 15, lineHeight: 21, fontWeight: '700', color: colors.primary },
+  signOutButton: {
+    minHeight: 44,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: mapFlowColors.mapPanelBorder,
+    backgroundColor: mapFlowColors.mapPanel,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  signOutText: { color: mapFlowColors.textSecondary, fontSize: 13, lineHeight: 18, fontWeight: '600' },
+  signOutNotice: {
+    marginTop: 8,
+    color: mapFlowColors.text,
+    backgroundColor: mapFlowColors.mapPanel,
+    borderRadius: 12,
+    padding: 10,
+    fontSize: 14,
+    lineHeight: 20,
+  },
 });

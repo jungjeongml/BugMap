@@ -413,3 +413,9 @@
 - Figma는 앱 구현의 시각 기준으로 사용한다는 사용자 설명을 반영했다. Cursor MCP로 [BugMapHarness 05](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)의 지도·네이버·약관 표시를 복구했다. 다시 내보낸 390×844 PNG는 보관된 시안과 바이트 단위로 일치했다.
 - Sol이 실제 Expo 첫 화면에 다크 레이아웃과 지도 일러스트, 공식 제공자 버튼·정책 링크를 구현했다. Mapbox 설정 시 앱이 정적 이미지를 직접 받고, 로고·세 출처 링크를 스크롤 영역 밖에 표시한다. 이미지 로드 실패 시 일러스트로 복귀한다. [로그인 화면 명세](../docs/screens/login.md)
 - 전체 테스트 72개, 타입 검사, 웹·iOS·Android 번들 생성, Astra 독립 검사 28개가 통과했다. 웹 390×844·360×800에서 정책 링크와 지도 전환, 실제 이미지와 큰 글자 사용 중 출처 고정을 확인했다. 사용자 결정에 따라 Google 실계정 재검증을 보류했다. [구현 및 검증](../docs/superpowers/plans/2026-11-20-login-screen-app.md)
+
+## 2026-11-20 — 로그인 후 발견 지도 구현
+
+- Cursor MCP로 [BugMapHarness 07](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81)을 확인했다. Sol이 로그인·세션 복구 다음 화면에 서울숲 Mapbox 실지도와 하단 검색·네 탭·위치·기록 조작부를 구현했다. 검색과 버튼은 비활성 상태이며 기존 로그아웃을 유지했다. [화면 명세](../docs/screens/main-map.md) · [구현](../src/features/discovery-map/DiscoveryMapScreen.tsx)
+- 웹 390×844·360×800에서 실제 Mapbox 타일, 지도 이동·확대, 조작부 위 SDK 로고와 출처, 지도 스타일 요청 실패 안내를 확인했다. 배포용 웹에서 미리보기 쿼리는 로그인 화면을 열었다. Astra가 발견한 웹 타일 실패 처리와 네이티브 이동 중 오류 표시를 수정했다. [구현 및 검증](../docs/superpowers/plans/2026-11-20-discovery-map-app.md)
+- 타입 검사, 전체 테스트 76개, 최종 웹·iOS·Android Metro 번들과 Expo 플러그인 설정을 확인했다. Mapbox 공개 토큰은 현재 작업 폴더의 로컬 환경에 설정했다. iOS·Android 개발 빌드에서 실제 지도 표시·오류 복구와 실계정 로그인 후 전환을 확인해야 한다.
