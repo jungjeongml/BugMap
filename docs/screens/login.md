@@ -6,8 +6,14 @@
 
 - [BugMapHarness 첫 로그인 19:2](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)의 화면 구성에 [메인 발견 지도 41:81](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81)의 스타일과 카메라를 맞춘 정적 Mapbox 스냅샷을 적용하기로 했다.
 - 카카오·Google은 iOS·Android, Apple은 iOS에 표시한다. 화면 구성과 인증 상태의 검토안은 [첫 로그인 설계](../superpowers/specs/2026-11-20-first-login-mapbox-design.md)에 있다.
-
 - 하단의 `이용약관`과 `개인정보처리방침`은 각각 밑줄과 44px 이상의 선택 영역으로 표시한다. 게시 주소를 설정하면 선택한 문서를 열고, 게시 전에는 문서별 준비 상태를 알린다. [정책 링크 프레임](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=80-1815)
+
+## 첫 로그인 앱 화면 · 2026-11-20
+
+- [BugMapHarness 05](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)의 원래 390×844 시안을 시각 기준으로 삼는다. BugMap 워드마크, 두 줄 제목과 설명, 서울숲 관찰 예시 및 하단 버튼 흐름을 구현한다. Figma 프레임은 이전 캡처와 바이트 단위로 일치하는 상태로 복구했다.
+- 앱은 카카오·Google과 iOS의 Apple 로그인, 밑줄이 있는 이용약관·개인정보처리방침 링크를 표시한다. 정책 문서를 게시할 때까지 각 링크가 해당 문서의 준비 상태를 표시한다.
+- 시안의 지도 일러스트를 기본에 쓴다. `EXPO_PUBLIC_BUGMAP_MAPBOX_TOKEN`을 설정하면 앱에서 Mapbox Static Images API의 `dark-v11`로 서울숲을 요청한다. 실제 이미지를 표시하는 동안 Mapbox 로고와 출처 링크를 지도 옆에 배치하고, 이미지 로드가 실패하면 일러스트로 돌아간다. [Mapbox 출처 표시](https://docs.mapbox.com/help/dive-deeper/attribution/) · [정적 지도 API](https://docs.mapbox.com/api/maps/static-images/)
+- [화면 검증 계획](../superpowers/plans/2026-11-20-login-screen-app.md) · [인증 서버 설정](../../server/README.md)
 
 ## 선택 프레임 기준 초기 코드
 

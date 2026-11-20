@@ -333,6 +333,10 @@ LIMIT :page_size;
 
 카카오·Google을 iOS와 Android에서 제공하고, Apple은 iOS에 추가한다. iOS에서 Kakao 같은 소셜 로그인을 제공할 때는 Apple 심사 지침 4.8의 동등한 로그인 옵션 요건을 확인한다. iOS·Android 간 계정 이동은 공통 제공자 로그인 또는 사용자가 승인한 계정 연결로 처리한다. Apple만 연결된 계정의 Android 이동에는 추가 연결 안내 또는 별도 계정 복구 경로가 필요하다.
 
+#### 현재 모바일·개발 서버 연결
+
+앱은 시스템 인증 창에서 BugMap 서버의 제공자별 인증 시작 주소를 열고 `bugmap://auth/callback`의 1회용 코드를 받는다. 서버가 제공자의 HTTPS 콜백과 자격 증명을 확인하고, 앱은 반환 주소와 state를 검증해 S256 검증값과 함께 코드를 서버 세션으로 교환한다. 앱 갱신 토큰은 Expo SecureStore에 저장된다. 개발 서버는 SQLite에 계정과 세션의 토큰 해시를 저장하며, 공개 HTTPS와 제공자 설정을 갖춘 뒤 네이티브 기기에서 확인한다. [서버 설정](../server/README.md) · [앱·서버 계약](superpowers/plans/2026-11-20-social-login-and-mapbox.md)
+
 ### 6.2 사진 등록과 재시도
 
 1. 로그인 사용자가 사진 업로드 예약을 요청한다. 서버가 파일 정책을 확인하고 본인 소유 `media_assets(pending)` 및 단기 서명 URL을 만든다.

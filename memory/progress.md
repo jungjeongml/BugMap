@@ -400,3 +400,37 @@
 - 사용자가 별도 확인 화면 대신 로그인 하단에서 두 정책을 각각 열 수 있게 하기로 했다. 정책 문서의 게시 주소는 아직 없다. [첫 로그인 화면 명세](../docs/screens/login.md) · [정책 링크 구현 계획](../docs/superpowers/plans/2026-11-20-first-login-policy.md)
 - Cursor Talk to Figma MCP로 BugMapHarness 05의 기존 약관 문구를 두 밑줄 링크로 교체했다. 390×844 내보내기와 44px 높이의 두 조작 영역을 확인했다. [Figma 정책 링크](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=80-1815)
 - Sol이 앱의 두 정책 링크와 문서별 게시 준비 안내를 구현했다. Astra가 타입 검사와 정책 테스트 10개를 재검증했다. Expo 웹 내보내기와 Chromium에서 각각의 클릭·Enter, 준비 안내와 닫기, 테스트 URL 전달을 확인했다. 코드는 `feat/first-login-policy-code` 브랜치의 `b26c800`에 있다. 실제 정책 주소와 네이티브 기기 검증은 남아 있다. 기존 전체 하네스 검사는 Chromium 연결 시간 초과로 1건 실패했다.
+
+## 2026-11-20 — 첫 로그인 Mapbox 스냅샷과 소셜 인증
+
+- Cursor MCP로 [BugMapHarness 첫 로그인](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)에 지도 원본을 다시 렌더링한 390×844 Mapbox Standard 스냅샷과 공식 Google G 표시를 반영했다. 원격 노드와 캡처에서 출처 표시, 카카오·Google·Apple 버튼, 기존 약관 링크 두 개를 확인했다. [화면 명세](../docs/screens/login.md)
+- Sol로 네이티브 소셜 로그인과 NestJS·SQLite 개발 서버를 구현했다. Astra 검증에서 앱 인증·정책 테스트 24개, 서버 테스트 11개, 앱·서버 타입 검사가 통과했다. 앱과 로컬 서버 간 모의 제공자 로그인, 갱신, 보호 API와 로그아웃을 확인했다. [구현 계약과 검증](../docs/superpowers/plans/2026-11-20-social-login-and-mapbox.md)
+- Expo 웹·iOS·Android 번들 생성과 서버 런타임 의존성 검사에서 취약점 0건을 확인했다. 전체 앱 테스트에서 기존 디자인 하네스 Chromium 검사 두 건은 시간 초과와 기준 이미지 누락으로 실패했다.
+- 실제 계정 검증에 공개 HTTPS 개발 주소, 카카오·Google·Apple 개발자 등록과 네이티브 기기가 필요하다. 정책 게시 주소와 네이티브 발견 지도 화면이 남아 있다. [서버 설정](../server/README.md)
+
+## 2026-11-20 — 소셜 로그인 공개 HTTPS 개발 환경
+
+- 제공자 등록 전에도 명시적으로 허용한 개발 환경이 시작되게 했다. Astra가 서버 타입 검사, 테스트 12개, 제공자 없는 기본 시작 거부와 명시 허용 시 상태 확인을 검증했다. [인증 서버 실행 안내](../server/README.md)
+- Mac 루프백의 인증 서버를 Cloudflare Quick Tunnel로 공개했다. 공개 HTTPS의 `/healthz` 200, 세 로그인 시작 경로의 앱 복귀 응답, state가 없는 콜백 거절을 확인했다. 활성 주소와 키 자리표시자는 Git에서 제외되는 `server/.env`에 있고 같은 주소를 앱의 `.env.local`에 설정했다.
+- 카카오·Google·Apple 개발자 콘솔 등록과 해당 계정의 실제 로그인 검증이 남아 있다. 터널의 연결을 유지하면 제공자 환경 값 추가 후 인증 서버만 다시 시작할 수 있다.
+
+## 2026-11-20 — 카카오·Google 개발 인증 설정 적용
+
+- 사용자 요청으로 Apple 설정과 실계정 검증을 보류했다. 카카오와 Google 설정이 들어간 인증 서버를 다시 시작했고, 기존 Cloudflare 터널과 콜백 주소를 유지했다. 공개 HTTPS 상태 확인은 HTTP 200과 `authentication: configured`를 반환했다.
+- 실제 제공자 인증 시작 요청에서 카카오는 `KOE004`, Google은 `redirect_uri_mismatch`를 반환했다. 카카오 로그인 사용 설정과 현재 Google 클라이언트의 승인된 리디렉션 URI를 수정한 뒤 실계정 검증을 재개한다. [제공자 설정](../server/README.md)
+
+## 2026-11-20 — 제공자 콘솔 저장 후 재검사
+
+- 같은 공개 HTTPS 서버에서 카카오 인증 시작 응답과 `accounts.kakao.com/login` HTTP 200을 확인했다. 이전 `KOE004`는 재현되지 않았다.
+- Google은 같은 서버에서 두 번 검사했으나 `redirect_uri_mismatch`를 반환했다. 서버가 설정된 클라이언트 ID와 예상 Google 콜백 주소를 정확히 보내는 것을 확인했다. 콘솔의 대상 클라이언트 및 승인 URI와 반영 상태 확인이 남았다. 실제 계정 동의 및 앱 세션 발급은 이번 검사 범위 이후다.
+
+## 2026-11-20 — 첫 로그인 앱 화면 구현과 Figma 복구
+
+- Figma는 앱 구현의 시각 기준으로 사용한다는 사용자 설명을 반영했다. Cursor MCP로 [BugMapHarness 05](https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=19-2)의 지도·네이버·약관 표시를 복구했다. 다시 내보낸 390×844 PNG는 보관된 시안과 바이트 단위로 일치했다.
+- Sol이 실제 Expo 첫 화면에 다크 레이아웃과 지도 일러스트, 공식 제공자 버튼·정책 링크를 구현했다. Mapbox 설정 시 앱이 정적 이미지를 직접 받고, 로고·세 출처 링크를 스크롤 영역 밖에 표시한다. 이미지 로드 실패 시 일러스트로 복귀한다. [로그인 화면 명세](../docs/screens/login.md)
+- 전체 테스트 72개, 타입 검사, 웹·iOS·Android 번들 생성, Astra 독립 검사 28개가 통과했다. 웹 390×844·360×800에서 정책 링크와 지도 전환, 실제 이미지와 큰 글자 사용 중 출처 고정을 확인했다. 사용자 결정에 따라 Google 실계정 재검증을 보류했다. [구현 및 검증](../docs/superpowers/plans/2026-11-20-login-screen-app.md)
+
+## 2026-11-20 — 첫 로그인 Git 통합 후보
+
+- `integration/first-login`에 최신 첫 로그인 브랜치를 병합했다. PRD와 화면 명세에 승인된 지도 방향과 현재 앱 동작을 함께 기록했고, TDD와 진행 기록에 양쪽 변경을 반영했다.
+- 앱 테스트 72개, 인증 서버 테스트 12개, 앱 타입 검사, 웹 내보내기, Git 공백 검사를 통과했다. 필수 CI 확인과 사람 승인 후 `main`에 반영할 수 있다.
