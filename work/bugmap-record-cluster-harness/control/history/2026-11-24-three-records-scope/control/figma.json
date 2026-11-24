@@ -1,0 +1,15 @@
+{
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "documentName": "BugMapHarness",
+  "pageId": "0:1",
+  "pageName": "Page 1",
+  "fileUrl": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=0-1",
+  "prototypeSource": {
+    "nodeId": "41:81",
+    "name": "07 · 메인 / 발견 지도",
+    "clusterMarkerId": "41:394",
+    "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81"
+  },
+  "editPolicy": "기록 묶음 선택 프레임을 하나 추가한다. 원본의 프로토타입 변경은 41:394의 해당 진입 동작에 한정한다. 새 프레임에는 닫기를 연결하고 기존 출처 인터랙션이 있으면 재사용한다. 기존 연결이 충돌하면 먼저 확인한다. 원본 지도 레이어와 기존 화면 및 기타 프로토타입 연결을 보존한다.",
+  "preferredBridge": "Cursor Talk to Figma"
+}

@@ -207,10 +207,11 @@ Figma `07 · 메인 / 발견 지도`의 다크 지도와 하단 패널을 바탕
 |---|---|
 | 지도 기본 | Mapbox 지도 위에 공식 로고와 SDK의 출처 정보 버튼(`ⓘ`)을 둔다. 지도가 보이는 동안 두 요소가 읽히고 정보 버튼을 누를 수 있도록 하단 패널·상세 카드·안전 영역을 감안해 배치한다. 로고는 공식 형태와 색을 유지한다. [Mapbox 출처 표시 지침](https://docs.mapbox.com/help/dive-deeper/attribution/) |
 | 내 주변 반경 적용 | 현재 위치 중심의 원을 `mapFlowColors.observationFill`과 `mapFlowColors.observationOutline`으로 그린다. 지형 위에 얇고 옅게 표시하고 위치점·마커는 그 위에 둔다. 예를 들어 `내 위치 기준 · 5 km 이내`로 거리 기준을 표시한다. 기본·`전체` 상태와 위치 미확인 상태에서는 연두색 경계를 숨긴다. 하늘색 현재 위치 점과 위치 표시용 바깥 원은 별도의 시각 요소다. |
-| 축소·확대 | 축소 시 가까운 기록을 수량 배지가 있는 묶음으로 표시한다. 확대하면 개별 마커를 보여준다. 묶음을 탭하면 해당 위치를 확대하고, 같은 공개 좌표에서 계속 겹치는 기록은 목록으로 선택할 수 있게 한다. |
+| 축소·확대 | 축소 시 가까운 기록을 수량 배지가 있는 묶음으로 표시한다. 확대하면 개별 마커를 보여준다. |
+| 기록 묶음 선택 | 선택한 마커를 강조하고 하단 내비게이션 자리에 주변 기록 패널을 연다. 패널 위에 지도와 강조된 마커가 보이게 배치한다. 목록과 닫기 동작은 [화면 명세](./screens/main-map.md#기록-묶음-선택)를 따른다. |
 | 개별 기록 선택 | 선택한 마커를 강조하고 지도 위 하단 패널 위쪽에 카드 한 장을 띄운다. 카드에 사진 썸네일·곤충명·관찰/채집 유형·실제 발견 일시와 상세 열기 동작을 배치한다. 카드 변경·닫기에 맞춰 선택 강조를 갱신한다. |
 
-후속 디자인 검수에서는 기본과 반경 적용, 축소와 확대, 개별 기록 선택 상태를 확인한다. 카드·패널이 열린 상태에서 지도에 남은 공간으로 출처 버튼을 누를 수 있는지 확인한다.
+후속 디자인 검수에서는 기본과 반경 적용, 축소와 확대, 묶음과 개별 기록 선택 상태를 확인한다. 카드·패널이 열린 상태에서 지도에 남은 공간으로 출처 버튼을 누를 수 있는지 확인한다.
 
 ## Typography
 Typography is strictly anchored to Pretendard (with fallback to neutral system sans-serif like Inter). The scale is rigorously structured around three explicit weight roles: **Light (300)** for long-form narrative body and scientific descriptions, **Medium (500)** for interactive labels, taxonomy chips, and subheaders, and **Bold (700)** for primary headlines and data values.

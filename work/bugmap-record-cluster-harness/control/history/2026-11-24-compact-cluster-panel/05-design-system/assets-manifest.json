@@ -1,0 +1,115 @@
+{
+  "sourceMap": {
+    "file": "design/main-map/map-background.svg",
+    "sha256": "849c0eb7cd208e2bc358eee8ee640ede0430f3aa1598dc2df4ed66522b932de8",
+    "size": [
+      390,
+      844
+    ],
+    "treatment": "정해진 다크 지도 팔레트로 17개 색 교체. 지형과 경로 도형, 크기 유지."
+  },
+  "inputs": [
+    {
+      "file": "work/bugmap-record-cluster-harness/04-wireframes/wireframes.json",
+      "sha256": "600c9b37a99101d3348f7fe1d739811a6efea9902b35602b3872870ccc612d85"
+    },
+    {
+      "file": "work/bugmap-record-cluster-harness/04-wireframes/captures/main-map/cluster-selected.png",
+      "sha256": "1595d6629dd3d755f6cd79d4587598e44c123426744244a46938ea9e4f326026"
+    },
+    {
+      "file": "work/bugmap-main-map-harness/06-figma/captures/main-map-default.png",
+      "sha256": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c"
+    },
+    {
+      "file": "work/bugmap-main-map-harness/05-design-system/tokens.json",
+      "sha256": "1dc4c4ef4a3d94ffe91a66af610a3e56c3712ed860f433cacdaeb776c805d76d"
+    }
+  ],
+  "approvedWireframeId": "ebec90a2-123f-46c4-88c1-b0979cdeccbe",
+  "lucide": {
+    "package": "lucide-react-native",
+    "version": "1.70.0",
+    "icons": [
+      "x",
+      "chevron-right",
+      "locate-fixed",
+      "plus",
+      "info"
+    ]
+  },
+  "files": [
+    {
+      "file": "assets/map-dark.svg",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/map-dark.svg",
+      "sha256": "8c7164ba25d1eb05f9ca5c7f6c2d30a2244ff9543351f295f6a7fab7e199b56e",
+      "bytes": 53679
+    },
+    {
+      "file": "assets/mapbox-logo.svg",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/mapbox-logo.svg",
+      "sha256": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+      "bytes": 3169
+    },
+    {
+      "file": "assets/Pretendard-Medium.woff2",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/Pretendard-Medium.woff2",
+      "sha256": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+      "bytes": 778432
+    },
+    {
+      "file": "assets/Pretendard-Bold.woff2",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/Pretendard-Bold.woff2",
+      "sha256": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+      "bytes": 791156
+    },
+    {
+      "file": "assets/pretendard-OFL.txt",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/pretendard-OFL.txt",
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+      "bytes": 4418
+    },
+    {
+      "file": "assets/lucide-ISC.txt",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/lucide-ISC.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    },
+    {
+      "file": "assets/photos/stag-beetle.png",
+      "source": "work/bugmap-nearby-discoveries-harness/05-design-system/assets/photos/stag-beetle.png",
+      "sha256": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+      "bytes": 132257,
+      "recordId": "record-demo-01",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "Public domain dedication"
+    },
+    {
+      "file": "assets/photos/dragonfly.png",
+      "source": "work/bugmap-nearby-discoveries-harness/05-design-system/assets/photos/dragonfly.png",
+      "sha256": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+      "bytes": 152694,
+      "recordId": "record-demo-02",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "CC0 1.0"
+    },
+    {
+      "file": "assets/photos/ladybird.png",
+      "source": "work/bugmap-nearby-discoveries-harness/05-design-system/assets/photos/ladybird.png",
+      "sha256": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+      "bytes": 124535,
+      "recordId": "record-demo-03",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "CC BY-SA 3.0"
+    }
+  ]
+}

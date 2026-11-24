@@ -1,0 +1,309 @@
+{
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "remoteFileKey": null,
+  "documentName": "BugMapHarness",
+  "pageId": "0:1",
+  "method": "Native Cursor Figma API read-back",
+  "main": "41:81",
+  "actions": [
+    {
+      "from": "41:394",
+      "to": "162:1204",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "162:1204",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "162:1204",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "41:390",
+      "to": "162:1597",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "162:1597",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "162:1597",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "162:1541",
+      "to": "41:81",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "41:81",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "41:81",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "162:1510",
+      "to": "162:1597",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "162:1597",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "162:1597",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "162:1934",
+      "to": "41:81",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "41:81",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "41:81",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    },
+    {
+      "from": "162:1899",
+      "to": "162:1204",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "162:1204",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "162:1204",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ]
+    }
+  ],
+  "geometry": [
+    {
+      "state": "cluster-selected",
+      "rootId": "162:1204",
+      "panel": "162:1539",
+      "header": {
+        "title": "162:1540",
+        "close": "162:1541"
+      },
+      "attribution": "162:1532",
+      "selectedMarker": "162:1506",
+      "scrollViewport": {
+        "id": "162:1549",
+        "layoutMode": "VERTICAL",
+        "height": 342,
+        "clips": true,
+        "overflow": "NONE"
+      },
+      "rows": [
+        {
+          "id": "162:1550",
+          "recordId": "record-demo-01",
+          "y": 0,
+          "height": 104,
+          "visibleAtStart": 104,
+          "photoId": "I162:1550;162:1195",
+          "photoHeight": 80
+        },
+        {
+          "id": "162:1560",
+          "recordId": "record-demo-02",
+          "y": 112,
+          "height": 104,
+          "visibleAtStart": 104,
+          "photoId": "I162:1560;162:1195",
+          "photoHeight": 80
+        },
+        {
+          "id": "162:1570",
+          "recordId": "record-demo-03",
+          "y": 224,
+          "height": 104,
+          "visibleAtStart": 104,
+          "photoId": "I162:1570;162:1195",
+          "photoHeight": 80
+        }
+      ],
+      "maxScrollTop": 0
+    },
+    {
+      "state": "cluster-selected-overflow",
+      "rootId": "162:1597",
+      "panel": "162:1932",
+      "header": {
+        "title": "162:1933",
+        "close": "162:1934"
+      },
+      "attribution": "162:1925",
+      "selectedMarker": "162:1903",
+      "scrollViewport": {
+        "id": "162:1941",
+        "layoutMode": "VERTICAL",
+        "height": 362,
+        "clips": true,
+        "overflow": "VERTICAL"
+      },
+      "rows": [
+        {
+          "id": "162:1942",
+          "recordId": "record-overflow-demo-01",
+          "y": 0,
+          "height": 104,
+          "visibleAtStart": 104,
+          "photoId": "I162:1942;162:1195",
+          "photoHeight": 80
+        },
+        {
+          "id": "162:1952",
+          "recordId": "record-overflow-demo-02",
+          "y": 112,
+          "height": 104,
+          "visibleAtStart": 104,
+          "photoId": "I162:1952;162:1195",
+          "photoHeight": 80
+        },
+        {
+          "id": "162:1962",
+          "recordId": "record-overflow-demo-03",
+          "y": 224,
+          "height": 104,
+          "visibleAtStart": 104,
+          "photoId": "I162:1962;162:1196",
+          "photoHeight": 80
+        },
+        {
+          "id": "162:1972",
+          "recordId": "record-overflow-demo-04",
+          "y": 336,
+          "height": 104,
+          "visibleAtStart": 26,
+          "photoId": "I162:1972;162:1195",
+          "photoHeight": 80
+        },
+        {
+          "id": "162:1982",
+          "recordId": "record-overflow-demo-05",
+          "y": 448,
+          "height": 104,
+          "visibleAtStart": 0,
+          "photoId": "I162:1982;162:1195",
+          "photoHeight": 80
+        },
+        {
+          "id": "162:1992",
+          "recordId": "record-overflow-demo-06",
+          "y": 560,
+          "height": 104,
+          "visibleAtStart": 0,
+          "photoId": "I162:1992;162:1195",
+          "photoHeight": 80
+        },
+        {
+          "id": "162:2002",
+          "recordId": "record-overflow-demo-07",
+          "y": 672,
+          "height": 104,
+          "visibleAtStart": 0,
+          "photoId": "I162:2002;162:1195",
+          "photoHeight": 80
+        }
+      ],
+      "maxScrollTop": 414
+    }
+  ],
+  "scrollResetEvidence": "scroll-reset-verification.json",
+  "originalAttributionReactions": [],
+  "liveGestureTestedInThisExport": false
+}

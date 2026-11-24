@@ -1,0 +1,10 @@
+{
+  "references": [
+    {
+      "id": "mapbox-attribution",
+      "url": "https://docs.mapbox.com/help/dive-deeper/attribution/",
+      "viewport": { "width": 1280, "height": 1000 },
+      "reason": "HOME-07의 로고와 출처 표시를 확인할 Mapbox 공식 문서와 지도 예시"
+    }
+  ]
+}

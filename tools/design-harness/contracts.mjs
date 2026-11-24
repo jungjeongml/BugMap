@@ -29,11 +29,19 @@ export function wireframes(base) {
     seen.add(key.toLowerCase()); viewport(screen);
     if (!Array.isArray(screen.blocks)) throw new Error(`Missing blocks: ${key}`);
     for (const block of screen.blocks) {
+      const clipHeight = block?.clipHeight;
+      if (clipHeight !== undefined && (!Number.isFinite(clipHeight) || clipHeight <= 0 || clipHeight > block.height)) {
+        throw new Error(`Invalid block clipHeight: ${key}`);
+      }
       if (!object(block) || !['text', 'button', 'input', 'image', 'box'].includes(block.type)
         || !['x', 'y', 'width', 'height'].every(k => Number.isFinite(block[k]))
         || block.x < 0 || block.y < 0 || block.width <= 0 || block.height <= 0
-        || block.x + block.width > screen.width || block.y + block.height > screen.height) throw new Error(`Block out of bounds: ${key}`);
+        || block.x + block.width > screen.width || block.y + (clipHeight ?? block.height) > screen.height) throw new Error(`Block out of bounds: ${key}`);
       if (block.type === 'button' && (block.width < 44 || block.height < 44)) throw new Error(`Button smaller than 44px: ${key}`);
+      if (block.topRadius !== undefined && (block.type !== 'box' || !Number.isFinite(block.topRadius)
+        || block.topRadius < 0 || block.topRadius > Math.min(block.width / 2, block.height))) {
+        throw new Error(`Invalid box topRadius: ${key}`);
+      }
       if (block.text !== undefined && typeof block.text !== 'string') throw new Error('Block text must be a string');
     }
   }

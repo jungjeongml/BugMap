@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "design-md",
+  "at": "2026-11-24T10:23:47.360Z",
+  "inputs": {
+    "05-design-system/components.json": "a777d4c8a82d9db9d825f111e0510040f9069addab78d2b462f8bb41d08bb245",
+    "05-design-system/copy.json": "3f92c922911f4f64d6b58d0059ca1d99a04a7acc691c18e1479a35562a75af99",
+    "05-design-system/tokens.json": "aa59358385eff880121c555c257120bea9e3ca82cc04d94a81ad02432999bc36"
+  },
+  "outputs": {
+    "05-design-system/DESIGN.md": "517432176c84c22340fd05c218762ea44984bafb1cbdc78fe8be07fa2ed5bca1"
+  }
+}

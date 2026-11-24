@@ -1,0 +1,5 @@
+id,severity,status,requirement,summary,verification
+P-01,important,resolved,CLUSTER-04,재진입 시 목록의 이전 위치가 남음,Figma 플레이어에서 닫기 후 재진입 및 7→3→7 전환의 시작 픽셀 일치 확인
+APP-01,follow-up,open,CLUSTER-03,실제 기록 상세 및 동일 공개 좌표의 라우팅,제품에서 두 행을 각각 눌러 서로 다른 기록 사진과 메모 확인
+APP-02,follow-up,open,CLUSTER-05,Mapbox SDK 출처 정보의 열기,제품에서 3건과 7건 패널 위 출처 버튼을 각각 눌러 열리는지 확인
+APP-03,follow-up,open,CLUSTER-07,실기기의 시스템 글자 확대와 보조기술 포커스,320×700 Chromium에서 배치를 확인했다. 제품의 시스템 글자 설정과 스크린리더에서 같은 목록을 검증한다.

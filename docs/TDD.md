@@ -93,6 +93,8 @@ flowchart LR
 
 ### 4.2 PostgreSQL 스키마 초안
 
+아래 위치 제약은 기존 초안이다. 구현 전에 [PRD의 관찰 위치 요구사항](./PRD.md#5-기능-요구사항)에 맞춰 위치 없는 기록을 저장할 수 있도록 수정한다.
+
 실제 마이그레이션의 출발점이다. `created_at`은 서버 기록 시각이며 `occurred_at`은 사용자가 입력한 **발견 시각**이다. 좌표 입력은 API에서 경도 `-180..180`, 위도 `-90..90`을 검증한다. 시간 입력은 UTC로 저장하고 화면에서 사용자 시간대로 변환한다.
 
 ```sql
@@ -284,9 +286,9 @@ CREATE INDEX ix_sessions_user_active ON app_sessions (user_id, expires_at)
 | `DELETE /v1/account` | 앱 내 계정 삭제 | 본인 재확인 후 계정 삭제 절차 시작·세션 폐기 |
 | `POST /v1/media/upload-intents` | 업로드 예약 | 파일 형식·크기 → `mediaId`, 서명 URL, 만료 시각 |
 | `POST /v1/media/{id}/complete` | 업로드 확인 | 객체 존재·크기·형식 확인 → `uploaded` |
-| `POST /v1/sightings` | 기록 생성 | `Idempotency-Key`, 사진 ID들, 곤충명, 유형, 발견 시각, 발견 위치 경도·위도, 선택 메모(`description`) → 기록 ID |
+| `POST /v1/sightings` | 기록 생성 | `Idempotency-Key`, 사진 ID들, 곤충명, 유형, 발견 시각, 선택 관찰 위치(경도·위도), 선택 메모(`description`) → 기록 ID |
 | `GET /v1/sightings?bbox=...` | 지도 조회 | 서·남·동·북 경계, 기간, 이름, 유형, 커서 → 공개 좌표·썸네일·발견 시각 요약 |
-| `GET /v1/sightings/{id}` | 기록 상세 | 공개 좌표, 사진, 설명, 작성자, 실제 발견 시각. 본인의 기록 조회에는 정확한 좌표도 포함. |
+| `GET /v1/sightings/{id}` | 기록 상세 | 공개 좌표, 사진, 설명, 작성자, 실제 발견 시각. 본인의 기록 조회에는 지정한 관찰 위치가 있으면 함께 반환. |
 | `PATCH/DELETE /v1/sightings/{id}` | 본인 기록 변경 | 작성자 권한 검사 |
 | `GET/POST /v1/posts` | 자유게시글 | 페이지 조회·작성 |
 | `GET/POST /v1/posts/{id}/comments` | 댓글 | 페이지 조회·작성 |
@@ -319,7 +321,7 @@ LIMIT :page_size;
 ### 지도 표시와 내 주변 반경
 
 - 발견 지도 렌더러는 iOS·Android에서 Expo config plugin을 적용한 `@rnmapbox/maps`, 웹에서 Mapbox GL JS를 사용한다. 카메라·스타일·공개 토큰 환경 변수를 공유하고, SDK의 로고·출처를 하단 조작부 위에 표시한다. 네이티브 연동에는 전용 개발 빌드가 필요하며 실기기 검증은 예정 상태다. [RNMapbox 설치 안내](https://rnmapbox.github.io/docs/install), [Mapbox GL JS 지도 API](https://docs.mapbox.com/mapbox-gl-js/api/map/), [Mapbox 출처 표시 지침](https://docs.mapbox.com/help/dive-deeper/attribution/)
-- 조회한 공개 기록을 GeoJSON Point로 만들고 필터 결과를 클러스터링 소스에 넣는다. 묶음 배지와 개별 마커는 `CircleLayer`·`SymbolLayer` 등 지도 레이어로 그린다. 기록별 React Native 뷰 생성은 피한다. 묶음을 누르면 클러스터 확장 확대값으로 이동하고, 같은 좌표에서 계속 겹치는 경우 해당 기록 목록을 열어 선택할 수 있게 한다. 확대 전환과 클러스터 반경은 밀집 데이터·실기기로 조정한다. [RNMapbox ShapeSource](https://rnmapbox.github.io/docs/components/ShapeSource), [RNMapbox SymbolLayer](https://rnmapbox.github.io/docs/components/SymbolLayer)
+- 조회한 공개 기록을 GeoJSON Point로 만들고 필터 결과를 클러스터링 소스에 넣는다. 묶음 배지와 개별 마커는 `CircleLayer`·`SymbolLayer` 등 지도 레이어로 그린다. 기록별 React Native 뷰 생성은 피한다. 묶음을 누르면 선택한 클러스터의 기록 목록을 하단 패널에 연다. 공개 좌표가 같은 기록도 목록에서 각각 선택할 수 있게 한다. 확대 전환과 클러스터 반경은 밀집 데이터·실기기로 조정한다. [RNMapbox ShapeSource](https://rnmapbox.github.io/docs/components/ShapeSource), [RNMapbox SymbolLayer](https://rnmapbox.github.io/docs/components/SymbolLayer)
 - 내 주변 반경을 적용하면 현재 위치 중심의 GeoJSON 원형 폴리곤을 별도 소스의 채움·윤곽 레이어로 그린다. 반경은 미터 단위 지리 거리로 계산한다. 지도와 ‘내 주변 발견’ 목록에 같은 중심·반경과 공개 좌표를 사용하고, 중심에서 공개 좌표까지의 거리가 반경 이하인 기록을 포함한다. 지도 조회에는 현재 지도 영역 조건도 적용한다. `전체`로 바꾸거나 현재 위치를 확인할 수 없으면 반경 레이어를 숨긴다. [Mapbox GeoJSON 소스 명세](https://docs.mapbox.com/style-spec/reference/sources/#geojson)
 - 개별 마커 탭에서 기록 ID를 읽어 선택 상태를 갱신하고, 지도 위에 React Native 상세 카드 한 장을 표시한다. 전체 기록은 기존 상세 API로 가져온다. 선택한 기록이 필터에서 제외되면 선택 상태를 해제한다.
 
@@ -351,7 +353,7 @@ LIMIT :page_size;
 
 ### 6.3 공개 위치
 
-작성자가 지도에서 지정한 좌표를 `exact_location`에 저장한다. 새 기록의 `location_visibility`는 서버에서 `approximate`로 지정하고, 발견 위치에 해당하는 격자 중심을 `public_location`에 저장하는 안이다. **격자 크기는 제품 결정 전까지 미확정**이다. 이 설계 변경의 적용 범위는 새 기록이다. 정확한 좌표는 작성자 본인에게만 응답하고, 관리자 접근은 별도 권한·감사 정책을 정한다. 타인용 지도 검색·클러스터·응답에는 공개 좌표만 사용한다. 게시용 사진의 EXIF 위치 정보는 공개 전에 제거한다.
+현재 위치를 확인하거나 지도에 직접 핀을 찍어 관찰 위치를 지정한 경우 해당 좌표를 `exact_location`에 저장하고 격자 중심을 `public_location`에 저장하는 안이다. **격자 크기는 미정**이다. 위치 없이 저장한 기록은 소유자 조회에서 확인하고, 공개 위치가 생긴 뒤 지도 검색과 클러스터에 포함한다. 정확한 좌표는 작성자 본인에게만 응답하고, 관리자 접근은 별도 권한·감사 정책을 정한다. 타인용 지도 검색·클러스터·응답에는 공개 좌표만 사용한다. 게시용 사진의 EXIF 위치 정보는 공개 전에 제거한다.
 
 ### 6.4 채팅 저장·동기화
 

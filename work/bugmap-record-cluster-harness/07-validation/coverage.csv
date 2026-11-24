@@ -1,0 +1,8 @@
+requirement,status,evidence,note
+CLUSTER-01,verified,captures/player/01-map.png | captures/player/02-selected-three.png | captures/player/04-selected-seven-start.png,두 원본 마커를 눌러 지도가 함께 보이는 선택 상태에 진입
+CLUSTER-02,verified,../06-figma/nodes.json | captures/player/04-selected-seven-start.png | captures/player/05-selected-seven-middle.png | captures/player/06-selected-seven-end.png,3행 및 7행의 사진과 이름과 발견일을 확인
+CLUSTER-03,verified,../04-wireframes/wireframes.json | ../06-figma/prototype-readback.json | web-scroll.json,같은 공개 좌표의 개별 ID와 44px 이상 조작 영역을 확인하고 HTML에서 마지막 ID를 수신
+CLUSTER-04,verified,player-runtime.json | captures/player/08-switch-to-seven-reset.png | captures/player/10-reopen-seven-reset.png,동일 지도 복귀 및 두 경로의 목록 초기화를 조작과 픽셀로 확인
+CLUSTER-05,verified,figma-lint.json | ../06-figma/prototype-readback.json | captures/player/04-selected-seven-start.png,두 프레임에서 공식 출처 요소가 보이며 SDK의 출처 열기는 앱 검증 항목
+CLUSTER-06,verified,../06-figma/node-map.json | ../06-figma/preservation.json | figma-lint.json,Page 1의 편집 가능한 두 화면과 기존 지도 보존 근거를 확인
+CLUSTER-07,verified,player-runtime.json | web-scroll.json | captures/web-scroll/4-start.png | captures/web-scroll/4-end.png | adaptive-layout.json,26px 노출과 실동작을 확인하고 320×700 HTML의 100%와 200%에서 긴 이름 줄바꿈과 모든 행 접근 및 마지막 기록 탭을 확인

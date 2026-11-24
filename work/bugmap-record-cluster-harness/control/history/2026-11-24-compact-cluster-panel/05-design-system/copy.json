@@ -1,0 +1,38 @@
+{
+  "strings": {
+    "title": "이 주변 관찰 기록 3건",
+    "titleFormat": "이 주변 관찰 기록 {count}건",
+    "close": "주변 관찰 기록 닫기",
+    "attribution": "지도 출처 정보",
+    "gps": "내 위치로 이동",
+    "record": "발견/채집 기록하기",
+    "mapboxLogo": "Mapbox",
+    "north": "성수동",
+    "park": "서울숲",
+    "river": "한강",
+    "currentLocation": "내 위치",
+    "time": "9:41",
+    "markerFormat": "기록 {count}",
+    "markerSeven": "기록 7",
+    "markerThree": "기록 3",
+    "markerFive": "기록 5",
+    "markerSevenAccessible": "기록 7개",
+    "markerThreeAccessible": "기록 3개, 선택됨",
+    "markerFiveAccessible": "기록 5개",
+    "name1": "넓적사슴벌레",
+    "date1": "2026.11.23",
+    "recordAccessible1": "넓적사슴벌레, 2026.11.23 발견, 기록 열기",
+    "name2": "왕잠자리",
+    "date2": "2026.11.19",
+    "recordAccessible2": "왕잠자리, 2026.11.19 발견, 기록 열기",
+    "name3": "이름 모름",
+    "date3": "2026.11.16",
+    "recordAccessible3": "이름 모름, 2026.11.16 발견, 기록 열기"
+  },
+  "forbidden": [
+    "유전자 검사로 확인",
+    "정확도 98%",
+    "무조건 성공",
+    "실시간 동정"
+  ]
+}

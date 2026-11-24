@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
+import { wireframePlan } from '../documents.mjs';
 const cli = fileURLToPath(new URL('../bin/design-harness', import.meta.url));
 function setup(t) {
   const root = mkdtempSync(join(realpathSync(tmpdir()), 'harness-stages-'));
@@ -63,6 +64,47 @@ test('wireframe rejects duplicate screen states and out-of-bounds blocks before 
   assert.equal(existsSync(join(f.base, '04-wireframes/map/default.svg')), false);
   f.put('04-wireframes/wireframes.json', { screens: [{ ...screen, blocks: [] }, { ...screen, blocks: [] }] });
   assert.match(f.run('wireframe').stderr, /Duplicate/);
+});
+
+test('wireframe plans rounded upper panel corners and square bottom corners', t => {
+  const f = setup(t);
+  const panel = { type: 'box', x: 0, y: 592, width: 390, height: 252, topRadius: 32 };
+  const screen = { id: 'map', state: 'selected', title: '지도', width: 390, height: 844, blocks: [panel] };
+  f.put('04-wireframes/wireframes.json', { screens: [screen] });
+  const { outputs } = wireframePlan(f.base);
+  const svg = outputs['04-wireframes/map/selected.svg'];
+  assert.match(svg, /<path d="M 0 624 A 32 32 0 0 1 32 592 H 358 A 32 32 0 0 1 390 624 V 844 H 0 Z"/);
+});
+
+test('wireframe rejects a panel radius larger than its corners can fit', t => {
+  const f = setup(t);
+  const panel = { type: 'box', x: 0, y: 592, width: 390, height: 252, topRadius: 196 };
+  const screen = { id: 'map', state: 'selected', title: '지도', width: 390, height: 844, blocks: [panel] };
+  f.put('04-wireframes/wireframes.json', { screens: [screen] });
+  assert.throws(() => wireframePlan(f.base), /topRadius/);
+});
+
+test('wireframe clips only the visible top of a full sized list row', t => {
+  const f = setup(t);
+  const row = { type: 'button', x: 16, y: 784, width: 358, height: 104, clipHeight: 26 };
+  f.put('04-wireframes/wireframes.json', { screens: [
+    { id: 'map', state: 'selected', title: '지도', width: 390, height: 844, blocks: [row] },
+  ] });
+  const { outputs } = wireframePlan(f.base);
+  const svg = outputs['04-wireframes/map/selected.svg'];
+  assert.match(svg, /<clipPath id="clip-block-0"><rect x="16" y="784" width="358" height="26"\/><\/clipPath>/);
+  assert.match(svg, /clip-path="url\(#clip-block-0\)"><rect x="16" y="784" width="358" height="104" rx="12"/);
+});
+
+test('wireframe rejects clipped areas outside the screen or block', t => {
+  const f = setup(t);
+  const row = { type: 'button', x: 16, y: 784, width: 358, height: 104 };
+  for (const [clipHeight, expected] of [[70, /bounds/], [105, /clipHeight/], [0, /clipHeight/]]) {
+    f.put('04-wireframes/wireframes.json', { screens: [
+      { id: 'map', state: 'selected', title: '지도', width: 390, height: 844, blocks: [{...row, clipHeight}] },
+    ] });
+    assert.throws(() => wireframePlan(f.base), expected);
+  }
 });
 
 test('check rejects stale capture and design evidence instead of accepting existing files', async t => {

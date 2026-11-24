@@ -1,0 +1,875 @@
+{
+  "target": {
+    "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+    "documentName": "BugMapHarness",
+    "pageId": "0:1",
+    "pageName": "Page 1",
+    "fileUrl": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=0-1",
+    "prototypeSource": {
+      "nodeId": "41:81",
+      "name": "07 · 메인 / 발견 지도",
+      "clusterMarkerId": "41:394",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81",
+      "overflowClusterMarkerId": "41:390"
+    },
+    "editPolicy": "기록 묶음 선택 프레임을 두 개 추가한다. 원본 프로토타입 변경은 3건 41:394와 4건 이상 시연 41:390의 진입에 한정한다. 새 프레임에서 닫기를 연결하고 4건 이상 프레임은 목록 스크롤을 설정한다. 기존 출처 인터랙션이 있으면 재사용하고 다른 기존 지도 레이어·프레임·연결을 보존한다.",
+    "preferredBridge": "Cursor Talk to Figma"
+  },
+  "approval": "80fd3cc0-9f6c-40a7-a524-7d9cd5a076c3",
+  "sourceDigests": {
+    "control/figma.json": "752d47072c49dd55a00890da1925c10eb1083059cfd55e9981beb537835b8758",
+    "04-wireframes/wireframes.json": "899b024b7b56c7fc93e1c72d8760d4b464890fce36ed499b4becc0daf6f853a6",
+    "05-design-system/tokens.json": "aa59358385eff880121c555c257120bea9e3ca82cc04d94a81ad02432999bc36",
+    "05-design-system/components.json": "a777d4c8a82d9db9d825f111e0510040f9069addab78d2b462f8bb41d08bb245",
+    "05-design-system/copy.json": "3f92c922911f4f64d6b58d0059ca1d99a04a7acc691c18e1479a35562a75af99",
+    "05-design-system/photo-sources.json": "fc8d1d04611010b0bc00aebcebac345269a2fd609df0ca1f1803d5cb7746d46f",
+    "05-design-system/assets-manifest.json": "117d99797e9eb9c4bb7ac3c42ac37f1566eac374030c7e271b8ffcad262a784e",
+    "05-design-system/asset-sources.md": "73f66a227757bf6825e0209e71b6cb95f82ac920dc9c385dae0d9860f26a7313",
+    "05-design-system/preview.svg": "916601bc1a1b40aa251ac8c233b7b078140644c374119faab20408c58d0d1990",
+    "05-design-system/preview-overflow.svg": "c8faefea110a504d7c6fe33966c084483c7972993e5eec1b83d10d367a2cfc91",
+    "05-design-system/captures/390x844-cluster-selected.png": "4c8d9e079a8481ccaefc9287c9624facbdaa2b0cb5d9067bc05f08cab12e1a55",
+    "05-design-system/captures/390x844-cluster-selected-overflow.png": "f49b61a9f644983906c7881606f608ee49b03064504a57d65fcddda9a8f176b3",
+    "05-design-system/assets/photos/stag-beetle.png": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+    "05-design-system/assets/photos/ladybird.png": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+    "05-design-system/assets/photos/dragonfly.png": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+    "05-design-system/assets/photos/specimen-1.png": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+    "05-design-system/assets/photos/white.png": "72b89e50bd31e29c8d3768ef024dbbb5b58a1a4307eac02cae5c4cd750070540",
+    "05-design-system/assets/photos/yellow.png": "0781243852c082f4b21851debe15284a69d2d9b80531962a4501ebaf9e077f71",
+    "05-design-system/assets/photos/swallowtail.png": "1e1c6a0295a5c4ce85071f24b34769cabef8d9936865fe11e417e762af37e840"
+  },
+  "colors": {
+    "background": "#101C16",
+    "text": "#F3F7EE",
+    "textSecondary": "#BDCDC2",
+    "primary": "#C5EE79",
+    "onPrimary": "#202E13",
+    "observationMarkerSurface": "#18271F",
+    "observationMarkerBorder": "#52694A",
+    "location": "#82D0F0",
+    "locationHalo": "#82D0F02B",
+    "mapPanel": "#131E18",
+    "mapPanelBorder": "#3B4D42",
+    "systemInk": "#F3F7EE",
+    "systemHome": "#BDCDC2",
+    "mapLabel": "#E0EBDF",
+    "mapWaterLabel": "#A7BBAD",
+    "mapLabelOutline": "#101C16",
+    "mapLand": "#18241F",
+    "mapBlock1": "#1A2821",
+    "mapBlock2": "#1D2D26",
+    "mapBlock3": "#202F27",
+    "mapBlock4": "#22322A",
+    "mapBlock5": "#24352D",
+    "mapBlock6": "#20332C",
+    "mapBlock7": "#25372F",
+    "mapPark": "#294432",
+    "mapParkContour": "#395840",
+    "mapSeam": "#304138",
+    "mapMinorRoad": "#384A41",
+    "mapMajorRoadCasing": "#263730",
+    "mapMajorRoad": "#53665A",
+    "mapWaterBank": "#2A4945",
+    "mapWater": "#20393C",
+    "mapTrail": "#46624D",
+    "recordRow": "#192B20",
+    "controlFill": "#26342D",
+    "focusRing": "#82D0F0",
+    "pressedSurface": "#384A41"
+  },
+  "typography": {
+    "location": {
+      "fontFamily": "Pretendard",
+      "fontSize": 12,
+      "fontWeight": 700,
+      "lineHeight": 16
+    },
+    "mapLabel": {
+      "fontFamily": "Pretendard",
+      "fontSize": 12,
+      "fontWeight": 700,
+      "lineHeight": 16
+    },
+    "parkLabel": {
+      "fontFamily": "Pretendard",
+      "fontSize": 15,
+      "fontWeight": 700,
+      "lineHeight": 20
+    },
+    "riverLabel": {
+      "fontFamily": "Pretendard",
+      "fontSize": 13,
+      "fontWeight": 500,
+      "lineHeight": 18
+    },
+    "cluster": {
+      "fontFamily": "Pretendard",
+      "fontSize": 13,
+      "fontWeight": 700,
+      "lineHeight": 18
+    },
+    "systemTime": {
+      "fontFamily": "Pretendard",
+      "fontSize": 15,
+      "fontWeight": 700,
+      "lineHeight": 20
+    },
+    "panelTitle": {
+      "fontFamily": "Pretendard",
+      "fontSize": 24,
+      "fontWeight": 700,
+      "lineHeight": 32
+    },
+    "recordName": {
+      "fontFamily": "Pretendard",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "lineHeight": 24
+    },
+    "recordDate": {
+      "fontFamily": "Pretendard",
+      "fontSize": 14,
+      "fontWeight": 500,
+      "lineHeight": 20
+    }
+  },
+  "layout": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "safeArea": {
+      "top": 54,
+      "bottom": 34
+    },
+    "minimumTouchTarget": 44,
+    "sourceCamera": {
+      "figmaNode": "41:81",
+      "sourceMarkerNode": "41:394",
+      "markerCenter": {
+        "x": 300,
+        "y": 333
+      }
+    },
+    "row": {
+      "minimumHeight": 104,
+      "gap": 8,
+      "inset": 12,
+      "radius": 16,
+      "photoSize": 80,
+      "photoRadius": 12,
+      "textGap": 12,
+      "iconSize": 20
+    },
+    "cluster": {
+      "visibleHeight": 32,
+      "radius": 16,
+      "selectedOutline": {
+        "radius": 24,
+        "strokeWidth": 2
+      }
+    },
+    "home": {
+      "x": 128,
+      "y": 830,
+      "width": 134,
+      "height": 4
+    },
+    "states": {
+      "cluster-selected": {
+        "panel": {
+          "x": 0,
+          "y": 396,
+          "width": 390,
+          "height": 448,
+          "topRadius": 32,
+          "bottomRadius": 0
+        },
+        "title": {
+          "x": 16,
+          "y": 409,
+          "width": 292,
+          "height": 38
+        },
+        "close": {
+          "x": 326,
+          "y": 408,
+          "width": 48,
+          "height": 48,
+          "visibleSize": 38,
+          "iconSize": 22
+        },
+        "listViewport": {
+          "x": 16,
+          "y": 468,
+          "width": 358,
+          "height": 342,
+          "clip": true
+        },
+        "selectedOutline": {
+          "x": 264,
+          "y": 307,
+          "width": 72,
+          "height": 52
+        },
+        "logo": {
+          "x": 12,
+          "y": 362,
+          "width": 88,
+          "height": 23
+        },
+        "attribution": {
+          "x": 338,
+          "y": 344,
+          "width": 44,
+          "height": 44
+        },
+        "selectedMarker": "record-cluster-three",
+        "headerOutsideScroll": [
+          "cluster-panel-title",
+          "cluster-panel-close"
+        ]
+      },
+      "cluster-selected-overflow": {
+        "panel": {
+          "x": 0,
+          "y": 376,
+          "width": 390,
+          "height": 468,
+          "topRadius": 32,
+          "bottomRadius": 0
+        },
+        "title": {
+          "x": 16,
+          "y": 389,
+          "width": 292,
+          "height": 38
+        },
+        "close": {
+          "x": 326,
+          "y": 388,
+          "width": 48,
+          "height": 48,
+          "visibleSize": 38,
+          "iconSize": 22
+        },
+        "listViewport": {
+          "x": 16,
+          "y": 448,
+          "width": 358,
+          "height": 362,
+          "clip": true
+        },
+        "selectedOutline": {
+          "x": 54,
+          "y": 163,
+          "width": 72,
+          "height": 52
+        },
+        "logo": {
+          "x": 12,
+          "y": 342,
+          "width": 88,
+          "height": 23
+        },
+        "attribution": {
+          "x": 338,
+          "y": 320,
+          "width": 44,
+          "height": 44
+        },
+        "selectedMarker": "record-cluster-seven",
+        "headerOutsideScroll": [
+          "cluster-panel-title",
+          "cluster-panel-close"
+        ],
+        "initialVisible": {
+          "fullRecordIds": [
+            "record-overflow-demo-01",
+            "record-overflow-demo-02",
+            "record-overflow-demo-03"
+          ],
+          "partialRecordId": "record-overflow-demo-04",
+          "partialHeight": 26,
+          "partialRatio": 0.25,
+          "partialNameVisible": false,
+          "partialDateVisible": false,
+          "partialThumbnailHeight": 14
+        },
+        "scrollEnd": {
+          "maxScrollTop": 414,
+          "lastRecordId": "record-overflow-demo-07",
+          "lastRowTop": 706,
+          "lastRowBottom": 810,
+          "bottomSafeAreaTop": 810
+        },
+        "exactFourHtmlValidation": {
+          "recordIds": [
+            "record-overflow-demo-01",
+            "record-overflow-demo-02",
+            "record-overflow-demo-03",
+            "record-overflow-demo-04"
+          ],
+          "reuseViewportAndDimensions": true,
+          "maxScrollTop": 78,
+          "endRowBounds": {
+            "x": 16,
+            "y": 706,
+            "width": 358,
+            "height": 104
+          },
+          "expectedClickId": "record-overflow-demo-04",
+          "capturePositions": [
+            "start",
+            "end"
+          ]
+        }
+      }
+    }
+  },
+  "strings": {
+    "titleThree": "이 주변 관찰 기록 3건",
+    "titleSeven": "이 주변 관찰 기록 7건",
+    "titleFormat": "이 주변 관찰 기록 {count}건",
+    "close": "주변 관찰 기록 닫기",
+    "attribution": "지도 출처 정보",
+    "mapboxLogo": "Mapbox",
+    "north": "성수동",
+    "park": "서울숲",
+    "river": "한강",
+    "currentLocation": "내 위치",
+    "time": "9:41",
+    "markerFormat": "기록 {count}",
+    "markerSeven": "기록 7",
+    "markerThree": "기록 3",
+    "unknownName": "이름 모름",
+    "record-demo-01-name": "넓적사슴벌레",
+    "record-demo-01-date": "2026.11.23",
+    "record-demo-01-accessible": "넓적사슴벌레, 2026.11.23 발견, 기록 열기",
+    "record-demo-02-name": "왕잠자리",
+    "record-demo-02-date": "2026.11.19",
+    "record-demo-02-accessible": "왕잠자리, 2026.11.19 발견, 기록 열기",
+    "record-demo-03-name": "이름 모름",
+    "record-demo-03-date": "2026.11.16",
+    "record-demo-03-accessible": "이름 모름, 2026.11.16 발견, 기록 열기",
+    "record-overflow-demo-01-name": "칠성무당벌레",
+    "record-overflow-demo-01-date": "2026.11.23",
+    "record-overflow-demo-01-accessible": "칠성무당벌레, 2026.11.23 발견, 기록 열기",
+    "record-overflow-demo-02-name": "배추흰나비",
+    "record-overflow-demo-02-date": "2026.11.22",
+    "record-overflow-demo-02-accessible": "배추흰나비, 2026.11.22 발견, 기록 열기",
+    "record-overflow-demo-03-name": "이름 모름",
+    "record-overflow-demo-03-date": "2026.11.21",
+    "record-overflow-demo-03-accessible": "이름 모름, 2026.11.21 발견, 기록 열기",
+    "record-overflow-demo-04-name": "노랑나비",
+    "record-overflow-demo-04-date": "2026.11.20",
+    "record-overflow-demo-04-accessible": "노랑나비, 2026.11.20 발견, 기록 열기",
+    "record-overflow-demo-05-name": "왕잠자리",
+    "record-overflow-demo-05-date": "2026.11.18",
+    "record-overflow-demo-05-accessible": "왕잠자리, 2026.11.18 발견, 기록 열기",
+    "record-overflow-demo-06-name": "넓적사슴벌레",
+    "record-overflow-demo-06-date": "2026.11.17",
+    "record-overflow-demo-06-accessible": "넓적사슴벌레, 2026.11.17 발견, 기록 열기",
+    "record-overflow-demo-07-name": "호랑나비",
+    "record-overflow-demo-07-date": "2026.11.15",
+    "record-overflow-demo-07-accessible": "호랑나비, 2026.11.15 발견, 기록 열기"
+  },
+  "states": [
+    {
+      "state": "cluster-selected",
+      "frameName": "07 · 메인 / 주변 관찰 기록 3건",
+      "layout": {
+        "panel": {
+          "x": 0,
+          "y": 396,
+          "width": 390,
+          "height": 448,
+          "topRadius": 32,
+          "bottomRadius": 0
+        },
+        "title": {
+          "x": 16,
+          "y": 409,
+          "width": 292,
+          "height": 38
+        },
+        "close": {
+          "x": 326,
+          "y": 408,
+          "width": 48,
+          "height": 48,
+          "visibleSize": 38,
+          "iconSize": 22
+        },
+        "listViewport": {
+          "x": 16,
+          "y": 468,
+          "width": 358,
+          "height": 342,
+          "clip": true
+        },
+        "selectedOutline": {
+          "x": 264,
+          "y": 307,
+          "width": 72,
+          "height": 52
+        },
+        "logo": {
+          "x": 12,
+          "y": 362,
+          "width": 88,
+          "height": 23
+        },
+        "attribution": {
+          "x": 338,
+          "y": 344,
+          "width": 44,
+          "height": 44
+        },
+        "selectedMarker": "record-cluster-three",
+        "headerOutsideScroll": [
+          "cluster-panel-title",
+          "cluster-panel-close"
+        ]
+      },
+      "countTitle": "이 주변 관찰 기록 3건",
+      "records": [
+        {
+          "order": 1,
+          "recordId": "record-demo-01",
+          "detailRecordId": "record-demo-01",
+          "name": "넓적사슴벌레",
+          "publicCoordinateGroup": "demo-public-location-a",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 468,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 480,
+            "width": 80,
+            "height": 80
+          },
+          "accessibleName": "넓적사슴벌레, 2026.11.23 발견, 기록 열기",
+          "discoveryDate": "2026.11.23",
+          "photoId": "stag-beetle",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 2,
+          "recordId": "record-demo-02",
+          "detailRecordId": "record-demo-02",
+          "name": "왕잠자리",
+          "publicCoordinateGroup": "demo-public-location-a",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 580,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 592,
+            "width": 80,
+            "height": 80
+          },
+          "accessibleName": "왕잠자리, 2026.11.19 발견, 기록 열기",
+          "discoveryDate": "2026.11.19",
+          "photoId": "dragonfly",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 3,
+          "recordId": "record-demo-03",
+          "detailRecordId": "record-demo-03",
+          "name": "이름 모름",
+          "publicCoordinateGroup": "demo-public-location-b",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 692,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 704,
+            "width": 80,
+            "height": 80
+          },
+          "accessibleName": "이름 모름, 2026.11.16 발견, 기록 열기",
+          "discoveryDate": "2026.11.16",
+          "photoId": "ladybird",
+          "prototype": "spec-only"
+        }
+      ]
+    },
+    {
+      "state": "cluster-selected-overflow",
+      "frameName": "07 · 메인 / 주변 관찰 기록 7건",
+      "layout": {
+        "panel": {
+          "x": 0,
+          "y": 376,
+          "width": 390,
+          "height": 468,
+          "topRadius": 32,
+          "bottomRadius": 0
+        },
+        "title": {
+          "x": 16,
+          "y": 389,
+          "width": 292,
+          "height": 38
+        },
+        "close": {
+          "x": 326,
+          "y": 388,
+          "width": 48,
+          "height": 48,
+          "visibleSize": 38,
+          "iconSize": 22
+        },
+        "listViewport": {
+          "x": 16,
+          "y": 448,
+          "width": 358,
+          "height": 362,
+          "clip": true
+        },
+        "selectedOutline": {
+          "x": 54,
+          "y": 163,
+          "width": 72,
+          "height": 52
+        },
+        "logo": {
+          "x": 12,
+          "y": 342,
+          "width": 88,
+          "height": 23
+        },
+        "attribution": {
+          "x": 338,
+          "y": 320,
+          "width": 44,
+          "height": 44
+        },
+        "selectedMarker": "record-cluster-seven",
+        "headerOutsideScroll": [
+          "cluster-panel-title",
+          "cluster-panel-close"
+        ],
+        "initialVisible": {
+          "fullRecordIds": [
+            "record-overflow-demo-01",
+            "record-overflow-demo-02",
+            "record-overflow-demo-03"
+          ],
+          "partialRecordId": "record-overflow-demo-04",
+          "partialHeight": 26,
+          "partialRatio": 0.25,
+          "partialNameVisible": false,
+          "partialDateVisible": false,
+          "partialThumbnailHeight": 14
+        },
+        "scrollEnd": {
+          "maxScrollTop": 414,
+          "lastRecordId": "record-overflow-demo-07",
+          "lastRowTop": 706,
+          "lastRowBottom": 810,
+          "bottomSafeAreaTop": 810
+        },
+        "exactFourHtmlValidation": {
+          "recordIds": [
+            "record-overflow-demo-01",
+            "record-overflow-demo-02",
+            "record-overflow-demo-03",
+            "record-overflow-demo-04"
+          ],
+          "reuseViewportAndDimensions": true,
+          "maxScrollTop": 78,
+          "endRowBounds": {
+            "x": 16,
+            "y": 706,
+            "width": 358,
+            "height": 104
+          },
+          "expectedClickId": "record-overflow-demo-04",
+          "capturePositions": [
+            "start",
+            "end"
+          ]
+        }
+      },
+      "countTitle": "이 주변 관찰 기록 7건",
+      "records": [
+        {
+          "order": 1,
+          "recordId": "record-overflow-demo-01",
+          "detailRecordId": "record-overflow-demo-01",
+          "name": "칠성무당벌레",
+          "publicCoordinateGroup": "overflow-location-a",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 448,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 460,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.23",
+          "photoId": "ladybird",
+          "accessibleName": "칠성무당벌레, 2026.11.23 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 2,
+          "recordId": "record-overflow-demo-02",
+          "detailRecordId": "record-overflow-demo-02",
+          "name": "배추흰나비",
+          "publicCoordinateGroup": "overflow-location-a",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 560,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 572,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.22",
+          "photoId": "white",
+          "accessibleName": "배추흰나비, 2026.11.22 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 3,
+          "recordId": "record-overflow-demo-03",
+          "detailRecordId": "record-overflow-demo-03",
+          "name": "이름 모름",
+          "publicCoordinateGroup": "overflow-location-b",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 672,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 684,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.21",
+          "photoId": "specimen-1",
+          "accessibleName": "이름 모름, 2026.11.21 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 4,
+          "recordId": "record-overflow-demo-04",
+          "detailRecordId": "record-overflow-demo-04",
+          "name": "노랑나비",
+          "publicCoordinateGroup": "overflow-location-c",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 784,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 796,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.20",
+          "photoId": "yellow",
+          "accessibleName": "노랑나비, 2026.11.20 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 5,
+          "recordId": "record-overflow-demo-05",
+          "detailRecordId": "record-overflow-demo-05",
+          "name": "왕잠자리",
+          "publicCoordinateGroup": "overflow-location-d",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 896,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 908,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.18",
+          "photoId": "dragonfly",
+          "accessibleName": "왕잠자리, 2026.11.18 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 6,
+          "recordId": "record-overflow-demo-06",
+          "detailRecordId": "record-overflow-demo-06",
+          "name": "넓적사슴벌레",
+          "publicCoordinateGroup": "overflow-location-e",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 1008,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 1020,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.17",
+          "photoId": "stag-beetle",
+          "accessibleName": "넓적사슴벌레, 2026.11.17 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 7,
+          "recordId": "record-overflow-demo-07",
+          "detailRecordId": "record-overflow-demo-07",
+          "name": "호랑나비",
+          "publicCoordinateGroup": "overflow-location-f",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 1120,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 1132,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.15",
+          "photoId": "swallowtail",
+          "accessibleName": "호랑나비, 2026.11.15 발견, 기록 열기",
+          "prototype": "spec-only"
+        }
+      ]
+    }
+  ],
+  "icons": {
+    "x": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#F3F7EE\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg>",
+    "chevron-right": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#BDCDC2\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"m9 18 6-6-6-6\"/></svg>"
+  },
+  "assets": {
+    "stag-beetle": {
+      "path": "assets/photos/stag-beetle.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "sha256": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+      "artist": "Bugman95",
+      "source": "https://commons.wikimedia.org/wiki/File:Dorcus_titanus_castanicolor.JPG",
+      "license": "Public domain dedication"
+    },
+    "ladybird": {
+      "path": "assets/photos/ladybird.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "sha256": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+      "artist": "Charles J. Sharp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ladybird_coccinella_septempunctata.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    "dragonfly": {
+      "path": "assets/photos/dragonfly.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "sha256": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+      "artist": "TekuraDF",
+      "source": "https://commons.wikimedia.org/wiki/File:Anax_parthenope_julius%28Couple%2CJapan%2C17.08.23%29.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "specimen-1": {
+      "path": "assets/photos/specimen-1.png",
+      "dimensions": {
+        "width": 342,
+        "height": 270
+      },
+      "sha256": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+      "artist": "keusju",
+      "source": "https://commons.wikimedia.org/wiki/File:Dorcushopeibinodulosus.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    "white": {
+      "path": "assets/photos/white.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "sha256": "72b89e50bd31e29c8d3768ef024dbbb5b58a1a4307eac02cae5c4cd750070540",
+      "artist": "Gimnazijalacbp",
+      "source": "https://commons.wikimedia.org/wiki/File:P.rapae.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "yellow": {
+      "path": "assets/photos/yellow.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "sha256": "0781243852c082f4b21851debe15284a69d2d9b80531962a4501ebaf9e077f71",
+      "artist": "Peellden",
+      "source": "https://commons.wikimedia.org/wiki/File:Colias_erate_formosana_male_20151003.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "swallowtail": {
+      "path": "assets/photos/swallowtail.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "sha256": "1e1c6a0295a5c4ce85071f24b34769cabef8d9936865fe11e417e762af37e840",
+      "artist": "heikindai_87",
+      "source": "https://commons.wikimedia.org/wiki/File:Papilio_xuthus_116552535.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  },
+  "mapBaselineSha": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c",
+  "sourceLayerIds": [
+    "41:798",
+    "41:376",
+    "41:379",
+    "41:380",
+    "41:402"
+  ],
+  "systemLayerIds": [
+    "41:489",
+    "41:835"
+  ],
+  "attributionId": "41:427",
+  "logoId": "41:819",
+  "digest": "70338b73a17699e0e95227de48e94f18d874ebce5040c50973efdce9648d0817"
+}

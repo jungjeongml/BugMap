@@ -1,0 +1,520 @@
+{
+  "sourceCheckedOn": "2026-11-24",
+  "photos": [
+    {
+      "id": "stag-beetle",
+      "name": "넓적사슴벌레",
+      "scientificName": "Dorcus titanus castanicolor",
+      "title": "Dorcus titanus castanicolor.JPG",
+      "author": "Bugman95",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dorcus_titanus_castanicolor.JPG",
+      "license": "Public domain dedication",
+      "checkedOn": "2026-11-20",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Dorcus_titanus_castanicolor.JPG",
+        "dimensions": {
+          "width": 576,
+          "height": 768
+        },
+        "bytes": 85801,
+        "sha256": "97a32ad600ed960e5b2b5c2369918e6ab8126fb130a6314e37dadb370282bc27"
+      },
+      "treatment": {
+        "crop": {
+          "x": 0,
+          "y": 106,
+          "width": 576,
+          "height": 576
+        },
+        "resizing": "264 × 264 px PNG, sips"
+      },
+      "preview": {
+        "path": "assets/photos/stag-beetle.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 132257,
+        "sha256": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+        "license": "Public domain dedication"
+      }
+    },
+    {
+      "id": "ladybird",
+      "name": "칠성무당벌레",
+      "scientificName": "Coccinella septempunctata",
+      "title": "Ladybird coccinella septempunctata.jpg",
+      "author": "Charles J. Sharp",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ladybird_coccinella_septempunctata.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "checkedOn": "2026-11-20",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Ladybird_coccinella_septempunctata.jpg",
+        "dimensions": {
+          "width": 1415,
+          "height": 943
+        },
+        "bytes": 304083,
+        "sha256": "575240d637500035323271c2ccb55375e652a1534d96a9820961deef14bca297"
+      },
+      "treatment": {
+        "crop": {
+          "x": 490,
+          "y": 25,
+          "width": 900,
+          "height": 900
+        },
+        "resizing": "264 × 264 px PNG, sips"
+      },
+      "preview": {
+        "path": "assets/photos/ladybird.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 124535,
+        "sha256": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "dragonfly",
+      "name": "왕잠자리",
+      "scientificName": "Anax parthenope julius",
+      "title": "Anax parthenope julius(Couple,Japan,17.08.23).jpg",
+      "author": "TekuraDF",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anax_parthenope_julius%28Couple%2CJapan%2C17.08.23%29.jpg",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "checkedOn": "2026-11-20",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Anax_parthenope_julius%28Couple%2CJapan%2C17.08.23%29.jpg",
+        "dimensions": {
+          "width": 2400,
+          "height": 1800
+        },
+        "bytes": 2026903,
+        "sha256": "1c8380dd598b4c968bd85c520c0bc5343212f33e0d315091e3ced5cf18427b49"
+      },
+      "treatment": {
+        "crop": {
+          "x": 300,
+          "y": 0,
+          "width": 1800,
+          "height": 1800
+        },
+        "resizing": "264 × 264 px PNG, sips"
+      },
+      "preview": {
+        "path": "assets/photos/dragonfly.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 152694,
+        "sha256": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+        "license": "CC0 1.0"
+      }
+    },
+    {
+      "id": "specimen-1",
+      "title": "Dorcushopeibinodulosus.JPG",
+      "author": "keusju",
+      "description": "전체 모습",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dorcushopeibinodulosus.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "checkedOn": "2026-11-20",
+      "sampleSpecies": "왕사슴벌레 (Dorcus hopei)",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Dorcushopeibinodulosus.JPG",
+        "dimensions": {
+          "width": 2816,
+          "height": 2112
+        },
+        "bytes": 2982777,
+        "sha256": "458f2b7b9d9012fe73ce8222d025235652d52c2afeffdab701534fca51edd2c2"
+      },
+      "treatment": {
+        "crop": {
+          "x": 116,
+          "y": 36,
+          "width": 2584,
+          "height": 2040
+        },
+        "output": "342 × 270 px PNG",
+        "metadata": "EXIF 및 텍스트 청크 제거"
+      },
+      "preview": {
+        "path": "assets/photos/specimen-1.png",
+        "dimensions": {
+          "width": 342,
+          "height": 270
+        },
+        "bytes": 195180,
+        "sha256": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+        "license": "CC BY-SA 3.0"
+      }
+    },
+    {
+      "id": "white",
+      "title": "P.rapae.jpg",
+      "author": "Gimnazijalacbp",
+      "sampleSpecies": "배추흰나비 (Pieris rapae)",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "checkedOn": "2026-11-24",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:P.rapae.jpg",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/P.rapae.jpg",
+        "dimensions": {
+          "width": 3663,
+          "height": 2835
+        },
+        "bytes": 3214838,
+        "sha256": "e37ed363627fcbee38b683d016caba876b31928bcbdcbff21bca6c8542dd0f9f"
+      },
+      "treatment": {
+        "crop": {
+          "x": 414,
+          "y": 0,
+          "width": 2835,
+          "height": 2835
+        },
+        "output": "264 × 264 px PNG",
+        "metadata": "원본 EXIF와 텍스트 제외"
+      },
+      "preview": {
+        "path": "assets/photos/white.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 131655,
+        "sha256": "72b89e50bd31e29c8d3768ef024dbbb5b58a1a4307eac02cae5c4cd750070540",
+        "license": "CC0 1.0"
+      }
+    },
+    {
+      "id": "yellow",
+      "title": "Colias erate formosana male 20151003.jpg",
+      "author": "Peellden",
+      "sampleSpecies": "노랑나비 (Colias erate formosana)",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "checkedOn": "2026-11-24",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colias_erate_formosana_male_20151003.jpg",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Colias_erate_formosana_male_20151003.jpg",
+        "dimensions": {
+          "width": 4880,
+          "height": 3254
+        },
+        "bytes": 3212348,
+        "sha256": "5c9300902d7a0da524cdf239d404fb4433df95dd17d71c1cae25dd4bb54b2480"
+      },
+      "treatment": {
+        "crop": {
+          "x": 813,
+          "y": 0,
+          "width": 3254,
+          "height": 3254
+        },
+        "output": "264 × 264 px PNG",
+        "metadata": "원본 EXIF와 텍스트 제외"
+      },
+      "preview": {
+        "path": "assets/photos/yellow.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 126057,
+        "sha256": "0781243852c082f4b21851debe15284a69d2d9b80531962a4501ebaf9e077f71",
+        "license": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "id": "swallowtail",
+      "title": "Papilio xuthus 116552535.jpg",
+      "author": "heikindai_87",
+      "sampleSpecies": "호랑나비 (Papilio xuthus)",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "checkedOn": "2026-11-24",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Papilio_xuthus_116552535.jpg",
+      "original": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Papilio_xuthus_116552535.jpg",
+        "dimensions": {
+          "width": 2048,
+          "height": 1536
+        },
+        "bytes": 1262860,
+        "sha256": "36f07a4b1f790a42f3c7e3354cb2644b2625a3b8b5437fd94d6470569a402042"
+      },
+      "treatment": {
+        "crop": {
+          "x": 256,
+          "y": 0,
+          "width": 1536,
+          "height": 1536
+        },
+        "output": "264 × 264 px PNG",
+        "metadata": "원본 EXIF와 텍스트 제외"
+      },
+      "preview": {
+        "path": "assets/photos/swallowtail.png",
+        "dimensions": {
+          "width": 264,
+          "height": 264
+        },
+        "bytes": 99394,
+        "sha256": "1e1c6a0295a5c4ce85071f24b34769cabef8d9936865fe11e417e762af37e840",
+        "license": "CC0 1.0"
+      }
+    }
+  ],
+  "usage": [
+    {
+      "state": "cluster-selected",
+      "records": [
+        {
+          "order": 1,
+          "recordId": "record-demo-01",
+          "detailRecordId": "record-demo-01",
+          "name": "넓적사슴벌레",
+          "publicCoordinateGroup": "demo-public-location-a",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 468,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 480,
+            "width": 80,
+            "height": 80
+          },
+          "accessibleName": "넓적사슴벌레, 2026.11.23 발견, 기록 열기",
+          "discoveryDate": "2026.11.23",
+          "photoId": "stag-beetle",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 2,
+          "recordId": "record-demo-02",
+          "detailRecordId": "record-demo-02",
+          "name": "왕잠자리",
+          "publicCoordinateGroup": "demo-public-location-a",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 580,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 592,
+            "width": 80,
+            "height": 80
+          },
+          "accessibleName": "왕잠자리, 2026.11.19 발견, 기록 열기",
+          "discoveryDate": "2026.11.19",
+          "photoId": "dragonfly",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 3,
+          "recordId": "record-demo-03",
+          "detailRecordId": "record-demo-03",
+          "name": "이름 모름",
+          "publicCoordinateGroup": "demo-public-location-b",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 692,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 704,
+            "width": 80,
+            "height": 80
+          },
+          "accessibleName": "이름 모름, 2026.11.16 발견, 기록 열기",
+          "discoveryDate": "2026.11.16",
+          "photoId": "ladybird",
+          "prototype": "spec-only"
+        }
+      ]
+    },
+    {
+      "state": "cluster-selected-overflow",
+      "records": [
+        {
+          "order": 1,
+          "recordId": "record-overflow-demo-01",
+          "detailRecordId": "record-overflow-demo-01",
+          "name": "칠성무당벌레",
+          "publicCoordinateGroup": "overflow-location-a",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 448,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 460,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.23",
+          "photoId": "ladybird",
+          "accessibleName": "칠성무당벌레, 2026.11.23 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 2,
+          "recordId": "record-overflow-demo-02",
+          "detailRecordId": "record-overflow-demo-02",
+          "name": "배추흰나비",
+          "publicCoordinateGroup": "overflow-location-a",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 560,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 572,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.22",
+          "photoId": "white",
+          "accessibleName": "배추흰나비, 2026.11.22 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 3,
+          "recordId": "record-overflow-demo-03",
+          "detailRecordId": "record-overflow-demo-03",
+          "name": "이름 모름",
+          "publicCoordinateGroup": "overflow-location-b",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 672,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 684,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.21",
+          "photoId": "specimen-1",
+          "accessibleName": "이름 모름, 2026.11.21 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 4,
+          "recordId": "record-overflow-demo-04",
+          "detailRecordId": "record-overflow-demo-04",
+          "name": "노랑나비",
+          "publicCoordinateGroup": "overflow-location-c",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 784,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 796,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.20",
+          "photoId": "yellow",
+          "accessibleName": "노랑나비, 2026.11.20 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 5,
+          "recordId": "record-overflow-demo-05",
+          "detailRecordId": "record-overflow-demo-05",
+          "name": "왕잠자리",
+          "publicCoordinateGroup": "overflow-location-d",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 896,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 908,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.18",
+          "photoId": "dragonfly",
+          "accessibleName": "왕잠자리, 2026.11.18 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 6,
+          "recordId": "record-overflow-demo-06",
+          "detailRecordId": "record-overflow-demo-06",
+          "name": "넓적사슴벌레",
+          "publicCoordinateGroup": "overflow-location-e",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 1008,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 1020,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.17",
+          "photoId": "stag-beetle",
+          "accessibleName": "넓적사슴벌레, 2026.11.17 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "order": 7,
+          "recordId": "record-overflow-demo-07",
+          "detailRecordId": "record-overflow-demo-07",
+          "name": "호랑나비",
+          "publicCoordinateGroup": "overflow-location-f",
+          "rowBoundsAtStart": {
+            "x": 16,
+            "y": 1120,
+            "width": 358,
+            "height": 104
+          },
+          "thumbnailBoundsAtStart": {
+            "x": 28,
+            "y": 1132,
+            "width": 80,
+            "height": 80
+          },
+          "discoveryDate": "2026.11.15",
+          "photoId": "swallowtail",
+          "accessibleName": "호랑나비, 2026.11.15 발견, 기록 열기",
+          "prototype": "spec-only"
+        }
+      ]
+    }
+  ]
+}

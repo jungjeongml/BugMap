@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="screen-title">
+<title id="screen-title">메인 / 발견 지도 · 기록 3 선택</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g id="block-0" data-type="image"><rect x="0" y="0" width="390" height="844" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-1" data-type="text"><text x="24" y="35" font-family="sans-serif" font-size="14" fill="#222222">9:41</text></g>
+<g id="block-2" data-type="text"><text x="260" y="128" font-family="sans-serif" font-size="14" fill="#222222">성수동</text></g>
+<g id="block-3" data-type="text"><text x="123" y="249" font-family="sans-serif" font-size="14" fill="#222222">서울숲</text></g>
+<g id="block-4" data-type="text"><text x="168" y="505" font-family="sans-serif" font-size="14" fill="#222222">한강</text></g>
+<g id="block-5" data-type="button"><rect x="58" y="167" width="64" height="44" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-6" data-type="text"><text x="76" y="192" font-family="sans-serif" font-size="14" fill="#222222">기록 7</text></g>
+<g id="block-7" data-type="box"><rect x="264" y="307" width="72" height="52" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-8" data-type="button"><rect x="268" y="311" width="64" height="44" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-9" data-type="text"><text x="286" y="336" font-family="sans-serif" font-size="14" fill="#222222">기록 3</text></g>
+<g id="block-10" data-type="button"><rect x="58" y="411" width="64" height="44" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-11" data-type="text"><text x="76" y="436" font-family="sans-serif" font-size="14" fill="#222222">기록 5</text></g>
+<g id="block-12" data-type="text"><text x="174" y="310" font-family="sans-serif" font-size="14" fill="#222222">●</text></g>
+<g id="block-13" data-type="text"><text x="201" y="310" font-family="sans-serif" font-size="14" fill="#222222">내 위치</text></g>
+<g id="block-14" data-type="text"><text x="16" y="508" font-family="sans-serif" font-size="14" fill="#222222">Mapbox</text></g>
+<g id="block-15" data-type="button"><rect x="330" y="482" width="44" height="44" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-16" data-type="text"><text x="345" y="507" font-family="sans-serif" font-size="14" fill="#222222">ⓘ</text></g>
+<g id="block-17" data-type="button"><rect x="16" y="536" width="48" height="48" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-18" data-type="text"><text x="27" y="564" font-family="sans-serif" font-size="14" fill="#222222">GPS</text></g>
+<g id="block-19" data-type="button"><rect x="190" y="536" width="184" height="48" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-20" data-type="text"><text x="213" y="564" font-family="sans-serif" font-size="14" fill="#222222">+ 발견/채집 기록하기</text></g>
+<g id="block-21" data-type="box"><path d="M 0 624 A 32 32 0 0 1 32 592 H 358 A 32 32 0 0 1 390 624 V 844 H 0 Z" fill="#f7f7f7" stroke="#888888"/></g>
+<g id="block-22" data-type="text"><text x="20" y="624" font-family="sans-serif" font-size="14" fill="#222222">이 주변 관찰 기록 3건</text></g>
+<g id="block-23" data-type="button"><rect x="330" y="596" width="44" height="44" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-24" data-type="text"><text x="347" y="621" font-family="sans-serif" font-size="14" fill="#222222">×</text></g>
+<g id="block-25" data-type="button"><rect x="16" y="645" width="358" height="51" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-26" data-type="image"><rect x="21" y="648" width="44" height="44" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="29" y="670" font-family="sans-serif" font-size="14" fill="#222222">사진</text></g>
+<g id="block-27" data-type="text"><text x="80" y="666" font-family="sans-serif" font-size="14" fill="#222222">넓적사슴벌레</text></g>
+<g id="block-28" data-type="text"><text x="80" y="684" font-family="sans-serif" font-size="14" fill="#222222">2026.11.23</text></g>
+<g id="block-29" data-type="text"><text x="347" y="673" font-family="sans-serif" font-size="14" fill="#222222">›</text></g>
+<g id="block-30" data-type="button"><rect x="16" y="699" width="358" height="51" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-31" data-type="image"><rect x="21" y="702" width="44" height="44" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="29" y="724" font-family="sans-serif" font-size="14" fill="#222222">사진</text></g>
+<g id="block-32" data-type="text"><text x="80" y="720" font-family="sans-serif" font-size="14" fill="#222222">왕잠자리</text></g>
+<g id="block-33" data-type="text"><text x="80" y="738" font-family="sans-serif" font-size="14" fill="#222222">2026.11.19</text></g>
+<g id="block-34" data-type="text"><text x="347" y="727" font-family="sans-serif" font-size="14" fill="#222222">›</text></g>
+<g id="block-35" data-type="button"><rect x="16" y="753" width="358" height="51" rx="12" fill="#dddddd" stroke="#888888"/></g>
+<g id="block-36" data-type="image"><rect x="21" y="756" width="44" height="44" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="29" y="778" font-family="sans-serif" font-size="14" fill="#222222">사진</text></g>
+<g id="block-37" data-type="text"><text x="80" y="774" font-family="sans-serif" font-size="14" fill="#222222">이름 모름</text></g>
+<g id="block-38" data-type="text"><text x="80" y="792" font-family="sans-serif" font-size="14" fill="#222222">2026.11.16</text></g>
+<g id="block-39" data-type="text"><text x="347" y="781" font-family="sans-serif" font-size="14" fill="#222222">›</text></g>
+<g id="block-40" data-type="box"><rect x="128" y="830" width="134" height="4" rx="4" fill="#f7f7f7" stroke="#888888"/></g>
+</svg>

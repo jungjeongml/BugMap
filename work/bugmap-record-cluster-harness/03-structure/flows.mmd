@@ -1,0 +1,45 @@
+flowchart TD
+  Login(["로그인 성공 또는 세션 복구"]) -.-> Map["main-map/default · 기존 발견 지도 41:81"]
+  Map -->|"기록 3 마커 41:394 탭"| Three["main-map/cluster-selected · 세 행 전체"]
+  Map -->|"기록 7 마커 41:390 탭"| SevenStart["main-map/cluster-selected-overflow · 세 행 전체와 넷째 상단"]
+  Three -->|"닫기 · 같은 지도와 기본 조작 복원"| Map
+  SevenStart -->|"닫기 · 같은 지도와 기본 조작 복원"| Map
+  SevenStart -->|"목록만 스크롤 · 제목과 닫기 고정"| SevenEnd["같은 선택 프레임 · 마지막 기록 전체가 y810 위에 보임"]
+  SevenEnd -->|"목록을 위로 스크롤"| SevenStart
+  SevenEnd -->|"닫기 · 같은 지도와 기본 조작 복원"| Map
+  Three -.->|"보이는 다른 묶음 선택"| Switch["강조·건수·목록 갱신 · 새 목록 맨 위로"]
+  SevenStart -.->|"보이는 다른 묶음 선택"| Switch
+  SevenEnd -.->|"보이는 다른 묶음 선택"| Switch
+  Switch -.->|"3건 묶음"| Three
+  Switch -.->|"7건 묶음"| SevenStart
+  Switch -.->|"그 외 묶음"| Other["같은 패널 규칙으로 새 선택 표시"]
+  Other -.->|"닫기"| Map
+  Three -.->|"record-demo-01~03 각 행 탭"| Detail["선택 기록 ID의 상세 · 전체 사진과 메모"]
+  SevenStart -.->|"노출된 기록 행 탭"| Detail
+  SevenEnd -.->|"record-overflow-demo-07 또는 다른 기록 행 탭"| Detail
+  Detail -.->|"뒤로 · 같은 카메라와 선택·목록 문맥"| Return["상세 진입 전의 패널"]
+  Return -.-> Three
+  Return -.-> SevenStart
+  Return -.-> SevenEnd
+  Three -.->|"출처 버튼 탭"| Attribution["기존 지도 출처 안내"]
+  SevenStart -.->|"출처 버튼 탭"| Attribution
+  SevenEnd -.->|"출처 버튼 탭"| Attribution
+  Attribution -.->|"닫기"| Return
+  Switch -.->|"후속 앱의 목록 조회"| Fetch["기존 지도 문맥 · 로딩"]
+  Fetch -.->|"현재 선택과 일치하는 조회 성공"| Other
+  Fetch -.->|"공개 기록 없음 또는 조회 실패"| Recovery["빈 결과 또는 오류 · 닫기 또는 다른 묶음 선택"]
+  Fetch -.->|"닫기"| Map
+  Fetch -.->|"다른 묶음 선택"| Switch
+  Recovery -.->|"닫기"| Map
+  Recovery -.->|"다른 묶음 선택"| Switch
+
+  subgraph CheckFour["CLUSTER-07 · 후속 4건 HTML 검증 · 패널 및 행 치수는 7건과 동일"]
+    FourStart["정확히 4건 · 세 행 전체와 넷째 상단 26px · 시작 캡처"]
+    FourStart -.->|"목록을 끝까지 스크롤"| FourEnd["넷째 전체가 안전 영역 위에 보임 · 끝 캡처"]
+    FourEnd -.->|"넷째 탭"| Received["HTML 수신 ID가 record-overflow-demo-04와 일치"]
+  end
+
+  %% 실선은 Figma 시연 범위다. SevenEnd는 같은 프레임의 내부 스크롤 위치다.
+  %% 점선은 구조 명세 또는 후속 검증이다. 기존 출처 연결이 있으면 시연에서 열고 닫는다.
+  %% 7건 예시 순서는 record-overflow-demo-01~07이다. 각 묶음의 예시 01·02는 공개 좌표를 공유한다.
+  %% 읽기 여정에는 새 위치 권한 요청이나 저장이 없다. OS 뒤로 동작은 제품 앱의 확인 범위다.

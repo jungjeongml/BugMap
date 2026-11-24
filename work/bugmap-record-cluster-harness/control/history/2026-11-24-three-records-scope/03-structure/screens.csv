@@ -1,0 +1,2 @@
+screen_id,title,purpose,primary_actions,requirements,viewport,state_count
+main-map,메인 / 발견 지도,로그인 후 선택한 묶음에 속한 공개 기록 세 건을 지도 위치와 함께 확인한다,기록 3 선택 | 세 기록 확인 | 닫고 같은 카메라로 복귀 | 기록별 상세 진입 및 다른 묶음 전환 명세 | 지도 출처 확인,CLUSTER-01 | CLUSTER-02 | CLUSTER-03 | CLUSTER-04 | CLUSTER-05 | CLUSTER-06,390x844,1

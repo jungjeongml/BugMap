@@ -1,0 +1,111 @@
+{
+  "map": {
+    "description": "기존 지도 카메라와 서울숲 모식도 벡터를 재사용한다. 지역명과 현재 위치는 개별 레이어로 유지한다.",
+    "tokens": [
+      "colors.background",
+      "colors.mapLand",
+      "colors.mapWater",
+      "colors.mapPark",
+      "colors.mapLabel",
+      "colors.mapWaterLabel",
+      "colors.mapLabelOutline",
+      "colors.location",
+      "colors.locationHalo",
+      "colors.text",
+      "typography.mapLabel.fontSize",
+      "typography.parkLabel.fontSize",
+      "typography.riverLabel.fontSize",
+      "typography.location.fontSize"
+    ],
+    "states": [
+      "cluster-selected",
+      "cluster-selected-overflow"
+    ]
+  },
+  "clusterMarker": {
+    "description": "기록과 집계 값을 한 줄에 배치한다. 선택 상태는 칩 바깥 2px primary 윤곽과 접근성 선택 상태로 전달한다. 키보드 포커스는 칩의 안쪽 가장자리에서 2px 띄운 2px focusRing 선으로 표시한다. 선택과 포커스가 함께 있을 때 두 선 사이의 어두운 간격이 보인다. 카메라, 중심, 조작 영역은 그대로다.",
+    "tokens": [
+      "colors.observationMarkerSurface",
+      "colors.observationMarkerBorder",
+      "colors.text",
+      "colors.primary",
+      "colors.focusRing",
+      "colors.mapLabelOutline",
+      "typography.cluster.fontSize"
+    ],
+    "states": [
+      "default",
+      "selected",
+      "focus-visible"
+    ]
+  },
+  "mapAttribution": {
+    "description": "공식 Mapbox 로고와 44 × 44px 출처 조작부를 패널 위 지도에 배치한다. 포커스가 보일 때는 28px 시각 면의 바깥에 2px focusRing을 그려 조작 영역 안에 유지한다. 기존 출처 흐름이 있는 경우 재사용한다.",
+    "tokens": [
+      "colors.observationMarkerSurface",
+      "colors.mapPanelBorder",
+      "colors.textSecondary",
+      "colors.focusRing"
+    ],
+    "states": [
+      "default",
+      "focus-visible"
+    ]
+  },
+  "clusterPanel": {
+    "description": "메인 지도 패널에서 표면·외곽선·상단 모서리 32px를 재사용한다. 하단 두 모서리는 0px다. 390 × 844에서 3건은 448px, 7건 시연은 468px 높이다. 제목과 닫기는 목록 스크롤 영역 바깥에 고정한다. 좁은 화면이나 큰 글자에서는 제목이 줄바꿈되어도 닫기 영역과 지도가 보이도록 배치한다.",
+    "tokens": [
+      "colors.mapPanel",
+      "colors.mapPanelBorder",
+      "colors.text",
+      "colors.systemHome",
+      "typography.panelTitle.fontSize"
+    ],
+    "states": [
+      "cluster-selected",
+      "cluster-selected-overflow"
+    ]
+  },
+  "closeButton": {
+    "description": "38px 원형 면과 22px X를 48 × 48px 조작 영역에 둔다. 포커스가 보일 때는 원형 면 바깥에 2px focusRing을 그려 조작 영역 안에 유지한다. 누르는 동안 원형 면의 채움만 pressedSurface로 바꾸고 X의 색과 크기를 유지한다. 닫을 때 같은 지도로 돌아가 진입 마커 초점을 복원한다.",
+    "tokens": [
+      "colors.controlFill",
+      "colors.text",
+      "colors.focusRing",
+      "colors.pressedSurface"
+    ],
+    "states": [
+      "default",
+      "focus-visible",
+      "pressed"
+    ]
+  },
+  "recordList": {
+    "description": "목록만 세로로 스크롤한다. 390 × 844의 기본 글자 크기에서 3건은 세 행 전체를 보여 준다. 4건 이상은 첫 세 행과 네 번째 행 상단 26px를 보여 준다. 목록이 끝나면 마지막 행 전체가 하단 안전 영역 위에 보인다. 다른 묶음을 열면 목록을 맨 위로 되돌린다.",
+    "tokens": [
+      "colors.mapPanel",
+      "colors.recordRow"
+    ],
+    "states": [
+      "cluster-selected",
+      "cluster-selected-overflow"
+    ]
+  },
+  "recordRow": {
+    "description": "기본 높이 104px, 간격 8px의 행에 80px 사진, Pretendard 18px Bold 이름, 실제 발견 날짜와 이동 아이콘을 놓는다. 행 모서리 16px와 행 안의 사진 모서리 12px는 간격이 좁은 이 목록의 배치 값이다. 포커스가 보일 때 행 안쪽 가장자리에서 2px 띄운 2px focusRing을 그린다. 누르는 동안 행의 채움만 pressedSurface로 바꾸고 이름·날짜·아이콘 색을 유지한다. 좁은 화면이나 큰 글자에서는 이름을 줄바꿈하고 행을 늘린다. 좌표가 같아도 행마다 자신의 기록 ID로 사진과 메모가 있는 상세에 대응한다.",
+    "tokens": [
+      "colors.recordRow",
+      "colors.text",
+      "colors.textSecondary",
+      "colors.focusRing",
+      "colors.pressedSurface",
+      "typography.recordName.fontSize",
+      "typography.recordDate.fontSize"
+    ],
+    "states": [
+      "default",
+      "focus-visible",
+      "pressed"
+    ]
+  }
+}

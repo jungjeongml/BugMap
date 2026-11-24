@@ -1,0 +1,14 @@
+{
+  "attemptedWith": "Figma Desktop Cursor MCP",
+  "result": "unable-to-write",
+  "nativeError": "Unable to establish connection to Figma after 10 seconds. Please check your internet connection.",
+  "nativeReadBackAfterError": {
+    "sameFrames": true,
+    "sameMarkerReactions": true,
+    "sameCaptures": true,
+    "nodes": [
+      "162:1204",
+      "162:1597"
+    ]
+  }
+}

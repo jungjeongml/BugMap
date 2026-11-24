@@ -1,0 +1,1797 @@
+{
+  "source": "responsive validation probe from approved stage 05 data and stage 06 local assets",
+  "results": [
+    {
+      "scale": 1,
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "initial": {
+        "viewport": {
+          "width": 320,
+          "height": 700
+        },
+        "scrollTop": 0,
+        "scrollMax": 438,
+        "sheet": {
+          "x": 0,
+          "y": 252,
+          "width": 320,
+          "height": 448
+        },
+        "selected": {
+          "x": 44.796875,
+          "y": 65.515625,
+          "width": 64,
+          "height": 44
+        },
+        "other": {
+          "x": 211.203125,
+          "y": 136.078125,
+          "width": 64,
+          "height": 44
+        },
+        "map": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 252
+        },
+        "close": {
+          "x": 256,
+          "y": 267,
+          "width": 48,
+          "height": 48
+        },
+        "title": {
+          "x": 16,
+          "y": 267,
+          "width": 228,
+          "height": 26.875
+        },
+        "list": {
+          "x": 1,
+          "y": 327,
+          "width": 318,
+          "height": 338
+        },
+        "logo": {
+          "x": 12,
+          "y": 217,
+          "width": 88,
+          "height": 23
+        },
+        "attribution": {
+          "x": 268,
+          "y": 204,
+          "width": 44,
+          "height": 44
+        },
+        "picked": null,
+        "loadedImages": true,
+        "loadedFonts": true,
+        "rows": [
+          {
+            "id": "record-overflow-demo-01",
+            "box": {
+              "x": 16,
+              "y": 327,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 347.546875,
+              "width": 162,
+              "height": 42.09375
+            },
+            "date": {
+              "x": 102,
+              "y": 393.640625,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 347,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 347.546875,
+              "width": 162,
+              "height": 62.890625
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 347.546875,
+                "width": 148.3125,
+                "height": 21
+              },
+              {
+                "x": 102,
+                "y": 368.59375,
+                "width": 31.125,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 393.640625,
+                "width": 68.8125,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-02",
+            "box": {
+              "x": 16,
+              "y": 439,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 470.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 495.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 459,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 470.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 470.078125,
+                "width": 77.796875,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 495.125,
+                "width": 68.40625,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-03",
+            "box": {
+              "x": 16,
+              "y": 551,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 582.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 607.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 571,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 582.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 582.078125,
+                "width": 66.375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 607.125,
+                "width": 66.359375,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-04",
+            "box": {
+              "x": 16,
+              "y": 663,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 694.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 719.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 683,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 694.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 694.078125,
+                "width": 62.234375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 719.125,
+                "width": 68.71875,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-05",
+            "box": {
+              "x": 16,
+              "y": 775,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 806.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 831.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 795,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 806.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 806.078125,
+                "width": 62.234375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 831.125,
+                "width": 65.484375,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-06",
+            "box": {
+              "x": 16,
+              "y": 887,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 918.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 943.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 907,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 918.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 918.078125,
+                "width": 93.34375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 943.125,
+                "width": 64.671875,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-07",
+            "box": {
+              "x": 16,
+              "y": 999,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 1030.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 1055.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 1019,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 1030.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 1030.078125,
+                "width": 62.234375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 1055.125,
+                "width": 65.328125,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          }
+        ]
+      },
+      "end": {
+        "viewport": {
+          "width": 320,
+          "height": 700
+        },
+        "scrollTop": 438,
+        "scrollMax": 438,
+        "sheet": {
+          "x": 0,
+          "y": 252,
+          "width": 320,
+          "height": 448
+        },
+        "selected": {
+          "x": 44.796875,
+          "y": 65.515625,
+          "width": 64,
+          "height": 44
+        },
+        "other": {
+          "x": 211.203125,
+          "y": 136.078125,
+          "width": 64,
+          "height": 44
+        },
+        "map": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 252
+        },
+        "close": {
+          "x": 256,
+          "y": 267,
+          "width": 48,
+          "height": 48
+        },
+        "title": {
+          "x": 16,
+          "y": 267,
+          "width": 228,
+          "height": 26.875
+        },
+        "list": {
+          "x": 1,
+          "y": 327,
+          "width": 318,
+          "height": 338
+        },
+        "logo": {
+          "x": 12,
+          "y": 217,
+          "width": 88,
+          "height": 23
+        },
+        "attribution": {
+          "x": 268,
+          "y": 204,
+          "width": 44,
+          "height": 44
+        },
+        "picked": null,
+        "loadedImages": true,
+        "loadedFonts": true,
+        "rows": [
+          {
+            "id": "record-overflow-demo-01",
+            "box": {
+              "x": 16,
+              "y": -111,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": -90.453125,
+              "width": 162,
+              "height": 42.09375
+            },
+            "date": {
+              "x": 102,
+              "y": -44.359375,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": -91,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": -90.453125,
+              "width": 162,
+              "height": 62.890625
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": -90.453125,
+                "width": 148.3125,
+                "height": 21
+              },
+              {
+                "x": 102,
+                "y": -69.40625,
+                "width": 31.125,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": -44.359375,
+                "width": 68.8125,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-02",
+            "box": {
+              "x": 16,
+              "y": 1,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 32.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 57.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 21,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 32.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 32.078125,
+                "width": 77.796875,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 57.125,
+                "width": 68.40625,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-03",
+            "box": {
+              "x": 16,
+              "y": 113,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 144.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 169.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 133,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 144.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 144.078125,
+                "width": 66.375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 169.125,
+                "width": 66.359375,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-04",
+            "box": {
+              "x": 16,
+              "y": 225,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 256.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 281.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 245,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 256.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 256.078125,
+                "width": 62.234375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 281.125,
+                "width": 68.71875,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-05",
+            "box": {
+              "x": 16,
+              "y": 337,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 368.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 393.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 357,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 368.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 368.078125,
+                "width": 62.234375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 393.125,
+                "width": 65.484375,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-06",
+            "box": {
+              "x": 16,
+              "y": 449,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 480.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 505.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 469,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 480.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 480.078125,
+                "width": 93.34375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 505.125,
+                "width": 64.671875,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          },
+          {
+            "id": "record-overflow-demo-07",
+            "box": {
+              "x": 16,
+              "y": 561,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 592.078125,
+              "width": 162,
+              "height": 21.046875
+            },
+            "date": {
+              "x": 102,
+              "y": 617.125,
+              "width": 162,
+              "height": 16.796875
+            },
+            "photo": {
+              "x": 28,
+              "y": 581,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 592.078125,
+              "width": 162,
+              "height": 41.84375
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 592.078125,
+                "width": 62.234375,
+                "height": 21
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 617.125,
+                "width": 65.328125,
+                "height": 16
+              }
+            ],
+            "nameSize": 18
+          }
+        ]
+      },
+      "longName": "사진 속 칠성무당벌레 관찰",
+      "longRowLines": 2,
+      "checkedRows": [
+        "record-overflow-demo-01",
+        "record-overflow-demo-02",
+        "record-overflow-demo-03",
+        "record-overflow-demo-04",
+        "record-overflow-demo-05",
+        "record-overflow-demo-06",
+        "record-overflow-demo-07"
+      ],
+      "clicked": "record-overflow-demo-07",
+      "captures": [
+        {
+          "file": "captures/100-start.png",
+          "sha256": "59f8228e128044e8e850dda2cef6f31d00ffbfbe4e0ee31e9ce7d631be3bcf5c"
+        },
+        {
+          "file": "captures/100-end.png",
+          "sha256": "02cbd48c80aa3a748fa9951b8983fb2927bfb712293029aee37e51714523f030"
+        }
+      ]
+    },
+    {
+      "scale": 2,
+      "viewport": {
+        "width": 320,
+        "height": 700
+      },
+      "initial": {
+        "viewport": {
+          "width": 320,
+          "height": 700
+        },
+        "scrollTop": 0,
+        "scrollMax": 628,
+        "sheet": {
+          "x": 0,
+          "y": 203,
+          "width": 320,
+          "height": 497
+        },
+        "selected": {
+          "x": 44.796875,
+          "y": 52.765625,
+          "width": 64,
+          "height": 44
+        },
+        "other": {
+          "x": 211.203125,
+          "y": 109.609375,
+          "width": 64,
+          "height": 44
+        },
+        "map": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 203
+        },
+        "close": {
+          "x": 256,
+          "y": 218,
+          "width": 48,
+          "height": 48
+        },
+        "title": {
+          "x": 16,
+          "y": 218,
+          "width": 228,
+          "height": 161.25
+        },
+        "list": {
+          "x": 1,
+          "y": 391.25,
+          "width": 318,
+          "height": 273.75
+        },
+        "logo": {
+          "x": 12,
+          "y": 168,
+          "width": 88,
+          "height": 23
+        },
+        "attribution": {
+          "x": 268,
+          "y": 155,
+          "width": 44,
+          "height": 44
+        },
+        "picked": null,
+        "loadedImages": true,
+        "loadedFonts": true,
+        "rows": [
+          {
+            "id": "record-overflow-demo-01",
+            "box": {
+              "x": 16,
+              "y": 391.25,
+              "width": 288,
+              "height": 187.921875
+            },
+            "name": {
+              "x": 102,
+              "y": 403.25,
+              "width": 162,
+              "height": 126.328125
+            },
+            "date": {
+              "x": 102,
+              "y": 533.578125,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 453.203125,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 403.25,
+              "width": 162,
+              "height": 163.921875
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 402.25,
+                "width": 101.640625,
+                "height": 43
+              },
+              {
+                "x": 102,
+                "y": 444.359375,
+                "width": 155.578125,
+                "height": 43
+              },
+              {
+                "x": 102,
+                "y": 486.46875,
+                "width": 101.640625,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 532.578125,
+                "width": 137.625,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-02",
+            "box": {
+              "x": 16,
+              "y": 587.171875,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 599.3125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 645.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 607.171875,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 599.3125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 598.3125,
+                "width": 155.578125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 644.421875,
+                "width": 136.8125,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-03",
+            "box": {
+              "x": 16,
+              "y": 699.171875,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 711.3125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 757.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 719.171875,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 711.3125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 710.3125,
+                "width": 132.75,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 756.421875,
+                "width": 132.703125,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-04",
+            "box": {
+              "x": 16,
+              "y": 811.171875,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 823.3125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 869.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 831.171875,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 823.3125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 822.3125,
+                "width": 124.453125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 868.421875,
+                "width": 137.4375,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-05",
+            "box": {
+              "x": 16,
+              "y": 923.171875,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 935.3125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 981.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 943.171875,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 935.3125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 934.3125,
+                "width": 124.453125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 980.421875,
+                "width": 130.96875,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-06",
+            "box": {
+              "x": 16,
+              "y": 1035.171875,
+              "width": 288,
+              "height": 145.8125
+            },
+            "name": {
+              "x": 102,
+              "y": 1047.171875,
+              "width": 162,
+              "height": 84.21875
+            },
+            "date": {
+              "x": 102,
+              "y": 1135.390625,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 1076.078125,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 1047.171875,
+              "width": 162,
+              "height": 121.8125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 1046.171875,
+                "width": 155.578125,
+                "height": 43
+              },
+              {
+                "x": 102,
+                "y": 1088.28125,
+                "width": 31.125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 1134.390625,
+                "width": 129.328125,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-07",
+            "box": {
+              "x": 16,
+              "y": 1188.984375,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 1201.125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 1247.234375,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 1208.984375,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 1201.125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 1200.125,
+                "width": 124.453125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 1246.234375,
+                "width": 130.640625,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          }
+        ]
+      },
+      "end": {
+        "viewport": {
+          "width": 320,
+          "height": 700
+        },
+        "scrollTop": 628,
+        "scrollMax": 628,
+        "sheet": {
+          "x": 0,
+          "y": 203,
+          "width": 320,
+          "height": 497
+        },
+        "selected": {
+          "x": 44.796875,
+          "y": 52.765625,
+          "width": 64,
+          "height": 44
+        },
+        "other": {
+          "x": 211.203125,
+          "y": 109.609375,
+          "width": 64,
+          "height": 44
+        },
+        "map": {
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 203
+        },
+        "close": {
+          "x": 256,
+          "y": 218,
+          "width": 48,
+          "height": 48
+        },
+        "title": {
+          "x": 16,
+          "y": 218,
+          "width": 228,
+          "height": 161.25
+        },
+        "list": {
+          "x": 1,
+          "y": 391.25,
+          "width": 318,
+          "height": 273.75
+        },
+        "logo": {
+          "x": 12,
+          "y": 168,
+          "width": 88,
+          "height": 23
+        },
+        "attribution": {
+          "x": 268,
+          "y": 155,
+          "width": 44,
+          "height": 44
+        },
+        "picked": null,
+        "loadedImages": true,
+        "loadedFonts": true,
+        "rows": [
+          {
+            "id": "record-overflow-demo-01",
+            "box": {
+              "x": 16,
+              "y": -236.75,
+              "width": 288,
+              "height": 187.921875
+            },
+            "name": {
+              "x": 102,
+              "y": -224.75,
+              "width": 162,
+              "height": 126.328125
+            },
+            "date": {
+              "x": 102,
+              "y": -94.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": -174.796875,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": -224.75,
+              "width": 162,
+              "height": 163.921875
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": -225.75,
+                "width": 101.640625,
+                "height": 43
+              },
+              {
+                "x": 102,
+                "y": -183.640625,
+                "width": 155.578125,
+                "height": 43
+              },
+              {
+                "x": 102,
+                "y": -141.53125,
+                "width": 101.640625,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": -95.421875,
+                "width": 137.625,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-02",
+            "box": {
+              "x": 16,
+              "y": -40.828125,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": -28.6875,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 17.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": -20.828125,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": -28.6875,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": -29.6875,
+                "width": 155.578125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 16.421875,
+                "width": 136.8125,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-03",
+            "box": {
+              "x": 16,
+              "y": 71.171875,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 83.3125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 129.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 91.171875,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 83.3125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 82.3125,
+                "width": 132.75,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 128.421875,
+                "width": 132.703125,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-04",
+            "box": {
+              "x": 16,
+              "y": 183.171875,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 195.3125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 241.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 203.171875,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 195.3125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 194.3125,
+                "width": 124.453125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 240.421875,
+                "width": 137.4375,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-05",
+            "box": {
+              "x": 16,
+              "y": 295.171875,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 307.3125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 353.421875,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 315.171875,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 307.3125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 306.3125,
+                "width": 124.453125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 352.421875,
+                "width": 130.96875,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-06",
+            "box": {
+              "x": 16,
+              "y": 407.171875,
+              "width": 288,
+              "height": 145.8125
+            },
+            "name": {
+              "x": 102,
+              "y": 419.171875,
+              "width": 162,
+              "height": 84.21875
+            },
+            "date": {
+              "x": 102,
+              "y": 507.390625,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 448.078125,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 419.171875,
+              "width": 162,
+              "height": 121.8125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 418.171875,
+                "width": 155.578125,
+                "height": 43
+              },
+              {
+                "x": 102,
+                "y": 460.28125,
+                "width": 31.125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 506.390625,
+                "width": 129.328125,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          },
+          {
+            "id": "record-overflow-demo-07",
+            "box": {
+              "x": 16,
+              "y": 560.984375,
+              "width": 288,
+              "height": 104
+            },
+            "name": {
+              "x": 102,
+              "y": 573.125,
+              "width": 162,
+              "height": 42.109375
+            },
+            "date": {
+              "x": 102,
+              "y": 619.234375,
+              "width": 162,
+              "height": 33.59375
+            },
+            "photo": {
+              "x": 28,
+              "y": 580.984375,
+              "width": 64,
+              "height": 64
+            },
+            "copy": {
+              "x": 102,
+              "y": 573.125,
+              "width": 162,
+              "height": 79.703125
+            },
+            "lines": [
+              {
+                "x": 102,
+                "y": 572.125,
+                "width": 124.453125,
+                "height": 43
+              }
+            ],
+            "dateLines": [
+              {
+                "x": 102,
+                "y": 618.234375,
+                "width": 130.640625,
+                "height": 34
+              }
+            ],
+            "nameSize": 36
+          }
+        ]
+      },
+      "longName": "사진 속 칠성무당벌레 관찰",
+      "longRowLines": 3,
+      "checkedRows": [
+        "record-overflow-demo-01",
+        "record-overflow-demo-02",
+        "record-overflow-demo-03",
+        "record-overflow-demo-04",
+        "record-overflow-demo-05",
+        "record-overflow-demo-06",
+        "record-overflow-demo-07"
+      ],
+      "clicked": "record-overflow-demo-07",
+      "captures": [
+        {
+          "file": "captures/200-start.png",
+          "sha256": "447d91ae05126b1548044013533de33719b6ce3a6bf90391aa01d846a0dd63dd"
+        },
+        {
+          "file": "captures/200-end.png",
+          "sha256": "a968e260532b137eb726dfb03463dfbd9df2a59b650cffdc4d7760c644c99f6f"
+        }
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "file": "captures/100-start.png",
+      "sha256": "59f8228e128044e8e850dda2cef6f31d00ffbfbe4e0ee31e9ce7d631be3bcf5c"
+    },
+    {
+      "file": "captures/100-end.png",
+      "sha256": "02cbd48c80aa3a748fa9951b8983fb2927bfb712293029aee37e51714523f030"
+    },
+    {
+      "file": "captures/200-start.png",
+      "sha256": "447d91ae05126b1548044013533de33719b6ce3a6bf90391aa01d846a0dd63dd"
+    },
+    {
+      "file": "captures/200-end.png",
+      "sha256": "a968e260532b137eb726dfb03463dfbd9df2a59b650cffdc4d7760c644c99f6f"
+    }
+  ]
+}

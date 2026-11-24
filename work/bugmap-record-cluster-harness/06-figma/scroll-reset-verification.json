@@ -1,0 +1,60 @@
+{
+  "method": "Figma editor state checkbox verification and real Figma prototype runtime; raw Cursor action export does not expose the reset option",
+  "settings": [
+    {
+      "from": "41:390",
+      "to": "162:1597",
+      "previouslyChecked": false,
+      "checked": true,
+      "checkedSource": "Editor DOM input.checked after pointer click",
+      "capture": "scroll-reset-settings/41-390.png",
+      "captureSha256": "395160bc43ae8b27620910b8017d5303d6eec0c373067d369b03fc3b940d141d",
+      "cursorResetFieldReturned": false
+    },
+    {
+      "from": "162:1510",
+      "to": "162:1597",
+      "previouslyChecked": false,
+      "checked": true,
+      "checkedSource": "Editor DOM input.checked after pointer click",
+      "capture": "scroll-reset-settings/162-1510.png",
+      "captureNote": "The captured dialog does not visually show the checked state. The input property and refreshed player test are the evidence for this setting.",
+      "captureSha256": "49d5ba61646430b4752d779ca224a2f81347e0484d61570577387fc756ee3932",
+      "cursorResetFieldReturned": false
+    }
+  ],
+  "player": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "listAfterSwitchingBack": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 129596
+    },
+    "listAfterReopening": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 129596
+    },
+    "fixedHeader": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 28080
+    },
+    "fixedMap": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 146640
+    },
+    "fixedSafeArea": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 13260
+    },
+    "initial": "83547853d1437b9d26c2a7e924d723594878bf893e88dc1d9625dfff30f3219e",
+    "switchBack": "83547853d1437b9d26c2a7e924d723594878bf893e88dc1d9625dfff30f3219e",
+    "reopen": "83547853d1437b9d26c2a7e924d723594878bf893e88dc1d9625dfff30f3219e"
+  }
+}

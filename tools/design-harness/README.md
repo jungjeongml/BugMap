@@ -78,7 +78,7 @@ ID는 프로젝트 ID와 같은 문자 규칙이며 대소문자를 무시한 �
 }
 ```
 
-블록 종류는 text·button·input·image·box다. 화면 밖 좌표·유효하지 않은 크기·44px 미만 버튼·중복 화면/상태를 거부한다. SVG 텍스트를 이스케이프한다. `04-wireframes/<id>/<state>.svg`와 `captures/<id>/<state>.png`, `wireframes-report.json`을 생성한다. 실제 지도나 사진 대신 저충실도 자리표시자를 그린다. `check`는 JSON에서 생성해야 할 모든 SVG/PNG 및 현재 해시를 확인한다. 화면 구조 CSV와의 전체 상태 대응 검증·자동 레이아웃은 후속 범위다.
+블록 종류는 text·button·input·image·box다. `box`의 `topRadius`에 px 값을 지정하면 위쪽 두 모서리가 둥글게 렌더링된다. `clipHeight`를 지정하면 원래 블록의 높이와 모서리를 유지하면서 위에서부터 해당 높이만 보인다. 화면 경계는 보이는 영역을 기준으로 검사한다. 화면 밖 좌표·유효하지 않은 크기·44px 미만 버튼·중복 화면/상태를 거부한다. SVG 텍스트를 이스케이프한다. `04-wireframes/<id>/<state>.svg`와 `captures/<id>/<state>.png`, `wireframes-report.json`을 생성한다. 실제 지도나 사진 대신 저충실도 자리표시자를 그린다. `check`는 JSON에서 생성해야 할 모든 SVG/PNG 및 현재 해시를 확인한다. 화면 구조 CSV와의 전체 상태 대응 검증·자동 레이아웃은 후속 범위다.
 
 ## design-md
 

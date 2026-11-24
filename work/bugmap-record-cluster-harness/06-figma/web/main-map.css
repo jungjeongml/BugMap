@@ -1,0 +1,75 @@
+@font-face {
+  font-family: Pretendard;
+  src: url("assets/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: block;
+}
+@font-face {
+  font-family: Pretendard;
+  src: url("assets/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: block;
+}
+:root {
+  --background: #101C16;
+  --text: #F3F7EE;
+  --textSecondary: #BDCDC2;
+  --primary: #C5EE79;
+  --onPrimary: #202E13;
+  --observationMarkerSurface: #18271F;
+  --observationMarkerBorder: #52694A;
+  --location: #82D0F0;
+  --locationHalo: #82D0F02B;
+  --mapPanel: #131E18;
+  --mapPanelBorder: #3B4D42;
+  --systemInk: #F3F7EE;
+  --systemHome: #BDCDC2;
+  --mapLabel: #E0EBDF;
+  --mapWaterLabel: #A7BBAD;
+  --mapLabelOutline: #101C16;
+  --mapLand: #18241F;
+  --mapBlock1: #1A2821;
+  --mapBlock2: #1D2D26;
+  --mapBlock3: #202F27;
+  --mapBlock4: #22322A;
+  --mapBlock5: #24352D;
+  --mapBlock6: #20332C;
+  --mapBlock7: #25372F;
+  --mapPark: #294432;
+  --mapParkContour: #395840;
+  --mapSeam: #304138;
+  --mapMinorRoad: #384A41;
+  --mapMajorRoadCasing: #263730;
+  --mapMajorRoad: #53665A;
+  --mapWaterBank: #2A4945;
+  --mapWater: #20393C;
+  --mapTrail: #46624D;
+  --recordRow: #192B20;
+  --controlFill: #26342D;
+  --focusRing: #82D0F0;
+  --pressedSurface: #384A41;
+}
+html, body { margin: 0; }
+body {
+  color: var(--text);
+  background: var(--background);
+  font: 500 14px Pretendard, sans-serif;
+}
+main {
+  width: 390px;
+  margin-inline: auto;
+}
+main svg { display: block; }
+#map-label-river { visibility: hidden; }
+.record-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+.record-scroll::-webkit-scrollbar { display: none; }
+[data-record-id] { cursor: pointer; }
+[data-record-id]:focus { outline: none; }
+[data-record-id]:focus-visible > rect:nth-child(2) { stroke: var(--focusRing); stroke-width: 2px; }
+[data-record-id]:active > rect:nth-child(2) { fill: var(--pressedSurface); }

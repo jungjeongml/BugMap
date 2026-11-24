@@ -1,0 +1,172 @@
+{
+  "sourceMap": {
+    "file": "design/main-map/map-background.svg",
+    "sha256": "849c0eb7cd208e2bc358eee8ee640ede0430f3aa1598dc2df4ed66522b932de8",
+    "size": [
+      390,
+      844
+    ],
+    "treatment": "정해진 다크 지도 팔레트로 17개 색 교체. 지형과 경로 도형, 크기 유지."
+  },
+  "inputs": [
+    {
+      "file": "work/bugmap-record-cluster-harness/04-wireframes/wireframes.json",
+      "sha256": "899b024b7b56c7fc93e1c72d8760d4b464890fce36ed499b4becc0daf6f853a6"
+    },
+    {
+      "file": "work/bugmap-record-cluster-harness/04-wireframes/captures/main-map/cluster-selected.png",
+      "sha256": "5a665be4e91ec247073d1c9196b51c93e1d7fa593602729ef03bb066185341e7"
+    },
+    {
+      "file": "work/bugmap-record-cluster-harness/04-wireframes/captures/main-map/cluster-selected-overflow.png",
+      "sha256": "dc1a4d8d36ee0c60f721feb2b31f38de8ac4191eefaa011cd2bc75393b40cc3c"
+    },
+    {
+      "file": "work/bugmap-main-map-harness/06-figma/captures/main-map-default.png",
+      "sha256": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c"
+    },
+    {
+      "file": "work/bugmap-main-map-harness/05-design-system/tokens.json",
+      "sha256": "1dc4c4ef4a3d94ffe91a66af610a3e56c3712ed860f433cacdaeb776c805d76d"
+    }
+  ],
+  "approvedWireframeId": "8e2b077c-4a3f-487c-bf67-ec2065e5d019",
+  "lucide": {
+    "package": "lucide-react-native",
+    "version": "1.70.0",
+    "icons": [
+      "x",
+      "chevron-right",
+      "info"
+    ]
+  },
+  "files": [
+    {
+      "file": "assets/map-dark.svg",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/map-dark.svg",
+      "sha256": "8c7164ba25d1eb05f9ca5c7f6c2d30a2244ff9543351f295f6a7fab7e199b56e",
+      "bytes": 53679
+    },
+    {
+      "file": "assets/mapbox-logo.svg",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/mapbox-logo.svg",
+      "sha256": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+      "bytes": 3169
+    },
+    {
+      "file": "assets/Pretendard-Medium.woff2",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/Pretendard-Medium.woff2",
+      "sha256": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+      "bytes": 778432
+    },
+    {
+      "file": "assets/Pretendard-Bold.woff2",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/Pretendard-Bold.woff2",
+      "sha256": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+      "bytes": 791156
+    },
+    {
+      "file": "assets/pretendard-OFL.txt",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/pretendard-OFL.txt",
+      "sha256": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+      "bytes": 4418
+    },
+    {
+      "file": "assets/lucide-ISC.txt",
+      "source": "work/bugmap-main-map-harness/05-design-system/assets/lucide-ISC.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    },
+    {
+      "file": "assets/photos/stag-beetle.png",
+      "source": "work/bugmap-nearby-discoveries-harness/05-design-system/assets/photos/stag-beetle.png",
+      "sha256": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+      "bytes": 132257,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "Public domain dedication",
+      "author": "Bugman95",
+      "title": "Dorcus titanus castanicolor.JPG"
+    },
+    {
+      "file": "assets/photos/ladybird.png",
+      "source": "work/bugmap-nearby-discoveries-harness/05-design-system/assets/photos/ladybird.png",
+      "sha256": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+      "bytes": 124535,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "CC BY-SA 3.0",
+      "author": "Charles J. Sharp",
+      "title": "Ladybird coccinella septempunctata.jpg"
+    },
+    {
+      "file": "assets/photos/dragonfly.png",
+      "source": "work/bugmap-nearby-discoveries-harness/05-design-system/assets/photos/dragonfly.png",
+      "sha256": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+      "bytes": 152694,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "CC0 1.0",
+      "author": "TekuraDF",
+      "title": "Anax parthenope julius(Couple,Japan,17.08.23).jpg"
+    },
+    {
+      "file": "assets/photos/specimen-1.png",
+      "source": "work/bugmap-record-entry-harness/05-design-system/assets/photos/specimen-1.png",
+      "sha256": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+      "bytes": 195180,
+      "dimensions": {
+        "width": 342,
+        "height": 270
+      },
+      "license": "CC BY-SA 3.0",
+      "author": "keusju",
+      "title": "Dorcushopeibinodulosus.JPG"
+    },
+    {
+      "file": "assets/photos/white.png",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/P.rapae.jpg",
+      "sha256": "72b89e50bd31e29c8d3768ef024dbbb5b58a1a4307eac02cae5c4cd750070540",
+      "bytes": 131655,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "CC0 1.0",
+      "author": "Gimnazijalacbp",
+      "title": "P.rapae.jpg"
+    },
+    {
+      "file": "assets/photos/yellow.png",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Colias_erate_formosana_male_20151003.jpg",
+      "sha256": "0781243852c082f4b21851debe15284a69d2d9b80531962a4501ebaf9e077f71",
+      "bytes": 126057,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "CC BY-SA 4.0",
+      "author": "Peellden",
+      "title": "Colias erate formosana male 20151003.jpg"
+    },
+    {
+      "file": "assets/photos/swallowtail.png",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/83/Papilio_xuthus_116552535.jpg",
+      "sha256": "1e1c6a0295a5c4ce85071f24b34769cabef8d9936865fe11e417e762af37e840",
+      "bytes": 99394,
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "license": "CC0 1.0",
+      "author": "heikindai_87",
+      "title": "Papilio xuthus 116552535.jpg"
+    }
+  ]
+}

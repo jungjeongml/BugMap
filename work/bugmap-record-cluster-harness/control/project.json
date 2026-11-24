@@ -1,0 +1,34 @@
+{
+  "id": "bugmap-record-cluster-harness",
+  "purpose": "기록 묶음 마커 선택 상태 디자인",
+  "platform": "mobile",
+  "language": "ko",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "reviewMinScore": 4,
+  "scope": {
+    "screen": "main-map",
+    "states": [
+      "cluster-selected",
+      "cluster-selected-overflow"
+    ],
+    "figmaRootCount": 2
+  },
+  "sourceDocuments": {
+    "AGENTS.md": "6fdea9dded892b178f0d7bfa1b25c256d11375d790a6949cbe36f13ccdf2fcc7",
+    "docs/PRD.md": "2d196360306f8fdfeff11c75a2a0f251f82aaecafa66fc42fd1e0043934e80de",
+    "docs/DESIGN.md": "fee42b2e4e4b94ec874b29f51af2675b21cc41984ee0d5df5069e54504121c39",
+    "docs/TDD.md": "c3db4b89946a57c4053dbe02a3c50a9d15dcad859b719ebc5d7b0bbb02d515f7",
+    "docs/screens/main-map.md": "9b3315402b20b1fa6b6558a951b3fb4a79628bf16450ae2dd3c5a345db07be7f",
+    "docs/design-harness.md": "12fdfce91455ead826c433eca55fe467938f580457cf3590dedd771e0de8fd11",
+    "work/bugmap-main-map-harness/06-figma/captures/main-map-default.png": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c"
+  },
+  "userReference": {
+    "name": "kyroMakerClick.png",
+    "sha256": "5dbbbb9749e6eb68a1f967e9cf716af8d24f5f890571d75cf629685af3e991c4"
+  }
+}

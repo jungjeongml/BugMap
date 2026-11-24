@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "lint:web",
+  "at": "2026-11-24T10:45:03.602Z",
+  "inputs": {
+    "05-design-system/captures/390x844-cluster-selected-overflow.png": "f49b61a9f644983906c7881606f608ee49b03064504a57d65fcddda9a8f176b3",
+    "05-design-system/captures/390x844-cluster-selected.png": "4c8d9e079a8481ccaefc9287c9624facbdaa2b0cb5d9067bc05f08cab12e1a55",
+    "05-design-system/components.json": "a777d4c8a82d9db9d825f111e0510040f9069addab78d2b462f8bb41d08bb245",
+    "05-design-system/copy.json": "3f92c922911f4f64d6b58d0059ca1d99a04a7acc691c18e1479a35562a75af99",
+    "05-design-system/tokens.json": "aa59358385eff880121c555c257120bea9e3ca82cc04d94a81ad02432999bc36",
+    "06-figma/web/README.md": "a5185100a544395c63ecacda8c438c41dea4afcf9eb96393861778e7037637ba",
+    "06-figma/web/assets/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "06-figma/web/assets/Pretendard-Medium.woff2": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+    "06-figma/web/assets/lucide-ISC.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "06-figma/web/assets/map-dark.svg": "8c7164ba25d1eb05f9ca5c7f6c2d30a2244ff9543351f295f6a7fab7e199b56e",
+    "06-figma/web/assets/mapbox-logo.svg": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+    "06-figma/web/assets/photos/dragonfly.png": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+    "06-figma/web/assets/photos/ladybird.png": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+    "06-figma/web/assets/photos/specimen-1.png": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+    "06-figma/web/assets/photos/stag-beetle.png": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+    "06-figma/web/assets/photos/swallowtail.png": "1e1c6a0295a5c4ce85071f24b34769cabef8d9936865fe11e417e762af37e840",
+    "06-figma/web/assets/photos/white.png": "72b89e50bd31e29c8d3768ef024dbbb5b58a1a4307eac02cae5c4cd750070540",
+    "06-figma/web/assets/photos/yellow.png": "0781243852c082f4b21851debe15284a69d2d9b80531962a4501ebaf9e077f71",
+    "06-figma/web/assets/pretendard-OFL.txt": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+    "06-figma/web/main-map--cluster-selected-overflow.html": "529d25f28dc1e45d2d1fe4ea6581440b0e25b1e022d1a1493202a184486742ac",
+    "06-figma/web/main-map--cluster-selected.html": "4decce760a01693571ba1bc22e17f2dd3dd8264e34aebe3f6d5081f32f220ae0",
+    "06-figma/web/main-map.css": "83f99b3c296bfd1f5ec49676cd6b45c4e5658ea1419b4733ed766e9b59fb7cce",
+    "06-figma/web/main-map.js": "9d609596e323db6c65b1b7a91efdd6a690c2a9076fe5d555192d89ff4ae994dd",
+    "control/project.json": "e43cf165a6d2e7b41e945fd69e7dea695e12fd18408dd6da22326b376467c077"
+  },
+  "outputs": {
+    "07-validation/captures/1e9f6844e758-390x844.png": "181318b1d851da302c204edb2b1abf8279912b8c9aac844124fc8283f3759185",
+    "07-validation/captures/88692e5cd632-390x844.png": "e64a7c27e069dee9587905e1571e317fb506bdf92eebdd22f5b1e375a60c0c0c"
+  },
+  "minTarget": 44,
+  "runs": [
+    {
+      "html": "06-figma/web/main-map--cluster-selected-overflow.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/1e9f6844e758-390x844.png",
+      "issues": [],
+      "title": "이 주변 관찰 기록 7건",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-cluster-selected-overflow.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    },
+    {
+      "html": "06-figma/web/main-map--cluster-selected.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/88692e5cd632-390x844.png",
+      "issues": [],
+      "title": "이 주변 관찰 기록 3건",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-cluster-selected.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    }
+  ]
+}

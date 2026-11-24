@@ -1,0 +1,125 @@
+{
+  "client": "Figma prototype player through ego-browser",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "origin": {
+    "offsetX": 305,
+    "offsetY": 60
+  },
+  "route": [
+    {
+      "name": "01-map",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81&scaling=scale-down",
+      "capture": "captures/player/01-map.png",
+      "sha256": "9b6815abe7575923f6c115152def410cf096e513e2a275c128ed9c3851e2726d"
+    },
+    {
+      "name": "02-selected-three",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1204&scaling=scale-down",
+      "capture": "captures/player/02-selected-three.png",
+      "sha256": "fc5d688e474b9b0428f6d3ffb890e27059093caab865a9dd3c1812ee5eda4d04"
+    },
+    {
+      "name": "03-back-from-three",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81&scaling=scale-down",
+      "capture": "captures/player/03-back-from-three.png",
+      "sha256": "9b6815abe7575923f6c115152def410cf096e513e2a275c128ed9c3851e2726d"
+    },
+    {
+      "name": "04-selected-seven-start",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1597&scaling=scale-down",
+      "capture": "captures/player/04-selected-seven-start.png",
+      "sha256": "83547853d1437b9d26c2a7e924d723594878bf893e88dc1d9625dfff30f3219e"
+    },
+    {
+      "name": "05-selected-seven-middle",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1597&scaling=scale-down",
+      "capture": "captures/player/05-selected-seven-middle.png",
+      "sha256": "77cee08a53a992b359be31267b8a81ccee9eb2eb6f1bdfe4aa76adf299e9e21c"
+    },
+    {
+      "name": "06-selected-seven-end",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1597&scaling=scale-down",
+      "capture": "captures/player/06-selected-seven-end.png",
+      "sha256": "cfaa43d4bd26105f7216255077030f48fb2246a47a2b26c83454a81d1e1eae94"
+    },
+    {
+      "name": "07-switch-to-three",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1204&scaling=scale-down",
+      "capture": "captures/player/07-switch-to-three.png",
+      "sha256": "fc5d688e474b9b0428f6d3ffb890e27059093caab865a9dd3c1812ee5eda4d04"
+    },
+    {
+      "name": "08-switch-to-seven-reset",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1597&scaling=scale-down",
+      "capture": "captures/player/08-switch-to-seven-reset.png",
+      "sha256": "83547853d1437b9d26c2a7e924d723594878bf893e88dc1d9625dfff30f3219e"
+    },
+    {
+      "name": "09-back-from-seven",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81&scaling=scale-down",
+      "capture": "captures/player/09-back-from-seven.png",
+      "sha256": "9b6815abe7575923f6c115152def410cf096e513e2a275c128ed9c3851e2726d"
+    },
+    {
+      "name": "10-reopen-seven-reset",
+      "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1597&scaling=scale-down",
+      "capture": "captures/player/10-reopen-seven-reset.png",
+      "sha256": "83547853d1437b9d26c2a7e924d723594878bf893e88dc1d9625dfff30f3219e"
+    }
+  ],
+  "measures": {
+    "fixedHeader": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 28080
+    },
+    "fixedMap": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 146640
+    },
+    "fixedSafeArea": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 13260
+    },
+    "movedList": {
+      "changed": 50727,
+      "maxChannelDelta": 240,
+      "pixels": 129596
+    },
+    "intermediateList": {
+      "changed": 51209,
+      "maxChannelDelta": 227,
+      "pixels": 129596
+    },
+    "intermediateListVersusEnd": {
+      "changed": 49773,
+      "maxChannelDelta": 232,
+      "pixels": 129596
+    },
+    "mapAfterClosingThree": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 329160
+    },
+    "mapAfterClosingSeven": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 329160
+    },
+    "listAfterSwitchingBack": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 129596
+    },
+    "listAfterReopening": {
+      "changed": 0,
+      "maxChannelDelta": 0,
+      "pixels": 129596
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "documentName": "BugMapHarness",
+  "pageId": "0:1",
+  "pageName": "Page 1",
+  "fileUrl": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=0-1",
+  "prototypeSource": {
+    "nodeId": "41:81",
+    "name": "07 · 메인 / 발견 지도",
+    "clusterMarkerId": "41:394",
+    "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81",
+    "overflowClusterMarkerId": "41:390"
+  },
+  "editPolicy": "기록 묶음 선택 프레임을 두 개 추가한다. 원본 프로토타입 변경은 3건 41:394와 4건 이상 시연 41:390의 진입에 한정한다. 새 프레임에서 닫기를 연결하고 4건 이상 프레임은 목록 스크롤을 설정한다. 기존 출처 인터랙션이 있으면 재사용하고 다른 기존 지도 레이어·프레임·연결을 보존한다.",
+  "preferredBridge": "Cursor Talk to Figma"
+}

@@ -1,0 +1,459 @@
+{
+  "id": "162:1191",
+  "name": "기록 행 · 주변 관찰 기록",
+  "type": "COMPONENT",
+  "x": 6120,
+  "y": -256,
+  "width": 358,
+  "height": 104,
+  "opacity": 1,
+  "rotation": 0,
+  "visible": true,
+  "fills": [
+    {
+      "type": "SOLID",
+      "visible": true,
+      "opacity": 1,
+      "blendMode": "NORMAL",
+      "color": {
+        "r": 0.09803921729326248,
+        "g": 0.16862745583057404,
+        "b": 0.125490203499794
+      },
+      "boundVariables": {
+        "color": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:162:1193"
+        }
+      }
+    }
+  ],
+  "layoutMode": "HORIZONTAL",
+  "layoutPositioning": "AUTO",
+  "cornerRadius": 16,
+  "topLeftRadius": 16,
+  "topRightRadius": 16,
+  "bottomLeftRadius": 16,
+  "bottomRightRadius": 16,
+  "strokeWeight": 1,
+  "strokeAlign": "INSIDE",
+  "clipsContent": false,
+  "overflowDirection": "NONE",
+  "strokeTopWeight": 1,
+  "strokeRightWeight": 1,
+  "strokeBottomWeight": 1,
+  "strokeLeftWeight": 1,
+  "isMask": false,
+  "primaryAxisSizingMode": "FIXED",
+  "counterAxisSizingMode": "FIXED",
+  "layoutSizingHorizontal": "FIXED",
+  "layoutSizingVertical": "FIXED",
+  "itemSpacing": 12,
+  "paddingLeft": 12,
+  "paddingRight": 14,
+  "paddingTop": 12,
+  "paddingBottom": 12,
+  "primaryAxisAlignItems": "MIN",
+  "counterAxisAlignItems": "CENTER",
+  "strokes": [],
+  "effects": [],
+  "reactions": [],
+  "semanticId": "row-master",
+  "componentName": "recordRow",
+  "boundVariables": {
+    "fills": [
+      {
+        "type": "VARIABLE_ALIAS",
+        "id": "VariableID:162:1193"
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "162:1194",
+      "name": "사진 · 80 × 80 크롭",
+      "type": "FRAME",
+      "x": 12,
+      "y": 12,
+      "width": 80,
+      "height": 80,
+      "opacity": 1,
+      "rotation": 0,
+      "visible": true,
+      "fills": [],
+      "layoutMode": "VERTICAL",
+      "layoutPositioning": "AUTO",
+      "cornerRadius": 12,
+      "topLeftRadius": 12,
+      "topRightRadius": 12,
+      "bottomLeftRadius": 12,
+      "bottomRightRadius": 12,
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "clipsContent": true,
+      "overflowDirection": "NONE",
+      "strokeTopWeight": 1,
+      "strokeRightWeight": 1,
+      "strokeBottomWeight": 1,
+      "strokeLeftWeight": 1,
+      "isMask": false,
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "FIXED",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "itemSpacing": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "strokes": [],
+      "effects": [],
+      "reactions": [],
+      "children": [
+        {
+          "id": "162:1195",
+          "name": "사진 원본 · 정사각형",
+          "type": "RECTANGLE",
+          "x": 0,
+          "y": 0,
+          "width": 80,
+          "height": 80,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [],
+          "layoutPositioning": "ABSOLUTE",
+          "cornerRadius": 0,
+          "topLeftRadius": 0,
+          "topRightRadius": 0,
+          "bottomLeftRadius": 0,
+          "bottomRightRadius": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "strokeTopWeight": 1,
+          "strokeRightWeight": 1,
+          "strokeBottomWeight": 1,
+          "strokeLeftWeight": 1,
+          "isMask": false,
+          "layoutSizingHorizontal": "FIXED",
+          "layoutSizingVertical": "FIXED",
+          "strokes": [],
+          "effects": [],
+          "reactions": []
+        },
+        {
+          "id": "162:1196",
+          "name": "사진 원본 · 원래 종횡비",
+          "type": "RECTANGLE",
+          "x": -10.666666984558105,
+          "y": 0,
+          "width": 101.33333587646484,
+          "height": 80,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [],
+          "layoutPositioning": "ABSOLUTE",
+          "cornerRadius": 0,
+          "topLeftRadius": 0,
+          "topRightRadius": 0,
+          "bottomLeftRadius": 0,
+          "bottomRightRadius": 0,
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "strokeTopWeight": 1,
+          "strokeRightWeight": 1,
+          "strokeBottomWeight": 1,
+          "strokeLeftWeight": 1,
+          "isMask": false,
+          "layoutSizingHorizontal": "FIXED",
+          "layoutSizingVertical": "FIXED",
+          "strokes": [],
+          "effects": [],
+          "reactions": []
+        }
+      ]
+    },
+    {
+      "id": "162:1197",
+      "name": "기록 정보",
+      "type": "FRAME",
+      "x": 104,
+      "y": 29,
+      "width": 208,
+      "height": 46,
+      "opacity": 1,
+      "rotation": 0,
+      "visible": true,
+      "fills": [],
+      "layoutMode": "VERTICAL",
+      "layoutPositioning": "AUTO",
+      "cornerRadius": 0,
+      "topLeftRadius": 0,
+      "topRightRadius": 0,
+      "bottomLeftRadius": 0,
+      "bottomRightRadius": 0,
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "clipsContent": false,
+      "overflowDirection": "NONE",
+      "strokeTopWeight": 1,
+      "strokeRightWeight": 1,
+      "strokeBottomWeight": 1,
+      "strokeLeftWeight": 1,
+      "isMask": false,
+      "primaryAxisSizingMode": "AUTO",
+      "counterAxisSizingMode": "FIXED",
+      "layoutSizingHorizontal": "FILL",
+      "layoutSizingVertical": "HUG",
+      "itemSpacing": 2,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "strokes": [],
+      "effects": [],
+      "reactions": [],
+      "children": [
+        {
+          "id": "162:1198",
+          "name": "곤충 이름",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "width": 208,
+          "height": 24,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.9529411792755127,
+                "g": 0.9686274528503418,
+                "b": 0.9333333373069763
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:41:389"
+                }
+              }
+            }
+          ],
+          "layoutPositioning": "AUTO",
+          "strokeWeight": 1,
+          "strokeAlign": "OUTSIDE",
+          "isMask": false,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
+          "textAutoResize": "HEIGHT",
+          "textAlignVertical": "TOP",
+          "strokes": [],
+          "effects": [],
+          "reactions": [],
+          "characters": "이름 모름",
+          "fontSize": 18,
+          "fontName": {
+            "family": "Noto Sans KR",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 24
+          },
+          "boundVariables": {
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:41:389"
+              }
+            ]
+          }
+        },
+        {
+          "id": "162:1199",
+          "name": "발견 날짜",
+          "type": "TEXT",
+          "x": 0,
+          "y": 26,
+          "width": 208,
+          "height": 20,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.7411764860153198,
+                "g": 0.8039215803146362,
+                "b": 0.7607843279838562
+              },
+              "boundVariables": {
+                "color": {
+                  "type": "VARIABLE_ALIAS",
+                  "id": "VariableID:41:477"
+                }
+              }
+            }
+          ],
+          "layoutPositioning": "AUTO",
+          "strokeWeight": 1,
+          "strokeAlign": "OUTSIDE",
+          "isMask": false,
+          "layoutSizingHorizontal": "FILL",
+          "layoutSizingVertical": "HUG",
+          "textAutoResize": "HEIGHT",
+          "textAlignVertical": "TOP",
+          "strokes": [],
+          "effects": [],
+          "reactions": [],
+          "characters": "2026.11.23",
+          "fontSize": 14,
+          "fontName": {
+            "family": "Noto Sans KR",
+            "style": "Medium",
+            "variationSettings": {
+              "wght": 500
+            }
+          },
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 20
+          },
+          "boundVariables": {
+            "fills": [
+              {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:41:477"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "162:1203",
+      "name": "Lucide · ChevronRight",
+      "type": "FRAME",
+      "x": 324,
+      "y": 42,
+      "width": 20,
+      "height": 20,
+      "opacity": 1,
+      "rotation": 0,
+      "visible": true,
+      "fills": [],
+      "layoutMode": "VERTICAL",
+      "layoutPositioning": "AUTO",
+      "cornerRadius": 0,
+      "topLeftRadius": 0,
+      "topRightRadius": 0,
+      "bottomLeftRadius": 0,
+      "bottomRightRadius": 0,
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "clipsContent": false,
+      "overflowDirection": "NONE",
+      "strokeTopWeight": 1,
+      "strokeRightWeight": 1,
+      "strokeBottomWeight": 1,
+      "strokeLeftWeight": 1,
+      "isMask": false,
+      "primaryAxisSizingMode": "FIXED",
+      "counterAxisSizingMode": "FIXED",
+      "layoutSizingHorizontal": "FIXED",
+      "layoutSizingVertical": "FIXED",
+      "itemSpacing": 0,
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "primaryAxisAlignItems": "MIN",
+      "counterAxisAlignItems": "MIN",
+      "strokes": [],
+      "effects": [],
+      "reactions": [],
+      "children": [
+        {
+          "id": "162:1202",
+          "name": "Lucide · ChevronRight",
+          "type": "GROUP",
+          "x": 7.5,
+          "y": 5,
+          "width": 5,
+          "height": 10,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "fills": [],
+          "layoutPositioning": "ABSOLUTE",
+          "isMask": false,
+          "layoutSizingHorizontal": "FIXED",
+          "layoutSizingVertical": "FIXED",
+          "effects": [],
+          "reactions": [],
+          "children": [
+            {
+              "id": "162:1201",
+              "name": "Vector",
+              "type": "VECTOR",
+              "x": 7.5,
+              "y": 5,
+              "width": 5,
+              "height": 10,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "fills": [],
+              "layoutPositioning": "AUTO",
+              "cornerRadius": 0,
+              "strokeWeight": 1.6666666269302368,
+              "strokeAlign": "CENTER",
+              "isMask": false,
+              "layoutSizingHorizontal": "FIXED",
+              "layoutSizingVertical": "FIXED",
+              "strokes": [
+                {
+                  "type": "SOLID",
+                  "visible": true,
+                  "opacity": 1,
+                  "blendMode": "NORMAL",
+                  "color": {
+                    "r": 0.7411764860153198,
+                    "g": 0.8039215803146362,
+                    "b": 0.7607843279838562
+                  },
+                  "boundVariables": {}
+                }
+              ],
+              "effects": [],
+              "reactions": [],
+              "vectorPaths": [
+                {
+                  "windingRule": "NONE",
+                  "data": "M 0 10 L 5 5 L 0 0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

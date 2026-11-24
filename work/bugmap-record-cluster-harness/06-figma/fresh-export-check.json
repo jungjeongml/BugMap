@@ -1,0 +1,24 @@
+{
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "remoteFileKey": null,
+  "documentName": "BugMapHarness",
+  "pageId": "0:1",
+  "method": "Separate read-only Cursor export after creation. Native trees, PNG bytes, marker routes, and row master match the creation response.",
+  "planDigest": "70338b73a17699e0e95227de48e94f18d874ebce5040c50973efdce9648d0817",
+  "screenChecks": [
+    {
+      "state": "cluster-selected",
+      "nodeId": "162:1204",
+      "captureSha256": "66ac0120c3b6007282c7cb1453d1e6b2ad4522c40b3ce9b75ff5b5e4d091a6dd"
+    },
+    {
+      "state": "cluster-selected-overflow",
+      "nodeId": "162:1597",
+      "captureSha256": "fadf33586d577a7265188a1052589d91759bce842a288d05fa85c86e5d3987c2"
+    }
+  ],
+  "sameScreens": true,
+  "sameMaster": true,
+  "sameMarkerReactions": true,
+  "sameAttributionReactions": true
+}

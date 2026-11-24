@@ -1,0 +1,119 @@
+[
+  {
+    "id": "white",
+    "title": "P.rapae.jpg",
+    "author": "Gimnazijalacbp",
+    "sampleSpecies": "배추흰나비 (Pieris rapae)",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "checkedOn": "2026-11-24",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:P.rapae.jpg",
+    "original": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/P.rapae.jpg",
+      "dimensions": {
+        "width": 3663,
+        "height": 2835
+      },
+      "bytes": 3214838,
+      "sha256": "e37ed363627fcbee38b683d016caba876b31928bcbdcbff21bca6c8542dd0f9f"
+    },
+    "treatment": {
+      "crop": {
+        "x": 414,
+        "y": 0,
+        "width": 2835,
+        "height": 2835
+      },
+      "output": "264 × 264 px PNG",
+      "metadata": "원본 EXIF와 텍스트 제외"
+    },
+    "preview": {
+      "path": "assets/photos/white.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "bytes": 131655,
+      "sha256": "72b89e50bd31e29c8d3768ef024dbbb5b58a1a4307eac02cae5c4cd750070540",
+      "license": "CC0 1.0"
+    }
+  },
+  {
+    "id": "yellow",
+    "title": "Colias erate formosana male 20151003.jpg",
+    "author": "Peellden",
+    "sampleSpecies": "노랑나비 (Colias erate formosana)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "checkedOn": "2026-11-24",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colias_erate_formosana_male_20151003.jpg",
+    "original": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Colias_erate_formosana_male_20151003.jpg",
+      "dimensions": {
+        "width": 4880,
+        "height": 3254
+      },
+      "bytes": 3212348,
+      "sha256": "5c9300902d7a0da524cdf239d404fb4433df95dd17d71c1cae25dd4bb54b2480"
+    },
+    "treatment": {
+      "crop": {
+        "x": 813,
+        "y": 0,
+        "width": 3254,
+        "height": 3254
+      },
+      "output": "264 × 264 px PNG",
+      "metadata": "원본 EXIF와 텍스트 제외"
+    },
+    "preview": {
+      "path": "assets/photos/yellow.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "bytes": 126057,
+      "sha256": "0781243852c082f4b21851debe15284a69d2d9b80531962a4501ebaf9e077f71",
+      "license": "CC BY-SA 4.0"
+    }
+  },
+  {
+    "id": "swallowtail",
+    "title": "Papilio xuthus 116552535.jpg",
+    "author": "heikindai_87",
+    "sampleSpecies": "호랑나비 (Papilio xuthus)",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "checkedOn": "2026-11-24",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Papilio_xuthus_116552535.jpg",
+    "original": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Papilio_xuthus_116552535.jpg",
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      },
+      "bytes": 1262860,
+      "sha256": "36f07a4b1f790a42f3c7e3354cb2644b2625a3b8b5437fd94d6470569a402042"
+    },
+    "treatment": {
+      "crop": {
+        "x": 256,
+        "y": 0,
+        "width": 1536,
+        "height": 1536
+      },
+      "output": "264 × 264 px PNG",
+      "metadata": "원본 EXIF와 텍스트 제외"
+    },
+    "preview": {
+      "path": "assets/photos/swallowtail.png",
+      "dimensions": {
+        "width": 264,
+        "height": 264
+      },
+      "bytes": 99394,
+      "sha256": "1e1c6a0295a5c4ce85071f24b34769cabef8d9936865fe11e417e762af37e840",
+      "license": "CC0 1.0"
+    }
+  }
+]

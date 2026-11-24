@@ -1,0 +1,124 @@
+{
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "remoteFileKey": null,
+  "documentName": "BugMapHarness",
+  "pageId": "0:1",
+  "method": "Read-only original roots, full native trees and PNG before; exact comparison after excluding two appended click reactions",
+  "originalMarkers": [
+    "41:394",
+    "41:390"
+  ],
+  "originalRootCount": 16,
+  "nativeMainPngBefore": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c",
+  "nativeMainPngAfter": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c",
+  "priorFlowStartingPoints": [
+    {
+      "nodeId": "50:1081",
+      "name": "Flow 1"
+    }
+  ],
+  "nativeFlowStartingPointsAfter": [
+    {
+      "nodeId": "50:1081",
+      "name": "Flow 1"
+    }
+  ],
+  "existingRoots": [
+    {
+      "id": "7:2",
+      "name": "02 · 메인 / 발견 지도",
+      "treeBefore": "66c94384b95fe5a69359cf21599e356b624b9c77ea55012a81396142c0bf46ee",
+      "treeAfterExcludingTwoRoutes": "66c94384b95fe5a69359cf21599e356b624b9c77ea55012a81396142c0bf46ee"
+    },
+    {
+      "id": "19:2",
+      "name": "05 · 첫 로그인 / 지도 배경",
+      "treeBefore": "773e7f7095b5f970c8061cdb9fa7fac3163b8edf671776487eb675f6dff2b226",
+      "treeAfterExcludingTwoRoutes": "773e7f7095b5f970c8061cdb9fa7fac3163b8edf671776487eb675f6dff2b226"
+    },
+    {
+      "id": "41:81",
+      "name": "07 · 메인 / 발견 지도",
+      "treeBefore": "8f0e2f966bbe39b57bcf92b18555c850823058cec6c0faf4d1d217effd651e88",
+      "treeAfterExcludingTwoRoutes": "8f0e2f966bbe39b57bcf92b18555c850823058cec6c0faf4d1d217effd651e88"
+    },
+    {
+      "id": "50:1003",
+      "name": "RecordCard · 넓적사슴벌레",
+      "treeBefore": "93b39f29f25e8abd118ed473dd61bfa7a35037c7752e0824443136ab74e7a5da",
+      "treeAfterExcludingTwoRoutes": "93b39f29f25e8abd118ed473dd61bfa7a35037c7752e0824443136ab74e7a5da"
+    },
+    {
+      "id": "50:1015",
+      "name": "RecordCard · 왕잠자리",
+      "treeBefore": "117a7ae6af8fda80e51db35f72357fd9fc9be7a6b103abe576b80853814aa434",
+      "treeAfterExcludingTwoRoutes": "117a7ae6af8fda80e51db35f72357fd9fc9be7a6b103abe576b80853814aa434"
+    },
+    {
+      "id": "50:1024",
+      "name": "RecordCard · 칠성무당벌레",
+      "treeBefore": "349277ce96b7d74388b5b2ea187bb68ed9038155ed158caeee62b5109aecd717",
+      "treeAfterExcludingTwoRoutes": "349277ce96b7d74388b5b2ea187bb68ed9038155ed158caeee62b5109aecd717"
+    },
+    {
+      "id": "50:1033",
+      "name": "MapTab · 메인 내비게이션",
+      "treeBefore": "aeb3f3187282e5b8f428537b7ee542927cde9221f275990ea7afcc72096bb62a",
+      "treeAfterExcludingTwoRoutes": "aeb3f3187282e5b8f428537b7ee542927cde9221f275990ea7afcc72096bb62a"
+    },
+    {
+      "id": "50:1064",
+      "name": "Search · 곤충·지역",
+      "treeBefore": "dde66e73abeb072ed044e76733e0d09d97b39637ea714578fe9b330357f39773",
+      "treeAfterExcludingTwoRoutes": "dde66e73abeb072ed044e76733e0d09d97b39637ea714578fe9b330357f39773"
+    },
+    {
+      "id": "50:1072",
+      "name": "MapReturn · 지도 보기",
+      "treeBefore": "9cba2243a1a5c75d53497d0078c8cc684353f1bdbb304567a2a404aebcb8f3d7",
+      "treeAfterExcludingTwoRoutes": "9cba2243a1a5c75d53497d0078c8cc684353f1bdbb304567a2a404aebcb8f3d7"
+    },
+    {
+      "id": "50:1081",
+      "name": "08 · 내 주변 발견 / 전체",
+      "treeBefore": "ced1627ec4049a20fd6aa30362affd915ed013cf213ed273ab4bc72fd292b6f3",
+      "treeAfterExcludingTwoRoutes": "ced1627ec4049a20fd6aa30362affd915ed013cf213ed273ab4bc72fd292b6f3"
+    },
+    {
+      "id": "50:1190",
+      "name": "08 · 내 주변 발견 / 3 km 이내",
+      "treeBefore": "058404a64b9c1f3dc8f17c2dbf6ebc7b8a3721e062fd9662f620f8818fc2b289",
+      "treeAfterExcludingTwoRoutes": "058404a64b9c1f3dc8f17c2dbf6ebc7b8a3721e062fd9662f620f8818fc2b289"
+    },
+    {
+      "id": "61:1294",
+      "name": "09 · 발견·채집 기록 / 컴포넌트",
+      "treeBefore": "01f432d29f447efdf2bff2bcf591846dc375afd692062d5bc2fd7c3ea6e2e27e",
+      "treeAfterExcludingTwoRoutes": "01f432d29f447efdf2bff2bcf591846dc375afd692062d5bc2fd7c3ea6e2e27e"
+    },
+    {
+      "id": "61:1295",
+      "name": "09 · 발견·채집 기록 / 첫 진입 · 0/3장",
+      "treeBefore": "e82673b75608c3ea7cc0224ba8d741bb99623591a4812193534e2bca0dd33653",
+      "treeAfterExcludingTwoRoutes": "e82673b75608c3ea7cc0224ba8d741bb99623591a4812193534e2bca0dd33653"
+    },
+    {
+      "id": "61:1552",
+      "name": "09 · 발견·채집 기록 / 입력 완료 · 3/3장",
+      "treeBefore": "6f0fe7d5482e432a3e2d38640a3280c2d998a452d4dc573401578b5b36905887",
+      "treeAfterExcludingTwoRoutes": "6f0fe7d5482e432a3e2d38640a3280c2d998a452d4dc573401578b5b36905887"
+    },
+    {
+      "id": "154:317",
+      "name": "09 · 발견 위치 선택 / 첫 진입",
+      "treeBefore": "f5c54aad8a706c91d9047f22ea4452720ad414c4fcd67726489393a07de6245d",
+      "treeAfterExcludingTwoRoutes": "f5c54aad8a706c91d9047f22ea4452720ad414c4fcd67726489393a07de6245d"
+    },
+    {
+      "id": "154:679",
+      "name": "09 · 발견 위치 선택 / 핀 선택",
+      "treeBefore": "520ebefb45ae2e1c7862581afd877c0fb8fd4f2da8a63e21719ba767c2a6bcd9",
+      "treeAfterExcludingTwoRoutes": "520ebefb45ae2e1c7862581afd877c0fb8fd4f2da8a63e21719ba767c2a6bcd9"
+    }
+  ]
+}

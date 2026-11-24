@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "command": "lint:figma",
+  "inputs": {
+    "04-wireframes/wireframes.json": "899b024b7b56c7fc93e1c72d8760d4b464890fce36ed499b4becc0daf6f853a6",
+    "05-design-system/assets-manifest.json": "117d99797e9eb9c4bb7ac3c42ac37f1566eac374030c7e271b8ffcad262a784e",
+    "05-design-system/assets/mapbox-logo.svg": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+    "05-design-system/assets/photos/dragonfly.png": "45da6867e9161e646a0f32d71edcbc32f90482749f8a6564f797534f9e4395b5",
+    "05-design-system/assets/photos/ladybird.png": "4179e6c92ea6fbeecb107589a3935074b7873b6be18106cd720d6490613716ed",
+    "05-design-system/assets/photos/specimen-1.png": "342c7354d636ad002a586951307416039661ca8704a3ac840316f3e4bbc0025c",
+    "05-design-system/assets/photos/stag-beetle.png": "193d736abd3b5ff8f7dac3e81d7c41060047bef995a7ad942837c2d28571f60f",
+    "05-design-system/assets/photos/swallowtail.png": "1e1c6a0295a5c4ce85071f24b34769cabef8d9936865fe11e417e762af37e840",
+    "05-design-system/assets/photos/white.png": "72b89e50bd31e29c8d3768ef024dbbb5b58a1a4307eac02cae5c4cd750070540",
+    "05-design-system/assets/photos/yellow.png": "0781243852c082f4b21851debe15284a69d2d9b80531962a4501ebaf9e077f71",
+    "05-design-system/components.json": "a777d4c8a82d9db9d825f111e0510040f9069addab78d2b462f8bb41d08bb245",
+    "05-design-system/copy.json": "3f92c922911f4f64d6b58d0059ca1d99a04a7acc691c18e1479a35562a75af99",
+    "05-design-system/tokens.json": "aa59358385eff880121c555c257120bea9e3ca82cc04d94a81ad02432999bc36",
+    "06-figma/node-map.json": "d39c917edb7d69c8670a0b943f6a332f8632b0ac93774def3af2dab5e2f32e59",
+    "06-figma/nodes.json": "78af3faef862c1701f209ba0779bf8f9b40ac89fd4ebf9537ac08c286b94dbaa",
+    "control/figma.json": "752d47072c49dd55a00890da1925c10eb1083059cfd55e9981beb537835b8758"
+  },
+  "issues": [],
+  "nodeCount": 822,
+  "svgAssets": [
+    {
+      "nodeId": "162:1514",
+      "asset": "assets/mapbox-logo.svg",
+      "sha256": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+      "profile": "Mapbox GL JS",
+      "geometrySha256": "89691d72fd8d76d9a057b3dd1eddf222db25c93441b49ffb80d57708d190789e",
+      "paintCount": 12
+    },
+    {
+      "nodeId": "162:1907",
+      "asset": "assets/mapbox-logo.svg",
+      "sha256": "138917d58861eb9d24f730936650d3dbb9b045e0897383fd76add833f83546cc",
+      "profile": "Mapbox GL JS",
+      "geometrySha256": "89691d72fd8d76d9a057b3dd1eddf222db25c93441b49ffb80d57708d190789e",
+      "paintCount": 12
+    }
+  ]
+}

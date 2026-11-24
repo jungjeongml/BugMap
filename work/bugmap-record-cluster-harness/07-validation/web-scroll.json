@@ -1,0 +1,470 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "snapshots": [
+    {
+      "count": 7,
+      "start": {
+        "scrollTop": 0,
+        "viewport": {
+          "x": 16,
+          "y": 448,
+          "width": 358,
+          "height": 362
+        },
+        "title": "이 주변 관찰 기록 7건",
+        "header": {
+          "x": 16,
+          "y": 397.5,
+          "width": 201.875,
+          "height": 29
+        },
+        "close": {
+          "x": 326,
+          "y": 388,
+          "width": 48,
+          "height": 48
+        },
+        "rows": [
+          {
+            "id": "record-overflow-demo-01",
+            "box": {
+              "x": 16,
+              "y": 448,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-02",
+            "box": {
+              "x": 16,
+              "y": 560,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-03",
+            "box": {
+              "x": 16,
+              "y": 672,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-04",
+            "box": {
+              "x": 16,
+              "y": 784,
+              "width": 358,
+              "height": 104
+            },
+            "height": 26,
+            "photo": 14,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-05",
+            "box": {
+              "x": 16,
+              "y": 896,
+              "width": 358,
+              "height": 104
+            },
+            "height": 0,
+            "photo": 0,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-06",
+            "box": {
+              "x": 16,
+              "y": 1008,
+              "width": 358,
+              "height": 104
+            },
+            "height": 0,
+            "photo": 0,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-07",
+            "box": {
+              "x": 16,
+              "y": 1120,
+              "width": 358,
+              "height": 104
+            },
+            "height": 0,
+            "photo": 0,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          }
+        ],
+        "clicked": null
+      },
+      "end": {
+        "scrollTop": 414,
+        "viewport": {
+          "x": 16,
+          "y": 448,
+          "width": 358,
+          "height": 362
+        },
+        "title": "이 주변 관찰 기록 7건",
+        "header": {
+          "x": 16,
+          "y": 397.5,
+          "width": 201.875,
+          "height": 29
+        },
+        "close": {
+          "x": 326,
+          "y": 388,
+          "width": 48,
+          "height": 48
+        },
+        "rows": [
+          {
+            "id": "record-overflow-demo-01",
+            "box": {
+              "x": 16,
+              "y": 34,
+              "width": 358,
+              "height": 104
+            },
+            "height": 0,
+            "photo": 0,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-02",
+            "box": {
+              "x": 16,
+              "y": 146,
+              "width": 358,
+              "height": 104
+            },
+            "height": 0,
+            "photo": 0,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-03",
+            "box": {
+              "x": 16,
+              "y": 258,
+              "width": 358,
+              "height": 104
+            },
+            "height": 0,
+            "photo": 0,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-04",
+            "box": {
+              "x": 16,
+              "y": 370,
+              "width": 358,
+              "height": 104
+            },
+            "height": 26,
+            "photo": 14,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-05",
+            "box": {
+              "x": 16,
+              "y": 482,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-06",
+            "box": {
+              "x": 16,
+              "y": 594,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-07",
+            "box": {
+              "x": 16,
+              "y": 706,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          }
+        ],
+        "clicked": null
+      },
+      "clicked": "record-overflow-demo-07",
+      "captures": [
+        {
+          "name": "7-start.png",
+          "sha256": "181318b1d851da302c204edb2b1abf8279912b8c9aac844124fc8283f3759185",
+          "path": "captures/web-scroll/7-start.png"
+        },
+        {
+          "name": "7-end.png",
+          "sha256": "d0fc2989ea24dfb4312dddcb1a2e0fe9eddf1187d2de52f0a8a73c9c9982d24d",
+          "path": "captures/web-scroll/7-end.png"
+        }
+      ]
+    },
+    {
+      "count": 4,
+      "start": {
+        "scrollTop": 0,
+        "viewport": {
+          "x": 16,
+          "y": 448,
+          "width": 358,
+          "height": 362
+        },
+        "title": "이 주변 관찰 기록 4건",
+        "header": {
+          "x": 16,
+          "y": 397.5,
+          "width": 203.84375,
+          "height": 29
+        },
+        "close": {
+          "x": 326,
+          "y": 388,
+          "width": 48,
+          "height": 48
+        },
+        "rows": [
+          {
+            "id": "record-overflow-demo-01",
+            "box": {
+              "x": 16,
+              "y": 448,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-02",
+            "box": {
+              "x": 16,
+              "y": 560,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-03",
+            "box": {
+              "x": 16,
+              "y": 672,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-04",
+            "box": {
+              "x": 16,
+              "y": 784,
+              "width": 358,
+              "height": 104
+            },
+            "height": 26,
+            "photo": 14,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          }
+        ],
+        "clicked": null
+      },
+      "end": {
+        "scrollTop": 78,
+        "viewport": {
+          "x": 16,
+          "y": 448,
+          "width": 358,
+          "height": 362
+        },
+        "title": "이 주변 관찰 기록 4건",
+        "header": {
+          "x": 16,
+          "y": 397.5,
+          "width": 203.84375,
+          "height": 29
+        },
+        "close": {
+          "x": 326,
+          "y": 388,
+          "width": 48,
+          "height": 48
+        },
+        "rows": [
+          {
+            "id": "record-overflow-demo-01",
+            "box": {
+              "x": 16,
+              "y": 370,
+              "width": 358,
+              "height": 104
+            },
+            "height": 26,
+            "photo": 14,
+            "labels": [
+              "hidden",
+              "hidden"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-02",
+            "box": {
+              "x": 16,
+              "y": 482,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-03",
+            "box": {
+              "x": 16,
+              "y": 594,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          },
+          {
+            "id": "record-overflow-demo-04",
+            "box": {
+              "x": 16,
+              "y": 706,
+              "width": 358,
+              "height": 104
+            },
+            "height": 104,
+            "photo": 80,
+            "labels": [
+              "visible",
+              "visible"
+            ]
+          }
+        ],
+        "clicked": null
+      },
+      "clicked": "record-overflow-demo-04",
+      "captures": [
+        {
+          "name": "4-start.png",
+          "sha256": "36d3aa2fc2396081fa2b24effd4ed5dc0ba9c69d666865cd915dedd5ce838df2",
+          "path": "captures/web-scroll/4-start.png"
+        },
+        {
+          "name": "4-end.png",
+          "sha256": "faa3f6665ce996ca8e46f1dbf87b5875e957778d96b5e3e035ab395718e0d448",
+          "path": "captures/web-scroll/4-end.png"
+        }
+      ]
+    }
+  ]
+}

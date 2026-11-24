@@ -476,3 +476,23 @@
 
 - 로컬 `main`에 웹 로그인 계획 `17d381d`, 네이티브 개발 빌드 설정과 지도 로딩 수정 `f4b8c38`, 웹 소셜 로그인 구현 `de6f56f`를 커밋했다. [웹 로그인 계획](../docs/superpowers/plans/2026-11-23-web-social-login.md) · [EAS 설정](../eas.json)
 - 인증·지도 테스트 38개, 인증 서버 테스트 18개, 앱 타입 검사와 Git 공백 검사가 통과했다. 전체 테스트는 두 차례 모두 82개 중 80개가 통과했고 디자인 하네스의 Chromium 통합 테스트 2개가 실패했다. 웹·iOS 번들 재검사와 실계정 로그인 및 iPhone 지도 렌더링 확인이 남아 있다.
+
+## 2026-11-24 — 디자인 하네스의 Figma 작업 대상 명시
+
+- 새 화면과 상태별 결과물의 기본 위치를 BugMapHarness의 Page 1로 지정하고, 데스크톱 Cursor MCP Plugin과 Cursor Talk to Figma MCP 연결을 작업 지침에 반영했다. 기존 기록 작성 하네스의 대상 파일·페이지와 대조했다. [작업 규칙](../AGENTS.md) · [디자인 하네스 절차](../docs/design-harness.md)
+
+## 2026-11-24 — 관찰 위치와 기록 묶음 선택 요구사항
+
+- [제품 PRD](../docs/PRD.md)에 기록 묶음 선택 패널, GPS와 지도 핀을 통한 위치 입력, 위치 없이 저장한 뒤 위치를 추가하는 흐름을 반영했다. [지도 명세](../docs/screens/main-map.md#기록-묶음-선택), [작성 화면 명세](../docs/screens/record-entry.md#관찰-위치-입력-기준), [디자인 기준](../docs/DESIGN.md#메인-발견-지도), [TDD](../docs/TDD.md#63-공개-위치)의 관련 내용을 맞췄다.
+- 사용자가 확인한 Figma 기록 작성 화면의 두 위치 입력 방식을 문서 요구사항에 반영했다. 스키마 상세 설계, 화면 제작과 구현이 남아 있다.
+
+## 2026-11-24 — 09 기록 작성의 위치 선택을 지도로 통합
+
+- [제품 PRD](../docs/PRD.md)와 [기록 작성 화면 명세](../docs/screens/record-entry.md)에 단일 지도 진입, 지도 안 GPS·직접 핀, 확정·취소 동작을 정리했다.
+- BugMapHarness 09의 작성 상태 2개에서 중복 위치 버튼을 제거하고, 위치 선택 지도 2개를 배치했다. Cursor 브리지로 네 상태의 캡처를 확인했다. 위치 선택의 프로토타입 연결과 앱 동작 검증은 남아 있다. [시안 링크](../docs/screens/record-entry.md#bugmapharness-09-위치-선택-시안)
+
+## 2026-11-24 — 발견 지도 기록 묶음 선택 패널 개발 인계
+
+- 최종 검증 승인 후 3건 및 4건 이상 상태의 Figma 링크, 상태별 치수와 스크롤·상세 진입 규칙, 접근성·시연 자산을 [핸드오프](../work/bugmap-record-cluster-harness/08-handoff/HANDOFF.md)에 정리했다.
+- Figma 진입·복귀와 7건 스크롤, 정확히 4건인 HTML의 마지막 행 ID 수신, 좁은 화면과 200% 글자 배율의 검증을 인계했다. 인계 파일의 해시와 내부 링크, 사진 7장의 원본 일치를 확인했다. 앱의 기록 상세, SDK 출처, 실기기 접근성 및 조회 예외 확인은 [후속 항목](../work/bugmap-record-cluster-harness/08-handoff/open-items.md)에 있다.
+- 최종 인계 수락을 확인했다. 공식 검사에서 8단계가 모두 통과했다. [완료 기록](../work/bugmap-record-cluster-harness/control/flow.md)

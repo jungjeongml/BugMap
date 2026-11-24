@@ -1,0 +1,98 @@
+{
+  "nodes": [
+    {
+      "screen": "main-map",
+      "state": "cluster-selected",
+      "nodeId": "162:1204",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1204",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/main-map--cluster-selected.png",
+      "captureSha256": "66ac0120c3b6007282c7cb1453d1e6b2ad4522c40b3ce9b75ff5b5e4d091a6dd",
+      "web": "web/main-map--cluster-selected.html"
+    },
+    {
+      "screen": "main-map",
+      "state": "cluster-selected-overflow",
+      "nodeId": "162:1597",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=162-1597",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/main-map--cluster-selected-overflow.png",
+      "captureSha256": "fadf33586d577a7265188a1052589d91759bce842a288d05fa85c86e5d3987c2",
+      "web": "web/main-map--cluster-selected-overflow.html"
+    }
+  ],
+  "images": [
+    {
+      "nodeId": "I162:1550;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/stag-beetle.png",
+      "imageHash": "b7e7ef8c9c1088cf74cc97ad40777441513ce3ec"
+    },
+    {
+      "nodeId": "I162:1560;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/dragonfly.png",
+      "imageHash": "584fcb6e2e3f342f7a19eb6816cc7ee548efc5db"
+    },
+    {
+      "nodeId": "I162:1570;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/ladybird.png",
+      "imageHash": "e870689269fe61525d01165dc58d439bde332c38"
+    },
+    {
+      "nodeId": "I162:1942;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/ladybird.png",
+      "imageHash": "e870689269fe61525d01165dc58d439bde332c38"
+    },
+    {
+      "nodeId": "I162:1952;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/white.png",
+      "imageHash": "ec26bab74557470292d59f7f2ded54bfbe9e32aa"
+    },
+    {
+      "nodeId": "I162:1962;162:1196",
+      "fillIndex": 0,
+      "asset": "assets/photos/specimen-1.png",
+      "imageHash": "70a2d1557f4f5b9e73ba475cc62d70279266451f"
+    },
+    {
+      "nodeId": "I162:1972;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/yellow.png",
+      "imageHash": "ef601cc62167de0560d5029f72057f11701b6416"
+    },
+    {
+      "nodeId": "I162:1982;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/dragonfly.png",
+      "imageHash": "584fcb6e2e3f342f7a19eb6816cc7ee548efc5db"
+    },
+    {
+      "nodeId": "I162:1992;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/stag-beetle.png",
+      "imageHash": "b7e7ef8c9c1088cf74cc97ad40777441513ce3ec"
+    },
+    {
+      "nodeId": "I162:2002;162:1195",
+      "fillIndex": 0,
+      "asset": "assets/photos/swallowtail.png",
+      "imageHash": "1c3fb074a20187a4035b1a24496df91f9b77896e"
+    }
+  ],
+  "svgAssets": [
+    {
+      "nodeId": "162:1514",
+      "asset": "assets/mapbox-logo.svg"
+    },
+    {
+      "nodeId": "162:1907",
+      "asset": "assets/mapbox-logo.svg"
+    }
+  ]
+}

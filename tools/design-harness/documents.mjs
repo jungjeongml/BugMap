@@ -14,13 +14,28 @@ export function createDesignMD(base, options) {
   writeBundle(base, { ...outputs, '05-design-system/design-md.json': stringify(report) }, options.force);
   return report;
 }
+function renderWireframeShape({ type, x, y, width, height, topRadius }) {
+  if (type === 'text') return '';
+  const paint = `fill="${type === 'button' ? '#dddddd' : '#f7f7f7'}" stroke="#888888"`;
+  if (topRadius !== undefined) {
+    const right = x + width;
+    const bottom = y + height;
+    const arc = `A ${topRadius} ${topRadius} 0 0 1`;
+    const d = `M ${x} ${y + topRadius} ${arc} ${x + topRadius} ${y} H ${right - topRadius} ${arc} ${right} ${y + topRadius} V ${bottom} H ${x} Z`;
+    return `<path d="${d}" ${paint}/>`;
+  }
+  return `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="${type === 'button' ? 12 : 4}" ${paint}/>`;
+}
 export function renderWireframe(screen) {
   const elements = screen.blocks.map((block, i) => {
-    const { x, y, width: w, height: h } = block;
-    const rect = block.type === 'text' ? '' : `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${block.type === 'button' ? 12 : 4}" fill="${block.type === 'button' ? '#dddddd' : '#f7f7f7'}" stroke="#888888"/>`;
+    const { x, y, width, height: h, clipHeight } = block;
+    const shape = renderWireframeShape(block);
     const label = block.text ?? (block.type === 'image' ? 'Image' : '');
     const text = label ? `<text x="${x + 8}" y="${y + Math.min(h - 4, 22)}" font-family="sans-serif" font-size="14" fill="#222222">${escapeXML(label)}</text>` : '';
-    return `<g id="block-${i}" data-type="${block.type}">${rect}${text}</g>`;
+    const clipId = `clip-block-${i}`;
+    const clip = clipHeight === undefined ? '' : `<clipPath id="${clipId}"><rect x="${x}" y="${y}" width="${width}" height="${clipHeight}"/></clipPath>`;
+    const clipAttr = clip ? ` clip-path="url(#${clipId})"` : '';
+    return `${clip}<g id="block-${i}" data-type="${block.type}"${clipAttr}>${shape}${text}</g>`;
   }).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="${screen.width}" height="${screen.height}" viewBox="0 0 ${screen.width} ${screen.height}" role="img" aria-labelledby="screen-title">\n<title id="screen-title">${escapeXML(screen.title)}</title>\n<rect width="100%" height="100%" fill="#ffffff"/>\n${elements}\n</svg>\n`;
 }

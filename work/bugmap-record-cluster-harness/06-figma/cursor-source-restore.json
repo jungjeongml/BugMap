@@ -1,0 +1,17 @@
+{
+  "mode": "restore",
+  "verifiedAt": "2026-11-24T10:57:02.680Z",
+  "manifestSha256": "678f196adb480f4647c032ca14901e9ab2849baaebd9af2a4b003ece2d1f38ee",
+  "files": [
+    {
+      "name": "code.js",
+      "originalSha256": "2f454042289d25172a76599ccbdb582a8a6a197b2b554f255a6f12d4f2653c66",
+      "restoredSha256": "2f454042289d25172a76599ccbdb582a8a6a197b2b554f255a6f12d4f2653c66"
+    },
+    {
+      "name": "ui.html",
+      "originalSha256": "bf429c00fd778a79812262907a81385931bf6972dd24b0386da52726dfe74f1c",
+      "restoredSha256": "bf429c00fd778a79812262907a81385931bf6972dd24b0386da52726dfe74f1c"
+    }
+  ]
+}

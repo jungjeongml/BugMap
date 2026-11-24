@@ -1,0 +1,28 @@
+flowchart TD
+  Login(["로그인 성공 또는 세션 복구"]) -.-> Map["main-map/default · 기존 발견 지도 41:81"]
+  Map -->|"기록 3 마커 41:394 탭"| Selected["main-map/cluster-selected · 강조 마커와 세 기록"]
+  Selected -->|"닫기 · 같은 카메라에서 검색과 탭 복원"| Map
+  Selected -.->|"다른 묶음 탭"| Switch["강조·공개 기록 건수·목록을 함께 갱신"]
+  Switch -.-> Other["같은 패널 구조 · 새 묶음"]
+  Other -.->|"닫기 · 현재 카메라에서 검색과 탭 복원"| Map
+  Other -.->|"다른 묶음 탭"| Switch
+  Selected -.->|"첫째 행 · record-demo-01"| Detail1["record-demo-01 상세 · 전체 사진과 메모"]
+  Selected -.->|"둘째 행 · record-demo-02"| Detail2["record-demo-02 상세 · 전체 사진과 메모"]
+  Selected -.->|"셋째 행 · record-demo-03"| Detail3["record-demo-03 상세 · 전체 사진과 메모"]
+  Detail1 -.->|"뒤로"| Selected
+  Detail2 -.->|"뒤로"| Selected
+  Detail3 -.->|"뒤로"| Selected
+  Selected -.->|"출처 버튼 탭 · 기존 Figma 연결 재사용 가능 시 확인"| Attribution["기존 지도 출처 안내"]
+  Attribution -.->|"닫기"| Selected
+  Selected -.->|"후속 앱에서 목록 조회가 필요한 경우"| Fetch["기존 지도 문맥 · 로딩"]
+  Fetch -.->|"현재 선택과 일치하는 조회 성공"| Selected
+  Fetch -.->|"공개 기록 없음 또는 조회 실패"| Recovery["빈 결과 또는 오류 · 닫기 또는 다른 묶음 선택"]
+  Fetch -.->|"닫기"| Map
+  Fetch -.->|"다른 묶음 선택"| Switch
+  Recovery -.->|"닫기"| Map
+  Recovery -.->|"다른 묶음 선택"| Switch
+
+  %% 실선은 Figma 탭과 닫기 시연이다. 새로 제작할 프레임은 main-map/cluster-selected 한 장이다.
+  %% 점선은 기존 흐름 또는 명세다. 출처 버튼은 기존 연결이 있을 때 시연하며 없으면 열기를 앱에서 확인한다.
+  %% 예시 record-demo-01과 record-demo-02의 공개 좌표는 같고 각 목적지는 고유 기록 ID를 사용한다.
+  %% 새 권한 요청과 저장은 이 읽기 여정에 없다. 닫기는 선택을 종료하며 OS 뒤로 동작은 제품 앱의 확인 범위다.

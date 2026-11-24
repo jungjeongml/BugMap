@@ -1,0 +1,1005 @@
+{
+  "screens": [
+    {
+      "id": "main-map",
+      "state": "cluster-selected",
+      "title": "메인 / 발견 지도 · 기록 3 선택",
+      "width": 390,
+      "height": 844,
+      "safeArea": {
+        "top": 54,
+        "bottom": 34
+      },
+      "sourceCamera": {
+        "figmaNode": "41:81",
+        "sourceMarkerNode": "41:394",
+        "markerCenter": {
+          "x": 300,
+          "y": 333
+        }
+      },
+      "layoutOrder": [
+        "기존 지도와 선택 마커",
+        "패널 제목과 닫기",
+        "세 기록의 썸네일·이름·실제 발견 날짜"
+      ],
+      "panelFocusOrder": [
+        "cluster-panel-close",
+        "record-demo-01-row",
+        "record-demo-02-row",
+        "record-demo-03-row"
+      ],
+      "blocks": [
+        {
+          "id": "map-background",
+          "type": "image",
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "text": "",
+          "purpose": "기존 다크 지도와 같은 카메라의 자리표시자"
+        },
+        {
+          "id": "system-time",
+          "type": "text",
+          "x": 16,
+          "y": 15,
+          "width": 44,
+          "height": 24,
+          "text": "9:41"
+        },
+        {
+          "id": "map-label-north",
+          "type": "text",
+          "x": 252,
+          "y": 108,
+          "width": 88,
+          "height": 24,
+          "text": "성수동"
+        },
+        {
+          "id": "map-label-park",
+          "type": "text",
+          "x": 115,
+          "y": 229,
+          "width": 96,
+          "height": 24,
+          "text": "서울숲"
+        },
+        {
+          "id": "map-label-river",
+          "type": "text",
+          "x": 160,
+          "y": 485,
+          "width": 70,
+          "height": 24,
+          "text": "한강"
+        },
+        {
+          "id": "record-cluster-seven",
+          "type": "button",
+          "x": 58,
+          "y": 167,
+          "width": 64,
+          "height": 44,
+          "accessibleName": "기록 7개"
+        },
+        {
+          "id": "record-cluster-seven-label",
+          "type": "text",
+          "x": 68,
+          "y": 170,
+          "width": 46,
+          "height": 30,
+          "text": "기록 7"
+        },
+        {
+          "id": "selected-marker-outline",
+          "type": "box",
+          "x": 264,
+          "y": 307,
+          "width": 72,
+          "height": 52,
+          "purpose": "선택 마커 윤곽. 기존 중심 유지"
+        },
+        {
+          "id": "record-cluster-three",
+          "type": "button",
+          "x": 268,
+          "y": 311,
+          "width": 64,
+          "height": 44,
+          "accessibleName": "기록 3개, 선택됨",
+          "selected": true,
+          "figmaSourceNode": "41:394"
+        },
+        {
+          "id": "record-cluster-three-label",
+          "type": "text",
+          "x": 278,
+          "y": 314,
+          "width": 46,
+          "height": 30,
+          "text": "기록 3"
+        },
+        {
+          "id": "location-dot",
+          "type": "text",
+          "x": 166,
+          "y": 289,
+          "width": 22,
+          "height": 25,
+          "text": "●"
+        },
+        {
+          "id": "location-label",
+          "type": "text",
+          "x": 193,
+          "y": 289,
+          "width": 65,
+          "height": 25,
+          "text": "내 위치"
+        },
+        {
+          "id": "mapbox-logo-slot",
+          "type": "text",
+          "x": 8,
+          "y": 353,
+          "width": 100,
+          "height": 28,
+          "text": "Mapbox",
+          "purpose": "원본 공식 Mapbox 로고 자리표시자"
+        },
+        {
+          "id": "map-attribution",
+          "type": "button",
+          "x": 338,
+          "y": 344,
+          "width": 44,
+          "height": 44,
+          "accessibleName": "지도 출처 정보"
+        },
+        {
+          "id": "map-attribution-label",
+          "type": "text",
+          "x": 345,
+          "y": 347,
+          "width": 29,
+          "height": 28,
+          "text": "ⓘ"
+        },
+        {
+          "id": "cluster-panel",
+          "type": "box",
+          "topRadius": 32,
+          "x": 0,
+          "y": 396,
+          "width": 390,
+          "height": 448,
+          "purpose": "기존 검색·탭 자리에 놓이는 제목, 닫기, 세 행과 하단 안전 영역"
+        },
+        {
+          "id": "cluster-panel-title",
+          "type": "text",
+          "x": 12,
+          "y": 409,
+          "width": 292,
+          "height": 38,
+          "text": "이 주변 관찰 기록 3건",
+          "designFontSize": 24
+        },
+        {
+          "id": "cluster-panel-close",
+          "type": "button",
+          "x": 326,
+          "y": 408,
+          "width": 48,
+          "height": 48,
+          "accessibleName": "주변 관찰 기록 닫기"
+        },
+        {
+          "id": "cluster-panel-close-label",
+          "type": "text",
+          "x": 337,
+          "y": 412,
+          "width": 26,
+          "height": 30,
+          "text": "×"
+        },
+        {
+          "id": "record-demo-01-row",
+          "type": "button",
+          "x": 16,
+          "y": 468,
+          "width": 358,
+          "height": 104,
+          "recordId": "record-demo-01",
+          "detailRecordId": "record-demo-01",
+          "publicCoordinateGroup": "demo-public-location-a",
+          "accessibleName": "넓적사슴벌레, 2026.11.23 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "id": "record-demo-01-photo",
+          "type": "image",
+          "x": 28,
+          "y": 480,
+          "width": 80,
+          "height": 80,
+          "text": "사진",
+          "purpose": "시연 기록의 사진 썸네일 자리표시자"
+        },
+        {
+          "id": "record-demo-01-text-1",
+          "type": "text",
+          "x": 116,
+          "y": 492,
+          "width": 222,
+          "height": 29,
+          "text": "넓적사슴벌레",
+          "designFontSize": 18
+        },
+        {
+          "id": "record-demo-01-text-2",
+          "type": "text",
+          "x": 116,
+          "y": 516,
+          "width": 222,
+          "height": 24,
+          "text": "2026.11.23",
+          "designFontSize": 14
+        },
+        {
+          "id": "record-demo-01-chevron",
+          "type": "text",
+          "x": 339,
+          "y": 500,
+          "width": 25,
+          "height": 26,
+          "text": "›"
+        },
+        {
+          "id": "record-demo-02-row",
+          "type": "button",
+          "x": 16,
+          "y": 580,
+          "width": 358,
+          "height": 104,
+          "recordId": "record-demo-02",
+          "detailRecordId": "record-demo-02",
+          "publicCoordinateGroup": "demo-public-location-a",
+          "accessibleName": "왕잠자리, 2026.11.19 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "id": "record-demo-02-photo",
+          "type": "image",
+          "x": 28,
+          "y": 592,
+          "width": 80,
+          "height": 80,
+          "text": "사진",
+          "purpose": "시연 기록의 사진 썸네일 자리표시자"
+        },
+        {
+          "id": "record-demo-02-text-1",
+          "type": "text",
+          "x": 116,
+          "y": 604,
+          "width": 222,
+          "height": 29,
+          "text": "왕잠자리",
+          "designFontSize": 18
+        },
+        {
+          "id": "record-demo-02-text-2",
+          "type": "text",
+          "x": 116,
+          "y": 628,
+          "width": 222,
+          "height": 24,
+          "text": "2026.11.19",
+          "designFontSize": 14
+        },
+        {
+          "id": "record-demo-02-chevron",
+          "type": "text",
+          "x": 339,
+          "y": 612,
+          "width": 25,
+          "height": 26,
+          "text": "›"
+        },
+        {
+          "id": "record-demo-03-row",
+          "type": "button",
+          "x": 16,
+          "y": 692,
+          "width": 358,
+          "height": 104,
+          "recordId": "record-demo-03",
+          "detailRecordId": "record-demo-03",
+          "publicCoordinateGroup": "demo-public-location-b",
+          "accessibleName": "이름 모름, 2026.11.16 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "id": "record-demo-03-photo",
+          "type": "image",
+          "x": 28,
+          "y": 704,
+          "width": 80,
+          "height": 80,
+          "text": "사진",
+          "purpose": "시연 기록의 사진 썸네일 자리표시자"
+        },
+        {
+          "id": "record-demo-03-text-1",
+          "type": "text",
+          "x": 116,
+          "y": 716,
+          "width": 222,
+          "height": 29,
+          "text": "이름 모름",
+          "designFontSize": 18
+        },
+        {
+          "id": "record-demo-03-text-2",
+          "type": "text",
+          "x": 116,
+          "y": 740,
+          "width": 222,
+          "height": 24,
+          "text": "2026.11.16",
+          "designFontSize": 14
+        },
+        {
+          "id": "record-demo-03-chevron",
+          "type": "text",
+          "x": 339,
+          "y": 724,
+          "width": 25,
+          "height": 26,
+          "text": "›"
+        },
+        {
+          "id": "home-indicator",
+          "type": "box",
+          "x": 128,
+          "y": 830,
+          "width": 134,
+          "height": 4,
+          "purpose": "시스템 홈 인디케이터 자리표시자"
+        }
+      ],
+      "responsivePanel": {
+        "referenceViewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollRegion": "기록 목록",
+        "keepVisible": [
+          "패널 제목과 닫기",
+          "지도 영역의 선택 마커와 출처",
+          "하단 안전 영역"
+        ],
+        "overflowHandling": "좁은 화면이나 큰 글자에서 이름을 줄바꿈하고 행 높이를 늘린다. 영역에 넘치는 목록은 패널 안에서 스크롤한다."
+      }
+    },
+    {
+      "id": "main-map",
+      "state": "cluster-selected-overflow",
+      "title": "메인 / 발견 지도 · 기록 7 선택",
+      "width": 390,
+      "height": 844,
+      "safeArea": {
+        "top": 54,
+        "bottom": 34
+      },
+      "sourceCamera": {
+        "figmaNode": "41:81",
+        "sourceMarkerNode": "41:390",
+        "markerCenter": {
+          "x": 90,
+          "y": 189
+        }
+      },
+      "layoutOrder": [
+        "기존 지도와 선택 마커",
+        "고정 제목과 닫기",
+        "목록의 세 행과 네 번째 행 상단"
+      ],
+      "panelFocusOrder": [
+        "cluster-panel-close",
+        "record-overflow-demo-01-row",
+        "record-overflow-demo-02-row",
+        "record-overflow-demo-03-row",
+        "record-overflow-demo-04-row",
+        "record-overflow-demo-05-row",
+        "record-overflow-demo-06-row",
+        "record-overflow-demo-07-row"
+      ],
+      "blocks": [
+        {
+          "id": "map-background",
+          "type": "image",
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844,
+          "text": "",
+          "purpose": "기존 다크 지도와 같은 카메라의 자리표시자"
+        },
+        {
+          "id": "system-time",
+          "type": "text",
+          "x": 16,
+          "y": 15,
+          "width": 44,
+          "height": 24,
+          "text": "9:41"
+        },
+        {
+          "id": "map-label-north",
+          "type": "text",
+          "x": 252,
+          "y": 108,
+          "width": 88,
+          "height": 24,
+          "text": "성수동"
+        },
+        {
+          "id": "map-label-park",
+          "type": "text",
+          "x": 115,
+          "y": 229,
+          "width": 96,
+          "height": 24,
+          "text": "서울숲"
+        },
+        {
+          "id": "map-label-river",
+          "type": "text",
+          "x": 160,
+          "y": 485,
+          "width": 70,
+          "height": 24,
+          "text": "한강"
+        },
+        {
+          "id": "selected-marker-outline",
+          "type": "box",
+          "x": 54,
+          "y": 163,
+          "width": 72,
+          "height": 52,
+          "purpose": "선택 마커 윤곽. 기존 중심 유지"
+        },
+        {
+          "id": "record-cluster-seven",
+          "type": "button",
+          "x": 58,
+          "y": 167,
+          "width": 64,
+          "height": 44,
+          "accessibleName": "기록 7개, 선택됨",
+          "selected": true,
+          "figmaSourceNode": "41:390"
+        },
+        {
+          "id": "record-cluster-seven-label",
+          "type": "text",
+          "x": 68,
+          "y": 170,
+          "width": 46,
+          "height": 30,
+          "text": "기록 7"
+        },
+        {
+          "id": "record-cluster-three",
+          "type": "button",
+          "x": 268,
+          "y": 311,
+          "width": 64,
+          "height": 44,
+          "accessibleName": "기록 3개",
+          "figmaSourceNode": "41:394"
+        },
+        {
+          "id": "record-cluster-three-label",
+          "type": "text",
+          "x": 278,
+          "y": 314,
+          "width": 46,
+          "height": 30,
+          "text": "기록 3"
+        },
+        {
+          "id": "location-dot",
+          "type": "text",
+          "x": 166,
+          "y": 289,
+          "width": 22,
+          "height": 25,
+          "text": "●"
+        },
+        {
+          "id": "location-label",
+          "type": "text",
+          "x": 193,
+          "y": 289,
+          "width": 65,
+          "height": 25,
+          "text": "내 위치"
+        },
+        {
+          "id": "mapbox-logo-slot",
+          "type": "text",
+          "x": 8,
+          "y": 333,
+          "width": 100,
+          "height": 28,
+          "text": "Mapbox",
+          "purpose": "원본 공식 Mapbox 로고 자리표시자"
+        },
+        {
+          "id": "map-attribution",
+          "type": "button",
+          "x": 338,
+          "y": 320,
+          "width": 44,
+          "height": 44,
+          "accessibleName": "지도 출처 정보"
+        },
+        {
+          "id": "map-attribution-label",
+          "type": "text",
+          "x": 345,
+          "y": 323,
+          "width": 29,
+          "height": 28,
+          "text": "ⓘ"
+        },
+        {
+          "id": "cluster-panel",
+          "type": "box",
+          "topRadius": 32,
+          "x": 0,
+          "y": 376,
+          "width": 390,
+          "height": 468,
+          "purpose": "고정 제목·닫기와 스크롤 목록·하단 안전 영역"
+        },
+        {
+          "id": "cluster-panel-title",
+          "type": "text",
+          "x": 12,
+          "y": 389,
+          "width": 292,
+          "height": 38,
+          "text": "이 주변 관찰 기록 7건",
+          "designFontSize": 24
+        },
+        {
+          "id": "cluster-panel-close",
+          "type": "button",
+          "x": 326,
+          "y": 388,
+          "width": 48,
+          "height": 48,
+          "accessibleName": "주변 관찰 기록 닫기"
+        },
+        {
+          "id": "cluster-panel-close-label",
+          "type": "text",
+          "x": 337,
+          "y": 392,
+          "width": 26,
+          "height": 30,
+          "text": "×"
+        },
+        {
+          "id": "record-overflow-demo-01-row",
+          "type": "button",
+          "x": 16,
+          "y": 448,
+          "width": 358,
+          "height": 104,
+          "recordId": "record-overflow-demo-01",
+          "detailRecordId": "record-overflow-demo-01",
+          "publicCoordinateGroup": "overflow-location-a",
+          "accessibleName": "칠성무당벌레, 2026.11.23 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "id": "record-overflow-demo-01-photo",
+          "type": "image",
+          "x": 28,
+          "y": 460,
+          "width": 80,
+          "height": 80,
+          "text": "사진",
+          "purpose": "시연 기록의 사진 썸네일 자리표시자"
+        },
+        {
+          "id": "record-overflow-demo-01-text-1",
+          "type": "text",
+          "x": 116,
+          "y": 472,
+          "width": 222,
+          "height": 29,
+          "text": "칠성무당벌레",
+          "designFontSize": 18
+        },
+        {
+          "id": "record-overflow-demo-01-text-2",
+          "type": "text",
+          "x": 116,
+          "y": 496,
+          "width": 222,
+          "height": 24,
+          "text": "2026.11.23",
+          "designFontSize": 14
+        },
+        {
+          "id": "record-overflow-demo-01-chevron",
+          "type": "text",
+          "x": 339,
+          "y": 480,
+          "width": 25,
+          "height": 26,
+          "text": "›"
+        },
+        {
+          "id": "record-overflow-demo-02-row",
+          "type": "button",
+          "x": 16,
+          "y": 560,
+          "width": 358,
+          "height": 104,
+          "recordId": "record-overflow-demo-02",
+          "detailRecordId": "record-overflow-demo-02",
+          "publicCoordinateGroup": "overflow-location-a",
+          "accessibleName": "배추흰나비, 2026.11.22 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "id": "record-overflow-demo-02-photo",
+          "type": "image",
+          "x": 28,
+          "y": 572,
+          "width": 80,
+          "height": 80,
+          "text": "사진",
+          "purpose": "시연 기록의 사진 썸네일 자리표시자"
+        },
+        {
+          "id": "record-overflow-demo-02-text-1",
+          "type": "text",
+          "x": 116,
+          "y": 584,
+          "width": 222,
+          "height": 29,
+          "text": "배추흰나비",
+          "designFontSize": 18
+        },
+        {
+          "id": "record-overflow-demo-02-text-2",
+          "type": "text",
+          "x": 116,
+          "y": 608,
+          "width": 222,
+          "height": 24,
+          "text": "2026.11.22",
+          "designFontSize": 14
+        },
+        {
+          "id": "record-overflow-demo-02-chevron",
+          "type": "text",
+          "x": 339,
+          "y": 592,
+          "width": 25,
+          "height": 26,
+          "text": "›"
+        },
+        {
+          "id": "record-overflow-demo-03-row",
+          "type": "button",
+          "x": 16,
+          "y": 672,
+          "width": 358,
+          "height": 104,
+          "recordId": "record-overflow-demo-03",
+          "detailRecordId": "record-overflow-demo-03",
+          "publicCoordinateGroup": "overflow-location-b",
+          "accessibleName": "이름 모름, 2026.11.21 발견, 기록 열기",
+          "prototype": "spec-only"
+        },
+        {
+          "id": "record-overflow-demo-03-photo",
+          "type": "image",
+          "x": 28,
+          "y": 684,
+          "width": 80,
+          "height": 80,
+          "text": "사진",
+          "purpose": "시연 기록의 사진 썸네일 자리표시자"
+        },
+        {
+          "id": "record-overflow-demo-03-text-1",
+          "type": "text",
+          "x": 116,
+          "y": 696,
+          "width": 222,
+          "height": 29,
+          "text": "이름 모름",
+          "designFontSize": 18
+        },
+        {
+          "id": "record-overflow-demo-03-text-2",
+          "type": "text",
+          "x": 116,
+          "y": 720,
+          "width": 222,
+          "height": 24,
+          "text": "2026.11.21",
+          "designFontSize": 14
+        },
+        {
+          "id": "record-overflow-demo-03-chevron",
+          "type": "text",
+          "x": 339,
+          "y": 704,
+          "width": 25,
+          "height": 26,
+          "text": "›"
+        },
+        {
+          "id": "record-overflow-demo-04-visible-top",
+          "type": "button",
+          "x": 16,
+          "y": 784,
+          "width": 358,
+          "height": 104,
+          "purpose": "전체 크기로 그린 네 번째 행의 상단을 목록 경계에서 자른다.",
+          "clipHeight": 26
+        },
+        {
+          "id": "record-overflow-demo-04-photo-visible-top",
+          "type": "image",
+          "x": 28,
+          "y": 796,
+          "width": 80,
+          "height": 80,
+          "purpose": "전체 크기로 그린 네 번째 사진 자리의 상단을 목록 경계에서 자른다.",
+          "text": "",
+          "clipHeight": 14
+        },
+        {
+          "id": "home-indicator",
+          "type": "box",
+          "x": 128,
+          "y": 830,
+          "width": 134,
+          "height": 4,
+          "purpose": "시스템 홈 인디케이터 자리표시자"
+        }
+      ],
+      "responsivePanel": {
+        "referenceViewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollRegion": "기록 목록",
+        "keepVisible": [
+          "패널 제목과 닫기",
+          "지도 영역의 선택 마커와 출처",
+          "하단 안전 영역"
+        ],
+        "overflowHandling": "좁은 화면이나 큰 글자에서 이름을 줄바꿈하고 행 높이를 늘린다. 영역에 넘치는 목록은 패널 안에서 스크롤한다."
+      },
+      "recordList": {
+        "viewport": {
+          "x": 16,
+          "y": 448,
+          "width": 358,
+          "height": 362,
+          "clip": true
+        },
+        "rowSize": {
+          "width": 358,
+          "height": 104,
+          "gap": 8
+        },
+        "headerOutsideScroll": [
+          "cluster-panel-title",
+          "cluster-panel-close"
+        ],
+        "initialVisible": {
+          "fullRecordIds": [
+            "record-overflow-demo-01",
+            "record-overflow-demo-02",
+            "record-overflow-demo-03"
+          ],
+          "partialRecordId": "record-overflow-demo-04",
+          "partialHeight": 26,
+          "partialRatio": 0.25,
+          "partialNameVisible": false,
+          "partialDateVisible": false,
+          "partialThumbnailHeight": 14
+        },
+        "scrollEnd": {
+          "maxScrollTop": 414,
+          "lastRecordId": "record-overflow-demo-07",
+          "lastRowTop": 706,
+          "lastRowBottom": 810,
+          "bottomSafeAreaTop": 810
+        },
+        "exactFourHtmlValidation": {
+          "recordIds": [
+            "record-overflow-demo-01",
+            "record-overflow-demo-02",
+            "record-overflow-demo-03",
+            "record-overflow-demo-04"
+          ],
+          "reuseViewportAndDimensions": true,
+          "maxScrollTop": 78,
+          "endRowBounds": {
+            "x": 16,
+            "y": 706,
+            "width": 358,
+            "height": 104
+          },
+          "expectedClickId": "record-overflow-demo-04",
+          "capturePositions": [
+            "start",
+            "end"
+          ]
+        },
+        "records": [
+          {
+            "order": 1,
+            "recordId": "record-overflow-demo-01",
+            "detailRecordId": "record-overflow-demo-01",
+            "name": "칠성무당벌레",
+            "discoveredDate": "2026.11.23",
+            "publicCoordinateGroup": "overflow-location-a",
+            "rowBoundsAtStart": {
+              "x": 16,
+              "y": 448,
+              "width": 358,
+              "height": 104
+            },
+            "thumbnailBoundsAtStart": {
+              "x": 28,
+              "y": 460,
+              "width": 80,
+              "height": 80
+            }
+          },
+          {
+            "order": 2,
+            "recordId": "record-overflow-demo-02",
+            "detailRecordId": "record-overflow-demo-02",
+            "name": "배추흰나비",
+            "discoveredDate": "2026.11.22",
+            "publicCoordinateGroup": "overflow-location-a",
+            "rowBoundsAtStart": {
+              "x": 16,
+              "y": 560,
+              "width": 358,
+              "height": 104
+            },
+            "thumbnailBoundsAtStart": {
+              "x": 28,
+              "y": 572,
+              "width": 80,
+              "height": 80
+            }
+          },
+          {
+            "order": 3,
+            "recordId": "record-overflow-demo-03",
+            "detailRecordId": "record-overflow-demo-03",
+            "name": "이름 모름",
+            "discoveredDate": "2026.11.21",
+            "publicCoordinateGroup": "overflow-location-b",
+            "rowBoundsAtStart": {
+              "x": 16,
+              "y": 672,
+              "width": 358,
+              "height": 104
+            },
+            "thumbnailBoundsAtStart": {
+              "x": 28,
+              "y": 684,
+              "width": 80,
+              "height": 80
+            }
+          },
+          {
+            "order": 4,
+            "recordId": "record-overflow-demo-04",
+            "detailRecordId": "record-overflow-demo-04",
+            "name": "노랑나비",
+            "discoveredDate": "2026.11.20",
+            "publicCoordinateGroup": "overflow-location-c",
+            "rowBoundsAtStart": {
+              "x": 16,
+              "y": 784,
+              "width": 358,
+              "height": 104
+            },
+            "thumbnailBoundsAtStart": {
+              "x": 28,
+              "y": 796,
+              "width": 80,
+              "height": 80
+            }
+          },
+          {
+            "order": 5,
+            "recordId": "record-overflow-demo-05",
+            "detailRecordId": "record-overflow-demo-05",
+            "name": "왕잠자리",
+            "discoveredDate": "2026.11.18",
+            "publicCoordinateGroup": "overflow-location-d",
+            "rowBoundsAtStart": {
+              "x": 16,
+              "y": 896,
+              "width": 358,
+              "height": 104
+            },
+            "thumbnailBoundsAtStart": {
+              "x": 28,
+              "y": 908,
+              "width": 80,
+              "height": 80
+            }
+          },
+          {
+            "order": 6,
+            "recordId": "record-overflow-demo-06",
+            "detailRecordId": "record-overflow-demo-06",
+            "name": "넓적사슴벌레",
+            "discoveredDate": "2026.11.17",
+            "publicCoordinateGroup": "overflow-location-e",
+            "rowBoundsAtStart": {
+              "x": 16,
+              "y": 1008,
+              "width": 358,
+              "height": 104
+            },
+            "thumbnailBoundsAtStart": {
+              "x": 28,
+              "y": 1020,
+              "width": 80,
+              "height": 80
+            }
+          },
+          {
+            "order": 7,
+            "recordId": "record-overflow-demo-07",
+            "detailRecordId": "record-overflow-demo-07",
+            "name": "호랑나비",
+            "discoveredDate": "2026.11.15",
+            "publicCoordinateGroup": "overflow-location-f",
+            "rowBoundsAtStart": {
+              "x": 16,
+              "y": 1120,
+              "width": 358,
+              "height": 104
+            },
+            "thumbnailBoundsAtStart": {
+              "x": 28,
+              "y": 1132,
+              "width": 80,
+              "height": 80
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
