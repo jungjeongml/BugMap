@@ -4,14 +4,14 @@ import { ActivityIndicator, AppState, Pressable, StatusBar, StyleSheet, Text, Vi
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors, layout, mapFlowColors } from '../../theme/tokens';
 import { DiscoveryMapScreen } from '../discovery-map/DiscoveryMapScreen';
-import { AuthError, shouldRevalidateSession, type AuthProvider, type AuthSession } from './authClient';
-import { authRuntime } from './authRuntime';
+import { AuthError, shouldRevalidateSession, type AuthProvider } from './authClient';
+import { authRuntime, type VerifiedAuthSession } from './authRuntime';
 import { LoginScreen } from './LoginScreen';
 
 type AuthView =
   | { screen: 'restore'; notice?: string }
   | { screen: 'login'; pending: AuthProvider | null; notice?: string }
-  | { screen: 'authenticated'; session: AuthSession; pending: boolean; notice?: string };
+  | { screen: 'authenticated'; session: VerifiedAuthSession; pending: boolean; notice?: string };
 
 const loginErrors: Record<AuthError['kind'], string> = {
   callback: '로그인 확인에 실패했어요. 다시 시도해 주세요.',
@@ -19,6 +19,7 @@ const loginErrors: Record<AuthError['kind'], string> = {
   network: '연결을 확인한 뒤 로그인 버튼을 다시 눌러 주세요.',
   provider: '로그인을 완료하지 못했어요. 다시 시도해 주세요.',
   'provider-unavailable': '이 로그인 방법은 현재 이용할 수 없어요. 다른 방법을 선택해 주세요.',
+  'session-unavailable': '로그인 세션을 확인하지 못했어요. 브라우저의 쿠키 설정을 확인한 뒤 다시 로그인해 주세요.',
   storage: '기기에 로그인 정보를 저장하지 못했어요. 다시 시도해 주세요.',
   unavailable: '로그인 창을 열지 못했어요. 다시 시도해 주세요.',
 };
@@ -27,6 +28,9 @@ const unavailableMessages = {
   'mobile-only': '소셜 로그인은 모바일 앱에서 이용할 수 있어요.',
   'expo-go': '소셜 로그인은 BugMap 앱 빌드에서 이용할 수 있어요.',
   'missing-server': '로그인 서버 주소가 설정되지 않았어요.',
+  'missing-web-origin': '웹 로그인 주소가 설정되지 않았어요.',
+  'web-origin-mismatch': '설정된 웹 주소에서 로그인해 주세요.',
+  'web-crypto-unavailable': '이 브라우저에서는 안전한 로그인 연결을 열 수 없어요.',
 } as const;
 
 const client = authRuntime.status === 'ready' ? authRuntime.client : null;
@@ -43,8 +47,26 @@ export function AuthFlow() {
     operationRunning.current = true;
     setView({ screen: 'restore' });
     try {
+      let callback;
+      try {
+        callback = await client.completeSignIn?.();
+      } catch (error) {
+        verifiedAt.current = null;
+        setView({
+          screen: 'login',
+          pending: null,
+          notice: loginErrors[error instanceof AuthError ? error.kind : 'callback'],
+        });
+        return;
+      }
+      if (callback?.kind === 'cancelled') {
+        verifiedAt.current = null;
+        setView({ screen: 'login', pending: null, notice: '로그인이 취소됐어요.' });
+        return;
+      }
+
       const hadSession = verifiedAt.current !== null;
-      const session = await client.restoreSession();
+      const session = callback?.session ?? await client.restoreSession();
       verifiedAt.current = session ? Date.now() : null;
       setView(session
         ? { screen: 'authenticated', session, pending: false }
@@ -84,7 +106,7 @@ export function AuthFlow() {
       if (result.kind === 'authenticated') verifiedAt.current = Date.now();
       setView(result.kind === 'authenticated'
         ? { screen: 'authenticated', session: result.session, pending: false }
-        : { screen: 'login', pending: null, notice: '로그인이 취소됐어요.' });
+        : { screen: 'login', pending: null, notice: result.kind === 'cancelled' ? '로그인이 취소됐어요.' : undefined });
     } catch (error) {
       setView({
         screen: 'login',

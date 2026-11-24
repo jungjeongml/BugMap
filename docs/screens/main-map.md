@@ -8,7 +8,7 @@
 
 하단 검색, 네 탭, 위치, 기록 버튼과 패널 손잡이는 이 단계에서 시각 자리와 비활성 상태를 전달한다. 실제 위치나 사용자 기록은 관련 API가 준비되면 연결한다. 기존 세션 로그아웃 동작은 유지한다.
 
-웹에서는 개발 서버의 `?preview=discovery-map`에서 레이아웃과 실지도를 확인한다. 앱은 `EXPO_PUBLIC_BUGMAP_MAPBOX_TOKEN`을 읽는다. [구현 및 검증 계획](../superpowers/plans/2026-11-20-discovery-map-app.md)
+웹에서는 소셜 로그인과 세션 확인에 성공하면 발견 지도를 연다. 개발 서버의 `?preview=discovery-map`에서도 레이아웃과 실지도를 확인할 수 있다. 앱은 `EXPO_PUBLIC_BUGMAP_MAPBOX_TOKEN`을 읽는다. [웹 로그인 구현 계획](../superpowers/plans/2026-11-23-web-social-login.md)
 
 ## Figma 화면 요구사항 · 07 메인 발견 지도
 

@@ -39,11 +39,11 @@ npm run export:web
 
 1. 개발용 인증 서버의 공개 HTTPS 주소와 사용할 제공자 설정을 준비한다. [서버 실행 및 제공자 등록](server/README.md)
 2. 루트 환경 파일의 `EXPO_PUBLIC_BUGMAP_AUTH_API_URL`에 서버의 HTTPS origin을 넣는다. [앱 환경 변수 예시](.env.example)
-3. `npx expo run:ios` 또는 `npx expo run:android`로 네이티브 앱을 빌드한다. 웹과 Expo Go에서는 로그인 화면과 정책 링크를 미리 볼 수 있다.
+3. 모바일은 `npx expo run:ios` 또는 `npx expo run:android`로 개발 빌드를 만든다. 웹은 앱의 `EXPO_PUBLIC_BUGMAP_WEB_AUTH_ORIGIN`과 서버의 `AUTH_WEB_ORIGIN`을 모두 `http://localhost:8081`로 설정한 뒤 `npm run web`을 실행하고 같은 주소로 접속한다. 인증 서버의 로컬 포트가 3000과 다르면 앱 환경에 `BUGMAP_WEB_AUTH_LOCAL_PORT`도 설정한다.
 
 첫 화면은 BugMapHarness 05를 기준으로 다크 지도와 소셜 로그인 버튼을 표시한다. 기본 지도는 시안의 일러스트다. `EXPO_PUBLIC_BUGMAP_MAPBOX_TOKEN`에 Mapbox 공개 토큰을 설정하면 서울숲의 정적 지도와 로고·출처 링크가 표시된다. [첫 로그인 화면 명세](docs/screens/login.md)
 
-이용약관과 개인정보처리방침은 각각 게시 전 안내를 표시한다. 주소 설정 후 두 링크가 각자 문서를 연다. 로그인하면 발견 지도가 열린다. `npm run web` 개발 서버 주소 뒤에 `?preview=discovery-map`을 붙이면 지도를 미리 볼 수 있다. Mapbox 공개 토큰은 첫 화면과 같은 환경 변수를 사용한다. 네이티브 지도는 RNMapbox를 포함한 개발 빌드가 필요하다. [발견 지도 화면 명세](docs/screens/main-map.md)
+이용약관과 개인정보처리방침은 각각 게시 전 안내를 표시한다. 주소 설정 후 두 링크가 각자 문서를 연다. 웹과 모바일은 소셜 로그인 후 세션을 확인하고 발견 지도를 연다. `npm run web` 개발 서버의 `?preview=discovery-map`에서는 화면 배치를 확인할 수 있다. Mapbox 공개 토큰은 첫 화면과 같은 환경 변수를 사용한다. 네이티브 지도는 RNMapbox를 포함한 개발 빌드가 필요하다. [발견 지도 화면 명세](docs/screens/main-map.md)
 
 Expo 버전 조합은 [SDK 호환 표](https://docs.expo.dev/versions/latest/)와 [SDK 58 TypeScript 템플릿](https://github.com/expo/expo/blob/sdk-58/templates/expo-template-blank-typescript/package.json), 안전 영역은 [공식 문서](https://docs.expo.dev/versions/latest/sdk/safe-area-context/)를 기준으로 작성했습니다. 실제 설치 호환성은 아직 확인하지 못했습니다.
 

@@ -1,3 +1,7 @@
+import { AuthError, hex, toBase64Url } from './authProtocol.mjs';
+
+export { AuthError, getAuthApiOrigin } from './authProtocol.mjs';
+
 const callbackUri = 'bugmap://auth/callback';
 const requestTimeoutMs = 15_000;
 // The development auth server issues 15-minute access tokens.
@@ -24,17 +28,6 @@ export type AuthSession = {
 type TokenResponse = AuthSession & { refreshToken: string };
 type SignInResult = { kind: 'cancelled' } | { kind: 'authenticated'; session: AuthSession };
 
-type AuthErrorKind = 'callback' | 'expired' | 'network' | 'provider' | 'provider-unavailable' | 'storage' | 'unavailable';
-
-export class AuthError extends Error {
-  readonly kind: AuthErrorKind;
-
-  constructor(kind: AuthErrorKind) {
-    super(kind);
-    this.kind = kind;
-  }
-}
-
 type AuthDependencies = {
   randomBytes: (size: number) => Promise<Uint8Array>;
   sha256Base64: (input: string) => Promise<string>;
@@ -48,22 +41,6 @@ type AuthDependencies = {
 };
 
 type AuthApiPath = '/v1/auth/exchange' | '/v1/auth/refresh' | '/v1/auth/logout';
-
-export function getAuthApiOrigin(value: string | undefined): string | null {
-  const url = value?.trim();
-  if (!url || !/^https:\/\/[a-z\d.-]+(?::\d{1,5})?\/?$/i.test(url)) return null;
-  try {
-    const parsed = new URL(url);
-    if (!parsed.hostname || (parsed.port && Number(parsed.port) > 65535)) return null;
-    return parsed.origin;
-  } catch {
-    return null;
-  }
-}
-
-function hex(bytes: Uint8Array): string {
-  return Array.from(bytes, byte => byte.toString(16).padStart(2, '0')).join('');
-}
 
 function readCallback(url: string, expectedState: string): string | null {
   const prefix = callbackUri + '?';
@@ -160,8 +137,7 @@ export function createAuthClient(apiOrigin: string, deps: AuthDependencies) {
     try {
       state = hex(await deps.randomBytes(32));
       verifier = hex(await deps.randomBytes(32));
-      challenge = (await deps.sha256Base64(verifier))
-        .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      challenge = toBase64Url(await deps.sha256Base64(verifier));
       const params = new URLSearchParams({
         redirect_uri: callbackUri,
         state,

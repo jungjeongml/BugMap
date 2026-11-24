@@ -21,7 +21,7 @@ const minute = 60_000;
 export const stateLifetime = 10 * minute;
 const codeLifetime = minute;
 const accessLifetime = 15 * minute;
-const sessionLifetime = 30 * 24 * 60 * minute;
+export const sessionLifetime = 30 * 24 * 60 * minute;
 
 export function randomToken(): string {
   return randomBytes(32).toString('base64url');
@@ -119,13 +119,13 @@ export class AuthStore {
     return code;
   }
 
-  exchange(provider: ProviderId, code: string, verifier: string): AppSession | undefined {
+  exchange(provider: ProviderId, code: string, verifier: string, scope = ''): AppSession | undefined {
     return this.transaction(() => {
       const now = Date.now();
       const identity = this.db.prepare(`
         DELETE FROM app_codes WHERE code_hash = ? AND provider = ? AND challenge = ? AND expires_at > ?
         RETURNING subject
-      `).get(digest(code), provider, digest(verifier), now) as { subject: string } | undefined;
+      `).get(digest(code), provider, scope + digest(verifier), now) as { subject: string } | undefined;
       if (!identity) return;
       const existing = this.db.prepare(
         'SELECT user_id AS userId FROM identities WHERE provider = ? AND subject = ?',
@@ -145,7 +145,10 @@ export class AuthStore {
       this.db.prepare(`
         INSERT INTO sessions (id, user_id, access_hash, access_expires_at, refresh_hash, expires_at)
         VALUES (?, ?, ?, ?, ?, ?)
-      `).run(sessionId, userId, digest(accessToken), now + accessLifetime, digest(refreshToken), now + sessionLifetime);
+      `).run(
+        sessionId, userId, digest(scope + accessToken), now + accessLifetime,
+        digest(scope + refreshToken), now + sessionLifetime,
+      );
       return { accessToken, refreshToken, userId };
     });
   }
@@ -169,14 +172,21 @@ export class AuthStore {
     });
   }
 
-  revoke(refreshToken: string): boolean {
+  revoke(refreshToken: string, scope = ''): boolean {
     const now = Date.now();
-    const hash = digest(refreshToken);
+    const hash = digest(scope + refreshToken);
     return Boolean(this.db.prepare(`
       UPDATE sessions SET revoked_at = ?
       WHERE revoked_at IS NULL AND expires_at > ?
         AND (refresh_hash = ? OR id = (SELECT session_id FROM spent_refresh_tokens WHERE refresh_hash = ?))
     `).run(now, now, hash, hash).changes);
+  }
+
+  findSessionUser(refreshToken: string, scope: string): { userId: string } | undefined {
+    return this.db.prepare(`
+      SELECT user_id AS userId FROM sessions
+      WHERE refresh_hash = ? AND expires_at > ? AND revoked_at IS NULL
+    `).get(digest(scope + refreshToken), Date.now()) as { userId: string } | undefined;
   }
 
   findAccessUser(accessToken: string): { userId: string } | undefined {

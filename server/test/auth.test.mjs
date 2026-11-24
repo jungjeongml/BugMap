@@ -4,7 +4,7 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
-import { createAuthApp } from '../dist/app.mjs';
+import { createAuthApp, parseWebOrigin } from '../dist/app.mjs';
 import { AuthStore } from '../dist/store.mjs';
 
 const redirectUri = 'bugmap://auth/callback';
@@ -12,7 +12,7 @@ const state = 'app-state';
 const verifier = 'abcdefghijklmnopqrstuvwxyz0123456789uvwxyzABC';
 const challenge = createHash('sha256').update(verifier).digest('base64url');
 
-async function launch(t, databasePath = ':memory:', providerIds = ['google', 'kakao', 'apple']) {
+async function launch(t, databasePath = ':memory:', providerIds = ['google', 'kakao', 'apple'], webOrigin) {
   const providers = Object.fromEntries(providerIds.map(provider => [provider, {
     authorize(input) {
       const url = new URL('https://provider.example/authorize');
@@ -24,7 +24,7 @@ async function launch(t, databasePath = ':memory:', providerIds = ['google', 'ka
       return { subject: code, email: 'same@example.com' };
     }
   }]));
-  const app = await createAuthApp(new AuthStore(databasePath), providers);
+  const app = await createAuthApp(new AuthStore(databasePath), providers, webOrigin);
   t.after(() => app.close());
   await app.listen(0, '127.0.0.1');
   const base = await app.getUrl();
@@ -34,15 +34,15 @@ async function launch(t, databasePath = ':memory:', providerIds = ['google', 'ka
   function request(path, options = {}) {
     return fetch(base + '/v1/auth/' + path, { redirect: 'manual', ...options });
   }
-  function authorize(provider, overrides = {}) {
+  function authorize(provider, overrides = {}, web = false) {
     const query = new URLSearchParams({
-      redirect_uri: redirectUri, state, code_challenge: challenge, code_challenge_method: 'S256',
+      redirect_uri: web ? webOrigin?.href : redirectUri, state, code_challenge: challenge, code_challenge_method: 'S256',
       ...overrides
     });
-    return request('authorize/' + provider + '?' + query);
+    return request((web ? 'web/' : '') + 'authorize/' + provider + '?' + query);
   }
-  async function begin(provider) {
-    const response = await authorize(provider);
+  async function begin(provider, web = false) {
+    const response = await authorize(provider, {}, web);
     assert.equal(response.status, 302);
     assert.match(response.headers.get('set-cookie'), /HttpOnly.*Secure.*SameSite=None/i);
     const providerState = new URL(response.headers.get('location')).searchParams.get('state');
@@ -65,9 +65,9 @@ async function launch(t, databasePath = ':memory:', providerIds = ['google', 'ka
     assert.deepEqual([...location.searchParams.keys()].sort(), ['code', 'state']);
     return location.searchParams.get('code');
   }
-  function post(path, body) {
+  function post(path, body, headers = {}) {
     return request(path, {
-      method: 'POST', headers: { 'content-type': 'application/json' },
+      method: 'POST', headers: { 'content-type': 'application/json', ...headers },
       body: JSON.stringify(body)
     });
   }
@@ -89,6 +89,126 @@ test('reports readiness and provider setup through a public health endpoint', as
     assert.equal(result.status, 200);
     assert.deepEqual(await result.json(), { status: 'ready', authentication });
   }
+});
+
+const webOrigin = new URL('https://app.example.test');
+
+test('web origin configuration accepts only canonical HTTPS and loopback HTTP origins', () => {
+  assert.equal(parseWebOrigin(undefined), undefined);
+  assert.equal(parseWebOrigin(''), undefined);
+  for (const origin of ['https://app.example.test', 'http://localhost:8081', 'http://127.0.0.1:8081', 'http://[::1]:8081']) {
+    assert.equal(parseWebOrigin(origin).origin, origin);
+  }
+  for (const origin of [
+    'http://app.example.test', 'http://127.attacker.test', 'https://app.example.test/',
+    'https://app.example.test/?query', 'https://app.example.test/#fragment', 'https://user@app.example.test',
+  ]) {
+    assert.throws(() => parseWebOrigin(origin), /AUTH_WEB_ORIGIN/);
+  }
+});
+
+test('web callback exchanges a provider code for a session cookie and logout revokes it', async t => {
+  const app = await launch(t, ':memory:', ['google'], webOrigin);
+  const flow = await app.begin('google', true);
+  const callback = await app.callback('google', flow);
+  assert.equal(callback.status, 303);
+  assert.equal(callback.headers.get('referrer-policy'), 'no-referrer');
+  const returnUrl = new URL(callback.headers.get('location'));
+  assert.equal(returnUrl.origin, webOrigin.origin);
+  assert.equal(returnUrl.pathname, '/');
+  assert.equal(returnUrl.searchParams.get('state'), state);
+  const appCode = returnUrl.searchParams.get('code');
+  const headers = { origin: webOrigin.origin };
+  const body = { provider: 'google', code: appCode, codeVerifier: verifier };
+  assert.equal((await app.post('web/exchange', body)).status, 403);
+  assert.equal((await app.post('web/exchange', body, { origin: 'https://other.example.test' })).status, 403);
+  const exchanged = await app.post('web/exchange', body, headers);
+  assert.equal(exchanged.status, 200);
+  assert.equal(exchanged.headers.get('access-control-allow-origin'), null);
+  const cookies = exchanged.headers.get('set-cookie');
+  assert.match(cookies, /^__Host-bugmap-session=[A-Za-z0-9_-]{43};/);
+  assert.match(cookies, /Max-Age=2592000.*Path=\/.*HttpOnly.*Secure.*SameSite=Lax/);
+  assert.doesNotMatch(cookies, /Domain=/i);
+  const user = await exchanged.json();
+  assert.deepEqual(Object.keys(user), ['userId']);
+  const cookie = cookies.split(';')[0];
+  assert.equal((await app.post('web/exchange', body, headers)).status, 401);
+  assert.equal((await app.request('web/session')).status, 401);
+  for (let read = 0; read < 2; read++) {
+    const session = await app.request('web/session', { headers: { cookie } });
+    assert.equal(session.status, 200);
+    assert.deepEqual(await session.json(), user);
+    assert.equal(session.headers.get('set-cookie'), null);
+    assert.equal(session.headers.get('cache-control'), 'no-store');
+  }
+  assert.equal((await app.post('web/logout', {}, { cookie })).status, 403);
+  const logout = await app.post('web/logout', {}, { ...headers, cookie });
+  assert.equal(logout.status, 204);
+  assert.match(logout.headers.get('set-cookie'), /^__Host-bugmap-session=;.*HttpOnly.*Secure.*SameSite=Lax/);
+  assert.equal((await app.request('web/session', { headers: { cookie } })).status, 401);
+  assert.equal((await app.post('web/logout', {}, headers)).status, 204);
+});
+
+test('web OAuth accepts an exact return URI and preserves app state for cancellation', async t => {
+  const app = await launch(t, ':memory:', ['google', 'apple'], webOrigin);
+  assert.equal((await app.authorize('apple', {}, true)).status, 400);
+  assert.equal((await app.authorize('google', { redirect_uri: webOrigin.origin + '/other' }, true)).status, 400);
+  assert.equal((await app.authorize('google', { redirect_uri: webOrigin.origin + '/?x=1' }, true)).status, 400);
+  const flow = await app.begin('google', true);
+  assert.equal((await app.callback('google', { ...flow, cookie: '' })).status, 400);
+  assert.equal((await app.callback('google', flow, { state: '' })).status, 400);
+  const cancelled = await app.callback('google', flow, { error: 'access_denied' });
+  assert.equal(cancelled.status, 303);
+  const returnUrl = new URL(cancelled.headers.get('location'));
+  assert.equal(returnUrl.origin, webOrigin.origin);
+  assert.equal(returnUrl.pathname, '/');
+  assert.deepEqual(Object.fromEntries(returnUrl.searchParams), { state, error: 'access_denied' });
+  assert.equal((await app.callback('google', flow)).status, 400);
+  const unavailable = await app.authorize('kakao', {}, true);
+  assert.equal(unavailable.status, 303);
+  assert.equal(new URL(unavailable.headers.get('location')).searchParams.get('error'), 'provider_unavailable');
+});
+
+test('web and native codes and session tokens stay scoped to their channel', async t => {
+  const origin = new URL('http://127.0.0.1:8081');
+  const app = await launch(t, ':memory:', ['kakao'], origin);
+  const nativeCode = await app.code('kakao');
+  const webCallback = await app.callback('kakao', await app.begin('kakao', true));
+  const webCode = new URL(webCallback.headers.get('location')).searchParams.get('code');
+  const postWebCode = code => app.post('web/exchange',
+    { provider: 'kakao', code, codeVerifier: verifier }, { origin: origin.origin });
+  assert.equal((await postWebCode(nativeCode)).status, 401);
+  assert.equal((await app.exchange('kakao', webCode)).status, 401);
+  const web = await postWebCode(webCode);
+  const cookie = web.headers.get('set-cookie');
+  assert.match(cookie, /^bugmap-session=[A-Za-z0-9_-]{43};/);
+  assert.doesNotMatch(cookie, /Secure|Domain=/i);
+  const webToken = cookie.match(/^bugmap-session=([^;]+)/)[1];
+  assert.equal((await app.post('refresh', { refreshToken: webToken })).status, 401);
+  const native = await (await app.exchange('kakao', nativeCode)).json();
+  assert.equal((await web.json()).userId, native.userId);
+  assert.equal((await app.request('web/session', {
+    headers: { cookie: 'bugmap-session=' + native.refreshToken },
+  })).status, 401);
+});
+
+test('web routes are disabled when the origin is absent', async t => {
+  const app = await launch(t);
+  assert.equal((await app.authorize('google', { redirect_uri: webOrigin.href }, true)).status, 404);
+  assert.equal((await app.request('web/session')).status, 404);
+  assert.equal((await app.post('web/exchange', {}, { origin: webOrigin.origin })).status, 404);
+  assert.equal((await app.post('web/logout', {}, { origin: webOrigin.origin })).status, 404);
+});
+
+test('a web callback started on a different configured origin never redirects to the new origin', async t => {
+  const dir = mkdtempSync(join(tmpdir(), 'bugmap-web-auth-'));
+  const database = join(dir, 'auth.sqlite');
+  const original = await launch(t, database, ['google'], new URL('https://app.example.test:8443'));
+  const current = await launch(t, database, ['google'], webOrigin);
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  const result = await current.callback('google', await original.begin('google', true));
+  assert.equal(result.status, 400);
+  assert.equal(result.headers.get('location'), null);
 });
 
 test('requires an exact app redirect and an S256 challenge', async t => {

@@ -29,6 +29,14 @@ Cloudflare Quick Tunnel을 사용한 테스트 주소는 터널 프로세스가 
 
 등록할 전체 URL은 `AUTH_PUBLIC_ORIGIN`과 표의 콜백 경로를 합친 값이다. Apple 키의 PKCS#8 PEM을 한 줄로 입력할 경우 `.env`의 `APPLE_PRIVATE_KEY`에 작은따옴표로 감싸서 넣고 각 줄바꿈을 리터럴 `\n`으로 표기한다. 제공자 비밀값은 서버 환경에만 저장한다.
 
+## 웹 로그인
+
+`AUTH_WEB_ORIGIN`을 지정하면 카카오·Google 웹 인증을 사용할 수 있다. Expo 개발 서버는 `http://localhost:8081`을 사용하고 앱 환경의 `EXPO_PUBLIC_BUGMAP_WEB_AUTH_ORIGIN`에도 같은 값을 넣는다. 브라우저 주소의 호스트와 포트까지 일치해야 한다. 제공자 콘솔에는 위 표의 공개 HTTPS 서버 콜백을 등록한다.
+
+브라우저는 공개 인증 서버의 `/v1/auth/web/authorize/:provider`에서 로그인을 시작한다. 서버가 제공자 콜백을 확인하고 웹 앱으로 돌려보내면, 웹 앱은 동일 출처의 `/v1/auth/web/exchange`에서 일회용 코드를 교환한다. 쿠키 세션은 `/v1/auth/web/session`으로 조회하고 `/v1/auth/web/logout`으로 폐기한다.
+
+Expo의 Metro 개발 서버는 이 세 API를 로컬 인증 서버로 전달한다. 앱 환경의 `BUGMAP_WEB_AUTH_LOCAL_PORT`는 인증 서버의 `PORT`가 3000과 다를 때 사용한다. 웹을 배포할 때는 앱과 동일한 HTTPS 호스트에서 이 세 API를 인증 서버로 전달하도록 리버스 프록시를 구성한다.
+
 [Kakao Login REST API](https://developers.kakao.com/docs/en/kakaologin/rest-api) · [Google OpenID Connect](https://developers.google.com/identity/openid-connect/openid-connect) · [Apple 웹 로그인 설정](https://developer.apple.com/documentation/signinwithapple/configuring-your-webpage-for-sign-in-with-apple) · [Apple 토큰 교환](https://developer.apple.com/documentation/SigninwithAppleRESTAPI/Generate-and-validate-tokens)
 
 ## 세션과 검증
