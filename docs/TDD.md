@@ -103,12 +103,15 @@ CREATE EXTENSION IF NOT EXISTS postgis;
 
 CREATE TABLE users (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  display_name text NOT NULL,
+  display_name text,
   status text NOT NULL DEFAULT 'active'
     CHECK (status IN ('active', 'suspended', 'deletion_pending', 'deleted')),
   created_at timestamptz NOT NULL DEFAULT now(),
   deleted_at timestamptz
 );
+
+CREATE UNIQUE INDEX uq_users_display_name
+  ON users ((translate(display_name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')));
 
 CREATE TABLE user_identities (
   provider text NOT NULL CHECK (provider IN ('kakao','apple','google')),
@@ -282,6 +285,8 @@ CREATE INDEX ix_sessions_user_active ON app_sessions (user_id, expires_at)
 | `POST /v1/auth/refresh` | 앱 세션 갱신 | 갱신 토큰 → 회전된 새 토큰 쌍 |
 | `POST /v1/auth/logout` | 현재 기기 로그아웃 | 현재 세션 폐기 |
 | `GET /v1/auth/me` | 로그인 상태 확인 | 내부 사용자 정보 |
+| `POST /v1/auth/nickname` | 첫 닉네임 설정 | 모바일 Bearer 세션과 `{ displayName }` → `{ userId, displayName }` |
+| `POST /v1/auth/web/nickname` | 웹 첫 닉네임 설정 | 동일 출처 쿠키 세션과 `{ userId, displayName }` → `{ userId, displayName }` |
 | `POST /v1/auth/identities` | 소셜 계정 연결 | 로그인된 사용자 + 새 제공자 인증 → 연결 결과 |
 | `DELETE /v1/account` | 앱 내 계정 삭제 | 본인 재확인 후 계정 삭제 절차 시작·세션 폐기 |
 | `POST /v1/media/upload-intents` | 업로드 예약 | 파일 형식·크기 → `mediaId`, 서명 URL, 만료 시각 |
@@ -298,6 +303,8 @@ CREATE INDEX ix_sessions_user_active ON app_sessions (user_id, expires_at)
 | `GET /v1/chat-rooms/{id}/messages?afterId=...` | 메시지 복구 | 메시지 ID 순서로 이어받기 |
 | `POST /v1/chat-rooms/{id}/messages` | 메시지 저장 | `clientMessageId`, 본문 → 서버 메시지 ID |
 | `WS /v1/chat` | 실시간 수신 | 인증 후 참여 방 구독, `message.created` 이벤트 |
+
+소셜 가입 시 내부 사용자, 소셜 식별자, 세션을 생성한다. 가입·갱신과 세션 조회는 `displayName`을 함께 반환한다. `NULL`이면 발견 지도 전에 닉네임 설정으로 이동한다. 닉네임은 앞뒤 공백 제거와 NFC 정규화 후 유니코드 코드 포인트 기준 2~12자이며 제어 문자, 단독 서로게이트, 줄·단락 구분자를 거부한다. 저장은 영문 대소문자를 무시해 고유성을 보장하고 중복이면 409를 반환한다. 최초 저장이 완료된 계정에 같은 설정 요청이 다시 오면 저장된 값을 반환한다. `users.status`는 계정 운영 상태를 나타낸다. 현재 SQLite 인증 서버는 기존 스키마에 nullable `display_name`과 `COLLATE NOCASE` 유니크 인덱스를 추가한다.
 
 `bbox`는 경도·위도 순서로 받으며 범위, 최대 크기, 조회 기간, 페이지 크기 상한을 검증한다. 타인용 응답에는 `exact_location`과 내부 `object_key`를 넣지 않는다. 오류 응답은 일관된 코드(`VALIDATION_ERROR`, `FORBIDDEN`, `NOT_FOUND`, `CONFLICT`, `UPLOAD_NOT_READY`)를 사용한다.
 

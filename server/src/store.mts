@@ -11,10 +11,14 @@ export interface Authorization {
   providerVerifier: string;
 }
 
-interface AppSession {
+interface UserProfile {
+  userId: string;
+  displayName: string | null;
+}
+
+interface AppSession extends UserProfile {
   accessToken: string;
   refreshToken: string;
-  userId: string;
 }
 
 const minute = 60_000;
@@ -59,7 +63,10 @@ export class AuthStore {
         expires_at INTEGER NOT NULL
       ) STRICT;
       CREATE INDEX IF NOT EXISTS app_codes_expiry ON app_codes(expires_at);
-      CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY) STRICT;
+      CREATE TABLE IF NOT EXISTS users (
+        id TEXT PRIMARY KEY,
+        display_name TEXT
+      ) STRICT;
       CREATE TABLE IF NOT EXISTS identities (
         provider TEXT NOT NULL,
         subject TEXT NOT NULL,
@@ -82,6 +89,13 @@ export class AuthStore {
       ) STRICT;
       CREATE INDEX IF NOT EXISTS spent_refresh_session ON spent_refresh_tokens(session_id);
     `);
+    this.transaction(() => {
+      const columns = this.db.prepare('PRAGMA table_info(users)').all();
+      if (!columns.some(column => column.name === 'display_name')) {
+        this.db.exec('ALTER TABLE users ADD COLUMN display_name TEXT');
+      }
+      this.db.exec('CREATE UNIQUE INDEX IF NOT EXISTS users_display_name ON users(display_name COLLATE NOCASE)');
+    });
   }
 
   close(): void {
@@ -127,9 +141,10 @@ export class AuthStore {
         RETURNING subject
       `).get(digest(code), provider, scope + digest(verifier), now) as { subject: string } | undefined;
       if (!identity) return;
-      const existing = this.db.prepare(
-        'SELECT user_id AS userId FROM identities WHERE provider = ? AND subject = ?',
-      ).get(provider, identity.subject) as { userId: string } | undefined;
+      const existing = this.db.prepare(`
+        SELECT users.id AS userId, display_name AS displayName FROM identities
+        JOIN users ON users.id = identities.user_id WHERE provider = ? AND subject = ?
+      `).get(provider, identity.subject) as UserProfile | undefined;
 
       const userId = existing?.userId ?? randomUUID();
       if (!existing) {
@@ -149,7 +164,7 @@ export class AuthStore {
         sessionId, userId, digest(scope + accessToken), now + accessLifetime,
         digest(scope + refreshToken), now + sessionLifetime,
       );
-      return { accessToken, refreshToken, userId };
+      return { accessToken, refreshToken, userId, displayName: existing?.displayName ?? null };
     });
   }
 
@@ -158,9 +173,10 @@ export class AuthStore {
       const now = Date.now();
       const previousHash = digest(previousToken);
       const row = this.db.prepare(`
-        SELECT id, user_id AS userId, expires_at AS expiresAt FROM sessions
+        SELECT sessions.id, user_id AS userId, expires_at AS expiresAt, display_name AS displayName
+        FROM sessions JOIN users ON users.id = sessions.user_id
         WHERE refresh_hash = ? AND revoked_at IS NULL AND expires_at > ?
-      `).get(previousHash, now) as { id: string; userId: string; expiresAt: number } | undefined;
+      `).get(previousHash, now) as (UserProfile & { id: string; expiresAt: number }) | undefined;
       if (!row) return;
       const accessToken = `${row.id}.${randomToken()}`;
       const refreshToken = randomToken();
@@ -168,7 +184,7 @@ export class AuthStore {
       this.db.prepare(`
         UPDATE sessions SET access_hash = ?, access_expires_at = ?, refresh_hash = ? WHERE id = ?
       `).run(digest(accessToken), Math.min(now + accessLifetime, row.expiresAt), digest(refreshToken), row.id);
-      return { accessToken, refreshToken, userId: row.userId };
+      return { accessToken, refreshToken, userId: row.userId, displayName: row.displayName };
     });
   }
 
@@ -182,20 +198,36 @@ export class AuthStore {
     `).run(now, now, hash, hash).changes);
   }
 
-  findSessionUser(refreshToken: string, scope: string): { userId: string } | undefined {
+  findSessionUser(refreshToken: string, scope: string): UserProfile | undefined {
     return this.db.prepare(`
-      SELECT user_id AS userId FROM sessions
+      SELECT user_id AS userId, display_name AS displayName
+      FROM sessions JOIN users ON users.id = sessions.user_id
       WHERE refresh_hash = ? AND expires_at > ? AND revoked_at IS NULL
-    `).get(digest(scope + refreshToken), Date.now()) as { userId: string } | undefined;
+    `).get(digest(scope + refreshToken), Date.now()) as UserProfile | undefined;
   }
 
-  findAccessUser(accessToken: string): { userId: string } | undefined {
+  findAccessUser(accessToken: string): UserProfile | undefined {
     const now = Date.now();
     const sessionId = accessToken.split('.', 1)[0];
     return this.db.prepare(`
-      SELECT user_id AS userId FROM sessions
-      WHERE id = ? AND access_hash = ? AND access_expires_at > ? AND expires_at > ? AND revoked_at IS NULL
-    `).get(sessionId, digest(accessToken), now, now) as { userId: string } | undefined;
+      SELECT user_id AS userId, display_name AS displayName
+      FROM sessions JOIN users ON users.id = sessions.user_id
+      WHERE sessions.id = ? AND access_hash = ? AND access_expires_at > ? AND expires_at > ? AND revoked_at IS NULL
+    `).get(sessionId, digest(accessToken), now, now) as UserProfile | undefined;
+  }
+
+  setupNickname(userId: string, displayName: string): UserProfile | null {
+    return this.transaction(() => {
+      const user = this.db.prepare('SELECT display_name AS displayName FROM users WHERE id = ?')
+        .get(userId) as Pick<UserProfile, 'displayName'>;
+      if (user.displayName !== null) return { userId, displayName: user.displayName };
+
+      const update = this.db.prepare(`
+        UPDATE users SET display_name = ? WHERE id = ?
+        AND NOT EXISTS (SELECT 1 FROM users WHERE display_name = ? COLLATE NOCASE)
+      `).run(displayName, userId, displayName);
+      return update.changes ? { userId, displayName } : null;
+    });
   }
 
   private transaction<T>(run: () => T): T {

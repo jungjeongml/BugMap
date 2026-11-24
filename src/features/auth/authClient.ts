@@ -23,6 +23,7 @@ export function shouldRevalidateSession(verifiedAt: number | null, now: number):
 export type AuthSession = {
   accessToken: string;
   userId: string;
+  displayName: string | null;
 };
 
 type TokenResponse = AuthSession & { refreshToken: string };
@@ -40,7 +41,7 @@ type AuthDependencies = {
   };
 };
 
-type AuthApiPath = '/v1/auth/exchange' | '/v1/auth/refresh' | '/v1/auth/logout';
+type AuthApiPath = '/v1/auth/nickname' | '/v1/auth/exchange' | '/v1/auth/refresh' | '/v1/auth/logout';
 
 function readCallback(url: string, expectedState: string): string | null {
   const prefix = callbackUri + '?';
@@ -73,14 +74,13 @@ function readCallback(url: string, expectedState: string): string | null {
 
 function isTokenResponse(value: unknown): value is TokenResponse {
   if (!value || typeof value !== 'object') return false;
-  const { accessToken, refreshToken, userId } = value as Partial<TokenResponse>;
-  return [accessToken, refreshToken, userId].every(
-    item => typeof item === 'string' && item.trim().length > 0,
-  );
+  const { accessToken, refreshToken, userId, displayName } = value as Partial<TokenResponse>;
+  return (displayName === null || typeof displayName === 'string' && displayName.length > 0)
+    && [accessToken, refreshToken, userId].every(item => typeof item === 'string' && item.trim().length > 0);
 }
 
 export function createAuthClient(apiOrigin: string, deps: AuthDependencies) {
-  async function post(path: AuthApiPath, body: Record<string, string>, acceptUnauthorized = false) {
+  async function post(path: AuthApiPath, body: Record<string, string>, acceptUnauthorized = false, accessToken?: string) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
     try {
@@ -88,7 +88,10 @@ export function createAuthClient(apiOrigin: string, deps: AuthDependencies) {
       try {
         response = await deps.request(apiOrigin + path, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          headers: {
+            'Content-Type': 'application/json', Accept: 'application/json',
+            ...(accessToken && { Authorization: 'Bearer ' + accessToken }),
+          },
           body: JSON.stringify(body),
           credentials: 'omit',
           redirect: 'error',
@@ -103,13 +106,14 @@ export function createAuthClient(apiOrigin: string, deps: AuthDependencies) {
         throw new AuthError('expired');
       }
       if (response.status === 429 || response.status >= 500) throw new AuthError('network');
+      if (path === '/v1/auth/nickname' && response.status === 409) throw new AuthError('nickname-taken');
       if (!response.ok) throw new AuthError('provider');
       if (path === '/v1/auth/logout') return null;
 
-      const tokens: unknown = await response.json().catch(() => null);
+      const payload: unknown = await response.json().catch(() => null);
       if (controller.signal.aborted) throw new AuthError('network');
-      if (!isTokenResponse(tokens)) throw new AuthError('provider');
-      return tokens;
+      if (payload === null || payload === undefined) throw new AuthError('provider');
+      return payload;
     } finally {
       clearTimeout(timeout);
     }
@@ -123,9 +127,10 @@ export function createAuthClient(apiOrigin: string, deps: AuthDependencies) {
     }
   }
 
-  async function saveSession(tokens: TokenResponse): Promise<AuthSession> {
+  async function saveSession(tokens: unknown): Promise<AuthSession> {
+    if (!isTokenResponse(tokens)) throw new AuthError('provider');
     await store(() => deps.refreshTokens.write(tokens.refreshToken));
-    return { accessToken: tokens.accessToken, userId: tokens.userId };
+    return { accessToken: tokens.accessToken, userId: tokens.userId, displayName: tokens.displayName };
   }
 
   async function signIn(provider: AuthProvider): Promise<SignInResult> {
@@ -180,7 +185,21 @@ export function createAuthClient(apiOrigin: string, deps: AuthDependencies) {
     await store(deps.refreshTokens.remove);
   }
 
-  return { signIn, restoreSession, signOut };
+  async function saveNickname(
+    session: Pick<AuthSession, 'userId'> & Partial<Pick<AuthSession, 'accessToken'>>,
+    displayName: string,
+  ): Promise<AuthSession> {
+    if (!session.accessToken) throw new AuthError('expired');
+    const token = session.accessToken;
+    const profile = await post('/v1/auth/nickname', { displayName }, false, token);
+    if (!profile || typeof profile !== 'object' || !('userId' in profile) || profile.userId !== session.userId
+      || !('displayName' in profile) || typeof profile.displayName !== 'string' || !profile.displayName) {
+      throw new AuthError('provider');
+    }
+    return { accessToken: token, userId: session.userId, displayName: profile.displayName };
+  }
+
+  return { signIn, restoreSession, signOut, saveNickname };
 }
 
 export type AuthClient = ReturnType<typeof createAuthClient>;

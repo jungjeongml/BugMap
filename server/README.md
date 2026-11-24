@@ -35,7 +35,9 @@ Cloudflare Quick Tunnel을 사용한 테스트 주소는 터널 프로세스가 
 
 브라우저는 공개 인증 서버의 `/v1/auth/web/authorize/:provider`에서 로그인을 시작한다. 서버가 제공자 콜백을 확인하고 웹 앱으로 돌려보내면, 웹 앱은 동일 출처의 `/v1/auth/web/exchange`에서 일회용 코드를 교환한다. 쿠키 세션은 `/v1/auth/web/session`으로 조회하고 `/v1/auth/web/logout`으로 폐기한다.
 
-Expo의 Metro 개발 서버는 이 세 API를 로컬 인증 서버로 전달한다. 앱 환경의 `BUGMAP_WEB_AUTH_LOCAL_PORT`는 인증 서버의 `PORT`가 3000과 다를 때 사용한다. 웹을 배포할 때는 앱과 동일한 HTTPS 호스트에서 이 세 API를 인증 서버로 전달하도록 리버스 프록시를 구성한다.
+닉네임 저장에는 동일 출처의 `POST /v1/auth/web/nickname`을 사용한다. 웹 프록시는 이 경로도 원래 요청의 쿠키와 Origin 헤더를 유지해 인증 서버에 전달해야 한다. 모바일은 Bearer 인증으로 `POST /v1/auth/nickname`을 호출한다.
+
+Expo의 Metro 개발 서버는 이 네 API를 로컬 인증 서버로 전달한다. 앱 환경의 `BUGMAP_WEB_AUTH_LOCAL_PORT`는 인증 서버의 `PORT`가 3000과 다를 때 사용한다. 웹을 배포할 때는 앱과 동일한 HTTPS 호스트에서 이 네 API를 인증 서버로 전달하도록 리버스 프록시를 구성한다.
 
 [Kakao Login REST API](https://developers.kakao.com/docs/en/kakaologin/rest-api) · [Google OpenID Connect](https://developers.google.com/identity/openid-connect/openid-connect) · [Apple 웹 로그인 설정](https://developer.apple.com/documentation/signinwithapple/configuring-your-webpage-for-sign-in-with-apple) · [Apple 토큰 교환](https://developer.apple.com/documentation/SigninwithAppleRESTAPI/Generate-and-validate-tokens)
 

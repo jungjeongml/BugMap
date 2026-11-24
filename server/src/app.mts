@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { isIP } from 'node:net';
 import {
-  BadRequestException, Body, Controller, ForbiddenException, Get, HttpCode, Inject, Injectable, Module,
+  BadRequestException, Body, ConflictException, Controller, ForbiddenException, Get, HttpCode, Inject, Injectable, Module,
   NotFoundException, Param, Post, Query, Req, Res, UnauthorizedException,
   UnsupportedMediaTypeException,
 } from '@nestjs/common';
@@ -190,7 +190,7 @@ class AuthController {
     if (!session) throw new UnauthorizedException();
     const cookie = webCookie(origin);
     response.cookie(cookie.name, session.refreshToken, { ...cookie.options, maxAge: sessionLifetime });
-    return { userId: session.userId };
+    return { userId: session.userId, displayName: session.displayName };
   }
 
   @Get('web/session')
@@ -200,6 +200,34 @@ class AuthController {
     const session = opaqueToken.test(token) ? this.store.findSessionUser(token, webScope(origin)) : undefined;
     if (!session) throw new UnauthorizedException();
     return session;
+  }
+
+  @Post('web/nickname')
+  @HttpCode(200)
+  webNickname(@Body() body: unknown, @Req() request: Request) {
+    const origin = this.requireWebOrigin(request);
+    if (!request.is('application/json')) throw new UnsupportedMediaTypeException();
+    const token = readCookie(request, webCookie(origin).name);
+    const session = opaqueToken.test(token) ? this.store.findSessionUser(token, webScope(origin)) : undefined;
+    if (!session || textValue(body, 'userId') !== session.userId) throw new UnauthorizedException();
+    return this.saveNickname(session.userId, body);
+  }
+
+  @Post('nickname')
+  @HttpCode(200)
+  nickname(@Body() body: unknown, @Req() request: Request, @Res({ passthrough: true }) response: Response) {
+    return this.saveNickname(this.me(request, response).userId, body);
+  }
+
+  private saveNickname(userId: string, body: unknown) {
+    const displayName = textValue(body, 'displayName').trim().normalize('NFC');
+    const length = [...displayName].length;
+    if (length < 2 || length > 12 || /[\p{Cc}\p{Cs}\p{Zl}\p{Zp}]/u.test(displayName)) {
+      throw new BadRequestException('Invalid nickname');
+    }
+    const user = this.store.setupNickname(userId, displayName);
+    if (!user) throw new ConflictException('Nickname unavailable');
+    return user;
   }
 
   @Post('web/logout')

@@ -11,7 +11,7 @@ function fixture() {
   const events = [];
   let href = webOrigin + '/';
   let timestamp = 100_000;
-  let response = { status: 200, body: { userId: 'insect-observer' } };
+  let response = { status: 200, body: { userId: 'insect-observer', displayName: null } };
   let sessionResponse;
   const client = createWebAuthClient({ apiOrigin, webOrigin }, {
     crypto: webcrypto,
@@ -96,7 +96,7 @@ test('scrubs one valid callback and consumes pending PKCE before guarded same-or
 
   assert.deepEqual(await client.completeSignIn(), {
     kind: 'authenticated',
-    session: { userId: 'insect-observer' },
+    session: { userId: 'insect-observer', displayName: null },
   });
   const [, replacement, request, sessionRequest] = events;
   assert.deepEqual(replacement, { type: 'replace', url: webOrigin + '/' });
@@ -119,7 +119,7 @@ test('scrubs one valid callback and consumes pending PKCE before guarded same-or
 });
 
 test('requires a cookie-backed session for the exchanged user before reporting successful sign-in', async () => {
-  for (const [status, body] of [[401], [200, { userId: 'another-observer' }]]) {
+  for (const [status, body] of [[401], [200, { userId: 'another-observer', displayName: null }]]) {
     const { client, setLocation, setSessionResponse, storage } = fixture();
     await client.signIn('kakao');
     const [pending] = Array.from(storage.values(), item => JSON.parse(item));
@@ -163,8 +163,8 @@ test('restores users from the cookie session and logs out without writing web cr
   const { client, events, storage, setResponse } = fixture();
   setResponse(401);
   assert.equal(await client.restoreSession(), null);
-  setResponse(200, { userId: 'insect-observer', accessToken: 'unexpected-field' });
-  assert.deepEqual(await client.restoreSession(), { userId: 'insect-observer' });
+  setResponse(200, { userId: 'insect-observer', displayName: null, accessToken: 'unexpected-field' });
+  assert.deepEqual(await client.restoreSession(), { userId: 'insect-observer', displayName: null });
   setResponse(200, { userId: '' });
   await assert.rejects(client.restoreSession(), { kind: 'provider' });
   setResponse(204);
@@ -177,4 +177,17 @@ test('restores users from the cookie session and logs out without writing web cr
     ['/v1/auth/web/logout', 'POST', 'same-origin'],
   ]);
   assert.equal(storage.size, 0);
+});
+
+test('saves a nickname through the same-origin session and reports conflicts', async () => {
+  const { client, setResponse, events } = fixture();
+  const session = { userId: 'insect-observer', displayName: null };
+  setResponse(409);
+  await assert.rejects(client.saveNickname(session, 'Hunter'), { kind: 'nickname-taken' });
+  setResponse(200, { ...session, displayName: 'Hunter' });
+  assert.deepEqual(await client.saveNickname(session, 'Hunter'), { ...session, displayName: 'Hunter' });
+  const last = events.at(-1);
+  assert.equal(last.path, '/v1/auth/web/nickname');
+  assert.equal(last.options.credentials, 'same-origin');
+  assert.deepEqual(JSON.parse(last.options.body), { userId: session.userId, displayName: 'Hunter' });
 });

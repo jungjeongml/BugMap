@@ -510,3 +510,9 @@
 ## 2026-11-25 — 닉네임 설정 개발 인계 수락
 
 - 사람의 인계 수락 `8fe7eca2-672e-4bab-8036-04bdfeba3ac9`가 기록됐고 하네스 검사에서 01~08 모두 통과했다. [인계 문서](../work/bugmap-nickname-harness/08-handoff/HANDOFF.md) · [제품 구현 시 확인할 항목](../work/bugmap-nickname-harness/08-handoff/open-items.md)
+
+## 2026-11-25 — 소셜 가입과 필수 닉네임 설정 연결
+
+- 소셜 가입에서 내부 계정·식별자·세션을 저장하고, 미설정 세션은 닉네임 화면으로 이동시켰다. 첫 저장 후 발견 지도로 진입한다. SQLite 스키마 갱신, 영문 대소문자 무시 유니크 인덱스, 모바일 Bearer 및 웹 쿠키 저장을 적용했다. [기술 계약](../docs/TDD.md#5-주요-api-계약-초안) · [화면 명세](../docs/screens/login.md) · [구현 계획](../docs/superpowers/plans/2026-11-25-nickname-setup.md)
+- Cursor MCP Plugin으로 BugMapHarness Page 1의 승인 프레임 3개를 확인했다. 독립 코드 리뷰 후 세션 복구 중 입력 보존과 웹 입력 포커스를 수정했다. 서버 테스트 20개, 프로젝트 테스트 89개, 타입 검사와 Expo 웹 내보내기가 통과했다. 임시 로컬 계정으로 390px 웹 오류·저장 가능 상태를 캡처하고 오류 입력의 포커스, 저장 후 지도 진입, 새로고침 이후 닉네임 복구를 확인했다.
+- 실제 제공자 계정과 iOS·Android 실기기, 네이티브 한글 조합 중 UI 동작, Pretendard 적용은 후속 확인 항목이다. 이 화면은 시스템 글꼴을 사용한다. 배포 시 웹 프록시에 닉네임 저장 경로가 필요하다. [웹 인증 설정](../server/README.md)

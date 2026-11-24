@@ -8,7 +8,7 @@ const hexToken = /^[a-f0-9]{64}$/;
 const callbackKeys = ['state', 'code', 'error'] as const;
 
 type WebProvider = Extract<AuthProvider, 'kakao' | 'google'>;
-type WebSession = { userId: string };
+type WebSession = { userId: string; displayName: string | null };
 type WebSignInResult = { kind: 'cancelled' } | { kind: 'authenticated'; session: WebSession };
 type WebAuthConfig = { apiOrigin: string; webOrigin: string };
 type PendingSignIn = { provider: WebProvider; state: string; verifier: string; createdAt: number };
@@ -76,8 +76,8 @@ export function createWebAuthClient({ apiOrigin, webOrigin }: WebAuthConfig, dep
   }
 
   async function requestSession(
-    action: 'exchange' | 'session' | 'logout',
-    exchange?: { provider: WebProvider; code: string; codeVerifier: string },
+    action: 'exchange' | 'session' | 'logout' | 'nickname',
+    payload?: Record<string, string>,
   ): Promise<WebSession | null> {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), requestTimeoutMs);
@@ -86,8 +86,8 @@ export function createWebAuthClient({ apiOrigin, webOrigin }: WebAuthConfig, dep
       try {
         response = await deps.request('/v1/auth/web/' + action, {
           method: action === 'session' ? 'GET' : 'POST',
-          headers: exchange ? { Accept: 'application/json', 'Content-Type': 'application/json' } : { Accept: 'application/json' },
-          body: exchange && JSON.stringify(exchange),
+          headers: payload ? { Accept: 'application/json', 'Content-Type': 'application/json' } : { Accept: 'application/json' },
+          body: payload && JSON.stringify(payload),
           credentials: 'same-origin',
           mode: 'same-origin',
           redirect: 'error',
@@ -100,18 +100,20 @@ export function createWebAuthClient({ apiOrigin, webOrigin }: WebAuthConfig, dep
       }
 
       if (response.status === 401) {
-        if (action !== 'exchange') return null;
+        if (action === 'session' || action === 'logout') return null;
         throw new AuthError('expired');
       }
       if (response.status === 429 || response.status >= 500) throw new AuthError('network');
+      if (action === 'nickname' && response.status === 409) throw new AuthError('nickname-taken');
       if (!response.ok) throw new AuthError('provider');
       if (action === 'logout') return null;
 
       const body: unknown = await response.json().catch(() => null);
       if (controller.signal.aborted) throw new AuthError('network');
       if (!body || typeof body !== 'object' || !('userId' in body)
-        || typeof body.userId !== 'string' || !body.userId.trim()) throw new AuthError('provider');
-      return { userId: body.userId };
+        || typeof body.userId !== 'string' || !body.userId.trim() || !('displayName' in body)
+        || (body.displayName !== null && (typeof body.displayName !== 'string' || !body.displayName))) throw new AuthError('provider');
+      return { userId: body.userId, displayName: body.displayName };
     } finally {
       clearTimeout(timeout);
     }
@@ -208,5 +210,11 @@ export function createWebAuthClient({ apiOrigin, webOrigin }: WebAuthConfig, dep
     await requestSession('logout');
   }
 
-  return { signIn, completeSignIn, restoreSession, signOut };
+  async function saveNickname(session: Pick<WebSession, 'userId'>, displayName: string): Promise<WebSession> {
+    const profile = await requestSession('nickname', { userId: session.userId, displayName });
+    if (!profile || profile.userId !== session.userId || profile.displayName === null) throw new AuthError('provider');
+    return profile;
+  }
+
+  return { signIn, completeSignIn, restoreSession, signOut, saveNickname };
 }

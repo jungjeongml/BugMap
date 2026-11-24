@@ -7,6 +7,7 @@ const authRoutes = new Map([
   ['/v1/auth/web/exchange', 'POST'],
   ['/v1/auth/web/session', 'GET'],
   ['/v1/auth/web/logout', 'POST'],
+  ['/v1/auth/web/nickname', 'POST'],
 ]);
 
 config.server.enhanceMiddleware = (middleware, server) => {

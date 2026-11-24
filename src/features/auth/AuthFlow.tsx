@@ -7,6 +7,7 @@ import { DiscoveryMapScreen } from '../discovery-map/DiscoveryMapScreen';
 import { AuthError, shouldRevalidateSession, type AuthProvider } from './authClient';
 import { authRuntime, type VerifiedAuthSession } from './authRuntime';
 import { LoginScreen } from './LoginScreen';
+import { NicknameScreen } from './NicknameScreen';
 
 type AuthView =
   | { screen: 'restore'; notice?: string }
@@ -16,6 +17,7 @@ type AuthView =
 const loginErrors: Record<AuthError['kind'], string> = {
   callback: '로그인 확인에 실패했어요. 다시 시도해 주세요.',
   expired: '로그인 요청이 만료됐어요. 로그인 버튼을 다시 눌러 주세요.',
+  'nickname-taken': '다른 닉네임을 입력해 주세요.',
   network: '연결을 확인한 뒤 로그인 버튼을 다시 눌러 주세요.',
   provider: '로그인을 완료하지 못했어요. 다시 시도해 주세요.',
   'provider-unavailable': '이 로그인 방법은 현재 이용할 수 없어요. 다른 방법을 선택해 주세요.',
@@ -40,6 +42,7 @@ export function AuthFlow() {
     ? { screen: 'restore' }
     : { screen: 'login', pending: null });
   const operationRunning = useRef(false);
+  const [nicknameNotice, setNicknameNotice] = useState<string>();
   const verifiedAt = useRef<number | null>(null);
 
   const restoreSession = useCallback(async () => {
@@ -87,15 +90,17 @@ export function AuthFlow() {
     void restoreSession();
   }, [restoreSession]);
 
+  const showingMap = view.screen === 'authenticated' && view.session.displayName !== null;
+
   useEffect(() => {
-    if (!client || view.screen !== 'authenticated') return;
+    if (!client || !showingMap) return;
     const subscription = AppState.addEventListener('change', state => {
       if (state === 'active' && shouldRevalidateSession(verifiedAt.current, Date.now())) {
         void restoreSession();
       }
     });
     return () => subscription.remove();
-  }, [restoreSession, view.screen]);
+  }, [restoreSession, showingMap]);
 
   async function signIn(provider: AuthProvider) {
     if (!client || operationRunning.current) return;
@@ -139,6 +144,39 @@ export function AuthFlow() {
     }
   }
 
+  async function saveNickname(displayName: string) {
+    if (!client || operationRunning.current || view.screen !== 'authenticated') return;
+    operationRunning.current = true;
+    setNicknameNotice(undefined);
+    setView({ ...view, pending: true });
+    let session = view.session;
+    try {
+      try {
+        session = await client.saveNickname(session, displayName);
+      } catch (error) {
+        if (!(error instanceof AuthError && error.kind === 'expired')) throw error;
+        const restored = await client.restoreSession();
+        verifiedAt.current = restored ? Date.now() : null;
+        if (!restored) {
+          setView({ screen: 'login', pending: null, notice: '로그인 세션이 만료됐어요. 다시 로그인해 주세요.' });
+          return;
+        }
+        session = restored;
+        if (session.userId === view.session.userId && session.displayName === null) {
+          session = await client.saveNickname(session, displayName);
+        }
+      }
+      setView({ screen: 'authenticated', session, pending: false });
+    } catch (error) {
+      setView({ screen: 'authenticated', session, pending: false });
+      setNicknameNotice(error instanceof AuthError && error.kind === 'nickname-taken'
+        ? '다른 사용자가 쓰고 있는 닉네임이에요.'
+        : '닉네임을 저장하지 못했어요. 다시 시도해 주세요.');
+    } finally {
+      operationRunning.current = false;
+    }
+  }
+
   if (view.screen === 'login') {
     return (
       <LoginScreen
@@ -170,6 +208,19 @@ export function AuthFlow() {
           )}
         </View>
       </SafeAreaView>
+    );
+  }
+
+  if (view.session.displayName === null) {
+    return (
+      <NicknameScreen
+        key={view.session.userId}
+        pending={view.pending}
+        notice={nicknameNotice ?? view.notice}
+        onEdit={() => setNicknameNotice(undefined)}
+        onSave={value => void saveNickname(value)}
+        onSignOut={() => { setNicknameNotice(undefined); void signOut(); }}
+      />
     );
   }
 

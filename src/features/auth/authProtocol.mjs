@@ -1,4 +1,4 @@
-/** @typedef {'callback' | 'expired' | 'network' | 'provider' | 'provider-unavailable' | 'session-unavailable' | 'storage' | 'unavailable'} AuthErrorKind */
+/** @typedef {'callback' | 'expired' | 'network' | 'nickname-taken' | 'provider' | 'provider-unavailable' | 'session-unavailable' | 'storage' | 'unavailable'} AuthErrorKind */
 
 export class AuthError extends Error {
   /** @param {AuthErrorKind} kind */

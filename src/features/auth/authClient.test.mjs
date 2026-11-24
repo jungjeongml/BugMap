@@ -7,7 +7,7 @@ const apiOrigin = 'https://auth.example.test';
 const redirectUri = 'bugmap://auth/callback';
 const state = '11'.repeat(32);
 const verifier = 'ab'.repeat(32);
-const session = { accessToken: 'access', refreshToken: 'refresh', userId: 'user' };
+const session = { accessToken: 'access', refreshToken: 'refresh', userId: 'user', displayName: null };
 
 function setup({ token = null, browser, request } = {}) {
   let stored = token;
@@ -26,7 +26,7 @@ function setup({ token = null, browser, request } = {}) {
     request: async (url, init) => {
       const body = JSON.parse(init.body);
       apiCalls.push([url, init.method, body]);
-      return request?.(url, body) ?? Response.json(session);
+      return request?.(url, body, init) ?? Response.json(session);
     },
     refreshTokens: {
       read: async () => stored,
@@ -53,7 +53,7 @@ test('shows Apple on iOS, Kakao and Google on Android, and no Apple on the web p
 test('sends an S256 challenge to the browser and sends the verifier only on exchange', async () => {
   const { client, browserCalls, apiCalls, stored } = setup();
   assert.deepEqual(await client.signIn('google'), {
-    kind: 'authenticated', session: { accessToken: 'access', userId: 'user' },
+    kind: 'authenticated', session: { accessToken: 'access', userId: 'user', displayName: null },
   });
 
   const [[authorize, returnTo]] = browserCalls;
@@ -143,7 +143,7 @@ test('restoring sends the stored token and saves its replacement for the next re
     token: 'previous',
     request: () => Response.json({ ...session, refreshToken: 'rotated' }),
   });
-  assert.deepEqual(await client.restoreSession(), { accessToken: 'access', userId: 'user' });
+  assert.deepEqual(await client.restoreSession(), { accessToken: 'access', userId: 'user', displayName: null });
   assert.equal(stored(), 'rotated');
   await client.restoreSession();
   assert.deepEqual(apiCalls, [
@@ -204,4 +204,17 @@ test('identifies a validated callback for an unavailable provider', async () => 
   });
   await assert.rejects(client.signIn('apple'), { kind: 'provider-unavailable' });
   assert.deepEqual(apiCalls, []);
+});
+
+test('saves the nickname with a mobile Bearer token and reports expired sessions', async () => {
+  const verified = { accessToken: 'access', userId: 'user', displayName: null };
+  const { client } = setup({ request(url, body, init) {
+    assert.equal(url, apiOrigin + '/v1/auth/nickname');
+    assert.equal(init.headers.Authorization, 'Bearer access');
+    assert.equal(body.displayName, '숲길');
+    return Response.json({ userId: 'user', displayName: '숲길' });
+  }});
+  assert.deepEqual(await client.saveNickname(verified, '숲길'), { ...verified, displayName: '숲길' });
+  const expired = setup({ request: () => new Response(null, { status: 401 }) });
+  await assert.rejects(expired.client.saveNickname(verified, '숲길'), { kind: 'expired' });
 });

@@ -3,6 +3,7 @@ import { createHash, randomBytes } from 'node:crypto';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { DatabaseSync } from 'node:sqlite';
 import { test } from 'node:test';
 import { createAuthApp, parseWebOrigin } from '../dist/app.mjs';
 import { AuthStore } from '../dist/store.mjs';
@@ -130,7 +131,8 @@ test('web callback exchanges a provider code for a session cookie and logout rev
   assert.match(cookies, /Max-Age=2592000.*Path=\/.*HttpOnly.*Secure.*SameSite=Lax/);
   assert.doesNotMatch(cookies, /Domain=/i);
   const user = await exchanged.json();
-  assert.deepEqual(Object.keys(user), ['userId']);
+  assert.deepEqual(user, { userId: user.userId, displayName: null });
+  assert.equal(typeof user.userId, 'string');
   const cookie = cookies.split(';')[0];
   assert.equal((await app.post('web/exchange', body, headers)).status, 401);
   assert.equal((await app.request('web/session')).status, 401);
@@ -141,6 +143,13 @@ test('web callback exchanges a provider code for a session cookie and logout rev
     assert.equal(session.headers.get('set-cookie'), null);
     assert.equal(session.headers.get('cache-control'), 'no-store');
   }
+  const nickname = { userId: user.userId, displayName: '숲길관찰자' };
+  assert.equal((await app.post('web/nickname', nickname, { cookie })).status, 403);
+  assert.equal((await app.post('web/nickname', { ...nickname, userId: 'other' }, { ...headers, cookie })).status, 401);
+  const saved = await app.post('web/nickname', nickname, { ...headers, cookie });
+  assert.equal(saved.status, 200);
+  assert.deepEqual(await saved.json(), nickname);
+  assert.deepEqual(await (await app.request('web/session', { headers: { cookie } })).json(), nickname);
   assert.equal((await app.post('web/logout', {}, { cookie })).status, 403);
   const logout = await app.post('web/logout', {}, { ...headers, cookie });
   assert.equal(logout.status, 204);
@@ -281,7 +290,7 @@ test('rotates a persisted session once and revokes access on logout', async t =>
   const second = await launch(t, path);
   t.after(() => rmSync(dir, { recursive: true, force: true }));
   const initial = await first.login('kakao');
-  assert.deepEqual(Object.keys(initial).sort(), ['accessToken', 'refreshToken', 'userId']);
+  assert.deepEqual(Object.keys(initial).sort(), ['accessToken', 'displayName', 'refreshToken', 'userId']);
   const access = token => ({ headers: { authorization: 'Bearer ' + token } });
   assert.equal((await second.request('me', access(initial.accessToken))).status, 200);
   const refreshes = await Promise.all([
@@ -314,4 +323,54 @@ test('revokes a refreshed session with the prior token after a lost refresh resp
   assert.equal((await app.request('me', {
     headers: { authorization: 'Bearer ' + rotated.accessToken },
   })).status, 401);
+});
+
+test('saves the first nickname, rejects case-insensitive duplicates and restores the saved value', async t => {
+  const app = await launch(t);
+  const first = await app.login('google', { code: 'first-observer' });
+  const second = await app.login('kakao', { code: 'second-observer' });
+  const headers = session => ({ authorization: 'Bearer ' + session.accessToken });
+  assert.equal(first.displayName, null);
+  assert.equal((await app.post('nickname', { displayName: '숲길' })).status, 401);
+  for (const displayName of [' ', '숲', 'a'.repeat(13), 'a\nb']) {
+    assert.equal((await app.post('nickname', { displayName }, headers(first))).status, 400);
+  }
+  const saved = await app.post('nickname', { displayName: ' BugHunter ', userId: second.userId }, headers(first));
+  assert.equal(saved.status, 200);
+  assert.deepEqual(await saved.json(), { userId: first.userId, displayName: 'BugHunter' });
+  assert.equal((await app.post('nickname', { displayName: 'bughunter' }, headers(second))).status, 409);
+  const retry = await app.post('nickname', { displayName: 'BugHunter' }, headers(first));
+  assert.equal(retry.status, 200);
+  assert.equal((await retry.json()).displayName, 'BugHunter');
+  assert.equal((await (await app.post('refresh', { refreshToken: first.refreshToken })).json()).displayName, 'BugHunter');
+  const returning = await app.login('google', { code: 'first-observer' });
+  assert.equal(returning.userId, first.userId);
+  assert.equal(returning.displayName, 'BugHunter');
+
+  const third = await app.login('google', { code: 'third-observer' });
+  const competing = await Promise.all([second, third].map(session =>
+    app.post('nickname', { displayName: '숲길관찰자' }, headers(session))));
+  assert.deepEqual(competing.map(response => response.status).sort(), [200, 409]);
+});
+
+test('adds nickname storage to a pre-existing SQLite users table', async t => {
+  const folder = mkdtempSync(join(tmpdir(), 'bugmap-nickname-'));
+  const path = join(folder, 'auth.sqlite');
+  const legacy = new DatabaseSync(path);
+  legacy.exec('CREATE TABLE users (id TEXT PRIMARY KEY) STRICT');
+  legacy.close();
+  const app = await launch(t, path);
+  t.after(() => rmSync(folder, { recursive: true, force: true }));
+  const session = await app.login('google');
+  assert.equal(session.displayName, null);
+  const saved = await app.post('nickname', { displayName: '관찰자' }, {
+    authorization: 'Bearer ' + session.accessToken,
+  });
+  assert.equal(saved.status, 200);
+  const reopened = new DatabaseSync(path, { readOnly: true });
+  try {
+    assert.equal(reopened.prepare('SELECT display_name FROM users WHERE id = ?').get(session.userId).display_name, '관찰자');
+  } finally {
+    reopened.close();
+  }
 });
