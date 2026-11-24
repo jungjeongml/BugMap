@@ -1,0 +1,8 @@
+requirement,status,evidence,note
+NICK-01,verified-in-spec,../03-structure/flows.mmd | ../03-structure/states.csv,가입 직후 설정과 미저장 재진입 및 이전 설정 완료 계정의 지도 경로를 대조했다. 실제 인증 분기는 후속
+NICK-02,verified,../06-figma/captures/nickname-setup--initial.png | ../06-figma/prototype-readback.json,빈 값과 공개 안내 및 비활성 시작하기. 초기 오류와 버튼 이동 없음
+NICK-03,verified,../06-figma/captures/nickname-setup--ready.png | player-runtime.json,숲길관찰자와 활성 버튼을 확인했다. 실제 Figma 플레이어 클릭으로 41:81에 도착했다
+NICK-04,verified-in-design,../06-figma/captures/nickname-setup--invalid.png | ../03-structure/states.csv,숲 입력 유지와 2자 이상 안내 및 비활성 버튼. 길이 경계와 한글 조합·오류 해제는 상태 명세로 확인
+NICK-05,verified-in-design,figma-lint.json | web-lint.json | ../05-design-system/render-report.json,390×844와 360×800에서 입력 52px와 버튼 48px 및 시연 키보드 위 20px 여유를 확인. 실제 기기는 후속
+NICK-06,verified,../06-figma/node-map.json | ../06-figma/nodes.json | ../06-figma/preservation.json,Page 1의 편집 가능한 세 프레임과 네이티브 캡처 및 기존 화면 보존을 확인했다
+NICK-07,verified-in-spec,../03-structure/states.csv | ../03-structure/flows.mmd,저장 중 중복 제출 차단과 실패 후 원문 유지 및 재시도가 상태 명세에 있다. 서버와 제품 동작은 후속

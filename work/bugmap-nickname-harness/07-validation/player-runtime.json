@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-25",
+  "method": "Figma prototype player. Observed visible ready frame, mouse clicked the green Start CTA, read the resulting destination URL and visually checked the original discovery map.",
+  "viewport": {
+    "width": 1470,
+    "height": 542
+  },
+  "before": {
+    "frame": "182:671",
+    "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=182-671&scaling=scale-down",
+    "capture": "captures/player/01-ready.png",
+    "sha256": "637b1fa69355a43d25572c320c8c5bf0c49e6c9e3605681e7e4159c670868573"
+  },
+  "action": {
+    "label": "시작하기",
+    "nodeId": "182:717",
+    "input": "mouse click",
+    "x": 735,
+    "y": 307
+  },
+  "after": {
+    "expected": "41:81",
+    "observed": "41:81",
+    "url": "https://www.figma.com/proto/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=41-81&scaling=scale-down",
+    "capture": "captures/player/02-discovery-map.png",
+    "sha256": "5790c9e1047a9e052e6b38e52533e5072c3b6c8d0125bf2f085fc988767baa55"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "lint:web",
+  "at": "2026-11-24T19:54:34.384Z",
+  "inputs": {
+    "05-design-system/captures/360x800-initial.png": "acdc8f7e789dc47a077693f86a5b6511c3e6bfcb5bb9c88c74673ba9c57286e0",
+    "05-design-system/captures/360x800-invalid.png": "87f5d2bb7b0c62460bd357a225d52487b8a269bf9b2faa4444995a31b354d6ac",
+    "05-design-system/captures/360x800-ready.png": "92b06e0641694d1dc1aa75327db6220c81ceb2be635f173830efbff56e1e3bb7",
+    "05-design-system/captures/390x844-initial.png": "18742116fe7143eeba9c1cf82c662df03579a5bb8b8142a19329b9ea821734a1",
+    "05-design-system/captures/390x844-invalid.png": "a181ad62af60adc5a66e8b084c02d3e0b23e7076c991b54b5a4f7ef2cc57590f",
+    "05-design-system/captures/390x844-ready.png": "9520c4deefaa93e1f8c03f235c4b87ec03f0971d1746fbe0229a687e729ffba6",
+    "05-design-system/components.json": "1d38484e785f506319cf6565ebcc533d8272d954d463a6e992dc4c9c6ea327e5",
+    "05-design-system/copy.json": "3f8dca315d5dd9573061d5f57cc977ac87609f9683f1d17146ff17722e837233",
+    "05-design-system/tokens.json": "450b9ab83eeb882ce743a32d733d9ba984bdfb84c2d39e294af7067e9b6ebdae",
+    "06-figma/web/README.md": "920fb2965221e0d1028e3c095ec0592ac9a7d9eba6609da875254935ca695c38",
+    "06-figma/web/assets/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "06-figma/web/assets/Pretendard-Medium.woff2": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+    "06-figma/web/assets/bugmap-logo-vector-lime.svg": "7d7911bab153a6ac00879de73da8dcc4569ec31b760d4be439f37c802199545f",
+    "06-figma/web/assets/lucide-ISC.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "06-figma/web/assets/pretendard-OFL.txt": "d31ddd9f2bed32fd7e302a205cf2380ba0de6529152d239ef99cfb6f261bfc04",
+    "06-figma/web/screens/nickname-setup--initial.html": "eb7fcf1176a118fee1881c4391b6d027e34a4c44afe876b5f9e001160daf4dd3",
+    "06-figma/web/screens/nickname-setup--invalid.html": "b42bd728495d37f9bf8ebed0a382ae5e9fba693f4838196f1e32b487c19195e6",
+    "06-figma/web/screens/nickname-setup--ready.html": "12703b78eb01a0db691b9174e316b75bfe9683b327b3671c5e8e0b7233afe051",
+    "06-figma/web/screens/nickname.css": "c9536c376eb0b5aaa1624e161429af5a362084a5dc9c31b654f2c80eea37d39e",
+    "control/project.json": "d4301e41db016f1e30f51663308867df7beba1fa09ba7fb86f9037e811785170"
+  },
+  "outputs": {
+    "07-validation/captures/0c9e0025070a-390x844.png": "18742116fe7143eeba9c1cf82c662df03579a5bb8b8142a19329b9ea821734a1",
+    "07-validation/captures/0c9e0025070a-360x800.png": "acdc8f7e789dc47a077693f86a5b6511c3e6bfcb5bb9c88c74673ba9c57286e0",
+    "07-validation/captures/85c6c2d0de3a-390x844.png": "a181ad62af60adc5a66e8b084c02d3e0b23e7076c991b54b5a4f7ef2cc57590f",
+    "07-validation/captures/85c6c2d0de3a-360x800.png": "87f5d2bb7b0c62460bd357a225d52487b8a269bf9b2faa4444995a31b354d6ac",
+    "07-validation/captures/daa6e5d115cc-390x844.png": "9520c4deefaa93e1f8c03f235c4b87ec03f0971d1746fbe0229a687e729ffba6",
+    "07-validation/captures/daa6e5d115cc-360x800.png": "92b06e0641694d1dc1aa75327db6220c81ceb2be635f173830efbff56e1e3bb7"
+  },
+  "minTarget": 44,
+  "runs": [
+    {
+      "html": "06-figma/web/screens/nickname-setup--initial.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/0c9e0025070a-390x844.png",
+      "issues": [],
+      "title": "BugMap 닉네임 설정",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-initial.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    },
+    {
+      "html": "06-figma/web/screens/nickname-setup--initial.html",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "07-validation/captures/0c9e0025070a-360x800.png",
+      "issues": [],
+      "title": "BugMap 닉네임 설정",
+      "visual": {
+        "reference": "05-design-system/captures/360x800-initial.png",
+        "width": 360,
+        "height": 800,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    },
+    {
+      "html": "06-figma/web/screens/nickname-setup--invalid.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/85c6c2d0de3a-390x844.png",
+      "issues": [],
+      "title": "BugMap 닉네임 설정",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-invalid.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    },
+    {
+      "html": "06-figma/web/screens/nickname-setup--invalid.html",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "07-validation/captures/85c6c2d0de3a-360x800.png",
+      "issues": [],
+      "title": "BugMap 닉네임 설정",
+      "visual": {
+        "reference": "05-design-system/captures/360x800-invalid.png",
+        "width": 360,
+        "height": 800,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    },
+    {
+      "html": "06-figma/web/screens/nickname-setup--ready.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "capture": "07-validation/captures/daa6e5d115cc-390x844.png",
+      "issues": [],
+      "title": "BugMap 닉네임 설정",
+      "visual": {
+        "reference": "05-design-system/captures/390x844-ready.png",
+        "width": 390,
+        "height": 844,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    },
+    {
+      "html": "06-figma/web/screens/nickname-setup--ready.html",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "capture": "07-validation/captures/daa6e5d115cc-360x800.png",
+      "issues": [],
+      "title": "BugMap 닉네임 설정",
+      "visual": {
+        "reference": "05-design-system/captures/360x800-ready.png",
+        "width": 360,
+        "height": 800,
+        "changed": 0,
+        "ratio": 0,
+        "box": null
+      }
+    }
+  ]
+}

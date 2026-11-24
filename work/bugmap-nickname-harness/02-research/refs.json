@@ -1,0 +1,10 @@
+{
+  "references": [
+    {
+      "id": "apple-hig-text-fields",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/text-fields",
+      "viewport": { "width": 1280, "height": 1180 },
+      "reason": "닉네임 한 줄 필드의 레이블·힌트·입력 검증·키보드 완료 동작을 현재 공식 모바일 가이드와 대조"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+screen_id,purpose,primary_action,incoming,outgoing,requirements
+signup-auth,소셜 가입 및 인증 완료,제공자 인증 완료,기존 로그인 19:2,저장된 BugMap 닉네임 여부 분기,NICK-01
+nickname-setup,발견 지도 진입 전 공개 기록에 쓸 작성자 이름 설정,시작하기,인증 성공 후 BugMap 닉네임 미설정 또는 미설정 계정 재진입,저장 성공 시 기존 발견 지도 41:81,NICK-01|NICK-02|NICK-03|NICK-04|NICK-05|NICK-06|NICK-07
+discovery-map,설정 완료 이후 기존 발견 지도,기존 지도 탐색,닉네임 저장 성공 또는 이미 저장된 계정,기존 흐름,NICK-01|NICK-03

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844" role="img" aria-label="BugMap 닉네임 설정">
+<foreignObject width="390" height="844"><div xmlns="http://www.w3.org/1999/xhtml">
+<style><![CDATA[
+@font-face{font-family:Pretendard;src:url('assets/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:block}
+@font-face{font-family:Pretendard;src:url('assets/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:block}
+:root{--background:#101C16;--text:#F3F7EE;--textSecondary:#BDCDC2;--textPlaceholder:#A7BBAD;--accent:#C5EE79;--onAccent:#202E13;--field:#1C2C23;--fieldBorder:#6D8677;--error:#FFA99B;--disabledSurface:#23332A;--disabledBorder:#3D5044;--disabledText:#8FA496;--brandSurface:#18271F;--brandBorder:#354B3C;--contourMuted:#294234;--contourMid:#36513C;--contourEmphasis:#567348;--markerSoft:#2F4433;--keyboardBase:#1E2521;--keyboardRim:#404944;--keyboardKey:#36423B;--keyboardAlt:#2C3730;--keyboardSecondary:#B8C7BD}
+*{box-sizing:border-box} body,h1,p{margin:0}
+body,.screen{background-color:var(--background);color:var(--text);font-family:Pretendard,sans-serif}
+.screen{position:relative;overflow:hidden}
+.block{position:absolute;margin:0}
+#status-bar{display:flex;align-items:center;justify-content:space-between;padding:0 11px;font-size:15px;font-weight:700;line-height:20px}
+.status-icons{display:block;width:69px;height:16px}
+#brand-visual{background-color:var(--brandSurface);border:1px solid var(--brandBorder);border-radius:18px;overflow:hidden;display:flex;align-items:center}
+#brand-visual img{width:103px;height:auto;position:relative;left:17px}
+.topography{position:absolute;right:0;top:0;width:70%;height:100%}
+#title{display:flex;align-items:center;letter-spacing:-0.55px;font-size:28px;font-weight:700;line-height:36px}
+#description{display:flex;align-items:center;color:var(--textSecondary);font-size:15px;font-weight:500;line-height:22px}
+#field-label{display:flex;align-items:center;font-size:14px;font-weight:700;line-height:20px}
+#nickname{display:block;background:var(--field);color:var(--text);border:1px solid var(--fieldBorder);border-radius:16px;padding:0 15px;outline:0;font-size:16px;font-weight:500;line-height:24px}
+#nickname::placeholder{color:var(--textPlaceholder);opacity:1;font-size:16px;font-weight:500;line-height:24px}
+.screen[data-state=initial] #nickname{border:2px solid var(--accent);padding:0 14px 0 17px}
+.screen[data-state=invalid] #nickname{border:2px solid var(--error);padding:0 14px}
+.caret{position:absolute;background-color:var(--accent);height:21px;width:2px;border-radius:1px;top:calc(var(--input-y) + 15px);left:33px}
+#helper{display:flex;align-items:center;gap:6px;color:var(--textPlaceholder);font-size:13px;font-weight:500;line-height:18px}
+.screen[data-state=invalid] #helper{color:var(--error)}
+#start{display:flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:24px;background-color:var(--accent);color:var(--onAccent);font-size:16px;font-weight:700;line-height:24px}
+#start:disabled{background-color:var(--disabledSurface);color:var(--disabledText);border:1px solid var(--disabledBorder)}
+#keyboard{padding:15px 8px 0;border:1px solid var(--keyboardRim);border-bottom:0;border-radius:22px 22px 0 0;background:var(--keyboardBase)}
+.keyrow{display:flex;gap:5px;margin-bottom:8px;justify-content:center}
+.keyrow:nth-child(2){padding:0 15px}
+.keyrow:nth-child(3){padding:0 2px}
+.key{flex:1;height:44px;display:flex;align-items:center;justify-content:center;background:var(--keyboardKey);border-radius:8px;color:var(--text);font-size:18px;font-weight:500;line-height:24px}
+.key.alt{flex:1.35;background:var(--keyboardAlt);font-size:14px;font-weight:700;line-height:20px}
+.key.space{flex:4}
+.key.done{flex:1.8;background:var(--keyboardAlt);font-size:14px;font-weight:700;line-height:20px}
+.footerkeys{display:flex;height:43px;align-items:center;justify-content:space-between;padding:0 10px;color:var(--keyboardSecondary);font-size:14px;font-weight:700;line-height:20px}
+.home{position:absolute;width:134px;height:4px;border-radius:2px;bottom:10px;left:50%;transform:translateX(-50%);background:var(--keyboardSecondary)}
+.screen{width:390px;height:844px}
+#status-bar{left:12px;top:12px;width:366px;height:32px}
+#brand-visual{left:20px;top:64px;width:350px;height:96px}
+#title{left:20px;top:174px;width:350px;height:36px}
+#description{left:20px;top:213px;width:350px;height:30px}
+#field-label{left:20px;top:262px;width:350px;height:26px}
+#nickname{left:20px;top:294px;width:350px;height:52px}
+#helper{left:20px;top:354px;width:350px;height:28px}
+#start{left:20px;top:472px;width:350px;height:48px}
+#keyboard{left:0px;top:540px;width:390px;height:304px}
+.screen{--input-y:294px}
+@media(max-width:374px){.screen{width:360px;height:800px}
+#status-bar{left:12px;top:12px;width:336px;height:32px}
+#brand-visual{left:20px;top:64px;width:320px;height:72px}
+#title{left:20px;top:150px;width:320px;height:36px}
+#description{left:20px;top:189px;width:320px;height:30px}
+#field-label{left:20px;top:231px;width:320px;height:26px}
+#nickname{left:20px;top:262px;width:320px;height:52px}
+#helper{left:20px;top:322px;width:320px;height:28px}
+#start{left:20px;top:436px;width:320px;height:48px}
+#keyboard{left:0px;top:504px;width:360px;height:296px}
+.screen{--input-y:262px}#keyboard{padding-top:13px}.key{height:42px}}
+]]></style>
+<main class="screen" data-state="initial" aria-labelledby="title">
+  <div class="block" id="status-bar" aria-hidden="true"><span>9:41</span><svg class="status-icons" viewBox="0 0 69 16" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 13v-3h3v3H2zm4 0V8h3v5H6zm4 0V6h3v7h-3zm4 0V3h3v10h-3z" fill="#F3F7EE"/>
+  <path d="M24 6c4-4 10-4 14 0m-11 3c2.5-2.5 5.5-2.5 8 0m-6 2c1.2-1.2 2.8-1.2 4 0" stroke="#F3F7EE" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="31" cy="13" r=".9" fill="#F3F7EE"/><rect x="44" y="3.5" width="22" height="9" rx="2" stroke="#F3F7EE"/><rect x="46" y="5.5" width="18" height="5" rx="1" fill="#F3F7EE"/><path d="M68 6v4" stroke="#F3F7EE"/>
+</svg></div>
+  <div class="block" id="brand-visual" aria-hidden="true"><svg class="topography" fill="none" viewBox="0 0 244 94" preserveAspectRatio="xMidYMid slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke-width="1" stroke-linecap="round">
+    <path stroke="#294234" d="M-5 10c27 0 41-17 72-17 33 0 45 16 73 14 30-2 53-22 89-17M12 82c22 0 35 11 63 10 30-1 50-17 85-14 38 3 67 20 86 11M52 100c32 2 50-13 83-13 30 0 66 20 106 15"/>
+    <path stroke="#294234" d="M31 29c16-2 29-18 52-18 19 0 33 8 52 7 24-1 47-19 75-16 16 2 29 9 38 18M30 47c20-3 38-23 57-23 22 0 33 6 51 5 25-2 45-18 69-17 21 1 34 9 43 21M25 68c21 2 43 7 62 5 19-2 38-11 50-13 24-4 45 12 70 13 18 1 35-4 49-10"/>
+    <path stroke="#36513C" d="M70 50c6-10 22-19 37-18 13 1 26 8 40 6 24-3 41-18 63-16 17 2 29 10 31 20 3 12-14 23-31 23-21 0-37-14-59-12-14 1-26 9-41 10-16 2-31-1-40-13z"/>
+    <path stroke="#567348" d="M143 47c21-1 38-16 59-16 14 0 26 6 28 13 3 10-10 14-23 14-25-1-39-14-64-11z"/>
+  </g>
+  <circle cx="177" cy="43" r="24" fill="#2F4433" stroke="#567348"/>
+  <circle cx="177" cy="43" r="16" fill="#C5EE79"/>
+  <g transform="translate(168 34) scale(.75)" fill="none" stroke="#202E13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m8 2 1.88 1.88M14.12 3.88 16 2M9 7.13V6a3 3 0 1 1 6 0v1.13M12 20v-9M2 11h4m12 0h4M3 21l4-4M17 17l4 4M3 6l4 3m10 0 4-3"/>
+    <rect x="6" y="7" width="12" height="13" rx="6"/>
+  </g>
+  <circle cx="119" cy="35" r="2" fill="#567348"/>
+  <circle cx="225" cy="74" r="2" fill="#567348"/>
+</svg><img src="assets/bugmap-logo-vector-lime.svg" alt="" /></div>
+  <h1 class="block" id="title">닉네임을 정해 주세요</h1>
+  <p class="block" id="description">공개 기록에 작성자 이름으로 표시돼요.</p>
+  <label class="block" id="field-label" for="nickname">닉네임</label>
+  <input class="block" id="nickname" aria-describedby="helper" aria-invalid="false" type="text" readonly="readonly"
+    value="" placeholder="예: 숲길관찰자" /><span class="caret" aria-hidden="true"></span>
+  <p class="block" id="helper">닉네임 2~12자</p>
+  <button class="block" id="start" type="button" disabled="disabled">시작하기</button>
+  <div id="keyboard" class="block" aria-hidden="true">
+  <div class="keyrow"><span class="key ">ㅂ</span><span class="key ">ㅈ</span><span class="key ">ㄷ</span><span class="key ">ㄱ</span><span class="key ">ㅅ</span><span class="key ">ㅛ</span><span class="key ">ㅕ</span><span class="key ">ㅑ</span><span class="key ">ㅐ</span><span class="key ">ㅔ</span></div><div class="keyrow"><span class="key ">ㅁ</span><span class="key ">ㄴ</span><span class="key ">ㅇ</span><span class="key ">ㄹ</span><span class="key ">ㅎ</span><span class="key ">ㅗ</span><span class="key ">ㅓ</span><span class="key ">ㅏ</span><span class="key ">ㅣ</span></div>
+  <div class="keyrow"><span class="key alt">⇧</span><span class="key ">ㅋ</span><span class="key ">ㅌ</span><span class="key ">ㅊ</span><span class="key ">ㅍ</span><span class="key ">ㅠ</span><span class="key ">ㅜ</span><span class="key ">ㅡ</span><span class="key alt">⌫</span></div>
+  <div class="keyrow"><span class="key alt">123</span><span class="key alt">한/영</span><span class="key space">스페이스</span><span class="key done">완료</span></div>
+  <div class="footerkeys"><span>한국어</span></div><div class="home"></div>
+</div>
+</main>
+</div></foreignObject></svg>

@@ -1,0 +1,67 @@
+{
+  "method": "Native Cursor MCP Plugin export after build",
+  "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+  "pageId": "0:1",
+  "destination": "41:81",
+  "originalFlowStartingPoints": [
+    {
+      "nodeId": "50:1081",
+      "name": "Flow 1"
+    }
+  ],
+  "addedFlows": [
+    {
+      "state": "initial",
+      "frameId": "182:551",
+      "startButtonId": "182:598",
+      "reactions": [],
+      "flow": {
+        "nodeId": "182:551",
+        "name": "닉네임 설정 · 첫 입력"
+      }
+    },
+    {
+      "state": "ready",
+      "frameId": "182:671",
+      "startButtonId": "182:717",
+      "reactions": [
+        {
+          "action": {
+            "type": "NODE",
+            "destinationId": "41:81",
+            "navigation": "NAVIGATE",
+            "transition": null,
+            "resetVideoPosition": false
+          },
+          "actions": [
+            {
+              "type": "NODE",
+              "destinationId": "41:81",
+              "navigation": "NAVIGATE",
+              "transition": null,
+              "resetVideoPosition": false
+            }
+          ],
+          "trigger": {
+            "type": "ON_CLICK"
+          }
+        }
+      ],
+      "flow": {
+        "nodeId": "182:671",
+        "name": "닉네임 설정 · 저장 가능"
+      }
+    },
+    {
+      "state": "invalid",
+      "frameId": "182:790",
+      "startButtonId": "182:836",
+      "reactions": [],
+      "flow": {
+        "nodeId": "182:790",
+        "name": "닉네임 설정 · 입력 오류"
+      }
+    }
+  ],
+  "playerInteractionVerified": false
+}

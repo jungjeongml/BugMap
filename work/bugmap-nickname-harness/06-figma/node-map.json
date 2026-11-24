@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "screen": "nickname-setup",
+      "state": "initial",
+      "nodeId": "182:551",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/nickname-setup--initial.png",
+      "captureSha256": "8c1f22f502def52e68a49b66002573e2ef670605eee387e14b4764a7d30a2ca6",
+      "web": "web/screens/nickname-setup--initial.html",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=182-551"
+    },
+    {
+      "screen": "nickname-setup",
+      "state": "ready",
+      "nodeId": "182:671",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/nickname-setup--ready.png",
+      "captureSha256": "4d572d11f4edb1942dffa961cfa2735244bae8db6a68cba850e6f3cc4b139134",
+      "web": "web/screens/nickname-setup--ready.html",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=182-671"
+    },
+    {
+      "screen": "nickname-setup",
+      "state": "invalid",
+      "nodeId": "182:790",
+      "width": 390,
+      "height": 844,
+      "capture": "captures/nickname-setup--invalid.png",
+      "captureSha256": "e3c89c735daa470b5f40883d1335b4b9bcddc6ba71a47f05b7a05afdd73d253f",
+      "web": "web/screens/nickname-setup--invalid.html",
+      "url": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=182-790"
+    }
+  ]
+}

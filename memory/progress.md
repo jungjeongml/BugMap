@@ -496,3 +496,17 @@
 - 최종 검증 승인 후 3건 및 4건 이상 상태의 Figma 링크, 상태별 치수와 스크롤·상세 진입 규칙, 접근성·시연 자산을 [핸드오프](../work/bugmap-record-cluster-harness/08-handoff/HANDOFF.md)에 정리했다.
 - Figma 진입·복귀와 7건 스크롤, 정확히 4건인 HTML의 마지막 행 ID 수신, 좁은 화면과 200% 글자 배율의 검증을 인계했다. 인계 파일의 해시와 내부 링크, 사진 7장의 원본 일치를 확인했다. 앱의 기록 상세, SDK 출처, 실기기 접근성 및 조회 예외 확인은 [후속 항목](../work/bugmap-record-cluster-harness/08-handoff/open-items.md)에 있다.
 - 최종 인계 수락을 확인했다. 공식 검사에서 8단계가 모두 통과했다. [완료 기록](../work/bugmap-record-cluster-harness/control/flow.md)
+
+## 2026-11-25 — 닉네임 설정 Figma 화면 제작과 검증
+
+- BugMapHarness Page 1에 닉네임 설정의 첫 입력 182:551, 저장 가능 182:671, 입력 오류 182:790을 Cursor MCP Plugin으로 추가했다. 실제 플레이어에서 시작하기로 기존 발견 지도 41:81에 도착했다. 기존 로그인·지도와 시작점의 보존을 확인했다. [Figma 제작 기록](../work/bugmap-nickname-harness/06-figma/change-log.md)
+- Figma 358개 노드와 두 크기의 웹 시안 여섯 건에서 검사 이슈 0건이다. 작은 화면의 검수 변형을 승인된 Figma 프레임 범위와 구분하도록 하네스 검사를 수정했고 회귀 테스트 15개를 통과했다. 최종 검증의 사람 리뷰와 승인 대기다. [검증 보고서](../work/bugmap-nickname-harness/07-validation/report.md)
+
+## 2026-11-25 — 닉네임 설정 개발 인계 패키지
+
+- 최종 검수 승인 후 세 Figma 프레임, 계정 분기·입력·저장 상태·접근성, 자산, 후속 개발 결정 및 실기기 검증을 인계 문서에 정리했다. 매니페스트 입력·출력 112개와 로컬 상대 링크 189건이 일치했고 독립 검토를 마쳤다. [인계 문서](../work/bugmap-nickname-harness/08-handoff/HANDOFF.md) · [후속 검증](../work/bugmap-nickname-harness/08-handoff/open-items.md)
+- 하네스 08 인계 수락을 기다린다. 앱의 인증 분기와 저장은 구현 단계의 범위다.
+
+## 2026-11-25 — 닉네임 설정 개발 인계 수락
+
+- 사람의 인계 수락 `8fe7eca2-672e-4bab-8036-04bdfeba3ac9`가 기록됐고 하네스 검사에서 01~08 모두 통과했다. [인계 문서](../work/bugmap-nickname-harness/08-handoff/HANDOFF.md) · [제품 구현 시 확인할 항목](../work/bugmap-nickname-harness/08-handoff/open-items.md)

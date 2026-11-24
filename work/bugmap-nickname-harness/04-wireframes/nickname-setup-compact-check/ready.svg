@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="800" viewBox="0 0 360 800" role="img" aria-labelledby="screen-title">
+<title id="screen-title">닉네임 설정 · 저장 가능 · 360 px 검수</title>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g id="block-0" data-type="text"><text x="20" y="34" font-family="sans-serif" font-size="14" fill="#222222">9:41</text></g>
+<g id="block-1" data-type="image"><rect x="20" y="64" width="320" height="72" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="28" y="86" font-family="sans-serif" font-size="14" fill="#222222">BugMap 시각 요소 자리</text></g>
+<g id="block-2" data-type="text"><text x="28" y="172" font-family="sans-serif" font-size="14" fill="#222222">닉네임을 정해 주세요</text></g>
+<g id="block-3" data-type="text"><text x="28" y="211" font-family="sans-serif" font-size="14" fill="#222222">공개 기록에 작성자 이름으로 표시돼요.</text></g>
+<g id="block-4" data-type="text"><text x="28" y="253" font-family="sans-serif" font-size="14" fill="#222222">닉네임</text></g>
+<g id="block-5" data-type="input"><rect x="20" y="262" width="320" height="52" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="28" y="284" font-family="sans-serif" font-size="14" fill="#222222">숲길관찰자</text></g>
+<g id="block-6" data-type="text"><text x="28" y="344" font-family="sans-serif" font-size="14" fill="#222222">닉네임 2~12자</text></g>
+<g id="block-7" data-type="button"><rect x="20" y="436" width="320" height="48" rx="12" fill="#dddddd" stroke="#888888"/><text x="28" y="458" font-family="sans-serif" font-size="14" fill="#222222">시작하기 · 활성</text></g>
+<g id="block-8" data-type="box"><rect x="0" y="504" width="360" height="296" rx="4" fill="#f7f7f7" stroke="#888888"/><text x="8" y="526" font-family="sans-serif" font-size="14" fill="#222222">시스템 키보드와 하단 안전 영역 자리</text></g>
+</svg>

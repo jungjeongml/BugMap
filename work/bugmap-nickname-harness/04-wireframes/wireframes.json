@@ -1,0 +1,658 @@
+{
+  "screens": [
+    {
+      "id": "nickname-setup",
+      "state": "initial",
+      "title": "닉네임 설정 · 첫 입력",
+      "width": 390,
+      "height": 844,
+      "safeArea": {
+        "top": 44,
+        "bottom": 34
+      },
+      "keyboardPlaceholder": {
+        "top": 540,
+        "height": 304
+      },
+      "variant": "figma-candidate",
+      "layoutOrder": [
+        "브랜드 시각 등장",
+        "제목과 공개 이름 설명",
+        "닉네임 레이블과 입력",
+        "도움말 또는 오류",
+        "시작하기",
+        "시스템 키보드"
+      ],
+      "fieldState": "focused-empty",
+      "ctaState": "disabled",
+      "blocks": [
+        {
+          "id": "status-bar",
+          "type": "text",
+          "x": 12,
+          "y": 12,
+          "width": 366,
+          "height": 32,
+          "text": "9:41"
+        },
+        {
+          "id": "brand-visual",
+          "type": "image",
+          "x": 20,
+          "y": 64,
+          "width": 350,
+          "height": 96,
+          "text": "BugMap 시각 요소 자리"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "x": 20,
+          "y": 174,
+          "width": 350,
+          "height": 36,
+          "text": "닉네임을 정해 주세요"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "x": 20,
+          "y": 213,
+          "width": 350,
+          "height": 30,
+          "text": "공개 기록에 작성자 이름으로 표시돼요."
+        },
+        {
+          "id": "field-label",
+          "type": "text",
+          "x": 20,
+          "y": 262,
+          "width": 350,
+          "height": 26,
+          "text": "닉네임"
+        },
+        {
+          "id": "nickname",
+          "type": "input",
+          "x": 20,
+          "y": 294,
+          "width": 350,
+          "height": 52,
+          "text": "예: 숲길관찰자"
+        },
+        {
+          "id": "helper",
+          "type": "text",
+          "x": 20,
+          "y": 354,
+          "width": 350,
+          "height": 28,
+          "text": "닉네임 2~12자"
+        },
+        {
+          "id": "start",
+          "type": "button",
+          "x": 20,
+          "y": 472,
+          "width": 350,
+          "height": 48,
+          "text": "시작하기 · 비활성"
+        },
+        {
+          "id": "keyboard",
+          "type": "box",
+          "x": 0,
+          "y": 540,
+          "width": 390,
+          "height": 304,
+          "text": "시스템 키보드와 하단 안전 영역 자리"
+        }
+      ]
+    },
+    {
+      "id": "nickname-setup",
+      "state": "ready",
+      "title": "닉네임 설정 · 저장 가능",
+      "width": 390,
+      "height": 844,
+      "safeArea": {
+        "top": 44,
+        "bottom": 34
+      },
+      "keyboardPlaceholder": {
+        "top": 540,
+        "height": 304
+      },
+      "variant": "figma-candidate",
+      "layoutOrder": [
+        "브랜드 시각 등장",
+        "제목과 공개 이름 설명",
+        "닉네임 레이블과 입력",
+        "도움말 또는 오류",
+        "시작하기",
+        "시스템 키보드"
+      ],
+      "fieldState": "valid",
+      "ctaState": "active",
+      "blocks": [
+        {
+          "id": "status-bar",
+          "type": "text",
+          "x": 12,
+          "y": 12,
+          "width": 366,
+          "height": 32,
+          "text": "9:41"
+        },
+        {
+          "id": "brand-visual",
+          "type": "image",
+          "x": 20,
+          "y": 64,
+          "width": 350,
+          "height": 96,
+          "text": "BugMap 시각 요소 자리"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "x": 20,
+          "y": 174,
+          "width": 350,
+          "height": 36,
+          "text": "닉네임을 정해 주세요"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "x": 20,
+          "y": 213,
+          "width": 350,
+          "height": 30,
+          "text": "공개 기록에 작성자 이름으로 표시돼요."
+        },
+        {
+          "id": "field-label",
+          "type": "text",
+          "x": 20,
+          "y": 262,
+          "width": 350,
+          "height": 26,
+          "text": "닉네임"
+        },
+        {
+          "id": "nickname",
+          "type": "input",
+          "x": 20,
+          "y": 294,
+          "width": 350,
+          "height": 52,
+          "text": "숲길관찰자"
+        },
+        {
+          "id": "helper",
+          "type": "text",
+          "x": 20,
+          "y": 354,
+          "width": 350,
+          "height": 28,
+          "text": "닉네임 2~12자"
+        },
+        {
+          "id": "start",
+          "type": "button",
+          "x": 20,
+          "y": 472,
+          "width": 350,
+          "height": 48,
+          "text": "시작하기 · 활성"
+        },
+        {
+          "id": "keyboard",
+          "type": "box",
+          "x": 0,
+          "y": 540,
+          "width": 390,
+          "height": 304,
+          "text": "시스템 키보드와 하단 안전 영역 자리"
+        }
+      ]
+    },
+    {
+      "id": "nickname-setup",
+      "state": "invalid",
+      "title": "닉네임 설정 · 입력 오류",
+      "width": 390,
+      "height": 844,
+      "safeArea": {
+        "top": 44,
+        "bottom": 34
+      },
+      "keyboardPlaceholder": {
+        "top": 540,
+        "height": 304
+      },
+      "variant": "figma-candidate",
+      "layoutOrder": [
+        "브랜드 시각 등장",
+        "제목과 공개 이름 설명",
+        "닉네임 레이블과 입력",
+        "도움말 또는 오류",
+        "시작하기",
+        "시스템 키보드"
+      ],
+      "fieldState": "error",
+      "ctaState": "disabled",
+      "blocks": [
+        {
+          "id": "status-bar",
+          "type": "text",
+          "x": 12,
+          "y": 12,
+          "width": 366,
+          "height": 32,
+          "text": "9:41"
+        },
+        {
+          "id": "brand-visual",
+          "type": "image",
+          "x": 20,
+          "y": 64,
+          "width": 350,
+          "height": 96,
+          "text": "BugMap 시각 요소 자리"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "x": 20,
+          "y": 174,
+          "width": 350,
+          "height": 36,
+          "text": "닉네임을 정해 주세요"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "x": 20,
+          "y": 213,
+          "width": 350,
+          "height": 30,
+          "text": "공개 기록에 작성자 이름으로 표시돼요."
+        },
+        {
+          "id": "field-label",
+          "type": "text",
+          "x": 20,
+          "y": 262,
+          "width": 350,
+          "height": 26,
+          "text": "닉네임"
+        },
+        {
+          "id": "nickname",
+          "type": "input",
+          "x": 20,
+          "y": 294,
+          "width": 350,
+          "height": 52,
+          "text": "숲"
+        },
+        {
+          "id": "helper",
+          "type": "text",
+          "x": 20,
+          "y": 354,
+          "width": 350,
+          "height": 28,
+          "text": "닉네임을 2자 이상 입력해 주세요"
+        },
+        {
+          "id": "start",
+          "type": "button",
+          "x": 20,
+          "y": 472,
+          "width": 350,
+          "height": 48,
+          "text": "시작하기 · 비활성"
+        },
+        {
+          "id": "keyboard",
+          "type": "box",
+          "x": 0,
+          "y": 540,
+          "width": 390,
+          "height": 304,
+          "text": "시스템 키보드와 하단 안전 영역 자리"
+        }
+      ]
+    },
+    {
+      "id": "nickname-setup-compact-check",
+      "state": "initial",
+      "title": "닉네임 설정 · 첫 입력 · 360 px 검수",
+      "width": 360,
+      "height": 800,
+      "safeArea": {
+        "top": 44,
+        "bottom": 34
+      },
+      "keyboardPlaceholder": {
+        "top": 504,
+        "height": 296
+      },
+      "variant": "compact-layout-check",
+      "layoutOrder": [
+        "브랜드 시각 등장",
+        "제목과 공개 이름 설명",
+        "닉네임 레이블과 입력",
+        "도움말 또는 오류",
+        "시작하기",
+        "시스템 키보드"
+      ],
+      "fieldState": "focused-empty",
+      "ctaState": "disabled",
+      "blocks": [
+        {
+          "id": "status-bar",
+          "type": "text",
+          "x": 12,
+          "y": 12,
+          "width": 336,
+          "height": 32,
+          "text": "9:41"
+        },
+        {
+          "id": "brand-visual",
+          "type": "image",
+          "x": 20,
+          "y": 64,
+          "width": 320,
+          "height": 72,
+          "text": "BugMap 시각 요소 자리"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "x": 20,
+          "y": 150,
+          "width": 320,
+          "height": 36,
+          "text": "닉네임을 정해 주세요"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "x": 20,
+          "y": 189,
+          "width": 320,
+          "height": 30,
+          "text": "공개 기록에 작성자 이름으로 표시돼요."
+        },
+        {
+          "id": "field-label",
+          "type": "text",
+          "x": 20,
+          "y": 231,
+          "width": 320,
+          "height": 26,
+          "text": "닉네임"
+        },
+        {
+          "id": "nickname",
+          "type": "input",
+          "x": 20,
+          "y": 262,
+          "width": 320,
+          "height": 52,
+          "text": "예: 숲길관찰자"
+        },
+        {
+          "id": "helper",
+          "type": "text",
+          "x": 20,
+          "y": 322,
+          "width": 320,
+          "height": 28,
+          "text": "닉네임 2~12자"
+        },
+        {
+          "id": "start",
+          "type": "button",
+          "x": 20,
+          "y": 436,
+          "width": 320,
+          "height": 48,
+          "text": "시작하기 · 비활성"
+        },
+        {
+          "id": "keyboard",
+          "type": "box",
+          "x": 0,
+          "y": 504,
+          "width": 360,
+          "height": 296,
+          "text": "시스템 키보드와 하단 안전 영역 자리"
+        }
+      ]
+    },
+    {
+      "id": "nickname-setup-compact-check",
+      "state": "ready",
+      "title": "닉네임 설정 · 저장 가능 · 360 px 검수",
+      "width": 360,
+      "height": 800,
+      "safeArea": {
+        "top": 44,
+        "bottom": 34
+      },
+      "keyboardPlaceholder": {
+        "top": 504,
+        "height": 296
+      },
+      "variant": "compact-layout-check",
+      "layoutOrder": [
+        "브랜드 시각 등장",
+        "제목과 공개 이름 설명",
+        "닉네임 레이블과 입력",
+        "도움말 또는 오류",
+        "시작하기",
+        "시스템 키보드"
+      ],
+      "fieldState": "valid",
+      "ctaState": "active",
+      "blocks": [
+        {
+          "id": "status-bar",
+          "type": "text",
+          "x": 12,
+          "y": 12,
+          "width": 336,
+          "height": 32,
+          "text": "9:41"
+        },
+        {
+          "id": "brand-visual",
+          "type": "image",
+          "x": 20,
+          "y": 64,
+          "width": 320,
+          "height": 72,
+          "text": "BugMap 시각 요소 자리"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "x": 20,
+          "y": 150,
+          "width": 320,
+          "height": 36,
+          "text": "닉네임을 정해 주세요"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "x": 20,
+          "y": 189,
+          "width": 320,
+          "height": 30,
+          "text": "공개 기록에 작성자 이름으로 표시돼요."
+        },
+        {
+          "id": "field-label",
+          "type": "text",
+          "x": 20,
+          "y": 231,
+          "width": 320,
+          "height": 26,
+          "text": "닉네임"
+        },
+        {
+          "id": "nickname",
+          "type": "input",
+          "x": 20,
+          "y": 262,
+          "width": 320,
+          "height": 52,
+          "text": "숲길관찰자"
+        },
+        {
+          "id": "helper",
+          "type": "text",
+          "x": 20,
+          "y": 322,
+          "width": 320,
+          "height": 28,
+          "text": "닉네임 2~12자"
+        },
+        {
+          "id": "start",
+          "type": "button",
+          "x": 20,
+          "y": 436,
+          "width": 320,
+          "height": 48,
+          "text": "시작하기 · 활성"
+        },
+        {
+          "id": "keyboard",
+          "type": "box",
+          "x": 0,
+          "y": 504,
+          "width": 360,
+          "height": 296,
+          "text": "시스템 키보드와 하단 안전 영역 자리"
+        }
+      ]
+    },
+    {
+      "id": "nickname-setup-compact-check",
+      "state": "invalid",
+      "title": "닉네임 설정 · 입력 오류 · 360 px 검수",
+      "width": 360,
+      "height": 800,
+      "safeArea": {
+        "top": 44,
+        "bottom": 34
+      },
+      "keyboardPlaceholder": {
+        "top": 504,
+        "height": 296
+      },
+      "variant": "compact-layout-check",
+      "layoutOrder": [
+        "브랜드 시각 등장",
+        "제목과 공개 이름 설명",
+        "닉네임 레이블과 입력",
+        "도움말 또는 오류",
+        "시작하기",
+        "시스템 키보드"
+      ],
+      "fieldState": "error",
+      "ctaState": "disabled",
+      "blocks": [
+        {
+          "id": "status-bar",
+          "type": "text",
+          "x": 12,
+          "y": 12,
+          "width": 336,
+          "height": 32,
+          "text": "9:41"
+        },
+        {
+          "id": "brand-visual",
+          "type": "image",
+          "x": 20,
+          "y": 64,
+          "width": 320,
+          "height": 72,
+          "text": "BugMap 시각 요소 자리"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "x": 20,
+          "y": 150,
+          "width": 320,
+          "height": 36,
+          "text": "닉네임을 정해 주세요"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "x": 20,
+          "y": 189,
+          "width": 320,
+          "height": 30,
+          "text": "공개 기록에 작성자 이름으로 표시돼요."
+        },
+        {
+          "id": "field-label",
+          "type": "text",
+          "x": 20,
+          "y": 231,
+          "width": 320,
+          "height": 26,
+          "text": "닉네임"
+        },
+        {
+          "id": "nickname",
+          "type": "input",
+          "x": 20,
+          "y": 262,
+          "width": 320,
+          "height": 52,
+          "text": "숲"
+        },
+        {
+          "id": "helper",
+          "type": "text",
+          "x": 20,
+          "y": 322,
+          "width": 320,
+          "height": 28,
+          "text": "닉네임을 2자 이상 입력해 주세요"
+        },
+        {
+          "id": "start",
+          "type": "button",
+          "x": 20,
+          "y": 436,
+          "width": 320,
+          "height": 48,
+          "text": "시작하기 · 비활성"
+        },
+        {
+          "id": "keyboard",
+          "type": "box",
+          "x": 0,
+          "y": 504,
+          "width": 360,
+          "height": 296,
+          "text": "시스템 키보드와 하단 안전 영역 자리"
+        }
+      ]
+    }
+  ]
+}

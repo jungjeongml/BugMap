@@ -1,0 +1,288 @@
+{
+  "capturedAt": "2026-11-24T19:52:17.476Z",
+  "approvedPlanSha256": "ac5f3bdf744f3d96b086e555d32dd5ad9e57250a8e344c4417540ba291399af1",
+  "captures": [
+    {
+      "state": "initial",
+      "nodeId": "182:551",
+      "capture": "captures/nickname-setup--initial.png",
+      "captureSha256": "8c1f22f502def52e68a49b66002573e2ef670605eee387e14b4764a7d30a2ca6"
+    },
+    {
+      "state": "ready",
+      "nodeId": "182:671",
+      "capture": "captures/nickname-setup--ready.png",
+      "captureSha256": "4d572d11f4edb1942dffa961cfa2735244bae8db6a68cba850e6f3cc4b139134"
+    },
+    {
+      "state": "invalid",
+      "nodeId": "182:790",
+      "capture": "captures/nickname-setup--invalid.png",
+      "captureSha256": "e3c89c735daa470b5f40883d1335b4b9bcddc6ba71a47f05b7a05afdd73d253f"
+    }
+  ],
+  "preserved": {
+    "originalRoots": [
+      {
+        "id": "7:2",
+        "type": "FRAME",
+        "name": "02 · 메인 / 발견 지도",
+        "x": -598,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "19:2",
+        "type": "FRAME",
+        "name": "05 · 첫 로그인 / 지도 배경",
+        "x": -112,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "41:81",
+        "type": "FRAME",
+        "name": "07 · 메인 / 발견 지도",
+        "x": 374,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "50:1003",
+        "type": "COMPONENT",
+        "name": "RecordCard · 넓적사슴벌레",
+        "x": 1832,
+        "y": -256,
+        "width": 358,
+        "height": 116
+      },
+      {
+        "id": "50:1015",
+        "type": "COMPONENT",
+        "name": "RecordCard · 왕잠자리",
+        "x": 1832,
+        "y": -116,
+        "width": 358,
+        "height": 116
+      },
+      {
+        "id": "50:1024",
+        "type": "COMPONENT",
+        "name": "RecordCard · 칠성무당벌레",
+        "x": 1832,
+        "y": 24,
+        "width": 358,
+        "height": 116
+      },
+      {
+        "id": "50:1033",
+        "type": "COMPONENT",
+        "name": "MapTab · 메인 내비게이션",
+        "x": 1832,
+        "y": 176,
+        "width": 390,
+        "height": 52
+      },
+      {
+        "id": "50:1064",
+        "type": "COMPONENT",
+        "name": "Search · 곤충·지역",
+        "x": 1832,
+        "y": 256,
+        "width": 358,
+        "height": 48
+      },
+      {
+        "id": "50:1072",
+        "type": "COMPONENT",
+        "name": "MapReturn · 지도 보기",
+        "x": 1832,
+        "y": 328,
+        "width": 148,
+        "height": 48
+      },
+      {
+        "id": "50:1081",
+        "type": "FRAME",
+        "name": "08 · 내 주변 발견 / 전체",
+        "x": 860,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "50:1190",
+        "type": "FRAME",
+        "name": "08 · 내 주변 발견 / 3 km 이내",
+        "x": 1346,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "61:1294",
+        "type": "SECTION",
+        "name": "09 · 발견·채집 기록 / 컴포넌트",
+        "x": 3290,
+        "y": -256,
+        "width": 790,
+        "height": 1536
+      },
+      {
+        "id": "61:1295",
+        "type": "FRAME",
+        "name": "09 · 발견·채집 기록 / 첫 진입 · 0/3장",
+        "x": 2318,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "61:1552",
+        "type": "FRAME",
+        "name": "09 · 발견·채집 기록 / 입력 완료 · 3/3장",
+        "x": 2804,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "154:317",
+        "type": "FRAME",
+        "name": "09 · 발견 위치 선택 / 첫 진입",
+        "x": 4176,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "154:679",
+        "type": "FRAME",
+        "name": "09 · 발견 위치 선택 / 핀 선택",
+        "x": 4662,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "162:1191",
+        "type": "COMPONENT",
+        "name": "기록 행 · 주변 관찰 기록",
+        "x": 6120,
+        "y": -256,
+        "width": 358,
+        "height": 104
+      },
+      {
+        "id": "162:1204",
+        "type": "FRAME",
+        "name": "07 · 메인 / 주변 관찰 기록 3건",
+        "x": 5148,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      },
+      {
+        "id": "162:1597",
+        "type": "FRAME",
+        "name": "07 · 메인 / 주변 관찰 기록 7건",
+        "x": 5634,
+        "y": -256,
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "originalTreeFingerprints": [
+      {
+        "id": "7:2",
+        "fingerprint": "77246:2d220249:1531de45"
+      },
+      {
+        "id": "19:2",
+        "fingerprint": "77200:cda8b6e4:bcbfab68"
+      },
+      {
+        "id": "41:81",
+        "fingerprint": "359521:e8d65c3:ace18e67"
+      },
+      {
+        "id": "50:1003",
+        "fingerprint": "6921:df6b784c:471ee1a0"
+      },
+      {
+        "id": "50:1015",
+        "fingerprint": "6912:b8db94cc:896e49a8"
+      },
+      {
+        "id": "50:1024",
+        "fingerprint": "6929:68eb446d:2d05fde9"
+      },
+      {
+        "id": "50:1033",
+        "fingerprint": "22924:ce41e5b2:a5b65786"
+      },
+      {
+        "id": "50:1064",
+        "fingerprint": "4759:ca0acf7d:94d5c651"
+      },
+      {
+        "id": "50:1072",
+        "fingerprint": "7679:b75488ee:91fcfb8a"
+      },
+      {
+        "id": "50:1081",
+        "fingerprint": "84405:da33b964:51103560"
+      },
+      {
+        "id": "50:1190",
+        "fingerprint": "77431:c8f259ec:5d840d98"
+      },
+      {
+        "id": "61:1294",
+        "fingerprint": "129134:fe8387f4:d9847ca8"
+      },
+      {
+        "id": "61:1295",
+        "fingerprint": "94815:18a03736:11687e12"
+      },
+      {
+        "id": "61:1552",
+        "fingerprint": "111388:25c64e91:6128429d"
+      },
+      {
+        "id": "154:317",
+        "fingerprint": "320438:cbeb6893:f42fec0f"
+      },
+      {
+        "id": "154:679",
+        "fingerprint": "324575:515af170:1fd56e04"
+      },
+      {
+        "id": "162:1191",
+        "fingerprint": "6347:c474c750:5772a5c4"
+      },
+      {
+        "id": "162:1204",
+        "fingerprint": "341424:fada7305:293329"
+      },
+      {
+        "id": "162:1597",
+        "fingerprint": "368383:c729d99e:bc5e7442"
+      }
+    ],
+    "originalFlowStartingPoints": [
+      {
+        "nodeId": "50:1081",
+        "name": "Flow 1"
+      }
+    ],
+    "loginPngSha256": "a1639de92c41060e89832cf3fa6157e7fd7b5c6b5611e6f6f4ff0a82a04e150d",
+    "mapPngSha256": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c",
+    "sameAfterDetachedExport": true,
+    "originalNodesTouched": false
+  },
+  "sameAuthoredRoots": true
+}

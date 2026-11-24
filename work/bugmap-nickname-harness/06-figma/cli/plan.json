@@ -1,0 +1,214 @@
+{
+  "target": {
+    "fileKey": "Dan8qlRM20XPkk7Mtd5riw",
+    "documentName": "BugMapHarness",
+    "pageId": "0:1",
+    "pageName": "Page 1",
+    "fileUrl": "https://www.figma.com/design/Dan8qlRM20XPkk7Mtd5riw/BugMapHarness?node-id=0-1",
+    "baselineLogin": "19:2",
+    "successDestination": "41:81",
+    "preferredBridge": "Cursor Talk to Figma",
+    "editPolicy": "신규 닉네임 상태 3개를 별도 흐름으로 추가한다. 기존 로그인 프레임과 출발점 및 지도 프레임을 보존한다."
+  },
+  "approval": "7e46e4af-78bf-439d-acb6-9d1629fe5b72",
+  "sourceDigests": {
+    "05-design-system/tokens.json": "450b9ab83eeb882ce743a32d733d9ba984bdfb84c2d39e294af7067e9b6ebdae",
+    "05-design-system/components.json": "1d38484e785f506319cf6565ebcc533d8272d954d463a6e992dc4c9c6ea327e5",
+    "05-design-system/copy.json": "3f8dca315d5dd9573061d5f57cc977ac87609f9683f1d17146ff17722e837233",
+    "05-design-system/icons.csv": "d3fcf3d4331903ea5b27bb51920f2d4a0e25f586bedd8cdd92dfe25cd7bfd7e0",
+    "05-design-system/render.mjs": "c3fc66f4a342fa8072d498ae7551a0b0309f93a4f5ac22d448b8a538ad07926f",
+    "05-design-system/layout.json": "fc1ac14cba00e32ea0c41d4c69a8f85e9945b68ab7af8e98eadbd3264520ca21",
+    "05-design-system/preview.svg": "4bf5e9b0601237ecad64df1d8c7fb29ea5703fc9cb208b5d46188f3870f5870d",
+    "05-design-system/previews/nickname.css": "c9536c376eb0b5aaa1624e161429af5a362084a5dc9c31b654f2c80eea37d39e",
+    "05-design-system/previews/nickname-setup--initial.html": "eb7fcf1176a118fee1881c4391b6d027e34a4c44afe876b5f9e001160daf4dd3",
+    "05-design-system/previews/nickname-setup--ready.html": "12703b78eb01a0db691b9174e316b75bfe9683b327b3671c5e8e0b7233afe051",
+    "05-design-system/previews/nickname-setup--invalid.html": "b42bd728495d37f9bf8ebed0a382ae5e9fba693f4838196f1e32b487c19195e6",
+    "05-design-system/assets/Pretendard-Medium.woff2": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+    "05-design-system/assets/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "05-design-system/assets/bugmap-logo-vector-lime.svg": "7d7911bab153a6ac00879de73da8dcc4569ec31b760d4be439f37c802199545f",
+    "05-design-system/captures/390x844-initial.png": "18742116fe7143eeba9c1cf82c662df03579a5bb8b8142a19329b9ea821734a1",
+    "05-design-system/captures/390x844-ready.png": "9520c4deefaa93e1f8c03f235c4b87ec03f0971d1746fbe0229a687e729ffba6",
+    "05-design-system/captures/390x844-invalid.png": "a181ad62af60adc5a66e8b084c02d3e0b23e7076c991b54b5a4f7ef2cc57590f",
+    "05-design-system/captures/360x800-initial.png": "acdc8f7e789dc47a077693f86a5b6511c3e6bfcb5bb9c88c74673ba9c57286e0",
+    "05-design-system/captures/360x800-ready.png": "92b06e0641694d1dc1aa75327db6220c81ceb2be635f173830efbff56e1e3bb7",
+    "05-design-system/captures/360x800-invalid.png": "87f5d2bb7b0c62460bd357a225d52487b8a269bf9b2faa4444995a31b354d6ac",
+    "control/figma.json": "8dafa32adddc99dfe6ea60acc3e2669db472494886b9ff3e2052164f769a0558",
+    "04-wireframes/wireframes.json": "ebce27611649e79a87153b9de2040904822a0c19ed1d40070f564798ae174d36",
+    "05-design-system/render-report.json": "0b45c8c58f57f10394b00c362723a00c17b7abc64470990438a43c2a67ede79b"
+  },
+  "colors": {
+    "background": "#101C16",
+    "text": "#F3F7EE",
+    "textSecondary": "#BDCDC2",
+    "textPlaceholder": "#A7BBAD",
+    "accent": "#C5EE79",
+    "onAccent": "#202E13",
+    "field": "#1C2C23",
+    "fieldBorder": "#6D8677",
+    "error": "#FFA99B",
+    "disabledSurface": "#23332A",
+    "disabledBorder": "#3D5044",
+    "disabledText": "#8FA496",
+    "brandSurface": "#18271F",
+    "brandBorder": "#354B3C",
+    "contourMuted": "#294234",
+    "contourMid": "#36513C",
+    "contourEmphasis": "#567348",
+    "markerSoft": "#2F4433",
+    "keyboardBase": "#1E2521",
+    "keyboardRim": "#404944",
+    "keyboardKey": "#36423B",
+    "keyboardAlt": "#2C3730",
+    "keyboardSecondary": "#B8C7BD"
+  },
+  "typography": {
+    "title": {
+      "fontFamily": "Pretendard",
+      "fontSize": 28,
+      "fontWeight": 700,
+      "lineHeight": 36
+    },
+    "description": {
+      "fontFamily": "Pretendard",
+      "fontSize": 15,
+      "fontWeight": 500,
+      "lineHeight": 22
+    },
+    "fieldLabel": {
+      "fontFamily": "Pretendard",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "lineHeight": 20
+    },
+    "fieldValue": {
+      "fontFamily": "Pretendard",
+      "fontSize": 16,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    "helper": {
+      "fontFamily": "Pretendard",
+      "fontSize": 13,
+      "fontWeight": 500,
+      "lineHeight": 18
+    },
+    "button": {
+      "fontFamily": "Pretendard",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "lineHeight": 24
+    },
+    "system": {
+      "fontFamily": "Pretendard",
+      "fontSize": 15,
+      "fontWeight": 700,
+      "lineHeight": 20
+    },
+    "key": {
+      "fontFamily": "Pretendard",
+      "fontSize": 18,
+      "fontWeight": 500,
+      "lineHeight": 24
+    },
+    "keyAction": {
+      "fontFamily": "Pretendard",
+      "fontSize": 14,
+      "fontWeight": 700,
+      "lineHeight": 20
+    }
+  },
+  "strings": {
+    "title": "닉네임을 정해 주세요",
+    "description": "공개 기록에 작성자 이름으로 표시돼요.",
+    "fieldLabel": "닉네임",
+    "placeholder": "예: 숲길관찰자",
+    "validValue": "숲길관찰자",
+    "invalidValue": "숲",
+    "guidance": "닉네임 2~12자",
+    "tooShort": "닉네임을 2자 이상 입력해 주세요",
+    "tooLong": "닉네임을 12자 이하로 입력해 주세요",
+    "start": "시작하기",
+    "saving": "저장 중",
+    "saveFailed": "닉네임을 저장하지 못했어요. 다시 시도해 주세요."
+  },
+  "blocks": {
+    "status-bar": {
+      "x": 12,
+      "y": 12,
+      "width": 366,
+      "height": 32
+    },
+    "brand-visual": {
+      "x": 20,
+      "y": 64,
+      "width": 350,
+      "height": 96
+    },
+    "title": {
+      "x": 20,
+      "y": 174,
+      "width": 350,
+      "height": 36
+    },
+    "description": {
+      "x": 20,
+      "y": 213,
+      "width": 350,
+      "height": 30
+    },
+    "field-label": {
+      "x": 20,
+      "y": 262,
+      "width": 350,
+      "height": 26
+    },
+    "nickname": {
+      "x": 20,
+      "y": 294,
+      "width": 350,
+      "height": 52
+    },
+    "helper": {
+      "x": 20,
+      "y": 354,
+      "width": 350,
+      "height": 28
+    },
+    "start": {
+      "x": 20,
+      "y": 472,
+      "width": 350,
+      "height": 48
+    },
+    "keyboard": {
+      "x": 0,
+      "y": 540,
+      "width": 390,
+      "height": 304
+    }
+  },
+  "states": [
+    {
+      "id": "initial",
+      "name": "10 · 닉네임 설정 / 첫 입력",
+      "flow": "닉네임 설정 · 첫 입력"
+    },
+    {
+      "id": "ready",
+      "name": "10 · 닉네임 설정 / 저장 가능",
+      "flow": "닉네임 설정 · 저장 가능"
+    },
+    {
+      "id": "invalid",
+      "name": "10 · 닉네임 설정 / 입력 오류",
+      "flow": "닉네임 설정 · 입력 오류"
+    }
+  ],
+  "section": "10 · 닉네임 설정 / 공통 컴포넌트",
+  "svg": {
+    "status": "<svg width=\"69\" height=\"16\" viewBox=\"0 0 69 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path d=\"M2 13v-3h3v3H2zm4 0V8h3v5H6zm4 0V6h3v7h-3zm4 0V3h3v10h-3z\" fill=\"#F3F7EE\"/>\n  <path d=\"M24 6c4-4 10-4 14 0m-11 3c2.5-2.5 5.5-2.5 8 0m-6 2c1.2-1.2 2.8-1.2 4 0\" stroke=\"#F3F7EE\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>\n  <circle cx=\"31\" cy=\"13\" r=\".9\" fill=\"#F3F7EE\"/><rect x=\"44\" y=\"3.5\" width=\"22\" height=\"9\" rx=\"2\" stroke=\"#F3F7EE\"/><rect x=\"46\" y=\"5.5\" width=\"18\" height=\"5\" rx=\"1\" fill=\"#F3F7EE\"/><path d=\"M68 6v4\" stroke=\"#F3F7EE\"/>\n</svg>",
+    "topography": "<svg width=\"244\" height=\"94\" fill=\"none\" viewBox=\"0 0 244 94\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n  <g fill=\"none\" stroke-width=\"1\" stroke-linecap=\"round\">\n    <path stroke=\"#294234\" d=\"M-5 10c27 0 41-17 72-17 33 0 45 16 73 14 30-2 53-22 89-17M12 82c22 0 35 11 63 10 30-1 50-17 85-14 38 3 67 20 86 11M52 100c32 2 50-13 83-13 30 0 66 20 106 15\"/>\n    <path stroke=\"#294234\" d=\"M31 29c16-2 29-18 52-18 19 0 33 8 52 7 24-1 47-19 75-16 16 2 29 9 38 18M30 47c20-3 38-23 57-23 22 0 33 6 51 5 25-2 45-18 69-17 21 1 34 9 43 21M25 68c21 2 43 7 62 5 19-2 38-11 50-13 24-4 45 12 70 13 18 1 35-4 49-10\"/>\n    <path stroke=\"#36513C\" d=\"M70 50c6-10 22-19 37-18 13 1 26 8 40 6 24-3 41-18 63-16 17 2 29 10 31 20 3 12-14 23-31 23-21 0-37-14-59-12-14 1-26 9-41 10-16 2-31-1-40-13z\"/>\n    <path stroke=\"#567348\" d=\"M143 47c21-1 38-16 59-16 14 0 26 6 28 13 3 10-10 14-23 14-25-1-39-14-64-11z\"/>\n  </g>\n  <circle cx=\"177\" cy=\"43\" r=\"24\" fill=\"#2F4433\" stroke=\"#567348\"/>\n  <circle cx=\"177\" cy=\"43\" r=\"16\" fill=\"#C5EE79\"/>\n  <g transform=\"translate(168 34) scale(.75)\" fill=\"none\" stroke=\"#202E13\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"m8 2 1.88 1.88M14.12 3.88 16 2M9 7.13V6a3 3 0 1 1 6 0v1.13M12 20v-9M2 11h4m12 0h4M3 21l4-4M17 17l4 4M3 6l4 3m10 0 4-3\"/>\n    <rect x=\"6\" y=\"7\" width=\"12\" height=\"13\" rx=\"6\"/>\n  </g>\n  <circle cx=\"119\" cy=\"35\" r=\"2\" fill=\"#567348\"/>\n  <circle cx=\"225\" cy=\"74\" r=\"2\" fill=\"#567348\"/>\n</svg>",
+    "logo": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"103\" height=\"31.93\" viewBox=\"127 478 1000 310\" fill=\"#C5EE79\">\n  <path id=\"letter-B\" fill-rule=\"evenodd\" d=\"M178 537 C190 534 204 533 220 533 H232 C271 533 298 553 298 581 C298 597 292 612 279 621 C298 629 309 647 309 667 C309 700 284 722 248 722 H178 C173 722 168 721 164 718 C177 706 184 695 189 684 H241 C257 684 265 676 265 663 C265 649 255 640 240 640 H204 C206 629 207 618 205 607 H231 C247 607 256 599 256 587 C256 574 246 567 230 567 H196 C191 555 185 546 178 537 Z\"/>\n  <path id=\"letter-u\" d=\"M319 601 C319 590 327 581 339 581 C350 581 358 589 358 600 V647 C358 669 367 683 384 683 C401 683 409 669 409 647 V600 C409 589 417 581 429 581 C440 581 448 589 448 600 V647 C448 694 424 724 384 724 C344 724 319 695 319 647 Z\"/>\n  <path id=\"letter-g\" fill-rule=\"evenodd\" d=\"M561 594 C564 586 571 580 581 580 C593 580 602 589 602 601 V687 C602 748 570 783 522 783 C500 783 484 777 471 766 C462 759 460 748 466 738 C472 728 485 726 495 733 C503 740 511 744 522 744 C542 744 557 729 561 705 C550 713 537 718 522 718 C486 718 458 690 458 650 C458 611 486 581 522 581 C537 581 551 586 561 594 Z M561 649 C561 630 548 615 530 615 C512 615 498 630 498 649 C498 668 512 682 530 682 C548 682 561 668 561 649 Z\"/>\n  <path id=\"letter-M\" d=\"M616 558 C616 544 627 533 642 533 C653 533 661 539 667 549 L711 616 C714 621 721 621 725 616 L769 549 C776 539 783 533 794 533 C808 533 819 544 819 558 V701 C819 713 810 723 797 723 C785 723 776 714 776 701 V609 L735 672 C727 684 707 684 699 672 L659 609 V701 C659 714 650 723 638 723 C625 723 616 714 616 701 Z\"/>\n  <path id=\"letter-a\" fill-rule=\"evenodd\" d=\"M920 640 C920 623 909 613 892 613 C883 613 875 616 868 620 C858 626 847 624 842 616 C836 607 840 596 850 590 C863 583 878 578 896 578 C939 578 962 604 962 644 V701 C962 713 954 722 942 722 C931 722 925 716 922 707 C911 719 897 725 881 725 C852 725 830 709 830 684 C830 656 853 631 888 631 C901 631 912 634 920 640 Z M919 667 C912 661 904 658 894 658 C879 658 869 666 869 677 C869 687 878 692 891 692 C905 692 917 682 919 667 Z\"/>\n  <path id=\"letter-p\" fill-rule=\"evenodd\" d=\"M976 601 C976 589 985 581 997 581 C1007 581 1014 586 1018 594 C1028 585 1041 580 1057 580 C1094 580 1123 610 1123 651 C1123 691 1096 722 1057 722 C1041 722 1028 717 1018 708 V761 C1018 773 1009 783 997 783 C985 783 976 773 976 761 Z M1049 615 C1030 615 1017 630 1017 649 C1017 669 1030 684 1049 684 C1067 684 1082 669 1082 649 C1082 630 1067 615 1049 615 Z\"/>\n  <g id=\"beetle-on-B\">\n    <path id=\"antenna-and-head\" d=\"M195 539 C196 524 206 512 222 512 C224 512 226 512 228 513 C233 498 241 487 253 484 C259 482 264 485 264 491 C264 495 261 498 257 498 C246 499 239 507 236 516 C243 521 246 527 246 537 L246 544 H195 Z\"/>\n    <path id=\"upper-shell\" d=\"M146 571 C151 558 160 547 171 539 C183 550 192 575 197 599 C178 596 159 586 146 571 Z\"/>\n    <path id=\"middle-shell\" d=\"M141 579 C155 593 176 604 198 607 C198 621 196 632 194 643 C173 646 147 638 132 628 C133 609 135 593 141 579 Z\"/>\n    <path id=\"lower-shell\" d=\"M132 637 C150 648 173 654 193 651 C187 677 176 697 158 713 C143 698 134 671 132 637 Z\"/>\n  </g>\n  <path id=\"map-pin\" fill-rule=\"evenodd\" d=\"M717 485 C739 485 756 502 756 524 C756 547 736 574 718 603 C699 575 678 547 678 524 C678 502 695 485 717 485 Z M717 499 C703 499 691 511 691 525 C691 540 703 552 717 552 C732 552 744 540 744 525 C744 511 732 499 717 499 Z\"/>\n  <g id=\"beetle-in-pin\">\n    <path id=\"beetle-legs-and-antennae\" d=\"M714 517 L710 510 M720 517 L724 510 M710 525 L706 523 L704 518 M709 530 L704 531 L701 528 M711 535 L707 538 L706 543 M724 525 L728 523 L730 518 M725 530 L730 531 L733 528 M723 535 L727 538 L728 543\" fill=\"none\" stroke=\"#C5EE79\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n    <path id=\"beetle-body\" d=\"M712 519 C712 516 714 514 717 514 C720 514 722 516 722 519 C725 522 726 526 726 530 C726 536 723 541 718 542 V524 H716 V542 C711 541 708 536 708 530 C708 526 709 522 712 519 Z\"/>\n  </g>\n</svg>\n"
+  },
+  "digest": "ac5f3bdf744f3d96b086e555d32dd5ad9e57250a8e344c4417540ba291399af1"
+}

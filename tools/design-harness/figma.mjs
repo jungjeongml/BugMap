@@ -2,7 +2,7 @@ import { imageBindings } from './figma-images.mjs';
 import { svgBindings } from './figma-svg.mjs';
 import { isFigmaNodeId } from './figma-node-id.mjs';
 import { json, object, hashes, stringify, writeBundle } from './io.mjs';
-import { design, designInputs, normalize, wireframes, text } from './contracts.mjs';
+import { design, designInputs, id, normalize, wireframes, text } from './contracts.mjs';
 
 export const figmaFiles = ['control/figma.json', '06-figma/node-map.json', '06-figma/nodes.json'];
 export function figmaTarget(base) {
@@ -60,7 +60,20 @@ export function inspectFigma(base) {
   exported.nodes.forEach(node => visit(node));
   images.verifyUsed();
   const svgAssets = svgs.finish(issues);
-  const roots = new Set(exported.nodes.map(n => n.id)), screens = wireframes(base), seen = new Set(), mapped = new Set();
+  const allScreens = wireframes(base);
+  const projectPath = 'control/project.json';
+  const { scope } = json(base, projectPath);
+  let screens = allScreens;
+  if (scope?.figmaRootCount !== undefined) {
+    const { screen, states, figmaRootCount } = scope;
+    if (!id(screen) || !Array.isArray(states) || !states.every(id) || !Number.isInteger(figmaRootCount)
+      || figmaRootCount < 1 || states.length !== figmaRootCount || new Set(states).size !== figmaRootCount) {
+      throw new Error('Invalid approved Figma scope');
+    }
+    screens = allScreens.filter(s => s.id === screen && states.includes(s.state));
+    if (screens.length !== figmaRootCount) throw new Error('Approved Figma scope does not match wireframes');
+  }
+  const roots = new Set(exported.nodes.map(n => n.id)), seen = new Set(), mapped = new Set();
   if (!object(map) || !Array.isArray(map.nodes) || !map.nodes.length) throw new Error('node-map.json requires nodes');
   for (const entry of map.nodes) {
     const key = `${entry.screen}/${entry.state}`;
@@ -68,7 +81,8 @@ export function inspectFigma(base) {
     seen.add(key); mapped.add(entry.nodeId);
   }
   if (seen.size !== screens.length || mapped.size !== roots.size) throw new Error('Incomplete node-map coverage');
-  return { version: 1, command: 'lint:figma', inputs: hashes(base, [...figmaFiles, ...designInputs, ...images.inputs, ...svgs.inputs, '04-wireframes/wireframes.json']), issues, nodeCount: ids.size,
+  const scopeInputs = screens.length === allScreens.length ? [] : [projectPath];
+  return { version: 1, command: 'lint:figma', inputs: hashes(base, [...figmaFiles, ...designInputs, ...images.inputs, ...svgs.inputs, ...scopeInputs, '04-wireframes/wireframes.json']), issues, nodeCount: ids.size,
     ...(svgAssets.length ? { svgAssets } : {}) };
 }
 export function lintFigma(base, options = {}) {

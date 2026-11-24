@@ -1,0 +1,159 @@
+{
+  "wireframeSha256": "ebce27611649e79a87153b9de2040904822a0c19ed1d40070f564798ae174d36",
+  "viewports": {
+    "360": {
+      "width": 360,
+      "height": 800,
+      "safeArea": {
+        "top": 44,
+        "bottom": 34
+      },
+      "blocks": {
+        "status-bar": {
+          "x": 12,
+          "y": 12,
+          "width": 336,
+          "height": 32
+        },
+        "brand-visual": {
+          "x": 20,
+          "y": 64,
+          "width": 320,
+          "height": 72
+        },
+        "title": {
+          "x": 20,
+          "y": 150,
+          "width": 320,
+          "height": 36
+        },
+        "description": {
+          "x": 20,
+          "y": 189,
+          "width": 320,
+          "height": 30
+        },
+        "field-label": {
+          "x": 20,
+          "y": 231,
+          "width": 320,
+          "height": 26
+        },
+        "nickname": {
+          "x": 20,
+          "y": 262,
+          "width": 320,
+          "height": 52
+        },
+        "helper": {
+          "x": 20,
+          "y": 322,
+          "width": 320,
+          "height": 28
+        },
+        "start": {
+          "x": 20,
+          "y": 436,
+          "width": 320,
+          "height": 48
+        },
+        "keyboard": {
+          "x": 0,
+          "y": 504,
+          "width": 360,
+          "height": 296
+        }
+      }
+    },
+    "390": {
+      "width": 390,
+      "height": 844,
+      "safeArea": {
+        "top": 44,
+        "bottom": 34
+      },
+      "blocks": {
+        "status-bar": {
+          "x": 12,
+          "y": 12,
+          "width": 366,
+          "height": 32
+        },
+        "brand-visual": {
+          "x": 20,
+          "y": 64,
+          "width": 350,
+          "height": 96
+        },
+        "title": {
+          "x": 20,
+          "y": 174,
+          "width": 350,
+          "height": 36
+        },
+        "description": {
+          "x": 20,
+          "y": 213,
+          "width": 350,
+          "height": 30
+        },
+        "field-label": {
+          "x": 20,
+          "y": 262,
+          "width": 350,
+          "height": 26
+        },
+        "nickname": {
+          "x": 20,
+          "y": 294,
+          "width": 350,
+          "height": 52
+        },
+        "helper": {
+          "x": 20,
+          "y": 354,
+          "width": 350,
+          "height": 28
+        },
+        "start": {
+          "x": 20,
+          "y": 472,
+          "width": 350,
+          "height": 48
+        },
+        "keyboard": {
+          "x": 0,
+          "y": 540,
+          "width": 390,
+          "height": 304
+        }
+      }
+    }
+  },
+  "states": {
+    "initial": {
+      "fieldVariant": "focused-empty",
+      "fieldStroke": "accent",
+      "fieldStrokeWidth": 2,
+      "value": "",
+      "helper": "guidance",
+      "cta": "disabled"
+    },
+    "ready": {
+      "fieldVariant": "valid",
+      "fieldStroke": "fieldBorder",
+      "fieldStrokeWidth": 1,
+      "value": "validValue",
+      "helper": "guidance",
+      "cta": "enabled"
+    },
+    "invalid": {
+      "fieldVariant": "invalid",
+      "fieldStroke": "error",
+      "fieldStrokeWidth": 2,
+      "value": "invalidValue",
+      "helper": "tooShort",
+      "cta": "disabled"
+    }
+  }
+}

@@ -69,6 +69,28 @@ test('missing target/export, wrong file, duplicate node IDs, incomplete map and 
   assert.equal(f.run('lint:figma', '--force').status, 2);
 });
 
+test('lint:figma requires only approved Figma states when wireframes include viewport checks', t => {
+  const f = fixture(t);
+  const { screens } = JSON.parse(readFileSync(join(f.base, '04-wireframes/wireframes.json')));
+  f.put('04-wireframes/wireframes.json', { screens: [
+    ...screens, { ...screens[0], id: 'map-compact-check', width: 360, height: 800 },
+  ] });
+  let result = f.run('lint:figma', '--force', '--json');
+  assert.equal(result.status, 2);
+  assert.match(result.stderr, /Incomplete node-map coverage/);
+
+  const scope = { screen: 'map', states: ['default'], figmaRootCount: 1 };
+  f.put('control/project.json', { id: 'demo', scope });
+  result = f.run('lint:figma', '--force', '--json');
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(JSON.parse(result.stdout).inputs['control/project.json'], /^[a-f0-9]{64}$/);
+
+  f.put('control/project.json', { id: 'demo', scope: { ...scope, states: ['missing'] } });
+  result = f.run('lint:figma', '--force', '--json');
+  assert.equal(result.status, 2);
+  assert.match(result.stderr, /Approved Figma scope does not match wireframes/);
+});
+
 test('hooks resolve subdirectories, reject ambiguity and malformed input, and accept target URLs', t => {
   const f = fixture(t); f.approve();
   const sub = join(f.root, 'src/deep'); mkdirSync(sub, { recursive: true });

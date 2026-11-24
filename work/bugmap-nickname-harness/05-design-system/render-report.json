@@ -1,0 +1,589 @@
+{
+  "command": "node 05-design-system/render.mjs <repo>",
+  "approvalWireframeSha256": "ebce27611649e79a87153b9de2040904822a0c19ed1d40070f564798ae174d36",
+  "inputs": {
+    "tokens.json": "450b9ab83eeb882ce743a32d733d9ba984bdfb84c2d39e294af7067e9b6ebdae",
+    "components.json": "1d38484e785f506319cf6565ebcc533d8272d954d463a6e992dc4c9c6ea327e5",
+    "copy.json": "3f8dca315d5dd9573061d5f57cc977ac87609f9683f1d17146ff17722e837233",
+    "icons.csv": "d3fcf3d4331903ea5b27bb51920f2d4a0e25f586bedd8cdd92dfe25cd7bfd7e0",
+    "render.mjs": "c3fc66f4a342fa8072d498ae7551a0b0309f93a4f5ac22d448b8a538ad07926f",
+    "layout.json": "fc1ac14cba00e32ea0c41d4c69a8f85e9945b68ab7af8e98eadbd3264520ca21",
+    "preview.svg": "4bf5e9b0601237ecad64df1d8c7fb29ea5703fc9cb208b5d46188f3870f5870d",
+    "previews/nickname.css": "c9536c376eb0b5aaa1624e161429af5a362084a5dc9c31b654f2c80eea37d39e",
+    "previews/nickname-setup--initial.html": "eb7fcf1176a118fee1881c4391b6d027e34a4c44afe876b5f9e001160daf4dd3",
+    "previews/nickname-setup--ready.html": "12703b78eb01a0db691b9174e316b75bfe9683b327b3671c5e8e0b7233afe051",
+    "previews/nickname-setup--invalid.html": "b42bd728495d37f9bf8ebed0a382ae5e9fba693f4838196f1e32b487c19195e6",
+    "assets/Pretendard-Medium.woff2": "d03481330eeba0659ab5b87f25ceb504a35de377dd90a0d0aba2982eb2d05e2c",
+    "assets/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "assets/bugmap-logo-vector-lime.svg": "7d7911bab153a6ac00879de73da8dcc4569ec31b760d4be439f37c802199545f"
+  },
+  "contrastChecks": {
+    "text/background": {
+      "ratio": 16.13,
+      "minimum": 4.5,
+      "pass": true
+    },
+    "textSecondary/background": {
+      "ratio": 10.57,
+      "minimum": 4.5,
+      "pass": true
+    },
+    "text/field": {
+      "ratio": 13.49,
+      "minimum": 4.5,
+      "pass": true
+    },
+    "textPlaceholder/field": {
+      "ratio": 7.22,
+      "minimum": 4.5,
+      "pass": true
+    },
+    "textPlaceholder/background": {
+      "ratio": 8.63,
+      "minimum": 4.5,
+      "pass": true
+    },
+    "error/background": {
+      "ratio": 9.5,
+      "minimum": 4.5,
+      "pass": true
+    },
+    "error/field": {
+      "ratio": 7.95,
+      "minimum": 3,
+      "pass": true
+    },
+    "accent/field": {
+      "ratio": 11.07,
+      "minimum": 3,
+      "pass": true
+    },
+    "fieldBorder/field": {
+      "ratio": 3.71,
+      "minimum": 3,
+      "pass": true
+    },
+    "onAccent/accent": {
+      "ratio": 10.86,
+      "minimum": 4.5,
+      "pass": true
+    },
+    "disabledText/disabledSurface": {
+      "ratio": 5.02,
+      "minimum": 4.5,
+      "pass": true
+    }
+  },
+  "captures": [
+    {
+      "state": "initial",
+      "width": 390,
+      "height": 844,
+      "output": "captures/390x844-initial.png",
+      "sha256": "18742116fe7143eeba9c1cf82c662df03579a5bb8b8142a19329b9ea821734a1",
+      "targetMin": 48,
+      "keyboardGap": 20,
+      "geometry": {
+        "boxes": {
+          "status-bar": {
+            "x": 12,
+            "y": 12,
+            "width": 366,
+            "height": 32
+          },
+          "brand-visual": {
+            "x": 20,
+            "y": 64,
+            "width": 350,
+            "height": 96
+          },
+          "title": {
+            "x": 20,
+            "y": 174,
+            "width": 350,
+            "height": 36
+          },
+          "description": {
+            "x": 20,
+            "y": 213,
+            "width": 350,
+            "height": 30
+          },
+          "field-label": {
+            "x": 20,
+            "y": 262,
+            "width": 350,
+            "height": 26
+          },
+          "nickname": {
+            "x": 20,
+            "y": 294,
+            "width": 350,
+            "height": 52
+          },
+          "helper": {
+            "x": 20,
+            "y": 354,
+            "width": 350,
+            "height": 28
+          },
+          "start": {
+            "x": 20,
+            "y": 472,
+            "width": 350,
+            "height": 48
+          },
+          "keyboard": {
+            "x": 0,
+            "y": 540,
+            "width": 390,
+            "height": 304
+          }
+        },
+        "fonts": [
+          {
+            "family": "Pretendard",
+            "weight": "500",
+            "status": "loaded"
+          },
+          {
+            "family": "Pretendard",
+            "weight": "700",
+            "status": "loaded"
+          }
+        ],
+        "value": "",
+        "invalid": "false",
+        "disabled": true,
+        "message": "닉네임 2~12자",
+        "brandWidth": 1000
+      },
+      "issues": []
+    },
+    {
+      "state": "ready",
+      "width": 390,
+      "height": 844,
+      "output": "captures/390x844-ready.png",
+      "sha256": "9520c4deefaa93e1f8c03f235c4b87ec03f0971d1746fbe0229a687e729ffba6",
+      "targetMin": 48,
+      "keyboardGap": 20,
+      "geometry": {
+        "boxes": {
+          "status-bar": {
+            "x": 12,
+            "y": 12,
+            "width": 366,
+            "height": 32
+          },
+          "brand-visual": {
+            "x": 20,
+            "y": 64,
+            "width": 350,
+            "height": 96
+          },
+          "title": {
+            "x": 20,
+            "y": 174,
+            "width": 350,
+            "height": 36
+          },
+          "description": {
+            "x": 20,
+            "y": 213,
+            "width": 350,
+            "height": 30
+          },
+          "field-label": {
+            "x": 20,
+            "y": 262,
+            "width": 350,
+            "height": 26
+          },
+          "nickname": {
+            "x": 20,
+            "y": 294,
+            "width": 350,
+            "height": 52
+          },
+          "helper": {
+            "x": 20,
+            "y": 354,
+            "width": 350,
+            "height": 28
+          },
+          "start": {
+            "x": 20,
+            "y": 472,
+            "width": 350,
+            "height": 48
+          },
+          "keyboard": {
+            "x": 0,
+            "y": 540,
+            "width": 390,
+            "height": 304
+          }
+        },
+        "fonts": [
+          {
+            "family": "Pretendard",
+            "weight": "500",
+            "status": "loaded"
+          },
+          {
+            "family": "Pretendard",
+            "weight": "700",
+            "status": "loaded"
+          }
+        ],
+        "value": "숲길관찰자",
+        "invalid": "false",
+        "disabled": false,
+        "message": "닉네임 2~12자",
+        "brandWidth": 1000
+      },
+      "issues": []
+    },
+    {
+      "state": "invalid",
+      "width": 390,
+      "height": 844,
+      "output": "captures/390x844-invalid.png",
+      "sha256": "a181ad62af60adc5a66e8b084c02d3e0b23e7076c991b54b5a4f7ef2cc57590f",
+      "targetMin": 48,
+      "keyboardGap": 20,
+      "geometry": {
+        "boxes": {
+          "status-bar": {
+            "x": 12,
+            "y": 12,
+            "width": 366,
+            "height": 32
+          },
+          "brand-visual": {
+            "x": 20,
+            "y": 64,
+            "width": 350,
+            "height": 96
+          },
+          "title": {
+            "x": 20,
+            "y": 174,
+            "width": 350,
+            "height": 36
+          },
+          "description": {
+            "x": 20,
+            "y": 213,
+            "width": 350,
+            "height": 30
+          },
+          "field-label": {
+            "x": 20,
+            "y": 262,
+            "width": 350,
+            "height": 26
+          },
+          "nickname": {
+            "x": 20,
+            "y": 294,
+            "width": 350,
+            "height": 52
+          },
+          "helper": {
+            "x": 20,
+            "y": 354,
+            "width": 350,
+            "height": 28
+          },
+          "start": {
+            "x": 20,
+            "y": 472,
+            "width": 350,
+            "height": 48
+          },
+          "keyboard": {
+            "x": 0,
+            "y": 540,
+            "width": 390,
+            "height": 304
+          }
+        },
+        "fonts": [
+          {
+            "family": "Pretendard",
+            "weight": "500",
+            "status": "loaded"
+          },
+          {
+            "family": "Pretendard",
+            "weight": "700",
+            "status": "loaded"
+          }
+        ],
+        "value": "숲",
+        "invalid": "true",
+        "disabled": true,
+        "message": "닉네임을 2자 이상 입력해 주세요",
+        "brandWidth": 1000
+      },
+      "issues": []
+    },
+    {
+      "state": "initial",
+      "width": 360,
+      "height": 800,
+      "output": "captures/360x800-initial.png",
+      "sha256": "acdc8f7e789dc47a077693f86a5b6511c3e6bfcb5bb9c88c74673ba9c57286e0",
+      "targetMin": 48,
+      "keyboardGap": 20,
+      "geometry": {
+        "boxes": {
+          "status-bar": {
+            "x": 12,
+            "y": 12,
+            "width": 336,
+            "height": 32
+          },
+          "brand-visual": {
+            "x": 20,
+            "y": 64,
+            "width": 320,
+            "height": 72
+          },
+          "title": {
+            "x": 20,
+            "y": 150,
+            "width": 320,
+            "height": 36
+          },
+          "description": {
+            "x": 20,
+            "y": 189,
+            "width": 320,
+            "height": 30
+          },
+          "field-label": {
+            "x": 20,
+            "y": 231,
+            "width": 320,
+            "height": 26
+          },
+          "nickname": {
+            "x": 20,
+            "y": 262,
+            "width": 320,
+            "height": 52
+          },
+          "helper": {
+            "x": 20,
+            "y": 322,
+            "width": 320,
+            "height": 28
+          },
+          "start": {
+            "x": 20,
+            "y": 436,
+            "width": 320,
+            "height": 48
+          },
+          "keyboard": {
+            "x": 0,
+            "y": 504,
+            "width": 360,
+            "height": 296
+          }
+        },
+        "fonts": [
+          {
+            "family": "Pretendard",
+            "weight": "500",
+            "status": "loaded"
+          },
+          {
+            "family": "Pretendard",
+            "weight": "700",
+            "status": "loaded"
+          }
+        ],
+        "value": "",
+        "invalid": "false",
+        "disabled": true,
+        "message": "닉네임 2~12자",
+        "brandWidth": 1000
+      },
+      "issues": []
+    },
+    {
+      "state": "ready",
+      "width": 360,
+      "height": 800,
+      "output": "captures/360x800-ready.png",
+      "sha256": "92b06e0641694d1dc1aa75327db6220c81ceb2be635f173830efbff56e1e3bb7",
+      "targetMin": 48,
+      "keyboardGap": 20,
+      "geometry": {
+        "boxes": {
+          "status-bar": {
+            "x": 12,
+            "y": 12,
+            "width": 336,
+            "height": 32
+          },
+          "brand-visual": {
+            "x": 20,
+            "y": 64,
+            "width": 320,
+            "height": 72
+          },
+          "title": {
+            "x": 20,
+            "y": 150,
+            "width": 320,
+            "height": 36
+          },
+          "description": {
+            "x": 20,
+            "y": 189,
+            "width": 320,
+            "height": 30
+          },
+          "field-label": {
+            "x": 20,
+            "y": 231,
+            "width": 320,
+            "height": 26
+          },
+          "nickname": {
+            "x": 20,
+            "y": 262,
+            "width": 320,
+            "height": 52
+          },
+          "helper": {
+            "x": 20,
+            "y": 322,
+            "width": 320,
+            "height": 28
+          },
+          "start": {
+            "x": 20,
+            "y": 436,
+            "width": 320,
+            "height": 48
+          },
+          "keyboard": {
+            "x": 0,
+            "y": 504,
+            "width": 360,
+            "height": 296
+          }
+        },
+        "fonts": [
+          {
+            "family": "Pretendard",
+            "weight": "500",
+            "status": "loaded"
+          },
+          {
+            "family": "Pretendard",
+            "weight": "700",
+            "status": "loaded"
+          }
+        ],
+        "value": "숲길관찰자",
+        "invalid": "false",
+        "disabled": false,
+        "message": "닉네임 2~12자",
+        "brandWidth": 1000
+      },
+      "issues": []
+    },
+    {
+      "state": "invalid",
+      "width": 360,
+      "height": 800,
+      "output": "captures/360x800-invalid.png",
+      "sha256": "87f5d2bb7b0c62460bd357a225d52487b8a269bf9b2faa4444995a31b354d6ac",
+      "targetMin": 48,
+      "keyboardGap": 20,
+      "geometry": {
+        "boxes": {
+          "status-bar": {
+            "x": 12,
+            "y": 12,
+            "width": 336,
+            "height": 32
+          },
+          "brand-visual": {
+            "x": 20,
+            "y": 64,
+            "width": 320,
+            "height": 72
+          },
+          "title": {
+            "x": 20,
+            "y": 150,
+            "width": 320,
+            "height": 36
+          },
+          "description": {
+            "x": 20,
+            "y": 189,
+            "width": 320,
+            "height": 30
+          },
+          "field-label": {
+            "x": 20,
+            "y": 231,
+            "width": 320,
+            "height": 26
+          },
+          "nickname": {
+            "x": 20,
+            "y": 262,
+            "width": 320,
+            "height": 52
+          },
+          "helper": {
+            "x": 20,
+            "y": 322,
+            "width": 320,
+            "height": 28
+          },
+          "start": {
+            "x": 20,
+            "y": 436,
+            "width": 320,
+            "height": 48
+          },
+          "keyboard": {
+            "x": 0,
+            "y": 504,
+            "width": 360,
+            "height": 296
+          }
+        },
+        "fonts": [
+          {
+            "family": "Pretendard",
+            "weight": "500",
+            "status": "loaded"
+          },
+          {
+            "family": "Pretendard",
+            "weight": "700",
+            "status": "loaded"
+          }
+        ],
+        "value": "숲",
+        "invalid": "true",
+        "disabled": true,
+        "message": "닉네임을 2자 이상 입력해 주세요",
+        "brandWidth": 1000
+      },
+      "issues": []
+    }
+  ]
+}

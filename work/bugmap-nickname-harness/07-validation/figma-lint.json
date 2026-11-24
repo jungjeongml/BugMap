@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "command": "lint:figma",
+  "inputs": {
+    "04-wireframes/wireframes.json": "ebce27611649e79a87153b9de2040904822a0c19ed1d40070f564798ae174d36",
+    "05-design-system/components.json": "1d38484e785f506319cf6565ebcc533d8272d954d463a6e992dc4c9c6ea327e5",
+    "05-design-system/copy.json": "3f8dca315d5dd9573061d5f57cc977ac87609f9683f1d17146ff17722e837233",
+    "05-design-system/tokens.json": "450b9ab83eeb882ce743a32d733d9ba984bdfb84c2d39e294af7067e9b6ebdae",
+    "06-figma/node-map.json": "96435079f26b6ede8e81ba75d3ed5d2d9e500444afda9fc725f2034bed5dbe74",
+    "06-figma/nodes.json": "4f4cb2f579033f15e32d11e2214ee90899e2b254fdd8953ad4cfe9e390b7aed9",
+    "control/figma.json": "8dafa32adddc99dfe6ea60acc3e2669db472494886b9ff3e2052164f769a0558",
+    "control/project.json": "d4301e41db016f1e30f51663308867df7beba1fa09ba7fb86f9037e811785170"
+  },
+  "issues": [],
+  "nodeCount": 358
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "wireframe",
+  "at": "2026-11-24T12:28:41.128Z",
+  "inputs": {
+    "04-wireframes/wireframes.json": "ebce27611649e79a87153b9de2040904822a0c19ed1d40070f564798ae174d36"
+  },
+  "outputs": {
+    "04-wireframes/nickname-setup/initial.svg": "15ae40269db7dcea547774844895b39f161c336d17b7ad3a6aa4a955d836495b",
+    "04-wireframes/nickname-setup/ready.svg": "cfc7144e8d9cca6aee88128a521f7183a8203218c88b3fafce170fb343d5315c",
+    "04-wireframes/nickname-setup/invalid.svg": "86f21acbd87a8de8770a628bfc01cf4994152a12035ecf57dee364ce8d75ff53",
+    "04-wireframes/nickname-setup-compact-check/initial.svg": "478d7bef1098d9f491ea8e002c22fab7f49180e7ca62f4417563aaba2a2c8aa0",
+    "04-wireframes/nickname-setup-compact-check/ready.svg": "def6d959f474eaff39d6fe769c5b459918c65fa6e73a7c85ec1d567632bc9ba6",
+    "04-wireframes/nickname-setup-compact-check/invalid.svg": "f7fd5ad5694071676bfe0140c31060844c7cf31fa81fbc778a409e8e0e51d911",
+    "04-wireframes/captures/nickname-setup/initial.png": "51794fb21a0e3e67b5715e075de07badeaecf0016092d240902e9175150533e6",
+    "04-wireframes/captures/nickname-setup/ready.png": "1bd40dacff50d91bcdf3bea6ee34b1b5d1f8ab7fb47700413b37fc956014f704",
+    "04-wireframes/captures/nickname-setup/invalid.png": "6a69f888c68503001a7a23b9df90f11877bb641d74e48315993ebafe7f47a32b",
+    "04-wireframes/captures/nickname-setup-compact-check/initial.png": "364d9bd4e9895b46f91740065f6eba02b79dde2753201c666ad2d524c4bbea90",
+    "04-wireframes/captures/nickname-setup-compact-check/ready.png": "421fe7f5fd32da1ff06116525a3645f17b64b3b814541b09dbdda0c84598c748",
+    "04-wireframes/captures/nickname-setup-compact-check/invalid.png": "04b6ee634834faaf57cf0474b9f8c5fa66274b92437b3be0d20f59d34d00fac1"
+  }
+}

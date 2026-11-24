@@ -1,0 +1,40 @@
+{
+  "id": "bugmap-nickname-harness",
+  "purpose": "신규 가입 직후 닉네임 설정 화면과 대표 상태 디자인",
+  "platform": "mobile",
+  "language": "ko",
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 360,
+      "height": 800
+    }
+  ],
+  "reviewMinScore": 4,
+  "scope": {
+    "screen": "nickname-setup",
+    "states": [
+      "initial",
+      "ready",
+      "invalid"
+    ],
+    "figmaRootCount": 3
+  },
+  "sourceDocuments": {
+    "AGENTS.md": "6fdea9dded892b178f0d7bfa1b25c256d11375d790a6949cbe36f13ccdf2fcc7",
+    "docs/PRD.md": "2d196360306f8fdfeff11c75a2a0f251f82aaecafa66fc42fd1e0043934e80de",
+    "docs/DESIGN.md": "fee42b2e4e4b94ec874b29f51af2675b21cc41984ee0d5df5069e54504121c39",
+    "docs/TDD.md": "c3db4b89946a57c4053dbe02a3c50a9d15dcad859b719ebc5d7b0bbb02d515f7",
+    "docs/screens/login.md": "91a276c82ad9a38511d8dfc453672ee2504e22105eb53ed7b7b0e8cf94c220b7",
+    "docs/design-harness.md": "12fdfce91455ead826c433eca55fe467938f580457cf3590dedd771e0de8fd11",
+    "work/bugmap-login-map-harness/06-figma/captures/login-default.png": "a1639de92c41060e89832cf3fa6157e7fd7b5c6b5611e6f6f4ff0a82a04e150d",
+    "work/bugmap-main-map-harness/06-figma/captures/main-map-default.png": "3c391df201a8b53222204ba5594e87db41ca6ce24f2b103d50ae5cd54ede9b2c"
+  },
+  "userReference": {
+    "name": "kyroNickname.png",
+    "sha256": "91c7259f8aec9161576823675abda60bd1e61fe63b70551a52ff6a5789d0bf00"
+  }
+}

@@ -1,0 +1,4 @@
+id,severity,status,requirement,summary,verification
+VIS-01,minor,recorded,NICK-05,Figma에서 Pretendard가 제공되지 않아 Noto Sans KR로 대체,Figma 세 캡처에서 잘림·겹침 없음. 비교용 HTML의 승인 Pretendard는 유지
+APP-01,follow-up,open,NICK-01|NICK-07,앱의 계정 분기와 실제 닉네임 저장은 시안 범위 밖,신규·미저장 재진입·기존 계정 및 저장 중복·실패·재시도를 제품에서 확인
+APP-02,follow-up,open,NICK-04|NICK-05,실기기 키보드와 IME 및 접근성 미검증,실제 키보드 크기 변경과 한글 조합·글자 확대·포커스·오류 낭독을 제품에서 확인

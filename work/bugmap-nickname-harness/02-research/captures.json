@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "generator": "design-harness",
+  "command": "refs:capture",
+  "at": "2026-11-24T12:24:45.136Z",
+  "inputs": {
+    "02-research/refs.json": "99b68efe3eabd646c5cad76f68234734458377d5127e2ce776c4d4c66c147f4f"
+  },
+  "outputs": {
+    "02-research/captures/apple-hig-text-fields.png": "844136c3ea9bc65ae341023a118047d4ed107beeefd508fbf7c59659ebf1c527"
+  },
+  "references": [
+    {
+      "id": "apple-hig-text-fields",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/text-fields",
+      "viewport": {
+        "width": 1280,
+        "height": 1180
+      },
+      "finalUrl": "https://developer.apple.com/design/human-interface-guidelines/text-fields",
+      "title": "Text fields | Apple Developer Documentation",
+      "capture": "02-research/captures/apple-hig-text-fields.png"
+    }
+  ]
+}
