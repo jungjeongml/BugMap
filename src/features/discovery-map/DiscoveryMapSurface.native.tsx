@@ -29,9 +29,8 @@ export function DiscoveryMapSurface({ token, ornamentInset, onStatus }: Discover
 
     async function initialize() {
       try {
-        const sdk = await import('@rnmapbox/maps');
-        if (disposed) return;
-
+        // Bundle the SDK with the app while deferring evaluation until after the Expo Go guard.
+        const sdk: NativeMapbox = require('@rnmapbox/maps');
         await sdk.setAccessToken(token);
         if (!disposed) setMapbox(sdk);
       } catch {

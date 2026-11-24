@@ -3,13 +3,32 @@
     "name": "곤충맵",
     "slug": "bugmap",
     "scheme": "bugmap",
-    "plugins": ["expo-secure-store", "@rnmapbox/maps"],
+    "plugins": [
+      "expo-secure-store",
+      "@rnmapbox/maps"
+    ],
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "backgroundColor": "#FAF8FF",
-    "ios": { "supportsTablet": true },
-    "android": { "adaptiveIcon": { "backgroundColor": "#FAF8FF" } },
-    "web": { "name": "곤충맵", "bundler": "metro", "output": "single" }
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.justin522.bugmap"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FAF8FF"
+      }
+    },
+    "web": {
+      "name": "곤충맵",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7dedade7-cb01-4225-bad4-0f6a96b89449"
+      }
+    }
   }
 }
