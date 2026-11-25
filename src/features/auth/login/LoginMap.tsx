@@ -2,7 +2,7 @@ import { useState, type ReactNode } from 'react';
 import { Image, Linking, Platform, StyleSheet, Text, View } from 'react-native';
 import type { EdgeInsets } from 'react-native-safe-area-context';
 import Svg, { Defs, LinearGradient, Rect, Stop } from 'react-native-svg';
-import { mapFlowColors } from '../../theme/tokens';
+import { mapFlowColors } from '../../../theme/tokens';
 import { getLoginMapUrl, loginMapAttribution, selectLoginMap, type LoginMapResult } from './loginMapConfig';
 
 const illustration = require('./assets/login-map-illustration.png');

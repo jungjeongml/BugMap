@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { Linking, Modal, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
-import { colors } from '../../theme/tokens';
+import { colors } from '../../../theme/tokens';
 import { openPolicyDocument, policyDocuments, type PolicyDocument } from './policyDocuments';
 
 const messages = {

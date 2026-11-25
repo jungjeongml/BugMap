@@ -1,8 +1,8 @@
 import { ActivityIndicator, Image, Platform, Pressable, ScrollView, StatusBar, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Path } from 'react-native-svg';
-import { colors, layout, mapFlowColors } from '../../theme/tokens';
-import { authProvidersFor, type AuthProvider } from './authClient';
+import { colors, layout, mapFlowColors } from '../../../theme/tokens';
+import { authProvidersFor, type AuthProvider } from '../session/authClient';
 import { LoginMap, LoginMapAttribution } from './LoginMap';
 import { LoginObservation } from './LoginObservation';
 import { PolicyLinks } from './PolicyLinks';

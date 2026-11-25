@@ -4,10 +4,10 @@ import { ActivityIndicator, AppState, Pressable, StatusBar, StyleSheet, Text, Vi
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors, layout, mapFlowColors } from '../../theme/tokens';
 import { DiscoveryMapScreen } from '../discovery-map/DiscoveryMapScreen';
-import { AuthError, shouldRevalidateSession, type AuthProvider } from './authClient';
-import { authRuntime, type VerifiedAuthSession } from './authRuntime';
-import { LoginScreen } from './LoginScreen';
-import { NicknameScreen } from './NicknameScreen';
+import { AuthError, shouldRevalidateSession, type AuthProvider } from './session/authClient';
+import { authRuntime, type VerifiedAuthSession } from './session/authRuntime';
+import { LoginScreen } from './login/LoginScreen';
+import { NicknameScreen } from './nickname/NicknameScreen';
 
 type AuthView =
   | { screen: 'restore'; notice?: string }

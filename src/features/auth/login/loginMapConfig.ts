@@ -1,4 +1,4 @@
-import { getPublicMapboxToken, seoulForestCamera as camera } from '../../config/mapbox.mjs';
+import { getPublicMapboxToken, seoulForestCamera as camera } from '../../../config/mapbox.mjs';
 
 export const loginMapAttribution = [
   { label: '© Mapbox', url: 'https://www.mapbox.com/about/maps' },

@@ -18,7 +18,7 @@ import {
   type LucideIcon,
 } from 'lucide-react-native';
 import { Platform } from 'react-native';
-import { colors } from '../../theme/tokens';
+import { colors } from '../../../theme/tokens';
 
 const icons = {
   beetle: Bug,

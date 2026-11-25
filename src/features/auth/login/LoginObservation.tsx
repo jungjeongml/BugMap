@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import Svg, { Circle, Path } from 'react-native-svg';
-import { mapFlowColors } from '../../theme/tokens';
+import { mapFlowColors } from '../../../theme/tokens';
 import { AppIcon } from './AppIcon';
 
 const observationDots = [[124, 81], [210, 130], [276, 148]] as const;

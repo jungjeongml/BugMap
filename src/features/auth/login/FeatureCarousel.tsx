@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View, type ScrollViewInstance } from 'react-native';
-import { colors, layout } from '../../theme/tokens';
+import { colors, layout } from '../../../theme/tokens';
 import { AppIcon } from './AppIcon';
 import { features, type Feature } from './loginContent';
 

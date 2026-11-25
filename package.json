@@ -8,7 +8,7 @@
   },
   "scripts": {
     "design-harness": "node tools/design-harness/bin/design-harness",
-    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tools/design-harness/test/*.test.mjs src/features/*/*.test.mjs",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tools/design-harness/test/*.test.mjs 'src/features/**/*.test.mjs'",
     "start": "expo start",
     "ios": "expo run:ios",
     "android": "expo run:android",

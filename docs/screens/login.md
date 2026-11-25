@@ -19,8 +19,8 @@
 
 - 2026-11-09 구현 기준은 기존 `01 · 로그인 / iOS`가 아니라, 사용자가 현재 선택한 `Container` **노드 `2:3`(390×804.75)** 이다. 배경은 부모 `2:2`의 `#FAF8FF`를 따른다. [배경 포함 참조 캡처](../../design/login/reference/2:2.png).
 - 브랜드 헤더 → 가로 소개 카드 3개·페이지 표시 → 카카오/네이버/Apple → 이메일/비회원 보조 동작 → 안내 필·약관 문구 순서다. 16px 여백, 32px 모서리, 48px 소셜 버튼과 제공자 고유색을 재현한다. 이 선택 화면의 배경·제공자 고유색은 일반 UI 색상 원칙의 화면별 예외다.
-- 아이콘은 Figma에서 가져오지 않는다. `src/features/auth/AppIcon.tsx`에서 의미가 맞는 Lucide 아이콘을 React Native 컴포넌트로 매핑한다. 로그인 화면은 곤충에 `Bug`, 지도에 `Compass`·`Navigation`, 촬영에 `Camera`, 소개에 `Sparkles`·`Brain`·`Handshake`·`BadgeCheck`·`UsersRound`, 제공자 버튼에 `MessageCircle`·`Search`·`Smartphone`을 사용한다. 이것은 당시 구현 이력이며, 제공자 표식을 일반 기호로 대체하는 방식은 아래 2026-11-13 기준으로 교체 대상이다.
-- 구현은 `src/features/auth/LoginScreen.tsx`·`FeatureCarousel.tsx`, 토큰은 `src/theme/tokens.ts`에 있다. 시스템 글꼴과 자연스러운 줄 높이를 사용하며, Figma의 작은 고정 텍스트 프레임으로 인해 글자를 자르지 않는다.
+- 아이콘은 Figma에서 가져오지 않는다. `src/features/auth/login/AppIcon.tsx`에서 의미가 맞는 Lucide 아이콘을 React Native 컴포넌트로 매핑한다. 로그인 화면은 곤충에 `Bug`, 지도에 `Compass`·`Navigation`, 촬영에 `Camera`, 소개에 `Sparkles`·`Brain`·`Handshake`·`BadgeCheck`·`UsersRound`, 제공자 버튼에 `MessageCircle`·`Search`·`Smartphone`을 사용한다. 이것은 당시 구현 이력이며, 제공자 표식을 일반 기호로 대체하는 방식은 아래 2026-11-13 기준으로 교체 대상이다.
+- 구현은 `src/features/auth/login/LoginScreen.tsx`·`FeatureCarousel.tsx`, 토큰은 `src/theme/tokens.ts`에 있다. 시스템 글꼴과 자연스러운 줄 높이를 사용하며, Figma의 작은 고정 텍스트 프레임으로 인해 글자를 자르지 않는다.
 - 사용자 요청에 따라 인증·이메일·비회원 이동·정책 페이지 기능은 연결하지 않았다. 버튼은 제공자 스타일을 유지하면서 접근성 비활성 상태를 전달한다. 소개 카드에는 스크롤·페이지 선택 UI를 구성한다.
 - 페이지 표시의 점은 원본 크기를 유지하고, 선택 버튼의 터치 영역·간격은 공통 기준에 맞게 각각 44×44로 확대했다. 원본의 좁은 점 간격에 대한 접근성 보정이며, 표시 행 높이와 로그인 섹션 여백을 함께 조정했다.
 - 시안의 `AI 종 자동 식별`, `정확도 98%`, `15,000+ 애호가`, 경로 안내·보안 등의 문구는 원본의 디자인 예시다. PRD의 범위·성능·운영 약속으로 확정한 것이 아니다. 네이버 제공자도 기존 Google 권장안과 다르므로 인증 구현 전에 문구·제공자를 정합화한다.
