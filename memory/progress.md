@@ -540,3 +540,8 @@
 
 - PostgreSQL 17.12·PostGIS 3.7.0을 로컬 Compose로 실행하고 Prisma 7.10.1 인증 마이그레이션을 적용했다. SQLite의 계정 2개·소셜 연결 2개·닉네임 2개를 옮겼다. 기존 SQLite 파일은 읽기 전용으로 사용했고 세션은 재로그인 시 발급한다. [개발 DB 설정](../compose.yaml) · [인증 스키마](../server/prisma/schema.prisma) · [실행 및 이관 안내](../server/README.md)
 - 실제 PostgreSQL 서버 테스트 23개, 프론트엔드 테스트 40개, 타입 검사, Compose 설정 검사와 DB 쿼리를 확인했다. 로컬 포트 18763에서 인증 서버를 교체했다. 첫 공개 로그인 시작 확인에서 HTTP 500과 시간 초과가 한 차례 발생했고, 로컬 재확인 및 ngrok 재확인에서 카카오·Google 모두 HTTP 302였다. 실제 제공자 로그인 완료와 실기기 재검증은 남아 있다.
+
+## 2026-11-26 — 백엔드 인증 모듈 구조 정리
+
+- 인증 컨트롤러·모듈·저장소·소셜 연동을 `server/src/auth/`로 옮기고, 인증 저장소와 SQLite 이관 스크립트의 Prisma 연결을 `server/src/database/prisma.mts`로 통합했다. [서버 구조](../server/README.md#서버-구조)
+- 실제 PostgreSQL 임시 스키마에서 서버 테스트 23개와 루트 타입 검사가 통과했다. 실행 중인 로컬 인증 프로세스의 재시작과 실제 제공자 로그인은 이번 검증 범위 밖이다.

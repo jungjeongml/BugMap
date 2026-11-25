@@ -1,6 +1,6 @@
 import { createRemoteJWKSet, customFetch, importPKCS8, jwtVerify, SignJWT } from 'jose';
-import { digest } from './store.mjs';
-import type { ProviderId } from './store.mjs';
+import { digest } from './auth.store.mjs';
+import type { ProviderId } from './auth.store.mjs';
 
 interface AuthorizationRequest {
   state: string;

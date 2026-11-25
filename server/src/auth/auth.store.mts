@@ -1,6 +1,6 @@
 import { createHash, randomBytes, randomUUID } from 'node:crypto';
-import { PrismaPg } from '@prisma/adapter-pg';
-import { Prisma, PrismaClient } from './generated/prisma/client.mjs';
+import { Prisma, createPrismaClient } from '../database/prisma.mjs';
+import type { PrismaClient } from '../database/prisma.mjs';
 
 export type ProviderId = 'kakao' | 'google' | 'apple';
 
@@ -43,8 +43,7 @@ export class AuthStore {
   private readonly db: PrismaClient;
 
   constructor(connectionString: string) {
-    const schema = new URL(connectionString).searchParams.get('schema') ?? undefined;
-    this.db = new PrismaClient({ adapter: new PrismaPg({ connectionString }, { schema }) });
+    this.db = createPrismaClient(connectionString);
   }
 
   async connect(): Promise<void> {

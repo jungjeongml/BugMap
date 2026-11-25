@@ -8,6 +8,7 @@
 - UI 아이콘은 Figma에서 복사·내보내지 않고, [Lucide](https://lucide.dev/icons)에서 의미가 맞는 아이콘을 골라 프로젝트의 Lucide 컴포넌트로 사용한다.
 - 기능 요청에서 배포까지는 [개발·배포 워크플로](docs/development-workflow.md)를 따른다. Planning → Coding → Testing → Review 순으로 작업하며 사람의 승인과 필수 CI 검사를 거친다.
 - 프론트엔드는 `src/features/<기능>/`에 모은다. 한 화면 전용 컴포넌트·자산·테스트는 화면 폴더에, 같은 기능의 여러 화면이 쓰는 코드는 기능 폴더에, 여러 기능이 쓰는 코드는 `src`의 공통 폴더에 둔다. 인증 구조는 `src/features/auth/`를 참고한다.
+- 백엔드는 `server/src/<기능>/`에 컨트롤러·모듈·기능 저장소를 모은다. Prisma 연결은 `server/src/database/`, 스키마와 마이그레이션은 `server/prisma/`, 통합 테스트는 `server/test/`에 둔다.
 - 기술 의사결정·구조·구현 설계는 `docs/TDD.md`를 읽고 따른다.
 - 문서의 확정 사항과 권장안·미결정을 구분한다. 현재 사용자 지시를 우선하며, 중요한 충돌이나 누락은 알린다.
 - 요청 범위에 집중하고 기존 사용자 작업을 임의로 덮어쓰지 않는다.

@@ -1,6 +1,6 @@
 import { createAuthApp, parseWebOrigin } from './app.mjs';
-import { createProviders } from './providers.mjs';
-import { AuthStore } from './store.mjs';
+import { createProviders } from './auth/providers.mjs';
+import { AuthStore } from './auth/auth.store.mjs';
 
 const origin = new URL(process.env.AUTH_PUBLIC_ORIGIN ?? '');
 if (origin.protocol !== 'https:' || origin.username || origin.password || origin.href !== origin.origin + '/') {

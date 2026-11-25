@@ -1,6 +1,5 @@
 import { DatabaseSync } from 'node:sqlite';
-import { PrismaPg } from '@prisma/adapter-pg';
-import { PrismaClient } from '../dist/generated/prisma/client.mjs';
+import { createPrismaClient } from '../dist/database/prisma.mjs';
 
 const [source] = process.argv.slice(2);
 const connectionString = process.env.DATABASE_URL;
@@ -30,12 +29,7 @@ function readAccounts(path) {
 
 let prisma;
 try {
-  const databaseUrl = new URL(connectionString);
-  const schema = databaseUrl.searchParams.get('schema') ?? undefined;
-  databaseUrl.searchParams.delete('schema');
-  prisma = new PrismaClient({
-    adapter: new PrismaPg({ connectionString: databaseUrl.href }, { schema }),
-  });
+  prisma = createPrismaClient(connectionString);
   const { users, identities } = readAccounts(source);
   await prisma.$transaction(async transaction => {
     await transaction.user.createMany({ data: users, skipDuplicates: true });

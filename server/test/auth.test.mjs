@@ -10,7 +10,7 @@ import { promisify } from 'node:util';
 import { Pool } from 'pg';
 import { test } from 'node:test';
 import { createAuthApp, parseWebOrigin } from '../dist/app.mjs';
-import { AuthStore } from '../dist/store.mjs';
+import { AuthStore } from '../dist/auth/auth.store.mjs';
 
 const redirectUri = 'bugmap://auth/callback';
 const state = 'app-state';

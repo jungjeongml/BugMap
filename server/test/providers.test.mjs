@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { exportJWK, exportPKCS8, generateKeyPair, jwtVerify, SignJWT } from 'jose';
-import { createProviders } from '../dist/providers.mjs';
+import { createProviders } from '../dist/auth/providers.mjs';
 
 const publicOrigin = new URL('https://auth.example.com');
 const input = { state: 'provider-state', nonce: 'oidc-nonce', providerVerifier: 'server-verifier' };

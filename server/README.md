@@ -13,6 +13,12 @@ npm start
 
 `.env`에서 `AUTH_PUBLIC_ORIGIN`에 기기가 접속할 수 있는 HTTPS 도메인을 넣고, 사용할 제공자의 설정을 채운다. 사용하지 않는 제공자는 해당 변수 그룹 전체를 비워 둔다. 서버는 기본적으로 `127.0.0.1:3000`에서 수신한다. ngrok이나 HTTPS 리버스 프록시가 백엔드의 `PORT`로 요청을 전달하도록 설정하고, 앱의 `EXPO_PUBLIC_BUGMAP_AUTH_API_URL`에는 같은 HTTPS origin을 넣는다. Apple 콜백에는 localhost나 IP 주소 대신 공개 도메인이 필요하다. 프록시 요청 로그에는 인증 URL의 쿼리, 요청 본문, 인증 헤더·쿠키를 남기지 않는다.
 
+## 서버 구조
+
+- `src/main.mts`에서 설정을 읽고 서버를 시작한다. `src/app.mts`가 Nest 모듈과 공통 HTTP 설정, 상태 확인을 맡는다.
+- `src/auth/`에 인증 모듈, 컨트롤러, 제공자 연동과 계정·세션 저장소를 둔다.
+- `src/database/`에 Prisma 연결을 둔다. 스키마와 마이그레이션은 `prisma/`, 운영 스크립트는 `scripts/`, 통합 테스트는 `test/`를 사용한다.
+
 ## 로컬 데이터베이스
 
 Compose의 DB 포트는 `127.0.0.1:55432`이고 PostGIS가 설치된다. `postgres-data` 볼륨에 데이터가 남는다. `docker compose down`으로 컨테이너를 중지하고, 볼륨을 삭제하는 `down -v`는 로컬 데이터를 초기화할 때만 사용한다. Compose의 기본 비밀번호는 로컬에서만 사용한다.
