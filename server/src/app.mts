@@ -17,7 +17,7 @@ const appCallback = 'bugmap://auth/callback';
 const opaqueToken = /^[A-Za-z0-9_-]{43}$/;
 const pkceVerifier = /^[A-Za-z0-9._~-]{43,128}$/;
 const appState = /^[A-Za-z0-9._~-]{1,256}$/;
-const accessToken = /^[a-f0-9-]{36}\.[A-Za-z0-9_-]{43}$/;
+const accessToken = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}\.[A-Za-z0-9_-]{43}$/;
 const cancelErrors = new Set(['access_denied', 'user_cancelled_authorize']);
 const providersToken = Symbol('providers');
 const webOriginToken = Symbol('webOrigin');
@@ -85,8 +85,8 @@ const browserCookie = { path: '/', secure: true, httpOnly: true, sameSite: 'none
 class StoreShutdown implements OnApplicationShutdown {
   constructor(@Inject(AuthStore) private readonly store: AuthStore) {}
 
-  onApplicationShutdown(): void {
-    this.store.close();
+  onApplicationShutdown(): Promise<void> {
+    return this.store.close();
   }
 }
 
@@ -110,17 +110,17 @@ class AuthController {
   ) {}
 
   @Get('authorize/:provider')
-  authorize(@Param('provider') id: string, @Query() query: unknown, @Res() response: Response): void {
-    this.begin(providerId(id), query, response, appCallback);
+  async authorize(@Param('provider') id: string, @Query() query: unknown, @Res() response: Response): Promise<void> {
+    await this.begin(providerId(id), query, response, appCallback);
   }
 
   @Get('web/authorize/:provider')
-  webAuthorize(@Param('provider') id: string, @Query() query: unknown, @Res() response: Response): void {
+  async webAuthorize(@Param('provider') id: string, @Query() query: unknown, @Res() response: Response): Promise<void> {
     const origin = this.requireWebOrigin();
-    this.begin(webProviderId(id), query, response, origin.href, webScope(origin));
+    await this.begin(webProviderId(id), query, response, origin.href, webScope(origin));
   }
 
-  private begin(provider: ProviderId, query: unknown, response: Response, destination: string, scope = ''): void {
+  private async begin(provider: ProviderId, query: unknown, response: Response, destination: string, scope = ''): Promise<void> {
     const state = textValue(query, 'state');
     const challenge = textValue(query, 'code_challenge');
     if (textValue(query, 'redirect_uri') !== destination ||
@@ -139,7 +139,7 @@ class AuthController {
     const nonce = randomToken();
     const providerVerifier = randomToken();
     const providerUrl = adapter.authorize({ state: providerState, nonce, providerVerifier });
-    this.store.createAuthorization(providerState, browser, {
+    await this.store.createAuthorization(providerState, browser, {
       provider, appState: scope + state, challenge: scope + challenge, nonce, providerVerifier,
     });
     response.cookie(browserCookieName(providerState), browser, { ...browserCookie, maxAge: stateLifetime });
@@ -163,21 +163,21 @@ class AuthController {
 
   @Post('exchange')
   @HttpCode(200)
-  exchange(@Body() body: unknown) {
+  async exchange(@Body() body: unknown) {
     const provider = providerId(textValue(body, 'provider'));
     const code = textValue(body, 'code');
     const verifier = textValue(body, 'codeVerifier');
     if (textValue(body, 'redirectUri') !== appCallback || !opaqueToken.test(code) || !pkceVerifier.test(verifier)) {
       throw new BadRequestException('Invalid app code exchange');
     }
-    const result = this.store.exchange(provider, code, verifier);
+    const result = await this.store.exchange(provider, code, verifier);
     if (!result) throw new UnauthorizedException();
     return result;
   }
 
   @Post('web/exchange')
   @HttpCode(200)
-  webExchange(@Body() body: unknown, @Req() request: Request, @Res({ passthrough: true }) response: Response) {
+  async webExchange(@Body() body: unknown, @Req() request: Request, @Res({ passthrough: true }) response: Response) {
     const origin = this.requireWebOrigin(request);
     if (!request.is('application/json')) throw new UnsupportedMediaTypeException();
     const provider = webProviderId(textValue(body, 'provider'));
@@ -186,7 +186,7 @@ class AuthController {
     if (!opaqueToken.test(code) || !pkceVerifier.test(verifier)) {
       throw new BadRequestException('Invalid web code exchange');
     }
-    const session = this.store.exchange(provider, code, verifier, webScope(origin));
+    const session = await this.store.exchange(provider, code, verifier, webScope(origin));
     if (!session) throw new UnauthorizedException();
     const cookie = webCookie(origin);
     response.cookie(cookie.name, session.refreshToken, { ...cookie.options, maxAge: sessionLifetime });
@@ -194,72 +194,72 @@ class AuthController {
   }
 
   @Get('web/session')
-  webSession(@Req() request: Request) {
+  async webSession(@Req() request: Request) {
     const origin = this.requireWebOrigin();
     const token = readCookie(request, webCookie(origin).name);
-    const session = opaqueToken.test(token) ? this.store.findSessionUser(token, webScope(origin)) : undefined;
+    const session = opaqueToken.test(token) ? await this.store.findSessionUser(token, webScope(origin)) : undefined;
     if (!session) throw new UnauthorizedException();
     return session;
   }
 
   @Post('web/nickname')
   @HttpCode(200)
-  webNickname(@Body() body: unknown, @Req() request: Request) {
+  async webNickname(@Body() body: unknown, @Req() request: Request) {
     const origin = this.requireWebOrigin(request);
     if (!request.is('application/json')) throw new UnsupportedMediaTypeException();
     const token = readCookie(request, webCookie(origin).name);
-    const session = opaqueToken.test(token) ? this.store.findSessionUser(token, webScope(origin)) : undefined;
+    const session = opaqueToken.test(token) ? await this.store.findSessionUser(token, webScope(origin)) : undefined;
     if (!session || textValue(body, 'userId') !== session.userId) throw new UnauthorizedException();
     return this.saveNickname(session.userId, body);
   }
 
   @Post('nickname')
   @HttpCode(200)
-  nickname(@Body() body: unknown, @Req() request: Request, @Res({ passthrough: true }) response: Response) {
-    return this.saveNickname(this.me(request, response).userId, body);
+  async nickname(@Body() body: unknown, @Req() request: Request, @Res({ passthrough: true }) response: Response) {
+    return this.saveNickname((await this.me(request, response)).userId, body);
   }
 
-  private saveNickname(userId: string, body: unknown) {
+  private async saveNickname(userId: string, body: unknown) {
     const displayName = textValue(body, 'displayName').trim().normalize('NFC');
     const length = [...displayName].length;
     if (length < 2 || length > 12 || /[\p{Cc}\p{Cs}\p{Zl}\p{Zp}]/u.test(displayName)) {
       throw new BadRequestException('Invalid nickname');
     }
-    const user = this.store.setupNickname(userId, displayName);
+    const user = await this.store.setupNickname(userId, displayName);
     if (!user) throw new ConflictException('Nickname unavailable');
     return user;
   }
 
   @Post('web/logout')
   @HttpCode(204)
-  webLogout(@Req() request: Request, @Res({ passthrough: true }) response: Response): void {
+  async webLogout(@Req() request: Request, @Res({ passthrough: true }) response: Response): Promise<void> {
     const origin = this.requireWebOrigin(request);
     const cookie = webCookie(origin);
     const token = readCookie(request, cookie.name);
-    if (opaqueToken.test(token)) this.store.revoke(token, webScope(origin));
+    if (opaqueToken.test(token)) await this.store.revoke(token, webScope(origin));
     response.clearCookie(cookie.name, cookie.options);
   }
 
   @Post('refresh')
   @HttpCode(200)
-  refresh(@Body() body: unknown) {
+  async refresh(@Body() body: unknown) {
     const token = textValue(body, 'refreshToken');
-    const result = opaqueToken.test(token) ? this.store.rotate(token) : undefined;
+    const result = opaqueToken.test(token) ? await this.store.rotate(token) : undefined;
     if (!result) throw new UnauthorizedException();
     return result;
   }
 
   @Post('logout')
   @HttpCode(204)
-  logout(@Body() body: unknown): void {
+  async logout(@Body() body: unknown): Promise<void> {
     const token = textValue(body, 'refreshToken');
-    if (!opaqueToken.test(token) || !this.store.revoke(token)) throw new UnauthorizedException();
+    if (!opaqueToken.test(token) || !(await this.store.revoke(token))) throw new UnauthorizedException();
   }
 
   @Get('me')
-  me(@Req() request: Request, @Res({ passthrough: true }) response: Response) {
+  async me(@Req() request: Request, @Res({ passthrough: true }) response: Response) {
     const token = /^Bearer (.+)$/i.exec(request.headers.authorization ?? '')?.[1] ?? '';
-    const user = accessToken.test(token) ? this.store.findAccessUser(token) : undefined;
+    const user = accessToken.test(token) ? await this.store.findAccessUser(token) : undefined;
     if (!user) {
       response.set('WWW-Authenticate', 'Bearer');
       throw new UnauthorizedException();
@@ -278,7 +278,7 @@ class AuthController {
     if (!opaqueToken.test(state)) throw new BadRequestException('Invalid provider state');
     const cookieName = browserCookieName(state);
     const browser = readCookie(request, cookieName);
-    const authorization = opaqueToken.test(browser) ? this.store.consumeAuthorization(provider, state, browser) : undefined;
+    const authorization = opaqueToken.test(browser) ? await this.store.consumeAuthorization(provider, state, browser) : undefined;
     if (!authorization) throw new BadRequestException('Invalid provider state');
     response.clearCookie(cookieName, browserCookie);
 
@@ -305,7 +305,7 @@ class AuthController {
       response.redirect(303, appUrl(destination, appState, { error: 'login_failed' }));
       return;
     }
-    response.redirect(303, appUrl(destination, appState, { code: this.store.createCode(authorization, subject) }));
+    response.redirect(303, appUrl(destination, appState, { code: await this.store.createCode(authorization, subject) }));
   }
 }
 

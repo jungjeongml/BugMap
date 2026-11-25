@@ -15,8 +15,15 @@ if (!Object.keys(providers).length && process.env.AUTH_ALLOW_UNCONFIGURED !== 't
   throw new Error('Configure at least one login provider');
 }
 
-process.umask(0o077);
-const store = new AuthStore(process.env.AUTH_DB_PATH || './.bugmap-auth.sqlite3');
+const databaseUrl = process.env.DATABASE_URL;
+if (!databaseUrl) throw new Error('DATABASE_URL must be configured');
+const store = new AuthStore(databaseUrl);
+try {
+  await store.connect();
+} catch (error) {
+  await store.close();
+  throw error;
+}
 const app = await createAuthApp(store, providers, webOrigin);
 app.enableShutdownHooks();
 await app.listen(port, '127.0.0.1');

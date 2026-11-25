@@ -15,3 +15,5 @@ work/*/control/.approvals.lock
 work/*/control/.reviews-*.lock
 work/*/control/.approvals-*.tmp
 work/**/*.tmp
+
+/server/src/generated/prisma/

@@ -1,0 +1,82 @@
+generator client {
+  provider               = "prisma-client"
+  output                 = "../src/generated/prisma"
+  moduleFormat           = "esm"
+  generatedFileExtension = "mts"
+  importFileExtension    = "mjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Authorization {
+  stateHash        String   @id @map("state_hash")
+  browserHash      String   @map("browser_hash")
+  provider         String
+  appState         String   @map("app_state")
+  challenge        String
+  nonce            String
+  providerVerifier String   @map("provider_verifier")
+  expiresAt        DateTime @map("expires_at") @db.Timestamptz(3)
+
+  @@index([expiresAt], map: "authorizations_expiry")
+  @@map("authorizations")
+}
+
+model AppCode {
+  codeHash  String   @id @map("code_hash")
+  provider  String
+  subject   String
+  challenge String
+  expiresAt DateTime @map("expires_at") @db.Timestamptz(3)
+
+  @@index([expiresAt], map: "app_codes_expiry")
+  @@map("app_codes")
+}
+
+model User {
+  id          String     @id @db.Uuid
+  // Nickname uniqueness uses an ASCII-only expression index in the SQL migration.
+  displayName String?    @map("display_name")
+  identities  Identity[]
+  sessions    Session[]
+
+  @@map("users")
+}
+
+model Identity {
+  provider String
+  subject  String
+  userId   String @map("user_id") @db.Uuid
+  user     User   @relation(fields: [userId], references: [id], onDelete: Restrict)
+
+  @@id([provider, subject])
+  @@index([userId])
+  @@map("identities")
+}
+
+model Session {
+  id                 String              @id @db.Uuid
+  userId             String              @map("user_id") @db.Uuid
+  user               User                @relation(fields: [userId], references: [id], onDelete: Restrict)
+  accessHash         String              @map("access_hash")
+  accessExpiresAt    DateTime            @map("access_expires_at") @db.Timestamptz(3)
+  refreshHash        String              @unique @map("refresh_hash")
+  expiresAt          DateTime            @map("expires_at") @db.Timestamptz(3)
+  revokedAt          DateTime?           @map("revoked_at") @db.Timestamptz(3)
+  spentRefreshTokens SpentRefreshToken[]
+
+  @@index([expiresAt], map: "sessions_expiry")
+  @@index([userId])
+  @@map("sessions")
+}
+
+model SpentRefreshToken {
+  refreshHash String  @id @map("refresh_hash")
+  sessionId   String  @map("session_id") @db.Uuid
+  session     Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId], map: "spent_refresh_session")
+  @@map("spent_refresh_tokens")
+}

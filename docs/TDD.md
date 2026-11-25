@@ -23,7 +23,7 @@
 | ID | 결정 및 상태 | 이유 | 대안·재검토 조건 |
 |---|---|---|---|
 | TD-01 | **채택:** React Native 앱 + NestJS 백엔드; 백엔드는 모듈형 단일 서비스로 시작 | 사용자가 지정한 앱·서버 기술을 기준으로 지도·게시판·채팅 기능을 분리한다. | 서비스 분리는 운영 규모와 팀 구성이 정해지면 재검토. |
-| TD-02 | **권장:** PostgreSQL + PostGIS | 지도 영역 조회에 공간 인덱스를 쓰고, 기록·사진·채팅·분양의 관계 및 트랜잭션을 한 DB에서 관리한다. | 좌표 조회가 단순한 초소형 시제품이라면 일반 PostgreSQL 좌표 컬럼으로 시작 가능하나, 지도 필터 확장 전에 재설계 필요. |
+| TD-02 | **채택:** PostgreSQL + PostGIS, ORM은 Prisma | 지도 영역 조회에 공간 인덱스를 쓰고, 기록·사진·채팅·분양의 관계 및 트랜잭션을 한 DB에서 관리한다. | 좌표 조회가 단순한 초소형 시제품이라면 일반 PostgreSQL 좌표 컬럼으로 시작 가능하나, 지도 필터 확장 전에 재설계 필요. |
 | TD-03 | **권장:** 객체 저장소에 사진, DB에 메타데이터 | 큰 파일을 DB 트랜잭션에서 분리한다. | 작은 프로토타입에서 직접 업로드 가능. 배포 전 접근 제어와 정리 작업 필요. |
 | TD-04 | **권장:** HTTP API + 인증된 WebSocket 채팅 | 기록·게시판은 요청/응답, 메시지는 실시간 이벤트에 맞다. | 연결 안정성이 낮다면 HTTP 폴링으로 시작 가능. |
 | TD-05 | **채택:** Mapbox Maps SDK와 지도 레이어로 기록 묶음·개별 마커 표시. 초기에는 클라이언트 클러스터링을 적용한다. | 사용자 지정 지도 제공자와 확대 동작을 적용하고, 밀집 기록을 지도 레이어에서 렌더링한다. | 실제 데이터·기기 측정으로 확대 전환과 클러스터 반경을 조정한다. 필요 시 서버 집계를 검토한다. |
@@ -304,7 +304,7 @@ CREATE INDEX ix_sessions_user_active ON app_sessions (user_id, expires_at)
 | `POST /v1/chat-rooms/{id}/messages` | 메시지 저장 | `clientMessageId`, 본문 → 서버 메시지 ID |
 | `WS /v1/chat` | 실시간 수신 | 인증 후 참여 방 구독, `message.created` 이벤트 |
 
-소셜 가입 시 내부 사용자, 소셜 식별자, 세션을 생성한다. 가입·갱신과 세션 조회는 `displayName`을 함께 반환한다. `NULL`이면 발견 지도 전에 닉네임 설정으로 이동한다. 닉네임은 앞뒤 공백 제거와 NFC 정규화 후 유니코드 코드 포인트 기준 2~12자이며 제어 문자, 단독 서로게이트, 줄·단락 구분자를 거부한다. 저장은 영문 대소문자를 무시해 고유성을 보장하고 중복이면 409를 반환한다. 최초 저장이 완료된 계정에 같은 설정 요청이 다시 오면 저장된 값을 반환한다. `users.status`는 계정 운영 상태를 나타낸다. 현재 SQLite 인증 서버는 기존 스키마에 nullable `display_name`과 `COLLATE NOCASE` 유니크 인덱스를 추가한다.
+소셜 가입 시 내부 사용자, 소셜 식별자, 세션을 생성한다. 가입·갱신과 세션 조회는 `displayName`을 함께 반환한다. `NULL`이면 발견 지도 전에 닉네임 설정으로 이동한다. 닉네임은 앞뒤 공백 제거와 NFC 정규화 후 유니코드 코드 포인트 기준 2~12자이며 제어 문자, 단독 서로게이트, 줄·단락 구분자를 거부한다. 저장은 영문 대소문자를 무시해 고유성을 보장하고 중복이면 409를 반환한다. 최초 저장이 완료된 계정에 같은 설정 요청이 다시 오면 저장된 값을 반환한다. `users.status`는 계정 운영 상태를 나타낸다. PostgreSQL 인증 스키마는 Prisma 마이그레이션으로 관리한다. 현재 구현된 인증 테이블과 열은 [Prisma 스키마](../server/prisma/schema.prisma)를 따른다.
 
 `bbox`는 경도·위도 순서로 받으며 범위, 최대 크기, 조회 기간, 페이지 크기 상한을 검증한다. 타인용 응답에는 `exact_location`과 내부 `object_key`를 넣지 않는다. 오류 응답은 일관된 코드(`VALIDATION_ERROR`, `FORBIDDEN`, `NOT_FOUND`, `CONFLICT`, `UPLOAD_NOT_READY`)를 사용한다.
 
@@ -346,7 +346,7 @@ LIMIT :page_size;
 
 #### 현재 모바일·개발 서버 연결
 
-앱은 시스템 인증 창에서 BugMap 서버의 제공자별 인증 시작 주소를 열고 `bugmap://auth/callback`의 1회용 코드를 받는다. 서버가 제공자의 HTTPS 콜백과 자격 증명을 확인하고, 앱은 반환 주소와 state를 검증해 S256 검증값과 함께 코드를 서버 세션으로 교환한다. 앱 갱신 토큰은 Expo SecureStore에 저장된다. 개발 서버는 SQLite에 계정과 세션의 토큰 해시를 저장하며, 공개 HTTPS와 제공자 설정을 갖춘 뒤 네이티브 기기에서 확인한다. [서버 설정](../server/README.md) · [앱·서버 계약](superpowers/plans/2026-11-20-social-login-and-mapbox.md)
+앱은 시스템 인증 창에서 BugMap 서버의 제공자별 인증 시작 주소를 열고 `bugmap://auth/callback`의 1회용 코드를 받는다. 서버가 제공자의 HTTPS 콜백과 자격 증명을 확인하고, 앱은 반환 주소와 state를 검증해 S256 검증값과 함께 코드를 서버 세션으로 교환한다. 앱 갱신 토큰은 Expo SecureStore에 저장된다. 서버는 PostgreSQL에 계정과 세션의 토큰 해시를 저장하며, 공개 HTTPS와 제공자 설정을 갖춘 뒤 네이티브 기기에서 확인한다. [서버 설정](../server/README.md) · [앱·서버 계약](superpowers/plans/2026-11-20-social-login-and-mapbox.md)
 
 ### 6.2 사진 등록과 재시도
 
@@ -394,7 +394,7 @@ LIMIT :page_size;
 | 채팅 | 전송 재시도, 실시간 이벤트 중복, 연결 단절·복구, 비참여자 조회 | 메시지 1건 저장·표시; 누락 복구; 비참여자 거부 |
 | 분양 상태 | 무료·유료 가격과 상태 전이, 완료 뒤 기존 방 조회 | 스키마 제약 유지; 기존 대화 보존 |
 
-**구현 전에 정할 것:** iOS·Android 출시 순서, 로그인 제공 범위, PostgreSQL + PostGIS 채택 여부, 공개 위치 해상도, 사진 파일 크기·형식·보관 정책, 운영 정책, 지도·채팅 성능 기준. 결정되면 이 표의 권장안을 `채택` 또는 `기각`으로 변경하고 근거와 날짜를 남긴다.
+**구현 전에 정할 것:** iOS·Android 출시 순서, 로그인 제공 범위, 공개 위치 해상도, 사진 파일 크기·형식·보관 정책, 운영 정책, 지도·채팅 성능 기준. 결정되면 이 표의 권장안을 `채택` 또는 `기각`으로 변경하고 근거와 날짜를 남긴다.
 
 ## 9. 결정 이력
 
@@ -404,6 +404,7 @@ LIMIT :page_size;
 | 2026-11-06 | 첫 출시 플랫폼을 모바일 앱으로 반영하고 앱 세션·소셜 로그인·계정 연결 설계 추가 | 제안; iOS·Android 출시 순서 미정 |
 | 2026-11-06 | React Native·NestJS를 사용자 선택으로 반영; PostgreSQL + PostGIS를 기본 DB로 권장 | 앱·서버 채택, DB 제안 |
 | 2026-11-19 | Mapbox, SDK 로고·출처, 내 주변 반경, 레이어 기반 클러스터·개별 마커, 선택 기록 카드 | 제품 기준 채택, 네이티브 연동·실기기 검증 전 |
+| 2026-11-26 | PostgreSQL + PostGIS를 기본 DB로, Prisma를 ORM으로 채택. 로컬 DB는 Docker Compose로 실행 | 채택 |
 
 ## 10. 로그인 설계 참고 자료
 
@@ -412,9 +413,9 @@ LIMIT :page_size;
 - [Apple Keychain Services](https://developer.apple.com/documentation/security/adding-a-password-to-the-keychain), [Android Keystore](https://developer.android.com/privacy-and-security/keystore): 기기 보안 저장소.
 - [Google OpenID Connect](https://developers.google.com/identity/openid-connect/openid-connect), [Kakao Login](https://developers.kakao.com/docs/ko/kakaologin/common): 제공자 식별자와 로그인 흐름.
 
-## 11. 데이터베이스 제안 근거
+## 11. 데이터베이스 결정 근거
 
-PostgreSQL + PostGIS를 기본 DB로 권장한다. `sightings.public_location`의 GiST 공간 인덱스와 `ST_Intersects`를 조합하면 현재 지도 영역의 기록을 조회할 수 있다. 기록·사진·대화방·분양 글의 외래 키와 트랜잭션도 같은 관계형 DB에 둘 수 있다. [PostGIS 공간 인덱스 안내](https://postgis.net/documentation/faq/spatial-indexes/), [NestJS 데이터베이스 통합 안내](https://docs.nestjs.com/data/overview)
+PostgreSQL + PostGIS를 기본 DB로 사용한다. 일반 관계형 조회와 스키마 변경에는 Prisma를 사용하고, 공간 쿼리는 필요에 따라 매개변수화된 SQL로 작성한다. `sightings.public_location`의 GiST 공간 인덱스와 `ST_Intersects`를 조합하면 현재 지도 영역의 기록을 조회할 수 있다. 기록·사진·대화방·분양 글의 외래 키와 트랜잭션도 같은 관계형 DB에 둘 수 있다. [PostGIS 공간 인덱스 안내](https://postgis.net/documentation/faq/spatial-indexes/), [NestJS 데이터베이스 통합 안내](https://docs.nestjs.com/data/overview)
 
 ## 12. 디자인 하네스 Figma 안전장치 · 2026-11-13
 

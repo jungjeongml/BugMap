@@ -1,15 +1,39 @@
 # BugMap 개발 인증 서버
 
-Node.js 22.13 이상에서 실행한다. NestJS 서버가 제공자 콜백을 받고 SQLite에 계정과 세션을 저장한다.
+Node.js 22.13 이상에서 실행한다. NestJS 서버는 Prisma를 통해 PostgreSQL에 계정과 세션을 저장한다. 로컬 DB는 Docker Compose로 실행한다.
 
 ```sh
+docker compose up -d --wait db
 cd server
 npm ci
-cp .env.example .env
+test -f .env || cp .env.example .env
+npm run db:deploy
 npm start
 ```
 
-`.env`에서 `AUTH_PUBLIC_ORIGIN`에 기기가 접속할 수 있는 HTTPS 도메인을 넣고, 사용할 제공자의 설정을 채운다. 사용하지 않는 제공자는 해당 변수 그룹 전체를 비워 둔다. 서버는 기본적으로 `127.0.0.1:3000`에서 수신한다. HTTPS 리버스 프록시가 이 포트로 요청을 전달하도록 설정하고, 앱의 `EXPO_PUBLIC_BUGMAP_AUTH_API_URL`에는 같은 HTTPS origin을 넣는다. Apple 콜백에는 localhost나 IP 주소 대신 공개 도메인이 필요하다. 프록시 요청 로그에는 인증 URL의 쿼리, 요청 본문, 인증 헤더·쿠키를 남기지 않는다.
+`.env`에서 `AUTH_PUBLIC_ORIGIN`에 기기가 접속할 수 있는 HTTPS 도메인을 넣고, 사용할 제공자의 설정을 채운다. 사용하지 않는 제공자는 해당 변수 그룹 전체를 비워 둔다. 서버는 기본적으로 `127.0.0.1:3000`에서 수신한다. ngrok이나 HTTPS 리버스 프록시가 백엔드의 `PORT`로 요청을 전달하도록 설정하고, 앱의 `EXPO_PUBLIC_BUGMAP_AUTH_API_URL`에는 같은 HTTPS origin을 넣는다. Apple 콜백에는 localhost나 IP 주소 대신 공개 도메인이 필요하다. 프록시 요청 로그에는 인증 URL의 쿼리, 요청 본문, 인증 헤더·쿠키를 남기지 않는다.
+
+## 로컬 데이터베이스
+
+Compose의 DB 포트는 `127.0.0.1:55432`이고 PostGIS가 설치된다. `postgres-data` 볼륨에 데이터가 남는다. `docker compose down`으로 컨테이너를 중지하고, 볼륨을 삭제하는 `down -v`는 로컬 데이터를 초기화할 때만 사용한다. Compose의 기본 비밀번호는 로컬에서만 사용한다.
+
+다음 명령은 프로젝트 루트에서 닉네임과 PostGIS 버전을 조회한다.
+
+```sh
+docker compose exec db psql -U bugmap -d bugmap -c 'SELECT id, display_name FROM users;'
+docker compose exec db psql -U bugmap -d bugmap -c 'SELECT PostGIS_Full_Version();'
+```
+
+### 기존 SQLite 개발 계정 이관
+
+기존 SQLite 인증 서버를 먼저 중지해 계정 쓰기를 멈춘다. `server/.env`에 기존 OAuth 설정과 새 PostgreSQL `DATABASE_URL`을 넣고 마이그레이션을 적용한다. 아래 이관이 성공하면 PostgreSQL 인증 서버를 시작한다. 기존 SQLite 파일을 읽기 전용으로 열어 계정 ID, 닉네임, 소셜 연결을 복사한다. 같은 원본으로 다시 실행할 수 있고, 대상 데이터와 충돌하면 트랜잭션을 취소한다. 전환 후 사용자는 다시 로그인해 새 세션을 발급받는다.
+
+```sh
+npm run db:deploy
+npm run build
+node --env-file-if-exists=.env scripts/import-sqlite-auth.mjs /absolute/path/to/.bugmap-auth.sqlite3
+npm start
+```
 
 ## 인증 제공자 등록 전 HTTPS 확인
 
@@ -46,4 +70,10 @@ Expo의 Metro 개발 서버는 이 네 API를 로컬 인증 서버로 전달한�
 - 제공자 state는 10분 동안 유효하며 시작 브라우저의 보안 쿠키에 연결된다. Google과 Kakao에는 서버가 별도의 S256 PKCE를 사용한다. Apple은 `form_post`로 콜백하며 서명된 클라이언트 JWT를 사용한다.
 - 앱으로 돌아가는 1회용 코드는 60초 동안 유효하다. 서버는 교환할 때 앱 콜백 주소, 제공자, S256 검증값을 확인한다. Google과 Apple은 검증된 `sub`를, Kakao는 인증된 사용자 조회의 `id`를 사용한다.
 - 액세스 토큰은 15분, 갱신 세션은 처음 로그인부터 최대 30일 동안 유효하다. 서버는 토큰 해시를 저장한다. 갱신 시 두 토큰을 모두 회전시키며, 로그아웃하면 해당 세션의 액세스와 갱신을 폐기한다. 갱신 응답을 잃어버린 앱은 이전 토큰으로 같은 세션을 로그아웃할 수 있다. 액세스 토큰은 `GET /v1/auth/me`에 Bearer 헤더로 전달해 확인할 수 있다.
-- `npm test`는 로컬 HTTP 경로와 SQLite를 실행하고 제공자 응답은 테스트에서 주입한다. `npm run typecheck`로 서버 타입을 검사한다. 제공자 앱 등록 후 기기에서 HTTPS 로그인, 취소, 재실행 후 세션 복구, 로그아웃을 검증한다.
+- `AUTH_TEST_DATABASE_URL`을 설정한 뒤 `npm test`를 실행한다. 테스트는 PostgreSQL의 임시 스키마에 인증 마이그레이션을 적용하고 제공자 응답을 주입한다. 테스트 계정에는 스키마를 만들 권한이 필요하다. 로컬 Compose DB에 대해 실행하려면 `server/`에서 다음 명령을 사용한다.
+
+  ```sh
+  AUTH_TEST_DATABASE_URL=postgresql://bugmap:bugmap_local@127.0.0.1:55432/bugmap npm test
+  ```
+
+  `npm run typecheck`로 서버 타입을 검사한다. 제공자 앱 등록 후 기기에서 HTTPS 로그인, 취소, 재실행 후 세션 복구, 로그아웃을 검증한다.

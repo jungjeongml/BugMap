@@ -1,5 +1,6 @@
 import { createHash, randomBytes, randomUUID } from 'node:crypto';
-import { DatabaseSync } from 'node:sqlite';
+import { PrismaPg } from '@prisma/adapter-pg';
+import { Prisma, PrismaClient } from './generated/prisma/client.mjs';
 
 export type ProviderId = 'kakao' | 'google' | 'apple';
 
@@ -35,210 +36,151 @@ export function digest(value: string): string {
   return createHash('sha256').update(value).digest('base64url');
 }
 
+const readCommitted = { isolationLevel: Prisma.TransactionIsolationLevel.ReadCommitted };
+const profile = { select: { displayName: true } } as const;
+
 export class AuthStore {
-  private readonly db: DatabaseSync;
+  private readonly db: PrismaClient;
 
-  constructor(path: string) {
-    this.db = new DatabaseSync(path);
-    this.db.exec(`
-      PRAGMA busy_timeout = 5000;
-      PRAGMA journal_mode = WAL;
-      PRAGMA foreign_keys = ON;
-      CREATE TABLE IF NOT EXISTS authorizations (
-        state_hash TEXT PRIMARY KEY,
-        browser_hash TEXT NOT NULL,
-        provider TEXT NOT NULL,
-        app_state TEXT NOT NULL,
-        challenge TEXT NOT NULL,
-        nonce TEXT NOT NULL,
-        provider_verifier TEXT NOT NULL,
-        expires_at INTEGER NOT NULL
-      ) STRICT;
-      CREATE INDEX IF NOT EXISTS authorizations_expiry ON authorizations(expires_at);
-      CREATE TABLE IF NOT EXISTS app_codes (
-        code_hash TEXT PRIMARY KEY,
-        provider TEXT NOT NULL,
-        subject TEXT NOT NULL,
-        challenge TEXT NOT NULL,
-        expires_at INTEGER NOT NULL
-      ) STRICT;
-      CREATE INDEX IF NOT EXISTS app_codes_expiry ON app_codes(expires_at);
-      CREATE TABLE IF NOT EXISTS users (
-        id TEXT PRIMARY KEY,
-        display_name TEXT
-      ) STRICT;
-      CREATE TABLE IF NOT EXISTS identities (
-        provider TEXT NOT NULL,
-        subject TEXT NOT NULL,
-        user_id TEXT NOT NULL REFERENCES users(id),
-        PRIMARY KEY (provider, subject)
-      ) STRICT;
-      CREATE TABLE IF NOT EXISTS sessions (
-        id TEXT PRIMARY KEY,
-        user_id TEXT NOT NULL REFERENCES users(id),
-        access_hash TEXT NOT NULL,
-        access_expires_at INTEGER NOT NULL,
-        refresh_hash TEXT NOT NULL UNIQUE,
-        expires_at INTEGER NOT NULL,
-        revoked_at INTEGER
-      ) STRICT;
-      CREATE INDEX IF NOT EXISTS sessions_expiry ON sessions(expires_at);
-      CREATE TABLE IF NOT EXISTS spent_refresh_tokens (
-        refresh_hash TEXT PRIMARY KEY,
-        session_id TEXT NOT NULL REFERENCES sessions(id) ON DELETE CASCADE
-      ) STRICT;
-      CREATE INDEX IF NOT EXISTS spent_refresh_session ON spent_refresh_tokens(session_id);
-    `);
-    this.transaction(() => {
-      const columns = this.db.prepare('PRAGMA table_info(users)').all();
-      if (!columns.some(column => column.name === 'display_name')) {
-        this.db.exec('ALTER TABLE users ADD COLUMN display_name TEXT');
-      }
-      this.db.exec('CREATE UNIQUE INDEX IF NOT EXISTS users_display_name ON users(display_name COLLATE NOCASE)');
-    });
+  constructor(connectionString: string) {
+    const schema = new URL(connectionString).searchParams.get('schema') ?? undefined;
+    this.db = new PrismaClient({ adapter: new PrismaPg({ connectionString }, { schema }) });
   }
 
-  close(): void {
-    this.db.close();
+  async connect(): Promise<void> {
+    await this.db.user.findFirst({ select: { id: true } });
   }
 
-  createAuthorization(state: string, browser: string, authorization: Authorization): void {
-    const now = Date.now();
-    this.db.prepare('DELETE FROM authorizations WHERE expires_at <= ?').run(now);
-    this.db.prepare('DELETE FROM app_codes WHERE expires_at <= ?').run(now);
-    this.db.prepare('DELETE FROM sessions WHERE expires_at <= ?').run(now);
-    this.db.prepare(`
-      INSERT INTO authorizations (
-        state_hash, browser_hash, provider, app_state, challenge, nonce, provider_verifier, expires_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    `).run(
-      digest(state), digest(browser), authorization.provider, authorization.appState,
-      authorization.challenge, authorization.nonce, authorization.providerVerifier, now + stateLifetime,
-    );
+  close(): Promise<void> {
+    return this.db.$disconnect();
   }
 
-  consumeAuthorization(provider: ProviderId, state: string, browser: string): Authorization | undefined {
-    return this.db.prepare(`
-      DELETE FROM authorizations
-      WHERE state_hash = ? AND browser_hash = ? AND provider = ? AND expires_at > ?
-      RETURNING provider, app_state AS appState, challenge, nonce, provider_verifier AS providerVerifier
-    `).get(digest(state), digest(browser), provider, Date.now()) as Authorization | undefined;
+  async createAuthorization(state: string, browser: string, authorization: Authorization): Promise<void> {
+    const now = new Date();
+    await this.db.$transaction([
+      this.db.authorization.deleteMany({ where: { expiresAt: { lte: now } } }),
+      this.db.appCode.deleteMany({ where: { expiresAt: { lte: now } } }),
+      this.db.session.deleteMany({ where: { expiresAt: { lte: now } } }),
+      this.db.authorization.create({ data: {
+        ...authorization, stateHash: digest(state), browserHash: digest(browser),
+        expiresAt: new Date(now.getTime() + stateLifetime),
+      } }),
+    ]);
   }
 
-  createCode(authorization: Authorization, subject: string): string {
+  async consumeAuthorization(provider: ProviderId, state: string, browser: string): Promise<Authorization | undefined> {
+    const where = { stateHash: digest(state), browserHash: digest(browser), provider, expiresAt: { gt: new Date() } };
+    const row = await this.db.authorization.findFirst({ where });
+    if (!row) return;
+    const consumed = await this.db.authorization.deleteMany({ where });
+    if (!consumed.count) return;
+    return { provider, appState: row.appState, challenge: row.challenge, nonce: row.nonce, providerVerifier: row.providerVerifier };
+  }
+
+  async createCode(authorization: Authorization, subject: string): Promise<string> {
     const code = randomToken();
-    this.db.prepare(`
-      INSERT INTO app_codes (code_hash, provider, subject, challenge, expires_at) VALUES (?, ?, ?, ?, ?)
-    `).run(digest(code), authorization.provider, subject, authorization.challenge, Date.now() + codeLifetime);
+    await this.db.appCode.create({ data: {
+      codeHash: digest(code), provider: authorization.provider, subject,
+      challenge: authorization.challenge, expiresAt: new Date(Date.now() + codeLifetime),
+    } });
     return code;
   }
 
-  exchange(provider: ProviderId, code: string, verifier: string, scope = ''): AppSession | undefined {
-    return this.transaction(() => {
+  async exchange(provider: ProviderId, code: string, verifier: string, scope = ''): Promise<AppSession | undefined> {
+    return this.db.$transaction(async tx => {
       const now = Date.now();
-      const identity = this.db.prepare(`
-        DELETE FROM app_codes WHERE code_hash = ? AND provider = ? AND challenge = ? AND expires_at > ?
-        RETURNING subject
-      `).get(digest(code), provider, scope + digest(verifier), now) as { subject: string } | undefined;
-      if (!identity) return;
-      const existing = this.db.prepare(`
-        SELECT users.id AS userId, display_name AS displayName FROM identities
-        JOIN users ON users.id = identities.user_id WHERE provider = ? AND subject = ?
-      `).get(provider, identity.subject) as UserProfile | undefined;
+      const where = { codeHash: digest(code), provider, challenge: scope + digest(verifier), expiresAt: { gt: new Date(now) } };
+      const appCode = await tx.appCode.findFirst({ where, select: { subject: true } });
+      if (!appCode || !(await tx.appCode.deleteMany({ where })).count) return;
 
+      const { subject } = appCode;
+      // Serialize provisioning for each identity across auth server instances.
+      await tx.$executeRaw`SELECT pg_advisory_xact_lock(hashtext(${provider}), hashtext(${subject}))`;
+      const existing = await tx.identity.findUnique({
+        where: { provider_subject: { provider, subject } }, select: { userId: true, user: profile },
+      });
       const userId = existing?.userId ?? randomUUID();
       if (!existing) {
-        this.db.prepare('INSERT INTO users (id) VALUES (?)').run(userId);
-        this.db.prepare('INSERT INTO identities (provider, subject, user_id) VALUES (?, ?, ?)').run(
-          provider, identity.subject, userId,
-        );
+        await tx.user.create({ data: { id: userId, identities: { create: { provider, subject } } } });
       }
 
-      const sessionId = randomUUID();
-      const accessToken = `${sessionId}.${randomToken()}`;
+      const id = randomUUID();
+      const accessToken = `${id}.${randomToken()}`;
       const refreshToken = randomToken();
-      this.db.prepare(`
-        INSERT INTO sessions (id, user_id, access_hash, access_expires_at, refresh_hash, expires_at)
-        VALUES (?, ?, ?, ?, ?, ?)
-      `).run(
-        sessionId, userId, digest(scope + accessToken), now + accessLifetime,
-        digest(scope + refreshToken), now + sessionLifetime,
-      );
-      return { accessToken, refreshToken, userId, displayName: existing?.displayName ?? null };
-    });
+      await tx.session.create({ data: {
+        id, userId, accessHash: digest(scope + accessToken), accessExpiresAt: new Date(now + accessLifetime),
+        refreshHash: digest(scope + refreshToken), expiresAt: new Date(now + sessionLifetime),
+      } });
+      return { accessToken, refreshToken, userId, displayName: existing?.user.displayName ?? null };
+    }, readCommitted);
   }
 
-  rotate(previousToken: string): AppSession | undefined {
-    return this.transaction(() => {
-      const now = Date.now();
+  async rotate(previousToken: string): Promise<AppSession | undefined> {
+    return this.db.$transaction(async tx => {
+      const now = new Date();
       const previousHash = digest(previousToken);
-      const row = this.db.prepare(`
-        SELECT sessions.id, user_id AS userId, expires_at AS expiresAt, display_name AS displayName
-        FROM sessions JOIN users ON users.id = sessions.user_id
-        WHERE refresh_hash = ? AND revoked_at IS NULL AND expires_at > ?
-      `).get(previousHash, now) as (UserProfile & { id: string; expiresAt: number }) | undefined;
+      const where = { refreshHash: previousHash, revokedAt: null, expiresAt: { gt: now } };
+      const row = await tx.session.findUnique({
+        where, select: { id: true, userId: true, expiresAt: true, user: profile },
+      });
       if (!row) return;
       const accessToken = `${row.id}.${randomToken()}`;
       const refreshToken = randomToken();
-      this.db.prepare('INSERT INTO spent_refresh_tokens (refresh_hash, session_id) VALUES (?, ?)').run(previousHash, row.id);
-      this.db.prepare(`
-        UPDATE sessions SET access_hash = ?, access_expires_at = ?, refresh_hash = ? WHERE id = ?
-      `).run(digest(accessToken), Math.min(now + accessLifetime, row.expiresAt), digest(refreshToken), row.id);
-      return { accessToken, refreshToken, userId: row.userId, displayName: row.displayName };
+      const rotated = await tx.session.updateMany({ where, data: {
+        accessHash: digest(accessToken),
+        accessExpiresAt: new Date(Math.min(now.getTime() + accessLifetime, row.expiresAt.getTime())),
+        refreshHash: digest(refreshToken),
+      } });
+      if (!rotated.count) return;
+      await tx.spentRefreshToken.create({ data: { refreshHash: previousHash, sessionId: row.id } });
+      return { accessToken, refreshToken, userId: row.userId, displayName: row.user.displayName };
+    }, readCommitted);
+  }
+
+  async revoke(refreshToken: string, scope = ''): Promise<boolean> {
+    const now = new Date();
+    const refreshHash = digest(scope + refreshToken);
+    const active = { revokedAt: null, expiresAt: { gt: now } };
+    return this.db.$transaction(async tx => {
+      const revoked = await tx.session.updateMany({ where: { ...active, refreshHash }, data: { revokedAt: now } });
+      if (revoked.count) return true;
+
+      // Take a fresh snapshot after the first update has waited for any concurrent rotation.
+      const spent = await tx.spentRefreshToken.findUnique({ where: { refreshHash }, select: { sessionId: true } });
+      if (!spent) return false;
+      const revokedSpent = await tx.session.updateMany({
+        where: { ...active, id: spent.sessionId }, data: { revokedAt: now },
+      });
+      return Boolean(revokedSpent.count);
+    }, readCommitted);
+  }
+
+  async findSessionUser(refreshToken: string, scope: string): Promise<UserProfile | undefined> {
+    const row = await this.db.session.findUnique({
+      where: { refreshHash: digest(scope + refreshToken), expiresAt: { gt: new Date() }, revokedAt: null },
+      select: { userId: true, user: profile },
     });
+    return row ? { userId: row.userId, displayName: row.user.displayName } : undefined;
   }
 
-  revoke(refreshToken: string, scope = ''): boolean {
-    const now = Date.now();
-    const hash = digest(scope + refreshToken);
-    return Boolean(this.db.prepare(`
-      UPDATE sessions SET revoked_at = ?
-      WHERE revoked_at IS NULL AND expires_at > ?
-        AND (refresh_hash = ? OR id = (SELECT session_id FROM spent_refresh_tokens WHERE refresh_hash = ?))
-    `).run(now, now, hash, hash).changes);
-  }
-
-  findSessionUser(refreshToken: string, scope: string): UserProfile | undefined {
-    return this.db.prepare(`
-      SELECT user_id AS userId, display_name AS displayName
-      FROM sessions JOIN users ON users.id = sessions.user_id
-      WHERE refresh_hash = ? AND expires_at > ? AND revoked_at IS NULL
-    `).get(digest(scope + refreshToken), Date.now()) as UserProfile | undefined;
-  }
-
-  findAccessUser(accessToken: string): UserProfile | undefined {
-    const now = Date.now();
-    const sessionId = accessToken.split('.', 1)[0];
-    return this.db.prepare(`
-      SELECT user_id AS userId, display_name AS displayName
-      FROM sessions JOIN users ON users.id = sessions.user_id
-      WHERE sessions.id = ? AND access_hash = ? AND access_expires_at > ? AND expires_at > ? AND revoked_at IS NULL
-    `).get(sessionId, digest(accessToken), now, now) as UserProfile | undefined;
-  }
-
-  setupNickname(userId: string, displayName: string): UserProfile | null {
-    return this.transaction(() => {
-      const user = this.db.prepare('SELECT display_name AS displayName FROM users WHERE id = ?')
-        .get(userId) as Pick<UserProfile, 'displayName'>;
-      if (user.displayName !== null) return { userId, displayName: user.displayName };
-
-      const update = this.db.prepare(`
-        UPDATE users SET display_name = ? WHERE id = ?
-        AND NOT EXISTS (SELECT 1 FROM users WHERE display_name = ? COLLATE NOCASE)
-      `).run(displayName, userId, displayName);
-      return update.changes ? { userId, displayName } : null;
+  async findAccessUser(accessToken: string): Promise<UserProfile | undefined> {
+    const now = new Date();
+    const id = accessToken.split('.', 1)[0];
+    const row = await this.db.session.findUnique({
+      where: { id, accessHash: digest(accessToken), accessExpiresAt: { gt: now }, expiresAt: { gt: now }, revokedAt: null },
+      select: { userId: true, user: profile },
     });
+    return row ? { userId: row.userId, displayName: row.user.displayName } : undefined;
   }
 
-  private transaction<T>(run: () => T): T {
-    this.db.exec('BEGIN IMMEDIATE');
+  async setupNickname(userId: string, displayName: string): Promise<UserProfile | null> {
     try {
-      const result = run();
-      this.db.exec('COMMIT');
-      return result;
+      const saved = await this.db.user.updateMany({ where: { id: userId, displayName: null }, data: { displayName } });
+      if (saved.count) return { userId, displayName };
     } catch (error) {
-      this.db.exec('ROLLBACK');
-      throw error;
+      if (!(error instanceof Prisma.PrismaClientKnownRequestError) || error.code !== 'P2002') throw error;
     }
+    const user = await this.db.user.findUnique({ where: { id: userId }, select: { displayName: true } });
+    return user?.displayName ? { userId, displayName: user.displayName } : null;
   }
 }

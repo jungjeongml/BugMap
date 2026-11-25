@@ -30,7 +30,7 @@ npm run export:web
 
 - `App.tsx`, `index.ts`: 앱 진입점, 상태바·안전 영역 설정.
 - `src/features/auth/`: `AuthFlow.tsx`가 화면을 전환하고, `login/`은 로그인 화면과 정책 링크, `nickname/`은 닉네임 설정, `session/`은 소셜 인증과 세션 복구를 담는다.
-- `server/`: NestJS 개발용 인증 서버와 SQLite 저장소.
+- `server/`: NestJS 인증 서버와 Prisma PostgreSQL 저장소.
 - `src/features/auth/login/AppIcon.tsx`: Lucide 아이콘 이름과 화면 사용 위치 연결.
 - `src/theme/tokens.ts`: 선택 화면의 색상·치수.
 - `design/login/reference/2:2.png`: 배경을 포함한 **Figma 참조 캡처**. 앱 실행 결과가 아닙니다.

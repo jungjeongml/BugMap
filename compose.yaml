@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgis/postgis:17-3.7
+    platform: linux/amd64
+    environment:
+      POSTGRES_DB: bugmap
+      POSTGRES_USER: bugmap
+      POSTGRES_PASSWORD: bugmap_local
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U bugmap -d bugmap"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  postgres-data:

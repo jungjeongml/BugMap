@@ -1,9 +1,13 @@
 import assert from 'node:assert/strict';
-import { createHash, randomBytes } from 'node:crypto';
-import { mkdtempSync, rmSync } from 'node:fs';
+import { createHash, randomBytes, randomUUID } from 'node:crypto';
+import { execFile } from 'node:child_process';
+import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
+import { fileURLToPath } from 'node:url';
+import { promisify } from 'node:util';
+import { Pool } from 'pg';
 import { test } from 'node:test';
 import { createAuthApp, parseWebOrigin } from '../dist/app.mjs';
 import { AuthStore } from '../dist/store.mjs';
@@ -13,7 +17,27 @@ const state = 'app-state';
 const verifier = 'abcdefghijklmnopqrstuvwxyz0123456789uvwxyzABC';
 const challenge = createHash('sha256').update(verifier).digest('base64url');
 
-async function launch(t, databasePath = ':memory:', providerIds = ['google', 'kakao', 'apple'], webOrigin) {
+async function testDatabase(t) {
+  const baseUrl = process.env.AUTH_TEST_DATABASE_URL;
+  assert.ok(baseUrl, 'Set AUTH_TEST_DATABASE_URL to a PostgreSQL connection with permission to create schemas');
+  const schema = 'auth_test_' + randomUUID().replaceAll('-', '');
+  const pool = new Pool({ connectionString: baseUrl, max: 1 });
+  t.after(async () => {
+    try {
+      await pool.query(`DROP SCHEMA IF EXISTS "${schema}" CASCADE`);
+    } finally {
+      await pool.end();
+    }
+  });
+  const migration = await readFile(new URL('../prisma/migrations/20261126000000_auth/migration.sql', import.meta.url), 'utf8');
+  await pool.query(`CREATE SCHEMA "${schema}"; SET search_path TO "${schema}"; ${migration}`);
+  const url = new URL(baseUrl);
+  url.searchParams.set('schema', schema);
+  return { url: url.href, pool };
+}
+
+async function launch(t, databaseUrl, providerIds = ['google', 'kakao', 'apple'], webOrigin) {
+  databaseUrl ??= (await testDatabase(t)).url;
   const providers = Object.fromEntries(providerIds.map(provider => [provider, {
     authorize(input) {
       const url = new URL('https://provider.example/authorize');
@@ -25,7 +49,7 @@ async function launch(t, databasePath = ':memory:', providerIds = ['google', 'ka
       return { subject: code, email: 'same@example.com' };
     }
   }]));
-  const app = await createAuthApp(new AuthStore(databasePath), providers, webOrigin);
+  const app = await createAuthApp(new AuthStore(databaseUrl), providers, webOrigin);
   t.after(() => app.close());
   await app.listen(0, '127.0.0.1');
   const base = await app.getUrl();
@@ -85,7 +109,7 @@ async function launch(t, databasePath = ':memory:', providerIds = ['google', 'ka
 
 test('reports readiness and provider setup through a public health endpoint', async t => {
   for (const [providerIds, authentication] of [[[], 'unconfigured'], [['google'], 'configured']]) {
-    const app = await launch(t, ':memory:', providerIds);
+    const app = await launch(t, undefined, providerIds);
     const result = await app.health();
     assert.equal(result.status, 200);
     assert.deepEqual(await result.json(), { status: 'ready', authentication });
@@ -109,7 +133,7 @@ test('web origin configuration accepts only canonical HTTPS and loopback HTTP or
 });
 
 test('web callback exchanges a provider code for a session cookie and logout revokes it', async t => {
-  const app = await launch(t, ':memory:', ['google'], webOrigin);
+  const app = await launch(t, undefined, ['google'], webOrigin);
   const flow = await app.begin('google', true);
   const callback = await app.callback('google', flow);
   assert.equal(callback.status, 303);
@@ -159,7 +183,7 @@ test('web callback exchanges a provider code for a session cookie and logout rev
 });
 
 test('web OAuth accepts an exact return URI and preserves app state for cancellation', async t => {
-  const app = await launch(t, ':memory:', ['google', 'apple'], webOrigin);
+  const app = await launch(t, undefined, ['google', 'apple'], webOrigin);
   assert.equal((await app.authorize('apple', {}, true)).status, 400);
   assert.equal((await app.authorize('google', { redirect_uri: webOrigin.origin + '/other' }, true)).status, 400);
   assert.equal((await app.authorize('google', { redirect_uri: webOrigin.origin + '/?x=1' }, true)).status, 400);
@@ -180,7 +204,7 @@ test('web OAuth accepts an exact return URI and preserves app state for cancella
 
 test('web and native codes and session tokens stay scoped to their channel', async t => {
   const origin = new URL('http://127.0.0.1:8081');
-  const app = await launch(t, ':memory:', ['kakao'], origin);
+  const app = await launch(t, undefined, ['kakao'], origin);
   const nativeCode = await app.code('kakao');
   const webCallback = await app.callback('kakao', await app.begin('kakao', true));
   const webCode = new URL(webCallback.headers.get('location')).searchParams.get('code');
@@ -210,11 +234,9 @@ test('web routes are disabled when the origin is absent', async t => {
 });
 
 test('a web callback started on a different configured origin never redirects to the new origin', async t => {
-  const dir = mkdtempSync(join(tmpdir(), 'bugmap-web-auth-'));
-  const database = join(dir, 'auth.sqlite');
-  const original = await launch(t, database, ['google'], new URL('https://app.example.test:8443'));
-  const current = await launch(t, database, ['google'], webOrigin);
-  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  const { url } = await testDatabase(t);
+  const original = await launch(t, url, ['google'], new URL('https://app.example.test:8443'));
+  const current = await launch(t, url, ['google'], webOrigin);
   const result = await current.callback('google', await original.begin('google', true));
   assert.equal(result.status, 400);
   assert.equal(result.headers.get('location'), null);
@@ -228,7 +250,7 @@ test('requires an exact app redirect and an S256 challenge', async t => {
 });
 
 test('returns an unavailable provider to the app only after validating the request', async t => {
-  const app = await launch(t, ':memory:', ['google']);
+  const app = await launch(t, undefined, ['google']);
   const invalid = await app.authorize('apple', { redirect_uri: 'https://else.example' });
   assert.equal(invalid.status, 400);
   assert.equal(invalid.headers.get('location'), null);
@@ -284,11 +306,9 @@ test('uses provider subjects as separate identities even when emails coincide', 
 });
 
 test('rotates a persisted session once and revokes access on logout', async t => {
-  const dir = mkdtempSync(join(tmpdir(), 'bugmap-auth-'));
-  const path = join(dir, 'auth.sqlite');
-  const first = await launch(t, path);
-  const second = await launch(t, path);
-  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  const { url } = await testDatabase(t);
+  const first = await launch(t, url);
+  const second = await launch(t, url);
   const initial = await first.login('kakao');
   assert.deepEqual(Object.keys(initial).sort(), ['accessToken', 'displayName', 'refreshToken', 'userId']);
   const access = token => ({ headers: { authorization: 'Bearer ' + token } });
@@ -353,24 +373,79 @@ test('saves the first nickname, rejects case-insensitive duplicates and restores
   assert.deepEqual(competing.map(response => response.status).sort(), [200, 409]);
 });
 
-test('adds nickname storage to a pre-existing SQLite users table', async t => {
-  const folder = mkdtempSync(join(tmpdir(), 'bugmap-nickname-'));
-  const path = join(folder, 'auth.sqlite');
-  const legacy = new DatabaseSync(path);
-  legacy.exec('CREATE TABLE users (id TEXT PRIMARY KEY) STRICT');
-  legacy.close();
-  const app = await launch(t, path);
-  t.after(() => rmSync(folder, { recursive: true, force: true }));
-  const session = await app.login('google');
-  assert.equal(session.displayName, null);
-  const saved = await app.post('nickname', { displayName: '관찰자' }, {
-    authorization: 'Bearer ' + session.accessToken,
-  });
-  assert.equal(saved.status, 200);
-  const reopened = new DatabaseSync(path, { readOnly: true });
-  try {
-    assert.equal(reopened.prepare('SELECT display_name FROM users WHERE id = ?').get(session.userId).display_name, '관찰자');
-  } finally {
-    reopened.close();
+test('persists nicknames in PostgreSQL with ASCII-only case folding', async t => {
+  const { url, pool } = await testDatabase(t);
+  const app = await launch(t, url);
+  const first = await app.login('google');
+  const second = await app.login('kakao');
+  for (const [session, displayName] of [[first, 'Écho'], [second, 'écho']]) {
+    const saved = await app.post('nickname', { displayName }, {
+      authorization: 'Bearer ' + session.accessToken,
+    });
+    assert.equal(saved.status, 200);
+    const result = await pool.query('SELECT display_name FROM users WHERE id = $1', [session.userId]);
+    assert.deepEqual(result.rows, [{ display_name: displayName }]);
   }
+});
+
+test('concurrent first logins for one provider subject share a user', async t => {
+  const app = await launch(t);
+  const codes = await Promise.all([app.code('google'), app.code('google')]);
+  const responses = await Promise.all(codes.map(code => app.exchange('google', code)));
+  assert.deepEqual(responses.map(response => response.status), [200, 200]);
+  const [first, second] = await Promise.all(responses.map(response => response.json()));
+  assert.equal(first.userId, second.userId);
+  assert.notEqual(first.refreshToken, second.refreshToken);
+});
+
+test('logout with the prior token wins even if it races refresh', async t => {
+  const app = await launch(t);
+  const initial = await app.login('google');
+  const [refresh, logout] = await Promise.all([
+    app.post('refresh', { refreshToken: initial.refreshToken }),
+    app.post('logout', { refreshToken: initial.refreshToken }),
+  ]);
+  assert.equal(logout.status, 204);
+  assert.ok([200, 401].includes(refresh.status));
+  if (refresh.ok) {
+    const rotated = await refresh.json();
+    assert.equal((await app.post('refresh', { refreshToken: rotated.refreshToken })).status, 401);
+  }
+  assert.equal((await app.post('refresh', { refreshToken: initial.refreshToken })).status, 401);
+});
+
+test('imports SQLite accounts idempotently and rolls back on a conflicting nickname', async t => {
+  const { url, pool } = await testDatabase(t);
+  const folder = await mkdtemp(join(tmpdir(), 'bugmap-import-'));
+  t.after(() => rm(folder, { recursive: true, force: true }));
+  const path = join(folder, 'accounts.sqlite');
+  const sqlite = new DatabaseSync(path);
+  t.after(() => sqlite.close());
+  sqlite.exec(`
+    CREATE TABLE users (id TEXT PRIMARY KEY, display_name TEXT);
+    CREATE TABLE identities (provider TEXT, subject TEXT, user_id TEXT, PRIMARY KEY (provider, subject));
+  `);
+  const userId = randomUUID();
+  sqlite.prepare('INSERT INTO users VALUES (?, ?)').run(userId, 'BugScout');
+  sqlite.prepare('INSERT INTO identities VALUES (?, ?, ?)').run('google', 'imported-observer', userId);
+  const script = fileURLToPath(new URL('../scripts/import-sqlite-auth.mjs', import.meta.url));
+  const runImport = () => promisify(execFile)(process.execPath, [script, path], {
+    env: { ...process.env, DATABASE_URL: url },
+  });
+  await runImport();
+  await runImport();
+  assert.deepEqual((await pool.query('SELECT count(*)::int AS count FROM sessions')).rows, [{ count: 0 }]);
+  const app = await launch(t, url);
+  const session = await app.login('google', { code: 'imported-observer' });
+  assert.equal(session.userId, userId);
+  assert.equal(session.displayName, 'BugScout');
+
+  const unrelatedId = randomUUID();
+  sqlite.prepare('INSERT INTO users VALUES (?, ?), (?, ?)').run(
+    unrelatedId, 'NewObserver', randomUUID(), 'bugscout',
+  );
+  await assert.rejects(runImport(), error => error.code === 1 && /accounts or nicknames conflict/.test(error.stderr));
+  assert.deepEqual((await pool.query('SELECT id, display_name FROM users')).rows, [
+    { id: userId, display_name: 'BugScout' },
+  ]);
 });
